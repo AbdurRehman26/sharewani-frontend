@@ -1,12 +1,12 @@
 // theming
-$grey-darkest: #1a1a1a;
+$grey-darkest: #1b1b1e;
 // $grey-dark: #57505f;
 $grey-dark: $grey-darkest;
 $grey-medium: #706978;
 $grey-lite: #d9d9d9;
 $grey-xlite: #e9eae3;
 
-$body-bg: #f7f7f7;
+$body-bg: #f2f2f2;
 $body-color: $grey-dark;
 $white: #fff;
 $border-radius: 4px;
@@ -22,12 +22,12 @@ $yellow: #ffb54c;
 $radio-check: #9d9f8f;
 
 $theme-colors: (
-    'primary': $primary,
-    'secondary': $secondary,
-    'success': $success,
-    'light': $light,
-    'dark': $dark,
-    'danger': $danger
+	'primary': $primary,
+	'secondary': $secondary,
+	'success': $success,
+	'light': $light,
+	'dark': $dark,
+	'danger': $danger
 );
 
 // header height
@@ -43,7 +43,7 @@ $label-color: $secondary !default;
 
 //font sizes
 $font-size-base: 0.875rem !default;
-$font-size-sm: $font-size-base - 0.125rem !default;
+$font-size-sm: 0.75rem !default;
 $font-size-large: ceil(($font-size-base * 1.25)) !default; // ~18px
 $font-size-small: ceil(($font-size-base * 0.85)) !default; // ~12px
 
@@ -65,13 +65,13 @@ $front-card-shadow: 0px 0px 30px $grey-xlite;
 
 // input
 $input-bg: $white !default;
-$input-color: #706978 !default;
-$input-border-color: #d9d9d9 !default;
-$input-border-radius: $border-radius !default;
-$input-height: 38px !default;
-$input-font-size: 14px;
+$input-color: $grey-darkest !default;
+$input-border-color: transparent !default;
+$input-border-radius: 4px !default;
+$input-height: 43px !default;
+$input-font-size: $font-size-base;
 
-$label-font-size: 14px;
+$label-font-size: $font-size-sm;
 
 // button
 $btn-border-radius: 19px !default;
