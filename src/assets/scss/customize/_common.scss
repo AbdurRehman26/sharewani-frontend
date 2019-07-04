@@ -23,6 +23,23 @@ a {
 hr {
     border-color: $grey-xlite;
 }
+
+::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #9ea0a5 !important;
+}
+::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #9ea0a5 !important;
+}
+:-ms-input-placeholder {
+    /* IE 10+ */
+    color: #9ea0a5 !important;
+}
+:-moz-placeholder {
+    /* Firefox 18- */
+    color: #9ea0a5 !important;
+}
 .font-bold {
     font-family: $font-bold;
 }
@@ -64,21 +81,7 @@ hr {
     }
 }
 .main-content {
-    padding-bottom: 25px;
-    min-height: calc(100vh - 110px);
-    @include tabletL {
-        padding-top: 0px;
-    }
-
-    @include mobileS {
-        min-height: calc(100vh - 60px);
-    }
-
-    .container {
-        @include tablet {
-            padding: 0px 25px;
-        }
-    }
+    height: 100vh;
 }
 
 .front-site {
@@ -331,4 +334,11 @@ $sides: (top, bottom, left, right); // Leave this variable alone
 }
 .pointer-none {
     pointer-events: none;
+}
+
+.middle-aligner {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
