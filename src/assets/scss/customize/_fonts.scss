@@ -1,0 +1,35 @@
+$font_regular: 'ProximanovaRegular';
+$font_bold: 'ProximanovaBold';
+$font_medium: 'ProximanovaBold';
+$font_light: 'ProximanovaRegular';
+$font_thin: 'ProximanovaRegular';
+$font_ebold: 'ProximanovaBold';
+$font_black: 'ProximanovaBold';
+$other_font_bold: 'ProximanovaBold';
+
+@mixin declare-font-face(
+    $font-family,
+    $font-filename,
+    $font-weight: normal,
+    $font-style: normal,
+    $font-stretch: normal
+) {
+    @font-face {
+        font-family: '#{$font-family}';
+        src: url('assets/fonts/#{$font-filename}.eot?#iefix')
+                format('embedded-opentype'),
+            url('assets/fonts/#{$font-filename}.woff') format('woff'),
+            url('assets/fonts/#{$font-filename}.ttf') format('truetype'),
+            url('assets/fonts/#{$font-filename}.woff') format('woff');
+        font-style: normal;
+        font-weight: 400;
+        font-stretch: none;
+    }
+}
+
+@include declare-font-face($font_regular, 'ProximanovaRegular');
+@include declare-font-face($font_bold, 'ProximanovaBold');
+@include declare-font-face($font_medium, 'ProximanovaBold');
+@include declare-font-face($font_light, 'ProximanovaRegular');
+@include declare-font-face($other_font_bold, 'ProximanovaBold');
+
