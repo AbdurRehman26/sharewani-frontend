@@ -6,6 +6,9 @@ import './registerServiceWorker'
 import BootstrapVue from 'bootstrap-vue'
 
 Vue.use(BootstrapVue)
+
+require('@/auto-import.js')
+
 Vue.config.productionTip = false
 
 new Vue({

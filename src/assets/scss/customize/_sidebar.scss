@@ -1,0 +1,11 @@
+.sidebar {
+    background-color: #3c1559;
+    width: 235px;
+    height: 100%;
+    position: fixed;
+}
+
+.content-area {
+    width: calc(100% - 235px);
+    margin-left: auto;
+}
