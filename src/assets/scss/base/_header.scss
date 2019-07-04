@@ -4,7 +4,7 @@ header {
     height: $header-height;
     z-index: 99;
     position: relative;
-    padding: 0px 20px;
+    padding: 0px 40px;
     @include mobile {
         height: 42px;
     }
@@ -120,6 +120,59 @@ header {
                     }
                 }
             }
+        }
+    }
+    .profile-block {
+        display: inline-block;
+        width: 190px;
+        .profile-main {
+            position: relative;
+            .profile-image {
+                position: absolute;
+                left: 0px;
+                height: 52px;
+                margin: auto;
+                top: auto;
+                animation: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                align-content: center;
+            }
+            .profile-detail {
+                padding-left: 55px;
+                position: relative;
+                top: 6px;
+                cursor: pointer;
+                h4 {
+                    font-size: 15px;
+                    color: #1a1a1a;
+                    font-family: $font_light;
+                    margin-bottom: 3px;
+                    padding-top: 4px;
+                }
+                p {
+                    font-size: 11px;
+                    color: #9ea0a5;
+                    margin-bottom: 0px;
+                }
+                i {
+                    position: absolute;
+                    right: 0;
+                    top: -10px;
+                    bottom: 0;
+                    margin: auto;
+                    display: flex;
+                    align-items: center;
+                    font-size: 7px;
+                    color: #979797;
+                }
+            }
+        }
+    }
+    .header-menu {
+        &.navigation {
+            width: calc(100% - 190px);
         }
     }
 }
