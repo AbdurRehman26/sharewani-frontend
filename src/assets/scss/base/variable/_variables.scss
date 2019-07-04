@@ -36,8 +36,8 @@ $header-height: 52px !default;
 // upload image
 $upload-border-radius: 8px;
 
-$font-family-base: 'AvenirNextRegular' !default;
-$headings-font-family: 'LeagueSpartan-Bold' !default;
+$font-family-base: $font_regular !default;
+$headings-font-family: $font_bold !default;
 $headings-color: $secondary !default;
 $label-color: $secondary !default;
 

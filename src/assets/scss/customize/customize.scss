@@ -2941,54 +2941,6 @@ ul.teamDescLength {
     }
 }
 
-.accomplishing-goals-graph {
-    width: 392px;
-    height: 285px;
-    margin: 15px auto 0;
-    position: relative;
-    background: url('./assets/images/graph-arrow.png');
-    background-size: 392px auto;
-    background-position: center center;
-    background-repeat: no-repeat;
-    @include mobile {
-        width: 100%;
-        background-size: 325px auto;
-    }
-    h2 {
-        font-family: $font-bold;
-        color: $pink;
-        text-transform: uppercase;
-        position: absolute;
-        span {
-            text-transform: lowercase;
-            color: $grey-darkest;
-            font-size: 1rem;
-            display: block;
-        }
-        &.pos1 {
-            top: 40px;
-        }
-        &.pos2 {
-            bottom: 40px;
-        }
-        &.pos3 {
-            top: -10px;
-            right: 15px;
-        }
-        &.pos4 {
-            top: 90px;
-            right: -15px;
-            @include mobile {
-                right: -5px;
-            }
-        }
-        &.pos5 {
-            bottom: 0px;
-            right: 15px;
-        }
-    }
-}
-
 .heart-wrapper {
     width: 80px;
     height: 80px;
