@@ -27,7 +27,9 @@
                         <b-button type="submit" variant="primary"
                             >SEND INSTRUCTIONS</b-button
                         >
-                        <router-link to="/" class="forgot-link float-right"
+                        <router-link
+                            to="/"
+                            class="btn forgot-link btn-link float-right"
                             >Back to login</router-link
                         >
                     </b-form>

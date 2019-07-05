@@ -81,16 +81,6 @@
                 .btn-primary {
                     min-width: 146px;
                 }
-
-                .btn-link {
-                    padding-left: 0;
-                    color: $input-color;
-                    text-decoration: none;
-
-                    &:hover {
-                        text-decoration: underline;
-                    }
-                }
             }
         }
     }

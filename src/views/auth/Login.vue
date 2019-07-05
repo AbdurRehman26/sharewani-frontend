@@ -38,7 +38,9 @@
                         <b-button type="submit" variant="primary"
                             >Submit</b-button
                         >
-                        <router-link to="/" class="forgot-link float-right"
+                        <router-link
+                            to="/"
+                            class="btn forgot-link btn-link float-right"
                             >Forgot your password?</router-link
                         >
                     </b-form>

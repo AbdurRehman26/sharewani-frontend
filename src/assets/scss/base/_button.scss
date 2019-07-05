@@ -7,12 +7,19 @@
     min-width: 120px;
     position: relative;
     border-radius: 4px;
+    height: $button-height;
     &:focus {
         box-shadow: none !important;
     }
     &.btn-link {
         font-family: $font_regular;
-        text-decoration: underline;
+        text-decoration: none;
+        color: $secondary;
+        text-transform: initial;
+        min-width: 0;
+        &:hover {
+            text-decoration: underline;
+        }
     }
     i {
         @include font-size(0.5);
