@@ -175,6 +175,25 @@ header {
             width: calc(100% - 190px);
         }
     }
+    .profile-popover {
+        position: absolute;
+        top: 100%;
+        background-color: #fff;
+        width: 100%;
+        ul {
+            padding: 0px;
+            list-style: none;
+            margin-bottom: 0;
+            li {
+                a {
+                    padding: 11px 0px;
+                    display: block;
+                    font-size: 15px;
+                    position: relative;
+                }
+            }
+        }
+    }
 }
 
 .auth-header {
@@ -185,6 +204,15 @@ header {
         img {
             width: auto;
             height: 41px;
+        }
+    }
+    .profile-popover {
+        position: absolute;
+        top: 100%;
+        background-color: #fff;
+        ul {
+            padding: 0px;
+            list-style: none;
         }
     }
 }

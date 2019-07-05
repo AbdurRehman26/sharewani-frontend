@@ -19,6 +19,30 @@
                     <p>Admin</p>
                     <i class="icon-caret-down"></i>
                 </div>
+                <div class="profile-popover">
+                    <div class="nav-dropdown">
+                        <ul>
+                            <li>
+                                <router-link to="/">
+                                    <i class="icon-Customer-Profil"></i>
+                                    <span>Update Profile</span>
+                                </router-link>
+                            </li>
+                            <li>
+                                <router-link to="/">
+                                    <i class="icon-change-password"></i>
+                                    <span>Change Password</span>
+                                </router-link>
+                            </li>
+                            <li>
+                                <router-link to="/">
+                                    <i class="icon-sign-out"></i>
+                                    <span>Sign Out</span>
+                                </router-link>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
