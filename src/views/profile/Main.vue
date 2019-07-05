@@ -1,32 +1,25 @@
 <template>
-    <header>
-        <div class="header-menu navigation">
-            <ul class="menu-list">
-                <li v-for="(list, index) in menuListing" :key="index">
-                    <router-link :to="list.anchorLink">
-                        <span>{{ list.menuLabel }}</span>
-                    </router-link>
-                </li>
-            </ul>
-        </div>
-        <div class="profile-block">
-            <div class="profile-main">
-                <div class="profile-image">
-                    <img :src="require('@/assets/images/profile-pic.png')" />
-                </div>
-                <div class="profile-detail">
-                    <h4>Sammy Lawson</h4>
-                    <p>Admin</p>
-                    <i class="icon-caret-down"></i>
-                </div>
+    <div class="dashboard">
+        <base-sidebar></base-sidebar>
+        <div class="content-area">
+            <base-header :menuListing="menuListing"></base-header>
+            <div class="right-panel">
+                <filter-panel
+                    :filterList="options"
+                    :filterSelected="selected"
+                    filterHeading="All Customers"
+                ></filter-panel>
             </div>
         </div>
-    </header>
+    </div>
 </template>
 
 <script>
+import filterPanel from '@/components/FilterPanel.vue'
 export default {
-    components: {},
+    components: {
+        filterPanel,
+    },
 
     /*
     |--------------------------------------------------------------------------
@@ -38,9 +31,9 @@ export default {
          * Value to determine the current compose mode which
          * varies between 'add' and 'edit'
          */
-        menuListing: {
-            type: Array,
-            default: null,
+        mode: {
+            type: String,
+            default: 'add',
         },
     }, // End of Component > props
 
@@ -50,7 +43,31 @@ export default {
     |--------------------------------------------------------------------------
     */
     data() {
-        return {}
+        return {
+            menuListing: [
+                {
+                    anchorLink: '/',
+                    menuLabel: 'Alerts',
+                },
+                {
+                    anchorLink: '/',
+                    menuLabel: 'Activity Dashboard',
+                },
+                {
+                    anchorLink: '/',
+                    menuLabel: 'Customer Statistics',
+                },
+            ],
+
+            selected: '1',
+
+            options: [
+                { text: 'All', value: '1' },
+                { text: 'Pending Review', value: '2' },
+                { text: 'Approved', value: '3' },
+                { text: 'Rejected', value: '4' },
+            ],
+        }
     }, // End of Component > data
 
     /*
