@@ -22,12 +22,12 @@ $yellow: #ffb54c;
 $radio-check: #9d9f8f;
 
 $theme-colors: (
-	'primary': $primary,
-	'secondary': $secondary,
-	'success': $success,
-	'light': $light,
-	'dark': $dark,
-	'danger': $danger
+    'primary': $primary,
+    'secondary': $secondary,
+    'success': $success,
+    'light': $light,
+    'dark': $dark,
+    'danger': $danger
 );
 
 // header height
@@ -106,6 +106,7 @@ $form-group-margin-bottom: 24px !default;
 $button-size: $font-size-base;
 $button-family: $font-bold;
 $button-padding: 7px 28px;
+$button-height: $input-height !default;
 $toggle-button-padding: 7px 10px;
 $second-button-color: #706a77;
 $default-button-color: #706a77;

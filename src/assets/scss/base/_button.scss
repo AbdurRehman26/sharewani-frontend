@@ -9,16 +9,16 @@
     }
     &.btn-link {
         font-family: $font_regular;
-        text-decoration:underline;
+        text-decoration: underline;
     }
-    i{
+    i {
         @include font-size(0.5);
         margin-right: 4px;
     }
 }
 
-.btn-secondary{
-    &:active{
+.btn-secondary {
+    &:active {
         background: $pink !important;
         border-color: $pink !important;
     }
@@ -62,7 +62,7 @@
         background-color: $second-button-color;
         border-color: $second-button-color;
         pointer-events: none;
-        opacity:1;
+        opacity: 1;
         color: #fff;
     }
 }
@@ -74,8 +74,8 @@
         display: block;
     }
 }
-.btn-group-toggle{
-    .btn{
+.btn-group-toggle {
+    .btn {
         min-width: 80px;
         padding: $toggle-button-padding;
     }
