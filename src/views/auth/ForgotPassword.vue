@@ -24,7 +24,10 @@
                                 placeholder="Enter username"
                             ></b-form-input>
                         </b-form-group>
-                        <b-button type="submit" variant="primary"
+                        <b-button
+                            type="submit"
+                            variant="primary"
+                            @click="$router.push('/email-sent')"
                             >SEND INSTRUCTIONS</b-button
                         >
                         <router-link
@@ -38,3 +41,50 @@
         </div>
     </div>
 </template>
+
+<script>
+export default {
+    components: {},
+    /*
+        |--------------------------------------------------------------------------
+        | Component > props
+        |--------------------------------------------------------------------------
+        */
+    props: {
+        /**
+         * Value to determine the current compose mode which
+         * varies between 'add' and 'edit'
+         */
+    }, // End of Component > props
+
+    /*
+        |--------------------------------------------------------------------------
+        | Component > data
+        |--------------------------------------------------------------------------
+        */
+    data() {
+        return {}
+    }, // End of Component > data
+
+    /*
+        |--------------------------------------------------------------------------
+        | Component > computed
+        |--------------------------------------------------------------------------
+        */
+    computed: {}, // End of Component > computed
+
+    /*
+        |--------------------------------------------------------------------------
+        | Component > methods
+        |--------------------------------------------------------------------------
+        */
+    methods: {}, // End of Component > methods
+
+    /*
+        |--------------------------------------------------------------------------
+        | Component > mounted
+        |--------------------------------------------------------------------------
+        */
+    mounted() {}, // End of Component > mounted
+} // End of export default
+</script>
