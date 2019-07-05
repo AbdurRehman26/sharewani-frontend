@@ -6,6 +6,11 @@
             display: none;
         }
     }
+    &:not(.main-logo) {
+        .main {
+            display: none;
+        }
+    }
     &.inverse-logo {
         .main {
             display: none;

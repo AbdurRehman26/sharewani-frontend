@@ -14,17 +14,17 @@
                 <div class="profile-image">
                     <img :src="require('@/assets/images/profile-pic.png')" />
                 </div>
-                <div class="profile-detail">
+                <div class="profile-detail" @click="showAccountDetails ^= true">
                     <h4>Sammy Lawson</h4>
                     <p>Admin</p>
                     <i class="icon-caret-down"></i>
                 </div>
-                <div class="profile-popover">
+                <div class="profile-popover" v-if="showAccountDetails == true">
                     <div class="nav-dropdown">
                         <ul>
                             <li>
                                 <router-link to="/">
-                                    <i class="icon-Customer-Profil"></i>
+                                    <i class="icon-person"></i>
                                     <span>Update Profile</span>
                                 </router-link>
                             </li>
@@ -74,7 +74,9 @@ export default {
     |--------------------------------------------------------------------------
     */
     data() {
-        return {}
+        return {
+            showAccountDetails: false,
+        }
     }, // End of Component > data
 
     /*
