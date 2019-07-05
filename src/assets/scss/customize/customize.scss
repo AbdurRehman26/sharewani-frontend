@@ -19,3 +19,27 @@
 .right-panel {
     padding: 44px;
 }
+
+// Filter Section
+
+.filter-section {
+    h2 {
+        font-family: $font_bold;
+        color: $grey-darkest;
+        font-size: 1.625rem;
+        margin-top: 7px;
+    }
+    ul {
+        list-style-type: none;
+        padding-left: 0;
+
+        li {
+            display: inline-block;
+            padding-right: 16px;
+
+            &:last-child {
+                padding-right: 0;
+            }
+        }
+    }
+}

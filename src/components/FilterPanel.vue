@@ -1,30 +1,36 @@
 <template>
-    <div class="row">
-        <div class="col-md-4">
-            <h2>{{ filterHeading }}</h2>
-        </div>
-        <div class="col-md-8 text-right">
-            <ul>
-                <li>
-                    <b-form-group>
-                        <b-form-radio-group
-                            :id="index"
-                            v-model="filterSelected"
-                            :options="filterList"
-                            buttons
-                            :name="filterName"
-                        ></b-form-radio-group>
-                    </b-form-group>
-                </li>
-                <li>
-                    <div class="form-group">
-                        <b-form-input placeholder="Search"></b-form-input>
-                    </div>
-                </li>
-                <li>
-                    <b-button type="button" variant="primary">Apply</b-button>
-                </li>
-            </ul>
+    <div class="filter-section">
+        <div class="row">
+            <div class="col-md-3">
+                <h2>{{ filterHeading }}</h2>
+            </div>
+            <div class="col-md-9 text-right">
+                <ul>
+                    <li>
+                        <b-form-group>
+                            <b-form-radio-group
+                                :id="index"
+                                v-model="filterSelected"
+                                :options="filterList"
+                                buttons
+                                button-variant="outline-primary"
+                                :name="filterName"
+                            ></b-form-radio-group>
+                        </b-form-group>
+                    </li>
+                    <li>
+                        <div class="form-group search-input">
+                            <i class="icon-Search"></i>
+                            <b-form-input placeholder="Search"></b-form-input>
+                        </div>
+                    </li>
+                    <li>
+                        <b-button type="button" variant="primary"
+                            >Apply</b-button
+                        >
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </template>

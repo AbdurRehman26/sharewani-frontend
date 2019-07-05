@@ -27,3 +27,20 @@ input[type='number']::-webkit-outer-spin-button {
     top: 10px;
     text-decoration: none;
 }
+
+.search-input {
+    position: relative;
+
+    .form-control {
+        padding-right: 35px;
+    }
+
+    i {
+        position: absolute;
+        right: 14px;
+        top: 15px;
+        font-size: 15px;
+        color: $dark;
+        pointer-events: none;
+    }
+}
