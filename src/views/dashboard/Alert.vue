@@ -23,7 +23,7 @@
                             <base-search></base-search>
                         </li>
                         <li>
-                            <b-form-group class="custom-selectbox">
+                            <b-form-group>
                                 <b-form-select
                                     id="input-3"
                                     v-model="filterBy"
