@@ -1,7 +1,8 @@
 <template id="">
     <div class="logo">
         <router-link :class="anchorClass" :to="anchorLink">
-            <img src="@/assets/images/logo.svg" />
+            <img src="@/assets/images/logo.svg" class="inverse" />
+            <img src="@/assets/images/logo-auth.svg" class="main" />
         </router-link>
     </div>
 </template>

@@ -1,5 +1,17 @@
 @import 'common';
 @import 'login';
+.logo {
+    &.main-logo {
+        .inverse {
+            display: none;
+        }
+    }
+    &.inverse-logo {
+        .main {
+            display: none;
+        }
+    }
+}
 .auth-card-body {
     padding: 37px 42px 40px;
 }

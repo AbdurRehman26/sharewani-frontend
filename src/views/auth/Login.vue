@@ -1,7 +1,7 @@
 <template>
     <div class="auth-wrapper middle-aligner">
         <div class="inner">
-            <base-logo></base-logo>
+            <base-logo class="main-logo"></base-logo>
             <div class="card card-auth  with-shadow">
                 <h2 class="auth-heading">
                     Login to your account
