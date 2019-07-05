@@ -7,12 +7,6 @@
         <div class="content-area">
             <base-header :menuListing="menuListing"></base-header>
             <div class="right-panel">
-                <filter-panel
-                    :filterList="options"
-                    :filterSelected="selected"
-                    filterHeading="All Customers"
-                ></filter-panel>
-
                 <b-table :items="items"></b-table>
             </div>
         </div>
@@ -20,12 +14,7 @@
 </template>
 
 <script>
-import filterPanel from '@/components/FilterPanel.vue'
 export default {
-    components: {
-        filterPanel,
-    },
-
     /*
     |--------------------------------------------------------------------------
     | Component > props
