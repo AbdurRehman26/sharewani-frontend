@@ -1,23 +1,31 @@
 .btn-group-toggle {
     .btn-outline-primary {
         height: $input-height;
+        min-width: auto;
         font-family: $font_regular;
-        border: 1px solid $border-opacity !important;
+        text-transform: capitalize;
+        padding: 11px 25px;
         outline: none;
-        color: $primary;
+        color: $grey-medium;
+        border: 1px $grey-lite solid;
         box-shadow: none !important;
         background-color: $white;
 
         span {
             display: inline-block;
             padding-top: 1px;
+            font-family: $font_regular;
             @include font-size(0.75);
         }
 
         &.active {
-            border: 1px $modal-header-border-color solid;
-            background-color: transparent !important;
+            background-color: $grey-dark !important;
             color: $secondary !important;
+            border: 1px $grey-lite solid !important;
+        }
+
+        &:active {
+            @extend .active;
         }
     }
 }

@@ -1,9 +1,37 @@
-<template id="">
-    <div class="logo">
-        <router-link :class="anchorClass" :to="anchorLink">
-            <img src="@/assets/images/logo.svg" class="inverse" />
-            <img src="@/assets/images/logo-auth.svg" class="main" />
-        </router-link>
+<template>
+    <div class="filter-section">
+        <div class="row">
+            <div class="col-md-3">
+                <h2>{{ filterHeading }}</h2>
+            </div>
+            <div class="col-md-9 text-right">
+                <ul>
+                    <li>
+                        <b-form-group>
+                            <b-form-radio-group
+                                :id="index"
+                                v-model="filterSelected"
+                                :options="filterList"
+                                buttons
+                                button-variant="outline-primary"
+                                :name="filterName"
+                            ></b-form-radio-group>
+                        </b-form-group>
+                    </li>
+                    <li>
+                        <div class="form-group search-input">
+                            <i class="icon-Search"></i>
+                            <b-form-input placeholder="Search"></b-form-input>
+                        </div>
+                    </li>
+                    <li>
+                        <b-button type="button" variant="primary"
+                            >Apply</b-button
+                        >
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
 </template>
 <script>
@@ -14,13 +42,18 @@ export default {
         |--------------------------------------------------------------------------
         */
     props: {
-        anchorClass: {
-            type: String,
-            default: '',
+        filterList: {
+            type: Array,
+            default: null,
         },
-        anchorLink: {
+        filterSelected: {
             type: String,
-            default: '/',
+            default: 'radio',
+        },
+
+        filterHeading: {
+            type: String,
+            default: null,
         },
     }, // End of Component > props
 

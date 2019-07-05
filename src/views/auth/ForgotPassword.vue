@@ -4,9 +4,10 @@
             <base-logo class="main-logo"></base-logo>
             <div class="card card-auth  with-shadow">
                 <h2 class="auth-heading">
-                    Login to your account
+                    Forgot your password?
                     <span>
-                        Please enter your account credentials.
+                        Please provide your username and we'll send you
+                        instructions on how to change your password.
                     </span>
                 </h2>
                 <div class="auth-body">
@@ -23,25 +24,13 @@
                                 placeholder="Enter username"
                             ></b-form-input>
                         </b-form-group>
-                        <b-form-group
-                            id="input-group-2"
-                            label="Password"
-                            label-for="input-1"
-                        >
-                            <b-form-input
-                                id="input-2"
-                                type="password"
-                                required
-                                placeholder="Enter your account password"
-                            ></b-form-input>
-                        </b-form-group>
                         <b-button type="submit" variant="primary"
-                            >Submit</b-button
+                            >SEND INSTRUCTIONS</b-button
                         >
                         <router-link
                             to="/"
                             class="btn forgot-link btn-link float-right"
-                            >Forgot your password?</router-link
+                            >Back to login</router-link
                         >
                     </b-form>
                 </div>

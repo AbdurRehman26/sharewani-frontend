@@ -14,6 +14,30 @@ export default new Router({
                 import(/* webpackChunkName: "login" */ '@/views/auth/Login.vue'),
         },
         {
+            path: '/forgot-password',
+            name: 'forgot-page',
+            component: () =>
+                import(/* webpackChunkName: "forgot-password" */ '@/views/auth/ForgotPassword.vue'),
+        },
+        {
+            path: '/reset-password',
+            name: 'reset-password-page',
+            component: () =>
+                import(/* webpackChunkName: "reset-password" */ '@/views/auth/ResetPassword.vue'),
+        },
+        {
+            path: '/email-sent',
+            name: 'email-sent-page',
+            component: () =>
+                import(/* webpackChunkName: "email-sent" */ '@/views/auth/EmailSent.vue'),
+        },
+        {
+            path: '/contact-us',
+            name: 'contact-us-page',
+            component: () =>
+                import(/* webpackChunkName: "contact-us" */ '@/views/ContactUs.vue'),
+        },
+        {
             path: '/about',
             name: 'about',
             // route level code-splitting
@@ -30,6 +54,15 @@ export default new Router({
             // which is lazy-loaded when the route is visited.
             component: () =>
                 import(/* webpackChunkName: "about" */ './views/dashboard/Main.vue'),
+        },
+        {
+            path: '/customer-profile',
+            name: 'profile',
+            // route level code-splitting
+            // this generates a separate chunk (about.[hash].js) for this route
+            // which is lazy-loaded when the route is visited.
+            component: () =>
+                import(/* webpackChunkName: "profile" */ './views/profile/Main.vue'),
         },
     ],
 })

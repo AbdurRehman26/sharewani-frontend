@@ -4,44 +4,40 @@
             <base-logo class="main-logo"></base-logo>
             <div class="card card-auth  with-shadow">
                 <h2 class="auth-heading">
-                    Login to your account
+                    Contact Us
                     <span>
-                        Please enter your account credentials.
+                        If you're having trouble logging in or with your
+                        password.
                     </span>
                 </h2>
                 <div class="auth-body">
                     <b-form>
                         <b-form-group
                             id="input-group-1"
-                            label="Username"
+                            label="EMAIL ADDRESS"
                             label-for="input-1"
                         >
                             <b-form-input
                                 id="input-1"
                                 type="email"
                                 required
-                                placeholder="Enter username"
+                                placeholder="Enter email address"
                             ></b-form-input>
                         </b-form-group>
                         <b-form-group
                             id="input-group-2"
-                            label="Password"
+                            label="Description of the issue"
                             label-for="input-1"
                         >
-                            <b-form-input
+                            <b-form-textarea
                                 id="input-2"
                                 type="password"
-                                required
-                                placeholder="Enter your account password"
-                            ></b-form-input>
+                                rows="3"
+                                placeholder="Please provide a detailed description of this issue"
+                            ></b-form-textarea>
                         </b-form-group>
                         <b-button type="submit" variant="primary"
-                            >Submit</b-button
-                        >
-                        <router-link
-                            to="/"
-                            class="btn forgot-link btn-link float-right"
-                            >Forgot your password?</router-link
+                            >SEND</b-button
                         >
                     </b-form>
                 </div>

@@ -1,0 +1,17 @@
+.table {
+    border: 1px #ddd solid;
+    background-color: $white;
+
+    thead {
+        th {
+            border-bottom: 0 !important;
+        }
+    }
+
+    tbody {
+        td {
+            color: $grey-darkest;
+            padding: 13px 12px;
+        }
+    }
+}
