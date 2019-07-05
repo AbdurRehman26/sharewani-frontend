@@ -17,9 +17,19 @@
 			font-size: 0.875rem;
 			font-family: $font_regular;
 			color: #9ea0a5;
+			line-height: 20px;
+			i {
+				color: $primary;
+				font-style: normal;
+			}
 		}
 	}
 	.auth-body {
 		margin-top: 24px;
+	}
+	.email-sent-icon {
+		max-width: 76px;
+		margin: 12px auto 35px;
+		display: block;
 	}
 }
