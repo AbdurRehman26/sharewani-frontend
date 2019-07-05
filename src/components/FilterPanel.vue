@@ -18,9 +18,7 @@
                 </li>
                 <li>
                     <div class="form-group">
-                        <b-form-input
-                            placeholder="Enter your name"
-                        ></b-form-input>
+                        <b-form-input placeholder="Search"></b-form-input>
                     </div>
                 </li>
                 <li>
@@ -59,9 +57,7 @@ export default {
         |--------------------------------------------------------------------------
         */
     data() {
-        return {
-            // filterSelected: '',
-        }
+        return {}
     }, // End of Component > data
 
     /*

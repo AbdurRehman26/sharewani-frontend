@@ -20,17 +20,3 @@
     }
 }
 
-.btn[disabled] {
-    span {
-        opacity: 0;
-    }
-    .loader {
-        display: block;
-    }
-}
-.btn-group-toggle {
-    .btn {
-        min-width: 80px;
-        padding: $toggle-button-padding;
-    }
-}
