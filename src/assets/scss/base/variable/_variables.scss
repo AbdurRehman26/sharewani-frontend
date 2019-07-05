@@ -54,6 +54,7 @@ $card-padding: 0 0;
 // box shadow
 $box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.04);
 $front-card-shadow: 0px 0px 30px $grey-xlite;
+
 // input
 $input-bg: $white !default;
 $input-color: $grey-darkest !default;
@@ -61,12 +62,21 @@ $input-border-color: transparent !default;
 $input-border-radius: 4px !default;
 $input-height: 43px !default;
 $input-font-size: $font-size-base;
+$input-padding: 14px 21px;
+
+//label
 $label-font-size: $font-size-sm;
+
+// Placeholder text color
+$input-color-placeholder: $grey-medium !default;
+
 // button
 $btn-border-radius: 19px !default;
+
 // link
 $link-color: $primary !default;
 $link-hover-color: darken($link-color, 5%) !default;
+
 // modal
 $modal-inner-padding: 24px 24px 0 !default;
 $modal-title-line-height: 24px !default;
