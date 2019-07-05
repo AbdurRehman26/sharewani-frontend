@@ -2,10 +2,10 @@
     <div class="wrap-content">
         <div class="filter-section">
             <div class="row">
-                <div class="col-md-3">
-                    <h2>{{ filterHeading }}</h2>
+                <div class="col-md-2">
+                    <h2>Alert</h2>
                 </div>
-                <div class="col-md-9 text-right">
+                <div class="col-md-10 text-right">
                     <ul>
                         <li>
                             <b-form-group>
@@ -21,6 +21,16 @@
                         </li>
                         <li>
                             <base-search></base-search>
+                        </li>
+                        <li>
+                            <b-form-group class="custom-selectbox">
+                                <b-form-select
+                                    id="input-3"
+                                    v-model="filterBy"
+                                    :options="filterOptions"
+                                    required
+                                ></b-form-select>
+                            </b-form-group>
                         </li>
                         <li>
                             <b-button type="button" variant="primary"
@@ -67,9 +77,18 @@ export default {
 
             options: [
                 { text: 'All', value: '1' },
-                { text: 'Pending Review', value: '2' },
-                { text: 'Approved', value: '3' },
-                { text: 'Rejected', value: '4' },
+                { text: 'Pending', value: '2' },
+                { text: 'In Review', value: '3' },
+            ],
+
+            filterBy: null,
+
+            filterOptions: [
+                { text: 'Filter by', value: null },
+                'Name Screening',
+                'Documentation',
+                'Risk Rating',
+                'Status',
             ],
             items: [
                 {

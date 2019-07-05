@@ -15,8 +15,9 @@
                 padding: 0px;
                 li {
                     transition: 0.3s ease-in-out;
+                    font-size: 12px;
                     a {
-                        margin-bottom: 14px;
+                        margin-bottom: 10px;
                         float: left;
                         background-color: #907f9d;
                         border-radius: 8px;
@@ -73,14 +74,15 @@
                 li {
                     margin-right: 0px;
                     width: 100%;
-                    margin-bottom: 6px;
+                    margin-bottom: 14px;
                     transition: 0.3s ease-in-out;
                     a {
                         color: #e4e4e6;
                         padding: 8px 8px;
                         span {
                             font-family: $font_regular;
-                            font-size: 11px;
+                            // font-size: 11px;
+                            font-size: 14px;
                         }
                         &.router-link-exact-active {
                             background-color: #22003c;
