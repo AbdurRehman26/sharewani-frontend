@@ -9,6 +9,18 @@
                 </li>
             </ul>
         </div>
+        <div class="profile-block">
+            <div class="profile-main">
+                <div class="profile-image">
+                    <img :src="require('@/assets/images/profile-pic.png')" />
+                </div>
+                <div class="profile-detail">
+                    <h4>Sammy Lawson</h4>
+                    <p>Admin</p>
+                    <i class="icon-caret-down"></i>
+                </div>
+            </div>
+        </div>
     </header>
 </template>
 

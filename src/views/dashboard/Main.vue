@@ -1,6 +1,9 @@
 <template>
     <div class="dashboard">
-        <base-sidebar></base-sidebar>
+        <base-sidebar
+            :countryListing="countryListing"
+            :sidelinksListing="sidelinksListing"
+        ></base-sidebar>
         <div class="content-area">
             <base-header :menuListing="menuListing"></base-header>
             <router-view></router-view>
@@ -37,7 +40,7 @@ export default {
         return {
             menuListing: [
                 {
-                    anchorLink: '/',
+                    anchorLink: '/dashboard',
                     menuLabel: 'Alerts',
                 },
                 {
@@ -47,6 +50,66 @@ export default {
                 {
                     anchorLink: '/',
                     menuLabel: 'Customer Statistics',
+                },
+            ],
+            countryListing: [
+                {
+                    anchorLink: '/',
+                    menuLabel: 'UAE',
+                },
+                {
+                    anchorLink: '/dashboard',
+                    menuLabel: 'PK',
+                },
+                {
+                    anchorLink: '/',
+                    menuLabel: 'UK',
+                },
+                {
+                    anchorLink: '/',
+                    menuLabel: 'USA',
+                },
+            ],
+            sidelinksListing: [
+                {
+                    anchorLink: '/',
+                    icon: 'icon-insights',
+                    menuLabel: 'Insights',
+                },
+                {
+                    anchorLink: '/dashboard',
+                    icon: 'icon-Customer-Profil',
+                    menuLabel: 'Customer Profiles',
+                },
+                {
+                    anchorLink: '/',
+                    icon: 'icon-Add-Customer',
+                    menuLabel: 'Register Customer',
+                },
+                {
+                    anchorLink: '/',
+                    icon: 'icon-world',
+                    menuLabel: 'Search People',
+                },
+                {
+                    anchorLink: '/',
+                    icon: 'icon-Configurations',
+                    menuLabel: 'Configurations',
+                },
+                {
+                    anchorLink: '/',
+                    icon: 'icon-System-Users',
+                    menuLabel: 'System Users',
+                },
+                {
+                    anchorLink: '/',
+                    icon: 'icon-System-Log',
+                    menuLabel: 'System Logs',
+                },
+                {
+                    anchorLink: '/',
+                    icon: 'icon-Export',
+                    menuLabel: 'Data Export',
                 },
             ],
         }
