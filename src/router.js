@@ -67,7 +67,6 @@ export default new Router({
                 },
             ],
         },
-
         {
             path: '/system-users',
             name: 'systems',
@@ -82,7 +81,6 @@ export default new Router({
                 },
             ],
         },
-
         {
             path: '/customer-profile',
             name: 'profile',

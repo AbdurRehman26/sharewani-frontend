@@ -1,5 +1,5 @@
 <template>
-    <div class="table-alert">
+    <div class="table-section">
         <b-table :items="listItems" :fields="listFields">
             <template slot="profile" slot-scope="data">
                 <div class="profile-area">

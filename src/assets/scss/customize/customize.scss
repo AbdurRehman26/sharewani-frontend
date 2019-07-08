@@ -159,14 +159,31 @@
 
 .customer-section {
     table {
-        td {
+        td,
+        th {
             &:nth-child(7) {
-                width: 150px;
+                width: 135px;
+                text-align: center;
+            }
+
+            .customer-link {
+                a {
+                    color: $body-color;
+
+                    &:hover {
+                        color: $nav-color;
+                    }
+                }
             }
         }
     }
 }
 
+.table-section {
+    border: 1px #d7d7e2 solid;
+    overflow: hidden;
+    border-radius: 8px 8px 0 0;
+}
 .system-user-filter {
     ul {
         display: flex;
