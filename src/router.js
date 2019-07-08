@@ -51,13 +51,19 @@ export default new Router({
             path: '/dashboard',
             name: 'dashboard',
             component: () =>
-                import(/* webpackChunkName: "about" */ '@//views/dashboard/Main.vue'),
+                import(/* webpackChunkName: "about" */ '@/views/dashboard/Main.vue'),
             children: [
                 {
                     path: '/',
                     name: 'alerts',
                     component: () =>
                         import(/* webpackChunkName: "login" */ '@/views/dashboard/Alert.vue'),
+                },
+                {
+                    path: 'activity',
+                    name: 'dashboard-activity-page',
+                    component: () =>
+                        import(/* webpackChunkName: "dashboard-activity" */ '@/views/dashboard/Activity.vue'),
                 },
             ],
         },
