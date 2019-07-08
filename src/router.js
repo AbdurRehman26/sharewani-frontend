@@ -67,6 +67,7 @@ export default new Router({
                 },
             ],
         },
+
         {
             path: '/system-users',
             name: 'systems',
@@ -81,6 +82,7 @@ export default new Router({
                 },
             ],
         },
+
         {
             path: '/customer-profile',
             name: 'profile',
@@ -92,7 +94,7 @@ export default new Router({
 
             children: [
                 {
-                    path: '/all-customer',
+                    path: '/',
                     name: 'all-customer',
                     component: () =>
                         import(/* webpackChunkName: "customer" */ './views/profile/AllCustomer.vue'),

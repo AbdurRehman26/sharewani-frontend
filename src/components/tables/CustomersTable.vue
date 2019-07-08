@@ -28,13 +28,13 @@
                     class="approved status-view"
                     v-if="data.value == 'approved'"
                 >
-                    <i class="icon-Check"></i> Approved
+                    <i class="icon-Check"></i> <span>Approved</span>
                 </div>
                 <div
                     class="rejected status-view"
                     v-if="data.value == 'rejected'"
                 >
-                    <i class="icon-Wrong"></i> Rejected
+                    <i class="icon-Wrong"></i> <span>Rejected</span>
                 </div>
             </template>
             <template slot="action" slot-scope="data">
