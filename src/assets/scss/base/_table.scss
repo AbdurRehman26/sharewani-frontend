@@ -4,12 +4,40 @@
     overflow: hidden;
     thead {
         border: 1px #d7d7e2 solid;
+        background: $grey-dark;
+        color: #7f8fa4;
         th {
             border-bottom: 0 !important;
             background-color: #e8e8ef;
             color: #7f8fa4;
             overflow: hidden;
+            border-bottom: 0 !important;
+            font-family: $font_light;
             text-transform: uppercase;
+            &.person-icon {
+                text-align: center;
+                &:before {
+                    content: '\E91C';
+                    font-family: 'icomoon';
+                    padding-right: 10px;
+                }
+            }
+            &.document-icon {
+                text-align: center;
+                &:before {
+                    content: '\e90a';
+                    font-family: 'icomoon';
+                    padding-right: 10px;
+                }
+            }
+            &.graph-icon {
+                text-align: center;
+                &:before {
+                    content: '\e90f';
+                    font-family: 'icomoon';
+                    padding-right: 10px;
+                }
+            }
         }
     }
 
@@ -18,7 +46,31 @@
         border: 1px #d7d7e2 solid;
         td {
             color: $grey-darkest;
-            padding: 13px 12px;
+            padding: $table-row-padding;
+            position: relative;
+        }
+    }
+}
+
+.table-pagination {
+    padding-top: 15px;
+    .record-shown {
+        display: flex;
+        align-items: center;
+        select {
+            min-width: 170px;
+        }
+        p {
+            padding-left: 10px;
+        }
+    }
+    .next-previous-pagination {
+        text-align: right;
+        button {
+            margin-left: 15px;
+            color: $secondary;
+            background-color: #fff;
+            border-color: #fff;
         }
     }
 }

@@ -82,6 +82,11 @@ hr {
     height: 100vh;
 }
 
+.disable {
+    color: $dark;
+    pointer-events: none;
+}
+
 .front-site {
     .main-content {
         @include tabletL {
