@@ -19,5 +19,9 @@
 @import 'customize/chart';
 @import 'customize/auth';
 @import 'customize/sidebar';
+@import 'customize/dashboard';
 @import 'customize/customize';
 
+.amcharts-chart-div > a {
+	display: none !important;
+}
