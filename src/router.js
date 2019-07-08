@@ -75,7 +75,7 @@ export default new Router({
             children: [
                 {
                     path: '/',
-                    name: 'alerts',
+                    name: 'system-users',
                     component: () =>
                         import(/* webpackChunkName: "login" */ '@/views/systemusers/SystemUsers.vue'),
                 },
