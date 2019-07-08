@@ -352,9 +352,10 @@ $sides: (top, bottom, left, right); // Leave this variable alone
 .status-view {
     color: #fff;
     border-radius: 16px;
-    height: 32px;
+    height: 35px;
     text-align: center;
     font-size: 14px;
+    min-width: 110px;
     padding-top: 7px;
 
     i {
@@ -364,7 +365,7 @@ $sides: (top, bottom, left, right); // Leave this variable alone
 
     span {
         position: relative;
-        top: 2px;
+        top: 3px;
         margin-left: 8px;
         display: inline-block;
         vertical-align: baseline;
