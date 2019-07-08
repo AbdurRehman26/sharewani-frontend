@@ -3,7 +3,9 @@
     border-radius: 16px;
     padding: 32px;
     margin: 0 auto;
-
+    &.sm-radius {
+        border-radius: 8px;
+    }
     &.with-shadow {
         box-shadow: 0px 0px 14px rgba(50, 50, 93, 0.2);
     }

@@ -46,7 +46,7 @@ export default {
                     menuLabel: 'Alerts',
                 },
                 {
-                    anchorLink: '/activity',
+                    anchorLink: '/',
                     menuLabel: 'Activity Dashboard',
                 },
                 {
