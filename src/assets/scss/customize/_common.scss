@@ -357,6 +357,8 @@ $sides: (top, bottom, left, right); // Leave this variable alone
     font-size: 14px;
     min-width: 110px;
     padding-top: 7px;
+    position: absolute;
+    top: 11px;
 
     i {
         font-size: 14px;

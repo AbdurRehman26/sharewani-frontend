@@ -156,3 +156,13 @@
         border-color: $grey-dark;
     }
 }
+
+.customer-section {
+    table {
+        td {
+            &:nth-child(7) {
+                width: 150px;
+            }
+        }
+    }
+}
