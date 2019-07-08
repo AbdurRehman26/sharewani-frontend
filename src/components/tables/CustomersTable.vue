@@ -1,5 +1,5 @@
 <template>
-    <div class="table-alert">
+    <div class="table-section">
         <b-table :items="listItems" :fields="listFields">
             <template slot="profile" slot-scope="data">
                 <div class="profile-area">
@@ -15,6 +15,22 @@
                                     ')',
                             }"
                         ></div>
+                    </router-link>
+                </div>
+            </template>
+
+            <template slot="customer" slot-scope="data">
+                <div class="customer-link">
+                    <router-link to="/">
+                        <span>{{ data.value }}</span>
+                    </router-link>
+                </div>
+            </template>
+
+            <template slot="full_name" slot-scope="data">
+                <div class="customer-link">
+                    <router-link to="/">
+                        <span>{{ data.value }}</span>
                     </router-link>
                 </div>
             </template>

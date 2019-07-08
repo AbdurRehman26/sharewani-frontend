@@ -37,16 +37,19 @@
             </div>
         </div>
 
-        <alertTable :listItems="items" :listFields="fields"></alertTable>
+        <customer-table
+            :listItems="items"
+            :listFields="fields"
+        ></customer-table>
         <pagination></pagination>
     </div>
 </template>
 <script>
-import alertTable from '@/components/tables/CustomersTable.vue'
+import customerTable from '@/components/tables/CustomersTable.vue'
 import pagination from '@/components/Pagination.vue'
 export default {
     components: {
-        alertTable,
+        customerTable,
         pagination,
     },
 
