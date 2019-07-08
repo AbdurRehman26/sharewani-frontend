@@ -7,14 +7,7 @@
         <div class="content-area">
             <base-header :menuListing="menuListing"></base-header>
             <div class="right-panel">
-                <filter-panel
-                    :showFilter="true"
-                    :filterList="options"
-                    :filterSelected="selected"
-                    filterHeading="All Customers"
-                ></filter-panel>
-
-                <b-table :items="items"></b-table>
+                <router-view></router-view>
             </div>
         </div>
     </div>
@@ -22,6 +15,8 @@
 
 <script>
 export default {
+    components: {},
+
     /*
     |--------------------------------------------------------------------------
     | Component > props
@@ -47,7 +42,7 @@ export default {
         return {
             menuListing: [
                 {
-                    anchorLink: '/dashboard',
+                    anchorLink: '/system-users',
                     menuLabel: 'System Users',
                 },
                 {
@@ -69,7 +64,7 @@ export default {
                     menuLabel: 'UAE',
                 },
                 {
-                    anchorLink: '/',
+                    anchorLink: '/dashboard',
                     menuLabel: 'PK',
                 },
                 {
@@ -83,12 +78,12 @@ export default {
             ],
             sidelinksListing: [
                 {
-                    anchorLink: '/',
+                    anchorLink: '/dashboard',
                     icon: 'icon-insights',
                     menuLabel: 'Insights',
                 },
                 {
-                    anchorLink: '/customer-profile',
+                    anchorLink: '/',
                     icon: 'icon-Customer-Profil',
                     menuLabel: 'Customer Profiles',
                 },
@@ -108,7 +103,7 @@ export default {
                     menuLabel: 'Configurations',
                 },
                 {
-                    anchorLink: '/',
+                    anchorLink: '/system-users',
                     icon: 'icon-System-Users',
                     menuLabel: 'System Users',
                 },
@@ -122,15 +117,6 @@ export default {
                     icon: 'icon-Export',
                     menuLabel: 'Data Export',
                 },
-            ],
-
-            selected: '1',
-
-            options: [
-                { text: 'All', value: '1' },
-                { text: 'Pending Review', value: '2' },
-                { text: 'Approved', value: '3' },
-                { text: 'Rejected', value: '4' },
             ],
         }
     }, // End of Component > data

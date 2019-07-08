@@ -1,52 +1,79 @@
 <template>
-    <div class="wrap-content customer-section">
+    <div class="wrap-content">
         <div class="filter-section">
             <div class="row">
-                <div class="col-md-3">
-                    <h2>All Customers</h2>
-                </div>
-                <div class="col-md-9 text-right">
+                <!-- <div class="col-md-3">
+                    <h2>System Users</h2>
+                </div> -->
+                <div class="col-md-12 system-user-filter">
                     <ul>
                         <li>
+                            <h2>System Users</h2>
+                        </li>
+                        <li>
+                            <base-search></base-search>
+                        </li>
+                        <li>
                             <b-form-group>
-                                <b-form-radio-group
-                                    :id="index"
-                                    v-model="filterSelected"
-                                    :options="filterList"
-                                    buttons
-                                    button-variant="outline-primary"
-                                    :name="filterName"
-                                ></b-form-radio-group>
+                                <b-form-select
+                                    id="input-3"
+                                    class="form-control"
+                                    v-model="filterByUserRoles"
+                                    :options="filterUserRoles"
+                                    required
+                                ></b-form-select>
                             </b-form-group>
                         </li>
                         <li>
-                            <div class="form-group search-input">
-                                <i class="icon-Search"></i>
-                                <b-form-input
-                                    placeholder="Search"
-                                ></b-form-input>
-                            </div>
+                            <b-form-group>
+                                <b-form-select
+                                    id="input-3"
+                                    class="form-control"
+                                    v-model="filterByBranch"
+                                    :options="filterByBranches"
+                                    required
+                                ></b-form-select>
+                            </b-form-group>
+                        </li>
+                        <li>
+                            <b-form-group>
+                                <b-form-select
+                                    id="input-3"
+                                    class="form-control"
+                                    v-model="filterByStatus"
+                                    :options="filterByStatusOption"
+                                    required
+                                ></b-form-select>
+                            </b-form-group>
                         </li>
                         <li>
                             <b-button type="button" variant="primary"
                                 >Apply</b-button
                             >
                         </li>
+                        <li>
+                            <b-button type="button" variant="secondary"
+                                >+ Add User</b-button
+                            >
+                        </li>
                     </ul>
                 </div>
             </div>
         </div>
-
-        <alertTable :listItems="items" :listFields="fields"></alertTable>
+        <customers-table
+            :listItems="items"
+            :listFields="fields"
+        ></customers-table>
         <pagination></pagination>
     </div>
 </template>
+
 <script>
-import alertTable from '@/components/tables/CustomersTable.vue'
+import customersTable from '@/components/tables/CustomersTable.vue'
 import pagination from '@/components/Pagination.vue'
 export default {
     components: {
-        alertTable,
+        customersTable,
         pagination,
     },
 
@@ -73,15 +100,41 @@ export default {
     */
     data() {
         return {
-            filterSelected: '1',
+            selected: '1',
 
-            filterList: [
+            options: [
                 { text: 'All', value: '1' },
-                { text: 'Pending Review', value: '2' },
-                { text: 'Approved', value: '3' },
-                { text: 'Rejected', value: '4' },
+                { text: 'Pending', value: '2' },
+                { text: 'In Review', value: '3' },
             ],
 
+            filterByUserRoles: null,
+
+            filterUserRoles: [
+                { text: 'Filter by user roles', value: null },
+                'Name Screening',
+                'Documentation',
+                'Risk Rating',
+                'Status',
+            ],
+            filterByBranch: null,
+
+            filterByBranches: [
+                { text: 'Filter by branch', value: null },
+                'Name Screening',
+                'Documentation',
+                'Risk Rating',
+                'Status',
+            ],
+            filterByStatus: null,
+
+            filterByStatusOption: [
+                { text: 'Filter by status', value: null },
+                'Name Screening',
+                'Documentation',
+                'Risk Rating',
+                'Status',
+            ],
             fields: [
                 {
                     key: 'profile',

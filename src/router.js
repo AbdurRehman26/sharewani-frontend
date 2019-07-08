@@ -67,6 +67,22 @@ export default new Router({
                 },
             ],
         },
+
+        {
+            path: '/system-users',
+            name: 'systems',
+            component: () =>
+                import(/* webpackChunkName: "about" */ '@//views/systemusers/Main.vue'),
+            children: [
+                {
+                    path: '/',
+                    name: 'system-users',
+                    component: () =>
+                        import(/* webpackChunkName: "login" */ '@/views/systemusers/SystemUsers.vue'),
+                },
+            ],
+        },
+
         {
             path: '/customer-profile',
             name: 'profile',
@@ -78,7 +94,7 @@ export default new Router({
 
             children: [
                 {
-                    path: '/all-customer',
+                    path: '/',
                     name: 'all-customer',
                     component: () =>
                         import(/* webpackChunkName: "customer" */ './views/profile/AllCustomer.vue'),
@@ -94,15 +110,6 @@ export default new Router({
                         import(/* webpackChunkName: "advance-search" */ './views/profile/AdvanceSearch.vue'),
                 },
             ],
-        },
-        {
-            path: '/chart',
-            name: 'chart',
-            // route level code-splitting
-            // this generates a separate chunk (about.[hash].js) for this route
-            // which is lazy-loaded when the route is visited.
-            component: () =>
-                import(/* webpackChunkName: "profile" */ './views/Chart.vue'),
         },
     ],
 })

@@ -1,6 +1,8 @@
 <template>
-    <div class="advance-search">
-        <filter-panel filterHeading="Advance Search"></filter-panel>
+    <div class="wrap-content advance-search">
+        <div class="filter-section">
+            <h2>Advance Search</h2>
+        </div>
         <div class="card">
             <b-form v-if="show">
                 <div class="row">
@@ -211,11 +213,8 @@
     </div>
 </template>
 <script>
-import filterPanel from '@/components/FilterPanel.vue'
 export default {
-    components: {
-        filterPanel,
-    },
+    components: {},
 
     /*
     |--------------------------------------------------------------------------

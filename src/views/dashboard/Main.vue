@@ -46,7 +46,7 @@ export default {
                     menuLabel: 'Alerts',
                 },
                 {
-                    anchorLink: '/',
+                    anchorLink: '/activity',
                     menuLabel: 'Activity Dashboard',
                 },
                 {
@@ -99,7 +99,7 @@ export default {
                     menuLabel: 'Configurations',
                 },
                 {
-                    anchorLink: '/',
+                    anchorLink: '/system-users',
                     icon: 'icon-System-Users',
                     menuLabel: 'System Users',
                 },

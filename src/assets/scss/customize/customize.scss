@@ -156,3 +156,27 @@
         border-color: $grey-dark;
     }
 }
+
+.customer-section {
+    table {
+        td {
+            &:nth-child(7) {
+                width: 150px;
+            }
+        }
+    }
+}
+
+.system-user-filter {
+    ul {
+        display: flex;
+        li {
+            width: 100%;
+        }
+    }
+    .search-input {
+    }
+    .btn {
+        width: 100%;
+    }
+}
