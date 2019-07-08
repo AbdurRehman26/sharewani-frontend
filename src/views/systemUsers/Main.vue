@@ -7,7 +7,14 @@
         <div class="content-area">
             <base-header :menuListing="menuListing"></base-header>
             <div class="right-panel">
-                <router-view></router-view>
+                <filter-panel
+                    :showFilter="true"
+                    :filterList="options"
+                    :filterSelected="selected"
+                    filterHeading="All Customers"
+                ></filter-panel>
+
+                <b-table :items="items"></b-table>
             </div>
         </div>
     </div>
@@ -15,8 +22,6 @@
 
 <script>
 export default {
-    components: {},
-
     /*
     |--------------------------------------------------------------------------
     | Component > props
@@ -43,15 +48,19 @@ export default {
             menuListing: [
                 {
                     anchorLink: '/dashboard',
-                    menuLabel: 'Alerts',
+                    menuLabel: 'System Users',
                 },
                 {
                     anchorLink: '/',
-                    menuLabel: 'Activity Dashboard',
+                    menuLabel: 'Roles & Permissions',
                 },
                 {
                     anchorLink: '/',
-                    menuLabel: 'Customer Statistics',
+                    menuLabel: 'Branches',
+                },
+                {
+                    anchorLink: '/',
+                    menuLabel: 'Application Access',
                 },
             ],
             countryListing: [
@@ -60,7 +69,7 @@ export default {
                     menuLabel: 'UAE',
                 },
                 {
-                    anchorLink: '/dashboard',
+                    anchorLink: '/',
                     menuLabel: 'PK',
                 },
                 {
@@ -74,12 +83,12 @@ export default {
             ],
             sidelinksListing: [
                 {
-                    anchorLink: '/dashboard',
+                    anchorLink: '/',
                     icon: 'icon-insights',
                     menuLabel: 'Insights',
                 },
                 {
-                    anchorLink: '/',
+                    anchorLink: '/customer-profile',
                     icon: 'icon-Customer-Profil',
                     menuLabel: 'Customer Profiles',
                 },
@@ -113,6 +122,15 @@ export default {
                     icon: 'icon-Export',
                     menuLabel: 'Data Export',
                 },
+            ],
+
+            selected: '1',
+
+            options: [
+                { text: 'All', value: '1' },
+                { text: 'Pending Review', value: '2' },
+                { text: 'Approved', value: '3' },
+                { text: 'Rejected', value: '4' },
             ],
         }
     }, // End of Component > data
