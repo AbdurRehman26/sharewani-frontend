@@ -1,14 +1,21 @@
 .table {
-    border: 1px #ddd solid;
-    background-color: $white;
-
+    border-radius: 8px 8px 0 0;
+    border: 2px #d7d7e2 solid;
+    overflow: hidden;
     thead {
+        border: 1px #d7d7e2 solid;
         th {
             border-bottom: 0 !important;
+            background-color: #e8e8ef;
+            color: #7f8fa4;
+            overflow: hidden;
+            text-transform: uppercase;
         }
     }
 
     tbody {
+        background-color: $white;
+        border: 1px #d7d7e2 solid;
         td {
             color: $grey-darkest;
             padding: 13px 12px;

@@ -38,3 +38,11 @@ input[type='number']::-webkit-outer-spin-button {
         pointer-events: none;
     }
 }
+
+// select box
+
+select {
+    background: url(assets/images/arrow.svg) no-repeat right 0.75rem center/12px
+        10px !important;
+}
+

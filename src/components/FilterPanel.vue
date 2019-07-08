@@ -4,7 +4,7 @@
             <div class="col-md-3">
                 <h2>{{ filterHeading }}</h2>
             </div>
-            <div class="col-md-9 text-right">
+            <div class="col-md-9 text-right" v-if="showFilter === true">
                 <ul>
                     <li>
                         <b-form-group>
@@ -54,6 +54,11 @@ export default {
         filterHeading: {
             type: String,
             default: null,
+        },
+
+        showFilter: {
+            type: Boolean,
+            default: false,
         },
     }, // End of Component > props
 
