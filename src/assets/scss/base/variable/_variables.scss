@@ -19,12 +19,12 @@ $pink: #aa2f78;
 $yellow: #ffb54c;
 $radio-check: #9d9f8f;
 $theme-colors: (
-	'primary': $primary,
-	'secondary': $secondary,
-	'success': $success,
-	'light': $light,
-	'dark': $dark,
-	'danger': $danger
+    'primary': $primary,
+    'secondary': $secondary,
+    'success': $success,
+    'light': $light,
+    'dark': $dark,
+    'danger': $danger
 );
 // header height
 $header-height: 52px !default;
@@ -99,6 +99,10 @@ $zindex-modal: 1050 !default;
 // form group
 $form-group-margin-bottom: 24px !default;
 
+// text Color
+
+$nav-color: #7f8fa4;
+
 //Buttons
 $button-size: $font-size-base;
 $button-family: $font-bold;
@@ -144,3 +148,7 @@ $alert-warning-border: #ffeeba !default;
 $alert-danger-bg: #f8d7da !default;
 $alert-danger-text: #721c24 !default;
 $alert-danger-border: #f5c6cb !default;
+
+// table
+
+$table-row-padding: 20px 12px;

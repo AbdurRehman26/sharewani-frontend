@@ -1,0 +1,48 @@
+// radio button
+.custom-control-label {
+    &:before {
+        width: 20px;
+        height: 20px;
+        top: 0;
+        background-color: transparent;
+        border-color: $modal-header-border-color;
+    }
+
+    span {
+        margin-left: 5px;
+        @include font-size(0.875);
+        text-transform: capitalize;
+        color: $body-color;
+        vertical-align: sub;
+        margin-right: 6px;
+    }
+}
+
+.custom-radio .custom-control-input:checked ~ .custom-control-label::after {
+    background-image: none;
+    width: 12px;
+    height: 12px;
+    background-color: $secondary;
+    left: -20px;
+    top: 4px;
+    border-radius: 100%;
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+    background-color: transparent;
+    border-color: $modal-header-border-color;
+}
+
+.custom-control-input:focus ~ .custom-control-label::before {
+    box-shadow: none;
+    background-color: transparent;
+}
+
+.custom-control-input:focus:not(:checked) ~ .custom-control-label::before {
+    border-color: transparent;
+}
+
+.custom-control-input:not(:disabled):active ~ .custom-control-label::before {
+    background-color: transparent;
+    border-color: $modal-header-border-color;
+}

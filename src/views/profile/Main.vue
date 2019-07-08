@@ -1,5 +1,5 @@
 <template>
-    <div class="dashboard">
+    <div class="customer-profile">
         <base-sidebar
             :countryListing="countryListing"
             :sidelinksListing="sidelinksListing"
@@ -7,25 +7,14 @@
         <div class="content-area">
             <base-header :menuListing="menuListing"></base-header>
             <div class="right-panel">
-                <filter-panel
-                    :filterList="options"
-                    :filterSelected="selected"
-                    filterHeading="All Customers"
-                ></filter-panel>
-
-                <b-table :items="items"></b-table>
+                <router-view></router-view>
             </div>
         </div>
     </div>
 </template>
 
 <script>
-import filterPanel from '@/components/FilterPanel.vue'
 export default {
-    components: {
-        filterPanel,
-    },
-
     /*
     |--------------------------------------------------------------------------
     | Component > props
@@ -49,30 +38,14 @@ export default {
     */
     data() {
         return {
-            items: [
-                {
-                    age: 40,
-                    file_name: 'asdasd',
-                    first_name: 'Dickerson',
-                    last_name: 'Macdonald',
-                },
-                { age: 21, first_name: 'Larsen', last_name: 'Shaw' },
-                { age: 89, first_name: 'Geneva', last_name: 'Wilson' },
-                { age: 38, first_name: 'Jami', last_name: 'Carney' },
-            ],
-
             menuListing: [
                 {
-                    anchorLink: '/dashboard',
-                    menuLabel: 'Alerts',
+                    anchorLink: '/customer-profile',
+                    menuLabel: 'All Customer',
                 },
                 {
-                    anchorLink: '/',
-                    menuLabel: 'Activity Dashboard',
-                },
-                {
-                    anchorLink: '/',
-                    menuLabel: 'Customer Statistics',
+                    anchorLink: '/advance-search',
+                    menuLabel: 'Advance Search',
                 },
             ],
             countryListing: [
