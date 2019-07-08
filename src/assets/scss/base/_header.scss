@@ -3,8 +3,11 @@ header {
     padding: 0;
     height: $header-height;
     z-index: 99;
-    position: relative;
+    position: fixed;
     padding: 0px 40px;
+    top: 0;
+    width: calc(100% - 252px);
+    box-shadow: 0px 0.5px 0px rgba(50, 50, 93, 0.2);
     @include mobile {
         height: 42px;
     }
@@ -235,4 +238,8 @@ header {
             list-style: none;
         }
     }
+}
+
+.header-fix {
+    height: 52px;
 }

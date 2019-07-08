@@ -99,7 +99,7 @@ export default {
                     menuLabel: 'Configurations',
                 },
                 {
-                    anchorLink: '/',
+                    anchorLink: '/system-users',
                     icon: 'icon-System-Users',
                     menuLabel: 'System Users',
                 },
