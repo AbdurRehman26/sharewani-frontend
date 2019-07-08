@@ -51,7 +51,7 @@ export default new Router({
             path: '/dashboard',
             name: 'dashboard',
             component: () =>
-                import(/* webpackChunkName: "about" */ '@//views/dashboard/Main.vue'),
+                import(/* webpackChunkName: "about" */ '@/views/dashboard/Main.vue'),
             children: [
                 {
                     path: '/',
@@ -60,10 +60,10 @@ export default new Router({
                         import(/* webpackChunkName: "login" */ '@/views/dashboard/Alert.vue'),
                 },
                 {
-                    path: '/activity',
-                    name: 'activity-dashboard',
+                    path: 'activity',
+                    name: 'dashboard-activity-page',
                     component: () =>
-                        import(/* webpackChunkName: "profile" */ '@/views/dashboard/ActivityDashboard.vue'),
+                        import(/* webpackChunkName: "dashboard-activity" */ '@/views/dashboard/Activity.vue'),
                 },
             ],
         },
