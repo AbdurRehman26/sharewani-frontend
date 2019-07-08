@@ -1,5 +1,5 @@
 <template>
-    <div class="dashboard">
+    <div class="customer-profile">
         <base-sidebar
             :countryListing="countryListing"
             :sidelinksListing="sidelinksListing"
@@ -7,14 +7,7 @@
         <div class="content-area">
             <base-header :menuListing="menuListing"></base-header>
             <div class="right-panel">
-                <filter-panel
-                    :showFilter="true"
-                    :filterList="options"
-                    :filterSelected="selected"
-                    filterHeading="All Customers"
-                ></filter-panel>
-
-                <b-table :items="items"></b-table>
+                <router-view></router-view>
             </div>
         </div>
     </div>
@@ -47,16 +40,12 @@ export default {
         return {
             menuListing: [
                 {
-                    anchorLink: '/dashboard',
-                    menuLabel: 'Alerts',
+                    anchorLink: '/customer-profile',
+                    menuLabel: 'All Customer',
                 },
                 {
-                    anchorLink: '/',
-                    menuLabel: 'Activity Dashboard',
-                },
-                {
-                    anchorLink: '/',
-                    menuLabel: 'Customer Statistics',
+                    anchorLink: '/advance-search',
+                    menuLabel: 'Advance Search',
                 },
             ],
             countryListing: [
