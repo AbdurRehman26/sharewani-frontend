@@ -42,16 +42,20 @@ export default {
         return {
             menuListing: [
                 {
-                    anchorLink: '/dashboard',
-                    menuLabel: 'Alerts',
+                    anchorLink: '/system-users',
+                    menuLabel: 'System Users',
                 },
                 {
                     anchorLink: '/',
-                    menuLabel: 'Activity Dashboard',
+                    menuLabel: 'Roles & Permissions',
                 },
                 {
                     anchorLink: '/',
-                    menuLabel: 'Customer Statistics',
+                    menuLabel: 'Branches',
+                },
+                {
+                    anchorLink: '/',
+                    menuLabel: 'Application Access',
                 },
             ],
             countryListing: [

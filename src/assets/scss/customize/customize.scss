@@ -156,3 +156,17 @@
         border-color: $grey-dark;
     }
 }
+
+.system-user-filter {
+    ul {
+        display: flex;
+        li {
+            width: 100%;
+        }
+    }
+    .search-input {
+    }
+    .btn {
+        width: 100%;
+    }
+}
