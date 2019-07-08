@@ -2,22 +2,13 @@
     <div class="wrap-content">
         <div class="filter-section">
             <div class="row">
-                <div class="col-md-2">
+                <!--                 <div class="col-md-4">
                     <h2>System Users</h2>
-                </div>
-                <div class="col-md-10 text-right">
+                </div> -->
+                <div class="col-md-12 text-right">
                     <ul>
                         <li>
-                            <b-form-group>
-                                <b-form-radio-group
-                                    :id="index"
-                                    v-model="selected"
-                                    :options="options"
-                                    buttons
-                                    button-variant="outline-primary"
-                                    :name="filterName"
-                                ></b-form-radio-group>
-                            </b-form-group>
+                            <h2>System Users</h2>
                         </li>
                         <li>
                             <base-search></base-search>
@@ -27,8 +18,19 @@
                                 <b-form-select
                                     id="input-3"
                                     class="form-control"
-                                    v-model="filterBy"
-                                    :options="filterOptions"
+                                    v-model="filterByUserRoles"
+                                    :options="filterUserRoles"
+                                    required
+                                ></b-form-select>
+                            </b-form-group>
+                        </li>
+                        <li>
+                            <b-form-group>
+                                <b-form-select
+                                    id="input-3"
+                                    class="form-control"
+                                    v-model="filterByBranch"
+                                    :options="filterByBranches"
                                     required
                                 ></b-form-select>
                             </b-form-group>
@@ -87,10 +89,19 @@ export default {
                 { text: 'In Review', value: '3' },
             ],
 
-            filterBy: null,
+            filterByUserRoles: null,
 
-            filterOptions: [
-                { text: 'Filter by', value: null },
+            filterUserRoles: [
+                { text: 'Filter by user roles', value: null },
+                'Name Screening',
+                'Documentation',
+                'Risk Rating',
+                'Status',
+            ],
+            filterByBranch: null,
+
+            filterByBranches: [
+                { text: 'Filter by branch', value: null },
                 'Name Screening',
                 'Documentation',
                 'Risk Rating',

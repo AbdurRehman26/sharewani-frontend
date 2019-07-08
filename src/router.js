@@ -67,20 +67,22 @@ export default new Router({
                 },
             ],
         },
-        // {
-        //     path: '/system-users',
-        //     name: 'systems',
-        //     component: () =>
-        //         import(/* webpackChunkName: "about" */ '@//views/systemusers/Main.vue'),
-        //     children: [
-        //         {
-        //             path: '/',
-        //             name: 'alerts',
-        //             component: () =>
-        //                 import(/* webpackChunkName: "login" */ '@/views/systemusers/SystemUsers.vue'),
-        //         },
-        //     ],
-        // },
+
+        {
+            path: '/system-users',
+            name: 'systems',
+            component: () =>
+                import(/* webpackChunkName: "about" */ '@//views/systemusers/Main.vue'),
+            children: [
+                {
+                    path: '/',
+                    name: 'system-users',
+                    component: () =>
+                        import(/* webpackChunkName: "login" */ '@/views/systemusers/SystemUsers.vue'),
+                },
+            ],
+        },
+
         {
             path: '/customer-profile',
             name: 'profile',
