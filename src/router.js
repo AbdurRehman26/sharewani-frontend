@@ -49,11 +49,16 @@ export default new Router({
         {
             path: '/dashboard',
             name: 'dashboard',
-            // route level code-splitting
-            // this generates a separate chunk (about.[hash].js) for this route
-            // which is lazy-loaded when the route is visited.
             component: () =>
-                import(/* webpackChunkName: "about" */ './views/dashboard/Main.vue'),
+                import(/* webpackChunkName: "about" */ '@//views/dashboard/Main.vue'),
+            children: [
+                {
+                    path: '/',
+                    name: 'alerts',
+                    component: () =>
+                        import(/* webpackChunkName: "login" */ '@/views/dashboard/Alert.vue'),
+                },
+            ],
         },
         {
             path: '/customer-profile',
@@ -66,8 +71,11 @@ export default new Router({
 
             children: [
                 {
-                    path: '/all-customer',
+                    path: '/',
                     name: 'all-customer',
+                    // route level code-splitting
+                    // this generates a separate chunk (about.[hash].js) for this route
+                    // which is lazy-loaded when the route is visited.
                     component: () =>
                         import(/* webpackChunkName: "customer" */ './views/profile/AllCustomer.vue'),
                 },
