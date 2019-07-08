@@ -1,45 +1,21 @@
 <template>
-    <div class="auth-wrapper middle-aligner">
-        <div class="inner">
-            <base-logo class="main-logo"></base-logo>
-            <div class="card card-auth  with-shadow">
-                <h2 class="auth-heading">
-                    Check your Inbox
-                    <span>
-                        We have sent an email at
-                        <i>ars•••••••••@bank.com</i> containing instructions on
-                        how to change your password to the email address you
-                        supplied.
-                    </span>
-                </h2>
-                <span class="email-sent-icon">
-                    <img src="@/assets/images/envelope-alt.png"
-                /></span>
-                <b-button
-                    type="submit"
-                    variant="primary"
-                    class="back-to-login-btn"
-                    @click="$router.push('/')"
-                    >BACK TO LOGIN</b-button
-                >
-            </div>
-        </div>
+    <div class="form-group search-input">
+        <i class="icon-Search"></i>
+        <b-form-input :placeholder="placeholder"></b-form-input>
     </div>
 </template>
-
 <script>
 export default {
-    components: {},
     /*
         |--------------------------------------------------------------------------
         | Component > props
         |--------------------------------------------------------------------------
         */
     props: {
-        /**
-         * Value to determine the current compose mode which
-         * varies between 'add' and 'edit'
-         */
+        placeholder: {
+            type: String,
+            default: 'Search',
+        },
     }, // End of Component > props
 
     /*

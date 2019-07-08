@@ -14,8 +14,10 @@
                 list-style: none;
                 padding: 0px;
                 li {
+                    transition: 0.3s ease-in-out;
+                    font-size: 12px;
                     a {
-                        margin-bottom: 14px;
+                        margin-bottom: 10px;
                         float: left;
                         background-color: #907f9d;
                         border-radius: 8px;
@@ -27,6 +29,23 @@
                         color: #fff;
                         text-decoration: none;
                         &.router-link-exact-active {
+                            background-color: #e8e5eb;
+                            color: #662d91;
+                            position: relative;
+                            &:after {
+                                content: '';
+                                background-color: #b35fa5;
+                                height: 100%;
+                                width: 3px;
+                                left: -10px;
+                                position: absolute;
+                                border-radius: 0px 3px 3px 0px;
+                            }
+                        }
+                    }
+                    &:hover,
+                    &:focus {
+                        a {
                             background-color: #e8e5eb;
                             color: #662d91;
                             position: relative;
@@ -55,15 +74,29 @@
                 li {
                     margin-right: 0px;
                     width: 100%;
-                    margin-bottom: 6px;
+                    margin-bottom: 14px;
+                    transition: 0.3s ease-in-out;
                     a {
                         color: #e4e4e6;
                         padding: 8px 8px;
                         span {
                             font-family: $font_regular;
-                            font-size: 11px;
+                            // font-size: 11px;
+                            font-size: 14px;
                         }
                         &.router-link-exact-active {
+                            background-color: #22003c;
+                            color: #fff;
+                            border-radius: 8px;
+                            position: relative;
+                            &:after {
+                                display: none;
+                            }
+                        }
+                    }
+                    &:hover,
+                    &:focus {
+                        a {
                             background-color: #22003c;
                             color: #fff;
                             border-radius: 8px;

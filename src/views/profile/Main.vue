@@ -13,18 +13,15 @@
                     :filterSelected="selected"
                     filterHeading="All Customers"
                 ></filter-panel>
+
+                <b-table :items="items"></b-table>
             </div>
         </div>
     </div>
 </template>
 
 <script>
-import filterPanel from '@/components/FilterPanel.vue'
 export default {
-    components: {
-        filterPanel,
-    },
-
     /*
     |--------------------------------------------------------------------------
     | Component > props
