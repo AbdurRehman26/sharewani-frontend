@@ -1,13 +1,19 @@
 .table {
-    border: 1px #ddd solid;
-    background-color: $white;
-
+    border-radius: 8px 8px 0 0;
+    border: 2px #d7d7e2 solid;
+    overflow: hidden;
     thead {
+        border: 1px #d7d7e2 solid;
         background: $grey-dark;
         color: #7f8fa4;
         th {
             border-bottom: 0 !important;
+            background-color: #e8e8ef;
+            color: #7f8fa4;
+            overflow: hidden;
+            border-bottom: 0 !important;
             font-family: $font_light;
+            text-transform: uppercase;
             &.person-icon {
                 text-align: center;
                 &:before {
@@ -36,6 +42,8 @@
     }
 
     tbody {
+        background-color: $white;
+        border: 1px #d7d7e2 solid;
         td {
             color: $grey-darkest;
             padding: $table-row-padding;

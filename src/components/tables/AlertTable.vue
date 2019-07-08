@@ -3,15 +3,17 @@
         <b-table :items="listItems" :fields="listFields">
             <template slot="profile" slot-scope="data">
                 <div class="profile-area">
-                    <div class="profile-pic" style="">
-                        <img
-                            :src="
+                    <div
+                        class="profile-pic"
+                        :style="{
+                            'background-image':
+                                'url(' +
                                 require('@/assets/images/members/' +
                                     data.value +
-                                    '')
-                            "
-                        />
-                    </div>
+                                    '') +
+                                ')',
+                        }"
+                    ></div>
                 </div>
             </template>
             <template slot="name_screening" slot-scope="data">
