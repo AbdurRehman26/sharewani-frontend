@@ -137,4 +137,22 @@
     .custom-radio {
         margin-top: 11px;
     }
+
+    &.reg-channel {
+        .custom-control-inline {
+            margin-right: 12px;
+
+            span {
+                margin-right: 0;
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+.seprator-line {
+    hr {
+        margin: 7px 0 31px 0;
+        border-color: $grey-dark;
+    }
 }

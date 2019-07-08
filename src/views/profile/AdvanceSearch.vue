@@ -1,222 +1,212 @@
 <template>
-    <div class="dashboard">
-        <base-sidebar
-            :countryListing="countryListing"
-            :sidelinksListing="sidelinksListing"
-        ></base-sidebar>
-        <div class="content-area">
-            <base-header :menuListing="menuListing"></base-header>
-            <div class="right-panel">
-                <filter-panel filterHeading="Advance Search"></filter-panel>
+    <div class="advance-search">
+        <filter-panel filterHeading="Advance Search"></filter-panel>
+        <div class="card">
+            <b-form v-if="show">
+                <div class="row">
+                    <div class="col-md-4">
+                        <b-form-group
+                            id="input-group-1"
+                            label="First name"
+                            label-for="input-1"
+                        >
+                            <b-form-input
+                                id="input-1"
+                                type="text"
+                                v-model="form.firstName"
+                                required
+                                placeholder="Search by first name"
+                            ></b-form-input>
+                        </b-form-group>
+                    </div>
+                    <div class="col-md-4">
+                        <b-form-group
+                            id="input-group-2"
+                            label="Middle Name"
+                            label-for="input-2"
+                        >
+                            <b-form-input
+                                id="input-2"
+                                type="text"
+                                v-model="form.middleName"
+                                required
+                                placeholder="Search by middle name"
+                            ></b-form-input>
+                        </b-form-group>
+                    </div>
 
-                <div class="card">
-                    <b-form v-if="show">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <b-form-group
-                                    id="input-group-1"
-                                    label="First name"
-                                    label-for="input-1"
-                                >
-                                    <b-form-input
-                                        id="input-1"
-                                        type="text"
-                                        v-model="form.firstName"
-                                        required
-                                        placeholder="Search by first name"
-                                    ></b-form-input>
-                                </b-form-group>
-                            </div>
-                            <div class="col-md-4">
-                                <b-form-group
-                                    id="input-group-2"
-                                    label="Middle Name"
-                                    label-for="input-2"
-                                >
-                                    <b-form-input
-                                        id="input-2"
-                                        type="text"
-                                        v-model="form.middleName"
-                                        required
-                                        placeholder="Search by middle name"
-                                    ></b-form-input>
-                                </b-form-group>
-                            </div>
+                    <div class="col-md-4">
+                        <b-form-group
+                            id="input-group-3"
+                            label="Last name"
+                            label-for="input-3"
+                        >
+                            <b-form-input
+                                id="input-3"
+                                type="text"
+                                v-model="form.lastName"
+                                required
+                                placeholder="Search by last name"
+                            ></b-form-input>
+                        </b-form-group>
+                    </div>
 
-                            <div class="col-md-4">
-                                <b-form-group
-                                    id="input-group-3"
-                                    label="Last name"
-                                    label-for="input-3"
-                                >
-                                    <b-form-input
-                                        id="input-3"
-                                        type="text"
-                                        v-model="form.lastName"
-                                        required
-                                        placeholder="Search by last name"
-                                    ></b-form-input>
-                                </b-form-group>
-                            </div>
-
-                            <div class="col-md-4 form-radio">
-                                <b-form-group
-                                    id="input-group-4"
-                                    label="Gender"
-                                    label-for="gender"
-                                >
-                                    <b-form-group>
-                                        <b-form-radio-group
-                                            v-model="gender"
-                                            :options="form.gender"
-                                            name="gender"
-                                        ></b-form-radio-group>
-                                    </b-form-group>
-                                </b-form-group>
-                            </div>
-                            <div class="col-md-4">
-                                <b-form-group
-                                    id="input-group-5"
-                                    label="Nationality"
-                                    label-for="nationality"
-                                >
-                                    <b-form-select
-                                        class="form-control"
-                                        v-model="form.nationality"
-                                        :options="nationality"
-                                    ></b-form-select>
-                                </b-form-group>
-                            </div>
-                            <div class="col-md-4">
-                                <b-form-group
-                                    id="input-group-6"
-                                    label="Country of Residence"
-                                    label-for="residence"
-                                >
-                                    <b-form-select
-                                        class="form-control"
-                                        v-model="form.residence"
-                                        :options="residence"
-                                    ></b-form-select>
-                                </b-form-group>
-                            </div>
-                            <div class="col-md-4">
-                                <b-form-group
-                                    id="input-group-7"
-                                    label="Work Type"
-                                    label-for="work"
-                                >
-                                    <b-form-select
-                                        class="form-control"
-                                        v-model="form.workType"
-                                        :options="workType"
-                                    ></b-form-select>
-                                </b-form-group>
-                            </div>
-                            <div class="col-md-4">
-                                <b-form-group
-                                    id="input-group-8"
-                                    label="Industry"
-                                    label-for="industry"
-                                >
-                                    <b-form-select
-                                        class="form-control"
-                                        v-model="form.industry"
-                                        :options="industry"
-                                    ></b-form-select>
-                                </b-form-group>
-                            </div>
-                            <div class="col-md-12"><hr /></div>
-                            <div class="col-md-4">
-                                <b-form-group
-                                    id="input-group-9"
-                                    label="KYC Status"
-                                    label-for="status"
-                                >
-                                    <b-form-select
-                                        class="form-control"
-                                        v-model="form.status"
-                                        :options="status"
-                                    ></b-form-select>
-                                </b-form-group>
-                            </div>
-                            <div class="col-md-4">
-                                <b-form-group
-                                    id="input-group-10"
-                                    label="Name Screening Hit Type"
-                                    label-for="hitType"
-                                >
-                                    <b-form-select
-                                        class="form-control"
-                                        v-model="form.hitType"
-                                        :options="hitType"
-                                    ></b-form-select>
-                                </b-form-group>
-                            </div>
-                            <div class="col-md-4">
-                                <b-form-group
-                                    id="input-group-11"
-                                    label="Risk Rating Level"
-                                    label-for="ratingLevel"
-                                >
-                                    <b-form-select
-                                        class="form-control"
-                                        v-model="form.ratingLevel"
-                                        :options="ratingLevel"
-                                    ></b-form-select>
-                                </b-form-group>
-                            </div>
-                            <div class="col-md-4 form-radio">
-                                <b-form-group
-                                    id="input-group-12"
-                                    label="Registration Channel"
-                                    label-for="channel"
-                                >
-                                    <b-form-group>
-                                        <b-form-radio-group
-                                            v-model="channel"
-                                            :options="form.channel"
-                                            name="channel"
-                                        ></b-form-radio-group>
-                                    </b-form-group>
-                                </b-form-group>
-                            </div>
-                            <div class="col-md-4">
-                                <b-form-group
-                                    id="input-group-13"
-                                    label="Id Type"
-                                    label-for="type"
-                                >
-                                    <b-form-select
-                                        class="form-control"
-                                        v-model="form.type"
-                                        :options="type"
-                                    ></b-form-select>
-                                </b-form-group>
-                            </div>
-                            <div class="col-md-4">
-                                <b-form-group
-                                    id="input-group-14"
-                                    label="Product Type"
-                                    label-for="productType"
-                                >
-                                    <b-form-select
-                                        class="form-control"
-                                        v-model="form.productType"
-                                        :options="productType"
-                                    ></b-form-select>
-                                </b-form-group>
-                            </div>
-                            <div class="col-md-12"><hr /></div>
-                            <div class="col-md-12">
-                                <b-button type="submit" variant="primary"
-                                    >Search now</b-button
-                                >
-                            </div>
-                        </div>
-                    </b-form>
+                    <div class="col-md-4 form-radio">
+                        <b-form-group
+                            id="input-group-4"
+                            label="Gender"
+                            label-for="gender"
+                        >
+                            <b-form-group>
+                                <b-form-radio-group
+                                    v-model="gender"
+                                    :options="form.gender"
+                                    name="gender"
+                                ></b-form-radio-group>
+                            </b-form-group>
+                        </b-form-group>
+                    </div>
+                    <div class="col-md-4">
+                        <b-form-group
+                            id="input-group-5"
+                            label="Nationality"
+                            label-for="nationality"
+                        >
+                            <b-form-select
+                                class="form-control"
+                                v-model="form.nationality"
+                                :options="nationality"
+                            ></b-form-select>
+                        </b-form-group>
+                    </div>
+                    <div class="col-md-4">
+                        <b-form-group
+                            id="input-group-6"
+                            label="Country of Residence"
+                            label-for="residence"
+                        >
+                            <b-form-select
+                                class="form-control"
+                                v-model="form.residence"
+                                :options="residence"
+                            ></b-form-select>
+                        </b-form-group>
+                    </div>
+                    <div class="col-md-4">
+                        <b-form-group
+                            id="input-group-7"
+                            label="Work Type"
+                            label-for="work"
+                        >
+                            <b-form-select
+                                class="form-control"
+                                v-model="form.workType"
+                                :options="workType"
+                            ></b-form-select>
+                        </b-form-group>
+                    </div>
+                    <div class="col-md-4">
+                        <b-form-group
+                            id="input-group-8"
+                            label="Industry"
+                            label-for="industry"
+                        >
+                            <b-form-select
+                                class="form-control"
+                                v-model="form.industry"
+                                :options="industry"
+                            ></b-form-select>
+                        </b-form-group>
+                    </div>
+                    <div class="col-md-12 seprator-line"><hr /></div>
+                    <div class="col-md-4">
+                        <b-form-group
+                            id="input-group-9"
+                            label="KYC Status"
+                            label-for="status"
+                        >
+                            <b-form-select
+                                class="form-control"
+                                v-model="form.status"
+                                :options="status"
+                            ></b-form-select>
+                        </b-form-group>
+                    </div>
+                    <div class="col-md-4">
+                        <b-form-group
+                            id="input-group-10"
+                            label="Name Screening Hit Type"
+                            label-for="hitType"
+                        >
+                            <b-form-select
+                                class="form-control"
+                                v-model="form.hitType"
+                                :options="hitType"
+                            ></b-form-select>
+                        </b-form-group>
+                    </div>
+                    <div class="col-md-4">
+                        <b-form-group
+                            id="input-group-11"
+                            label="Risk Rating Level"
+                            label-for="ratingLevel"
+                        >
+                            <b-form-select
+                                class="form-control"
+                                v-model="form.ratingLevel"
+                                :options="ratingLevel"
+                            ></b-form-select>
+                        </b-form-group>
+                    </div>
+                    <div class="col-md-4 form-radio reg-channel">
+                        <b-form-group
+                            id="input-group-12"
+                            label="Registration Channel"
+                            label-for="channel"
+                        >
+                            <b-form-group>
+                                <b-form-radio-group
+                                    v-model="channel"
+                                    :options="form.channel"
+                                    name="channel"
+                                ></b-form-radio-group>
+                            </b-form-group>
+                        </b-form-group>
+                    </div>
+                    <div class="col-md-4">
+                        <b-form-group
+                            id="input-group-13"
+                            label="Id Type"
+                            label-for="type"
+                        >
+                            <b-form-select
+                                class="form-control"
+                                v-model="form.type"
+                                :options="type"
+                            ></b-form-select>
+                        </b-form-group>
+                    </div>
+                    <div class="col-md-4">
+                        <b-form-group
+                            id="input-group-14"
+                            label="Product Type"
+                            label-for="productType"
+                        >
+                            <b-form-select
+                                class="form-control"
+                                v-model="form.productType"
+                                :options="productType"
+                            ></b-form-select>
+                        </b-form-group>
+                    </div>
+                    <div class="col-md-12 seprator-line"><hr /></div>
+                    <div class="col-md-12">
+                        <b-button type="submit" variant="primary"
+                            >Search now</b-button
+                        >
+                    </div>
                 </div>
-            </div>
+            </b-form>
         </div>
     </div>
 </template>
