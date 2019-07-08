@@ -29,12 +29,14 @@
                     font-size: $font-size-base;
                     font-family: $font-regular;
                     vertical-align: super;
+                    position: relative;
+                    top: 4px;
                 }
                 i {
                     font-size: 21px;
                     margin-right: 12px;
                     position: relative;
-                    top: -2px;
+                    top: 2px;
                 }
                 &.router-link-active {
                     color: $primary;
