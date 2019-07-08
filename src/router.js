@@ -51,20 +51,7 @@ export default new Router({
             component: () =>
                 import(/* webpackChunkName: "about" */ './views/About.vue'),
         },
-        {
-            path: '/dashboard',
-            name: 'dashboard',
-            component: () =>
-                import(/* webpackChunkName: "about" */ '@//views/dashboard/Main.vue'),
-            children: [
-                {
-                    path: '/',
-                    name: 'alerts',
-                    component: () =>
-                        import(/* webpackChunkName: "login" */ '@/views/dashboard/Alert.vue'),
-                },
-            ],
-        },
+
         {
             path: '/customer-profile',
             name: 'profile',

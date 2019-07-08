@@ -86,7 +86,7 @@
                 <div class="status-review" v-if="data.value == 'lock'">
                     <router-link class="disable" to="/">
                         <i class="icon-change-password"></i>
-                        <span>Review</span>
+                        <span>In Review</span>
                     </router-link>
                 </div>
             </template>
