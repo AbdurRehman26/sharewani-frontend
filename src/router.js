@@ -72,13 +72,13 @@ export default new Router({
             path: '/system-users',
             name: 'systems',
             component: () =>
-                import(/* webpackChunkName: "about" */ '@//views/systemusers/Main.vue'),
+                import(/* webpackChunkName: "system-users" */ '@/views/systemusers/Main.vue'),
             children: [
                 {
                     path: '/',
                     name: 'system-users',
                     component: () =>
-                        import(/* webpackChunkName: "login" */ '@/views/systemusers/SystemUsers.vue'),
+                        import(/* webpackChunkName: "system-users" */ '@/views/systemusers/SystemUsers.vue'),
                 },
             ],
         },
