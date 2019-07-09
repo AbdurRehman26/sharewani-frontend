@@ -1,10 +1,22 @@
 <template>
-    <div></div>
+    <div class="dashboard">
+        <base-sidebar
+            :countryListing="countryListing"
+            :sidelinksListing="sidelinksListing"
+        ></base-sidebar>
+        <div class="content-area">
+            <base-header :menuListing="menuListing"></base-header>
+            <div class="right-panel">
+                fdsf
+            </div>
+        </div>
+    </div>
 </template>
 
 <script>
 export default {
     components: {},
+
     /*
     |--------------------------------------------------------------------------
     | Component > props
@@ -43,13 +55,12 @@ export default {
     |--------------------------------------------------------------------------
     */
     methods: {}, // End of Component > methods
+
     /*
     |--------------------------------------------------------------------------
     | Component > mounted
     |--------------------------------------------------------------------------
     */
-    mounted() {
-        this.created()
-    }, // End of Component > mounted
+    mounted() {}, // End of Component > mounted
 } // End of export default
 </script>

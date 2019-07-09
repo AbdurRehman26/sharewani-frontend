@@ -58,66 +58,6 @@ export default {
                     menuLabel: 'Application Access',
                 },
             ],
-            countryListing: [
-                {
-                    anchorLink: '/',
-                    menuLabel: 'UAE',
-                },
-                {
-                    anchorLink: '/dashboard',
-                    menuLabel: 'PK',
-                },
-                {
-                    anchorLink: '/',
-                    menuLabel: 'UK',
-                },
-                {
-                    anchorLink: '/',
-                    menuLabel: 'USA',
-                },
-            ],
-            sidelinksListing: [
-                {
-                    anchorLink: '/dashboard',
-                    icon: 'icon-insights',
-                    menuLabel: 'Insights',
-                },
-                {
-                    anchorLink: '/',
-                    icon: 'icon-Customer-Profil',
-                    menuLabel: 'Customer Profiles',
-                },
-                {
-                    anchorLink: '/',
-                    icon: 'icon-Add-Customer',
-                    menuLabel: 'Register Customer',
-                },
-                {
-                    anchorLink: '/',
-                    icon: 'icon-world',
-                    menuLabel: 'Search People',
-                },
-                {
-                    anchorLink: '/',
-                    icon: 'icon-Configurations',
-                    menuLabel: 'Configurations',
-                },
-                {
-                    anchorLink: '/system-users',
-                    icon: 'icon-System-Users',
-                    menuLabel: 'System Users',
-                },
-                {
-                    anchorLink: '/',
-                    icon: 'icon-System-Log',
-                    menuLabel: 'System Logs',
-                },
-                {
-                    anchorLink: '/',
-                    icon: 'icon-Export',
-                    menuLabel: 'Data Export',
-                },
-            ],
         }
     }, // End of Component > data
 

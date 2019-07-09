@@ -88,6 +88,12 @@ export default new Router({
             ],
         },
         {
+            path: '/system-logs',
+            name: 'systems-logs',
+            component: () =>
+                import(/* webpackChunkName: "system-logs" */ '@/views/systemlogs/Main.vue'),
+        },
+        {
             path: '/customer-profile',
             name: 'profile',
             // route level code-splitting
