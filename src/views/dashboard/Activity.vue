@@ -1,9 +1,34 @@
 <template>
     <div class="wrap-content">
-        <div class="row">
-            <div class="col-md-2">
-                <h2>Activity Dashboard</h2>
+        <div class="filter-section">
+            <div class="row">
+                <div class="col-md-4">
+                    <h2>Activity Dashboard</h2>
+                </div>
+                <div class="col-md-8 text-right">
+                    <ul>
+                        <li>
+                            <div class="form-group">
+                                <datepicker
+                                    placeholder="Start date"
+                                ></datepicker>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form-group">
+                                <datepicker placeholder="End date"></datepicker>
+                            </div>
+                        </li>
+                        <li>
+                            <b-button type="button" variant="primary"
+                                >Apply</b-button
+                            >
+                        </li>
+                    </ul>
+                </div>
             </div>
+        </div>
+        <div class="row">
             <div class="col-md-12">
                 <div class="row">
                     <div
@@ -70,8 +95,11 @@ import { mapGetters } from 'vuex'
 require('amcharts3')
 require('amcharts3/amcharts/serial')
 require('amcharts3/amcharts/pie')
+import Datepicker from 'vuejs-datepicker'
 export default {
-    components: {},
+    components: {
+        Datepicker,
+    },
 
     /*
     |--------------------------------------------------------------------------
