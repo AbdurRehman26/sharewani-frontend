@@ -82,8 +82,7 @@
 .vdp-datepicker {
     display: block;
     width: 100%;
-    // height: $input-height;
-    height: auto !important;
+    height: $input-height;
     padding: $input-padding-y $input-padding-x;
     font-size: $font-size-base;
     line-height: $input-line-height;
@@ -186,5 +185,19 @@
     @include mobile {
         width: 100% !important;
         min-width: 300px;
+    }
+}
+
+.date-pickers {
+    position: relative;
+
+    i {
+        position: absolute;
+        right: 13px;
+        font-size: 19px;
+        z-index: 9;
+        color: $grey-lite;
+        top: 11px;
+        pointer-events: none;
     }
 }

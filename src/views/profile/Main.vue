@@ -74,12 +74,12 @@ export default {
                 },
                 {
                     anchorLink: '/customer-profile',
-                    icon: 'icon-Customer-Profil',
+                    icon: 'icon-customer-profil',
                     menuLabel: 'Customer Profiles',
                 },
                 {
                     anchorLink: '/',
-                    icon: 'icon-Add-Customer',
+                    icon: 'icon-add-customer',
                     menuLabel: 'Register Customer',
                 },
                 {
@@ -89,22 +89,22 @@ export default {
                 },
                 {
                     anchorLink: '/',
-                    icon: 'icon-Configurations',
+                    icon: 'icon-configurations',
                     menuLabel: 'Configurations',
                 },
                 {
                     anchorLink: '/',
-                    icon: 'icon-System-Users',
+                    icon: 'icon-system-users',
                     menuLabel: 'System Users',
                 },
                 {
                     anchorLink: '/',
-                    icon: 'icon-System-Log',
+                    icon: 'icon-system-log',
                     menuLabel: 'System Logs',
                 },
                 {
                     anchorLink: '/',
-                    icon: 'icon-Export',
+                    icon: 'icon-export',
                     menuLabel: 'Data Export',
                 },
             ],

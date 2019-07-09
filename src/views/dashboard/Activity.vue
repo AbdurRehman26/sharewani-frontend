@@ -8,15 +8,17 @@
                 <div class="col-md-8 text-right">
                     <ul>
                         <li>
-                            <div class="form-group">
+                            <div class="form-group date-pickers">
+                                <i class="icon-calendar"></i>
                                 <datepicker
-                                    placeholder="Start date"
+                                    placeholder="Start Date"
                                 ></datepicker>
                             </div>
                         </li>
                         <li>
-                            <div class="form-group">
-                                <datepicker placeholder="End date"></datepicker>
+                            <div class="form-group date-pickers">
+                                <i class="icon-calendar"></i>
+                                <datepicker placeholder="End Date"></datepicker>
                             </div>
                         </li>
                         <li>
