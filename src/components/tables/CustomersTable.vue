@@ -3,7 +3,7 @@
         <b-table :items="listItems" :fields="listFields">
             <template slot="profile" slot-scope="data">
                 <div class="profile-area">
-                    <router-link to="/">
+                    <router-link to="/customer-information">
                         <div
                             class="profile-pic"
                             :style="{
@@ -21,7 +21,7 @@
 
             <template slot="customer" slot-scope="data">
                 <div class="customer-link">
-                    <router-link to="/">
+                    <router-link to="/customer-information">
                         <span>{{ data.value }}</span>
                     </router-link>
                 </div>
@@ -29,7 +29,7 @@
 
             <template slot="full_name" slot-scope="data">
                 <div class="customer-link">
-                    <router-link to="/">
+                    <router-link to="/customer-information">
                         <span>{{ data.value }}</span>
                     </router-link>
                 </div>
@@ -37,25 +37,25 @@
 
             <template slot="status" slot-scope="data">
                 <div class="pending status-view" v-if="data.value == 'pending'">
-                    <i class="icon-Loading"></i>
+                    <i class="icon-loading"></i>
                     <span>Pending</span>
                 </div>
                 <div
                     class="approved status-view"
                     v-if="data.value == 'approved'"
                 >
-                    <i class="icon-Check"></i> <span>Approved</span>
+                    <i class="icon-check"></i> <span>Approved</span>
                 </div>
                 <div
                     class="rejected status-view"
                     v-if="data.value == 'rejected'"
                 >
-                    <i class="icon-Wrong"></i> <span>Rejected</span>
+                    <i class="icon-wrong"></i> <span>Rejected</span>
                 </div>
             </template>
             <template slot="action" slot-scope="data">
                 <div class="action-review">
-                    <router-link to="/">
+                    <router-link to="/customer-information">
                         <i class="icon-eye-view"></i>
                         <span>{{ data.value }}</span>
                     </router-link>
