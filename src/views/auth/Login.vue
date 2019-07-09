@@ -33,7 +33,12 @@
                             placeholder="Enter your account password"
                         ></b-form-input>
                     </b-form-group>
-                    <b-button type="submit" variant="primary">SIGN IN</b-button>
+                    <b-button
+                        type="submit"
+                        variant="primary"
+                        @click="$router.push('/dashboard')"
+                        >SIGN IN</b-button
+                    >
                     <router-link
                         to="/forgot-password"
                         class="btn forgot-link btn-link float-right"
