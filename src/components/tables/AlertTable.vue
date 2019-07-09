@@ -21,19 +21,19 @@
                     class="pending indication-icons"
                     v-if="data.value == 'pending'"
                 >
-                    <i class="icon-Check"></i>
+                    <i class="icon-check"></i>
                 </div>
                 <div
                     class="inreview indication-icons"
                     v-if="data.value == 'inreview'"
                 >
-                    <i class="icon-Wrong"></i>
+                    <i class="icon-wrong"></i>
                 </div>
                 <div
                     class="reject indication-icons"
                     v-if="data.value == 'reject'"
                 >
-                    <i class="icon-Wrong"></i>
+                    <i class="icon-wrong"></i>
                 </div>
             </template>
             <template slot="documentation" slot-scope="data">
@@ -41,19 +41,19 @@
                     class="pending indication-icons"
                     v-if="data.value == 'pending'"
                 >
-                    <i class="icon-Check"></i>
+                    <i class="icon-check"></i>
                 </div>
                 <div
                     class="inreview indication-icons"
                     v-if="data.value == 'inreview'"
                 >
-                    <i class="icon-Wrong"></i>
+                    <i class="icon-wrong"></i>
                 </div>
                 <div
                     class="reject indication-icons"
                     v-if="data.value == 'reject'"
                 >
-                    <i class="icon-Wrong"></i>
+                    <i class="icon-wrong"></i>
                 </div>
             </template>
             <template slot="risk_rating" slot-scope="data">
@@ -61,19 +61,19 @@
                     class="pending indication-icons"
                     v-if="data.value == 'pending'"
                 >
-                    <i class="icon-Check"></i>
+                    <i class="icon-check"></i>
                 </div>
                 <div
                     class="inreview indication-icons"
                     v-if="data.value == 'inreview'"
                 >
-                    <i class="icon-Wrong"></i>
+                    <i class="icon-wrong"></i>
                 </div>
                 <div
                     class="reject indication-icons"
                     v-if="data.value == 'reject'"
                 >
-                    <i class="icon-Wrong"></i>
+                    <i class="icon-wrong"></i>
                 </div>
             </template>
             <template slot="status" slot-scope="data">

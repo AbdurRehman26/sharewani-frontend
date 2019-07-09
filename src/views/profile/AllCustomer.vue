@@ -20,12 +20,7 @@
                             </b-form-group>
                         </li>
                         <li>
-                            <div class="form-group search-input">
-                                <i class="icon-Search"></i>
-                                <b-form-input
-                                    placeholder="Search"
-                                ></b-form-input>
-                            </div>
+                            <base-search></base-search>
                         </li>
                         <li>
                             <b-button type="button" variant="primary"

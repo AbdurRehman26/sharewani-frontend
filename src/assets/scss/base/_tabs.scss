@@ -7,7 +7,7 @@
         padding: 11px 25px;
         outline: none;
         color: $grey-medium;
-        border: 1px $grey-lite solid;
+        border: 1px $border-color solid;
         box-shadow: none !important;
         background-color: $white;
 
@@ -20,8 +20,8 @@
 
         &.active {
             background-color: $grey-dark !important;
-            color: $secondary !important;
-            border: 1px $grey-lite solid !important;
+            color: $body-color !important;
+            border: 1px $border-color solid !important;
         }
 
         &:active {

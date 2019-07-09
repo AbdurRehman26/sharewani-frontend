@@ -1,6 +1,6 @@
 <template>
     <div class="form-group search-input">
-        <i class="icon-Search"></i>
+        <i class="icon-search"></i>
         <b-form-input :placeholder="placeholder"></b-form-input>
     </div>
 </template>
