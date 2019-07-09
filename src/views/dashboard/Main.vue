@@ -50,7 +50,7 @@ export default {
                     menuLabel: 'Activity Dashboard',
                 },
                 {
-                    anchorLink: '/',
+                    anchorLink: '/dashboard/reporting',
                     menuLabel: 'Customer Statistics',
                 },
             ],

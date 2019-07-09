@@ -1,9 +1,9 @@
 <template>
     <div class="wrap-content">
+        <div class="filter-section">
+            <h2>Customer Statistics</h2>
+        </div>
         <div class="row">
-            <div class="col-md-2">
-                <h2>Customer Statistics</h2>
-            </div>
             <div class="col-md-12">
                 <div class="row">
                     <div class="col-xs-12 col-md-6">
