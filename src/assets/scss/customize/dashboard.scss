@@ -20,14 +20,23 @@
 	}
 	.dashboard-charts {
 		height: 400px;
+
+		.amcharts-div {
+			height: 95%;
+
+			&.customer-by-gender {
+				height: 85%;
+			}
+		}
 	}
 }
 
 .chart-highest-record {
 	position: absolute;
 	top: 37%;
+	left: 0;
 	text-align: center;
-	width: 93%;
+	width: 100%;
 	h2 {
 		color: $grey-lite;
 		font-size: $font-size-sm;
