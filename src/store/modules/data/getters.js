@@ -11,4 +11,7 @@ export default {
     customersAccountByMonth: (state) => state.customersAccountByMonth,
     customersByIndustry: (state) => state.customersByIndustry,
     customersByNationality: (state) => state.customersByNationality,
+    //system logs
+    logsTotalActions: (state) => state.logsTotalActions,
+    systemLogsTable: (state) => state.systemLogsTable,
 }
