@@ -5,6 +5,73 @@
             <base-header :menuListing="menuListing"></base-header>
             <div class="right-panel">
                 <div class="wrap-content">
+                    <div class="filter-section">
+                        <div class="row">
+                            <div class="col-md-12 system-user-filter">
+                                <ul>
+                                    <li>
+                                        <h2>System Log</h2>
+                                    </li>
+                                    <li>
+                                        <div class="form-group date-pickers">
+                                            <i class="icon-calendar"></i>
+                                            <datepicker
+                                                placeholder="Start Date"
+                                            ></datepicker>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-group date-pickers">
+                                            <i class="icon-calendar"></i>
+                                            <datepicker
+                                                placeholder="Start Date"
+                                            ></datepicker>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <b-form-group>
+                                            <b-form-select
+                                                id="input-3"
+                                                class="form-control"
+                                                v-model="filterByModule"
+                                                :options="filterModule"
+                                                required
+                                            ></b-form-select>
+                                        </b-form-group>
+                                    </li>
+                                    <li>
+                                        <b-form-group>
+                                            <b-form-select
+                                                id="input-3"
+                                                class="form-control"
+                                                v-model="filterByAction"
+                                                :options="filterAction"
+                                                required
+                                            ></b-form-select>
+                                        </b-form-group>
+                                    </li>
+                                    <li>
+                                        <b-form-group>
+                                            <b-form-select
+                                                id="input-3"
+                                                class="form-control"
+                                                v-model="filterByUser"
+                                                :options="filterUser"
+                                                required
+                                            ></b-form-select>
+                                        </b-form-group>
+                                    </li>
+                                    <li>
+                                        <b-button
+                                            type="button"
+                                            variant="primary"
+                                            >Apply</b-button
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                     <div class="row">
                         <div class="col-xs-12 col-md-12">
                             <!-- system logs total actions -->
@@ -37,9 +104,11 @@ require('amcharts3')
 require('amcharts3/amcharts/serial')
 require('amcharts3/amcharts/pie')
 import pagination from '@/components/Pagination.vue'
+import Datepicker from 'vuejs-datepicker'
 export default {
     components: {
         pagination,
+        Datepicker,
     },
 
     /*
@@ -67,6 +136,31 @@ export default {
         return {
             fields: [],
             items: [],
+            filterByModule: null,
+            filterByAction: null,
+            filterByUser: null,
+
+            filterModule: [
+                { text: 'Filter by module', value: null },
+                'Customer Registration',
+                'KYC Status Review',
+                'Authentication',
+                'Configuration',
+                'System User',
+            ],
+
+            filterAction: [
+                { text: 'Filter by action', value: null },
+                'Alex Tonorio logged in',
+            ],
+
+            filterUser: [
+                { text: 'Filter by user', value: null },
+                'Ishaaq El Vohra',
+                'Lucas Pacheco',
+                'Sofie Hubert',
+                'Ingo Schimpff',
+            ],
         }
     }, // End of Component > data
 
