@@ -79,7 +79,7 @@ export default {
                     menuLabel: 'Insights',
                 },
                 {
-                    anchorLink: '/',
+                    anchorLink: '/customer-profile',
                     icon: 'icon-customer-profil',
                     menuLabel: 'Customer Profiles',
                 },
