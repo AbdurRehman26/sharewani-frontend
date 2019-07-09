@@ -22,40 +22,46 @@
                 <div class="row">
                     <div class="col-xs-12 col-md-12">
                         <div class="card dashboard-card sm-radius">
-                            <h2 class="heading">Activity Timeline</h2>
-                            <!-- activity timeline dashboard chart -->
-                            <div
-                                id="activity-timeline-report"
-                                class="dashboard-charts activity-timeline-report"
-                            ></div>
-                            <!-- activity timeline dashboard chart end-->
+                            <div class="dashboard-charts">
+                                <h2 class="heading">Activity Timeline</h2>
+                                <!-- activity timeline dashboard chart -->
+                                <div
+                                    id="activity-timeline-report"
+                                    class="amcharts-div activity-timeline-report"
+                                ></div>
+                                <!-- activity timeline dashboard chart end-->
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-xs-12 col-md-6">
-                        <div class="card dashboard-card sm-radius">
-                            <h2 class="heading">KYC Alters by Type</h2>
-                            <!-- dashboard alerts report -->
-                            <div
-                                id="alerts-by-type"
-                                class="dashboard-charts alerts-by-type"
-                            ></div>
+                        <div class="card dashboard-card  sm-radius">
+                            <div class="dashboard-charts">
+                                <h2 class="heading">KYC Alters by Type</h2>
+                                <!-- dashboard alerts report -->
+                                <div
+                                    id="alerts-by-type"
+                                    class="amcharts-div alerts-by-type"
+                                ></div>
+                            </div>
                         </div>
                     </div>
                     <div class="col-xs-12 col-md-6">
                         <div class="card dashboard-card sm-radius">
-                            <h2 class="heading">
-                                Name Screening Hit by Type
-                            </h2>
-                            <!-- screening hit by type report -->
-                            <div
-                                id="screening-by-type"
-                                class="dashboard-charts screening-by-type"
-                            ></div>
-                            <div class="chart-highest-record">
-                                <h2>HIGHEST</h2>
-                                <p>PEP Hit: <strong>320</strong> (44.9%)</p>
+                            <div class="dashboard-charts">
+                                <h2 class="heading">
+                                    Name Screening Hit by Type
+                                </h2>
+                                <!-- screening hit by type report -->
+                                <div
+                                    id="screening-by-type"
+                                    class="amcharts-div screening-by-type"
+                                ></div>
+                                <div class="chart-highest-record">
+                                    <h2>HIGHEST</h2>
+                                    <p>PEP Hit: <strong>320</strong> (44.9%)</p>
+                                </div>
                             </div>
                         </div>
                     </div>
