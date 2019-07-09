@@ -12,5 +12,8 @@ export default {
         state.customersAccountByMonth = payload
         state.customersByIndustry = payload
         state.customersByNationality = payload
+        //system logs
+        state.logsTotalActions = payload
+        state.systemLogsTable = payload
     },
 }
