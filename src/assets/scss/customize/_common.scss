@@ -141,6 +141,30 @@ hr {
     }
 }
 
+// .tabs {
+//     .tab-content {
+//         background-color: #fff;
+//         margin-top: 0 !important;
+//         padding: 23px 32px !important;
+//     }
+//     .nav-tabs {
+//         .nav-link {
+//             padding: 14px 16px 22px 16px;
+//             color: #7f8fa4;
+//             background: #ebebf2;
+//             margin-right: 10px;
+//             border-radius: 8px 8px 0px 0px;
+//             text-decoration: none;
+//             border-color: transparent !important;
+//             &.active {
+//                 background-color: #fff;
+//                 color: $body-color;
+//                 font-family: $font_medium;
+//             }
+//         }
+//     }
+// }
+
 .show-spinner {
     span {
         visibility: hidden;
@@ -221,14 +245,14 @@ textarea {
     height: calc(100% - 115px);
     overflow-y: auto;
     &::-webkit-scrollbar-track {
-        background-color: $body-bg;
+        background-color: #fff;
         border-radius: 51px;
     }
 
     &::-webkit-scrollbar {
         width: 6px;
         height: 6px;
-        background-color: $body-bg;
+        background-color: #fff;
         border-radius: 51px;
     }
 
@@ -242,11 +266,11 @@ textarea {
 
 #style-2::-webkit-scrollbar-track {
     border-radius: 15px;
-    background-color: #f1f3f5;
+    background-color: #fff;
 }
 
 #style-2::-webkit-scrollbar {
-    width: 5px;
+    width: 12px;
     background-color: #ced3d8;
 }
 

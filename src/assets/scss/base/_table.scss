@@ -13,35 +13,11 @@
             background-color: $grey-dark;
             color: #7f8fa4;
             padding: 14px 13px;
+            vertical-align: middle;
             font-size: 0.75rem;
             overflow: hidden;
             font-family: $font_medium;
             text-transform: uppercase;
-            &.person-icon {
-                text-align: center;
-                &:before {
-                    content: '\E91C';
-                    font-family: 'icomoon';
-                    padding-right: 10px;
-                }
-            }
-            &.document-icon {
-                text-align: center;
-                &:before {
-                    content: '\e90a';
-                    font-family: 'icomoon';
-                    padding-right: 10px;
-                    color: #000;
-                }
-            }
-            &.graph-icon {
-                text-align: center;
-                &:before {
-                    content: '\e90f';
-                    font-family: 'icomoon';
-                    padding-right: 10px;
-                }
-            }
         }
     }
 
@@ -65,17 +41,37 @@
                     vertical-align: middle;
                 }
             }
-            .action-column {
-                margin-left: -10px;
-                margin-right: -10px;
-                a {
-                    padding: 0 10px;
-
-                    .icon-check {
-                        font-size: 11px;
-                    }
+            &.two-list {
+                width: 200px;
+            }
+        }
+        .action-review {
+            a {
+                margin-right: 12px;
+                display: inline-block;
+                color: $dark;
+                &:last-child {
+                    margin-right: 0px;
+                }
+                &:hover,
+                &:focus {
+                    color: $secondary;
                 }
             }
+        }
+        .action-column {
+            margin-left: -10px;
+            margin-right: -10px;
+            a {
+                padding: 0 10px;
+
+                .icon-check {
+                    font-size: 11px;
+                }
+            }
+        }
+        .rating-field {
+            width: 200px;
         }
     }
 }
@@ -99,6 +95,17 @@
             color: $secondary;
             background-color: #fff;
             border-color: #fff;
+            box-shadow: 0px 2px 3px rgba(50, 50, 93, 0.11),
+                0px 1px 3px rgba(0, 0, 0, 0.08);
+        }
+    }
+}
+
+.infoengine {
+    .record-shown {
+        .form-group,
+        p {
+            margin-bottom: 0px;
         }
     }
 }
