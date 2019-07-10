@@ -1,9 +1,6 @@
 <template>
     <div class="dashboard">
-        <base-sidebar
-            :countryListing="countryListing"
-            :sidelinksListing="sidelinksListing"
-        ></base-sidebar>
+        <base-sidebar></base-sidebar>
         <div class="content-area">
             <base-header :menuListing="menuListing"></base-header>
             <div class="right-panel">

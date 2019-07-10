@@ -85,6 +85,12 @@ export default new Router({
                     component: () =>
                         import(/* webpackChunkName: "system-users" */ '@/views/systemusers/SystemUsers.vue'),
                 },
+                {
+                    path: 'roles',
+                    name: 'roles-and-permission',
+                    component: () =>
+                        import(/* webpackChunkName: "roles" */ '@/views/systemusers/Roles.vue'),
+                },
             ],
         },
         {

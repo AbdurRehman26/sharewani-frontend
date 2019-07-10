@@ -1,0 +1,137 @@
+<template>
+    <div class="wrap-content">
+        <div class="filter-section">
+            <div class="row">
+                <div class="col-md-3">
+                    <h2>Roles & Permissions</h2>
+                </div>
+                <div class="col-md-9 text-right">
+                    <ul>
+                        <li>
+                            <base-search></base-search>
+                        </li>
+                        <li>
+                            <b-button type="button" variant="primary"
+                                >Apply</b-button
+                            >
+                        </li>
+                        <li>
+                            <b-button type="button" variant="secondary"
+                                >+ Add Role</b-button
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- user management table -->
+        <div class="table-section">
+            <b-table :items="items" :fields="fields">
+                <!-- status slot -->
+                <template slot="status" slot-scope="data">
+                    <span
+                        class="approved status-view"
+                        v-if="data.value == 'active'"
+                    >
+                        <i class="icon-check"></i> <span>Active</span>
+                    </span>
+                    <span
+                        class="locked status-view"
+                        v-if="data.value == 'locked'"
+                    >
+                        <i class="icon-check"></i> <span>Locked</span>
+                    </span>
+                    <span
+                        class="rejected status-view"
+                        v-if="data.value == 'archived'"
+                    >
+                        <i class="icon-wrong"></i> <span>Archived</span>
+                    </span>
+                </template>
+                <!-- action slot -->
+                <template slot="action" slot-scope="data">
+                    <div class="action-review">
+                        <router-link to="/customer-information">
+                            <i class="icon-eye-view"></i>
+                            <span>{{ data.value }}</span>
+                        </router-link>
+                    </div>
+                </template>
+            </b-table>
+        </div>
+        <pagination></pagination>
+    </div>
+</template>
+
+<script>
+import { mapGetters } from 'vuex'
+import pagination from '@/components/Pagination.vue'
+export default {
+    components: {
+        pagination,
+    },
+
+    /*
+    |--------------------------------------------------------------------------
+    | Component > props
+    |--------------------------------------------------------------------------
+    */
+    props: {
+        /**
+         * Value to determine the current compose mode which
+         * varies between 'add' and 'edit'
+         */
+        mode: {
+            type: String,
+            default: 'add',
+        },
+    }, // End of Component > props
+
+    /*
+    |--------------------------------------------------------------------------
+    | Component > data
+    |--------------------------------------------------------------------------
+    */
+    data() {
+        return {
+            selected: '1',
+            fields: [],
+            items: [],
+        }
+    }, // End of Component > data
+
+    /*
+    |--------------------------------------------------------------------------
+    | Component > computed
+    |--------------------------------------------------------------------------
+    */
+    computed: {
+        ...mapGetters(['systemUserTable']),
+    }, // End of Component > computed
+
+    /*
+    |--------------------------------------------------------------------------
+    | Component > methods
+    |--------------------------------------------------------------------------
+    */
+    methods: {
+        initializeData() {
+            //system log table
+            let systemUserTableFields = this.systemUserTable.roles.fields //get user data from store
+            this.fields = systemUserTableFields //push data into array
+            let systemUserTableitems = this.systemUserTable.roles.items //get user data from store
+            this.items = systemUserTableitems //push data into array
+        },
+    }, // End of Component > methods
+
+    /*
+    |--------------------------------------------------------------------------
+    | Component > mounted
+    |--------------------------------------------------------------------------
+    */
+    mounted() {
+        this.initializeData()
+    }, // End of Component > mounted
+} // End of export default
+</script>
