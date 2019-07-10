@@ -9,7 +9,7 @@
                     <ul>
                         <li>
                             <base-search
-                                :placeholder="'Search work type'"
+                                :placeholder="'Search industry'"
                             ></base-search>
                         </li>
                         <li>

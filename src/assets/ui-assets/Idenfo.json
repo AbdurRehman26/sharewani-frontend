@@ -1,12 +1,18 @@
 {
   "selection": [
     {
+      "order": 2257,
+      "name": "low-risk"
+    },
+    {
       "order": 2256,
-      "name": "high-risk"
+      "name": "high-risk",
+      "prevSize": 32
     },
     {
       "order": 2255,
-      "name": "caret-right"
+      "name": "caret-right",
+      "prevSize": 32
     },
     {
       "order": 2254,
@@ -192,14 +198,24 @@
   "metadata": {
     "name": "Idenfo",
     "importSize": {
-      "width": 7,
+      "width": 8,
       "height": 12
     },
-    "iconsHash": 824996979
+    "iconsHash": 1874199847
   },
   "height": 1024,
   "prevSize": 32,
   "icons": [
+    {
+      "paths": [
+        "M639.334 726.065l-82.194-82.193-155.851 155.857v-799.729h-116.236v803.279l-159.409-159.406-82.188 82.193 297.94 297.935 297.938-297.935z"
+      ],
+      "width": 683,
+      "grid": 0,
+      "tags": [
+        "low-risk"
+      ]
+    },
     {
       "paths": [
         "M298.667 0l-298.667 298.667 85.333 85.333 153.6-162.133v802.133h119.467v-802.133l153.6 162.133 85.333-85.333z"
@@ -220,7 +236,8 @@
             "f": 4
           }
         ]
-      }
+      },
+      "defaultCode": 59649
     },
     {
       "paths": [
@@ -242,7 +259,8 @@
             "f": 0
           }
         ]
-      }
+      },
+      "defaultCode": 59650
     },
     {
       "paths": [
