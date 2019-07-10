@@ -1,10 +1,16 @@
 <template>
-    <div class="dashboard">
-        <div class="content-area">
-            <base-header :menuListing="menuListing"></base-header>
-            <div class="right-panel">
-                <router-view></router-view>
-            </div>
+    <div class="wrap-content">
+        <div class="config-list">
+            <ul>
+                <li v-for="(list, index) in menuListing" :key="index">
+                    <router-link :to="list.anchorLink">
+                        <span>{{ list.menuLabel }}</span>
+                    </router-link>
+                </li>
+            </ul>
+        </div>
+        <div class="config-card-block">
+            <router-view />
         </div>
     </div>
 </template>
@@ -38,16 +44,44 @@ export default {
         return {
             menuListing: [
                 {
-                    anchorLink: '/dashboard',
-                    menuLabel: 'Alerts',
+                    anchorLink: '/configuration',
+                    menuLabel: 'Nationality',
                 },
                 {
-                    anchorLink: '/dashboard/activity',
-                    menuLabel: 'Activity Dashboard',
+                    anchorLink: '/configuration/workfactor',
+                    menuLabel: 'Work Type',
                 },
                 {
-                    anchorLink: '/dashboard/reporting',
-                    menuLabel: 'Customer Statistics',
+                    anchorLink: '/configuration/industryfactor',
+                    menuLabel: 'Industry',
+                },
+                {
+                    anchorLink: '/',
+                    menuLabel: 'Product',
+                },
+                {
+                    anchorLink: '/',
+                    menuLabel: 'State',
+                },
+                {
+                    anchorLink: '/',
+                    menuLabel: 'Relationship',
+                },
+                {
+                    anchorLink: '/',
+                    menuLabel: 'Channel Type',
+                },
+                {
+                    anchorLink: '/',
+                    menuLabel: 'Risk Factor',
+                },
+                {
+                    anchorLink: '/',
+                    menuLabel: 'Risk Rating Score',
+                },
+                {
+                    anchorLink: '/',
+                    menuLabel: 'Import Data',
                 },
             ],
         }

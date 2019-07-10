@@ -19,24 +19,36 @@ export default new Router({
                     name: 'login-page',
                     component: () =>
                         import(/* webpackChunkName: "forgot-password" */ '@/views/auth/Login.vue'),
+                    meta: {
+                        noSidebar: true,
+                    },
                 },
                 {
                     path: '/forgot-password',
                     name: 'forgot-page',
                     component: () =>
                         import(/* webpackChunkName: "forgot-password" */ '@/views/auth/ForgotPassword.vue'),
+                    meta: {
+                        noSidebar: true,
+                    },
                 },
                 {
                     path: '/reset-password',
                     name: 'reset-password-page',
                     component: () =>
                         import(/* webpackChunkName: "reset-password" */ '@/views/auth/ResetPassword.vue'),
+                    meta: {
+                        noSidebar: true,
+                    },
                 },
                 {
                     path: '/email-sent',
                     name: 'email-sent-page',
                     component: () =>
                         import(/* webpackChunkName: "email-sent" */ '@/views/auth/EmailSent.vue'),
+                    meta: {
+                        noSidebar: true,
+                    },
                 },
             ],
         },
@@ -46,6 +58,9 @@ export default new Router({
             name: 'contact-us-page',
             component: () =>
                 import(/* webpackChunkName: "contact-us" */ '@/views/ContactUs.vue'),
+            meta: {
+                noSidebar: true,
+            },
         },
         {
             path: '/dashboard',
@@ -55,18 +70,18 @@ export default new Router({
             children: [
                 {
                     path: '/',
-                    name: 'alerts',
+                    name: 'dashbaord-alerts',
                     component: () =>
                         import(/* webpackChunkName: "dashboard-alerts" */ '@/views/dashboard/Alert.vue'),
                 },
                 {
-                    path: 'activity',
+                    path: 'dashbaord-activity',
                     name: 'dashboard-activity-page',
                     component: () =>
                         import(/* webpackChunkName: "dashboard-activity" */ '@/views/dashboard/Activity.vue'),
                 },
                 {
-                    path: 'reporting',
+                    path: 'dashbaord-reporting',
                     name: 'dashboard-reporting-page',
                     component: () =>
                         import(/* webpackChunkName: "dashboard-reporting" */ '@/views/dashboard/Reporting.vue'),
@@ -84,6 +99,18 @@ export default new Router({
                     name: 'system-users',
                     component: () =>
                         import(/* webpackChunkName: "system-users" */ '@/views/systemusers/SystemUsers.vue'),
+                },
+                {
+                    path: 'roles',
+                    name: 'roles-and-permission',
+                    component: () =>
+                        import(/* webpackChunkName: "roles" */ '@/views/systemusers/Roles.vue'),
+                },
+                {
+                    path: 'branches',
+                    name: 'branches-page',
+                    component: () =>
+                        import(/* webpackChunkName: "branches" */ '@/views/systemusers/Branches.vue'),
                 },
             ],
         },
@@ -158,6 +185,40 @@ export default new Router({
                     // which is lazy-loaded when the route is visited.
                     component: () =>
                         import(/* webpackChunkName: "document-verification" */ './views/profile/profile-details/DocumentVerification.vue'),
+                },
+            ],
+        },
+        {
+            path: '/configuration',
+            name: 'configuration',
+            component: () =>
+                import(/* webpackChunkName: "system-logs" */ '@/views/configuration/Main.vue'),
+            children: [
+                {
+                    path: '/',
+                    name: 'idenfo-engine',
+                    component: () =>
+                        import(/* webpackChunkName: "customer" */ './views/configuration/IdenfoEngine/Main.vue'),
+                    children: [
+                        {
+                            path: '/',
+                            name: 'nationality',
+                            component: () =>
+                                import(/* webpackChunkName: "customer" */ './views/configuration/IdenfoEngine/Nationality.vue'),
+                        },
+                        {
+                            path: '/configuration/workfactor',
+                            name: 'workfactor',
+                            component: () =>
+                                import(/* webpackChunkName: "customer" */ './views/configuration/IdenfoEngine/WorkFactor.vue'),
+                        },
+                        {
+                            path: '/configuration/industryfactor',
+                            name: 'industryfactor',
+                            component: () =>
+                                import(/* webpackChunkName: "customer" */ './views/configuration/IdenfoEngine/IndustryFactor.vue'),
+                        },
+                    ],
                 },
             ],
         },

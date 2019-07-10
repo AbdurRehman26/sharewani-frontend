@@ -10,7 +10,6 @@
                         <li>
                             <b-form-group>
                                 <b-form-radio-group
-                                    :id="index"
                                     v-model="selected"
                                     :options="options"
                                     buttons
@@ -87,6 +86,7 @@ export default {
                 { text: 'In Review', value: '3' },
             ],
 
+            filterName: null,
             filterBy: null,
 
             filterOptions: [

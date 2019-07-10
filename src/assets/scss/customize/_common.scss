@@ -141,6 +141,30 @@ hr {
     }
 }
 
+// .tabs {
+//     .tab-content {
+//         background-color: #fff;
+//         margin-top: 0 !important;
+//         padding: 23px 32px !important;
+//     }
+//     .nav-tabs {
+//         .nav-link {
+//             padding: 14px 16px 22px 16px;
+//             color: #7f8fa4;
+//             background: #ebebf2;
+//             margin-right: 10px;
+//             border-radius: 8px 8px 0px 0px;
+//             text-decoration: none;
+//             border-color: transparent !important;
+//             &.active {
+//                 background-color: #fff;
+//                 color: $body-color;
+//                 font-family: $font_medium;
+//             }
+//         }
+//     }
+// }
+
 .show-spinner {
     span {
         visibility: hidden;
@@ -356,6 +380,8 @@ $sides: (top, bottom, left, right); // Leave this variable alone
     text-align: center;
     font-size: $font-size-base;
     padding: 9px 10px;
+    min-width: 120px;
+    display: inline-block;
 
     i {
         font-size: 14px;
@@ -369,6 +395,7 @@ $sides: (top, bottom, left, right); // Leave this variable alone
         margin-left: 8px;
         display: inline-block;
         vertical-align: bottom;
+        text-align: center;
     }
 
     &.pending {
@@ -386,6 +413,12 @@ $sides: (top, bottom, left, right); // Leave this variable alone
     }
     &.rejected {
         background-color: #c91f37;
+        i {
+            font-size: 11px;
+        }
+    }
+    &.locked {
+        background-color: #00af2f;
         i {
             font-size: 11px;
         }

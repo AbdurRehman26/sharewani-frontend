@@ -1,11 +1,42 @@
 <template>
-    <div class="dashboard">
-        <div class="content-area">
-            <base-header :menuListing="menuListing"></base-header>
-            <div class="right-panel">
-                <router-view></router-view>
-            </div>
-        </div>
+    <div>
+        <span
+            class="approved status-view"
+            v-if="statusType == 'active' || statusType == 'Active'"
+        >
+            <i class="icon-check"></i> <span>Active</span>
+        </span>
+        <span
+            class="locked status-view"
+            v-if="statusType == 'locked' || statusType == 'Locked'"
+        >
+            <i class="icon-change-password"></i> <span>Locked</span>
+        </span>
+        <span
+            class="rejected status-view"
+            v-if="statusType == 'archived' || statusType == 'Archived'"
+        >
+            <i class="icon-wrong"></i> <span>Archived</span>
+        </span>
+        <span
+            class="pending status-view"
+            v-if="statusType == 'pending' || statusType == 'Pending'"
+        >
+            <i class="icon-loading"></i>
+            <span>Pending</span>
+        </span>
+        <span
+            class="approved status-view"
+            v-if="statusType == 'approved' || statusType == 'Approved'"
+        >
+            <i class="icon-check"></i> <span>Approved</span>
+        </span>
+        <span
+            class="rejected status-view"
+            v-if="statusType == 'rejected' || statusType == 'Rejected'"
+        >
+            <i class="icon-wrong"></i> <span>Rejected</span>
+        </span>
     </div>
 </template>
 
@@ -27,6 +58,10 @@ export default {
             type: String,
             default: 'add',
         },
+        statusType: {
+            type: String,
+            default: null,
+        },
     }, // End of Component > props
 
     /*
@@ -35,22 +70,7 @@ export default {
     |--------------------------------------------------------------------------
     */
     data() {
-        return {
-            menuListing: [
-                {
-                    anchorLink: '/dashboard',
-                    menuLabel: 'Alerts',
-                },
-                {
-                    anchorLink: '/dashboard/activity',
-                    menuLabel: 'Activity Dashboard',
-                },
-                {
-                    anchorLink: '/dashboard/reporting',
-                    menuLabel: 'Customer Statistics',
-                },
-            ],
-        }
+        return {}
     }, // End of Component > data
 
     /*
