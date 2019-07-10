@@ -65,6 +65,26 @@
                     vertical-align: middle;
                 }
             }
+            &.two-list {
+                width: 200px;
+            }
+        }
+        .action-review {
+            a {
+                margin-right: 12px;
+                display: inline-block;
+                color: $dark;
+                &:last-child {
+                    margin-right: 0px;
+                }
+                &:hover,
+                &:focus {
+                    color: $secondary;
+                }
+            }
+        }
+        .rating-field {
+            width: 200px;
         }
     }
 }
@@ -88,6 +108,17 @@
             color: $secondary;
             background-color: #fff;
             border-color: #fff;
+            box-shadow: 0px 2px 3px rgba(50, 50, 93, 0.11),
+                0px 1px 3px rgba(0, 0, 0, 0.08);
+        }
+    }
+}
+
+.infoengine {
+    .record-shown {
+        .form-group,
+        p {
+            margin-bottom: 0px;
         }
     }
 }

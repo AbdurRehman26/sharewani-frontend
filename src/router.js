@@ -159,6 +159,34 @@ export default new Router({
             name: 'configuration',
             component: () =>
                 import(/* webpackChunkName: "system-logs" */ '@/views/configuration/Main.vue'),
+            children: [
+                {
+                    path: '/',
+                    name: 'idenfo-engine',
+                    component: () =>
+                        import(/* webpackChunkName: "customer" */ './views/configuration/IdenfoEngine/Main.vue'),
+                    children: [
+                        {
+                            path: '/',
+                            name: 'nationality',
+                            component: () =>
+                                import(/* webpackChunkName: "customer" */ './views/configuration/IdenfoEngine/Nationality.vue'),
+                        },
+                        {
+                            path: '/configuration/workfactor',
+                            name: 'workfactor',
+                            component: () =>
+                                import(/* webpackChunkName: "customer" */ './views/configuration/IdenfoEngine/WorkFactor.vue'),
+                        },
+                        {
+                            path: '/configuration/industryfactor',
+                            name: 'industryfactor',
+                            component: () =>
+                                import(/* webpackChunkName: "customer" */ './views/configuration/IdenfoEngine/IndustryFactor.vue'),
+                        },
+                    ],
+                },
+            ],
         },
     ],
 })

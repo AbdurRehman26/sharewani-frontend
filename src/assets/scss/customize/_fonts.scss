@@ -61,142 +61,154 @@ $other_font_bold: 'ProximanovaBold';
     -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-add-customer:before {
-    content: '\e900';
-}
-.icon-blacklist:before {
+.icon-high-risk:before {
     content: '\e901';
 }
-.icon-calendar:before {
+.icon-caret-right:before {
     content: '\e902';
 }
-.icon-caret-down:before {
-    content: '\e903';
+.icon-edit:before {
+    content: '\e900';
 }
-.icon-caret-left:before {
+.icon-medium-risk:before {
     content: '\e904';
 }
-.icon-change-password:before {
+.icon-trash:before {
     content: '\e905';
 }
-.icon-check:before {
+.icon-add-customer:before {
     content: '\e906';
 }
-.icon-cloud:before {
+.icon-blacklist:before {
     content: '\e907';
 }
-.icon-configurations:before {
+.icon-calendar:before {
     content: '\e908';
 }
-.icon-customer-profil:before {
+.icon-caret-down:before {
     content: '\e909';
 }
-.icon-documentation:before {
+.icon-caret-left:before {
     content: '\e90a';
 }
-.icon-eforms:before {
+.icon-change-password:before {
     content: '\e90b';
 }
-.icon-enforcement:before {
+.icon-check:before {
     content: '\e90c';
 }
-.icon-export:before {
+.icon-cloud:before {
     content: '\e90d';
 }
-.icon-eye-view:before {
+.icon-configurations:before {
     content: '\e90e';
 }
-.icon-graph:before {
+.icon-customer-profil:before {
     content: '\e90f';
 }
-.icon-id-card:before {
+.icon-documentation:before {
     content: '\e910';
 }
-.icon-insights:before {
+.icon-eforms:before {
     content: '\e911';
 }
-.icon-loading:before {
+.icon-enforcement:before {
     content: '\e912';
 }
-.icon-loading-spinner .path1:before {
+.icon-export:before {
     content: '\e913';
+}
+.icon-eye-view:before {
+    content: '\e914';
+}
+.icon-graph:before {
+    content: '\e915';
+}
+.icon-id-card:before {
+    content: '\e916';
+}
+.icon-loading:before {
+    content: '\e917';
+}
+.icon-loading-spinner .path1:before {
+    content: '\e918';
     color: rgb(143, 150, 161);
 }
 .icon-loading-spinner .path2:before {
-    content: '\e914';
+    content: '\e919';
     margin-left: -1em;
     color: rgb(143, 150, 161);
     opacity: 0.7;
 }
 .icon-loading-spinner .path3:before {
-    content: '\e915';
+    content: '\e91a';
     margin-left: -1em;
     color: rgb(143, 150, 161);
     opacity: 0.1;
 }
 .icon-loading-spinner .path4:before {
-    content: '\e916';
+    content: '\e91b';
     margin-left: -1em;
     color: rgb(143, 150, 161);
     opacity: 0.4;
 }
 .icon-loading-spinner .path5:before {
-    content: '\e917';
+    content: '\e91c';
     margin-left: -1em;
     color: rgb(143, 150, 161);
     opacity: 0.25;
 }
 .icon-loading-spinner .path6:before {
-    content: '\e918';
+    content: '\e91d';
     margin-left: -1em;
     color: rgb(143, 150, 161);
     opacity: 0.85;
 }
 .icon-loading-spinner .path7:before {
-    content: '\e919';
+    content: '\e91e';
     margin-left: -1em;
     color: rgb(143, 150, 161);
     opacity: 0.01;
 }
 .icon-loading-spinner .path8:before {
-    content: '\e91a';
+    content: '\e91f';
     margin-left: -1em;
     color: rgb(143, 150, 161);
     opacity: 0.55;
 }
 .icon-pep:before {
-    content: '\e91b';
-}
-.icon-person:before {
-    content: '\e91c';
-}
-.icon-plus:before {
-    content: '\e91d';
-}
-.icon-review:before {
-    content: '\e91e';
-}
-.icon-sanction:before {
-    content: '\e91f';
-}
-.icon-search:before {
     content: '\e920';
 }
-.icon-setting:before {
+.icon-person:before {
     content: '\e921';
 }
-.icon-sign-out:before {
+.icon-plus:before {
     content: '\e922';
 }
-.icon-system-log:before {
+.icon-review:before {
     content: '\e923';
 }
-.icon-system-users:before {
+.icon-sanction:before {
     content: '\e924';
 }
-.icon-world:before {
+.icon-search:before {
     content: '\e925';
 }
-.icon-wrong:before {
+.icon-setting:before {
     content: '\e926';
+}
+.icon-sign-out:before {
+    content: '\e927';
+}
+.icon-system-log:before {
+    content: '\e928';
+}
+.icon-system-users:before {
+    content: '\e929';
+}
+.icon-world:before {
+    content: '\e92a';
+}
+.icon-wrong:before {
+    content: '\e92b';
 }
