@@ -3,7 +3,7 @@
         <div class="filter-section">
             <div class="row">
                 <div class="col-md-3">
-                    <h2>Branches</h2>
+                    <h2>Application Access</h2>
                 </div>
                 <div class="col-md-9 text-right">
                     <ul>
@@ -17,7 +17,7 @@
                         </li>
                         <li>
                             <b-button type="button" variant="secondary"
-                                >+ Add Branches</b-button
+                                >+ Add Application</b-button
                             >
                         </li>
                     </ul>
@@ -103,9 +103,9 @@ export default {
     methods: {
         initializeData() {
             //system log table
-            let systemUserTableFields = this.systemUserTable.branches.fields //get user data from store
+            let systemUserTableFields = this.systemUserTable.applications.fields //get user data from store
             this.fields = systemUserTableFields //push data into array
-            let systemUserTableitems = this.systemUserTable.branches.items //get user data from store
+            let systemUserTableitems = this.systemUserTable.applications.items //get user data from store
             this.items = systemUserTableitems //push data into array
         },
     }, // End of Component > methods

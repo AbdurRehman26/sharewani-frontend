@@ -1487,5 +1487,52 @@ export default {
                 },
             ],
         },
+        applications: {
+            fields: [
+                {
+                    key: 'application_title',
+                    label: 'Application Title',
+                },
+                {
+                    key: 'branches',
+                    label: 'BRANCHES',
+                },
+                {
+                    key: 'status',
+                    label: 'Status',
+                },
+                {
+                    key: 'action',
+                    label: 'Action',
+                    tdClass: 'user-roles-action',
+                },
+            ],
+            items: [
+                {
+                    application_title: 'Core Banking System',
+                    branches: 'PK, UAE',
+                    status: 'Active',
+                    action: '',
+                },
+                {
+                    application_title: 'Financial Reporting System',
+                    branches: 'PK',
+                    status: 'Active',
+                    action: '',
+                },
+                {
+                    application_title: 'Banking CRM',
+                    branches: 'PK, UAE, UK',
+                    status: 'Active',
+                    action: '',
+                },
+                {
+                    application_title: 'Testing App',
+                    branches: 'USA',
+                    status: 'Archived',
+                    action: '',
+                },
+            ],
+        },
     },
 }

@@ -98,7 +98,7 @@ export default new Router({
                     path: '/',
                     name: 'system-users',
                     component: () =>
-                        import(/* webpackChunkName: "system-users" */ '@/views/systemusers/SystemUsers.vue'),
+                        import(/* webpackChunkName: "system-users" */ '@/views/systemusers/Users.vue'),
                 },
                 {
                     path: 'roles',
@@ -111,6 +111,12 @@ export default new Router({
                     name: 'branches-page',
                     component: () =>
                         import(/* webpackChunkName: "branches" */ '@/views/systemusers/Branches.vue'),
+                },
+                {
+                    path: 'application-access',
+                    name: 'application-access-page',
+                    component: () =>
+                        import(/* webpackChunkName: "branches" */ '@/views/systemusers/Access.vue'),
                 },
             ],
         },
