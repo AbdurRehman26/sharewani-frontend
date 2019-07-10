@@ -15,5 +15,7 @@ export default {
         //system logs
         state.logsTotalActions = payload
         state.systemLogsTable = payload
+        //system user
+        state.systemUserTable = payload
     },
 }

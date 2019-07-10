@@ -2,9 +2,6 @@
     <div class="wrap-content">
         <div class="filter-section">
             <div class="row">
-                <!-- <div class="col-md-3">
-                    <h2>System Users</h2>
-                </div> -->
                 <div class="col-md-12 system-user-filter">
                     <ul>
                         <li>
@@ -60,20 +57,68 @@
                 </div>
             </div>
         </div>
-        <customers-table
-            :listItems="items"
-            :listFields="fields"
-        ></customers-table>
+
+        <!-- user management table -->
+        <div class="table-section">
+            <b-table :items="items" :fields="fields">
+                <template slot="profile" slot-scope="data">
+                    <div class="profile-area">
+                        <router-link to="/customer-information">
+                            <div
+                                class="profile-pic"
+                                :style="{
+                                    'background-image':
+                                        'url(' +
+                                        require('@/assets/images/members/' +
+                                            data.value +
+                                            '') +
+                                        ')',
+                                }"
+                            ></div>
+                        </router-link>
+                    </div>
+                </template>
+
+                <template slot="customer" slot-scope="data">
+                    <div class="customer-link">
+                        <router-link to="/customer-information">
+                            <span>{{ data.value }}</span>
+                        </router-link>
+                    </div>
+                </template>
+
+                <template slot="full_name" slot-scope="data">
+                    <div class="customer-link">
+                        <router-link to="/customer-information">
+                            <span>{{ data.value }}</span>
+                        </router-link>
+                    </div>
+                </template>
+
+                <!-- status slot -->
+                <template slot="status" slot-scope="data">
+                    <base-status :statusType="data.value"></base-status>
+                </template>
+
+                <template slot="action" slot-scope="data">
+                    <div class="action-review">
+                        <router-link to="/customer-information">
+                            <i class="icon-eye-view"></i>
+                            <span>{{ data.value }}</span>
+                        </router-link>
+                    </div>
+                </template>
+            </b-table>
+        </div>
         <pagination></pagination>
     </div>
 </template>
 
 <script>
-import customersTable from '@/components/tables/CustomersTable.vue'
+import { mapGetters } from 'vuex'
 import pagination from '@/components/Pagination.vue'
 export default {
     components: {
-        customersTable,
         pagination,
     },
 
@@ -101,7 +146,8 @@ export default {
     data() {
         return {
             selected: '1',
-
+            fields: [],
+            items: [],
             options: [
                 { text: 'All', value: '1' },
                 { text: 'Pending', value: '2' },
@@ -135,142 +181,6 @@ export default {
                 'Risk Rating',
                 'Status',
             ],
-            fields: [
-                {
-                    key: 'profile',
-                    label: '',
-                },
-                {
-                    key: 'customer',
-                    label: 'CUSTOMER',
-                },
-                {
-                    key: 'full_name',
-                    label: 'FULL NAME',
-                },
-                {
-                    key: 'nationality',
-                    label: 'NATIONALITY',
-                },
-                {
-                    key: 'residence',
-                    label: 'RESIDENCE',
-                },
-                {
-                    key: 'registration_date',
-                    label: 'Registration Date',
-                },
-                {
-                    key: 'status',
-                    label: 'Status',
-                },
-                {
-                    key: 'action',
-                    label: 'ACTION',
-                },
-            ],
-            items: [
-                {
-                    profile: 'member-1.png',
-                    customer: '296192',
-                    full_name: 'Chineze Afamefuna',
-                    nationality: 'Indian',
-                    residence: 'United Kingdom',
-                    registration_date: 'Jun 10, 2019 6:35 p.m.',
-                    status: 'pending',
-                    action: 'View Profile',
-                },
-                {
-                    profile: 'member-2.png',
-                    customer: '221021',
-                    full_name: 'Alex Edwards',
-                    nationality: 'Pakistani',
-                    residence: 'Pakistan',
-                    registration_date: 'Jun 10, 2019 10:30 p.m.',
-                    status: 'approved',
-                    action: 'View Profile',
-                },
-                {
-                    profile: 'member-3.png',
-                    customer: '236912',
-                    full_name: 'Regina Pollastro',
-                    nationality: 'British',
-                    residence: 'United Kingdom',
-                    registration_date: 'Jun 9, 2019 10:45 a.m.',
-                    status: 'rejected',
-                    action: 'View Profile',
-                },
-                {
-                    profile: 'member-4.png',
-                    customer: '266171',
-                    full_name: 'Boris Ukhtomsky',
-                    nationality: 'American',
-                    residence: 'United Kingdom',
-                    registration_date: 'Jun 9, 2019 9:30 p.m.',
-                    status: 'approved',
-                    action: 'View Profile',
-                },
-                {
-                    profile: 'member-5.png',
-                    customer: '284619',
-                    full_name: 'Kimmy McIlmorie',
-                    nationality: 'Algerian',
-                    residence: 'United Kingdom',
-                    registration_date: 'Jun 9, 2019 9:10 p.m.',
-                    status: 'approved',
-                    action: 'View Profile',
-                },
-                {
-                    profile: 'member-6.png',
-                    customer: '299488',
-                    full_name: 'Noell Blue',
-                    nationality: 'Belgian',
-                    residence: 'United Kingdom',
-                    registration_date: 'Jun 8, 2019 6:45 p.m.',
-                    status: 'approved',
-                    action: 'View Profile',
-                },
-                {
-                    profile: 'member-7.png',
-                    customer: '297438',
-                    full_name: 'Qin Shi',
-                    nationality: 'Colombian',
-                    residence: 'United Kingdom',
-                    registration_date: 'Jun 8, 2019 4:24 p.m.',
-                    status: 'rejected',
-                    action: 'View Profile',
-                },
-                {
-                    profile: 'member-8.png',
-                    customer: '275731',
-                    full_name: 'Julian Gruber',
-                    nationality: 'British',
-                    residence: 'Pakistan',
-                    registration_date: 'Jun 8, 2019 3:10 p.m.',
-                    status: 'pending',
-                    action: 'View Profile',
-                },
-                {
-                    profile: 'member-9.png',
-                    customer: '217831',
-                    full_name: 'Mathijn Agter',
-                    nationality: 'Indian',
-                    residence: 'Indian',
-                    registration_date: 'Jun 8, 2019 11:32 p.m.',
-                    status: 'approved',
-                    action: 'View Profile',
-                },
-                {
-                    profile: 'member-10.png',
-                    customer: '293397',
-                    full_name: 'Shadrias Pearson',
-                    nationality: 'Pakistani',
-                    residence: 'Pakistan',
-                    registration_date: 'Jun 7, 2019 5:45 p.m.',
-                    status: 'approved',
-                    action: 'View Profile',
-                },
-            ],
         }
     }, // End of Component > data
 
@@ -279,20 +189,32 @@ export default {
     | Component > computed
     |--------------------------------------------------------------------------
     */
-    computed: {}, // End of Component > computed
+    computed: {
+        ...mapGetters(['systemUserTable']),
+    }, // End of Component > computed
 
     /*
     |--------------------------------------------------------------------------
     | Component > methods
     |--------------------------------------------------------------------------
     */
-    methods: {}, // End of Component > methods
+    methods: {
+        initializeData() {
+            //system log table
+            let systemUserTableFields = this.systemUserTable.users.fields //get user data from store
+            this.fields = systemUserTableFields //push data into array
+            let systemUserTableitems = this.systemUserTable.users.items //get user data from store
+            this.items = systemUserTableitems //push data into array
+        },
+    }, // End of Component > methods
 
     /*
     |--------------------------------------------------------------------------
     | Component > mounted
     |--------------------------------------------------------------------------
     */
-    mounted() {}, // End of Component > mounted
+    mounted() {
+        this.initializeData()
+    }, // End of Component > mounted
 } // End of export default
 </script>

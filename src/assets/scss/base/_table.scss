@@ -55,7 +55,7 @@
             position: relative;
 
             a {
-                color: $body-color;
+                color: $grey-lite;
                 text-decoration: none;
                 &:hover {
                     color: $secondary;
@@ -80,6 +80,17 @@
                 &:hover,
                 &:focus {
                     color: $secondary;
+                }
+            }
+        }
+        .action-column {
+            margin-left: -10px;
+            margin-right: -10px;
+            a {
+                padding: 0 10px;
+
+                .icon-check {
+                    font-size: 11px;
                 }
             }
         }
