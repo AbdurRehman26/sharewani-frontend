@@ -128,6 +128,15 @@ export default new Router({
                     component: () =>
                         import(/* webpackChunkName: "customer-information" */ './views/profile/CustomerInformation.vue'),
                 },
+                {
+                    path: '/screening-customer',
+                    name: 'screening-customer',
+                    // route level code-splitting
+                    // this generates a separate chunk (about.[hash].js) for this route
+                    // which is lazy-loaded when the route is visited.
+                    component: () =>
+                        import(/* webpackChunkName: "screening-customer" */ './views/profile/ScreeningCustomer.vue'),
+                },
             ],
         },
     ],
