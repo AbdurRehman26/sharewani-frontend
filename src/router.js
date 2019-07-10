@@ -119,14 +119,26 @@ export default new Router({
                     component: () =>
                         import(/* webpackChunkName: "advance-search" */ './views/profile/AdvanceSearch.vue'),
                 },
+            ],
+        },
+
+        {
+            path: '/customer-information',
+            name: 'customer-details',
+            // route level code-splitting
+            // this generates a separate chunk (about.[hash].js) for this route
+            // which is lazy-loaded when the route is visited.
+            component: () =>
+                import(/* webpackChunkName: "customer-details" */ './views/profile/profile-details/Main.vue'),
+            children: [
                 {
-                    path: '/customer-information',
+                    path: '/',
                     name: 'customer-information',
                     // route level code-splitting
                     // this generates a separate chunk (about.[hash].js) for this route
                     // which is lazy-loaded when the route is visited.
                     component: () =>
-                        import(/* webpackChunkName: "customer-information" */ './views/profile/CustomerInformation.vue'),
+                        import(/* webpackChunkName: "customer-information" */ './views/profile/profile-details/CustomerInformation.vue'),
                 },
                 {
                     path: '/screening-customer',
@@ -135,7 +147,17 @@ export default new Router({
                     // this generates a separate chunk (about.[hash].js) for this route
                     // which is lazy-loaded when the route is visited.
                     component: () =>
-                        import(/* webpackChunkName: "screening-customer" */ './views/profile/ScreeningCustomer.vue'),
+                        import(/* webpackChunkName: "screening-customer" */ './views/profile/profile-details/ScreeningCustomer.vue'),
+                },
+
+                {
+                    path: '/document-verification',
+                    name: 'document-verification',
+                    // route level code-splitting
+                    // this generates a separate chunk (about.[hash].js) for this route
+                    // which is lazy-loaded when the route is visited.
+                    component: () =>
+                        import(/* webpackChunkName: "document-verification" */ './views/profile/profile-details/DocumentVerification.vue'),
                 },
             ],
         },

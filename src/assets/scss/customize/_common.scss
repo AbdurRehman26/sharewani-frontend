@@ -221,14 +221,14 @@ textarea {
     height: calc(100% - 115px);
     overflow-y: auto;
     &::-webkit-scrollbar-track {
-        background-color: $body-bg;
+        background-color: #fff;
         border-radius: 51px;
     }
 
     &::-webkit-scrollbar {
         width: 6px;
         height: 6px;
-        background-color: $body-bg;
+        background-color: #fff;
         border-radius: 51px;
     }
 
@@ -242,11 +242,11 @@ textarea {
 
 #style-2::-webkit-scrollbar-track {
     border-radius: 15px;
-    background-color: #f1f3f5;
+    background-color: #fff;
 }
 
 #style-2::-webkit-scrollbar {
-    width: 5px;
+    width: 12px;
     background-color: #ced3d8;
 }
 

@@ -22,10 +22,10 @@
                                 :key="index"
                             >
                                 <ul class="row">
-                                    <li class="col-md-5">
+                                    <li class="col-md-6">
                                         <label>{{ descriptions.title }}</label>
                                     </li>
-                                    <li class="col-md-7">
+                                    <li class="col-md-6">
                                         {{ descriptions.detail }}
                                     </li>
                                 </ul>
