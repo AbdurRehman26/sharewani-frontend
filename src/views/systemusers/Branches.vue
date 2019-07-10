@@ -3,7 +3,7 @@
         <div class="filter-section">
             <div class="row">
                 <div class="col-md-3">
-                    <h2>Roles & Permissions</h2>
+                    <h2>Branches</h2>
                 </div>
                 <div class="col-md-9 text-right">
                     <ul>
@@ -29,10 +29,10 @@
         <div class="table-section">
             <b-table :items="items" :fields="fields" class="user-roles-table">
                 <!-- status slot -->
-                <!-- status slot -->
                 <template slot="status" slot-scope="data">
                     <base-status :statusType="data.value"></base-status>
                 </template>
+
                 <!-- action slot -->
                 <template slot="action">
                     <div class="action-column">
@@ -53,6 +53,7 @@
 
 <script>
 import { mapGetters } from 'vuex'
+
 export default {
     components: {},
 
@@ -102,9 +103,9 @@ export default {
     methods: {
         initializeData() {
             //system log table
-            let systemUserTableFields = this.systemUserTable.roles.fields //get user data from store
+            let systemUserTableFields = this.systemUserTable.branches.fields //get user data from store
             this.fields = systemUserTableFields //push data into array
-            let systemUserTableitems = this.systemUserTable.roles.items //get user data from store
+            let systemUserTableitems = this.systemUserTable.branches.items //get user data from store
             this.items = systemUserTableitems //push data into array
         },
     }, // End of Component > methods

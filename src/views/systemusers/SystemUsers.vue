@@ -95,27 +95,11 @@
                     </div>
                 </template>
 
+                <!-- status slot -->
                 <template slot="status" slot-scope="data">
-                    <div
-                        class="pending status-view"
-                        v-if="data.value == 'pending'"
-                    >
-                        <i class="icon-loading"></i>
-                        <span>Pending</span>
-                    </div>
-                    <div
-                        class="approved status-view"
-                        v-if="data.value == 'approved'"
-                    >
-                        <i class="icon-check"></i> <span>Approved</span>
-                    </div>
-                    <div
-                        class="rejected status-view"
-                        v-if="data.value == 'rejected'"
-                    >
-                        <i class="icon-wrong"></i> <span>Rejected</span>
-                    </div>
+                    <base-status :statusType="data.value"></base-status>
                 </template>
+
                 <template slot="action" slot-scope="data">
                     <div class="action-review">
                         <router-link to="/customer-information">

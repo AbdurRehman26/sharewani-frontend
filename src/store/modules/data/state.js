@@ -1387,15 +1387,17 @@ export default {
                 {
                     key: 'associate_users',
                     label: 'Associate Users',
+                    class: 'text-center',
                 },
                 {
                     key: 'status',
                     label: 'Status',
+                    class: 'text-center',
                 },
                 {
                     key: 'action',
                     label: 'Action',
-                    class: 'text-center',
+                    tdClass: 'user-roles-action',
                 },
             ],
             items: [
@@ -1406,15 +1408,81 @@ export default {
                     action: '',
                 },
                 {
-                    role_title: 'Super Admin',
-                    associate_users: '2',
-                    status: 'archived',
+                    role_title: 'Maker',
+                    associate_users: '5',
+                    status: 'locked',
                     action: '',
                 },
                 {
-                    role_title: 'Super Admin',
+                    role_title: 'Checker',
+                    associate_users: '3',
+                    status: 'locked',
+                    action: '',
+                },
+                {
+                    role_title: 'Approver',
                     associate_users: '2',
+                    status: 'locked',
+                    action: '',
+                },
+                {
+                    role_title: 'Relationship Manager',
+                    associate_users: '3',
                     status: 'active',
+                    action: '',
+                },
+                {
+                    role_title: 'System Analyst',
+                    associate_users: '0',
+                    status: 'archived',
+                    action: '',
+                },
+            ],
+        },
+        branches: {
+            fields: [
+                {
+                    key: 'branch_title',
+                    label: 'Branch Title',
+                },
+                {
+                    key: 'short_code',
+                    label: 'Short Code',
+                    class: 'text-center',
+                },
+                {
+                    key: 'status',
+                    label: 'Status',
+                },
+                {
+                    key: 'action',
+                    label: 'Action',
+                    tdClass: 'user-roles-action',
+                },
+            ],
+            items: [
+                {
+                    branch_title: 'United Arab Emirates',
+                    short_code: 'UAE',
+                    status: 'Active',
+                    action: '',
+                },
+                {
+                    branch_title: 'Pakistan',
+                    short_code: 'PK',
+                    status: 'Active',
+                    action: '',
+                },
+                {
+                    branch_title: 'United Kingdom',
+                    short_code: 'UK',
+                    status: 'Active',
+                    action: '',
+                },
+                {
+                    branch_title: 'United States of America',
+                    short_code: 'USA',
+                    status: 'Archived',
                     action: '',
                 },
             ],

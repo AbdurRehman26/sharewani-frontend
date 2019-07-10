@@ -70,18 +70,18 @@ export default new Router({
             children: [
                 {
                     path: '/',
-                    name: 'alerts',
+                    name: 'dashbaord-alerts',
                     component: () =>
                         import(/* webpackChunkName: "dashboard-alerts" */ '@/views/dashboard/Alert.vue'),
                 },
                 {
-                    path: 'activity',
+                    path: 'dashbaord-activity',
                     name: 'dashboard-activity-page',
                     component: () =>
                         import(/* webpackChunkName: "dashboard-activity" */ '@/views/dashboard/Activity.vue'),
                 },
                 {
-                    path: 'reporting',
+                    path: 'dashbaord-reporting',
                     name: 'dashboard-reporting-page',
                     component: () =>
                         import(/* webpackChunkName: "dashboard-reporting" */ '@/views/dashboard/Reporting.vue'),
@@ -105,6 +105,12 @@ export default new Router({
                     name: 'roles-and-permission',
                     component: () =>
                         import(/* webpackChunkName: "roles" */ '@/views/systemusers/Roles.vue'),
+                },
+                {
+                    path: 'branches',
+                    name: 'branches-page',
+                    component: () =>
+                        import(/* webpackChunkName: "branches" */ '@/views/systemusers/Branches.vue'),
                 },
             ],
         },
