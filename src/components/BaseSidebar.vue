@@ -47,10 +47,16 @@ export default {
          * Value to determine the current compose mode which
          * varies between 'add' and 'edit'
          */
-        /*        countryListing: {
+
+        countryListing: {
             type: Array,
             default: null,
-        },*/
+        },
+
+        sidelinksListing: {
+            type: Array,
+            default: null,
+        },
     }, // End of Component > props
 
     /*
@@ -59,68 +65,7 @@ export default {
     |--------------------------------------------------------------------------
     */
     data() {
-        return {
-            sidelinksListing: [
-                {
-                    anchorLink: '/dashboard',
-                    icon: 'icon-insights',
-                    menuLabel: 'Insights',
-                },
-                {
-                    anchorLink: '/',
-                    icon: 'icon-customer-profil',
-                    menuLabel: 'Customer Profiles',
-                },
-                {
-                    anchorLink: '/',
-                    icon: 'icon-add-customer',
-                    menuLabel: 'Register Customer',
-                },
-                {
-                    anchorLink: '/',
-                    icon: 'icon-world',
-                    menuLabel: 'Search People',
-                },
-                {
-                    anchorLink: '/',
-                    icon: 'icon-configurations',
-                    menuLabel: 'Configurations',
-                },
-                {
-                    anchorLink: '/system-users',
-                    icon: 'icon-system-users',
-                    menuLabel: 'System Users',
-                },
-                {
-                    anchorLink: '/',
-                    icon: 'icon-system-log',
-                    menuLabel: 'System Logs',
-                },
-                {
-                    anchorLink: '/',
-                    icon: 'icon-export',
-                    menuLabel: 'Data Export',
-                },
-            ],
-            countryListing: [
-                {
-                    anchorLink: '/',
-                    menuLabel: 'UAE',
-                },
-                {
-                    anchorLink: '/dashboard',
-                    menuLabel: 'PK',
-                },
-                {
-                    anchorLink: '/',
-                    menuLabel: 'UK',
-                },
-                {
-                    anchorLink: '/',
-                    menuLabel: 'USA',
-                },
-            ],
-        }
+        return {}
     }, // End of Component > data
 
     /*

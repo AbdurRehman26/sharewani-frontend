@@ -1,6 +1,11 @@
 <template>
     <div id="app">
         <div class="main-content">
+            <base-sidebar
+                v-if="!$route.meta.noSidebar"
+                :countryListing="countryListing"
+                :sidelinksListing="sidelinksListing"
+            ></base-sidebar>
             <router-view />
         </div>
     </div>
@@ -34,7 +39,68 @@ export default {
         |--------------------------------------------------------------------------
         */
     data() {
-        return {}
+        return {
+            countryListing: [
+                {
+                    anchorLink: '/',
+                    menuLabel: 'UAE',
+                },
+                {
+                    anchorLink: '/dashboard',
+                    menuLabel: 'PK',
+                },
+                {
+                    anchorLink: '/',
+                    menuLabel: 'UK',
+                },
+                {
+                    anchorLink: '/',
+                    menuLabel: 'USA',
+                },
+            ],
+            sidelinksListing: [
+                {
+                    anchorLink: '/dashboard',
+                    icon: 'icon-insights',
+                    menuLabel: 'Insights',
+                },
+                {
+                    anchorLink: '/customer-profile',
+                    icon: 'icon-customer-profil',
+                    menuLabel: 'Customer Profiles',
+                },
+                {
+                    anchorLink: '/',
+                    icon: 'icon-add-customer',
+                    menuLabel: 'Register Customer',
+                },
+                {
+                    anchorLink: '/',
+                    icon: 'icon-world',
+                    menuLabel: 'Search People',
+                },
+                {
+                    anchorLink: '/configuration',
+                    icon: 'icon-configurations',
+                    menuLabel: 'Configurations',
+                },
+                {
+                    anchorLink: '/system-users',
+                    icon: 'icon-system-users',
+                    menuLabel: 'System Users',
+                },
+                {
+                    anchorLink: '/system-logs',
+                    icon: 'icon-system-log',
+                    menuLabel: 'System Logs',
+                },
+                {
+                    anchorLink: '/',
+                    icon: 'icon-export',
+                    menuLabel: 'Data Export',
+                },
+            ],
+        }
     }, // End of Component > data
 
     /*

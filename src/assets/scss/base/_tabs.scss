@@ -1,4 +1,6 @@
 .btn-group-toggle {
+    box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.02),
+        0px 1px 3px rgba(50, 50, 93, 0.1);
     .btn-outline-primary {
         height: $input-height;
         min-width: auto;
