@@ -55,9 +55,11 @@
             position: relative;
 
             a {
-                color: $nav-color;
+                color: $body-color;
                 text-decoration: none;
-
+                &:hover {
+                    color: $secondary;
+                }
                 i {
                     padding-right: 8px;
                     vertical-align: middle;

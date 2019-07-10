@@ -352,29 +352,30 @@ $sides: (top, bottom, left, right); // Leave this variable alone
 .status-view {
     color: #fff;
     border-radius: 16px;
-    height: 35px;
+    height: auto;
     text-align: center;
-    font-size: 14px;
-    min-width: 110px;
-    padding-top: 7px;
-    position: absolute;
-    top: 11px;
+    font-size: $font-size-base;
+    padding: 9px 10px;
 
     i {
         font-size: 14px;
-        vertical-align: text-bottom;
+        vertical-align: bottom;
+        position: relative;
     }
 
     span {
         position: relative;
-        top: 3px;
+        top: 0px;
         margin-left: 8px;
         display: inline-block;
-        vertical-align: baseline;
+        vertical-align: bottom;
     }
 
     &.pending {
         background-color: #f4c200;
+        i {
+            top: 2px;
+        }
     }
 
     &.approved {
@@ -386,7 +387,7 @@ $sides: (top, bottom, left, right); // Leave this variable alone
     &.rejected {
         background-color: #c91f37;
         i {
-            font-size: 10px;
+            font-size: 11px;
         }
     }
 }
