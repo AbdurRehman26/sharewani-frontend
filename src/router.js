@@ -58,6 +58,9 @@ export default new Router({
             name: 'contact-us-page',
             component: () =>
                 import(/* webpackChunkName: "contact-us" */ '@/views/ContactUs.vue'),
+            meta: {
+                noSidebar: true,
+            },
         },
         {
             path: '/dashboard',
