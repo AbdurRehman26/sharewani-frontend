@@ -38,16 +38,12 @@ export default {
         return {
             menuListing: [
                 {
-                    anchorLink: '/dashboard',
-                    menuLabel: 'Alerts',
+                    anchorLink: '/configuration',
+                    menuLabel: 'Idenfo Engine',
                 },
                 {
-                    anchorLink: '/dashboard/activity',
-                    menuLabel: 'Activity Dashboard',
-                },
-                {
-                    anchorLink: '/dashboard/reporting',
-                    menuLabel: 'Customer Statistics',
+                    anchorLink: '/',
+                    menuLabel: 'Registration Form Builder',
                 },
             ],
         }

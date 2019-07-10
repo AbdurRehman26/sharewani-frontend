@@ -19,24 +19,36 @@ export default new Router({
                     name: 'login-page',
                     component: () =>
                         import(/* webpackChunkName: "forgot-password" */ '@/views/auth/Login.vue'),
+                    meta: {
+                        noSidebar: true,
+                    },
                 },
                 {
                     path: '/forgot-password',
                     name: 'forgot-page',
                     component: () =>
                         import(/* webpackChunkName: "forgot-password" */ '@/views/auth/ForgotPassword.vue'),
+                    meta: {
+                        noSidebar: true,
+                    },
                 },
                 {
                     path: '/reset-password',
                     name: 'reset-password-page',
                     component: () =>
                         import(/* webpackChunkName: "reset-password" */ '@/views/auth/ResetPassword.vue'),
+                    meta: {
+                        noSidebar: true,
+                    },
                 },
                 {
                     path: '/email-sent',
                     name: 'email-sent-page',
                     component: () =>
                         import(/* webpackChunkName: "email-sent" */ '@/views/auth/EmailSent.vue'),
+                    meta: {
+                        noSidebar: true,
+                    },
                 },
             ],
         },
@@ -138,6 +150,12 @@ export default new Router({
                         import(/* webpackChunkName: "screening-customer" */ './views/profile/ScreeningCustomer.vue'),
                 },
             ],
+        },
+        {
+            path: '/configuration',
+            name: 'configuration',
+            component: () =>
+                import(/* webpackChunkName: "system-logs" */ '@/views/configuration/Main.vue'),
         },
     ],
 })
