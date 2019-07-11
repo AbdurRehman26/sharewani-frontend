@@ -1,11 +1,16 @@
+.table-section {
+    border: 0.5px #d7d7e2 solid;
+    overflow: hidden;
+    border-radius: 8px 8px 0 0;
+}
 .table {
     border-radius: 8px 8px 0 0;
-    border: 1px #d7d7e2 solid;
+    border: 0px #d7d7e2 solid;
     overflow: hidden;
     margin-bottom: 0;
 
     thead {
-        border: 1px #d7d7e2 solid;
+        border: 0px #d7d7e2 solid;
         background: $grey-dark;
         color: #7f8fa4;
         th {
@@ -18,19 +23,19 @@
             overflow: hidden;
             font-family: $font_medium;
             text-transform: uppercase;
+            border-top: none !important;
         }
     }
 
     tbody {
         background-color: $white;
-        border: 1px #d7d7e2 solid;
+        border: 0px #d7d7e2 solid;
         td {
             color: $grey-darkest;
             padding: $table-row-padding;
             vertical-align: middle;
             position: relative;
-
-            a {
+            border a {
                 color: $grey-lite;
                 text-decoration: none;
                 &:hover {
@@ -50,15 +55,19 @@
         }
         .action-review {
             a {
-                margin-right: 12px;
+                margin-right: 16px;
                 display: inline-block;
-                color: $dark;
+                color: $grey-lite;
+                text-decoration: none;
                 &:last-child {
                     margin-right: 0px;
                 }
                 &:hover,
                 &:focus {
                     color: $secondary;
+                }
+                i {
+                    margin-right: 8px;
                 }
             }
         }

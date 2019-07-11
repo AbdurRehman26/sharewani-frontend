@@ -34,17 +34,8 @@
                 </template>
 
                 <!-- action slot -->
-                <template slot="action">
-                    <div class="action-column">
-                        <router-link to="/customer-information">
-                            <i class="icon-eye-view"></i>
-                            <span>Modify</span>
-                        </router-link>
-                        <router-link to="/customer-information">
-                            <i class="icon-check"></i>
-                            <span>Activate</span>
-                        </router-link>
-                    </div>
+                <template slot="action" slot-scope="data">
+                    <base-action :actionType="data.value"></base-action>
                 </template>
             </b-table>
         </div>

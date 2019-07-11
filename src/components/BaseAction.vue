@@ -1,11 +1,15 @@
 <template>
-    <div class="dashboard">
-        <div class="content-area">
-            <base-header :menuListing="menuListing"></base-header>
-            <div class="right-panel">
-                <router-view></router-view>
+    <div class="action-review">
+        <a href="/" v-for="(list, index) in actionType" :key="index">
+            <div v-if="list.text === 'Modify' || list.text === 'modify'">
+                <i class="icon-edit"></i>
+                <span>{{ list.text }}</span>
             </div>
-        </div>
+            <div v-if="list.text === 'Archive' || list.text === 'archive'">
+                <i class="icon-trash"></i>
+                <span>{{ list.text }}</span>
+            </div>
+        </a>
     </div>
 </template>
 
@@ -27,6 +31,10 @@ export default {
             type: String,
             default: 'add',
         },
+        actionType: {
+            type: String,
+            default: null,
+        },
     }, // End of Component > props
 
     /*
@@ -35,26 +43,7 @@ export default {
     |--------------------------------------------------------------------------
     */
     data() {
-        return {
-            menuListing: [
-                {
-                    anchorLink: '/system-users',
-                    menuLabel: 'System Users',
-                },
-                {
-                    anchorLink: '/system-users/roles',
-                    menuLabel: 'Roles & Permissions',
-                },
-                {
-                    anchorLink: '/system-users/branches',
-                    menuLabel: 'Branches',
-                },
-                {
-                    anchorLink: '/system-users/application-access',
-                    menuLabel: 'Application Access',
-                },
-            ],
-        }
+        return {}
     }, // End of Component > data
 
     /*
