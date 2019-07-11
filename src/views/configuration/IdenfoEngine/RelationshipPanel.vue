@@ -62,6 +62,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 import pagination from '@/components/Pagination.vue'
 export default {
     components: {
@@ -91,67 +92,8 @@ export default {
     */
     data() {
         return {
-            fields: [
-                {
-                    key: 'rule',
-                    label: 'RULE',
-                },
-                {
-                    key: 'relationshipLength',
-                    label: 'RELATIONSHIP LENGTH TITLE',
-                },
-                {
-                    key: 'rating',
-                    label: 'RATING',
-                    class: 'text-center',
-                },
-                {
-                    key: 'action',
-                    label: 'ACTION',
-                    class: 'two-list',
-                },
-            ],
-            items: [
-                {
-                    rule: '0 Months to 24 Months',
-                    relationshipLength: 'Less than 24 months',
-                    rating: 'High Risk',
-                    action: [
-                        {
-                            text: 'Modify',
-                        },
-                        {
-                            text: 'Archive',
-                        },
-                    ],
-                },
-                {
-                    rule: '24 Months to 48 Months',
-                    relationshipLength: 'Between 24 months to 48 months',
-                    rating: 'Medium Risk',
-                    action: [
-                        {
-                            text: 'Modify',
-                        },
-                        {
-                            text: 'Archive',
-                        },
-                    ],
-                },
-                {
-                    rule: '48 Months to 1000 Months',
-                    relationshipLength: 'More than 48 months',
-                    rating: 'Low Risk',
-                    action: [
-                        {
-                            text: 'Modify',
-                        },
-                        {
-                            text: 'Archive',
-                        },
-                    ],
-                },
-            ],
+            fields: [],
+            items: [],
         }
     }, // End of Component > data
 
@@ -160,20 +102,34 @@ export default {
     | Component > computed
     |--------------------------------------------------------------------------
     */
-    computed: {}, // End of Component > computed
+    computed: {
+        ...mapGetters(['configuration']),
+    }, // End of Component > computed
 
     /*
     |--------------------------------------------------------------------------
     | Component > methods
     |--------------------------------------------------------------------------
     */
-    methods: {}, // End of Component > methods
+    methods: {
+        initializeData() {
+            //system log table
+            let configTableFields = this.configuration.idenfoEngine
+                .relationshipData.fields //get user data from store
+            this.fields = configTableFields //push data into array
+            let configTableItems = this.configuration.idenfoEngine
+                .relationshipData.items //get user data from store
+            this.items = configTableItems //push data into array
+        },
+    }, // End of Component > methods
 
     /*
     |--------------------------------------------------------------------------
     | Component > mounted
     |--------------------------------------------------------------------------
     */
-    mounted() {}, // End of Component > mounted
+    mounted() {
+        this.initializeData()
+    }, // End of Component > mounted
 } // End of export default
 </script>

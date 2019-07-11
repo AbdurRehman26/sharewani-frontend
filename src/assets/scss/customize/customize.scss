@@ -489,6 +489,9 @@
                     font-family: $font_medium;
                 }
             }
+            &:last-child {
+                margin-right: 0px;
+            }
         }
     }
 }

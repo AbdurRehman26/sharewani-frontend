@@ -12,7 +12,7 @@
             <div class="row">
                 <div
                     class="col-lg-4 col-md-6"
-                    v-for="(data, index) in importData"
+                    v-for="(data, index) in listData"
                     :key="index"
                 >
                     <card-data
@@ -28,6 +28,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 import cardData from '@/components/CardData.vue'
 export default {
     components: {
@@ -57,26 +58,7 @@ export default {
     */
     data() {
         return {
-            importData: [
-                {
-                    logo: 'logo1.png',
-                    name: 'Do Jones Data',
-                    lastUpdate: 'Last updated: June 10, 2019',
-                    totalRecord: 'Total Records: 45,650',
-                },
-                {
-                    logo: 'logo2.png',
-                    name: 'World Bank Data',
-                    lastUpdate: 'Last updated: June 9, 2019',
-                    totalRecord: 'Total Records: 23,956',
-                },
-                {
-                    logo: 'logo3.png',
-                    name: 'Client Blacklist Data',
-                    lastUpdate: 'Last updated: June 12, 2019',
-                    totalRecord: 'Total Records: 2,450',
-                },
-            ],
+            listData: [],
         }
     }, // End of Component > data
 
@@ -85,20 +67,29 @@ export default {
     | Component > computed
     |--------------------------------------------------------------------------
     */
-    computed: {}, // End of Component > computed
-
+    computed: {
+        ...mapGetters(['configuration']),
+    }, // End of Component > computed
     /*
     |--------------------------------------------------------------------------
     | Component > methods
     |--------------------------------------------------------------------------
     */
-    methods: {}, // End of Component > methods
+    methods: {
+        initializeData() {
+            //system log table
+            let configImportFields = this.configuration.importData //get user data from store
+            this.listData = configImportFields //push data into array
+        },
+    }, // End of Component > methods
 
     /*
     |--------------------------------------------------------------------------
     | Component > mounted
     |--------------------------------------------------------------------------
     */
-    mounted() {}, // End of Component > mounted
+    mounted() {
+        this.initializeData()
+    }, // End of Component > mounted
 } // End of export default
 </script>

@@ -59,6 +59,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 import pagination from '@/components/Pagination.vue'
 export default {
     components: {
@@ -88,160 +89,8 @@ export default {
     */
     data() {
         return {
-            fields: [
-                {
-                    key: 'industrycode',
-                    label: 'Industry Code',
-                    class: 'text-center w-150px',
-                },
-                {
-                    key: 'industrytitle',
-                    label: 'Industry Title',
-                },
-                {
-                    key: 'worktypeimpact',
-                    label: 'WORK TYPE IMPACT',
-                },
-                {
-                    key: 'action',
-                    label: 'ACTION',
-                    class: 'two-list',
-                },
-            ],
-            items: [
-                {
-                    industrycode: 1,
-                    industrytitle: 'Agriculture, forestry and fishing',
-                    worktypeimpact: 'View Work Type Impact',
-                    action: [
-                        {
-                            text: 'Modify',
-                        },
-                        {
-                            text: 'Archive',
-                        },
-                    ],
-                },
-                {
-                    industrycode: 2,
-                    industrytitle: 'Mining and quarrying',
-                    worktypeimpact: 'View Work Type Impact',
-                    action: [
-                        {
-                            text: 'Modify',
-                        },
-                        {
-                            text: 'Archive',
-                        },
-                    ],
-                },
-                {
-                    industrycode: 3,
-                    industrytitle: 'Manufacturing',
-                    worktypeimpact: 'View Work Type Impact',
-                    action: [
-                        {
-                            text: 'Modify',
-                        },
-                        {
-                            text: 'Archive',
-                        },
-                    ],
-                },
-                {
-                    industrycode: 4,
-                    industrytitle:
-                        'Electricity, gas, steam and air conditioning supply',
-                    worktypeimpact: 'View Work Type Impact',
-                    action: [
-                        {
-                            text: 'Modify',
-                        },
-                        {
-                            text: 'Archive',
-                        },
-                    ],
-                },
-                {
-                    industrycode: 5,
-                    industrytitle: 'Water supply; sewerage, waste management',
-                    worktypeimpact: 'View Work Type Impact',
-                    action: [
-                        {
-                            text: 'Modify',
-                        },
-                        {
-                            text: 'Archive',
-                        },
-                    ],
-                },
-                {
-                    industrycode: 6,
-                    industrytitle: 'Construction',
-                    worktypeimpact: 'View Work Type Impact',
-                    action: [
-                        {
-                            text: 'Modify',
-                        },
-                        {
-                            text: 'Archive',
-                        },
-                    ],
-                },
-                {
-                    industrycode: 7,
-                    industrytitle:
-                        'Wholesale and retail trade; repair of motor vehicles',
-                    worktypeimpact: 'View Work Type Impact',
-                    action: [
-                        {
-                            text: 'Modify',
-                        },
-                        {
-                            text: 'Archive',
-                        },
-                    ],
-                },
-                {
-                    industrycode: 8,
-                    industrytitle: 'Transportation and storage',
-                    worktypeimpact: 'View Work Type Impact',
-                    action: [
-                        {
-                            text: 'Modify',
-                        },
-                        {
-                            text: 'Archive',
-                        },
-                    ],
-                },
-                {
-                    industrycode: 9,
-                    industrytitle: 'Accommodation and food service activities',
-                    worktypeimpact: 'View Work Type Impact',
-                    action: [
-                        {
-                            text: 'Modify',
-                        },
-                        {
-                            text: 'Archive',
-                        },
-                    ],
-                },
-                {
-                    industrycode: 10,
-                    industrytitle: 'Information and communication',
-                    worktypeimpact: 'View Work Type Impact',
-                    action: [
-                        {
-                            text: 'Modify',
-                        },
-                        {
-                            text: 'Archive',
-                        },
-                    ],
-                },
-            ],
+            fields: [],
+            items: [],
         }
     }, // End of Component > data
 
@@ -250,20 +99,34 @@ export default {
     | Component > computed
     |--------------------------------------------------------------------------
     */
-    computed: {}, // End of Component > computed
+    computed: {
+        ...mapGetters(['configuration']),
+    }, // End of Component > computed
 
     /*
     |--------------------------------------------------------------------------
     | Component > methods
     |--------------------------------------------------------------------------
     */
-    methods: {}, // End of Component > methods
+    methods: {
+        initializeData() {
+            //system log table
+            let configTableFields = this.configuration.idenfoEngine.industry
+                .fields //get user data from store
+            this.fields = configTableFields //push data into array
+            let configTableItems = this.configuration.idenfoEngine.industry
+                .items //get user data from store
+            this.items = configTableItems //push data into array
+        },
+    }, // End of Component > methods
 
     /*
     |--------------------------------------------------------------------------
     | Component > mounted
     |--------------------------------------------------------------------------
     */
-    mounted() {}, // End of Component > mounted
+    mounted() {
+        this.initializeData()
+    }, // End of Component > mounted
 } // End of export default
 </script>

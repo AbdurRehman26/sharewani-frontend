@@ -17,5 +17,8 @@ export default {
         state.systemLogsTable = payload
         //system user
         state.systemUserTable = payload
+
+        //Config tables
+        state.configuration = payload
     },
 }
