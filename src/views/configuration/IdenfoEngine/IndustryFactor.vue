@@ -29,10 +29,44 @@
         <div class="table-section m-b-30">
             <b-table :items="items" :fields="fields">
                 <template slot="worktypeimpact" slot-scope="data">
-                    <div class="work-impact">
+                    <a href="#" class="work-impact">
                         <span>{{ data.value }}</span>
                         <i class="icon-caret-right"></i>
-                    </div>
+                        <div class="custom-popover">
+                            <ul>
+                                <li>
+                                    <label
+                                        >Self-Employed/Business Owner:
+                                    </label>
+                                    <span class="high">High</span>
+                                </li>
+                                <li>
+                                    <label>Salaried-Executive Level: </label>
+                                    <span class="high">High</span>
+                                </li>
+                                <li>
+                                    <label>Salaried-General: </label>
+                                    <span class="low">Low</span>
+                                </li>
+                                <li>
+                                    <label>Homemaker: </label>
+                                    <span class="low">Low</span>
+                                </li>
+                                <li>
+                                    <label>Student: </label>
+                                    <span class="low">Low</span>
+                                </li>
+                                <li>
+                                    <label>Unemployed: </label>
+                                    <span class="low">Low</span>
+                                </li>
+                                <li>
+                                    <label>Retired: </label>
+                                    <span class="low">Low</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </a>
                 </template>
                 <template slot="action" slot-scope="data">
                     <div class="action-review">

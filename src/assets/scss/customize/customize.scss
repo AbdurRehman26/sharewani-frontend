@@ -25,6 +25,57 @@
     padding: 36px 44px;
 }
 
+.work-impact {
+    position: relative;
+    text-decoration: none;
+    .custom-popover {
+        position: absolute;
+        background-color: #fff;
+        width: 310px;
+        top: 27px;
+        left: -10px;
+        z-index: 9;
+        padding: 16px 20px;
+        -webkit-transition: 0.3s ease-in-out;
+        transition: 0.3s ease-in-out;
+        opacity: 0;
+        display: none;
+        ul {
+            list-style: none;
+            padding: 0;
+            li {
+                margin-bottom: 5px;
+                &:last-child {
+                    label {
+                        margin-bottom: 0px;
+                    }
+                }
+                label {
+                    width: 222px;
+                    color: $dark;
+                }
+            }
+        }
+    }
+    &:hover,
+    &:focus {
+        .custom-popover {
+            opacity: 1;
+            display: block;
+        }
+    }
+}
+
+.high {
+    color: $high;
+}
+.medium {
+    color: $medium;
+}
+.low {
+    color: $low;
+}
+
 .card {
     border: 1px solid $border-color;
     padding: $card-padding;
