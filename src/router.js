@@ -75,13 +75,13 @@ export default new Router({
                         import(/* webpackChunkName: "dashboard-alerts" */ '@/views/dashboard/Alert.vue'),
                 },
                 {
-                    path: 'dashbaord-activity',
+                    path: 'activity',
                     name: 'dashboard-activity-page',
                     component: () =>
                         import(/* webpackChunkName: "dashboard-activity" */ '@/views/dashboard/Activity.vue'),
                 },
                 {
-                    path: 'dashbaord-reporting',
+                    path: 'reporting',
                     name: 'dashboard-reporting-page',
                     component: () =>
                         import(/* webpackChunkName: "dashboard-reporting" */ '@/views/dashboard/Reporting.vue'),
