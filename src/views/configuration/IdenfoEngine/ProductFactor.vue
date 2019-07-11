@@ -3,12 +3,14 @@
         <div class="filter-section">
             <div class="row">
                 <div class="col-md-4">
-                    <h2>Nationality Factor</h2>
+                    <h2>Product Factor</h2>
                 </div>
                 <div class="col-md-8 text-right">
                     <ul>
                         <li>
-                            <base-search></base-search>
+                            <base-search
+                                :placeholder="'Search Product'"
+                            ></base-search>
                         </li>
                         <li>
                             <b-button type="button" variant="primary"
@@ -17,7 +19,7 @@
                         </li>
                         <li>
                             <b-button type="button" variant="secondary"
-                                >+ Add Nationality</b-button
+                                >+ Add Product</b-button
                             >
                         </li>
                     </ul>
@@ -26,10 +28,15 @@
         </div>
         <div class="table-section m-b-30">
             <b-table :items="items" :fields="fields">
+                <template slot="worktypeimpact" slot-scope="data">
+                    <div class="work-impact">
+                        <span>{{ data.value }}</span>
+                        <i class="icon-caret-right"></i>
+                    </div>
+                </template>
                 <template slot="rating" slot-scope="data">
                     <base-status :statusType="data.value"></base-status>
                 </template>
-
                 <template slot="action" slot-scope="data">
                     <div class="action-review">
                         <a
@@ -86,21 +93,17 @@ export default {
         return {
             fields: [
                 {
-                    key: 'countrycode',
-                    label: 'Country Code',
+                    key: 'productCode',
+                    label: 'PRODUCT CODE',
+                    class: 'text-center w-150px',
                 },
                 {
-                    key: 'countrytitle',
-                    label: 'Country Title',
+                    key: 'productIndustry',
+                    label: 'Product Title',
                 },
                 {
                     key: 'rating',
                     label: 'RATING',
-                    class: 'text-center rating-field',
-                },
-                {
-                    key: 'isSanction',
-                    label: 'IS SANCTION',
                     class: 'text-center',
                 },
                 {
@@ -111,10 +114,9 @@ export default {
             ],
             items: [
                 {
-                    countrycode: 'AF',
-                    countrytitle: 'Afghanistan',
+                    productCode: 1501,
+                    productIndustry: 'Virtual Currency Wallet',
                     rating: 'High Risk',
-                    isSanction: 'No',
                     action: [
                         {
                             text: 'Modify',
@@ -125,10 +127,9 @@ export default {
                     ],
                 },
                 {
-                    countrycode: 'AX',
-                    countrytitle: 'Aland Islands',
+                    productCode: 1502,
+                    productIndustry: 'Virtual Currency Exchange',
                     rating: 'High Risk',
-                    isSanction: 'No',
                     action: [
                         {
                             text: 'Modify',
@@ -139,10 +140,9 @@ export default {
                     ],
                 },
                 {
-                    countrycode: 'AL',
-                    countrytitle: 'Albania',
+                    productCode: 1503,
+                    productIndustry: 'Current Account',
                     rating: 'High Risk',
-                    isSanction: 'No',
                     action: [
                         {
                             text: 'Modify',
@@ -153,10 +153,9 @@ export default {
                     ],
                 },
                 {
-                    countrycode: 'DZ',
-                    countrytitle: 'Algeria',
+                    productCode: 1504,
+                    productIndustry: 'Saving Account',
                     rating: 'High Risk',
-                    isSanction: 'No',
                     action: [
                         {
                             text: 'Modify',
@@ -167,10 +166,9 @@ export default {
                     ],
                 },
                 {
-                    countrycode: 'AS',
-                    countrytitle: 'American Samoa',
-                    rating: 'High Risk',
-                    isSanction: 'No',
+                    productCode: 1505,
+                    productIndustry: 'Credit Card',
+                    rating: 'Medium Risk',
                     action: [
                         {
                             text: 'Modify',
@@ -181,10 +179,9 @@ export default {
                     ],
                 },
                 {
-                    countrycode: 'AD',
-                    countrytitle: 'Andorra',
-                    rating: 'High Risk',
-                    isSanction: 'No',
+                    productCode: 1506,
+                    productIndustry: 'Short Term Loan',
+                    rating: 'Medium Risk',
                     action: [
                         {
                             text: 'Modify',
@@ -195,52 +192,9 @@ export default {
                     ],
                 },
                 {
-                    countrycode: 'AO',
-                    countrytitle: 'Angola',
+                    productCode: 1507,
+                    productIndustry: 'Financial Investment',
                     rating: 'High Risk',
-                    isSanction: 'No',
-                    action: [
-                        {
-                            text: 'Modify',
-                        },
-                        {
-                            text: 'Archive',
-                        },
-                    ],
-                },
-                {
-                    countrycode: 'AI',
-                    countrytitle: 'Anguilla',
-                    rating: 'High Risk',
-                    isSanction: 'No',
-                    action: [
-                        {
-                            text: 'Modify',
-                        },
-                        {
-                            text: 'Archive',
-                        },
-                    ],
-                },
-                {
-                    countrycode: 'AQ',
-                    countrytitle: 'Antarctica',
-                    rating: 'High Risk',
-                    isSanction: 'No',
-                    action: [
-                        {
-                            text: 'Modify',
-                        },
-                        {
-                            text: 'Archive',
-                        },
-                    ],
-                },
-                {
-                    countrycode: 'AG',
-                    countrytitle: 'Antigua and Barbuda',
-                    rating: 'High Risk',
-                    isSanction: 'No',
                     action: [
                         {
                             text: 'Modify',

@@ -3,12 +3,14 @@
         <div class="filter-section">
             <div class="row">
                 <div class="col-md-4">
-                    <h2>Nationality Factor</h2>
+                    <h2>Relationship Length Factor</h2>
                 </div>
                 <div class="col-md-8 text-right">
                     <ul>
                         <li>
-                            <base-search></base-search>
+                            <base-search
+                                :placeholder="'Search relationship length'"
+                            ></base-search>
                         </li>
                         <li>
                             <b-button type="button" variant="primary"
@@ -17,7 +19,7 @@
                         </li>
                         <li>
                             <b-button type="button" variant="secondary"
-                                >+ Add Nationality</b-button
+                                >+ Add Relationship Length</b-button
                             >
                         </li>
                     </ul>
@@ -26,10 +28,15 @@
         </div>
         <div class="table-section m-b-30">
             <b-table :items="items" :fields="fields">
+                <template slot="worktypeimpact" slot-scope="data">
+                    <div class="work-impact">
+                        <span>{{ data.value }}</span>
+                        <i class="icon-caret-right"></i>
+                    </div>
+                </template>
                 <template slot="rating" slot-scope="data">
                     <base-status :statusType="data.value"></base-status>
                 </template>
-
                 <template slot="action" slot-scope="data">
                     <div class="action-review">
                         <a
@@ -86,21 +93,16 @@ export default {
         return {
             fields: [
                 {
-                    key: 'countrycode',
-                    label: 'Country Code',
+                    key: 'rule',
+                    label: 'RULE',
                 },
                 {
-                    key: 'countrytitle',
-                    label: 'Country Title',
+                    key: 'relationshipLength',
+                    label: 'RELATIONSHIP LENGTH TITLE',
                 },
                 {
                     key: 'rating',
                     label: 'RATING',
-                    class: 'text-center rating-field',
-                },
-                {
-                    key: 'isSanction',
-                    label: 'IS SANCTION',
                     class: 'text-center',
                 },
                 {
@@ -111,10 +113,9 @@ export default {
             ],
             items: [
                 {
-                    countrycode: 'AF',
-                    countrytitle: 'Afghanistan',
+                    rule: '0 Months to 24 Months',
+                    relationshipLength: 'Less than 24 months',
                     rating: 'High Risk',
-                    isSanction: 'No',
                     action: [
                         {
                             text: 'Modify',
@@ -125,10 +126,9 @@ export default {
                     ],
                 },
                 {
-                    countrycode: 'AX',
-                    countrytitle: 'Aland Islands',
-                    rating: 'High Risk',
-                    isSanction: 'No',
+                    rule: '24 Months to 48 Months',
+                    relationshipLength: 'Between 24 months to 48 months',
+                    rating: 'Medium Risk',
                     action: [
                         {
                             text: 'Modify',
@@ -139,108 +139,9 @@ export default {
                     ],
                 },
                 {
-                    countrycode: 'AL',
-                    countrytitle: 'Albania',
-                    rating: 'High Risk',
-                    isSanction: 'No',
-                    action: [
-                        {
-                            text: 'Modify',
-                        },
-                        {
-                            text: 'Archive',
-                        },
-                    ],
-                },
-                {
-                    countrycode: 'DZ',
-                    countrytitle: 'Algeria',
-                    rating: 'High Risk',
-                    isSanction: 'No',
-                    action: [
-                        {
-                            text: 'Modify',
-                        },
-                        {
-                            text: 'Archive',
-                        },
-                    ],
-                },
-                {
-                    countrycode: 'AS',
-                    countrytitle: 'American Samoa',
-                    rating: 'High Risk',
-                    isSanction: 'No',
-                    action: [
-                        {
-                            text: 'Modify',
-                        },
-                        {
-                            text: 'Archive',
-                        },
-                    ],
-                },
-                {
-                    countrycode: 'AD',
-                    countrytitle: 'Andorra',
-                    rating: 'High Risk',
-                    isSanction: 'No',
-                    action: [
-                        {
-                            text: 'Modify',
-                        },
-                        {
-                            text: 'Archive',
-                        },
-                    ],
-                },
-                {
-                    countrycode: 'AO',
-                    countrytitle: 'Angola',
-                    rating: 'High Risk',
-                    isSanction: 'No',
-                    action: [
-                        {
-                            text: 'Modify',
-                        },
-                        {
-                            text: 'Archive',
-                        },
-                    ],
-                },
-                {
-                    countrycode: 'AI',
-                    countrytitle: 'Anguilla',
-                    rating: 'High Risk',
-                    isSanction: 'No',
-                    action: [
-                        {
-                            text: 'Modify',
-                        },
-                        {
-                            text: 'Archive',
-                        },
-                    ],
-                },
-                {
-                    countrycode: 'AQ',
-                    countrytitle: 'Antarctica',
-                    rating: 'High Risk',
-                    isSanction: 'No',
-                    action: [
-                        {
-                            text: 'Modify',
-                        },
-                        {
-                            text: 'Archive',
-                        },
-                    ],
-                },
-                {
-                    countrycode: 'AG',
-                    countrytitle: 'Antigua and Barbuda',
-                    rating: 'High Risk',
-                    isSanction: 'No',
+                    rule: '48 Months to 1000 Months',
+                    relationshipLength: 'More than 48 months',
+                    rating: 'Low Risk',
                     action: [
                         {
                             text: 'Modify',

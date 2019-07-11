@@ -1,9 +1,10 @@
 <template>
-    <div class="dashboard">
-        <div class="content-area">
-            <base-header :menuListing="menuListing"></base-header>
-            <div class="right-panel">
-                <router-view></router-view>
+    <div class="wrap-content">
+        <div class="filter-section">
+            <div class="row">
+                <div class="col-md-4">
+                    <h2>Import Data</h2>
+                </div>
             </div>
         </div>
     </div>
@@ -35,22 +36,7 @@ export default {
     |--------------------------------------------------------------------------
     */
     data() {
-        return {
-            menuListing: [
-                {
-                    anchorLink: '/configuration/idenfo-engine/',
-                    menuLabel: 'Idenfo Engine',
-                },
-                {
-                    anchorLink: '/configuration/import-data/',
-                    menuLabel: 'Import Data',
-                },
-                {
-                    anchorLink: '/configuration/form-builder/',
-                    menuLabel: 'Registration Form Builder',
-                },
-            ],
-        }
+        return {}
     }, // End of Component > data
 
     /*
