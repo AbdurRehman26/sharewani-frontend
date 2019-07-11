@@ -92,7 +92,7 @@ export default {
                 {
                     key: 'industrycode',
                     label: 'Industry Code',
-                    class: 'text-center',
+                    class: 'text-center w-150px',
                 },
                 {
                     key: 'industrytitle',

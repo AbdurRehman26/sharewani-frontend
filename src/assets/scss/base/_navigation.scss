@@ -44,8 +44,6 @@
                     position: relative;
                     padding-left: 12px;
                     padding-right: 12px;
-                }
-                &.router-link-exact-active {
                     &:after {
                         content: '';
                         background-color: #b35fa5;

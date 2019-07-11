@@ -2,34 +2,19 @@
     <div class="infoengine">
         <div class="filter-section">
             <div class="row">
-                <div class="col-md-4">
-                    <h2>Nationality Factor</h2>
-                </div>
-                <div class="col-md-8 text-right">
-                    <ul>
-                        <li>
-                            <base-search></base-search>
-                        </li>
-                        <li>
-                            <b-button type="button" variant="primary"
-                                >Apply</b-button
-                            >
-                        </li>
-                        <li>
-                            <b-button type="button" variant="secondary"
-                                >+ Add Nationality</b-button
-                            >
-                        </li>
-                    </ul>
+                <div class="col-md-6">
+                    <h2>Risk Factor & Weightage</h2>
                 </div>
             </div>
         </div>
         <div class="table-section m-b-30">
             <b-table :items="items" :fields="fields">
-                <template slot="rating" slot-scope="data">
-                    <base-status :statusType="data.value"></base-status>
+                <template slot="scorescale" slot-scope="data">
+                    <div class="work-impact">
+                        <span>{{ data.value }}</span>
+                        <i class="icon-caret-right"></i>
+                    </div>
                 </template>
-
                 <template slot="action" slot-scope="data">
                     <div class="action-review">
                         <a
@@ -86,167 +71,160 @@ export default {
         return {
             fields: [
                 {
-                    key: 'countrycode',
-                    label: 'Country Code',
+                    key: 'riskCode',
+                    label: 'Risk Factor',
+                    class: 'w-320px',
                 },
                 {
-                    key: 'countrytitle',
-                    label: 'Country Title',
-                },
-                {
-                    key: 'rating',
-                    label: 'RATING',
-                    class: 'text-center rating-field',
-                },
-                {
-                    key: 'isSanction',
-                    label: 'IS SANCTION',
+                    key: 'weight',
+                    label: 'WEIGHT',
                     class: 'text-center',
+                },
+                {
+                    key: 'overrideTo',
+                    label: 'OVERRIDE TO',
+                    class: 'text-center',
+                },
+                {
+                    key: 'scorescale',
+                    label: 'Score Scale',
                 },
                 {
                     key: 'action',
                     label: 'ACTION',
-                    class: 'two-list',
+                    class: 'single-list',
                 },
             ],
             items: [
                 {
-                    countrycode: 'AF',
-                    countrytitle: 'Afghanistan',
-                    rating: 'High Risk',
-                    isSanction: 'No',
+                    riskCode: 'Address in High Risk Country',
+                    weight: 15,
+                    overrideTo: 'N/A',
+                    scorescale: 'View Score Scale',
                     action: [
                         {
                             text: 'Modify',
-                        },
-                        {
-                            text: 'Archive',
                         },
                     ],
                 },
                 {
-                    countrycode: 'AX',
-                    countrytitle: 'Aland Islands',
-                    rating: 'High Risk',
-                    isSanction: 'No',
+                    riskCode: 'Nationality',
+                    weight: 10,
+                    overrideTo: 'N/A',
+                    scorescale: 'View Score Scale',
                     action: [
                         {
                             text: 'Modify',
-                        },
-                        {
-                            text: 'Archive',
                         },
                     ],
                 },
                 {
-                    countrycode: 'AL',
-                    countrytitle: 'Albania',
-                    rating: 'High Risk',
-                    isSanction: 'No',
+                    riskCode: 'State',
+                    weight: 0,
+                    overrideTo: 'N/A',
+                    scorescale: 'View Score Scale',
                     action: [
                         {
                             text: 'Modify',
-                        },
-                        {
-                            text: 'Archive',
                         },
                     ],
                 },
                 {
-                    countrycode: 'DZ',
-                    countrytitle: 'Algeria',
-                    rating: 'High Risk',
-                    isSanction: 'No',
+                    riskCode: 'Work Status',
+                    weight: 10,
+                    overrideTo: 'N/A',
+                    scorescale: 'View Score Scale',
                     action: [
                         {
                             text: 'Modify',
-                        },
-                        {
-                            text: 'Archive',
                         },
                     ],
                 },
                 {
-                    countrycode: 'AS',
-                    countrytitle: 'American Samoa',
-                    rating: 'High Risk',
-                    isSanction: 'No',
+                    riskCode: 'Length of Relationship',
+                    weight: 5,
+                    overrideTo: 'N/A',
+                    scorescale: 'View Score Scale',
                     action: [
                         {
                             text: 'Modify',
-                        },
-                        {
-                            text: 'Archive',
                         },
                     ],
                 },
                 {
-                    countrycode: 'AD',
-                    countrytitle: 'Andorra',
-                    rating: 'High Risk',
-                    isSanction: 'No',
+                    riskCode: 'Channel Type',
+                    weight: 5,
+                    overrideTo: 'N/A',
+                    scorescale: 'View Score Scale',
                     action: [
                         {
                             text: 'Modify',
-                        },
-                        {
-                            text: 'Archive',
                         },
                     ],
                 },
                 {
-                    countrycode: 'AO',
-                    countrytitle: 'Angola',
-                    rating: 'High Risk',
-                    isSanction: 'No',
+                    riskCode: 'Product',
+                    weight: 10,
+                    overrideTo: 'N/A',
+                    scorescale: 'View Score Scale',
                     action: [
                         {
                             text: 'Modify',
-                        },
-                        {
-                            text: 'Archive',
                         },
                     ],
                 },
                 {
-                    countrycode: 'AI',
-                    countrytitle: 'Anguilla',
-                    rating: 'High Risk',
-                    isSanction: 'No',
+                    riskCode: 'PEP Hit',
+                    weight: 15,
+                    overrideTo: 'High',
+                    scorescale: 'View Score Scale',
                     action: [
                         {
                             text: 'Modify',
-                        },
-                        {
-                            text: 'Archive',
                         },
                     ],
                 },
                 {
-                    countrycode: 'AQ',
-                    countrytitle: 'Antarctica',
-                    rating: 'High Risk',
-                    isSanction: 'No',
+                    riskCode: 'Enforcement Hit',
+                    weight: 15,
+                    overrideTo: 'High',
+                    scorescale: 'View Score Scale',
                     action: [
                         {
                             text: 'Modify',
-                        },
-                        {
-                            text: 'Archive',
                         },
                     ],
                 },
                 {
-                    countrycode: 'AG',
-                    countrytitle: 'Antigua and Barbuda',
-                    rating: 'High Risk',
-                    isSanction: 'No',
+                    riskCode: 'Blacklist Hit',
+                    weight: 15,
+                    overrideTo: 'High',
+                    scorescale: 'View Score Scale',
                     action: [
                         {
                             text: 'Modify',
                         },
+                    ],
+                },
+                {
+                    riskCode: 'Sanction Hit',
+                    weight: 0,
+                    overrideTo: 'Sanction',
+                    scorescale: 'View Score Scale',
+                    action: [
                         {
-                            text: 'Archive',
+                            text: 'Modify',
+                        },
+                    ],
+                },
+                {
+                    riskCode: 'Document Verification',
+                    weight: 0,
+                    overrideTo: 'High',
+                    scorescale: 'View Score Scale',
+                    action: [
+                        {
+                            text: 'Modify',
                         },
                     ],
                 },

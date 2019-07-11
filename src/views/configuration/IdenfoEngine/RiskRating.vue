@@ -2,34 +2,22 @@
     <div class="infoengine">
         <div class="filter-section">
             <div class="row">
-                <div class="col-md-4">
-                    <h2>Nationality Factor</h2>
-                </div>
-                <div class="col-md-8 text-right">
-                    <ul>
-                        <li>
-                            <base-search></base-search>
-                        </li>
-                        <li>
-                            <b-button type="button" variant="primary"
-                                >Apply</b-button
-                            >
-                        </li>
-                        <li>
-                            <b-button type="button" variant="secondary"
-                                >+ Add Nationality</b-button
-                            >
-                        </li>
-                    </ul>
+                <div class="col-md-6">
+                    <h2>Risk Rating Score</h2>
                 </div>
             </div>
         </div>
         <div class="table-section m-b-30">
             <b-table :items="items" :fields="fields">
+                <template slot="worktypeimpact" slot-scope="data">
+                    <div class="work-impact">
+                        <span>{{ data.value }}</span>
+                        <i class="icon-caret-right"></i>
+                    </div>
+                </template>
                 <template slot="rating" slot-scope="data">
                     <base-status :statusType="data.value"></base-status>
                 </template>
-
                 <template slot="action" slot-scope="data">
                     <div class="action-review">
                         <a
@@ -86,167 +74,151 @@ export default {
         return {
             fields: [
                 {
-                    key: 'countrycode',
-                    label: 'Country Code',
-                },
-                {
-                    key: 'countrytitle',
-                    label: 'Country Title',
+                    key: 'pointscore',
+                    label: 'POINT SCORE / CASE',
+                    class: 'w-320px',
                 },
                 {
                     key: 'rating',
                     label: 'RATING',
-                    class: 'text-center rating-field',
+                    class: 'text-center',
                 },
                 {
-                    key: 'isSanction',
-                    label: 'IS SANCTION',
+                    key: 'reviewperiod',
+                    label: 'REVIEW PERIOD',
+                    class: 'text-center',
+                },
+                {
+                    key: 'alert',
+                    label: 'Alert',
                     class: 'text-center',
                 },
                 {
                     key: 'action',
                     label: 'ACTION',
-                    class: 'two-list',
+                    class: 'single-list',
                 },
             ],
             items: [
                 {
-                    countrycode: 'AF',
-                    countrytitle: 'Afghanistan',
-                    rating: 'High Risk',
-                    isSanction: 'No',
+                    pointscore: '0 to 40 Points',
+                    rating: 'Low Risk',
+                    reviewperiod: '6 Years',
+                    alert: 'No',
                     action: [
                         {
                             text: 'Modify',
-                        },
-                        {
-                            text: 'Archive',
                         },
                     ],
                 },
                 {
-                    countrycode: 'AX',
-                    countrytitle: 'Aland Islands',
-                    rating: 'High Risk',
-                    isSanction: 'No',
+                    pointscore: '41 to 69 Points',
+                    rating: 'Medium Risk',
+                    reviewperiod: '3 Years',
+                    alert: 'No',
                     action: [
                         {
                             text: 'Modify',
-                        },
-                        {
-                            text: 'Archive',
                         },
                     ],
                 },
                 {
-                    countrycode: 'AL',
-                    countrytitle: 'Albania',
+                    pointscore: '70 to 100 Points',
                     rating: 'High Risk',
-                    isSanction: 'No',
+                    reviewperiod: '1 Year',
+                    alert: 'Yes',
                     action: [
                         {
                             text: 'Modify',
-                        },
-                        {
-                            text: 'Archive',
                         },
                     ],
                 },
                 {
-                    countrycode: 'DZ',
-                    countrytitle: 'Algeria',
+                    pointscore: 'PEP Hit',
                     rating: 'High Risk',
-                    isSanction: 'No',
+                    reviewperiod: 'Rejected',
+                    alert: 'Yes',
                     action: [
                         {
                             text: 'Modify',
-                        },
-                        {
-                            text: 'Archive',
                         },
                     ],
                 },
                 {
-                    countrycode: 'AS',
-                    countrytitle: 'American Samoa',
+                    pointscore: 'Enforcement Hit',
                     rating: 'High Risk',
-                    isSanction: 'No',
+                    reviewperiod: 'Rejected',
+                    alert: 'Yes',
                     action: [
                         {
                             text: 'Modify',
-                        },
-                        {
-                            text: 'Archive',
                         },
                     ],
                 },
                 {
-                    countrycode: 'AD',
-                    countrytitle: 'Andorra',
+                    pointscore: 'Client Blacklist Hit',
                     rating: 'High Risk',
-                    isSanction: 'No',
+                    reviewperiod: 'Rejected',
+                    alert: 'Yes',
                     action: [
                         {
                             text: 'Modify',
-                        },
-                        {
-                            text: 'Archive',
                         },
                     ],
                 },
                 {
-                    countrycode: 'AO',
-                    countrytitle: 'Angola',
+                    pointscore: 'Sanction Hit',
                     rating: 'High Risk',
-                    isSanction: 'No',
+                    reviewperiod: 'Rejected',
+                    alert: 'Yes',
                     action: [
                         {
                             text: 'Modify',
-                        },
-                        {
-                            text: 'Archive',
                         },
                     ],
                 },
                 {
-                    countrycode: 'AI',
-                    countrytitle: 'Anguilla',
+                    pointscore: 'Document Verification Mismatch ',
                     rating: 'High Risk',
-                    isSanction: 'No',
+                    reviewperiod: 'Rejected',
+                    alert: 'Yes',
                     action: [
                         {
                             text: 'Modify',
-                        },
-                        {
-                            text: 'Archive',
                         },
                     ],
                 },
                 {
-                    countrycode: 'AQ',
-                    countrytitle: 'Antarctica',
+                    pointscore: 'If Residence Country is Sanctioned',
                     rating: 'High Risk',
-                    isSanction: 'No',
+                    reviewperiod: 'Rejected',
+                    alert: 'Yes',
                     action: [
                         {
                             text: 'Modify',
                         },
+                    ],
+                },
+
+                {
+                    pointscore: 'If Nationality Country is Sanctioned',
+                    rating: 'High Risk',
+                    reviewperiod: 'Rejected',
+                    alert: 'Yes',
+                    action: [
                         {
-                            text: 'Archive',
+                            text: 'Modify',
                         },
                     ],
                 },
                 {
-                    countrycode: 'AG',
-                    countrytitle: 'Antigua and Barbuda',
+                    pointscore: 'If Contact No. Code Country is Sanctioned',
                     rating: 'High Risk',
-                    isSanction: 'No',
+                    reviewperiod: 'Rejected',
+                    alert: 'Yes',
                     action: [
                         {
                             text: 'Modify',
-                        },
-                        {
-                            text: 'Archive',
                         },
                     ],
                 },

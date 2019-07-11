@@ -44,44 +44,40 @@ export default {
         return {
             menuListing: [
                 {
-                    anchorLink: '/configuration',
+                    anchorLink: '/configuration/idenfo-engine/',
                     menuLabel: 'Nationality',
                 },
                 {
-                    anchorLink: '/configuration/workfactor',
+                    anchorLink: '/configuration/idenfo-engine/work',
                     menuLabel: 'Work Type',
                 },
                 {
-                    anchorLink: '/configuration/industryfactor',
+                    anchorLink: '/configuration/idenfo-engine/industry',
                     menuLabel: 'Industry',
                 },
                 {
-                    anchorLink: '/',
+                    anchorLink: '/configuration/idenfo-engine/product',
                     menuLabel: 'Product',
                 },
                 {
-                    anchorLink: '/',
+                    anchorLink: '/configuration/idenfo-engine/state',
                     menuLabel: 'State',
                 },
                 {
-                    anchorLink: '/',
+                    anchorLink: '/configuration/idenfo-engine/relationship',
                     menuLabel: 'Relationship',
                 },
                 {
-                    anchorLink: '/',
+                    anchorLink: '/configuration/idenfo-engine/channel',
                     menuLabel: 'Channel Type',
                 },
                 {
-                    anchorLink: '/',
+                    anchorLink: '/configuration/idenfo-engine/risk',
                     menuLabel: 'Risk Factor',
                 },
                 {
-                    anchorLink: '/',
+                    anchorLink: '/configuration/idenfo-engine/risk-rating',
                     menuLabel: 'Risk Rating Score',
-                },
-                {
-                    anchorLink: '/',
-                    menuLabel: 'Import Data',
                 },
             ],
         }
