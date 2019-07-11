@@ -7,12 +7,33 @@
                 </div>
             </div>
         </div>
+
+        <div class="data-import">
+            <div class="row">
+                <div
+                    class="col-lg-4 col-md-6"
+                    v-for="(data, index) in listData"
+                    :key="index"
+                >
+                    <card-data
+                        :logo="data.logo"
+                        :name="data.name"
+                        :lastUpdate="data.lastUpdate"
+                        :totalRecord="data.totalRecord"
+                    ></card-data>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+import cardData from '@/components/CardData.vue'
 export default {
-    components: {},
+    components: {
+        cardData,
+    },
 
     /*
     |--------------------------------------------------------------------------
@@ -36,7 +57,9 @@ export default {
     |--------------------------------------------------------------------------
     */
     data() {
-        return {}
+        return {
+            listData: [],
+        }
     }, // End of Component > data
 
     /*
@@ -44,20 +67,29 @@ export default {
     | Component > computed
     |--------------------------------------------------------------------------
     */
-    computed: {}, // End of Component > computed
-
+    computed: {
+        ...mapGetters(['configuration']),
+    }, // End of Component > computed
     /*
     |--------------------------------------------------------------------------
     | Component > methods
     |--------------------------------------------------------------------------
     */
-    methods: {}, // End of Component > methods
+    methods: {
+        initializeData() {
+            //system log table
+            let configImportFields = this.configuration.importData //get user data from store
+            this.listData = configImportFields //push data into array
+        },
+    }, // End of Component > methods
 
     /*
     |--------------------------------------------------------------------------
     | Component > mounted
     |--------------------------------------------------------------------------
     */
-    mounted() {}, // End of Component > mounted
+    mounted() {
+        this.initializeData()
+    }, // End of Component > mounted
 } // End of export default
 </script>

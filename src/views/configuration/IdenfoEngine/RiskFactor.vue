@@ -40,6 +40,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 import pagination from '@/components/Pagination.vue'
 export default {
     components: {
@@ -69,166 +70,8 @@ export default {
     */
     data() {
         return {
-            fields: [
-                {
-                    key: 'riskCode',
-                    label: 'Risk Factor',
-                    class: 'w-320px',
-                },
-                {
-                    key: 'weight',
-                    label: 'WEIGHT',
-                    class: 'text-center',
-                },
-                {
-                    key: 'overrideTo',
-                    label: 'OVERRIDE TO',
-                    class: 'text-center',
-                },
-                {
-                    key: 'scorescale',
-                    label: 'Score Scale',
-                },
-                {
-                    key: 'action',
-                    label: 'ACTION',
-                    class: 'single-list',
-                },
-            ],
-            items: [
-                {
-                    riskCode: 'Address in High Risk Country',
-                    weight: 15,
-                    overrideTo: 'N/A',
-                    scorescale: 'View Score Scale',
-                    action: [
-                        {
-                            text: 'Modify',
-                        },
-                    ],
-                },
-                {
-                    riskCode: 'Nationality',
-                    weight: 10,
-                    overrideTo: 'N/A',
-                    scorescale: 'View Score Scale',
-                    action: [
-                        {
-                            text: 'Modify',
-                        },
-                    ],
-                },
-                {
-                    riskCode: 'State',
-                    weight: 0,
-                    overrideTo: 'N/A',
-                    scorescale: 'View Score Scale',
-                    action: [
-                        {
-                            text: 'Modify',
-                        },
-                    ],
-                },
-                {
-                    riskCode: 'Work Status',
-                    weight: 10,
-                    overrideTo: 'N/A',
-                    scorescale: 'View Score Scale',
-                    action: [
-                        {
-                            text: 'Modify',
-                        },
-                    ],
-                },
-                {
-                    riskCode: 'Length of Relationship',
-                    weight: 5,
-                    overrideTo: 'N/A',
-                    scorescale: 'View Score Scale',
-                    action: [
-                        {
-                            text: 'Modify',
-                        },
-                    ],
-                },
-                {
-                    riskCode: 'Channel Type',
-                    weight: 5,
-                    overrideTo: 'N/A',
-                    scorescale: 'View Score Scale',
-                    action: [
-                        {
-                            text: 'Modify',
-                        },
-                    ],
-                },
-                {
-                    riskCode: 'Product',
-                    weight: 10,
-                    overrideTo: 'N/A',
-                    scorescale: 'View Score Scale',
-                    action: [
-                        {
-                            text: 'Modify',
-                        },
-                    ],
-                },
-                {
-                    riskCode: 'PEP Hit',
-                    weight: 15,
-                    overrideTo: 'High',
-                    scorescale: 'View Score Scale',
-                    action: [
-                        {
-                            text: 'Modify',
-                        },
-                    ],
-                },
-                {
-                    riskCode: 'Enforcement Hit',
-                    weight: 15,
-                    overrideTo: 'High',
-                    scorescale: 'View Score Scale',
-                    action: [
-                        {
-                            text: 'Modify',
-                        },
-                    ],
-                },
-                {
-                    riskCode: 'Blacklist Hit',
-                    weight: 15,
-                    overrideTo: 'High',
-                    scorescale: 'View Score Scale',
-                    action: [
-                        {
-                            text: 'Modify',
-                        },
-                    ],
-                },
-                {
-                    riskCode: 'Sanction Hit',
-                    weight: 0,
-                    overrideTo: 'Sanction',
-                    scorescale: 'View Score Scale',
-                    action: [
-                        {
-                            text: 'Modify',
-                        },
-                    ],
-                },
-                {
-                    riskCode: 'Document Verification',
-                    weight: 0,
-                    overrideTo: 'High',
-                    scorescale: 'View Score Scale',
-                    action: [
-                        {
-                            text: 'Modify',
-                        },
-                    ],
-                },
-            ],
+            fields: [],
+            items: [],
         }
     }, // End of Component > data
 
@@ -237,20 +80,34 @@ export default {
     | Component > computed
     |--------------------------------------------------------------------------
     */
-    computed: {}, // End of Component > computed
+    computed: {
+        ...mapGetters(['configuration']),
+    }, // End of Component > computed
 
     /*
     |--------------------------------------------------------------------------
     | Component > methods
     |--------------------------------------------------------------------------
     */
-    methods: {}, // End of Component > methods
+    methods: {
+        initializeData() {
+            //system log table
+            let configTableFields = this.configuration.idenfoEngine.riskFactor
+                .fields //get user data from store
+            this.fields = configTableFields //push data into array
+            let configTableItems = this.configuration.idenfoEngine.riskFactor
+                .items //get user data from store
+            this.items = configTableItems //push data into array
+        },
+    }, // End of Component > methods
 
     /*
     |--------------------------------------------------------------------------
     | Component > mounted
     |--------------------------------------------------------------------------
     */
-    mounted() {}, // End of Component > mounted
+    mounted() {
+        this.initializeData()
+    }, // End of Component > mounted
 } // End of export default
 </script>

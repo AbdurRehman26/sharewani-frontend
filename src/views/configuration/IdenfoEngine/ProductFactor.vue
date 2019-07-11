@@ -62,6 +62,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 import pagination from '@/components/Pagination.vue'
 export default {
     components: {
@@ -91,120 +92,8 @@ export default {
     */
     data() {
         return {
-            fields: [
-                {
-                    key: 'productCode',
-                    label: 'PRODUCT CODE',
-                    class: 'text-center w-150px',
-                },
-                {
-                    key: 'productIndustry',
-                    label: 'Product Title',
-                },
-                {
-                    key: 'rating',
-                    label: 'RATING',
-                    class: 'text-center',
-                },
-                {
-                    key: 'action',
-                    label: 'ACTION',
-                    class: 'two-list',
-                },
-            ],
-            items: [
-                {
-                    productCode: 1501,
-                    productIndustry: 'Virtual Currency Wallet',
-                    rating: 'High Risk',
-                    action: [
-                        {
-                            text: 'Modify',
-                        },
-                        {
-                            text: 'Archive',
-                        },
-                    ],
-                },
-                {
-                    productCode: 1502,
-                    productIndustry: 'Virtual Currency Exchange',
-                    rating: 'High Risk',
-                    action: [
-                        {
-                            text: 'Modify',
-                        },
-                        {
-                            text: 'Archive',
-                        },
-                    ],
-                },
-                {
-                    productCode: 1503,
-                    productIndustry: 'Current Account',
-                    rating: 'High Risk',
-                    action: [
-                        {
-                            text: 'Modify',
-                        },
-                        {
-                            text: 'Archive',
-                        },
-                    ],
-                },
-                {
-                    productCode: 1504,
-                    productIndustry: 'Saving Account',
-                    rating: 'High Risk',
-                    action: [
-                        {
-                            text: 'Modify',
-                        },
-                        {
-                            text: 'Archive',
-                        },
-                    ],
-                },
-                {
-                    productCode: 1505,
-                    productIndustry: 'Credit Card',
-                    rating: 'Medium Risk',
-                    action: [
-                        {
-                            text: 'Modify',
-                        },
-                        {
-                            text: 'Archive',
-                        },
-                    ],
-                },
-                {
-                    productCode: 1506,
-                    productIndustry: 'Short Term Loan',
-                    rating: 'Medium Risk',
-                    action: [
-                        {
-                            text: 'Modify',
-                        },
-                        {
-                            text: 'Archive',
-                        },
-                    ],
-                },
-                {
-                    productCode: 1507,
-                    productIndustry: 'Financial Investment',
-                    rating: 'High Risk',
-                    action: [
-                        {
-                            text: 'Modify',
-                        },
-                        {
-                            text: 'Archive',
-                        },
-                    ],
-                },
-            ],
+            fields: [],
+            items: [],
         }
     }, // End of Component > data
 
@@ -213,20 +102,34 @@ export default {
     | Component > computed
     |--------------------------------------------------------------------------
     */
-    computed: {}, // End of Component > computed
+    computed: {
+        ...mapGetters(['configuration']),
+    }, // End of Component > computed
 
     /*
     |--------------------------------------------------------------------------
     | Component > methods
     |--------------------------------------------------------------------------
     */
-    methods: {}, // End of Component > methods
+    methods: {
+        initializeData() {
+            //system log table
+            let configTableFields = this.configuration.idenfoEngine
+                .productFactor.fields //get user data from store
+            this.fields = configTableFields //push data into array
+            let configTableItems = this.configuration.idenfoEngine.productFactor
+                .items //get user data from store
+            this.items = configTableItems //push data into array
+        },
+    }, // End of Component > methods
 
     /*
     |--------------------------------------------------------------------------
     | Component > mounted
     |--------------------------------------------------------------------------
     */
-    mounted() {}, // End of Component > mounted
+    mounted() {
+        this.initializeData()
+    }, // End of Component > mounted
 } // End of export default
 </script>

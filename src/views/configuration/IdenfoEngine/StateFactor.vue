@@ -62,6 +62,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 import pagination from '@/components/Pagination.vue'
 export default {
     components: {
@@ -91,94 +92,8 @@ export default {
     */
     data() {
         return {
-            fields: [
-                {
-                    key: 'stateCode',
-                    label: 'STATE CODE',
-                    class: 'text-center w-150px',
-                },
-                {
-                    key: 'stateTitle',
-                    label: 'STATE TITLE',
-                },
-                {
-                    key: 'rating',
-                    label: 'RATING',
-                    class: 'text-center',
-                },
-                {
-                    key: 'action',
-                    label: 'ACTION',
-                    class: 'two-list',
-                },
-            ],
-            items: [
-                {
-                    stateCode: 1,
-                    stateTitle: 'Sindh',
-                    rating: 'Medium Risk',
-                    action: [
-                        {
-                            text: 'Modify',
-                        },
-                        {
-                            text: 'Archive',
-                        },
-                    ],
-                },
-                {
-                    stateCode: 2,
-                    stateTitle: 'Punjab',
-                    rating: 'Medium Risk',
-                    action: [
-                        {
-                            text: 'Modify',
-                        },
-                        {
-                            text: 'Archive',
-                        },
-                    ],
-                },
-                {
-                    stateCode: 3,
-                    stateTitle: 'Khyber Pakhtunkhwa',
-                    rating: 'Low Risk',
-                    action: [
-                        {
-                            text: 'Modify',
-                        },
-                        {
-                            text: 'Archive',
-                        },
-                    ],
-                },
-                {
-                    stateCode: 4,
-                    stateTitle: 'Balochistan',
-                    rating: 'High Risk',
-                    action: [
-                        {
-                            text: 'Modify',
-                        },
-                        {
-                            text: 'Archive',
-                        },
-                    ],
-                },
-                {
-                    stateCode: 5,
-                    stateTitle: 'Gilgit Baltistan',
-                    rating: 'High Risk',
-                    action: [
-                        {
-                            text: 'Modify',
-                        },
-                        {
-                            text: 'Archive',
-                        },
-                    ],
-                },
-            ],
+            fields: [],
+            items: [],
         }
     }, // End of Component > data
 
@@ -187,20 +102,34 @@ export default {
     | Component > computed
     |--------------------------------------------------------------------------
     */
-    computed: {}, // End of Component > computed
+    computed: {
+        ...mapGetters(['configuration']),
+    }, // End of Component > computed
 
     /*
     |--------------------------------------------------------------------------
     | Component > methods
     |--------------------------------------------------------------------------
     */
-    methods: {}, // End of Component > methods
+    methods: {
+        initializeData() {
+            //system log table
+            let configTableFields = this.configuration.idenfoEngine.stateFactor
+                .fields //get user data from store
+            this.fields = configTableFields //push data into array
+            let configTableItems = this.configuration.idenfoEngine.stateFactor
+                .items //get user data from store
+            this.items = configTableItems //push data into array
+        },
+    }, // End of Component > methods
 
     /*
     |--------------------------------------------------------------------------
     | Component > mounted
     |--------------------------------------------------------------------------
     */
-    mounted() {}, // End of Component > mounted
+    mounted() {
+        this.initializeData()
+    }, // End of Component > mounted
 } // End of export default
 </script>

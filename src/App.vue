@@ -80,7 +80,7 @@ export default {
                     menuLabel: 'Search People',
                 },
                 {
-                    anchorLink: '/configuration/idenfo-engine/',
+                    anchorLink: '/configuration',
                     icon: 'icon-configurations',
                     menuLabel: 'Configurations',
                 },

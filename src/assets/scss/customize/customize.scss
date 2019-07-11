@@ -25,6 +25,104 @@
     padding: 36px 44px;
 }
 
+.work-impact {
+    position: relative;
+    text-decoration: none;
+    .custom-popover {
+        position: absolute;
+        background-color: #fff;
+        width: 310px;
+        top: 27px;
+        left: -10px;
+        z-index: 9;
+        padding: 16px 20px;
+        -webkit-transition: 0.3s ease-in-out;
+        transition: 0.3s ease-in-out;
+        opacity: 0;
+        display: none;
+        ul {
+            list-style: none;
+            padding: 0;
+            li {
+                margin-bottom: 5px;
+                &:last-child {
+                    label {
+                        margin-bottom: 0px;
+                    }
+                }
+                label {
+                    width: 222px;
+                    color: $dark;
+                }
+            }
+        }
+    }
+    &:hover,
+    &:focus {
+        .custom-popover {
+            opacity: 1;
+            display: block;
+        }
+    }
+}
+
+.high {
+    color: $high;
+}
+.medium {
+    color: $medium;
+}
+.low {
+    color: $low;
+}
+
+.card {
+    border: 1px solid $border-color;
+    padding: $card-padding;
+    margin-bottom: 0.625rem;
+    .logo {
+        width: 42px;
+        height: 42px;
+        margin: auto;
+        background-size: 24px;
+        border: 1px solid $border-color;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin-bottom: 16px;
+        border-radius: 5px;
+    }
+    h4 {
+        font-size: 1.5rem;
+        text-align: center;
+        font-family: $font_medium;
+        margin-bottom: 0.625rem;
+    }
+    p {
+        margin-bottom: 15px;
+        color: $nav-color;
+        text-align: center;
+    }
+    .btn {
+        i {
+            font-size: 1.3rem;
+        }
+        &.btn-primary {
+            margin: 8px 0px;
+        }
+        &.btn-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            padding-left: 0px;
+            padding-right: 0px;
+            justify-content: center;
+            i {
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
 // Filter Section
 
 .filter-section {
@@ -446,6 +544,9 @@
                     color: $body-color;
                     font-family: $font_medium;
                 }
+            }
+            &:last-child {
+                margin-right: 0px;
             }
         }
     }

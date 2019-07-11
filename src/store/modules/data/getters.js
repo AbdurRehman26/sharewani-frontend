@@ -16,4 +16,5 @@ export default {
     systemLogsTable: (state) => state.systemLogsTable,
     //system user
     systemUserTable: (state) => state.systemUserTable,
+    configuration: (state) => state.configuration,
 }

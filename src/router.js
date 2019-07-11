@@ -201,7 +201,7 @@ export default new Router({
                 import(/* webpackChunkName: "system-logs" */ '@/views/configuration/Main.vue'),
             children: [
                 {
-                    path: '/configuration/idenfo-engine/',
+                    path: '/configuration',
                     name: 'idenfo-engine',
                     component: () =>
                         import(/* webpackChunkName: "customer" */ './views/configuration/IdenfoEngine/Main.vue'),
