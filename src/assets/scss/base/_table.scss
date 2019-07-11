@@ -13,35 +13,11 @@
             background-color: $grey-dark;
             color: #7f8fa4;
             padding: 14px 13px;
+            vertical-align: middle;
             font-size: 0.75rem;
             overflow: hidden;
             font-family: $font_medium;
             text-transform: uppercase;
-            &.person-icon {
-                text-align: center;
-                &:before {
-                    content: '\E91C';
-                    font-family: 'icomoon';
-                    padding-right: 10px;
-                }
-            }
-            &.document-icon {
-                text-align: center;
-                &:before {
-                    content: '\e90a';
-                    font-family: 'icomoon';
-                    padding-right: 10px;
-                    color: #000;
-                }
-            }
-            &.graph-icon {
-                text-align: center;
-                &:before {
-                    content: '\e90f';
-                    font-family: 'icomoon';
-                    padding-right: 10px;
-                }
-            }
         }
     }
 

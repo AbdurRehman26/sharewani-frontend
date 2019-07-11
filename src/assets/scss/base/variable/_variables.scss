@@ -20,17 +20,18 @@ $pink: #aa2f78;
 $yellow: #ffb54c;
 $radio-check: #9d9f8f;
 $theme-colors: (
-	'primary': $primary,
-	'secondary': $secondary,
-	'success': $success,
-	'light': $light,
-	'dark': $dark,
-	'danger': $danger
+    'primary': $primary,
+    'secondary': $secondary,
+    'success': $success,
+    'light': $light,
+    'dark': $dark,
+    'danger': $danger
 );
 // header height
 $header-height: 52px !default;
 // upload image
 $upload-border-radius: 8px;
+$upload-bg: #f2f2f6 !default;
 $font-family-base: $font_regular !default;
 $headings-font-family: $font_bold !default;
 $headings-color: $secondary !default;
