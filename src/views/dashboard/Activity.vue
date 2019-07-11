@@ -22,9 +22,11 @@
                             </div>
                         </li>
                         <li>
-                            <b-button type="button" variant="primary"
-                                >Apply</b-button
-                            >
+                            <base-button
+                                btnLabel="Apply"
+                                btnType="submit"
+                                btnVariant="primary"
+                            ></base-button>
                         </li>
                     </ul>
                 </div>
