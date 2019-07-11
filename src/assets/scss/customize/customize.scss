@@ -22,12 +22,22 @@
 }
 
 .right-panel {
-    padding: 44px;
+    padding: 36px 44px;
 }
 
 // Filter Section
 
 .filter-section {
+    &.full-area {
+        .row {
+            margin-left: -10px;
+            margin-right: -10px;
+            > div {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+        }
+    }
     h2 {
         font-family: $font_medium;
         color: $grey-darkest;
@@ -176,11 +186,6 @@
     }
 }
 
-.table-section {
-    border: 1px #d7d7e2 solid;
-    overflow: hidden;
-    border-radius: 8px 8px 0 0;
-}
 .system-user-filter {
     ul {
         display: flex;
