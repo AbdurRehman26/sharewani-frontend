@@ -24,7 +24,7 @@ export default new Router({
                     },
                 },
                 {
-                    path: '/forgot-password',
+                    path: 'auth/forgot-password',
                     name: 'forgot-page',
                     component: () =>
                         import(/* webpackChunkName: "forgot-password" */ '@/views/auth/ForgotPassword.vue'),
@@ -33,7 +33,7 @@ export default new Router({
                     },
                 },
                 {
-                    path: '/reset-password',
+                    path: 'auth/reset-password',
                     name: 'reset-password-page',
                     component: () =>
                         import(/* webpackChunkName: "reset-password" */ '@/views/auth/ResetPassword.vue'),
@@ -42,7 +42,7 @@ export default new Router({
                     },
                 },
                 {
-                    path: '/email-sent',
+                    path: 'auth/email-sent',
                     name: 'email-sent-page',
                     component: () =>
                         import(/* webpackChunkName: "email-sent" */ '@/views/auth/EmailSent.vue'),
