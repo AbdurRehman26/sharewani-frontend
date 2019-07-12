@@ -1,5 +1,5 @@
 <template>
-    <div class="card">
+    <div class="card custom-card">
         <div
             class="logo"
             :style="{
