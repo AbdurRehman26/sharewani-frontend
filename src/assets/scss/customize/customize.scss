@@ -378,29 +378,35 @@
 .table {
     thead {
         th {
-            &.person-icon {
-                text-align: center;
+            &.with-icon {
                 &:before {
-                    content: '\E91C';
+                    margin-right: 10px;
+                    font-size: 0.9rem;
+                    vertical-align: baseline;
+                    position: relative;
+                    top: 2px;
+                    color: $grey-lite !important;
+                }
+            }
+            &.person-icon {
+                &:before {
+                    position: relative;
+                    @extend .icon-person;
                     font-family: 'icomoon';
-                    padding-right: 10px;
                 }
             }
             &.document-icon {
-                text-align: center;
                 &:before {
-                    content: '\e90a';
+                    position: relative;
+                    @extend .icon-documentation;
                     font-family: 'icomoon';
-                    padding-right: 10px;
-                    color: #000;
                 }
             }
             &.graph-icon {
-                text-align: center;
                 &:before {
-                    content: '\e90f';
+                    position: relative;
+                    @extend .icon-graph;
                     font-family: 'icomoon';
-                    padding-right: 10px;
                 }
             }
 
@@ -578,4 +584,19 @@
 }
 .user-roles-action {
     width: 200px;
+}
+
+.status-type-icon {
+    i {
+        font-size: 1.3rem;
+        &.sanctions {
+            color: $body-color;
+        }
+        &.pending {
+            color: $grey-xlite;
+        }
+        &.danger {
+            color: $danger;
+        }
+    }
 }

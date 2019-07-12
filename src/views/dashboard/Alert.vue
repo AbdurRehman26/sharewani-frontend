@@ -61,64 +61,19 @@
                     </div>
                 </template>
                 <template slot="name_screening" slot-scope="data">
-                    <div
-                        class="pending indication-icons"
-                        v-if="data.value == 'pending'"
-                    >
-                        <i class="icon-check"></i>
-                    </div>
-                    <div
-                        class="inreview indication-icons"
-                        v-if="data.value == 'inreview'"
-                    >
-                        <i class="icon-wrong"></i>
-                    </div>
-                    <div
-                        class="reject indication-icons"
-                        v-if="data.value == 'reject'"
-                    >
-                        <i class="icon-wrong"></i>
-                    </div>
+                    <status-type-icon
+                        :statusTypeIcon="data.value"
+                    ></status-type-icon>
                 </template>
                 <template slot="documentation" slot-scope="data">
-                    <div
-                        class="pending indication-icons"
-                        v-if="data.value == 'pending'"
-                    >
-                        <i class="icon-check"></i>
-                    </div>
-                    <div
-                        class="inreview indication-icons"
-                        v-if="data.value == 'inreview'"
-                    >
-                        <i class="icon-wrong"></i>
-                    </div>
-                    <div
-                        class="reject indication-icons"
-                        v-if="data.value == 'reject'"
-                    >
-                        <i class="icon-wrong"></i>
-                    </div>
+                    <status-type-icon
+                        :statusTypeIcon="data.value"
+                    ></status-type-icon>
                 </template>
                 <template slot="risk_rating" slot-scope="data">
-                    <div
-                        class="pending indication-icons"
-                        v-if="data.value == 'pending'"
-                    >
-                        <i class="icon-check"></i>
-                    </div>
-                    <div
-                        class="inreview indication-icons"
-                        v-if="data.value == 'inreview'"
-                    >
-                        <i class="icon-wrong"></i>
-                    </div>
-                    <div
-                        class="reject indication-icons"
-                        v-if="data.value == 'reject'"
-                    >
-                        <i class="icon-wrong"></i>
-                    </div>
+                    <status-type-icon
+                        :statusTypeIcon="data.value"
+                    ></status-type-icon>
                 </template>
                 <template slot="status" slot-scope="data">
                     <div class="status-review" v-if="data.value == 'review'">
@@ -143,9 +98,11 @@
 <script>
 import { mapGetters } from 'vuex'
 import pagination from '@/components/Pagination.vue'
+import statusTypeIcon from '@/components/AlertType.vue'
 export default {
     components: {
         pagination,
+        statusTypeIcon,
     },
 
     /*

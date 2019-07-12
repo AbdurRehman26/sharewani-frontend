@@ -7,7 +7,7 @@ $grey-darkest: $body-color;
 $grey-dark: #e8e8ef;
 $grey-medium: #9ea0a5;
 $grey-lite: #7f8fa4;
-$grey-xlite: #e9eae3;
+$grey-xlite: #e5e4e6;
 $border-color: #d7d7e2;
 $white: #fff;
 $border-radius: 4px;
@@ -15,17 +15,17 @@ $border-opacity: rgba(208, 210, 197, 0.5);
 $success: #41b031;
 $light: #eef0f4;
 $dark: #bcbcbc;
-$danger: #dc3545;
+$danger: #c92038;
 $pink: #aa2f78;
 $yellow: #ffb54c;
 $radio-check: #9d9f8f;
 $theme-colors: (
-    'primary': $primary,
-    'secondary': $secondary,
-    'success': $success,
-    'light': $light,
-    'dark': $dark,
-    'danger': $danger
+	'primary': $primary,
+	'secondary': $secondary,
+	'success': $success,
+	'light': $light,
+	'dark': $dark,
+	'danger': $danger
 );
 // header height
 $header-height: 52px !default;
@@ -158,3 +158,4 @@ $alert-danger-border: #f5c6cb !default;
 // table
 
 $table-row-padding: 10px 12px 8px;
+$table-row-padding-th: 14px 12px 12px;
