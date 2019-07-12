@@ -600,3 +600,104 @@
         }
     }
 }
+.risk-factor-table {
+    .table {
+        tr {
+            &:last-child {
+                background-color: $table-footer-bg;
+                td {
+                    font-family: $font_bold;
+
+                    .pending,
+                    .approved,
+                    .rejected {
+                        font-family: $font_regular;
+                    }
+                }
+            }
+        }
+    }
+
+    margin-bottom: 32px;
+}
+
+.tags-section {
+    background-color: $upload-bg;
+    border: 1px solid $border-color;
+    border-radius: 8px;
+    height: 44px;
+    overflow: hidden;
+
+    .tag-status {
+        float: right;
+        width: 44px;
+        height: 44px;
+        background-color: $white;
+        border-left: 1px $border-color solid;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        span {
+            width: 24px;
+            height: 24px;
+            border-radius: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            i {
+                color: $white;
+                font-size: 12px;
+            }
+
+            &.danger {
+                background-color: #c91f37;
+            }
+
+            &.success {
+                background-color: #00c535;
+            }
+
+            &.warning {
+                background-color: #f4c200;
+            }
+        }
+    }
+
+    .tags {
+        width: calc(100% - 44px);
+        float: left;
+        height: 44px;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        padding: 0 15px;
+
+        i {
+            font-size: 16px;
+            margin-right: 10px;
+            color: $primary;
+        }
+
+        label {
+            text-transform: capitalize;
+            color: $body-color;
+            font-family: $font_medium;
+            font-size: 0.875rem;
+            margin-bottom: 0;
+        }
+    }
+}
+
+.kyc-status-section {
+    h3 {
+        margin-bottom: 20px;
+        font-size: 1.125rem;
+        font-family: $font_medium;
+    }
+
+    hr {
+        margin: 30px 0 25px;
+        border-color: $border-color;
+    }
+}
