@@ -61,7 +61,7 @@
                 a {
                     &:after {
                         content: '';
-                        background-color: #b35fa5;
+                        background-color: $secondary;
                         height: 3px;
                         width: 100%;
                         bottom: 0px;
@@ -69,6 +69,96 @@
                         position: absolute;
                         border-radius: 10px 10px 0px 0px;
                     }
+                }
+            }
+        }
+    }
+    &.step-menu {
+        li {
+            top: -7px;
+            margin-right: 60px;
+            position: relative;
+            &:after {
+                content: '';
+                width: 100%;
+                position: absolute;
+                margin: auto;
+                top: -9px;
+                height: 3px;
+                background-color: $border-color;
+                bottom: 0;
+                left: 70%;
+                border-radius: 6px;
+            }
+            a {
+                padding: 10px 12px;
+                span {
+                    font-size: 0.625rem;
+                    &.point {
+                        width: 21px;
+                        height: 21px;
+                        display: block;
+                        border-radius: 31px;
+                        margin: auto;
+                        border: 5px solid #fff;
+                        background-color: $border-color;
+                        i {
+                            display: none;
+                        }
+                    }
+                    &:not(.point) {
+                        top: 11px;
+                    }
+                }
+                &.router-link-active {
+                    &:after {
+                        display: none;
+                    }
+                }
+            }
+            &.router-link-exact-active {
+                &.router-link-active {
+                    .point {
+                        border: 5px solid $secondary;
+                        background-color: #fff;
+                        width: 21px;
+                        height: 21px;
+                    }
+                }
+            }
+            &:hover,
+            &:focus {
+                a {
+                    &:after {
+                        display: none;
+                    }
+                }
+            }
+            &.router-link-exact-active.router-link-active {
+                .point {
+                    i {
+                        display: none;
+                    }
+                }
+            }
+            &.router-link-active:not(.router-link-exact-active) {
+                .point {
+                    background-color: $secondary !important;
+                    border: 5px solid $secondary !important;
+                    i {
+                        display: block !important;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        left: -3px;
+                        font-size: 11px;
+                        color: #fff;
+                    }
+                }
+            }
+            &:last-child {
+                &:after {
+                    display: none;
                 }
             }
         }
@@ -268,5 +358,11 @@
                 }
             }
         }
+    }
+}
+
+.step-menu-header {
+    .profile-main {
+        top: -10px;
     }
 }

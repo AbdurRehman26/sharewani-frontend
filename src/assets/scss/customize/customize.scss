@@ -25,6 +25,58 @@
     padding: 36px 44px;
 }
 
+.info {
+    color: $nav-color;
+}
+
+.step-form {
+    h3 {
+        font-size: 1.125rem;
+        margin-bottom: 20px;
+    }
+    .fields-area {
+        border-bottom: 1px solid $grey-dark;
+        margin-bottom: 44px;
+        padding-bottom: 20px;
+    }
+    .rangeto {
+        span {
+            position: absolute;
+            bottom: 36px;
+            margin: auto;
+            left: 49%;
+            color: $grey-medium;
+        }
+    }
+}
+
+.registration-completed {
+    p {
+        font-size: 0.875rem;
+    }
+}
+
+.generated-customer-id {
+    border: 1px solid $border-color;
+    box-sizing: border-box;
+    border-radius: 8px;
+    display: flex;
+    margin: auto;
+    padding: 8px 10px;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    max-width: 200px;
+    h4 {
+        font-family: $font_thin;
+    }
+    p {
+        margin-bottom: 0px;
+        font-size: 0.75rem;
+        color: $nav-color;
+    }
+}
+
 .work-impact {
     position: relative;
     text-decoration: none;
@@ -227,6 +279,10 @@
         position: relative;
         top: 2px;
     }
+}
+
+.form-options {
+    padding-top: 20px;
 }
 
 .profile-area {

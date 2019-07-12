@@ -1,16 +1,44 @@
 <template>
-    <div class="customer-profile">
-        <div class="content-area">
-            <base-header :menuListing="menuListing" stepStyle></base-header>
-            <div class="right-panel">
-                <router-view></router-view>
+    <div class="wrap-content customer-section">
+        <div class="filter-section">
+            <div class="row">
+                <div class="col-md-4">
+                    <h2>Register Customers</h2>
+                </div>
             </div>
+        </div>
+        <div class="card">
+            <b-form class="step-form">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h3>Step 2: Record Video</h3>
+                        <p class="info">
+                            Please point video camera on customer face and make
+                            sure their straight face is completly visible in the
+                            video. Click on Record button to record 10 seconds
+                            video.
+                        </p>
+                        <div class="video-record">
+                            <img src="@/assets/images/Video.png" />
+                        </div>
+                        <base-button
+                            btnType="submit"
+                            btnVariant="primary"
+                            btnLabel="CONTINUE"
+                            @click="
+                                $router.push('/register-customer/setup-profile')
+                            "
+                        ></base-button>
+                    </div>
+                </div>
+            </b-form>
         </div>
     </div>
 </template>
-
 <script>
 export default {
+    components: {},
+
     /*
     |--------------------------------------------------------------------------
     | Component > props
@@ -33,35 +61,7 @@ export default {
     |--------------------------------------------------------------------------
     */
     data() {
-        return {
-            menuListing: [
-                {
-                    anchorLink: '/register-customer/upload-document',
-                    menuLabel: 'Upload Documents',
-                    sessionStep: '1',
-                },
-                {
-                    anchorLink: '/register-customer/record-video',
-                    menuLabel: 'Record Video',
-                    sessionStep: '2',
-                },
-                {
-                    anchorLink: '/register-customer/setup-profile',
-                    menuLabel: 'Setup Profile',
-                    sessionStep: '3',
-                },
-                {
-                    anchorLink: '/register-customer/account-info',
-                    menuLabel: 'Account Info',
-                    sessionStep: '4',
-                },
-                {
-                    anchorLink: '/register-customer/finish',
-                    menuLabel: 'Finish',
-                    sessionStep: '5',
-                },
-            ],
-        }
+        return {}
     }, // End of Component > data
 
     /*

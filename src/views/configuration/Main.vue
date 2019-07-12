@@ -3,7 +3,7 @@
         <div class="content-area">
             <base-header :menuListing="menuListing"></base-header>
             <div class="right-panel">
-                <router-view></router-view>
+                <router-view />
             </div>
         </div>
     </div>
