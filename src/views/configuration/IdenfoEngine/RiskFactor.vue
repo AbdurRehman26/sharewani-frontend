@@ -2,32 +2,19 @@
     <div class="infoengine">
         <div class="filter-section">
             <div class="row">
-                <div class="col-md-4">
-                    <h2>Work Type Factor</h2>
-                </div>
-                <div class="col-md-8 text-right">
-                    <ul>
-                        <li>
-                            <base-search
-                                :placeholder="'Search work type'"
-                            ></base-search>
-                        </li>
-                        <li>
-                            <b-button type="button" variant="primary"
-                                >Apply</b-button
-                            >
-                        </li>
-                        <li>
-                            <b-button type="button" variant="secondary"
-                                >+ Add Work Type</b-button
-                            >
-                        </li>
-                    </ul>
+                <div class="col-md-6">
+                    <h2>Risk Factor & Weightage</h2>
                 </div>
             </div>
         </div>
         <div class="table-section m-b-30">
             <b-table :items="items" :fields="fields">
+                <template slot="scorescale" slot-scope="data">
+                    <div class="work-impact">
+                        <span>{{ data.value }}</span>
+                        <i class="icon-caret-right"></i>
+                    </div>
+                </template>
                 <template slot="action" slot-scope="data">
                     <div class="action-review">
                         <a
@@ -105,10 +92,10 @@ export default {
     methods: {
         initializeData() {
             //system log table
-            let configTableFields = this.configuration.idenfoEngine.workfactor
+            let configTableFields = this.configuration.idenfoEngine.riskFactor
                 .fields //get user data from store
             this.fields = configTableFields //push data into array
-            let configTableItems = this.configuration.idenfoEngine.workfactor
+            let configTableItems = this.configuration.idenfoEngine.riskFactor
                 .items //get user data from store
             this.items = configTableItems //push data into array
         },

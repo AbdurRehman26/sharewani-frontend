@@ -70,12 +70,12 @@ export default {
                     menuLabel: 'Customer Profiles',
                 },
                 {
-                    anchorLink: '/',
+                    anchorLink: '/register-customer',
                     icon: 'icon-add-customer',
                     menuLabel: 'Register Customer',
                 },
                 {
-                    anchorLink: '/',
+                    anchorLink: '/search-people',
                     icon: 'icon-world',
                     menuLabel: 'Search People',
                 },
@@ -95,7 +95,7 @@ export default {
                     menuLabel: 'System Logs',
                 },
                 {
-                    anchorLink: '/',
+                    anchorLink: '/data-export',
                     icon: 'icon-export',
                     menuLabel: 'Data Export',
                 },

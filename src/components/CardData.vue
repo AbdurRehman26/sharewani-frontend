@@ -1,45 +1,51 @@
 <template>
-    <div class="auth-wrapper middle-aligner">
-        <div class="inner">
-            <base-logo class="main-logo"></base-logo>
-            <div class="card card-auth  with-shadow">
-                <h2 class="auth-heading">
-                    Check your Inbox
-                    <span>
-                        We have sent an email at
-                        <i>ars•••••••••@bank.com</i> containing instructions on
-                        how to change your password to the email address you
-                        supplied.
-                    </span>
-                </h2>
-                <span class="email-sent-icon">
-                    <img src="@/assets/images/envelope-alt.png"
-                /></span>
-                <base-button
-                    btnLabel="BACK TO LOGIN"
-                    btnType="submit"
-                    btnVariant="primary"
-                    class="back-to-login-btn"
-                    @click="$router.push('/')"
-                ></base-button>
-            </div>
-        </div>
+    <div class="card custom-card">
+        <div
+            class="logo"
+            :style="{
+                'background-image':
+                    'url(' +
+                    require('@/assets/images/data-image/' + logo + '') +
+                    ')',
+            }"
+        ></div>
+        <h4>{{ name }}</h4>
+        <p>{{ lastUpdate }}</p>
+        <p>{{ totalRecord }}</p>
+        <b-button @click="$emit('updateData')" variant="primary"
+            >Update Data Set</b-button
+        >
+        <b-button @click="$emit('currentData')" variant="link"
+            ><i class="icon-cloud"></i> Download Current Data Set</b-button
+        >
     </div>
 </template>
-
 <script>
 export default {
-    components: {},
     /*
         |--------------------------------------------------------------------------
         | Component > props
         |--------------------------------------------------------------------------
         */
     props: {
-        /**
-         * Value to determine the current compose mode which
-         * varies between 'add' and 'edit'
-         */
+        logo: {
+            type: String,
+            default: null,
+        },
+        name: {
+            type: String,
+            default: null,
+        },
+
+        lastUpdate: {
+            type: String,
+            default: null,
+        },
+
+        totalRecord: {
+            type: String,
+            default: null,
+        },
     }, // End of Component > props
 
     /*

@@ -38,11 +38,15 @@ export default {
         return {
             menuListing: [
                 {
-                    anchorLink: '/configuration',
+                    anchorLink: '/configuration/idenfo-engine/',
                     menuLabel: 'Idenfo Engine',
                 },
                 {
-                    anchorLink: '/',
+                    anchorLink: '/configuration/import-data/',
+                    menuLabel: 'Import Data',
+                },
+                {
+                    anchorLink: '/configuration/form-builder/',
                     menuLabel: 'Registration Form Builder',
                 },
             ],

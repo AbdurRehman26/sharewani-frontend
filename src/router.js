@@ -24,7 +24,7 @@ export default new Router({
                     },
                 },
                 {
-                    path: '/forgot-password',
+                    path: 'auth/forgot-password',
                     name: 'forgot-page',
                     component: () =>
                         import(/* webpackChunkName: "forgot-password" */ '@/views/auth/ForgotPassword.vue'),
@@ -33,7 +33,7 @@ export default new Router({
                     },
                 },
                 {
-                    path: '/reset-password',
+                    path: 'auth/reset-password',
                     name: 'reset-password-page',
                     component: () =>
                         import(/* webpackChunkName: "reset-password" */ '@/views/auth/ResetPassword.vue'),
@@ -42,7 +42,7 @@ export default new Router({
                     },
                 },
                 {
-                    path: '/email-sent',
+                    path: 'auth/email-sent',
                     name: 'email-sent-page',
                     component: () =>
                         import(/* webpackChunkName: "email-sent" */ '@/views/auth/EmailSent.vue'),
@@ -75,13 +75,13 @@ export default new Router({
                         import(/* webpackChunkName: "dashboard-alerts" */ '@/views/dashboard/Alert.vue'),
                 },
                 {
-                    path: 'dashbaord-activity',
+                    path: 'activity',
                     name: 'dashboard-activity-page',
                     component: () =>
                         import(/* webpackChunkName: "dashboard-activity" */ '@/views/dashboard/Activity.vue'),
                 },
                 {
-                    path: 'dashbaord-reporting',
+                    path: 'reporting',
                     name: 'dashboard-reporting-page',
                     component: () =>
                         import(/* webpackChunkName: "dashboard-reporting" */ '@/views/dashboard/Reporting.vue'),
@@ -98,7 +98,7 @@ export default new Router({
                     path: '/',
                     name: 'system-users',
                     component: () =>
-                        import(/* webpackChunkName: "system-users" */ '@/views/systemusers/SystemUsers.vue'),
+                        import(/* webpackChunkName: "system-users" */ '@/views/systemusers/Users.vue'),
                 },
                 {
                     path: 'roles',
@@ -111,6 +111,12 @@ export default new Router({
                     name: 'branches-page',
                     component: () =>
                         import(/* webpackChunkName: "branches" */ '@/views/systemusers/Branches.vue'),
+                },
+                {
+                    path: 'application-access',
+                    name: 'application-access-page',
+                    component: () =>
+                        import(/* webpackChunkName: "branches" */ '@/views/systemusers/Access.vue'),
                 },
             ],
         },
@@ -214,7 +220,7 @@ export default new Router({
                 import(/* webpackChunkName: "system-logs" */ '@/views/configuration/Main.vue'),
             children: [
                 {
-                    path: '/',
+                    path: '/configuration',
                     name: 'idenfo-engine',
                     component: () =>
                         import(/* webpackChunkName: "customer" */ './views/configuration/IdenfoEngine/Main.vue'),
@@ -226,18 +232,67 @@ export default new Router({
                                 import(/* webpackChunkName: "customer" */ './views/configuration/IdenfoEngine/Nationality.vue'),
                         },
                         {
-                            path: '/configuration/workfactor',
-                            name: 'workfactor',
+                            path: '/configuration/idenfo-engine/',
+                            name: 'nationality',
+                            component: () =>
+                                import(/* webpackChunkName: "customer" */ './views/configuration/IdenfoEngine/Nationality.vue'),
+                        },
+
+                        {
+                            path: '/configuration/idenfo-engine/work',
+                            name: 'workFactor',
                             component: () =>
                                 import(/* webpackChunkName: "customer" */ './views/configuration/IdenfoEngine/WorkFactor.vue'),
                         },
                         {
-                            path: '/configuration/industryfactor',
-                            name: 'industryfactor',
+                            path: '/configuration/idenfo-engine/industry',
+                            name: 'industryFactor',
                             component: () =>
                                 import(/* webpackChunkName: "customer" */ './views/configuration/IdenfoEngine/IndustryFactor.vue'),
                         },
+                        {
+                            path: '/configuration/idenfo-engine/product',
+                            name: 'productFactor',
+                            component: () =>
+                                import(/* webpackChunkName: "customer" */ './views/configuration/IdenfoEngine/ProductFactor.vue'),
+                        },
+                        {
+                            path: '/configuration/idenfo-engine/state',
+                            name: 'stateFactor',
+                            component: () =>
+                                import(/* webpackChunkName: "customer" */ './views/configuration/IdenfoEngine/StateFactor.vue'),
+                        },
+                        {
+                            path: '/configuration/idenfo-engine/relationship',
+                            name: 'relationshipFactor',
+                            component: () =>
+                                import(/* webpackChunkName: "customer" */ './views/configuration/IdenfoEngine/RelationshipPanel.vue'),
+                        },
+                        {
+                            path: '/configuration/idenfo-engine/channel',
+                            name: 'channelFactor',
+                            component: () =>
+                                import(/* webpackChunkName: "customer" */ './views/configuration/IdenfoEngine/ChannelFactor.vue'),
+                        },
+                        {
+                            path: '/configuration/idenfo-engine/risk',
+                            name: 'riskFactor',
+                            component: () =>
+                                import(/* webpackChunkName: "customer" */ './views/configuration/IdenfoEngine/RiskFactor.vue'),
+                        },
+                        {
+                            path: '/configuration/idenfo-engine/risk-rating',
+                            name: 'riskRating',
+                            component: () =>
+                                import(/* webpackChunkName: "customer" */ './views/configuration/IdenfoEngine/RiskRating.vue'),
+                        },
                     ],
+                },
+                {
+                    path: '/configuration/import-data/',
+                    name: 'import-data',
+                    component: () =>
+                        import(/* webpackChunkName: "customer" */ './views/configuration/ImportData.vue'),
                 },
             ],
         },

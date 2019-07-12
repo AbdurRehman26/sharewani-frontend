@@ -1,30 +1,12 @@
 <template>
-    <div class="auth-wrapper middle-aligner">
-        <div class="inner">
-            <base-logo class="main-logo"></base-logo>
-            <div class="card card-auth  with-shadow">
-                <h2 class="auth-heading">
-                    Check your Inbox
-                    <span>
-                        We have sent an email at
-                        <i>ars•••••••••@bank.com</i> containing instructions on
-                        how to change your password to the email address you
-                        supplied.
-                    </span>
-                </h2>
-                <span class="email-sent-icon">
-                    <img src="@/assets/images/envelope-alt.png"
-                /></span>
-                <base-button
-                    btnLabel="BACK TO LOGIN"
-                    btnType="submit"
-                    btnVariant="primary"
-                    class="back-to-login-btn"
-                    @click="$router.push('/')"
-                ></base-button>
-            </div>
-        </div>
-    </div>
+    <b-button
+        :type="btnType"
+        :variant="btnVariant"
+        :class="cssClass"
+        @click="$emit('click')"
+        ><span class="btn-text">{{ btnLabel }}</span>
+        <span class="loader"></span>
+    </b-button>
 </template>
 
 <script>
@@ -36,6 +18,20 @@ export default {
         |--------------------------------------------------------------------------
         */
     props: {
+        btnType: {
+            type: String,
+            default: 'Submit',
+        },
+        btnVariant: {
+            type: String,
+            default: 'primary',
+        },
+        cssClass: {
+            type: String,
+        },
+        btnLabel: {
+            type: String,
+        },
         /**
          * Value to determine the current compose mode which
          * varies between 'add' and 'edit'

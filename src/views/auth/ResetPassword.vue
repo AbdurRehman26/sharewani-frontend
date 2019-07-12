@@ -38,7 +38,6 @@
                         <b-button type="submit" variant="primary"
                             >RESET</b-button
                         >
-                        >
                     </b-form>
                 </div>
             </div>

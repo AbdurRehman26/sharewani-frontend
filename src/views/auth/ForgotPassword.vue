@@ -24,12 +24,12 @@
                                 placeholder="Enter username"
                             ></b-form-input>
                         </b-form-group>
-                        <b-button
-                            type="submit"
-                            variant="primary"
-                            @click="$router.push('/email-sent')"
-                            >SEND INSTRUCTIONS</b-button
-                        >
+                        <base-button
+                            btnLabel="SEND INSTRUCTIONS"
+                            btnType="submit"
+                            btnVariant="primary"
+                            @click="$router.push('email-sent')"
+                        ></base-button>
                         <router-link
                             to="/"
                             class="btn forgot-link btn-link float-right"

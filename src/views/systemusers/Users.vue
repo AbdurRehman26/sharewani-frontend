@@ -1,59 +1,73 @@
 <template>
     <div class="wrap-content">
-        <div class="filter-section">
+        <div class="filter-section full-area">
             <div class="row">
-                <div class="col-md-12 system-user-filter">
-                    <ul>
-                        <li>
-                            <h2>System Users</h2>
-                        </li>
-                        <li>
-                            <base-search></base-search>
-                        </li>
-                        <li>
-                            <b-form-group>
-                                <b-form-select
-                                    id="input-3"
-                                    class="form-control"
-                                    v-model="filterByUserRoles"
-                                    :options="filterUserRoles"
-                                    required
-                                ></b-form-select>
-                            </b-form-group>
-                        </li>
-                        <li>
-                            <b-form-group>
-                                <b-form-select
-                                    id="input-3"
-                                    class="form-control"
-                                    v-model="filterByBranch"
-                                    :options="filterByBranches"
-                                    required
-                                ></b-form-select>
-                            </b-form-group>
-                        </li>
-                        <li>
-                            <b-form-group>
-                                <b-form-select
-                                    id="input-3"
-                                    class="form-control"
-                                    v-model="filterByStatus"
-                                    :options="filterByStatusOption"
-                                    required
-                                ></b-form-select>
-                            </b-form-group>
-                        </li>
-                        <li>
-                            <b-button type="button" variant="primary"
-                                >Apply</b-button
-                            >
-                        </li>
-                        <li>
-                            <b-button type="button" variant="secondary"
-                                >+ Add User</b-button
-                            >
-                        </li>
-                    </ul>
+                <div class="col-md-3">
+                    <h2>System Users</h2>
+                </div>
+
+                <div class="col-md-12 ">
+                    <div class="row">
+                        <div class="col-xs-12 col-md-9">
+                            <div class="row">
+                                <div class="col-xs-12 col-md-3">
+                                    <base-search></base-search>
+                                </div>
+                                <div class="col-xs-12 col-md-3">
+                                    <b-form-group>
+                                        <b-form-select
+                                            id="input-3"
+                                            class="form-control"
+                                            v-model="filterByUserRoles"
+                                            :options="filterUserRoles"
+                                            required
+                                        ></b-form-select>
+                                    </b-form-group>
+                                </div>
+                                <div class="col-xs-12 col-md-3">
+                                    <b-form-group>
+                                        <b-form-select
+                                            id="input-3"
+                                            class="form-control"
+                                            v-model="filterByBranch"
+                                            :options="filterByBranches"
+                                            required
+                                        ></b-form-select>
+                                    </b-form-group>
+                                </div>
+                                <div class="col-xs-12 col-md-3">
+                                    <b-form-group>
+                                        <b-form-select
+                                            id="input-3"
+                                            class="form-control"
+                                            v-model="filterByStatus"
+                                            :options="filterByStatusOption"
+                                            required
+                                        ></b-form-select>
+                                    </b-form-group>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-md-3">
+                            <div class="row">
+                                <div class="col-xs-12 col-md-5">
+                                    <base-button
+                                        btnLabel="Apply"
+                                        btnType="submit"
+                                        btnVariant="primary"
+                                        class="btn-block"
+                                    ></base-button>
+                                </div>
+                                <div class="col-xs-12 col-md-7">
+                                    <base-button
+                                        btnLabel="+ Add User"
+                                        btnType="submit"
+                                        btnVariant="secondary"
+                                    ></base-button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -99,14 +113,9 @@
                 <template slot="status" slot-scope="data">
                     <base-status :statusType="data.value"></base-status>
                 </template>
-
+                <!-- action slot -->
                 <template slot="action" slot-scope="data">
-                    <div class="action-review">
-                        <router-link to="/customer-information">
-                            <i class="icon-eye-view"></i>
-                            <span>{{ data.value }}</span>
-                        </router-link>
-                    </div>
+                    <base-action :actionType="data.value"></base-action>
                 </template>
             </b-table>
         </div>
@@ -158,28 +167,28 @@ export default {
 
             filterUserRoles: [
                 { text: 'Filter by user roles', value: null },
-                'Name Screening',
-                'Documentation',
-                'Risk Rating',
-                'Status',
+                'Super Admin',
+                'Maker',
+                'Checker',
+                'Approver',
+                'Relationship Manager',
             ],
             filterByBranch: null,
 
             filterByBranches: [
                 { text: 'Filter by branch', value: null },
-                'Name Screening',
-                'Documentation',
-                'Risk Rating',
-                'Status',
+                'United Arab Emirates',
+                'Pakistan',
+                'United Kingdom',
+                'United States of America',
             ],
             filterByStatus: null,
 
             filterByStatusOption: [
                 { text: 'Filter by status', value: null },
-                'Name Screening',
-                'Documentation',
-                'Risk Rating',
-                'Status',
+                'Active',
+                'Pending',
+                'Archived',
             ],
         }
     }, // End of Component > data

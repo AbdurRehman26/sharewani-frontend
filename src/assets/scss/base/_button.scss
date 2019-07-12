@@ -26,6 +26,18 @@
         @include font-size(0.5);
         margin-right: 4px;
     }
+    &.disabled {
+        pointer-events: none;
+        .loader {
+            display: block;
+        }
+        .btn-text {
+            opacity: 0;
+        }
+        .loader {
+            top: 8px;
+        }
+    }
     &.disable {
         color: $grey-medium !important;
         background: #f2f2f6 !important;

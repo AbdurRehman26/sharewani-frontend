@@ -37,6 +37,24 @@
         >
             <i class="icon-wrong"></i> <span>Rejected</span>
         </span>
+        <span
+            class="rejected status-view"
+            v-if="statusType == 'high risk' || statusType == 'High Risk'"
+        >
+            <i class="icon-high-risk"></i> <span>High Risk</span>
+        </span>
+        <span
+            class="pending status-view"
+            v-if="statusType == 'medium risk' || statusType == 'Medium Risk'"
+        >
+            <i class="icon-medium-risk"></i> <span>Medium Risk</span>
+        </span>
+        <span
+            class="approved status-view"
+            v-if="statusType == 'low risk' || statusType == 'Low Risk'"
+        >
+            <i class="icon-low-risk"></i> <span>Low Risk</span>
+        </span>
     </div>
 </template>
 

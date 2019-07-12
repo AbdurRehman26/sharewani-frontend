@@ -11,14 +11,18 @@
                             <base-search></base-search>
                         </li>
                         <li>
-                            <b-button type="button" variant="primary"
-                                >Apply</b-button
-                            >
+                            <base-button
+                                btnLabel="Apply"
+                                btnType="submit"
+                                btnVariant="primary"
+                            ></base-button>
                         </li>
                         <li>
-                            <b-button type="button" variant="secondary"
-                                >+ Add Role</b-button
-                            >
+                            <base-button
+                                btnLabel="+ Add Role"
+                                btnType="submit"
+                                btnVariant="secondary"
+                            ></base-button>
                         </li>
                     </ul>
                 </div>
@@ -34,17 +38,8 @@
                     <base-status :statusType="data.value"></base-status>
                 </template>
                 <!-- action slot -->
-                <template slot="action">
-                    <div class="action-column">
-                        <router-link to="/customer-information">
-                            <i class="icon-eye-view"></i>
-                            <span>Modify</span>
-                        </router-link>
-                        <router-link to="/customer-information">
-                            <i class="icon-check"></i>
-                            <span>Activate</span>
-                        </router-link>
-                    </div>
+                <template slot="action" slot-scope="data">
+                    <base-action :actionType="data.value"></base-action>
                 </template>
             </b-table>
         </div>

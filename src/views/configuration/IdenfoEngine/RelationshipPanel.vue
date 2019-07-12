@@ -3,13 +3,13 @@
         <div class="filter-section">
             <div class="row">
                 <div class="col-md-4">
-                    <h2>Work Type Factor</h2>
+                    <h2>Relationship Length Factor</h2>
                 </div>
                 <div class="col-md-8 text-right">
                     <ul>
                         <li>
                             <base-search
-                                :placeholder="'Search work type'"
+                                :placeholder="'Search relationship length'"
                             ></base-search>
                         </li>
                         <li>
@@ -19,7 +19,7 @@
                         </li>
                         <li>
                             <b-button type="button" variant="secondary"
-                                >+ Add Work Type</b-button
+                                >+ Add Relationship Length</b-button
                             >
                         </li>
                     </ul>
@@ -28,6 +28,15 @@
         </div>
         <div class="table-section m-b-30">
             <b-table :items="items" :fields="fields">
+                <template slot="worktypeimpact" slot-scope="data">
+                    <div class="work-impact">
+                        <span>{{ data.value }}</span>
+                        <i class="icon-caret-right"></i>
+                    </div>
+                </template>
+                <template slot="rating" slot-scope="data">
+                    <base-status :statusType="data.value"></base-status>
+                </template>
                 <template slot="action" slot-scope="data">
                     <div class="action-review">
                         <a
@@ -105,11 +114,11 @@ export default {
     methods: {
         initializeData() {
             //system log table
-            let configTableFields = this.configuration.idenfoEngine.workfactor
-                .fields //get user data from store
+            let configTableFields = this.configuration.idenfoEngine
+                .relationshipData.fields //get user data from store
             this.fields = configTableFields //push data into array
-            let configTableItems = this.configuration.idenfoEngine.workfactor
-                .items //get user data from store
+            let configTableItems = this.configuration.idenfoEngine
+                .relationshipData.items //get user data from store
             this.items = configTableItems //push data into array
         },
     }, // End of Component > methods

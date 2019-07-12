@@ -1240,7 +1240,7 @@ export default {
         ],
     },
     systemUserTable: {
-        users: {
+        alerts: {
             fields: [
                 {
                     key: 'profile',
@@ -1259,12 +1259,149 @@ export default {
                     label: 'NATIONALITY',
                 },
                 {
-                    key: 'residence',
-                    label: 'RESIDENCE',
+                    key: 'name_screening',
+                    label: 'NAME SCREENING',
+                    thClass: 'person-icon',
                 },
                 {
-                    key: 'registration_date',
-                    label: 'Registration Date',
+                    key: 'documentation',
+                    label: 'DOCUMENTATION',
+                    thClass: 'document-icon',
+                },
+                {
+                    key: 'risk_rating',
+                    label: 'RISK RATING',
+                    thClass: 'graph-icon',
+                },
+                {
+                    key: 'status',
+                    label: 'STATUS',
+                },
+            ],
+            items: [
+                {
+                    profile: 'member-1.png',
+                    customer: '1250976',
+                    full_name: 'Zeng Wen',
+                    nationality: 'British',
+                    name_screening: 'pending',
+                    documentation: 'inreview',
+                    risk_rating: 'reject',
+                    status: 'lock',
+                },
+                {
+                    profile: 'member-2.png',
+                    customer: '1250976',
+                    full_name: 'Edward Lindgren',
+                    nationality: 'British',
+                    name_screening: 'inreview',
+                    documentation: 'pending',
+                    risk_rating: 'pending',
+                    status: 'review',
+                },
+                {
+                    profile: 'member-3.png',
+                    customer: '3282345',
+                    full_name: 'Christian Russell',
+                    nationality: 'American',
+                    name_screening: 'pending',
+                    documentation: 'inreview',
+                    risk_rating: 'reject',
+                    status: 'lock',
+                },
+                {
+                    profile: 'member-4.png',
+                    customer: '3312353',
+                    full_name: 'Fua Lamba',
+                    nationality: 'Singaporean',
+                    name_screening: 'reject',
+                    documentation: 'pending',
+                    risk_rating: 'inreview',
+                    status: 'lock',
+                },
+                {
+                    profile: 'member-5.png',
+                    customer: '1250976',
+                    full_name: 'Alexander Ljung',
+                    nationality: 'Greek',
+                    name_screening: 'pending',
+                    documentation: 'pending',
+                    risk_rating: 'inreview',
+                    status: 'review',
+                },
+                {
+                    profile: 'member-6.png',
+                    customer: '2489573',
+                    full_name: 'Chukwudi Udo',
+                    nationality: 'Mexican',
+                    name_screening: 'pending',
+                    documentation: 'inreview',
+                    risk_rating: 'pending',
+                    status: 'review',
+                },
+                {
+                    profile: 'member-7.png',
+                    customer: '3312353',
+                    full_name: 'Linzell Bowman',
+                    nationality: 'British',
+                    name_screening: 'pending',
+                    documentation: 'inreview',
+                    risk_rating: 'reject',
+                    status: 'review',
+                },
+                {
+                    profile: 'member-8.png',
+                    customer: '3282345',
+                    full_name: 'Vương Mộng Nhi',
+                    nationality: 'Chinese',
+                    name_screening: 'reject',
+                    documentation: 'pending',
+                    risk_rating: 'pending',
+                    status: 'review',
+                },
+                {
+                    profile: 'member-9.png',
+                    customer: '2321345',
+                    full_name: 'Lew Silverton',
+                    nationality: 'British',
+                    name_screening: 'pending',
+                    documentation: 'reject',
+                    risk_rating: 'inreview',
+                    status: 'review',
+                },
+                {
+                    profile: 'member-10.png',
+                    customer: '2223535',
+                    full_name: 'Xun Guiying',
+                    nationality: 'Chinese',
+                    name_screening: 'inreview',
+                    documentation: 'pending',
+                    risk_rating: 'pending',
+                    status: 'review',
+                },
+            ],
+        },
+        users: {
+            fields: [
+                {
+                    key: 'profile',
+                    label: '',
+                },
+                {
+                    key: 'user',
+                    label: 'User',
+                },
+                {
+                    key: 'role',
+                    label: 'Role',
+                },
+                {
+                    key: 'date_segments',
+                    label: 'Date Segments',
+                },
+                {
+                    key: 'join_date',
+                    label: 'Join Date',
                 },
                 {
                     key: 'status',
@@ -1278,103 +1415,163 @@ export default {
             items: [
                 {
                     profile: 'member-1.png',
-                    customer: '296192',
-                    full_name: 'Chineze Afamefuna',
-                    nationality: 'Indian',
-                    residence: 'United Kingdom',
-                    registration_date: 'Jun 10, 2019 6:35 p.m.',
-                    status: 'pending',
-                    action: 'View Profile',
+                    user: 'Chineze Afamefuna',
+                    role: 'Super Admin',
+                    date_segments: 'All',
+                    join_date: 'Jun 10, 2019 6:35 p.m.',
+                    status: 'Active',
+                    action: [
+                        {
+                            text: 'Modify',
+                        },
+                        {
+                            text: 'Archive',
+                        },
+                    ],
                 },
                 {
                     profile: 'member-2.png',
-                    customer: '221021',
-                    full_name: 'Alex Edwards',
-                    nationality: 'Pakistani',
-                    residence: 'Pakistan',
-                    registration_date: 'Jun 10, 2019 10:30 p.m.',
-                    status: 'approved',
-                    action: 'View Profile',
+                    user: 'Regina Pollastro',
+                    role: 'Maker',
+                    date_segments: 'PK',
+                    join_date: 'Jun 10, 2019 6:35 p.m.',
+                    status: 'Active',
+                    action: [
+                        {
+                            text: 'Modify',
+                        },
+                        {
+                            text: 'Archive',
+                        },
+                    ],
                 },
                 {
                     profile: 'member-3.png',
-                    customer: '236912',
-                    full_name: 'Regina Pollastro',
-                    nationality: 'British',
-                    residence: 'United Kingdom',
-                    registration_date: 'Jun 9, 2019 10:45 a.m.',
-                    status: 'rejected',
-                    action: 'View Profile',
+                    user: 'Boris Ukhtomsky',
+                    role: 'Checker',
+                    date_segments: 'PK',
+                    join_date: 'Jun 10, 2019 6:35 p.m.',
+                    status: 'Pending',
+                    action: [
+                        {
+                            text: 'Modify',
+                        },
+                        {
+                            text: 'Archive',
+                        },
+                    ],
                 },
                 {
                     profile: 'member-4.png',
-                    customer: '266171',
-                    full_name: 'Boris Ukhtomsky',
-                    nationality: 'American',
-                    residence: 'United Kingdom',
-                    registration_date: 'Jun 9, 2019 9:30 p.m.',
-                    status: 'approved',
-                    action: 'View Profile',
+                    user: 'Kimmy McIlmorie',
+                    role: 'Maker',
+                    date_segments: 'PK',
+                    join_date: 'Jun 9, 2019 6:35 p.m.',
+                    status: 'Active',
+                    action: [
+                        {
+                            text: 'Modify',
+                        },
+                        {
+                            text: 'Archive',
+                        },
+                    ],
                 },
                 {
                     profile: 'member-5.png',
-                    customer: '284619',
-                    full_name: 'Kimmy McIlmorie',
-                    nationality: 'Algerian',
-                    residence: 'United Kingdom',
-                    registration_date: 'Jun 9, 2019 9:10 p.m.',
-                    status: 'approved',
-                    action: 'View Profile',
+                    user: 'Noell Blue',
+                    role: 'Checker',
+                    date_segments: 'UAE',
+                    join_date: 'Jun 9, 2019 6:35 p.m.',
+                    status: 'Active',
+                    action: [
+                        {
+                            text: 'Modify',
+                        },
+                        {
+                            text: 'Archive',
+                        },
+                    ],
                 },
                 {
                     profile: 'member-6.png',
-                    customer: '299488',
-                    full_name: 'Noell Blue',
-                    nationality: 'Belgian',
-                    residence: 'United Kingdom',
-                    registration_date: 'Jun 8, 2019 6:45 p.m.',
-                    status: 'approved',
-                    action: 'View Profile',
+                    user: 'Qin Shi',
+                    role: 'Maker',
+                    date_segments: 'UAE',
+                    join_date: 'Jun 9, 2019 6:35 p.m.',
+                    status: 'Active',
+                    action: [
+                        {
+                            text: 'Modify',
+                        },
+                        {
+                            text: 'Archive',
+                        },
+                    ],
                 },
                 {
                     profile: 'member-7.png',
-                    customer: '297438',
-                    full_name: 'Qin Shi',
-                    nationality: 'Colombian',
-                    residence: 'United Kingdom',
-                    registration_date: 'Jun 8, 2019 4:24 p.m.',
-                    status: 'rejected',
-                    action: 'View Profile',
+                    user: 'Julian Gruber',
+                    role: 'Maker',
+                    date_segments: 'UAE',
+                    join_date: 'Jun 8, 2019 6:35 p.m.',
+                    status: 'Active',
+                    action: [
+                        {
+                            text: 'Modify',
+                        },
+                        {
+                            text: 'Archive',
+                        },
+                    ],
                 },
                 {
                     profile: 'member-8.png',
-                    customer: '275731',
-                    full_name: 'Julian Gruber',
-                    nationality: 'British',
-                    residence: 'Pakistan',
-                    registration_date: 'Jun 8, 2019 3:10 p.m.',
-                    status: 'pending',
-                    action: 'View Profile',
+                    user: 'Mathijn Agter',
+                    role: 'Approver',
+                    date_segments: 'UK',
+                    join_date: 'Jun 8, 2019 6:35 p.m.',
+                    status: 'Active',
+                    action: [
+                        {
+                            text: 'Modify',
+                        },
+                        {
+                            text: 'Archive',
+                        },
+                    ],
                 },
                 {
                     profile: 'member-9.png',
-                    customer: '217831',
-                    full_name: 'Mathijn Agter',
-                    nationality: 'Indian',
-                    residence: 'Indian',
-                    registration_date: 'Jun 8, 2019 11:32 p.m.',
-                    status: 'approved',
-                    action: 'View Profile',
+                    user: 'Shadrias Pearson',
+                    role: 'Relationship Manager',
+                    date_segments: 'UK',
+                    join_date: 'Jun 9, 2019 6:35 p.m.',
+                    status: 'Active',
+                    action: [
+                        {
+                            text: 'Modify',
+                        },
+                        {
+                            text: 'Archive',
+                        },
+                    ],
                 },
                 {
                     profile: 'member-10.png',
-                    customer: '293397',
-                    full_name: 'Shadrias Pearson',
-                    nationality: 'Pakistani',
-                    residence: 'Pakistan',
-                    registration_date: 'Jun 7, 2019 5:45 p.m.',
-                    status: 'approved',
-                    action: 'View Profile',
+                    user: 'Boris Ukhtomsky',
+                    role: 'Maker',
+                    date_segments: 'PK',
+                    join_date: 'Jun 7, 2019 6:35 p.m.',
+                    status: 'Archived',
+                    action: [
+                        {
+                            text: 'Modify',
+                        },
+                        {
+                            text: 'Archive',
+                        },
+                    ],
                 },
             ],
         },
@@ -1487,5 +1684,1169 @@ export default {
                 },
             ],
         },
+        applications: {
+            fields: [
+                {
+                    key: 'application_title',
+                    label: 'Application Title',
+                },
+                {
+                    key: 'branches',
+                    label: 'BRANCHES',
+                },
+                {
+                    key: 'status',
+                    label: 'Status',
+                },
+                {
+                    key: 'action',
+                    label: 'Action',
+                    tdClass: 'user-roles-action',
+                },
+            ],
+            items: [
+                {
+                    application_title: 'Core Banking System',
+                    branches: 'PK, UAE',
+                    status: 'Active',
+                    action: [
+                        {
+                            text: 'Modify',
+                        },
+                        {
+                            text: 'Archive',
+                        },
+                    ],
+                },
+                {
+                    application_title: 'Financial Reporting System',
+                    branches: 'PK',
+                    status: 'Active',
+                    action: [
+                        {
+                            text: 'Modify',
+                        },
+                        {
+                            text: 'Archive',
+                        },
+                    ],
+                },
+                {
+                    application_title: 'Banking CRM',
+                    branches: 'PK, UAE, UK',
+                    status: 'Active',
+                    action: [
+                        {
+                            text: 'Modify',
+                        },
+                        {
+                            text: 'Archive',
+                        },
+                    ],
+                },
+                {
+                    application_title: 'Testing App',
+                    branches: 'USA',
+                    status: 'Archived',
+                    action: [
+                        {
+                            text: 'Modify',
+                        },
+                        {
+                            text: 'Archive',
+                        },
+                    ],
+                },
+            ],
+        },
+    },
+
+    configuration: {
+        idenfoEngine: {
+            nationality: {
+                fields: [
+                    {
+                        key: 'countrycode',
+                        label: 'Country Code',
+                    },
+                    {
+                        key: 'countrytitle',
+                        label: 'Country Title',
+                    },
+                    {
+                        key: 'rating',
+                        label: 'RATING',
+                        class: 'text-center rating-field',
+                    },
+                    {
+                        key: 'isSanction',
+                        label: 'IS SANCTION',
+                        class: 'text-center',
+                    },
+                    {
+                        key: 'action',
+                        label: 'ACTION',
+                        class: 'two-list',
+                    },
+                ],
+                items: [
+                    {
+                        countrycode: 'AF',
+                        countrytitle: 'Afghanistan',
+                        rating: 'High Risk',
+                        isSanction: 'No',
+                        action: [
+                            {
+                                text: 'Modify',
+                            },
+                            {
+                                text: 'Archive',
+                            },
+                        ],
+                    },
+                    {
+                        countrycode: 'AX',
+                        countrytitle: 'Aland Islands',
+                        rating: 'High Risk',
+                        isSanction: 'No',
+                        action: [
+                            {
+                                text: 'Modify',
+                            },
+                            {
+                                text: 'Archive',
+                            },
+                        ],
+                    },
+                    {
+                        countrycode: 'AL',
+                        countrytitle: 'Albania',
+                        rating: 'High Risk',
+                        isSanction: 'No',
+                        action: [
+                            {
+                                text: 'Modify',
+                            },
+                            {
+                                text: 'Archive',
+                            },
+                        ],
+                    },
+                    {
+                        countrycode: 'DZ',
+                        countrytitle: 'Algeria',
+                        rating: 'High Risk',
+                        isSanction: 'No',
+                        action: [
+                            {
+                                text: 'Modify',
+                            },
+                            {
+                                text: 'Archive',
+                            },
+                        ],
+                    },
+                    {
+                        countrycode: 'AS',
+                        countrytitle: 'American Samoa',
+                        rating: 'High Risk',
+                        isSanction: 'No',
+                        action: [
+                            {
+                                text: 'Modify',
+                            },
+                            {
+                                text: 'Archive',
+                            },
+                        ],
+                    },
+                    {
+                        countrycode: 'AD',
+                        countrytitle: 'Andorra',
+                        rating: 'High Risk',
+                        isSanction: 'No',
+                        action: [
+                            {
+                                text: 'Modify',
+                            },
+                            {
+                                text: 'Archive',
+                            },
+                        ],
+                    },
+                    {
+                        countrycode: 'AO',
+                        countrytitle: 'Angola',
+                        rating: 'High Risk',
+                        isSanction: 'No',
+                        action: [
+                            {
+                                text: 'Modify',
+                            },
+                            {
+                                text: 'Archive',
+                            },
+                        ],
+                    },
+                    {
+                        countrycode: 'AI',
+                        countrytitle: 'Anguilla',
+                        rating: 'High Risk',
+                        isSanction: 'No',
+                        action: [
+                            {
+                                text: 'Modify',
+                            },
+                            {
+                                text: 'Archive',
+                            },
+                        ],
+                    },
+                    {
+                        countrycode: 'AQ',
+                        countrytitle: 'Antarctica',
+                        rating: 'High Risk',
+                        isSanction: 'No',
+                        action: [
+                            {
+                                text: 'Modify',
+                            },
+                            {
+                                text: 'Archive',
+                            },
+                        ],
+                    },
+                    {
+                        countrycode: 'AG',
+                        countrytitle: 'Antigua and Barbuda',
+                        rating: 'High Risk',
+                        isSanction: 'No',
+                        action: [
+                            {
+                                text: 'Modify',
+                            },
+                            {
+                                text: 'Archive',
+                            },
+                        ],
+                    },
+                ],
+            },
+            workfactor: {
+                fields: [
+                    {
+                        key: 'worktypecode',
+                        label: 'Work Type Code',
+                    },
+                    {
+                        key: 'worktypetitle',
+                        label: 'Work Type Title',
+                    },
+                    {
+                        key: 'action',
+                        label: 'ACTION',
+                        class: 'two-list',
+                    },
+                ],
+                items: [
+                    {
+                        worktypecode: 1,
+                        worktypetitle: 'Self-Employed / Business Owner',
+                        action: [
+                            {
+                                text: 'Modify',
+                            },
+                            {
+                                text: 'Archive',
+                            },
+                        ],
+                    },
+                    {
+                        worktypecode: 2,
+                        worktypetitle: 'Salaried-Executive Level',
+                        action: [
+                            {
+                                text: 'Modify',
+                            },
+                            {
+                                text: 'Archive',
+                            },
+                        ],
+                    },
+                    {
+                        worktypecode: 3,
+                        worktypetitle: 'Salaried-General',
+                        action: [
+                            {
+                                text: 'Modify',
+                            },
+                            {
+                                text: 'Archive',
+                            },
+                        ],
+                    },
+                    {
+                        worktypecode: 4,
+                        worktypetitle: 'Homemaker',
+                        action: [
+                            {
+                                text: 'Modify',
+                            },
+                            {
+                                text: 'Archive',
+                            },
+                        ],
+                    },
+                    {
+                        worktypecode: 5,
+                        worktypetitle: 'Student',
+                        action: [
+                            {
+                                text: 'Modify',
+                            },
+                            {
+                                text: 'Archive',
+                            },
+                        ],
+                    },
+                    {
+                        worktypecode: 6,
+                        worktypetitle: 'Unemployed',
+                        action: [
+                            {
+                                text: 'Modify',
+                            },
+                            {
+                                text: 'Archive',
+                            },
+                        ],
+                    },
+                    {
+                        worktypecode: 7,
+                        worktypetitle: 'Retired',
+                        action: [
+                            {
+                                text: 'Modify',
+                            },
+                            {
+                                text: 'Archive',
+                            },
+                        ],
+                    },
+                ],
+            },
+            industry: {
+                fields: [
+                    {
+                        key: 'industrycode',
+                        label: 'Industry Code',
+                        class: 'text-center w-150px',
+                    },
+                    {
+                        key: 'industrytitle',
+                        label: 'Industry Title',
+                    },
+                    {
+                        key: 'worktypeimpact',
+                        label: 'WORK TYPE IMPACT',
+                    },
+                    {
+                        key: 'action',
+                        label: 'ACTION',
+                        class: 'two-list',
+                    },
+                ],
+                items: [
+                    {
+                        industrycode: 1,
+                        industrytitle: 'Agriculture, forestry and fishing',
+                        worktypeimpact: 'View Work Type Impact',
+                        action: [
+                            {
+                                text: 'Modify',
+                            },
+                            {
+                                text: 'Archive',
+                            },
+                        ],
+                    },
+                    {
+                        industrycode: 2,
+                        industrytitle: 'Mining and quarrying',
+                        worktypeimpact: 'View Work Type Impact',
+                        action: [
+                            {
+                                text: 'Modify',
+                            },
+                            {
+                                text: 'Archive',
+                            },
+                        ],
+                    },
+                    {
+                        industrycode: 3,
+                        industrytitle: 'Manufacturing',
+                        worktypeimpact: 'View Work Type Impact',
+                        action: [
+                            {
+                                text: 'Modify',
+                            },
+                            {
+                                text: 'Archive',
+                            },
+                        ],
+                    },
+                    {
+                        industrycode: 4,
+                        industrytitle:
+                            'Electricity, gas, steam and air conditioning supply',
+                        worktypeimpact: 'View Work Type Impact',
+                        action: [
+                            {
+                                text: 'Modify',
+                            },
+                            {
+                                text: 'Archive',
+                            },
+                        ],
+                    },
+                    {
+                        industrycode: 5,
+                        industrytitle:
+                            'Water supply; sewerage, waste management',
+                        worktypeimpact: 'View Work Type Impact',
+                        action: [
+                            {
+                                text: 'Modify',
+                            },
+                            {
+                                text: 'Archive',
+                            },
+                        ],
+                    },
+                    {
+                        industrycode: 6,
+                        industrytitle: 'Construction',
+                        worktypeimpact: 'View Work Type Impact',
+                        action: [
+                            {
+                                text: 'Modify',
+                            },
+                            {
+                                text: 'Archive',
+                            },
+                        ],
+                    },
+                    {
+                        industrycode: 7,
+                        industrytitle:
+                            'Wholesale and retail trade; repair of motor vehicles',
+                        worktypeimpact: 'View Work Type Impact',
+                        action: [
+                            {
+                                text: 'Modify',
+                            },
+                            {
+                                text: 'Archive',
+                            },
+                        ],
+                    },
+                    {
+                        industrycode: 8,
+                        industrytitle: 'Transportation and storage',
+                        worktypeimpact: 'View Work Type Impact',
+                        action: [
+                            {
+                                text: 'Modify',
+                            },
+                            {
+                                text: 'Archive',
+                            },
+                        ],
+                    },
+                    {
+                        industrycode: 9,
+                        industrytitle:
+                            'Accommodation and food service activities',
+                        worktypeimpact: 'View Work Type Impact',
+                        action: [
+                            {
+                                text: 'Modify',
+                            },
+                            {
+                                text: 'Archive',
+                            },
+                        ],
+                    },
+                    {
+                        industrycode: 10,
+                        industrytitle: 'Information and communication',
+                        worktypeimpact: 'View Work Type Impact',
+                        action: [
+                            {
+                                text: 'Modify',
+                            },
+                            {
+                                text: 'Archive',
+                            },
+                        ],
+                    },
+                ],
+            },
+
+            productFactor: {
+                fields: [
+                    {
+                        key: 'productCode',
+                        label: 'PRODUCT CODE',
+                        class: 'text-center w-150px',
+                    },
+                    {
+                        key: 'productIndustry',
+                        label: 'Product Title',
+                    },
+                    {
+                        key: 'rating',
+                        label: 'RATING',
+                        class: 'text-center',
+                    },
+                    {
+                        key: 'action',
+                        label: 'ACTION',
+                        class: 'two-list',
+                    },
+                ],
+                items: [
+                    {
+                        productCode: 1501,
+                        productIndustry: 'Virtual Currency Wallet',
+                        rating: 'High Risk',
+                        action: [
+                            {
+                                text: 'Modify',
+                            },
+                            {
+                                text: 'Archive',
+                            },
+                        ],
+                    },
+                    {
+                        productCode: 1502,
+                        productIndustry: 'Virtual Currency Exchange',
+                        rating: 'High Risk',
+                        action: [
+                            {
+                                text: 'Modify',
+                            },
+                            {
+                                text: 'Archive',
+                            },
+                        ],
+                    },
+                    {
+                        productCode: 1503,
+                        productIndustry: 'Current Account',
+                        rating: 'High Risk',
+                        action: [
+                            {
+                                text: 'Modify',
+                            },
+                            {
+                                text: 'Archive',
+                            },
+                        ],
+                    },
+                    {
+                        productCode: 1504,
+                        productIndustry: 'Saving Account',
+                        rating: 'High Risk',
+                        action: [
+                            {
+                                text: 'Modify',
+                            },
+                            {
+                                text: 'Archive',
+                            },
+                        ],
+                    },
+                    {
+                        productCode: 1505,
+                        productIndustry: 'Credit Card',
+                        rating: 'Medium Risk',
+                        action: [
+                            {
+                                text: 'Modify',
+                            },
+                            {
+                                text: 'Archive',
+                            },
+                        ],
+                    },
+                    {
+                        productCode: 1506,
+                        productIndustry: 'Short Term Loan',
+                        rating: 'Medium Risk',
+                        action: [
+                            {
+                                text: 'Modify',
+                            },
+                            {
+                                text: 'Archive',
+                            },
+                        ],
+                    },
+                    {
+                        productCode: 1507,
+                        productIndustry: 'Financial Investment',
+                        rating: 'High Risk',
+                        action: [
+                            {
+                                text: 'Modify',
+                            },
+                            {
+                                text: 'Archive',
+                            },
+                        ],
+                    },
+                ],
+            },
+
+            stateFactor: {
+                fields: [
+                    {
+                        key: 'stateCode',
+                        label: 'STATE CODE',
+                        class: 'text-center w-150px',
+                    },
+                    {
+                        key: 'stateTitle',
+                        label: 'STATE TITLE',
+                    },
+                    {
+                        key: 'rating',
+                        label: 'RATING',
+                        class: 'text-center',
+                    },
+                    {
+                        key: 'action',
+                        label: 'ACTION',
+                        class: 'two-list',
+                    },
+                ],
+                items: [
+                    {
+                        stateCode: 1,
+                        stateTitle: 'Sindh',
+                        rating: 'Medium Risk',
+                        action: [
+                            {
+                                text: 'Modify',
+                            },
+                            {
+                                text: 'Archive',
+                            },
+                        ],
+                    },
+                    {
+                        stateCode: 2,
+                        stateTitle: 'Punjab',
+                        rating: 'Medium Risk',
+                        action: [
+                            {
+                                text: 'Modify',
+                            },
+                            {
+                                text: 'Archive',
+                            },
+                        ],
+                    },
+                    {
+                        stateCode: 3,
+                        stateTitle: 'Khyber Pakhtunkhwa',
+                        rating: 'Low Risk',
+                        action: [
+                            {
+                                text: 'Modify',
+                            },
+                            {
+                                text: 'Archive',
+                            },
+                        ],
+                    },
+                    {
+                        stateCode: 4,
+                        stateTitle: 'Balochistan',
+                        rating: 'High Risk',
+                        action: [
+                            {
+                                text: 'Modify',
+                            },
+                            {
+                                text: 'Archive',
+                            },
+                        ],
+                    },
+                    {
+                        stateCode: 5,
+                        stateTitle: 'Gilgit Baltistan',
+                        rating: 'High Risk',
+                        action: [
+                            {
+                                text: 'Modify',
+                            },
+                            {
+                                text: 'Archive',
+                            },
+                        ],
+                    },
+                ],
+            },
+
+            relationshipData: {
+                fields: [
+                    {
+                        key: 'rule',
+                        label: 'RULE',
+                    },
+                    {
+                        key: 'relationshipLength',
+                        label: 'RELATIONSHIP LENGTH TITLE',
+                    },
+                    {
+                        key: 'rating',
+                        label: 'RATING',
+                        class: 'text-center',
+                    },
+                    {
+                        key: 'action',
+                        label: 'ACTION',
+                        class: 'two-list',
+                    },
+                ],
+                items: [
+                    {
+                        rule: '0 Months to 24 Months',
+                        relationshipLength: 'Less than 24 months',
+                        rating: 'High Risk',
+                        action: [
+                            {
+                                text: 'Modify',
+                            },
+                            {
+                                text: 'Archive',
+                            },
+                        ],
+                    },
+                    {
+                        rule: '24 Months to 48 Months',
+                        relationshipLength: 'Between 24 months to 48 months',
+                        rating: 'Medium Risk',
+                        action: [
+                            {
+                                text: 'Modify',
+                            },
+                            {
+                                text: 'Archive',
+                            },
+                        ],
+                    },
+                    {
+                        rule: '48 Months to 1000 Months',
+                        relationshipLength: 'More than 48 months',
+                        rating: 'Low Risk',
+                        action: [
+                            {
+                                text: 'Modify',
+                            },
+                            {
+                                text: 'Archive',
+                            },
+                        ],
+                    },
+                ],
+            },
+
+            channelFactor: {
+                fields: [
+                    {
+                        key: 'chanelTypeCode',
+                        label: 'CHANNEL TYPE CODE',
+                    },
+                    {
+                        key: 'chanelTypeTitle',
+                        label: 'CHANNEL TYPE TITLE',
+                    },
+                    {
+                        key: 'rating',
+                        label: 'RATING',
+                        class: 'text-center',
+                    },
+                    {
+                        key: 'action',
+                        label: 'ACTION',
+                        class: 'single-list',
+                    },
+                ],
+                items: [
+                    {
+                        chanelTypeCode: 'F2F',
+                        chanelTypeTitle: 'Face to Face',
+                        rating: 'Low Risk',
+                        action: [
+                            {
+                                text: 'Modify',
+                            },
+                        ],
+                    },
+                    {
+                        chanelTypeCode: 'NF2F',
+                        chanelTypeTitle: 'Non Face to Face',
+                        rating: 'High Risk',
+                        action: [
+                            {
+                                text: 'Modify',
+                            },
+                        ],
+                    },
+                ],
+            },
+
+            riskFactor: {
+                fields: [
+                    {
+                        key: 'riskCode',
+                        label: 'Risk Factor',
+                        class: 'w-320px',
+                    },
+                    {
+                        key: 'weight',
+                        label: 'WEIGHT',
+                        class: 'text-center',
+                    },
+                    {
+                        key: 'overrideTo',
+                        label: 'OVERRIDE TO',
+                        class: 'text-center',
+                    },
+                    {
+                        key: 'scorescale',
+                        label: 'Score Scale',
+                    },
+                    {
+                        key: 'action',
+                        label: 'ACTION',
+                        class: 'single-list',
+                    },
+                ],
+                items: [
+                    {
+                        riskCode: 'Address in High Risk Country',
+                        weight: 15,
+                        overrideTo: 'N/A',
+                        scorescale: 'View Score Scale',
+                        action: [
+                            {
+                                text: 'Modify',
+                            },
+                        ],
+                    },
+                    {
+                        riskCode: 'Nationality',
+                        weight: 10,
+                        overrideTo: 'N/A',
+                        scorescale: 'View Score Scale',
+                        action: [
+                            {
+                                text: 'Modify',
+                            },
+                        ],
+                    },
+                    {
+                        riskCode: 'State',
+                        weight: 0,
+                        overrideTo: 'N/A',
+                        scorescale: 'View Score Scale',
+                        action: [
+                            {
+                                text: 'Modify',
+                            },
+                        ],
+                    },
+                    {
+                        riskCode: 'Work Status',
+                        weight: 10,
+                        overrideTo: 'N/A',
+                        scorescale: 'View Score Scale',
+                        action: [
+                            {
+                                text: 'Modify',
+                            },
+                        ],
+                    },
+                    {
+                        riskCode: 'Length of Relationship',
+                        weight: 5,
+                        overrideTo: 'N/A',
+                        scorescale: 'View Score Scale',
+                        action: [
+                            {
+                                text: 'Modify',
+                            },
+                        ],
+                    },
+                    {
+                        riskCode: 'Channel Type',
+                        weight: 5,
+                        overrideTo: 'N/A',
+                        scorescale: 'View Score Scale',
+                        action: [
+                            {
+                                text: 'Modify',
+                            },
+                        ],
+                    },
+                    {
+                        riskCode: 'Product',
+                        weight: 10,
+                        overrideTo: 'N/A',
+                        scorescale: 'View Score Scale',
+                        action: [
+                            {
+                                text: 'Modify',
+                            },
+                        ],
+                    },
+                    {
+                        riskCode: 'PEP Hit',
+                        weight: 15,
+                        overrideTo: 'High',
+                        scorescale: 'View Score Scale',
+                        action: [
+                            {
+                                text: 'Modify',
+                            },
+                        ],
+                    },
+                    {
+                        riskCode: 'Enforcement Hit',
+                        weight: 15,
+                        overrideTo: 'High',
+                        scorescale: 'View Score Scale',
+                        action: [
+                            {
+                                text: 'Modify',
+                            },
+                        ],
+                    },
+                    {
+                        riskCode: 'Blacklist Hit',
+                        weight: 15,
+                        overrideTo: 'High',
+                        scorescale: 'View Score Scale',
+                        action: [
+                            {
+                                text: 'Modify',
+                            },
+                        ],
+                    },
+                    {
+                        riskCode: 'Sanction Hit',
+                        weight: 0,
+                        overrideTo: 'Sanction',
+                        scorescale: 'View Score Scale',
+                        action: [
+                            {
+                                text: 'Modify',
+                            },
+                        ],
+                    },
+                    {
+                        riskCode: 'Document Verification',
+                        weight: 0,
+                        overrideTo: 'High',
+                        scorescale: 'View Score Scale',
+                        action: [
+                            {
+                                text: 'Modify',
+                            },
+                        ],
+                    },
+                ],
+            },
+
+            riskRating: {
+                fields: [
+                    {
+                        key: 'pointscore',
+                        label: 'POINT SCORE / CASE',
+                        class: 'w-320px',
+                    },
+                    {
+                        key: 'rating',
+                        label: 'RATING',
+                        class: 'text-center',
+                    },
+                    {
+                        key: 'reviewperiod',
+                        label: 'REVIEW PERIOD',
+                        class: 'text-center',
+                    },
+                    {
+                        key: 'alert',
+                        label: 'Alert',
+                        class: 'text-center',
+                    },
+                    {
+                        key: 'action',
+                        label: 'ACTION',
+                        class: 'single-list',
+                    },
+                ],
+                items: [
+                    {
+                        pointscore: '0 to 40 Points',
+                        rating: 'Low Risk',
+                        reviewperiod: '6 Years',
+                        alert: 'No',
+                        action: [
+                            {
+                                text: 'Modify',
+                            },
+                        ],
+                    },
+                    {
+                        pointscore: '41 to 69 Points',
+                        rating: 'Medium Risk',
+                        reviewperiod: '3 Years',
+                        alert: 'No',
+                        action: [
+                            {
+                                text: 'Modify',
+                            },
+                        ],
+                    },
+                    {
+                        pointscore: '70 to 100 Points',
+                        rating: 'High Risk',
+                        reviewperiod: '1 Year',
+                        alert: 'Yes',
+                        action: [
+                            {
+                                text: 'Modify',
+                            },
+                        ],
+                    },
+                    {
+                        pointscore: 'PEP Hit',
+                        rating: 'High Risk',
+                        reviewperiod: 'Rejected',
+                        alert: 'Yes',
+                        action: [
+                            {
+                                text: 'Modify',
+                            },
+                        ],
+                    },
+                    {
+                        pointscore: 'Enforcement Hit',
+                        rating: 'High Risk',
+                        reviewperiod: 'Rejected',
+                        alert: 'Yes',
+                        action: [
+                            {
+                                text: 'Modify',
+                            },
+                        ],
+                    },
+                    {
+                        pointscore: 'Client Blacklist Hit',
+                        rating: 'High Risk',
+                        reviewperiod: 'Rejected',
+                        alert: 'Yes',
+                        action: [
+                            {
+                                text: 'Modify',
+                            },
+                        ],
+                    },
+                    {
+                        pointscore: 'Sanction Hit',
+                        rating: 'High Risk',
+                        reviewperiod: 'Rejected',
+                        alert: 'Yes',
+                        action: [
+                            {
+                                text: 'Modify',
+                            },
+                        ],
+                    },
+                    {
+                        pointscore: 'Document Verification Mismatch ',
+                        rating: 'High Risk',
+                        reviewperiod: 'Rejected',
+                        alert: 'Yes',
+                        action: [
+                            {
+                                text: 'Modify',
+                            },
+                        ],
+                    },
+                    {
+                        pointscore: 'If Residence Country is Sanctioned',
+                        rating: 'High Risk',
+                        reviewperiod: 'Rejected',
+                        alert: 'Yes',
+                        action: [
+                            {
+                                text: 'Modify',
+                            },
+                        ],
+                    },
+
+                    {
+                        pointscore: 'If Nationality Country is Sanctioned',
+                        rating: 'High Risk',
+                        reviewperiod: 'Rejected',
+                        alert: 'Yes',
+                        action: [
+                            {
+                                text: 'Modify',
+                            },
+                        ],
+                    },
+                    {
+                        pointscore: 'If Contact No. Code Country is Sanctioned',
+                        rating: 'High Risk',
+                        reviewperiod: 'Rejected',
+                        alert: 'Yes',
+                        action: [
+                            {
+                                text: 'Modify',
+                            },
+                        ],
+                    },
+                ],
+            },
+        },
+        importData: [
+            {
+                logo: 'logo1.png',
+                name: 'Do Jones Data',
+                lastUpdate: 'Last updated: June 10, 2019',
+                totalRecord: 'Total Records: 45,650',
+            },
+            {
+                logo: 'logo2.png',
+                name: 'World Bank Data',
+                lastUpdate: 'Last updated: June 9, 2019',
+                totalRecord: 'Total Records: 23,956',
+            },
+            {
+                logo: 'logo3.png',
+                name: 'Client Blacklist Data',
+                lastUpdate: 'Last updated: June 12, 2019',
+                totalRecord: 'Total Records: 2,450',
+            },
+        ],
     },
 }
