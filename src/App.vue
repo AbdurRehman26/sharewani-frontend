@@ -70,7 +70,7 @@ export default {
                     menuLabel: 'Customer Profiles',
                 },
                 {
-                    anchorLink: '/register-customer',
+                    anchorLink: '/register-customer/upload-document',
                     icon: 'icon-add-customer',
                     menuLabel: 'Register Customer',
                 },

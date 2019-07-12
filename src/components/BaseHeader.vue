@@ -1,11 +1,28 @@
 <template>
     <div>
         <div class="header-fix"></div>
-        <header>
-            <div class="header-menu navigation">
+        <header :class="stepStyle == true ? 'step-menu-header' : ''">
+            <div
+                class="header-menu navigation"
+                :class="stepStyle == true ? 'step-menu' : ''"
+            >
                 <ul class="menu-list">
-                    <li v-for="(list, index) in menuListing" :key="index">
+                    <li
+                        v-for="(list, index) in menuListing"
+                        :key="index"
+                        :class="[
+                            $route.meta.sessionStep == list.sessionStep
+                                ? 'router-link-exact-active'
+                                : '',
+                            $route.meta.sessionStep >= list.sessionStep
+                                ? 'router-link-active'
+                                : '',
+                        ]"
+                    >
                         <router-link :to="list.anchorLink">
+                            <span v-if="stepStyle" class="point">
+                                <i class="icon-check"></i>
+                            </span>
                             <span>{{ list.menuLabel }}</span>
                         </router-link>
                     </li>
@@ -76,6 +93,10 @@ export default {
         menuListing: {
             type: Array,
             default: null,
+        },
+        stepStyle: {
+            type: Boolean,
+            default: false,
         },
     }, // End of Component > props
 

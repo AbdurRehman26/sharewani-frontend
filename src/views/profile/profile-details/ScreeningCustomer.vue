@@ -24,6 +24,7 @@
         </div>
         <div class="card customer-info screen-section">
             <customer-information
+                profilePic="image5.png"
                 :customerDetails="customerDetails"
             ></customer-information>
         </div>

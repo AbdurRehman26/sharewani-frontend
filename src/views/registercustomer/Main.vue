@@ -1,9 +1,9 @@
 <template>
-    <div class="dashboard">
+    <div class="customer-profile">
         <div class="content-area">
-            <base-header :menuListing="menuListing"></base-header>
+            <base-header :menuListing="menuListing" stepStyle></base-header>
             <div class="right-panel">
-                <router-view />
+                <router-view></router-view>
             </div>
         </div>
     </div>
@@ -11,8 +11,6 @@
 
 <script>
 export default {
-    components: {},
-
     /*
     |--------------------------------------------------------------------------
     | Component > props
@@ -38,16 +36,29 @@ export default {
         return {
             menuListing: [
                 {
-                    anchorLink: '/configuration/idenfo-engine/',
-                    menuLabel: 'Idenfo Engine',
+                    anchorLink: '/register-customer/upload-document',
+                    menuLabel: 'Upload Documents',
+                    sessionStep: '1',
                 },
                 {
-                    anchorLink: '/configuration/import-data/',
-                    menuLabel: 'Import Data',
+                    anchorLink: '/register-customer/record-video',
+                    menuLabel: 'Record Video',
+                    sessionStep: '2',
                 },
                 {
-                    anchorLink: '/configuration/form-builder/',
-                    menuLabel: 'Registration Form Builder',
+                    anchorLink: '/register-customer/setup-profile',
+                    menuLabel: 'Setup Profile',
+                    sessionStep: '3',
+                },
+                {
+                    anchorLink: '/register-customer/account-info',
+                    menuLabel: 'Account Info',
+                    sessionStep: '4',
+                },
+                {
+                    anchorLink: '/register-customer/finish',
+                    menuLabel: 'Finish',
+                    sessionStep: '5',
                 },
             ],
         }

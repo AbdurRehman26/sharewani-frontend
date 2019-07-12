@@ -24,121 +24,23 @@
         </div>
         <div class="card customer-info screen-section">
             <customer-information
+                profilePic="image5.png"
                 :customerDetails="customerDetails"
             ></customer-information>
         </div>
 
-        <div class="row">
-            <div class="col-md-12">
-                <ul class="timeline">
-                    <li v-for="(list, index) in yearDetails" :key="index">
-                        <div
-                            class="row timeline-movement timeline-movement-top"
-                        >
-                            <div
-                                class="timeline-badge timeline-future-movement"
-                            >
-                                <h4>{{ list.days }}</h4>
-                            </div>
-                        </div>
-                        <ul>
-                            <li
-                                v-for="(describe, index) in list.describe"
-                                :key="index"
-                            >
-                                <div class="row timeline-movement">
-                                    <div class="col-sm-6 timeline-item">
-                                        <div class="row">
-                                            <div class="col-sm-11">
-                                                <div
-                                                    class="timeline-panel credits"
-                                                >
-                                                    <div
-                                                        class="profile-pic"
-                                                        :style="{
-                                                            'background-image':
-                                                                'url(' +
-                                                                require('@/assets/images/members/' +
-                                                                    describe.image +
-                                                                    '') +
-                                                                ')',
-                                                        }"
-                                                    ></div>
-
-                                                    <div
-                                                        class="timeline-details"
-                                                    >
-                                                        <div class="float-left">
-                                                            <h5>
-                                                                {{
-                                                                    describe.name
-                                                                }}
-                                                            </h5>
-                                                            <span>
-                                                                {{
-                                                                    describe.subHeading
-                                                                }}</span
-                                                            >
-                                                        </div>
-                                                        <div
-                                                            class="float-right"
-                                                        >
-                                                            <p
-                                                                class="date-content"
-                                                            >
-                                                                {{
-                                                                    describe.date
-                                                                }}
-                                                            </p>
-                                                        </div>
-
-                                                        <p>
-                                                            {{
-                                                                describe.details
-                                                            }}
-                                                        </p>
-
-                                                        <tags
-                                                            v-if="
-                                                                describe.blockTags
-                                                            "
-                                                            :statusType="
-                                                                describe
-                                                                    .blockTags
-                                                                    .actions
-                                                            "
-                                                            :tagIcon="
-                                                                describe
-                                                                    .blockTags
-                                                                    .icon
-                                                            "
-                                                            :tagHeading="
-                                                                describe
-                                                                    .blockTags
-                                                                    .headings
-                                                            "
-                                                        ></tags>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
+        <time-line :yearDetails="yearDetails"></time-line>
     </div>
 </template>
 <script>
+import timeLine from '@/components/TimeLine.vue'
 import customerInformation from '@/components/CustomerInfo.vue'
-import tags from '@/components/Tags.vue'
+
 export default {
     components: {
         customerInformation,
-        tags,
+
+        timeLine,
     },
 
     /*
