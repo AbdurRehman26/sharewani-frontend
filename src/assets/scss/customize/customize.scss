@@ -43,8 +43,9 @@
         ul {
             list-style: none;
             padding: 0;
+            margin-bottom: 0;
             li {
-                margin-bottom: 5px;
+                margin-bottom: 3px;
                 &:last-child {
                     label {
                         margin-bottom: 0px;

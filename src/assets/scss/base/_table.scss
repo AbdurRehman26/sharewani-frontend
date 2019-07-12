@@ -1,12 +1,12 @@
 .table-section {
     border: 0.5px #d7d7e2 solid;
-    // overflow: hidden;
+    overflow: hidden;
     border-radius: 8px 8px 0 0;
 }
 .table {
     border-radius: 8px 8px 0 0;
     border: 0px #d7d7e2 solid;
-    // overflow: hidden;
+    overflow: hidden;
     margin-bottom: 0;
 
     thead {
@@ -84,6 +84,20 @@
         }
         .rating-field {
             width: 200px;
+        }
+        tr {
+            &:last-child,
+            &:nth-last-child(2),
+            &:nth-last-child(3),
+            &:nth-last-child(4),
+            &:nth-last-child(5) {
+                .work-impact {
+                    .custom-popover {
+                        top: auto !important;
+                        bottom: 28px !important;
+                    }
+                }
+            }
         }
     }
 }
