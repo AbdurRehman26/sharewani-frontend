@@ -51,20 +51,19 @@
                         <div class="col-xs-12 col-md-3">
                             <div class="row">
                                 <div class="col-xs-12 col-md-5">
-                                    <b-button
-                                        type="button"
-                                        variant="primary"
+                                    <base-button
+                                        btnLabel="Apply"
+                                        btnType="submit"
+                                        btnVariant="primary"
                                         class="btn-block"
-                                        >Apply</b-button
-                                    >
+                                    ></base-button>
                                 </div>
                                 <div class="col-xs-12 col-md-7">
-                                    <b-button
-                                        type="button"
-                                        variant="secondary"
-                                        class="btn-block"
-                                        >+ Add User</b-button
-                                    >
+                                    <base-button
+                                        btnLabel="+ Add User"
+                                        btnType="submit"
+                                        btnVariant="secondary"
+                                    ></base-button>
                                 </div>
                             </div>
                         </div>

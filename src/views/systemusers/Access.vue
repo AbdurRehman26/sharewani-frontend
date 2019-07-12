@@ -11,14 +11,18 @@
                             <base-search></base-search>
                         </li>
                         <li>
-                            <b-button type="button" variant="primary"
-                                >Apply</b-button
-                            >
+                            <base-button
+                                btnLabel="Apply"
+                                btnType="submit"
+                                btnVariant="primary"
+                            ></base-button>
                         </li>
                         <li>
-                            <b-button type="button" variant="secondary"
-                                >+ Add Application</b-button
-                            >
+                            <base-button
+                                btnLabel="+ Add Application"
+                                btnType="submit"
+                                btnVariant="secondary"
+                            ></base-button>
                         </li>
                     </ul>
                 </div>
