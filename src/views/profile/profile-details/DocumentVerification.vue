@@ -24,48 +24,15 @@
         </div>
         <div class="card customer-info screen-section">
             <customer-information
+                profilePic="image5.png"
                 :customerDetails="customerDetails"
             ></customer-information>
         </div>
-        <div class="filter-section sub-filter">
-            <h2>Documents Submitted</h2>
-        </div>
-        <div class="card document-section">
-            <ul class="row">
-                <li
-                    class="col-md-3"
-                    v-for="(list, index) in uploadDetails"
-                    :key="index"
-                >
-                    <div class="document-detail">
-                        <div class="photo-section">
-                            <img
-                                :src="
-                                    require('@/assets/images/dummy/' +
-                                        list.image +
-                                        '')
-                                "
-                            />
-                        </div>
-                        <div class="upload-detail">
-                            <div class="upload-thumbnail">
-                                <img
-                                    :src="
-                                        require('@/assets/images/' +
-                                            list.thumbnail +
-                                            '')
-                                    "
-                                />
-                            </div>
-                            <div class="upload-des">
-                                <label>{{ list.title }}</label>
-                                <p>{{ list.uploadDate }}</p>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-        </div>
+
+        <documents-submitted
+            :uploadDetails="uploadDetails"
+        ></documents-submitted>
+
         <div class="filter-section sub-filter">
             <h2>Verification Status</h2>
         </div>
@@ -136,9 +103,11 @@
 </template>
 <script>
 import customerInformation from '@/components/CustomerInfo.vue'
+import documentsSubmitted from '@/components/DocumentsSubmitted.vue'
 export default {
     components: {
         customerInformation,
+        documentsSubmitted,
     },
 
     /*

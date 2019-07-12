@@ -1,7 +1,16 @@
 <template>
     <div class="row">
         <div class="col-md-2 text-center">
-            <img :src="require('@/assets/images/dummy/image5.png')" />
+            <div
+                class="customer-profile"
+                :style="{
+                    'background-image':
+                        'url(' +
+                        require('@/assets/images/dummy/' + profilePic + '') +
+                        ')',
+                }"
+            ></div>
+
             <div class="pending status-view">
                 <i class="icon-loading"></i>
                 <span>Pending</span>
@@ -54,6 +63,11 @@ export default {
          */
         customerDetails: {
             type: Array,
+            default: null,
+        },
+
+        profilePic: {
+            type: String,
             default: null,
         },
     }, // End of Component > props

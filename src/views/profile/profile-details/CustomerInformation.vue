@@ -24,22 +24,72 @@
         </div>
         <div class="card customer-info">
             <customer-information
+                profilePic="image5.png"
                 :customerDetails="customerDetails"
             ></customer-information>
         </div>
-        <br /><br />
-        <h2>KYC Status Summary</h2>
-        <br />
-        <div class="card customer-info">
-            <h4>Name Screening</h4>
+        <div class="filter-section sub-filter">
+            <h2>KYC Status Summary</h2>
+        </div>
+        <div class="card customer-info kyc-status-section">
+            <div class="row">
+                <div class="col-md-12">
+                    <h3>Name Screening</h3>
+                </div>
+                <div
+                    class="col-md-6"
+                    v-for="(list, index) in tags"
+                    :key="index"
+                >
+                    <div class="row">
+                        <div
+                            class="col-md-6"
+                            v-for="(description, index) in list.description"
+                            :key="index"
+                        >
+                            <tags
+                                :statusType="description.actions"
+                                :tagIcon="description.icon"
+                                :tagHeading="description.headings"
+                            ></tags>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr />
+            <div class="row">
+                <div
+                    class="col-md-6"
+                    v-for="(list, index) in tagsList"
+                    :key="index"
+                >
+                    <h3>{{ list.statusHeading }}</h3>
+                    <div class="row">
+                        <div
+                            class="col-md-6"
+                            v-for="(description, index) in list.description"
+                            :key="index"
+                        >
+                            <tags
+                                :statusType="description.actions"
+                                :tagIcon="description.icon"
+                                :tagHeading="description.headings"
+                            ></tags>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </template>
 <script>
 import customerInformation from '@/components/CustomerInfo.vue'
+import tags from '@/components/Tags.vue'
 export default {
     components: {
         customerInformation,
+        tags,
     },
 
     /*
@@ -218,6 +268,60 @@ export default {
                         {
                             title: 'Expiry Date:',
                             detail: 'April 20, 2022',
+                        },
+                    ],
+                },
+            ],
+
+            tags: [
+                {
+                    description: [
+                        {
+                            headings: 'Sanction Hit',
+                            icon: 'icon-sanction',
+                            actions: 'Rejected',
+                        },
+                        {
+                            headings: 'PEP Hit',
+                            icon: 'icon-pep',
+                            actions: 'Rejected',
+                        },
+                    ],
+                },
+                {
+                    description: [
+                        {
+                            headings: 'Enforcement Hit',
+                            icon: 'icon-enforcement',
+                            actions: 'Active',
+                        },
+                        {
+                            headings: 'Client Black List Hit',
+                            icon: 'icon-blacklist',
+                            actions: 'Active',
+                        },
+                    ],
+                },
+            ],
+
+            tagsList: [
+                {
+                    statusHeading: 'Documents Verification',
+                    description: [
+                        {
+                            headings: 'Document Matched',
+                            icon: 'icon-document',
+                            actions: 'Active',
+                        },
+                    ],
+                },
+                {
+                    statusHeading: 'Risk Rating',
+                    description: [
+                        {
+                            headings: 'Sanctioned',
+                            icon: 'icon-graph',
+                            actions: 'Rejected',
                         },
                     ],
                 },
