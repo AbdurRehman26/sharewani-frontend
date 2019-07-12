@@ -122,10 +122,10 @@
                 </template>
                 <template slot="status" slot-scope="data">
                     <div class="status-review" v-if="data.value == 'review'">
-                        <router-link to="/">
+                        <a href="javascript:void(0);" v-b-modal.initiate-review>
                             <i class="icon-review"></i>
                             <span>Review</span>
-                        </router-link>
+                        </a>
                     </div>
                     <div class="status-review" v-if="data.value == 'lock'">
                         <router-link class="disable" to="/">
@@ -137,15 +137,18 @@
             </b-table>
         </div>
         <pagination></pagination>
+        <initiate-review></initiate-review>
     </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
 import pagination from '@/components/Pagination.vue'
+import initiateReview from '@/components/popups/InitiateReviewPopup.vue'
 export default {
     components: {
         pagination,
+        initiateReview,
     },
 
     /*

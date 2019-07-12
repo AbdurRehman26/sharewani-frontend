@@ -698,3 +698,24 @@
         }
     }
 }
+
+.modal {
+    .modal-body {
+        .export-files {
+            .custom-control-inline {
+                display: flex;
+                margin-bottom: 15px;
+                background-image: url(assets/images/xls.png);
+                background-repeat: no-repeat;
+                height: 33px;
+                align-items: center;
+                padding-left: 56px;
+
+                &:last-of-type {
+                    margin-bottom: 0;
+                    background-image: url(assets/images/pdf.png);
+                }
+            }
+        }
+    }
+}

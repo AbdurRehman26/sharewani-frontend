@@ -11,7 +11,7 @@ $grey-xlite: #e9eae3;
 $border-color: #d7d7e2;
 $white: #fff;
 $border-radius: 4px;
-$border-opacity: rgba(208, 210, 197, 0.5);
+$border-opacity: rgba(151, 151, 151, 0.1);
 $success: #41b031;
 $light: #eef0f4;
 $dark: #bcbcbc;
@@ -84,9 +84,10 @@ $medium: #f4c200;
 $low: #00c535;
 
 // modal
+
 $modal-inner-padding: 24px 24px 0 !default;
 $modal-title-line-height: 24px !default;
-$modal-title-font-size: 16px !default;
+$modal-title-font-size: 18px !default;
 $modal-header-border-color: #d0d2c5 !default;
 $modal-header-padding: 17px 24px 11px 24px !default;
 $modal-content-border-radius: $upload-border-radius !default;

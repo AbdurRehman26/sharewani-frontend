@@ -310,7 +310,7 @@ export default {
                     description: [
                         {
                             headings: 'Document Matched',
-                            icon: 'icon-document',
+                            icon: 'icon-documentation',
                             actions: 'Active',
                         },
                     ],
