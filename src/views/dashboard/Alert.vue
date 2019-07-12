@@ -75,19 +75,8 @@
                         :statusTypeIcon="data.value"
                     ></status-type-icon>
                 </template>
-                <template slot="status" slot-scope="data">
-                    <div class="status-review" v-if="data.value == 'review'">
-                        <router-link to="/">
-                            <i class="icon-review"></i>
-                            <span>Review</span>
-                        </router-link>
-                    </div>
-                    <div class="status-review" v-if="data.value == 'lock'">
-                        <router-link class="disable" to="/">
-                            <i class="icon-change-password"></i>
-                            <span>In Review</span>
-                        </router-link>
-                    </div>
+                <template slot="action" slot-scope="data">
+                    <base-action :actionType="data.value"></base-action>
                 </template>
             </b-table>
         </div>

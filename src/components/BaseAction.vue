@@ -9,6 +9,18 @@
                 <i class="icon-trash"></i>
                 <span>{{ list.text }}</span>
             </div>
+            <div v-if="list.text === 'Activate' || list.text === 'activate'">
+                <i class="icon-done"></i>
+                <span>{{ list.text }}</span>
+            </div>
+            <div v-if="list.text === 'in review' || list.text === 'In Review'">
+                <i class="icon-lock_outline"></i>
+                <span>{{ list.text }}</span>
+            </div>
+            <div v-if="list.text === 'review' || list.text === 'Review'">
+                <i class="icon-review"></i>
+                <span>{{ list.text }}</span>
+            </div>
         </a>
     </div>
 </template>
@@ -32,7 +44,7 @@ export default {
             default: 'add',
         },
         actionType: {
-            type: String,
+            type: Array,
             default: null,
         },
     }, // End of Component > props

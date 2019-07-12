@@ -1277,7 +1277,7 @@ export default {
                     tdClass: 'text-center',
                 },
                 {
-                    key: 'status',
+                    key: 'action',
                     label: 'STATUS',
                 },
             ],
@@ -1290,7 +1290,11 @@ export default {
                     name_screening: 'Pending',
                     documentation: 'High Risk',
                     risk_rating: 'Sanctions',
-                    status: 'lock',
+                    action: [
+                        {
+                            text: 'In Review',
+                        },
+                    ],
                 },
                 {
                     profile: 'member-2.png',
@@ -1300,7 +1304,11 @@ export default {
                     name_screening: 'Sanctions',
                     documentation: 'pending',
                     risk_rating: 'pending',
-                    status: 'review',
+                    action: [
+                        {
+                            text: 'In Review',
+                        },
+                    ],
                 },
                 {
                     profile: 'member-3.png',
@@ -1310,7 +1318,11 @@ export default {
                     name_screening: 'High Risk',
                     documentation: 'Sanctions',
                     risk_rating: 'Pending',
-                    status: 'lock',
+                    action: [
+                        {
+                            text: 'In Review',
+                        },
+                    ],
                 },
                 {
                     profile: 'member-4.png',
@@ -1320,7 +1332,11 @@ export default {
                     name_screening: 'High Risk',
                     documentation: 'pending',
                     risk_rating: 'Pending',
-                    status: 'lock',
+                    action: [
+                        {
+                            text: 'In Review',
+                        },
+                    ],
                 },
                 {
                     profile: 'member-5.png',
@@ -1330,7 +1346,11 @@ export default {
                     name_screening: 'pending',
                     documentation: 'pending',
                     risk_rating: 'pending',
-                    status: 'review',
+                    action: [
+                        {
+                            text: 'In Review',
+                        },
+                    ],
                 },
                 {
                     profile: 'member-6.png',
@@ -1340,7 +1360,11 @@ export default {
                     name_screening: 'Sanctions',
                     documentation: 'pending',
                     risk_rating: 'pending',
-                    status: 'review',
+                    action: [
+                        {
+                            text: 'In Review',
+                        },
+                    ],
                 },
                 {
                     profile: 'member-7.png',
@@ -1350,7 +1374,11 @@ export default {
                     name_screening: 'Sanctions',
                     documentation: 'pending',
                     risk_rating: 'pending',
-                    status: 'review',
+                    action: [
+                        {
+                            text: 'In Review',
+                        },
+                    ],
                 },
                 {
                     profile: 'member-8.png',
@@ -1360,7 +1388,11 @@ export default {
                     name_screening: 'pending',
                     documentation: 'High Risk',
                     risk_rating: 'Sanctions',
-                    status: 'review',
+                    action: [
+                        {
+                            text: 'In Review',
+                        },
+                    ],
                 },
                 {
                     profile: 'member-9.png',
@@ -1370,7 +1402,11 @@ export default {
                     name_screening: 'pending',
                     documentation: 'Sanctions',
                     risk_rating: 'Sanctions',
-                    status: 'review',
+                    action: [
+                        {
+                            text: 'In Review',
+                        },
+                    ],
                 },
                 {
                     profile: 'member-10.png',
@@ -1380,7 +1416,11 @@ export default {
                     name_screening: 'pending',
                     documentation: 'Sanctions',
                     risk_rating: 'Sanctions',
-                    status: 'review',
+                    action: [
+                        {
+                            text: 'In Review',
+                        },
+                    ],
                 },
             ],
         },
@@ -1605,37 +1645,79 @@ export default {
                     role_title: 'Super Admin',
                     associate_users: '2',
                     status: 'locked',
-                    action: '',
+                    action: [
+                        {
+                            text: 'Modify',
+                        },
+                        {
+                            text: 'Archive',
+                        },
+                    ],
                 },
                 {
                     role_title: 'Maker',
                     associate_users: '5',
                     status: 'locked',
-                    action: '',
+                    action: [
+                        {
+                            text: 'Modify',
+                        },
+                        {
+                            text: 'Archive',
+                        },
+                    ],
                 },
                 {
                     role_title: 'Checker',
                     associate_users: '3',
                     status: 'locked',
-                    action: '',
+                    action: [
+                        {
+                            text: 'Modify',
+                        },
+                        {
+                            text: 'Archive',
+                        },
+                    ],
                 },
                 {
                     role_title: 'Approver',
                     associate_users: '2',
                     status: 'locked',
-                    action: '',
+                    action: [
+                        {
+                            text: 'Modify',
+                        },
+                        {
+                            text: 'Archive',
+                        },
+                    ],
                 },
                 {
                     role_title: 'Relationship Manager',
                     associate_users: '3',
                     status: 'active',
-                    action: '',
+                    action: [
+                        {
+                            text: 'Modify',
+                        },
+                        {
+                            text: 'Archive',
+                        },
+                    ],
                 },
                 {
                     role_title: 'System Analyst',
                     associate_users: '0',
                     status: 'archived',
-                    action: '',
+                    action: [
+                        {
+                            text: 'Modify',
+                        },
+                        {
+                            text: 'Activate',
+                        },
+                    ],
                 },
             ],
         },
@@ -1665,25 +1747,53 @@ export default {
                     branch_title: 'United Arab Emirates',
                     short_code: 'UAE',
                     status: 'Active',
-                    action: '',
+                    action: [
+                        {
+                            text: 'Modify',
+                        },
+                        {
+                            text: 'Archive',
+                        },
+                    ],
                 },
                 {
                     branch_title: 'Pakistan',
                     short_code: 'PK',
                     status: 'Active',
-                    action: '',
+                    action: [
+                        {
+                            text: 'Modify',
+                        },
+                        {
+                            text: 'Archive',
+                        },
+                    ],
                 },
                 {
                     branch_title: 'United Kingdom',
                     short_code: 'UK',
                     status: 'Active',
-                    action: '',
+                    action: [
+                        {
+                            text: 'Modify',
+                        },
+                        {
+                            text: 'Archive',
+                        },
+                    ],
                 },
                 {
                     branch_title: 'United States of America',
                     short_code: 'USA',
                     status: 'Archived',
-                    action: '',
+                    action: [
+                        {
+                            text: 'Modify',
+                        },
+                        {
+                            text: 'Activate',
+                        },
+                    ],
                 },
             ],
         },
