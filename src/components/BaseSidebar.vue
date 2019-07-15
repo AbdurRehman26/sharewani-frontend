@@ -47,16 +47,6 @@ export default {
          * Value to determine the current compose mode which
          * varies between 'add' and 'edit'
          */
-
-        countryListing: {
-            type: Array,
-            default: null,
-        },
-
-        sidelinksListing: {
-            type: Array,
-            default: null,
-        },
     }, // End of Component > props
 
     /*
@@ -65,7 +55,63 @@ export default {
     |--------------------------------------------------------------------------
     */
     data() {
-        return {}
+        return {
+            countryListing: [
+                {
+                    anchorLink: '/',
+                    menuLabel: 'UAE',
+                },
+                {
+                    anchorLink: '/dashboard',
+                    menuLabel: 'PK',
+                },
+                {
+                    anchorLink: '/',
+                    menuLabel: 'UK',
+                },
+                {
+                    anchorLink: '/',
+                    menuLabel: 'USA',
+                },
+            ],
+            sidelinksListing: [
+                {
+                    anchorLink: '/dashboard',
+                    icon: 'icon-insights',
+                    menuLabel: 'Insights',
+                },
+                {
+                    anchorLink: '/customer-profile',
+                    icon: 'icon-customer-profil',
+                    menuLabel: 'Customer Profiles',
+                },
+                {
+                    anchorLink: '/register-customer/upload-document',
+                    icon: 'icon-add-customer',
+                    menuLabel: 'Register Customer',
+                },
+                {
+                    anchorLink: '/configuration',
+                    icon: 'icon-configurations',
+                    menuLabel: 'Configurations',
+                },
+                {
+                    anchorLink: '/system-users',
+                    icon: 'icon-system-users',
+                    menuLabel: 'System Users',
+                },
+                {
+                    anchorLink: '/system-logs',
+                    icon: 'icon-system-log',
+                    menuLabel: 'System Logs',
+                },
+                // {
+                //     anchorLink: '/data-export',
+                //     icon: 'icon-export',
+                //     menuLabel: 'Data Export',
+                // },
+            ],
+        }
     }, // End of Component > data
 
     /*
