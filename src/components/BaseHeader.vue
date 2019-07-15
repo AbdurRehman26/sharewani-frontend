@@ -6,6 +6,12 @@
                 class="header-menu navigation"
                 :class="stepStyle == true ? 'step-menu' : ''"
             >
+                <div
+                    v-if="$route.meta.noSidebar == true"
+                    class="logo-container"
+                >
+                    <base-logo anchorClass="colorLogo"></base-logo>
+                </div>
                 <ul class="menu-list">
                     <li
                         v-for="(list, index) in menuListing"
@@ -21,14 +27,14 @@
                     >
                         <router-link :to="list.anchorLink">
                             <span v-if="stepStyle" class="point">
-                                <i class="icon-check"></i>
+                                <i class="icon-check-circle"></i>
                             </span>
                             <span>{{ list.menuLabel }}</span>
                         </router-link>
                     </li>
                 </ul>
             </div>
-            <div class="profile-block">
+            <div class="profile-block" v-if="$route.meta.noSidebar == false">
                 <div class="profile-main">
                     <div class="profile-image">
                         <img
