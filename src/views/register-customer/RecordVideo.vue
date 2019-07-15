@@ -1,31 +1,26 @@
 <template>
-    <div class="action-review">
-        <span v-for="(list, index) in actionType" :key="index">
-            <a href="javascript:void(0)" :class="list.cssClass">
-                <i :class="list.icon"></i>
-                <p>{{ list.text }}</p>
-                <!--             <div v-if="list.text === 'Archive' || list.text === 'archive'">
-
-                <i class="icon-trash"></i>
-                <span>{{ list.text }}</span>
+    <b-form class="step-form">
+        <div class="row">
+            <div class="col-lg-12">
+                <h3>Step 2: Record Video</h3>
+                <p class="info">
+                    Please point video camera on customer face and make sure
+                    their straight face is completly visible in the video. Click
+                    on Record button to record 10 seconds video.
+                </p>
+                <div class="video-record">
+                    <img src="@/assets/images/Video.png" />
+                </div>
+                <base-button
+                    btnType="submit"
+                    btnVariant="primary"
+                    btnLabel="CONTINUE"
+                    @preventFunction="linking()"
+                ></base-button>
             </div>
-            <div v-if="list.text === 'Activate' || list.text === 'activate'">
-                <i class="icon-done"></i>
-                <span>{{ list.text }}</span>
-            </div>
-            <div v-if="list.text === 'in review' || list.text === 'In Review'">
-                <i class="icon-lock_outline"></i>
-                <span>{{ list.text }}</span>
-            </div>
-            <div v-if="list.text === 'review' || list.text === 'Review'">
-                <i class="icon-review"></i>
-                <span>{{ list.text }}</span>
-            </div> -->
-            </a>
-        </span>
-    </div>
+        </div>
+    </b-form>
 </template>
-
 <script>
 export default {
     components: {},
@@ -43,14 +38,6 @@ export default {
         mode: {
             type: String,
             default: 'add',
-        },
-        actionType: {
-            type: Array,
-            default: null,
-        },
-        cssClass: {
-            type: String,
-            default: null,
         },
     }, // End of Component > props
 
@@ -75,7 +62,15 @@ export default {
     | Component > methods
     |--------------------------------------------------------------------------
     */
-    methods: {}, // End of Component > methods
+    methods: {
+        linking() {
+            if (this.$route.meta.publicRegistration === true) {
+                this.$router.push('/public-registration/setup-profile')
+            } else {
+                this.$router.push('/register-customer/setup-profile')
+            }
+        },
+    }, // End of Component > methods
 
     /*
     |--------------------------------------------------------------------------

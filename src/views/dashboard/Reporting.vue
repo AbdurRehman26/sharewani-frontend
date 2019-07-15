@@ -172,14 +172,7 @@ export default {
     |--------------------------------------------------------------------------
     */
     computed: {
-        ...mapGetters([
-            'customerByAge',
-            'customersByGender',
-            'customersByWorkType',
-            'customersAccountByMonth',
-            'customersByIndustry',
-            'customersByNationality',
-        ]),
+        ...mapGetters(['dashboardData']),
     }, // End of Component > computed
 
     /*
@@ -190,31 +183,33 @@ export default {
     methods: {
         initializeData() {
             //Customers by Age Group
-            let customerByAge = this.customerByAge
+            let customerByAge = this.dashboardData.customerByAge
             window.AmCharts.makeChart('customer-by-age', customerByAge)
             //Customers by Gender
-            let customersByGender = this.customersByGender
+            let customersByGender = this.dashboardData.customersByGender
             window.AmCharts.makeChart('customers-by-gender', customersByGender)
             //customers-by-work-type
-            let customersByWorkType = this.customersByWorkType
+            let customersByWorkType = this.dashboardData.customersByWorkType
             window.AmCharts.makeChart(
                 'customers-by-work-type',
                 customersByWorkType
             )
             //customers by work type
-            let customersAccountByMonth = this.customersAccountByMonth
+            let customersAccountByMonth = this.dashboardData
+                .customersAccountByMonth
             window.AmCharts.makeChart(
                 'customers-account-by-month',
                 customersAccountByMonth
             )
             //customers by industry
-            let customersByIndustry = this.customersByIndustry
+            let customersByIndustry = this.dashboardData.customersByIndustry
             window.AmCharts.makeChart(
                 'customers-by-industry',
                 customersByIndustry
             )
             //customers by industry
-            let customersByNationality = this.customersByNationality
+            let customersByNationality = this.dashboardData
+                .customersByNationality
             window.AmCharts.makeChart(
                 'customers-by-nationality',
                 customersByNationality

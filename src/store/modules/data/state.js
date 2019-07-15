@@ -1,5 +1,5 @@
 export default {
-    dashboardUserRequest: [
+    /*    dashboardUserRequest: [
         {
             title: 'Customers Onboarded',
             value: '2,859',
@@ -16,8 +16,8 @@ export default {
             title: 'REJECTED',
             value: '1,136',
         },
-    ],
-    activityTimelineData: {
+    ],*/
+    /*    activityTimelineData: {
         type: 'serial',
         pathToImages: 'https://www.amcharts.com/lib/3/images/',
         categoryField: 'date',
@@ -1087,7 +1087,7 @@ export default {
                 color: '#f8e08e',
             },
         ],
-    },
+    },*/
     //system logs page
     logsTotalActions: {
         type: 'serial',
@@ -1240,190 +1240,6 @@ export default {
         ],
     },
     systemUserTable: {
-        alerts: {
-            fields: [
-                {
-                    key: 'profile',
-                    label: '',
-                },
-                {
-                    key: 'customer',
-                    label: 'CUSTOMER',
-                },
-                {
-                    key: 'full_name',
-                    label: 'FULL NAME',
-                },
-                {
-                    key: 'nationality',
-                    label: 'NATIONALITY',
-                },
-                {
-                    key: 'name_screening',
-                    label: 'NAME SCREENING',
-                    thClass: 'with-icon person-icon text-center',
-                    tdClass: 'text-center',
-                },
-                {
-                    key: 'documentation',
-                    label: 'DOCUMENTATION',
-                    thClass: 'with-icon document-icon text-center',
-                    tdClass: 'text-center',
-                },
-                {
-                    key: 'risk_rating',
-                    label: 'RISK RATING',
-                    thClass: 'with-icon text-center graph-icon',
-                    tdClass: 'text-center',
-                },
-                {
-                    key: 'action',
-                    label: 'STATUS',
-                },
-            ],
-            items: [
-                {
-                    profile: 'member-1.png',
-                    customer: '1250976',
-                    full_name: 'Zeng Wen',
-                    nationality: 'British',
-                    name_screening: 'Pending',
-                    documentation: 'High Risk',
-                    risk_rating: 'Sanctions',
-                    action: [
-                        {
-                            text: 'In Review',
-                        },
-                    ],
-                },
-                {
-                    profile: 'member-2.png',
-                    customer: '1250976',
-                    full_name: 'Edward Lindgren',
-                    nationality: 'British',
-                    name_screening: 'Sanctions',
-                    documentation: 'pending',
-                    risk_rating: 'pending',
-                    action: [
-                        {
-                            text: 'In Review',
-                        },
-                    ],
-                },
-                {
-                    profile: 'member-3.png',
-                    customer: '3282345',
-                    full_name: 'Christian Russell',
-                    nationality: 'American',
-                    name_screening: 'High Risk',
-                    documentation: 'Sanctions',
-                    risk_rating: 'Pending',
-                    action: [
-                        {
-                            text: 'In Review',
-                        },
-                    ],
-                },
-                {
-                    profile: 'member-4.png',
-                    customer: '3312353',
-                    full_name: 'Fua Lamba',
-                    nationality: 'Singaporean',
-                    name_screening: 'High Risk',
-                    documentation: 'pending',
-                    risk_rating: 'Pending',
-                    action: [
-                        {
-                            text: 'In Review',
-                        },
-                    ],
-                },
-                {
-                    profile: 'member-5.png',
-                    customer: '1250976',
-                    full_name: 'Alexander Ljung',
-                    nationality: 'Greek',
-                    name_screening: 'pending',
-                    documentation: 'pending',
-                    risk_rating: 'pending',
-                    action: [
-                        {
-                            text: 'In Review',
-                        },
-                    ],
-                },
-                {
-                    profile: 'member-6.png',
-                    customer: '2489573',
-                    full_name: 'Chukwudi Udo',
-                    nationality: 'Mexican',
-                    name_screening: 'Sanctions',
-                    documentation: 'pending',
-                    risk_rating: 'pending',
-                    action: [
-                        {
-                            text: 'In Review',
-                        },
-                    ],
-                },
-                {
-                    profile: 'member-7.png',
-                    customer: '3312353',
-                    full_name: 'Linzell Bowman',
-                    nationality: 'British',
-                    name_screening: 'Sanctions',
-                    documentation: 'pending',
-                    risk_rating: 'pending',
-                    action: [
-                        {
-                            text: 'In Review',
-                        },
-                    ],
-                },
-                {
-                    profile: 'member-8.png',
-                    customer: '3282345',
-                    full_name: 'Vương Mộng Nhi',
-                    nationality: 'Chinese',
-                    name_screening: 'pending',
-                    documentation: 'High Risk',
-                    risk_rating: 'Sanctions',
-                    action: [
-                        {
-                            text: 'In Review',
-                        },
-                    ],
-                },
-                {
-                    profile: 'member-9.png',
-                    customer: '2321345',
-                    full_name: 'Lew Silverton',
-                    nationality: 'British',
-                    name_screening: 'pending',
-                    documentation: 'Sanctions',
-                    risk_rating: 'Sanctions',
-                    action: [
-                        {
-                            text: 'In Review',
-                        },
-                    ],
-                },
-                {
-                    profile: 'member-10.png',
-                    customer: '2223535',
-                    full_name: 'Xun Guiying',
-                    nationality: 'Chinese',
-                    name_screening: 'pending',
-                    documentation: 'Sanctions',
-                    risk_rating: 'Sanctions',
-                    action: [
-                        {
-                            text: 'In Review',
-                        },
-                    ],
-                },
-            ],
-        },
         users: {
             fields: [
                 {

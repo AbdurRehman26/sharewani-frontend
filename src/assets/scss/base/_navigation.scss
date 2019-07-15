@@ -92,6 +92,7 @@
             }
             a {
                 padding: 10px 12px;
+                pointer-events: none;
                 span {
                     font-size: 0.625rem;
                     &.point {
@@ -135,24 +136,28 @@
                 }
             }
             &.router-link-exact-active.router-link-active {
+                opacity: 1;
                 .point {
                     i {
                         display: none;
                     }
                 }
             }
+            &.router-link-active {
+                opacity: 0.6;
+            }
             &.router-link-active:not(.router-link-exact-active) {
                 .point {
-                    background-color: $secondary !important;
-                    border: 5px solid $secondary !important;
+                    background-color: #fff !important;
+                    border: 5px solid #fff !important;
                     i {
                         display: block !important;
                         position: absolute;
-                        top: 0;
+                        top: -5px;
                         right: 0;
-                        left: -3px;
-                        font-size: 11px;
-                        color: #fff;
+                        left: -6px;
+                        font-size: 1.5rem;
+                        color: $secondary;
                     }
                 }
             }
@@ -160,6 +165,9 @@
                 &:after {
                     display: none;
                 }
+            }
+            &:last-child {
+                margin-right: 0px;
             }
         }
     }

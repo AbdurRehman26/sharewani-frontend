@@ -2,6 +2,8 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import shared from './modules/shared'
 import data from './modules/data/'
+import dashboard from './modules/dashboard/'
+import profile from './modules/profile/'
 
 Vue.use(Vuex)
 
@@ -11,6 +13,8 @@ export default new Vuex.Store({
     modules: {
         shared,
         data,
+        dashboard,
+        profile,
     },
     strict: debug,
 })

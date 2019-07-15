@@ -1,16 +1,35 @@
 <template>
-    <div class="customer-profile">
-        <div class="content-area">
-            <base-header :menuListing="menuListing" stepStyle></base-header>
-            <div class="right-panel">
-                <router-view></router-view>
+    <b-form class="step-form text-center">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="fields-area registration-completed">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h3>Thank you</h3>
+                            <p>
+                                Customer account has been created successfully.
+                            </p>
+                            <div class="generated-customer-id">
+                                <h4>1281375</h4>
+                                <p>UNIQUE CUSTOMER ID</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <base-button
+                    btnType="submit"
+                    btnVariant="primary"
+                    btnLabel="REGISTER ANOTHER CUSTOMER"
+                    @preventFunction="linking()"
+                ></base-button>
             </div>
         </div>
-    </div>
+    </b-form>
 </template>
-
 <script>
 export default {
+    components: {},
+
     /*
     |--------------------------------------------------------------------------
     | Component > props
@@ -33,35 +52,7 @@ export default {
     |--------------------------------------------------------------------------
     */
     data() {
-        return {
-            menuListing: [
-                {
-                    anchorLink: '/register-customer/upload-document',
-                    menuLabel: 'Upload Documents',
-                    sessionStep: '1',
-                },
-                {
-                    anchorLink: '/register-customer/record-video',
-                    menuLabel: 'Record Video',
-                    sessionStep: '2',
-                },
-                {
-                    anchorLink: '/register-customer/setup-profile',
-                    menuLabel: 'Setup Profile',
-                    sessionStep: '3',
-                },
-                {
-                    anchorLink: '/register-customer/account-info',
-                    menuLabel: 'Account Info',
-                    sessionStep: '4',
-                },
-                {
-                    anchorLink: '/register-customer/finish',
-                    menuLabel: 'Finish',
-                    sessionStep: '5',
-                },
-            ],
-        }
+        return {}
     }, // End of Component > data
 
     /*
@@ -76,7 +67,15 @@ export default {
     | Component > methods
     |--------------------------------------------------------------------------
     */
-    methods: {}, // End of Component > methods
+    methods: {
+        linking() {
+            if (this.$route.meta.publicRegistration === true) {
+                this.$router.push('/public-registration/upload-document')
+            } else {
+                this.$router.push('/register-customer/upload-document')
+            }
+        },
+    }, // End of Component > methods
 
     /*
     |--------------------------------------------------------------------------

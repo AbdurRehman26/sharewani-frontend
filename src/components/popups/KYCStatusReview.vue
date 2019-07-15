@@ -72,7 +72,6 @@ export default {
         return {
             form: {
                 kycUpdate: '',
-
                 comments: '',
 
                 status: [

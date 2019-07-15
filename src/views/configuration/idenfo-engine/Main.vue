@@ -1,7 +1,38 @@
 <template>
     <div class="wrap-content">
-        <div class="config-list">
-            <ul>
+        <div class="config-list" ref="listingArea">
+            <ul v-show="listVal <= 1100">
+                <li
+                    v-for="(list, index) in menuListing.slice(0, 7)"
+                    :key="index"
+                >
+                    <router-link :to="list.anchorLink">
+                        <span>{{ list.menuLabel }}</span>
+                    </router-link>
+                </li>
+                <li class="open-dropdown">
+                    <a @click="listDropdown ^= true" href="javascript:void(0);">
+                        .....
+                    </a>
+
+                    <div v-if="listDropdown" class="dropdown-open">
+                        <ul>
+                            <li
+                                v-for="(listo, index) in menuListing.slice(
+                                    7,
+                                    menuListing.length
+                                )"
+                                :key="index"
+                            >
+                                <router-link :to="listo.anchorLink">
+                                    <span>{{ listo.menuLabel }}</span>
+                                </router-link>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            <ul v-show="listVal >= 1100">
                 <li v-for="(list, index) in menuListing" :key="index">
                     <router-link :to="list.anchorLink">
                         <span>{{ list.menuLabel }}</span>
@@ -42,6 +73,9 @@ export default {
     */
     data() {
         return {
+            navWidth: true,
+            listVal: null,
+            listDropdown: false,
             menuListing: [
                 {
                     anchorLink: '/configuration/idenfo-engine/',
@@ -95,13 +129,29 @@ export default {
     | Component > methods
     |--------------------------------------------------------------------------
     */
-    methods: {}, // End of Component > methods
+    methods: {
+        listWidthVal() {
+            this.listVal = this.$refs.listingArea.offsetWidth
+        },
+        menuFunc() {
+            setTimeout(function() {
+                if (this.listVal > 940) {
+                    this.navWidth = true
+                } else {
+                    this.navWidth = false
+                }
+            }, 500)
+        },
+    }, // End of Component > methods
 
     /*
     |--------------------------------------------------------------------------
     | Component > mounted
     |--------------------------------------------------------------------------
     */
-    mounted() {}, // End of Component > mounted
+    mounted() {
+        this.listWidthVal()
+        this.menuFunc()
+    }, // End of Component > mounted
 } // End of export default
 </script>

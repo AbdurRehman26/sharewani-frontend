@@ -164,7 +164,7 @@ export default {
     | Component > computed
     |--------------------------------------------------------------------------
     */
-    computed: { ...mapGetters(['systemUserTable']) }, // End of Component > computed
+    computed: { ...mapGetters(['dashboardData']) }, // End of Component > computed
 
     /*
     |--------------------------------------------------------------------------
@@ -174,10 +174,11 @@ export default {
     methods: {
         initializeData() {
             //system log table
-            let systemUserTableFields = this.systemUserTable.alerts.fields //get user data from store
-            this.fields = systemUserTableFields //push data into array
-            let systemUserTableitems = this.systemUserTable.alerts.items //get user data from store
-            this.items = systemUserTableitems //push data into array
+            let dashboardAlertsTableFields = this.dashboardData.alertsTable
+                .fields //get user data from store
+            this.fields = dashboardAlertsTableFields //push data into array
+            let dashboardAlertsTableItems = this.dashboardData.alertsTable.items //get user data from store
+            this.items = dashboardAlertsTableItems //push data into array
         },
     }, // End of Component > methods
 
