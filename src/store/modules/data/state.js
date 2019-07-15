@@ -1261,20 +1261,23 @@ export default {
                 {
                     key: 'name_screening',
                     label: 'NAME SCREENING',
-                    thClass: 'person-icon',
+                    thClass: 'with-icon person-icon text-center',
+                    tdClass: 'text-center',
                 },
                 {
                     key: 'documentation',
                     label: 'DOCUMENTATION',
-                    thClass: 'document-icon',
+                    thClass: 'with-icon document-icon text-center',
+                    tdClass: 'text-center',
                 },
                 {
                     key: 'risk_rating',
                     label: 'RISK RATING',
-                    thClass: 'graph-icon',
+                    thClass: 'with-icon text-center graph-icon',
+                    tdClass: 'text-center',
                 },
                 {
-                    key: 'status',
+                    key: 'action',
                     label: 'STATUS',
                 },
             ],
@@ -1284,40 +1287,56 @@ export default {
                     customer: '1250976',
                     full_name: 'Zeng Wen',
                     nationality: 'British',
-                    name_screening: 'pending',
-                    documentation: 'inreview',
-                    risk_rating: 'reject',
-                    status: 'lock',
+                    name_screening: 'Pending',
+                    documentation: 'High Risk',
+                    risk_rating: 'Sanctions',
+                    action: [
+                        {
+                            text: 'In Review',
+                        },
+                    ],
                 },
                 {
                     profile: 'member-2.png',
                     customer: '1250976',
                     full_name: 'Edward Lindgren',
                     nationality: 'British',
-                    name_screening: 'inreview',
+                    name_screening: 'Sanctions',
                     documentation: 'pending',
                     risk_rating: 'pending',
-                    status: 'review',
+                    action: [
+                        {
+                            text: 'In Review',
+                        },
+                    ],
                 },
                 {
                     profile: 'member-3.png',
                     customer: '3282345',
                     full_name: 'Christian Russell',
                     nationality: 'American',
-                    name_screening: 'pending',
-                    documentation: 'inreview',
-                    risk_rating: 'reject',
-                    status: 'lock',
+                    name_screening: 'High Risk',
+                    documentation: 'Sanctions',
+                    risk_rating: 'Pending',
+                    action: [
+                        {
+                            text: 'In Review',
+                        },
+                    ],
                 },
                 {
                     profile: 'member-4.png',
                     customer: '3312353',
                     full_name: 'Fua Lamba',
                     nationality: 'Singaporean',
-                    name_screening: 'reject',
+                    name_screening: 'High Risk',
                     documentation: 'pending',
-                    risk_rating: 'inreview',
-                    status: 'lock',
+                    risk_rating: 'Pending',
+                    action: [
+                        {
+                            text: 'In Review',
+                        },
+                    ],
                 },
                 {
                     profile: 'member-5.png',
@@ -1326,38 +1345,54 @@ export default {
                     nationality: 'Greek',
                     name_screening: 'pending',
                     documentation: 'pending',
-                    risk_rating: 'inreview',
-                    status: 'review',
+                    risk_rating: 'pending',
+                    action: [
+                        {
+                            text: 'In Review',
+                        },
+                    ],
                 },
                 {
                     profile: 'member-6.png',
                     customer: '2489573',
                     full_name: 'Chukwudi Udo',
                     nationality: 'Mexican',
-                    name_screening: 'pending',
-                    documentation: 'inreview',
+                    name_screening: 'Sanctions',
+                    documentation: 'pending',
                     risk_rating: 'pending',
-                    status: 'review',
+                    action: [
+                        {
+                            text: 'In Review',
+                        },
+                    ],
                 },
                 {
                     profile: 'member-7.png',
                     customer: '3312353',
                     full_name: 'Linzell Bowman',
                     nationality: 'British',
-                    name_screening: 'pending',
-                    documentation: 'inreview',
-                    risk_rating: 'reject',
-                    status: 'review',
+                    name_screening: 'Sanctions',
+                    documentation: 'pending',
+                    risk_rating: 'pending',
+                    action: [
+                        {
+                            text: 'In Review',
+                        },
+                    ],
                 },
                 {
                     profile: 'member-8.png',
                     customer: '3282345',
                     full_name: 'Vương Mộng Nhi',
                     nationality: 'Chinese',
-                    name_screening: 'reject',
-                    documentation: 'pending',
-                    risk_rating: 'pending',
-                    status: 'review',
+                    name_screening: 'pending',
+                    documentation: 'High Risk',
+                    risk_rating: 'Sanctions',
+                    action: [
+                        {
+                            text: 'In Review',
+                        },
+                    ],
                 },
                 {
                     profile: 'member-9.png',
@@ -1365,19 +1400,27 @@ export default {
                     full_name: 'Lew Silverton',
                     nationality: 'British',
                     name_screening: 'pending',
-                    documentation: 'reject',
-                    risk_rating: 'inreview',
-                    status: 'review',
+                    documentation: 'Sanctions',
+                    risk_rating: 'Sanctions',
+                    action: [
+                        {
+                            text: 'In Review',
+                        },
+                    ],
                 },
                 {
                     profile: 'member-10.png',
                     customer: '2223535',
                     full_name: 'Xun Guiying',
                     nationality: 'Chinese',
-                    name_screening: 'inreview',
-                    documentation: 'pending',
-                    risk_rating: 'pending',
-                    status: 'review',
+                    name_screening: 'pending',
+                    documentation: 'Sanctions',
+                    risk_rating: 'Sanctions',
+                    action: [
+                        {
+                            text: 'In Review',
+                        },
+                    ],
                 },
             ],
         },
@@ -1602,37 +1645,79 @@ export default {
                     role_title: 'Super Admin',
                     associate_users: '2',
                     status: 'locked',
-                    action: '',
+                    action: [
+                        {
+                            text: 'Modify',
+                        },
+                        {
+                            text: 'Archive',
+                        },
+                    ],
                 },
                 {
                     role_title: 'Maker',
                     associate_users: '5',
                     status: 'locked',
-                    action: '',
+                    action: [
+                        {
+                            text: 'Modify',
+                        },
+                        {
+                            text: 'Archive',
+                        },
+                    ],
                 },
                 {
                     role_title: 'Checker',
                     associate_users: '3',
                     status: 'locked',
-                    action: '',
+                    action: [
+                        {
+                            text: 'Modify',
+                        },
+                        {
+                            text: 'Archive',
+                        },
+                    ],
                 },
                 {
                     role_title: 'Approver',
                     associate_users: '2',
                     status: 'locked',
-                    action: '',
+                    action: [
+                        {
+                            text: 'Modify',
+                        },
+                        {
+                            text: 'Archive',
+                        },
+                    ],
                 },
                 {
                     role_title: 'Relationship Manager',
                     associate_users: '3',
                     status: 'active',
-                    action: '',
+                    action: [
+                        {
+                            text: 'Modify',
+                        },
+                        {
+                            text: 'Archive',
+                        },
+                    ],
                 },
                 {
                     role_title: 'System Analyst',
                     associate_users: '0',
                     status: 'archived',
-                    action: '',
+                    action: [
+                        {
+                            text: 'Modify',
+                        },
+                        {
+                            text: 'Activate',
+                        },
+                    ],
                 },
             ],
         },
@@ -1662,25 +1747,53 @@ export default {
                     branch_title: 'United Arab Emirates',
                     short_code: 'UAE',
                     status: 'Active',
-                    action: '',
+                    action: [
+                        {
+                            text: 'Modify',
+                        },
+                        {
+                            text: 'Archive',
+                        },
+                    ],
                 },
                 {
                     branch_title: 'Pakistan',
                     short_code: 'PK',
                     status: 'Active',
-                    action: '',
+                    action: [
+                        {
+                            text: 'Modify',
+                        },
+                        {
+                            text: 'Archive',
+                        },
+                    ],
                 },
                 {
                     branch_title: 'United Kingdom',
                     short_code: 'UK',
                     status: 'Active',
-                    action: '',
+                    action: [
+                        {
+                            text: 'Modify',
+                        },
+                        {
+                            text: 'Archive',
+                        },
+                    ],
                 },
                 {
                     branch_title: 'United States of America',
                     short_code: 'USA',
                     status: 'Archived',
-                    action: '',
+                    action: [
+                        {
+                            text: 'Modify',
+                        },
+                        {
+                            text: 'Activate',
+                        },
+                    ],
                 },
             ],
         },

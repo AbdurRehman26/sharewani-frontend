@@ -7,7 +7,7 @@ $grey-darkest: $body-color;
 $grey-dark: #e8e8ef;
 $grey-medium: #9ea0a5;
 $grey-lite: #7f8fa4;
-$grey-xlite: #e9eae3;
+$grey-xlite: #e5e4e6;
 $border-color: #d7d7e2;
 $white: #fff;
 $border-radius: 4px;
@@ -15,7 +15,7 @@ $border-opacity: rgba(151, 151, 151, 0.1);
 $success: #41b031;
 $light: #eef0f4;
 $dark: #bcbcbc;
-$danger: #dc3545;
+$danger: #c92038;
 $pink: #aa2f78;
 $yellow: #ffb54c;
 $radio-check: #9d9f8f;
@@ -85,7 +85,7 @@ $low: #00c535;
 
 // modal
 
-$modal-inner-padding: 24px 24px 0 !default;
+$modal-inner-padding: 24px 24px 24px !default;
 $modal-title-line-height: 24px !default;
 $modal-title-font-size: 18px !default;
 $modal-header-border-color: #d0d2c5 !default;
@@ -160,4 +160,4 @@ $alert-danger-border: #f5c6cb !default;
 
 $table-footer-bg: #fdfaff;
 $table-row-padding: 10px 12px 8px;
-
+$table-row-padding-th: 14px 12px 12px;

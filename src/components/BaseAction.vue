@@ -1,12 +1,28 @@
 <template>
     <div class="action-review">
-        <a href="/" v-for="(list, index) in actionType" :key="index">
+        <a
+            href="javascript:void(0);"
+            v-for="(list, index) in actionType"
+            :key="index"
+        >
             <div v-if="list.text === 'Modify' || list.text === 'modify'">
                 <i class="icon-edit"></i>
                 <span>{{ list.text }}</span>
             </div>
             <div v-if="list.text === 'Archive' || list.text === 'archive'">
                 <i class="icon-trash"></i>
+                <span>{{ list.text }}</span>
+            </div>
+            <div v-if="list.text === 'Activate' || list.text === 'activate'">
+                <i class="icon-done"></i>
+                <span>{{ list.text }}</span>
+            </div>
+            <div v-if="list.text === 'in review' || list.text === 'In Review'">
+                <i class="icon-lock_outline"></i>
+                <span>{{ list.text }}</span>
+            </div>
+            <div v-if="list.text === 'review' || list.text === 'Review'">
+                <i class="icon-review"></i>
                 <span>{{ list.text }}</span>
             </div>
         </a>
@@ -32,7 +48,7 @@ export default {
             default: 'add',
         },
         actionType: {
-            type: String,
+            type: Array,
             default: null,
         },
     }, // End of Component > props

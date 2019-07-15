@@ -25,6 +25,58 @@
     padding: 36px 44px;
 }
 
+.info {
+    color: $nav-color;
+}
+
+.step-form {
+    h3 {
+        font-size: 1.125rem;
+        margin-bottom: 20px;
+    }
+    .fields-area {
+        border-bottom: 1px solid $grey-dark;
+        margin-bottom: 44px;
+        padding-bottom: 20px;
+    }
+    .rangeto {
+        span {
+            position: absolute;
+            bottom: 36px;
+            margin: auto;
+            left: 49%;
+            color: $grey-medium;
+        }
+    }
+}
+
+.registration-completed {
+    p {
+        font-size: 0.875rem;
+    }
+}
+
+.generated-customer-id {
+    border: 1px solid $border-color;
+    box-sizing: border-box;
+    border-radius: 8px;
+    display: flex;
+    margin: auto;
+    padding: 8px 10px;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    max-width: 200px;
+    h4 {
+        font-family: $font_thin;
+    }
+    p {
+        margin-bottom: 0px;
+        font-size: 0.75rem;
+        color: $nav-color;
+    }
+}
+
 .work-impact {
     position: relative;
     text-decoration: none;
@@ -151,10 +203,14 @@
 
         li {
             display: inline-block;
-            padding-right: 16px;
+            margin-right: 20px;
+
+            .btn-link {
+                padding: 0;
+            }
 
             &:last-child {
-                padding-right: 0;
+                margin-right: 0;
             }
         }
     }
@@ -227,6 +283,10 @@
         position: relative;
         top: 2px;
     }
+}
+
+.form-options {
+    padding-top: 20px;
 }
 
 .profile-area {
@@ -384,29 +444,35 @@
 .table {
     thead {
         th {
-            &.person-icon {
-                text-align: center;
+            &.with-icon {
                 &:before {
-                    content: '\E91C';
+                    margin-right: 10px;
+                    font-size: 0.9rem;
+                    vertical-align: baseline;
+                    position: relative;
+                    top: 2px;
+                    color: $grey-lite !important;
+                }
+            }
+            &.person-icon {
+                &:before {
+                    position: relative;
+                    @extend .icon-person;
                     font-family: 'icomoon';
-                    padding-right: 10px;
                 }
             }
             &.document-icon {
-                text-align: center;
                 &:before {
-                    content: '\e90a';
+                    position: relative;
+                    @extend .icon-documentation;
                     font-family: 'icomoon';
-                    padding-right: 10px;
-                    color: #000;
                 }
             }
             &.graph-icon {
-                text-align: center;
                 &:before {
-                    content: '\e90f';
+                    position: relative;
+                    @extend .icon-graph;
                     font-family: 'icomoon';
-                    padding-right: 10px;
                 }
             }
 
@@ -586,6 +652,20 @@
     width: 200px;
 }
 
+.status-type-icon {
+    i {
+        font-size: 1.3rem;
+        &.sanctions {
+            color: $body-color;
+        }
+        &.pending {
+            color: $grey-xlite;
+        }
+        &.danger {
+            color: $danger;
+        }
+    }
+}
 .risk-factor-table {
     .table {
         tr {
@@ -716,6 +796,100 @@
                     background-image: url(assets/images/pdf.png);
                 }
             }
+        }
+    }
+}
+
+.font-semibold {
+    font-family: $font_medium !important;
+}
+
+.modal-body {
+    .tags-section {
+        .tags {
+            label {
+                line-height: 0;
+            }
+        }
+    }
+
+    .scrollable {
+        overflow-x: hidden;
+        height: 420px;
+    }
+
+    #style-2::-webkit-scrollbar {
+        width: 6px;
+        background-color: #ced3d8;
+    }
+
+    .screening-hit-section {
+        label {
+            text-transform: none;
+            font-family: $font_regular;
+            font-size: 0.875rem;
+            margin-bottom: 12px;
+        }
+
+        ul {
+            padding-left: 17px;
+            li {
+                margin-bottom: 5px;
+            }
+        }
+
+        h4 {
+            font-size: 1.125rem;
+            margin-top: 25px;
+            margin-bottom: 20px;
+            font-family: $font_medium;
+        }
+    }
+}
+
+.kyc-status-radio {
+    .custom-control-inline {
+        min-width: 140px;
+        margin-bottom: 15px;
+
+        &:nth-child(3),
+        &:nth-child(4) {
+            margin-bottom: 0;
+        }
+    }
+
+    &.overwrite-radio {
+        .custom-control-inline {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.screen-customer {
+    .table {
+        a {
+            text-decoration: none;
+        }
+    }
+}
+
+.document-preview-section {
+    width: 100%;
+    height: 288px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    iframe {
+        width: 100%;
+        height: 100%;
+    }
+    img {
+        position: absolute;
+        pointer-events: none;
+
+        &:active {
+            display: none;
         }
     }
 }

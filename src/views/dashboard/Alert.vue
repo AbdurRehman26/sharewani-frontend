@@ -61,66 +61,22 @@
                     </div>
                 </template>
                 <template slot="name_screening" slot-scope="data">
-                    <div
-                        class="pending indication-icons"
-                        v-if="data.value == 'pending'"
-                    >
-                        <i class="icon-check"></i>
-                    </div>
-                    <div
-                        class="inreview indication-icons"
-                        v-if="data.value == 'inreview'"
-                    >
-                        <i class="icon-wrong"></i>
-                    </div>
-                    <div
-                        class="reject indication-icons"
-                        v-if="data.value == 'reject'"
-                    >
-                        <i class="icon-wrong"></i>
-                    </div>
+                    <status-type-icon
+                        :statusTypeIcon="data.value"
+                    ></status-type-icon>
                 </template>
                 <template slot="documentation" slot-scope="data">
-                    <div
-                        class="pending indication-icons"
-                        v-if="data.value == 'pending'"
-                    >
-                        <i class="icon-check"></i>
-                    </div>
-                    <div
-                        class="inreview indication-icons"
-                        v-if="data.value == 'inreview'"
-                    >
-                        <i class="icon-wrong"></i>
-                    </div>
-                    <div
-                        class="reject indication-icons"
-                        v-if="data.value == 'reject'"
-                    >
-                        <i class="icon-wrong"></i>
-                    </div>
+                    <status-type-icon
+                        :statusTypeIcon="data.value"
+                    ></status-type-icon>
                 </template>
                 <template slot="risk_rating" slot-scope="data">
-                    <div
-                        class="pending indication-icons"
-                        v-if="data.value == 'pending'"
-                    >
-                        <i class="icon-check"></i>
-                    </div>
-                    <div
-                        class="inreview indication-icons"
-                        v-if="data.value == 'inreview'"
-                    >
-                        <i class="icon-wrong"></i>
-                    </div>
-                    <div
-                        class="reject indication-icons"
-                        v-if="data.value == 'reject'"
-                    >
-                        <i class="icon-wrong"></i>
-                    </div>
+                    <status-type-icon
+                        :statusTypeIcon="data.value"
+                    ></status-type-icon>
                 </template>
-                <template slot="status" slot-scope="data">
+
+                <!--  <template slot="status" slot-scope="data">
                     <div class="status-review" v-if="data.value == 'review'">
                         <a href="javascript:void(0);" v-b-modal.initiate-review>
                             <i class="icon-review"></i>
@@ -133,6 +89,13 @@
                             <span>In Review</span>
                         </router-link>
                     </div>
+                </template> -->
+
+                <template slot="action" slot-scope="data">
+                    <base-action
+                        :actionType="data.value"
+                        v-b-modal.initiate-review
+                    ></base-action>
                 </template>
             </b-table>
         </div>
@@ -144,11 +107,13 @@
 <script>
 import { mapGetters } from 'vuex'
 import pagination from '@/components/Pagination.vue'
+import statusTypeIcon from '@/components/AlertType.vue'
 import initiateReview from '@/components/popups/InitiateReviewPopup.vue'
 export default {
     components: {
         pagination,
         initiateReview,
+        statusTypeIcon,
     },
 
     /*

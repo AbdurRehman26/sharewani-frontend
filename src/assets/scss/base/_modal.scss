@@ -27,6 +27,7 @@
                 .modal-title {
                     font-size: $modal-title-font-size;
                     font-family: $font_medium;
+                    line-height: 21px;
                 }
                 .close {
                     padding: 10px 10px 0 0;
@@ -46,7 +47,7 @@
                     overflow: hidden;
 
                     &:after {
-                        content: '\e92b';
+                        content: '\e959';
                         font-family: 'icomoon';
                         position: absolute;
                         color: $white;
@@ -60,6 +61,20 @@
             .modal-body {
                 p {
                     line-height: 21px;
+                    margin-bottom: 0;
+                }
+
+                form {
+                    margin-top: 24px;
+                    margin-bottom: 0;
+                }
+
+                .modal-form-format {
+                    margin-top: 0 !important;
+                }
+
+                fieldset {
+                    margin-bottom: 0 !important;
                 }
             }
 
@@ -77,10 +92,12 @@
     }
 }
 
-.modal-large {
-    .modal-md {
-        max-width: 400px !important;
-    }
+.modal-sm {
+    max-width: 400px !important;
+}
+
+.modal-md {
+    max-width: 640px !important;
 }
 
 .modal-backdrop {

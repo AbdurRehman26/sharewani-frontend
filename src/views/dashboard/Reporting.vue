@@ -1,8 +1,25 @@
 <template>
     <div class="wrap-content">
         <div class="filter-section">
-            <h2>Customer Statistics</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <h2>Customer Statistics</h2>
+                </div>
+                <div class="col-md-8 text-right">
+                    <ul>
+                        <li>
+                            <base-button
+                                v-b-modal.export-report
+                                btnLabel="Export"
+                                btnType="submit"
+                                btnVariant="secondary"
+                            ></base-button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
+
         <div class="row">
             <div class="col-md-12">
                 <div class="row">
@@ -107,6 +124,7 @@
                 </div>
             </div>
         </div>
+        <export-report></export-report>
     </div>
 </template>
 
@@ -114,9 +132,12 @@
 import { mapGetters } from 'vuex'
 require('amcharts3')
 require('amcharts3/amcharts/serial')
+import exportReport from '@/components/popups/ExportReportPopup.vue'
 require('amcharts3/amcharts/pie')
 export default {
-    components: {},
+    components: {
+        exportReport,
+    },
 
     /*
     |--------------------------------------------------------------------------

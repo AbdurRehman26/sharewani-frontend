@@ -1,11 +1,29 @@
 <template>
-    <div class="dashboard">
-        <div class="content-area">
-            <base-header :menuListing="menuListing"></base-header>
-            <div class="right-panel">
-                <router-view />
-            </div>
-        </div>
+    <div class="status-type-icon">
+        <span
+            v-if="
+                statusTypeIcon == 'sanctions' || statusTypeIcon == 'Sanctions'
+            "
+            :class="iconTheme"
+        >
+            <i class="icon-cross-with-circle"></i>
+        </span>
+        <span
+            v-if="
+                statusTypeIcon == 'high risk' ||
+                    statusTypeIcon == 'High Risk' ||
+                    statusTypeIcon == 'High risk'
+            "
+            :class="iconTheme"
+        >
+            <i class="icon-cross-with-circle danger"></i>
+        </span>
+        <span
+            v-if="statusTypeIcon == 'pending' || statusTypeIcon == 'Pending'"
+            :class="iconTheme"
+        >
+            <i class="icon-tick-with-circle pending"></i>
+        </span>
     </div>
 </template>
 
@@ -27,6 +45,14 @@ export default {
             type: String,
             default: 'add',
         },
+        statusTypeIcon: {
+            type: String,
+            default: null,
+        },
+        iconTheme: {
+            type: String,
+            default: null,
+        },
     }, // End of Component > props
 
     /*
@@ -35,22 +61,7 @@ export default {
     |--------------------------------------------------------------------------
     */
     data() {
-        return {
-            menuListing: [
-                {
-                    anchorLink: '/configuration/idenfo-engine/',
-                    menuLabel: 'Idenfo Engine',
-                },
-                {
-                    anchorLink: '/configuration/import-data/',
-                    menuLabel: 'Import Data',
-                },
-                {
-                    anchorLink: '/configuration/form-builder/',
-                    menuLabel: 'Registration Form Builder',
-                },
-            ],
-        }
+        return {}
     }, // End of Component > data
 
     /*

@@ -1,25 +1,29 @@
 <template>
     <div>
         <b-modal
-            id="export-report"
-            title="Export Report"
+            id="overwrite-result"
+            title="Manually Overwrite Result"
             size="sm"
-            okTitle="Download"
+            okTitle="Submit"
             cancelTitle="Cancel"
             cancelVariant="link"
         >
             <p>
-                Would you like to download report data in Excel format or
-                graphical charts as pdf?
+                Are you sure you want to manually overwrite liveness detection
+                result?
             </p>
-
             <b-form>
-                <b-form-group class="export-files">
+                <b-form-group
+                    id="input-group-1"
+                    class="kyc-status-radio overwrite-radio mb-0"
+                    label="KYC Status"
+                    label-for="kyc-status"
+                >
                     <b-form-group class="mb-0">
                         <b-form-radio-group
-                            v-model="exportType"
-                            :options="form.exportType"
-                            name="export"
+                            v-model="result"
+                            :options="form.result"
+                            name="result"
                         ></b-form-radio-group>
                     </b-form-group>
                 </b-form-group>
@@ -33,13 +37,7 @@ export default {
     data() {
         return {
             form: {
-                exportType: [
-                    {
-                        text: 'Download report data in Excel format',
-                        value: null,
-                    },
-                    'Download charts as PDF',
-                ],
+                result: [{ text: 'Matched', value: null }, 'Not Matched'],
             },
         }
     },

@@ -296,5 +296,68 @@ export default new Router({
                 },
             ],
         },
+
+        {
+            path: '/register-customer',
+            name: 'customer-registration',
+            component: () =>
+                import(/* webpackChunkName: "customer-details" */ './views/registercustomer/Main.vue'),
+            children: [
+                {
+                    path: '/',
+                    name: 'upload-document',
+                    component: () =>
+                        import(/* webpackChunkName: "customer-information" */ './views/registercustomer/UploadDocuments.vue'),
+                    meta: {
+                        sessionStep: '1',
+                    },
+                },
+                {
+                    path: '/register-customer/upload-document',
+                    name: 'upload-document',
+                    component: () =>
+                        import(/* webpackChunkName: "customer-information" */ './views/registercustomer/UploadDocuments.vue'),
+                    meta: {
+                        sessionStep: '1',
+                    },
+                },
+                {
+                    path: '/register-customer/record-video',
+                    name: 'record-video',
+                    component: () =>
+                        import(/* webpackChunkName: "customer-information" */ './views/registercustomer/RecordVideo.vue'),
+                    meta: {
+                        sessionStep: '2',
+                    },
+                },
+                {
+                    path: '/register-customer/setup-profile',
+                    name: 'setup-profile',
+                    component: () =>
+                        import(/* webpackChunkName: "customer-information" */ './views/registercustomer/SetupProfile.vue'),
+                    meta: {
+                        sessionStep: '3',
+                    },
+                },
+                {
+                    path: '/register-customer/account-info',
+                    name: 'account-info',
+                    component: () =>
+                        import(/* webpackChunkName: "customer-information" */ './views/registercustomer/AccountInfo.vue'),
+                    meta: {
+                        sessionStep: '4',
+                    },
+                },
+                {
+                    path: '/register-customer/finish',
+                    name: 'finish',
+                    component: () =>
+                        import(/* webpackChunkName: "customer-information" */ './views/registercustomer/Finish.vue'),
+                    meta: {
+                        sessionStep: '5',
+                    },
+                },
+            ],
+        },
     ],
 })

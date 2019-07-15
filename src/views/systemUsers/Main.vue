@@ -47,7 +47,7 @@ export default {
                 },
                 {
                     anchorLink: '/system-users/branches',
-                    menuLabel: 'Branches',
+                    menuLabel: 'Data Segments',
                 },
                 {
                     anchorLink: '/system-users/application-access',

@@ -1,16 +1,16 @@
 <template>
     <div>
         <b-modal
-            id="initiate-review"
-            title="Initiate Review"
+            id="cancel-review-process"
+            title="Cancel Review Process"
             size="sm"
-            okTitle="Yes, Initate Review"
+            okTitle="Cancel"
             cancelTitle="Cancel"
             cancelVariant="link"
         >
             <p>
-                Are you sure you want to initiate review process of this
-                customer profile?
+                Are you sure you want to cancel review process? Once you cancel
+                someone else can initiate review process.
             </p>
         </b-modal>
     </div>

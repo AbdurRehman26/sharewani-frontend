@@ -6,24 +6,41 @@
         min-width: auto;
         font-family: $font_regular;
         text-transform: capitalize;
-        padding: 11px 25px;
+        padding: 9px 25px;
         outline: none;
         color: $grey-medium;
-        border: 1px $border-color solid;
+        border: 1px transparent solid;
+        border-right: solid 1px transparent solid;
         box-shadow: none !important;
         background-color: $white;
-
+        z-index: 9 !important;
+        &:after {
+            content: '';
+            position: absolute;
+            width: 1px;
+            height: 44px;
+            top: -1px;
+            right: 0;
+            background: $grey-xlite;
+        }
+        &:last-child {
+            &:after {
+                display: none;
+            }
+        }
         span {
             display: inline-block;
             padding-top: 1px;
-            font-family: $font_regular;
-            @include font-size(0.75);
+            font-family: $font_medium;
+            font-size: $font-size-base;
         }
 
         &.active {
             background-color: $grey-dark !important;
             color: $body-color !important;
-            border: 1px $border-color solid !important;
+            border: 1px transparent solid !important;
+            box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.02),
+                0px 1px 3px rgba(50, 50, 93, 0.1) !important;
         }
 
         &:active {
