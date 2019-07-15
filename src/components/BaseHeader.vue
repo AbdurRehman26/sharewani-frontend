@@ -34,7 +34,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="profile-block" v-if="$route.meta.noSidebar == false">
+            <div class="profile-block" v-if="$route.meta.noSidebar != true">
                 <div class="profile-main">
                     <div class="profile-image">
                         <img

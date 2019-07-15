@@ -11,7 +11,9 @@
             </div>
             <div class="contact-link register-now text-center">
                 Are you a customer?
-                <router-link to="/contact-us">Register now</router-link>
+                <router-link to="/public-registration"
+                    >Register now</router-link
+                >
             </div>
         </div>
         <base-footer></base-footer>

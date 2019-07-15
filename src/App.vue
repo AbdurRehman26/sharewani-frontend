@@ -4,11 +4,7 @@
             class="main-content"
             :class="$route.meta.noSidebar == true ? 'content-full-width' : ''"
         >
-            <base-sidebar
-                v-if="!$route.meta.noSidebar"
-                :countryListing="countryListing"
-                :sidelinksListing="sidelinksListing"
-            ></base-sidebar>
+            <base-sidebar v-if="!$route.meta.noSidebar"></base-sidebar>
             <router-view />
         </div>
     </div>
@@ -42,63 +38,7 @@ export default {
         |--------------------------------------------------------------------------
         */
     data() {
-        return {
-            countryListing: [
-                {
-                    anchorLink: '/',
-                    menuLabel: 'UAE',
-                },
-                {
-                    anchorLink: '/dashboard',
-                    menuLabel: 'PK',
-                },
-                {
-                    anchorLink: '/',
-                    menuLabel: 'UK',
-                },
-                {
-                    anchorLink: '/',
-                    menuLabel: 'USA',
-                },
-            ],
-            sidelinksListing: [
-                {
-                    anchorLink: '/dashboard',
-                    icon: 'icon-insights',
-                    menuLabel: 'Insights',
-                },
-                {
-                    anchorLink: '/customer-profile',
-                    icon: 'icon-customer-profil',
-                    menuLabel: 'Customer Profiles',
-                },
-                {
-                    anchorLink: '/register-customer/upload-document',
-                    icon: 'icon-add-customer',
-                    menuLabel: 'Register Customer',
-                },
-                {
-                    anchorLink: '/configuration',
-                    icon: 'icon-configurations',
-                    menuLabel: 'Configurations',
-                },
-                {
-                    anchorLink: '/system-users',
-                    icon: 'icon-system-users',
-                    menuLabel: 'System Users',
-                },
-                {
-                    anchorLink: '/system-logs',
-                    icon: 'icon-system-log',
-                    menuLabel: 'System Logs',
-                },
-                // {
-                //     anchorLink: '/data-export',
-                //     icon: 'icon-export',
-                //     menuLabel: 'Data Export',
-                // },
-            ],
-        }
+        return {}
     }, // End of Component > data
 
     /*

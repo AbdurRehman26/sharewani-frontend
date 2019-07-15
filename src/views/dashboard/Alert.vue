@@ -75,12 +75,32 @@
                         :statusTypeIcon="data.value"
                     ></status-type-icon>
                 </template>
+
+                <!--  <template slot="status" slot-scope="data">
+                    <div class="status-review" v-if="data.value == 'review'">
+                        <a href="javascript:void(0);" v-b-modal.initiate-review>
+                            <i class="icon-review"></i>
+                            <span>Review</span>
+                        </a>
+                    </div>
+                    <div class="status-review" v-if="data.value == 'lock'">
+                        <router-link class="disable" to="/">
+                            <i class="icon-change-password"></i>
+                            <span>In Review</span>
+                        </router-link>
+                    </div>
+                </template> -->
+
                 <template slot="action" slot-scope="data">
-                    <base-action :actionType="data.value"></base-action>
+                    <base-action
+                        :actionType="data.value"
+                        v-b-modal.initiate-review
+                    ></base-action>
                 </template>
             </b-table>
         </div>
         <pagination></pagination>
+        <initiate-review></initiate-review>
     </div>
 </template>
 
@@ -88,9 +108,11 @@
 import { mapGetters } from 'vuex'
 import pagination from '@/components/Pagination.vue'
 import statusTypeIcon from '@/components/AlertType.vue'
+import initiateReview from '@/components/popups/InitiateReviewPopup.vue'
 export default {
     components: {
         pagination,
+        initiateReview,
         statusTypeIcon,
     },
 
