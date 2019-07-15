@@ -14,8 +14,21 @@
                             >
                         </li>
                         <li>
-                            <b-button type="button" variant="primary"
-                                >KYC STATUS REVIEW</b-button
+                            <b-button
+                                v-b-modal.cancel-review-process
+                                type="button"
+                                variant="link font-semibold"
+                            >
+                                Cancel Review Process
+                            </b-button>
+                        </li>
+                        <li>
+                            <b-button
+                                v-b-modal.kyc-status-review
+                                type="button"
+                                variant="primary"
+                            >
+                                KYC STATUS REVIEW</b-button
                             >
                         </li>
                     </ul>
@@ -30,16 +43,20 @@
         </div>
 
         <time-line :yearDetails="yearDetails"></time-line>
+        <cancel-review-process></cancel-review-process>
+        <kyc-status-review></kyc-status-review>
     </div>
 </template>
 <script>
 import timeLine from '@/components/TimeLine.vue'
 import customerInformation from '@/components/CustomerInfo.vue'
-
+import kycStatusReview from '@/components/popups/KYCStatusReview.vue'
+import cancelReviewProcess from '@/components/popups/CancelReviewProcess.vue'
 export default {
     components: {
         customerInformation,
-
+        kycStatusReview,
+        cancelReviewProcess,
         timeLine,
     },
 
