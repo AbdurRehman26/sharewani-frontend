@@ -78,11 +78,6 @@ export default {
                     menuLabel: 'Register Customer',
                 },
                 {
-                    anchorLink: '/search-people',
-                    icon: 'icon-world',
-                    menuLabel: 'Search People',
-                },
-                {
                     anchorLink: '/configuration',
                     icon: 'icon-configurations',
                     menuLabel: 'Configurations',
