@@ -637,6 +637,9 @@
                             margin-right: 0px;
                             border-radius: 0px;
                             font-size: 0.75rem;
+                            &.router-link-exact-active.router-link-active {
+                                color: $secondary;
+                            }
                         }
                         &:last-child {
                             border-bottom: 0px solid $border-color;

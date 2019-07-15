@@ -23,7 +23,7 @@
                                         <div class="form-group date-pickers">
                                             <i class="icon-calendar"></i>
                                             <datepicker
-                                                placeholder="Start Date"
+                                                placeholder="End Date"
                                             ></datepicker>
                                         </div>
                                     </li>
