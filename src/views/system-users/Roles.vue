@@ -86,7 +86,7 @@ export default {
     |--------------------------------------------------------------------------
     */
     computed: {
-        ...mapGetters(['systemUserTable']),
+        ...mapGetters(['systemUsersData']),
     }, // End of Component > computed
 
     /*
@@ -97,10 +97,10 @@ export default {
     methods: {
         initializeData() {
             //system log table
-            let systemUserTableFields = this.systemUserTable.roles.fields //get user data from store
-            this.fields = systemUserTableFields //push data into array
-            let systemUserTableitems = this.systemUserTable.roles.items //get user data from store
-            this.items = systemUserTableitems //push data into array
+            let tableFields = this.systemUsersData.roles.fields //get user data from store
+            this.fields = tableFields //push data into array
+            let tableItems = this.systemUsersData.roles.items //get user data from store
+            this.items = tableItems //push data into array
         },
     }, // End of Component > methods
 

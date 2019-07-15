@@ -3,7 +3,9 @@ import Vuex from 'vuex'
 import shared from './modules/shared'
 import data from './modules/data/'
 import dashboard from './modules/dashboard/'
-import profile from './modules/profile/'
+import customers from './modules/customers/'
+import systemsUsers from './modules/system-users/'
+import systemLogs from './modules/system-logs/'
 
 Vue.use(Vuex)
 
@@ -14,7 +16,9 @@ export default new Vuex.Store({
         shared,
         data,
         dashboard,
-        profile,
+        customers,
+        systemsUsers,
+        systemLogs,
     },
     strict: debug,
 })

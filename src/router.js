@@ -107,10 +107,10 @@ export default new Router({
                         import(/* webpackChunkName: "roles" */ '@/views/system-users/Roles.vue'),
                 },
                 {
-                    path: 'branches',
+                    path: 'data-segments',
                     name: 'branches-page',
                     component: () =>
-                        import(/* webpackChunkName: "branches" */ '@/views/system-users/Branches.vue'),
+                        import(/* webpackChunkName: "branches" */ '@/views/system-users/DataSegments.vue'),
                 },
                 {
                     path: 'application-access',
