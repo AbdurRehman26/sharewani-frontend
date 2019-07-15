@@ -1,132 +1,121 @@
 <template>
-    <div class="wrap-content customer-section">
-        <div class="filter-section">
-            <div class="row">
-                <div class="col-md-4">
-                    <h2>Register Customers</h2>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <b-form class="step-form">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="fields-area">
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <h3>Account Information</h3>
-                                </div>
-                                <div class="col-md-4">
-                                    <b-form-group
-                                        id="input-group-5"
-                                        label="Account Opening Date"
-                                        label-for="accountopening"
-                                    >
-                                        <div class="form-group date-pickers">
-                                            <i class="icon-calendar"></i>
-                                            <datepicker
-                                                placeholder="10 / 06 / 2019"
-                                            ></datepicker>
-                                        </div>
-                                    </b-form-group>
-                                </div>
-                                <div class="col-md-4">
-                                    <b-form-group
-                                        id="input-group-5"
-                                        label="Purpose of action"
-                                        label-for="purposeaction"
-                                    >
-                                        <b-form-select
-                                            class="form-control"
-                                            v-model="form.purposeaction"
-                                            :options="form.purposeactionOptions"
-                                        ></b-form-select>
-                                    </b-form-group>
-                                </div>
-                                <div class="col-md-4">
-                                    <b-form-group
-                                        id="input-group-1"
-                                        label="Planned Investment Amount"
-                                        label-for="invesmentamount"
-                                        class="rangeto"
-                                    >
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <b-form-input
-                                                    id="startrange"
-                                                    type="number"
-                                                    v-model="form.startrange"
-                                                    required
-                                                    placeholder="Start Range"
-                                                ></b-form-input>
-                                            </div>
-                                            <span>to</span>
-                                            <div class="col-md-6">
-                                                <b-form-input
-                                                    id="endrange"
-                                                    type="number"
-                                                    v-model="form.endrange"
-                                                    required
-                                                    placeholder="End Range"
-                                                ></b-form-input>
-                                            </div>
-                                        </div>
-                                    </b-form-group>
-                                </div>
-                                <div class="col-md-4">
-                                    <b-form-group
-                                        id="input-group-6"
-                                        label="SYSTEM HOLDING"
-                                        label-for="currency"
-                                    >
-                                        <b-form-select
-                                            class="form-control"
-                                            v-model="form.currency"
-                                            :options="form.currencyOptions"
-                                        ></b-form-select>
-                                    </b-form-group>
-                                </div>
-                                <div class="col-md-4">
-                                    <b-form-group
-                                        id="input-group-6"
-                                        label="Product Type"
-                                        label-for="producttype"
-                                    >
-                                        <b-form-select
-                                            class="form-control"
-                                            v-model="form.productType"
-                                            :options="form.productTypeOptions"
-                                        ></b-form-select>
-                                    </b-form-group>
-                                </div>
-                                <div class="col-md-4">
-                                    <b-form-group
-                                        id="input-group-3"
-                                        label="WALLET ID"
-                                        label-for="input-3"
-                                    >
-                                        <b-form-input
-                                            id="input-3"
-                                            type="text"
-                                            v-model="form.walletId"
-                                            required
-                                            placeholder="Enter wallet id"
-                                        ></b-form-input>
-                                    </b-form-group>
-                                </div>
-                            </div>
+    <b-form class="step-form">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="fields-area">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h3>Account Information</h3>
                         </div>
-                        <base-button
-                            btnType="submit"
-                            btnVariant="primary"
-                            btnLabel="CONTINUE"
-                            @click="$router.push('/register-customer/finish')"
-                        ></base-button>
+                        <div class="col-md-4">
+                            <b-form-group
+                                id="input-group-5"
+                                label="Account Opening Date"
+                                label-for="accountopening"
+                            >
+                                <div class="form-group date-pickers">
+                                    <i class="icon-calendar"></i>
+                                    <datepicker
+                                        placeholder="10 / 06 / 2019"
+                                    ></datepicker>
+                                </div>
+                            </b-form-group>
+                        </div>
+                        <div class="col-md-4">
+                            <b-form-group
+                                id="input-group-5"
+                                label="Purpose of action"
+                                label-for="purposeaction"
+                            >
+                                <b-form-select
+                                    class="form-control"
+                                    v-model="form.purposeaction"
+                                    :options="form.purposeactionOptions"
+                                ></b-form-select>
+                            </b-form-group>
+                        </div>
+                        <div class="col-md-4">
+                            <b-form-group
+                                id="input-group-1"
+                                label="Planned Investment Amount"
+                                label-for="invesmentamount"
+                                class="rangeto"
+                            >
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <b-form-input
+                                            id="startrange"
+                                            type="number"
+                                            v-model="form.startrange"
+                                            required
+                                            placeholder="Start Range"
+                                        ></b-form-input>
+                                    </div>
+                                    <span>to</span>
+                                    <div class="col-md-6">
+                                        <b-form-input
+                                            id="endrange"
+                                            type="number"
+                                            v-model="form.endrange"
+                                            required
+                                            placeholder="End Range"
+                                        ></b-form-input>
+                                    </div>
+                                </div>
+                            </b-form-group>
+                        </div>
+                        <div class="col-md-4">
+                            <b-form-group
+                                id="input-group-6"
+                                label="SYSTEM HOLDING"
+                                label-for="currency"
+                            >
+                                <b-form-select
+                                    class="form-control"
+                                    v-model="form.currency"
+                                    :options="form.currencyOptions"
+                                ></b-form-select>
+                            </b-form-group>
+                        </div>
+                        <div class="col-md-4">
+                            <b-form-group
+                                id="input-group-6"
+                                label="Product Type"
+                                label-for="producttype"
+                            >
+                                <b-form-select
+                                    class="form-control"
+                                    v-model="form.productType"
+                                    :options="form.productTypeOptions"
+                                ></b-form-select>
+                            </b-form-group>
+                        </div>
+                        <div class="col-md-4">
+                            <b-form-group
+                                id="input-group-3"
+                                label="WALLET ID"
+                                label-for="input-3"
+                            >
+                                <b-form-input
+                                    id="input-3"
+                                    type="text"
+                                    v-model="form.walletId"
+                                    required
+                                    placeholder="Enter wallet id"
+                                ></b-form-input>
+                            </b-form-group>
+                        </div>
                     </div>
                 </div>
-            </b-form>
+                <base-button
+                    btnType="submit"
+                    btnVariant="primary"
+                    btnLabel="CONTINUE"
+                    @preventFunction="linking()"
+                ></base-button>
+            </div>
         </div>
-    </div>
+    </b-form>
 </template>
 <script>
 import Datepicker from 'vuejs-datepicker'
@@ -205,7 +194,15 @@ export default {
     | Component > methods
     |--------------------------------------------------------------------------
     */
-    methods: {}, // End of Component > methods
+    methods: {
+        linking() {
+            if (this.$route.meta.publicRegistration === true) {
+                this.$router.push('/public-registration/finish')
+            } else {
+                this.$router.push('/register-customer/finish')
+            }
+        },
+    }, // End of Component > methods
 
     /*
     |--------------------------------------------------------------------------

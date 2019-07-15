@@ -1,81 +1,66 @@
 <template>
-    <div class="wrap-content customer-section">
-        <div class="filter-section">
-            <div class="row">
-                <div class="col-md-4">
-                    <h2>Register Customers</h2>
+    <b-form class="step-form">
+        <div class="row">
+            <div class="col-lg-12">
+                <h3>Step 1: Upload Documents</h3>
+            </div>
+            <div class="col-lg-8">
+                <div class="row form-options">
+                    <div class="col-lg-6">
+                        <b-form-group
+                            id="input-group-5"
+                            label="ID Document Type"
+                            label-for="documentType"
+                        >
+                            <b-form-select
+                                class="form-control"
+                                v-model="form.documentType"
+                                :options="form.docTypeOption"
+                            ></b-form-select>
+                        </b-form-group>
+                    </div>
+                    <div class="col-lg-6">
+                        <b-form-group
+                            id="input-group-6"
+                            label="DOCUMENT SCAN COPY"
+                            label-for="documentScan"
+                        >
+                            <b-form-file
+                                v-model="documentScanCopy"
+                                accept="image/jpeg, image/png"
+                                placeholder="Select scan copy (JPG or PNG file)"
+                                drop-placeholder="Drop file here..."
+                            ></b-form-file>
+                        </b-form-group>
+                    </div>
+                    <div class="col-lg-6">
+                        <b-form-group
+                            id="input-group-7"
+                            label="UTILITY BILL SCAN COPY"
+                            label-for="utilityscan"
+                        >
+                            <b-form-file
+                                v-model="utilityScanCopy"
+                                accept="image/jpeg, image/png"
+                                placeholder="Select scan copy (JPG, PNG)"
+                                drop-placeholder="Drop file here..."
+                            ></b-form-file>
+                        </b-form-group>
+                    </div>
+                    <div class="col-lg-6"></div>
+                    <div class="col-lg-6">
+                        <base-button
+                            btnType="submit"
+                            btnVariant="primary"
+                            btnLabel="CONTINUE"
+                            @preventFunction="linking()"
+                        ></base-button>
+                    </div>
                 </div>
             </div>
+            <div class="col-lg-4"></div>
         </div>
-        <div class="card">
-            <b-form class="step-form">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h3>Step 1: Upload Documents</h3>
-                    </div>
-                    <div class="col-lg-8">
-                        <div class="row form-options">
-                            <div class="col-lg-6">
-                                <b-form-group
-                                    id="input-group-5"
-                                    label="ID Document Type"
-                                    label-for="documentType"
-                                >
-                                    <b-form-select
-                                        class="form-control"
-                                        v-model="form.documentType"
-                                        :options="form.docTypeOption"
-                                    ></b-form-select>
-                                </b-form-group>
-                            </div>
-                            <div class="col-lg-6">
-                                <b-form-group
-                                    id="input-group-6"
-                                    label="DOCUMENT SCAN COPY"
-                                    label-for="documentScan"
-                                >
-                                    <b-form-file
-                                        v-model="documentScanCopy"
-                                        accept="image/jpeg, image/png"
-                                        placeholder="Select scan copy (JPG or PNG file)"
-                                        drop-placeholder="Drop file here..."
-                                    ></b-form-file>
-                                </b-form-group>
-                            </div>
-                            <div class="col-lg-6">
-                                <b-form-group
-                                    id="input-group-7"
-                                    label="UTILITY BILL SCAN COPY"
-                                    label-for="utilityscan"
-                                >
-                                    <b-form-file
-                                        v-model="utilityScanCopy"
-                                        accept="image/jpeg, image/png"
-                                        placeholder="Select scan copy (JPG, PNG)"
-                                        drop-placeholder="Drop file here..."
-                                    ></b-form-file>
-                                </b-form-group>
-                            </div>
-                            <div class="col-lg-6"></div>
-                            <div class="col-lg-6">
-                                <base-button
-                                    btnType="submit"
-                                    btnVariant="primary"
-                                    btnLabel="CONTINUE"
-                                    @click="
-                                        $router.push(
-                                            '/register-customer/record-video'
-                                        )
-                                    "
-                                ></base-button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4"></div>
-                </div>
-            </b-form>
-        </div>
-    </div>
+    </b-form>
 </template>
 <script>
 export default {
@@ -130,7 +115,15 @@ export default {
     | Component > methods
     |--------------------------------------------------------------------------
     */
-    methods: {}, // End of Component > methods
+    methods: {
+        linking() {
+            if (this.$route.meta.publicRegistration === true) {
+                this.$router.push('/public-registration/record-video')
+            } else {
+                this.$router.push('/register-customer/record-video')
+            }
+        },
+    }, // End of Component > methods
 
     /*
     |--------------------------------------------------------------------------

@@ -3,7 +3,18 @@
         <div class="content-area">
             <base-header :menuListing="menuListing" stepStyle></base-header>
             <div class="right-panel">
-                <router-view></router-view>
+                <div class="wrap-content customer-section">
+                    <div class="filter-section">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h2>{{ $route.meta.name }}</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <router-view></router-view>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

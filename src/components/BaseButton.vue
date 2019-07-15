@@ -4,6 +4,7 @@
         :variant="btnVariant"
         :class="cssClass"
         @click="$emit('click')"
+        @click.prevent="$emit('preventFunction')"
         ><span class="btn-text">{{ btnLabel }}</span>
         <span class="loader"></span>
     </b-button>

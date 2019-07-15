@@ -1,6 +1,9 @@
 <template>
     <div id="app">
-        <div class="main-content">
+        <div
+            class="main-content"
+            :class="$route.meta.noSidebar == true ? 'content-full-width' : ''"
+        >
             <base-sidebar
                 v-if="!$route.meta.noSidebar"
                 :countryListing="countryListing"

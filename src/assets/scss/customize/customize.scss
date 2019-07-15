@@ -774,3 +774,43 @@
         }
     }
 }
+
+.colorLogo {
+    img {
+        &.inverse {
+            display: none;
+        }
+        &.main {
+            display: block !important;
+        }
+    }
+}
+
+.content-full-width {
+    .content-area {
+        width: 100%;
+        header {
+            width: 100%;
+            .logo-container {
+                display: inline-block;
+            }
+            .navigation {
+                max-width: $block-width;
+                margin: auto;
+                width: 100%;
+                display: block;
+                ul {
+                    display: inline-block;
+                    float: right;
+                }
+            }
+        }
+        .wrap-content {
+            max-width: $block-width;
+            margin: auto;
+        }
+    }
+    .sidebar {
+        display: none !important;
+    }
+}

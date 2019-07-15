@@ -309,6 +309,7 @@ export default new Router({
                     component: () =>
                         import(/* webpackChunkName: "customer-information" */ './views/registercustomer/UploadDocuments.vue'),
                     meta: {
+                        name: 'Register Customers',
                         sessionStep: '1',
                     },
                 },
@@ -318,6 +319,7 @@ export default new Router({
                     component: () =>
                         import(/* webpackChunkName: "customer-information" */ './views/registercustomer/UploadDocuments.vue'),
                     meta: {
+                        name: 'Register Customers',
                         sessionStep: '1',
                     },
                 },
@@ -327,6 +329,7 @@ export default new Router({
                     component: () =>
                         import(/* webpackChunkName: "customer-information" */ './views/registercustomer/RecordVideo.vue'),
                     meta: {
+                        name: 'Register Customers',
                         sessionStep: '2',
                     },
                 },
@@ -336,6 +339,7 @@ export default new Router({
                     component: () =>
                         import(/* webpackChunkName: "customer-information" */ './views/registercustomer/SetupProfile.vue'),
                     meta: {
+                        name: 'Register Customers',
                         sessionStep: '3',
                     },
                 },
@@ -345,6 +349,7 @@ export default new Router({
                     component: () =>
                         import(/* webpackChunkName: "customer-information" */ './views/registercustomer/AccountInfo.vue'),
                     meta: {
+                        name: 'Register Customers',
                         sessionStep: '4',
                     },
                 },
@@ -354,7 +359,89 @@ export default new Router({
                     component: () =>
                         import(/* webpackChunkName: "customer-information" */ './views/registercustomer/Finish.vue'),
                     meta: {
+                        name: 'Register Customers',
                         sessionStep: '5',
+                    },
+                },
+            ],
+        },
+
+        {
+            path: '/public-registration',
+            name: 'customer-registration',
+            component: () =>
+                import(/* webpackChunkName: "customer-details" */ './views/registercustomer/Main.vue'),
+            children: [
+                {
+                    path: '/',
+                    name: 'public-registration-upload-document',
+                    component: () =>
+                        import(/* webpackChunkName: "customer-information" */ './views/registercustomer/UploadDocuments.vue'),
+                    meta: {
+                        name: 'Online Account Opening Application',
+                        sessionStep: '1',
+                        noSidebar: true,
+                        publicRegistration: true,
+                    },
+                },
+                {
+                    path: '/public-registration/upload-document',
+                    name: 'public-registration-upload-document',
+                    component: () =>
+                        import(/* webpackChunkName: "customer-information" */ './views/registercustomer/UploadDocuments.vue'),
+                    meta: {
+                        name: 'Online Account Opening Application',
+                        sessionStep: '1',
+                        noSidebar: true,
+                        publicRegistration: true,
+                    },
+                },
+                {
+                    path: '/public-registration/record-video',
+                    name: 'public-registration-record-video',
+                    component: () =>
+                        import(/* webpackChunkName: "customer-information" */ './views/registercustomer/RecordVideo.vue'),
+                    meta: {
+                        name: 'Online Account Opening Application',
+                        sessionStep: '2',
+                        noSidebar: true,
+                        publicRegistration: true,
+                    },
+                },
+                {
+                    path: '/public-registration/setup-profile',
+                    name: 'public-registration-setup-profile',
+                    component: () =>
+                        import(/* webpackChunkName: "customer-information" */ './views/registercustomer/SetupProfile.vue'),
+                    meta: {
+                        name: 'Online Account Opening Application',
+                        sessionStep: '3',
+                        noSidebar: true,
+                        publicRegistration: true,
+                    },
+                },
+                {
+                    path: '/public-registration/account-info',
+                    name: 'public-registration-account-info',
+                    component: () =>
+                        import(/* webpackChunkName: "customer-information" */ './views/registercustomer/AccountInfo.vue'),
+                    meta: {
+                        name: 'Online Account Opening Application',
+                        sessionStep: '4',
+                        noSidebar: true,
+                        publicRegistration: true,
+                    },
+                },
+                {
+                    path: '/public-registration/finish',
+                    name: 'public-registration-finish',
+                    component: () =>
+                        import(/* webpackChunkName: "customer-information" */ './views/registercustomer/Finish.vue'),
+                    meta: {
+                        name: 'Online Account Opening Application',
+                        sessionStep: '5',
+                        noSidebar: true,
+                        publicRegistration: true,
                     },
                 },
             ],

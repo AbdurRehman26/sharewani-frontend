@@ -1,46 +1,30 @@
 <template>
-    <div class="wrap-content customer-section">
-        <div class="filter-section">
-            <div class="row">
-                <div class="col-md-4">
-                    <h2>Register Customers</h2>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <b-form class="step-form text-center">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="fields-area registration-completed">
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <h3>Thank you</h3>
-                                    <p>
-                                        Customer account has been created
-                                        successfully.
-                                    </p>
-                                    <div class="generated-customer-id">
-                                        <h4>1281375</h4>
-                                        <p>UNIQUE CUSTOMER ID</p>
-                                    </div>
-                                </div>
+    <b-form class="step-form text-center">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="fields-area registration-completed">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h3>Thank you</h3>
+                            <p>
+                                Customer account has been created successfully.
+                            </p>
+                            <div class="generated-customer-id">
+                                <h4>1281375</h4>
+                                <p>UNIQUE CUSTOMER ID</p>
                             </div>
                         </div>
-                        <base-button
-                            btnType="submit"
-                            btnVariant="primary"
-                            btnLabel="REGISTER ANOTHER CUSTOMER"
-                            @click="
-                                $router.push(
-                                    '/register-customer/upload-document'
-                                )
-                            "
-                        ></base-button>
                     </div>
                 </div>
-            </b-form>
+                <base-button
+                    btnType="submit"
+                    btnVariant="primary"
+                    btnLabel="REGISTER ANOTHER CUSTOMER"
+                    @preventFunction="linking()"
+                ></base-button>
+            </div>
         </div>
-    </div>
+    </b-form>
 </template>
 <script>
 export default {
@@ -83,7 +67,15 @@ export default {
     | Component > methods
     |--------------------------------------------------------------------------
     */
-    methods: {}, // End of Component > methods
+    methods: {
+        linking() {
+            if (this.$route.meta.publicRegistration === true) {
+                this.$router.push('/public-registration/upload-document')
+            } else {
+                this.$router.push('/register-customer/upload-document')
+            }
+        },
+    }, // End of Component > methods
 
     /*
     |--------------------------------------------------------------------------
