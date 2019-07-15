@@ -92,31 +92,31 @@ export default new Router({
             path: '/system-users',
             name: 'systems',
             component: () =>
-                import(/* webpackChunkName: "system-users" */ '@/views/systemusers/Main.vue'),
+                import(/* webpackChunkName: "system-users" */ '@/views/system-users/Main.vue'),
             children: [
                 {
                     path: '/',
                     name: 'system-users',
                     component: () =>
-                        import(/* webpackChunkName: "system-users" */ '@/views/systemusers/Users.vue'),
+                        import(/* webpackChunkName: "system-users" */ '@/views/system-users/Users.vue'),
                 },
                 {
                     path: 'roles',
                     name: 'roles-and-permission',
                     component: () =>
-                        import(/* webpackChunkName: "roles" */ '@/views/systemusers/Roles.vue'),
+                        import(/* webpackChunkName: "roles" */ '@/views/system-users/Roles.vue'),
                 },
                 {
                     path: 'branches',
                     name: 'branches-page',
                     component: () =>
-                        import(/* webpackChunkName: "branches" */ '@/views/systemusers/Branches.vue'),
+                        import(/* webpackChunkName: "branches" */ '@/views/system-users/Branches.vue'),
                 },
                 {
                     path: 'application-access',
                     name: 'application-access-page',
                     component: () =>
-                        import(/* webpackChunkName: "branches" */ '@/views/systemusers/Access.vue'),
+                        import(/* webpackChunkName: "branches" */ '@/views/system-users/Access.vue'),
                 },
             ],
         },
@@ -124,7 +124,7 @@ export default new Router({
             path: '/system-logs',
             name: 'systems-logs',
             component: () =>
-                import(/* webpackChunkName: "system-logs" */ '@/views/systemlogs/Main.vue'),
+                import(/* webpackChunkName: "system-logs" */ '@/views/system-logs/Main.vue'),
         },
         {
             path: '/customer-profile',
@@ -223,68 +223,68 @@ export default new Router({
                     path: '/configuration',
                     name: 'idenfo-engine',
                     component: () =>
-                        import(/* webpackChunkName: "customer" */ './views/configuration/IdenfoEngine/Main.vue'),
+                        import(/* webpackChunkName: "customer" */ './views/configuration/idenfo-engine/Main.vue'),
                     children: [
                         {
                             path: '/',
                             name: 'nationality',
                             component: () =>
-                                import(/* webpackChunkName: "customer" */ './views/configuration/IdenfoEngine/Nationality.vue'),
+                                import(/* webpackChunkName: "customer" */ './views/configuration/idenfo-engine/Nationality.vue'),
                         },
                         {
                             path: '/configuration/idenfo-engine/',
                             name: 'nationality',
                             component: () =>
-                                import(/* webpackChunkName: "customer" */ './views/configuration/IdenfoEngine/Nationality.vue'),
+                                import(/* webpackChunkName: "customer" */ './views/configuration/idenfo-engine/Nationality.vue'),
                         },
 
                         {
                             path: '/configuration/idenfo-engine/work',
                             name: 'workFactor',
                             component: () =>
-                                import(/* webpackChunkName: "customer" */ './views/configuration/IdenfoEngine/WorkFactor.vue'),
+                                import(/* webpackChunkName: "customer" */ './views/configuration/idenfo-engine/WorkFactor.vue'),
                         },
                         {
                             path: '/configuration/idenfo-engine/industry',
                             name: 'industryFactor',
                             component: () =>
-                                import(/* webpackChunkName: "customer" */ './views/configuration/IdenfoEngine/IndustryFactor.vue'),
+                                import(/* webpackChunkName: "customer" */ './views/configuration/idenfo-engine/IndustryFactor.vue'),
                         },
                         {
                             path: '/configuration/idenfo-engine/product',
                             name: 'productFactor',
                             component: () =>
-                                import(/* webpackChunkName: "customer" */ './views/configuration/IdenfoEngine/ProductFactor.vue'),
+                                import(/* webpackChunkName: "customer" */ './views/configuration/idenfo-engine/ProductFactor.vue'),
                         },
                         {
                             path: '/configuration/idenfo-engine/state',
                             name: 'stateFactor',
                             component: () =>
-                                import(/* webpackChunkName: "customer" */ './views/configuration/IdenfoEngine/StateFactor.vue'),
+                                import(/* webpackChunkName: "customer" */ './views/configuration/idenfo-engine/StateFactor.vue'),
                         },
                         {
                             path: '/configuration/idenfo-engine/relationship',
                             name: 'relationshipFactor',
                             component: () =>
-                                import(/* webpackChunkName: "customer" */ './views/configuration/IdenfoEngine/RelationshipPanel.vue'),
+                                import(/* webpackChunkName: "customer" */ './views/configuration/idenfo-engine/RelationshipPanel.vue'),
                         },
                         {
                             path: '/configuration/idenfo-engine/channel',
                             name: 'channelFactor',
                             component: () =>
-                                import(/* webpackChunkName: "customer" */ './views/configuration/IdenfoEngine/ChannelFactor.vue'),
+                                import(/* webpackChunkName: "customer" */ './views/configuration/idenfo-engine/ChannelFactor.vue'),
                         },
                         {
                             path: '/configuration/idenfo-engine/risk',
                             name: 'riskFactor',
                             component: () =>
-                                import(/* webpackChunkName: "customer" */ './views/configuration/IdenfoEngine/RiskFactor.vue'),
+                                import(/* webpackChunkName: "customer" */ './views/configuration/idenfo-engine/RiskFactor.vue'),
                         },
                         {
                             path: '/configuration/idenfo-engine/risk-rating',
                             name: 'riskRating',
                             component: () =>
-                                import(/* webpackChunkName: "customer" */ './views/configuration/IdenfoEngine/RiskRating.vue'),
+                                import(/* webpackChunkName: "customer" */ './views/configuration/idenfo-engine/RiskRating.vue'),
                         },
                     ],
                 },
@@ -301,13 +301,13 @@ export default new Router({
             path: '/register-customer',
             name: 'customer-registration',
             component: () =>
-                import(/* webpackChunkName: "customer-details" */ './views/registercustomer/Main.vue'),
+                import(/* webpackChunkName: "customer-details" */ './views/register-customer/Main.vue'),
             children: [
                 {
                     path: '/',
                     name: 'upload-document',
                     component: () =>
-                        import(/* webpackChunkName: "customer-information" */ './views/registercustomer/UploadDocuments.vue'),
+                        import(/* webpackChunkName: "customer-information" */ './views/register-customer/UploadDocuments.vue'),
                     meta: {
                         name: 'Register Customers',
                         sessionStep: '1',
@@ -317,7 +317,7 @@ export default new Router({
                     path: '/register-customer/upload-document',
                     name: 'upload-document',
                     component: () =>
-                        import(/* webpackChunkName: "customer-information" */ './views/registercustomer/UploadDocuments.vue'),
+                        import(/* webpackChunkName: "customer-information" */ './views/register-customer/UploadDocuments.vue'),
                     meta: {
                         name: 'Register Customers',
                         sessionStep: '1',
@@ -327,7 +327,7 @@ export default new Router({
                     path: '/register-customer/record-video',
                     name: 'record-video',
                     component: () =>
-                        import(/* webpackChunkName: "customer-information" */ './views/registercustomer/RecordVideo.vue'),
+                        import(/* webpackChunkName: "customer-information" */ './views/register-customer/RecordVideo.vue'),
                     meta: {
                         name: 'Register Customers',
                         sessionStep: '2',
@@ -337,7 +337,7 @@ export default new Router({
                     path: '/register-customer/setup-profile',
                     name: 'setup-profile',
                     component: () =>
-                        import(/* webpackChunkName: "customer-information" */ './views/registercustomer/SetupProfile.vue'),
+                        import(/* webpackChunkName: "customer-information" */ './views/register-customer/SetupProfile.vue'),
                     meta: {
                         name: 'Register Customers',
                         sessionStep: '3',
@@ -347,7 +347,7 @@ export default new Router({
                     path: '/register-customer/account-info',
                     name: 'account-info',
                     component: () =>
-                        import(/* webpackChunkName: "customer-information" */ './views/registercustomer/AccountInfo.vue'),
+                        import(/* webpackChunkName: "customer-information" */ './views/register-customer/AccountInfo.vue'),
                     meta: {
                         name: 'Register Customers',
                         sessionStep: '4',
@@ -357,7 +357,7 @@ export default new Router({
                     path: '/register-customer/finish',
                     name: 'finish',
                     component: () =>
-                        import(/* webpackChunkName: "customer-information" */ './views/registercustomer/Finish.vue'),
+                        import(/* webpackChunkName: "customer-information" */ './views/register-customer/Finish.vue'),
                     meta: {
                         name: 'Register Customers',
                         sessionStep: '5',
@@ -370,13 +370,13 @@ export default new Router({
             path: '/public-registration',
             name: 'customer-registration',
             component: () =>
-                import(/* webpackChunkName: "customer-details" */ './views/registercustomer/Main.vue'),
+                import(/* webpackChunkName: "customer-details" */ './views/register-customer/Main.vue'),
             children: [
                 {
                     path: '/',
                     name: 'public-registration-upload-document',
                     component: () =>
-                        import(/* webpackChunkName: "customer-information" */ './views/registercustomer/UploadDocuments.vue'),
+                        import(/* webpackChunkName: "customer-information" */ './views/register-customer/UploadDocuments.vue'),
                     meta: {
                         name: 'Online Account Opening Application',
                         sessionStep: '1',
@@ -388,7 +388,7 @@ export default new Router({
                     path: '/public-registration/upload-document',
                     name: 'public-registration-upload-document',
                     component: () =>
-                        import(/* webpackChunkName: "customer-information" */ './views/registercustomer/UploadDocuments.vue'),
+                        import(/* webpackChunkName: "customer-information" */ './views/register-customer/UploadDocuments.vue'),
                     meta: {
                         name: 'Online Account Opening Application',
                         sessionStep: '1',
@@ -400,7 +400,7 @@ export default new Router({
                     path: '/public-registration/record-video',
                     name: 'public-registration-record-video',
                     component: () =>
-                        import(/* webpackChunkName: "customer-information" */ './views/registercustomer/RecordVideo.vue'),
+                        import(/* webpackChunkName: "customer-information" */ './views/register-customer/RecordVideo.vue'),
                     meta: {
                         name: 'Online Account Opening Application',
                         sessionStep: '2',
@@ -412,7 +412,7 @@ export default new Router({
                     path: '/public-registration/setup-profile',
                     name: 'public-registration-setup-profile',
                     component: () =>
-                        import(/* webpackChunkName: "customer-information" */ './views/registercustomer/SetupProfile.vue'),
+                        import(/* webpackChunkName: "customer-information" */ './views/register-customer/SetupProfile.vue'),
                     meta: {
                         name: 'Online Account Opening Application',
                         sessionStep: '3',
@@ -424,7 +424,7 @@ export default new Router({
                     path: '/public-registration/account-info',
                     name: 'public-registration-account-info',
                     component: () =>
-                        import(/* webpackChunkName: "customer-information" */ './views/registercustomer/AccountInfo.vue'),
+                        import(/* webpackChunkName: "customer-information" */ './views/register-customer/AccountInfo.vue'),
                     meta: {
                         name: 'Online Account Opening Application',
                         sessionStep: '4',
@@ -436,7 +436,7 @@ export default new Router({
                     path: '/public-registration/finish',
                     name: 'public-registration-finish',
                     component: () =>
-                        import(/* webpackChunkName: "customer-information" */ './views/registercustomer/Finish.vue'),
+                        import(/* webpackChunkName: "customer-information" */ './views/register-customer/Finish.vue'),
                     meta: {
                         name: 'Online Account Opening Application',
                         sessionStep: '5',
