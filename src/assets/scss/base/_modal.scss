@@ -19,114 +19,87 @@
             }
 
             .modal-header {
-                background-color: $body-bg;
+                background-color: $upload-bg;
+                position: static;
+                width: 100%;
                 border-bottom: 1px $border-opacity solid !important;
-
-                @include mobile {
-                    padding: 17px 24px 36px 24px;
-                }
 
                 .modal-title {
                     font-size: $modal-title-font-size;
+                    font-family: $font_medium;
+                    line-height: 21px;
                 }
                 .close {
                     padding: 10px 10px 0 0;
                     font-size: 32px;
                     color: $input-color;
                     outline: none;
+                    background-color: $nav-color;
+                    border-radius: 100%;
+                    width: 16px;
+                    height: 16px;
+                    display: flex;
+                    justify-content: center;
+                    position: relative;
+                    top: 18px;
+                    right: 10px;
+                    opacity: 1;
+                    overflow: hidden;
+
+                    &:after {
+                        content: '\e959';
+                        font-family: 'icomoon';
+                        position: absolute;
+                        color: $white;
+                        font-size: 7px;
+                        top: 3px;
+                        right: 5px;
+                    }
                 }
             }
 
             .modal-body {
-                .customize-checkbox {
-                    .custom-control-input {
-                        top: 0;
-                    }
-
-                    .custom-control-label {
-                        padding-top: 0 !important;
-
-                        &:before {
-                            top: 1px;
-                        }
-
-                        .checked-img {
-                            left: -24px;
-                            top: 2px;
-                        }
-                    }
+                p {
+                    line-height: 21px;
+                    margin-bottom: 0;
                 }
 
-                .modal-content-area {
-                    p {
-                        margin-bottom: 24px;
-                    }
+                form {
+                    margin-top: 24px;
+                    margin-bottom: 0;
+                }
 
-                    @include mobile {
-                        height: calc(100% - 55px);
-                        background-color: $white;
-                    }
+                .modal-form-format {
+                    margin-top: 0 !important;
+                }
+
+                fieldset {
+                    margin-bottom: 0 !important;
                 }
             }
 
             .modal-footer {
-                background-color: $body-bg;
-                padding: 8px 24px;
+                background-color: $upload-bg;
+                padding: 11px 24px;
                 border-top: 1px $border-opacity solid !important;
-
-                @include mobile {
-                    border-radius: 0;
-                }
+                flex-direction: row-reverse;
 
                 .btn-primary {
-                    min-width: 146px;
-                }
-            }
-        }
-    }
-
-    .btn-group-toggle {
-        width: 100%;
-
-        .btn {
-            height: $input-height;
-            box-shadow: none;
-            font-family: $font_regular;
-            background-color: transparent;
-            color: $primary;
-            border-color: $primary;
-            cursor: pointer;
-            &:first-child {
-                border-radius: $upload-border-radius 0 0 $upload-border-radius;
-            }
-
-            &:last-child {
-                border-radius: 0 $upload-border-radius $upload-border-radius 0;
-            }
-
-            &.active {
-                background-color: $primary;
-                font-family: $font_bold;
-                border: 1px $primary solid;
-            }
-
-            &:active {
-                background-color: transparent;
-                border-color: $primary;
-                color: $primary;
-            }
-
-            span {
-                @include mobile {
-                    font-size: 11px;
+                    min-width: 110px;
                 }
             }
         }
     }
 }
 
-.modal-large {
-    .modal-md {
-        max-width: 570px !important;
-    }
+.modal-sm {
+    max-width: 400px !important;
+}
+
+.modal-md {
+    max-width: 640px !important;
+}
+
+.modal-backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
 }

@@ -1,5 +1,5 @@
 <template>
-    <div class="wrap-content customer-section">
+    <div class="wrap-content screen-customer">
         <div class="filter-section">
             <div class="row">
                 <div class="col-md-3">
@@ -14,14 +14,28 @@
                             >
                         </li>
                         <li>
-                            <b-button type="button" variant="primary"
-                                >KYC STATUS REVIEW</b-button
+                            <b-button
+                                v-b-modal.cancel-review-process
+                                type="button"
+                                variant="link font-semibold"
+                            >
+                                Cancel Review Process
+                            </b-button>
+                        </li>
+                        <li>
+                            <b-button
+                                v-b-modal.kyc-status-review
+                                type="button"
+                                variant="primary"
+                            >
+                                KYC STATUS REVIEW</b-button
                             >
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
+
         <div class="card customer-info screen-section">
             <customer-information
                 profilePic="image5.png"
@@ -34,124 +48,117 @@
         </div>
         <div class="table-section">
             <b-table :items="items" :fields="fields">
-                <template slot="profile" slot-scope="data">
-                    <div class="profile-area">
-                        <div
-                            class="profile-pic"
-                            :style="{
-                                'background-image':
-                                    'url(' +
-                                    require('@/assets/images/members/' +
-                                        data.value +
-                                        '') +
-                                    ')',
-                            }"
-                        ></div>
-                    </div>
-                </template>
                 <template slot="sanction" slot-scope="data">
-                    <div
-                        class="pending indication-icons"
-                        v-if="data.value == 'disabled'"
-                    >
-                        <i class="icon-check"></i>
-                    </div>
-                    <div
-                        class="inreview indication-icons"
-                        v-if="data.value == 'pending'"
-                    >
-                        <i class="icon-wrong"></i>
-                    </div>
-                    <div
-                        class="reject indication-icons"
-                        v-if="data.value == 'reject'"
-                    >
-                        <i class="icon-wrong"></i>
-                    </div>
-                    <div
-                        class="pending indication-icons"
-                        v-if="data.value == 'wait'"
-                    >
-                        <i class="icon-loading"></i>
-                    </div>
+                    <a href="javascript:void(0);" v-b-modal.screening-detail>
+                        <div
+                            class="pending indication-icons"
+                            v-if="data.value == 'disabled'"
+                        >
+                            <i class="icon-check"></i>
+                        </div>
+                        <div
+                            class="inreview indication-icons"
+                            v-if="data.value == 'pending'"
+                        >
+                            <i class="icon-wrong"></i>
+                        </div>
+                        <div
+                            class="reject indication-icons"
+                            v-if="data.value == 'reject'"
+                        >
+                            <i class="icon-wrong"></i>
+                        </div>
+                        <div
+                            class="pending indication-icons"
+                            v-if="data.value == 'wait'"
+                        >
+                            <i class="icon-loading"></i>
+                        </div>
+                    </a>
                 </template>
                 <template slot="rep" slot-scope="data">
-                    <div
-                        class="pending indication-icons"
-                        v-if="data.value == 'disabled'"
-                    >
-                        <i class="icon-check"></i>
-                    </div>
-                    <div
-                        class="inreview indication-icons"
-                        v-if="data.value == 'pending'"
-                    >
-                        <i class="icon-wrong"></i>
-                    </div>
-                    <div
-                        class="reject indication-icons"
-                        v-if="data.value == 'reject'"
-                    >
-                        <i class="icon-wrong"></i>
-                    </div>
-                    <div
-                        class="pending indication-icons"
-                        v-if="data.value == 'wait'"
-                    >
-                        <i class="icon-loading"></i>
-                    </div>
+                    <a href="javascript:void(0);" v-b-modal.screening-detail>
+                        <div
+                            class="pending indication-icons"
+                            v-if="data.value == 'disabled'"
+                        >
+                            <i class="icon-check"></i>
+                        </div>
+                        <div
+                            class="inreview indication-icons"
+                            v-if="data.value == 'pending'"
+                        >
+                            <i class="icon-wrong"></i>
+                        </div>
+                        <div
+                            class="reject indication-icons"
+                            v-if="data.value == 'reject'"
+                        >
+                            <i class="icon-wrong"></i>
+                        </div>
+                        <div
+                            class="pending indication-icons"
+                            v-if="data.value == 'wait'"
+                        >
+                            <i class="icon-loading"></i>
+                        </div>
+                    </a>
                 </template>
                 <template slot="enforcement" slot-scope="data">
-                    <div
-                        class="pending indication-icons"
-                        v-if="data.value == 'disabled'"
-                    >
-                        <i class="icon-check"></i>
-                    </div>
-                    <div
-                        class="inreview indication-icons"
-                        v-if="data.value == 'pending'"
-                    >
-                        <i class="icon-wrong"></i>
-                    </div>
-                    <div
-                        class="reject indication-icons"
-                        v-if="data.value == 'reject'"
-                    >
-                        <i class="icon-wrong"></i>
-                    </div>
-                    <div
-                        class="pending indication-icons"
-                        v-if="data.value == 'wait'"
-                    >
-                        <i class="icon-loading"></i>
-                    </div>
+                    <a href="javascript:void(0);" v-b-modal.screening-detail>
+                        <div
+                            class="pending indication-icons"
+                            v-if="data.value == 'disabled'"
+                        >
+                            <i class="icon-check"></i>
+                        </div>
+                        <div
+                            class="inreview indication-icons"
+                            v-if="data.value == 'pending'"
+                        >
+                            <i class="icon-wrong"></i>
+                        </div>
+                        <div
+                            class="reject indication-icons"
+                            v-if="data.value == 'reject'"
+                        >
+                            <i class="icon-wrong"></i>
+                        </div>
+                        <div
+                            class="pending indication-icons"
+                            v-if="data.value == 'wait'"
+                        >
+                            <i class="icon-loading"></i>
+                        </div>
+                    </a>
                 </template>
                 <template slot="blackList" slot-scope="data">
-                    <div
-                        class="pending indication-icons"
-                        v-if="data.value == 'disabled'"
-                    >
-                        <i class="icon-check"></i>
-                    </div>
-                    <div
-                        class="inreview indication-icons"
-                        v-if="data.value == 'pending'"
-                    >
-                        <i class="icon-wrong"></i>
-                    </div>
-                    <div
-                        class="reject indication-icons"
-                        v-if="data.value == 'reject'"
-                    >
-                        <i class="icon-wrong"></i>
-                    </div>
-                    <div
-                        class="pending indication-icons"
-                        v-if="data.value == 'wait'"
-                    >
-                        <i class="icon-loading"></i>
-                    </div>
+                    <a href="javascript:void(0);" v-b-modal.screening-detail>
+                        <div
+                            class="pending indication-icons"
+                            v-if="data.value == 'disabled'"
+                        >
+                            <i class="icon-check"></i>
+                        </div>
+                        <div
+                            class="inreview indication-icons"
+                            v-if="data.value == 'pending'"
+                        >
+                            <i class="icon-wrong"></i>
+                        </div>
+                        <div
+                            class="reject indication-icons"
+                            v-if="data.value == 'reject'"
+                        >
+                            <i class="icon-wrong"></i>
+                        </div>
+                        <div
+                            class="pending indication-icons"
+                            v-if="data.value == 'wait'"
+                        >
+                            <i class="icon-loading"></i>
+                        </div>
+                    </a>
                 </template>
                 <template slot="hit" slot-scope="data">
                     <div
@@ -184,14 +191,23 @@
                 <img :src="require('@/assets/images/dummy/google-pic.png')" />
             </div>
         </div>
+        <cancel-review-process></cancel-review-process>
+        <kyc-status-review></kyc-status-review>
+        <screening-detail></screening-detail>
     </div>
 </template>
 <script>
 import customerInformation from '@/components/CustomerInfo.vue'
+import kycStatusReview from '@/components/popups/KYCStatusReview.vue'
+import cancelReviewProcess from '@/components/popups/CancelReviewProcess.vue'
+import screeningDetail from '@/components/popups/ScreeningDetail.vue'
 
 export default {
     components: {
         customerInformation,
+        kycStatusReview,
+        cancelReviewProcess,
+        screeningDetail,
     },
 
     /*
