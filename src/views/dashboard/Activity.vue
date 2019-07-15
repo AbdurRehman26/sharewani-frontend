@@ -145,12 +145,7 @@ export default {
     |--------------------------------------------------------------------------
     */
     computed: {
-        ...mapGetters([
-            'dashboardUserRequest',
-            'activityTimelineData',
-            'alertsByTypeData',
-            'screeningHitByTypeData',
-        ]),
+        ...mapGetters(['dashboardData']),
     }, // End of Component > computed
 
     /*
@@ -160,22 +155,24 @@ export default {
     */
     methods: {
         initializeData() {
-            let dashboardUserRequest = this.dashboardUserRequest //get user data from store
-            this.userListing = dashboardUserRequest //push data into array
+            //user request list
+            let requestList = this.dashboardData.userRequest
+            this.userListing = requestList
 
             //activity timeline chart data
-            let activityTimelineData = this.activityTimelineData
+            let activityTimelineData = this.dashboardData.activityTimelineData
             window.AmCharts.makeChart(
                 'activity-timeline-report',
                 activityTimelineData
             )
 
             //alerts by type  data
-            let alertsByTypeData = this.alertsByTypeData
+            let alertsByTypeData = this.dashboardData.alertsByTypeData
             window.AmCharts.makeChart('alerts-by-type', alertsByTypeData)
 
             //alerts by type  data
-            let screeningHitByTypeData = this.screeningHitByTypeData
+            let screeningHitByTypeData = this.dashboardData
+                .screeningHitByTypeData
             window.AmCharts.makeChart(
                 'screening-by-type',
                 screeningHitByTypeData

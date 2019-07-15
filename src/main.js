@@ -8,8 +8,6 @@ require('@/auto-import.js')
 
 Vue.use(BootstrapVue)
 
-require('@/auto-import.js')
-
 Vue.config.productionTip = false
 
 new Vue({

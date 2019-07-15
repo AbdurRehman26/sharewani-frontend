@@ -326,22 +326,6 @@
     }
 }
 
-.customer-section {
-    table {
-        td {
-            .customer-link {
-                a {
-                    color: $body-color;
-
-                    &:hover {
-                        color: $nav-color;
-                    }
-                }
-            }
-        }
-    }
-}
-
 .system-user-filter {
     ul {
         display: flex;
@@ -764,13 +748,3 @@
     }
 }
 
-.customer-link {
-    a {
-        color: $body-color;
-        text-decoration: none;
-
-        &:hover {
-            color: $grey-lite;
-        }
-    }
-}

@@ -35,14 +35,13 @@
             padding: $table-row-padding;
             vertical-align: middle;
             position: relative;
-            border a {
-                color: $grey-lite;
+            a {
+                color: $body-color;
                 text-decoration: none;
                 &:hover {
                     color: $secondary;
                 }
                 i {
-                    padding-right: 8px;
                     vertical-align: middle;
                 }
             }
@@ -54,26 +53,54 @@
             }
         }
         .action-review {
-            a {
-                margin-right: 16px;
-                display: inline-block;
-                color: $grey-lite;
-                text-decoration: none;
-                &:last-child {
-                    margin-right: 0px;
-                }
-                &:hover,
-                &:focus {
-                    color: $secondary;
-                }
-                i {
-                    margin-right: 8px;
-                    position: relative;
-                    top: 2px;
-                    font-size: 1.1rem;
-                    &.icon-done {
-                        font-size: 1.2rem;
-                        top: 3px;
+            margin-right: -7px;
+            margin-left: -7px;
+            span {
+                padding-left: 7px;
+                padding-right: 7px;
+                vertical-align: middle;
+                a {
+                    margin-right: 16px;
+                    display: inline-block;
+                    color: $grey-lite;
+                    text-decoration: none;
+                    &:last-child {
+                        margin-right: 0px;
+                    }
+                    &:hover,
+                    &:focus {
+                        color: $secondary;
+                    }
+                    &.disabled {
+                        opacity: 0.5;
+                        pointer-events: none;
+                    }
+                    i {
+                        margin-right: 5px;
+                        position: relative;
+                        top: 2px;
+                        font-size: 1.1rem;
+                        vertical-align: middle;
+                        &.icon-done {
+                            font-size: 1.2rem;
+                            top: 3px;
+                        }
+                        &.icon-review {
+                            font-size: 1.5rem;
+                        }
+                        &.icon-lock_outline {
+                            font-size: 1.3rem;
+                            top: 0;
+                        }
+                        &.icon-eye-view {
+                            font-size: 0.9rem;
+                            top: 0;
+                        }
+                    }
+                    p {
+                        display: inline-block;
+                        margin: 0;
+                        vertical-align: middle;
                     }
                 }
             }
@@ -118,7 +145,7 @@
             min-width: 170px;
         }
         p {
-            padding-left: 10px;
+            padding-left: 15px;
         }
     }
     .next-previous-pagination {
