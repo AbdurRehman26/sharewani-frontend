@@ -13,198 +13,202 @@
                 <div class="col-lg-12">
                     <div class="card custom-card">
                         <div class="fields-area">
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <h5>
-                                        Brand Logo
-                                    </h5>
-                                    <div class="row">
-                                        <div class="col-lg-9">
-                                            <b-form-group
-                                                id="input-group-6"
-                                                label="LOGO FOR LIGHT BACKGROUND"
-                                                label-for="documentScan"
-                                            >
-                                                <b-form-file
-                                                    @change="uploadLogoOne"
-                                                    accept="image/jpeg, image/png"
-                                                    placeholder="Choose transparent logo image file (PNG)"
-                                                    drop-placeholder="Drop file here..."
-                                                ></b-form-file>
-                                            </b-form-group>
+                            <div class="brand-logo-area">
+                                <h5>
+                                    Brand Logo
+                                </h5>
+                                <div class="row">
+                                    <div class="col-lg-9">
+                                        <b-form-group
+                                            id="input-group-6"
+                                            label="LOGO FOR LIGHT BACKGROUND"
+                                            label-for="documentScan"
+                                        >
+                                            <b-form-file
+                                                @change="uploadLogoOne"
+                                                accept="image/jpeg, image/png"
+                                                placeholder="Choose transparent logo image file (PNG)"
+                                                drop-placeholder="Drop file here..."
+                                            ></b-form-file>
+                                        </b-form-group>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="brand-logo light">
+                                            <div
+                                                class="logo-area-preview"
+                                                v-bind:style="{
+                                                    'background-image':
+                                                        'url(' +
+                                                        logoLight +
+                                                        ')',
+                                                }"
+                                            ></div>
                                         </div>
-                                        <div class="col-lg-3">
-                                            <div class="brand-logo light">
-                                                <img :src="logoOne" />
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-9">
-                                            <b-form-group
-                                                id="input-group-6"
-                                                label="LOGO FOR DARK BACKGROUND"
-                                                label-for="documentScan"
-                                            >
-                                                <b-form-file
-                                                    @change="uploadLogoTwo"
-                                                    accept="image/jpeg, image/png"
-                                                    placeholder="Choose transparent logo image file (PNG)"
-                                                    drop-placeholder="Drop file here..."
-                                                ></b-form-file>
-                                            </b-form-group>
-                                        </div>
-                                        <div class="col-lg-3">
-                                            <div class="brand-logo dark">
-                                                <img :src="logoTwo" />
-                                            </div>
+                                    </div>
+                                    <div class="col-lg-9">
+                                        <b-form-group
+                                            id="input-group-6"
+                                            label="LOGO FOR DARK BACKGROUND"
+                                            label-for="documentScan"
+                                        >
+                                            <b-form-file
+                                                @change="uploadLogoTwo"
+                                                accept="image/jpeg, image/png"
+                                                placeholder="Choose transparent logo image file (PNG)"
+                                                drop-placeholder="Drop file here..."
+                                            ></b-form-file>
+                                        </b-form-group>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="brand-logo dark">
+                                            <div
+                                                class="logo-area-preview"
+                                                v-bind:style="{
+                                                    'background-image':
+                                                        'url(' + logoDark + ')',
+                                                }"
+                                            ></div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-6"></div>
                             </div>
                         </div>
 
                         <div class="fields-area">
-                            <div class="row">
-                                <div class="col-lg-9">
-                                    <h5>
-                                        Brand Colors
-                                    </h5>
-                                    <div class="row">
-                                        <div class="col-lg-6">
-                                            <b-form-group
-                                                id="input-group-6"
-                                                label="PRIMARY COLOR CODE"
-                                            >
-                                                <div class="color-area">
-                                                    <b-form-input
-                                                        type="text"
-                                                        v-model="primaryColor"
-                                                        placeholder="Primary Color"
-                                                    ></b-form-input>
-                                                    <b-form-input
-                                                        type="color"
-                                                        v-model="primaryColor"
-                                                    ></b-form-input>
-                                                    <div class="input-color">
-                                                        <div
-                                                            class="color-pallet"
-                                                            v-bind:style="{
-                                                                'background-color':
-                                                                    '' +
-                                                                    primaryColor +
-                                                                    '',
-                                                            }"
-                                                        ></div>
-                                                        <i
-                                                            class="icon-documentation"
-                                                        ></i>
-                                                    </div>
+                            <div class="brand-color-area">
+                                <h5>
+                                    Brand Colors
+                                </h5>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <b-form-group
+                                            id="input-group-6"
+                                            label="PRIMARY COLOR CODE"
+                                        >
+                                            <div class="color-area">
+                                                <b-form-input
+                                                    type="text"
+                                                    v-model="primaryColor"
+                                                    placeholder="Primary Color"
+                                                ></b-form-input>
+                                                <b-form-input
+                                                    type="color"
+                                                    v-model="primaryColor"
+                                                ></b-form-input>
+                                                <div class="input-color">
+                                                    <div
+                                                        class="color-pallet"
+                                                        v-bind:style="{
+                                                            'background-color':
+                                                                '' +
+                                                                primaryColor +
+                                                                '',
+                                                        }"
+                                                    ></div>
+                                                    <i
+                                                        class="icon-documentation"
+                                                    ></i>
                                                 </div>
-                                            </b-form-group>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <b-form-group
-                                                id="input-group-6"
-                                                label="SECONDARY COLOR CODE"
-                                            >
-                                                <div class="color-area">
-                                                    <b-form-input
-                                                        type="text"
-                                                        v-model="secondaryColor"
-                                                        placeholder="Secondary Color"
-                                                    ></b-form-input>
-                                                    <b-form-input
-                                                        type="color"
-                                                        v-model="secondaryColor"
-                                                    ></b-form-input>
-                                                    <div class="input-color">
-                                                        <div
-                                                            class="color-pallet"
-                                                            v-bind:style="{
-                                                                'background-color':
-                                                                    '' +
-                                                                    secondaryColor +
-                                                                    '',
-                                                            }"
-                                                        ></div>
-                                                        <i
-                                                            class="icon-documentation"
-                                                        ></i>
-                                                    </div>
+                                            </div>
+                                        </b-form-group>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <b-form-group
+                                            id="input-group-6"
+                                            label="SECONDARY COLOR CODE"
+                                        >
+                                            <div class="color-area">
+                                                <b-form-input
+                                                    type="text"
+                                                    v-model="secondaryColor"
+                                                    placeholder="Secondary Color"
+                                                ></b-form-input>
+                                                <b-form-input
+                                                    type="color"
+                                                    v-model="secondaryColor"
+                                                ></b-form-input>
+                                                <div class="input-color">
+                                                    <div
+                                                        class="color-pallet"
+                                                        v-bind:style="{
+                                                            'background-color':
+                                                                '' +
+                                                                secondaryColor +
+                                                                '',
+                                                        }"
+                                                    ></div>
+                                                    <i
+                                                        class="icon-documentation"
+                                                    ></i>
                                                 </div>
-                                            </b-form-group>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <b-form-group
-                                                id="input-group-6"
-                                                label="INTERFACE DARK COLOR CODE"
-                                            >
-                                                <div class="color-area">
-                                                    <b-form-input
-                                                        type="text"
-                                                        v-model="darkColor"
-                                                        placeholder="Secondary Color"
-                                                    ></b-form-input>
-                                                    <b-form-input
-                                                        type="color"
-                                                        v-model="darkColor"
-                                                    ></b-form-input>
-                                                    <div class="input-color">
-                                                        <div
-                                                            class="color-pallet"
-                                                            v-bind:style="{
-                                                                'background-color':
-                                                                    '' +
-                                                                    darkColor +
-                                                                    '',
-                                                            }"
-                                                        ></div>
-                                                        <i
-                                                            class="icon-documentation"
-                                                        ></i>
-                                                    </div>
+                                            </div>
+                                        </b-form-group>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <b-form-group
+                                            id="input-group-6"
+                                            label="INTERFACE DARK COLOR CODE"
+                                        >
+                                            <div class="color-area">
+                                                <b-form-input
+                                                    type="text"
+                                                    v-model="darkColor"
+                                                    placeholder="Secondary Color"
+                                                ></b-form-input>
+                                                <b-form-input
+                                                    type="color"
+                                                    v-model="darkColor"
+                                                ></b-form-input>
+                                                <div class="input-color">
+                                                    <div
+                                                        class="color-pallet"
+                                                        v-bind:style="{
+                                                            'background-color':
+                                                                '' +
+                                                                darkColor +
+                                                                '',
+                                                        }"
+                                                    ></div>
+                                                    <i
+                                                        class="icon-documentation"
+                                                    ></i>
                                                 </div>
-                                            </b-form-group>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <b-form-group
-                                                id="input-group-6"
-                                                label="INTERFACE DARK COLOR CODE"
-                                            >
-                                                <div class="color-area">
-                                                    <b-form-input
-                                                        type="text"
-                                                        v-model="
-                                                            darkMediumColor
-                                                        "
-                                                        placeholder="Secondary Color"
-                                                    ></b-form-input>
-                                                    <b-form-input
-                                                        type="color"
-                                                        v-model="
-                                                            darkMediumColor
-                                                        "
-                                                    ></b-form-input>
-                                                    <div class="input-color">
-                                                        <div
-                                                            class="color-pallet"
-                                                            v-bind:style="{
-                                                                'background-color':
-                                                                    '' +
-                                                                    darkMediumColor +
-                                                                    '',
-                                                            }"
-                                                        ></div>
-                                                        <i
-                                                            class="icon-documentation"
-                                                        ></i>
-                                                    </div>
+                                            </div>
+                                        </b-form-group>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <b-form-group
+                                            id="input-group-6"
+                                            label="INTERFACE DARK COLOR CODE"
+                                        >
+                                            <div class="color-area">
+                                                <b-form-input
+                                                    type="text"
+                                                    v-model="darkMediumColor"
+                                                    placeholder="Secondary Color"
+                                                ></b-form-input>
+                                                <b-form-input
+                                                    type="color"
+                                                    v-model="darkMediumColor"
+                                                ></b-form-input>
+                                                <div class="input-color">
+                                                    <div
+                                                        class="color-pallet"
+                                                        v-bind:style="{
+                                                            'background-color':
+                                                                '' +
+                                                                darkMediumColor +
+                                                                '',
+                                                        }"
+                                                    ></div>
+                                                    <i
+                                                        class="icon-documentation"
+                                                    ></i>
                                                 </div>
-                                            </b-form-group>
-                                        </div>
+                                            </div>
+                                        </b-form-group>
                                     </div>
                                 </div>
-                                <div class="col-lg-3"></div>
                             </div>
                         </div>
 
@@ -250,8 +254,8 @@ export default {
     */
     data() {
         return {
-            logoOne: null,
-            logoTwo: null,
+            logoLight: '/logo-light.png',
+            logoDark: '/logo-dark.png',
             primaryColor: '#662d91',
             secondaryColor: '#b35fa5',
             darkColor: '#22003c',
@@ -276,8 +280,8 @@ export default {
             const reader = new FileReader()
             reader.readAsDataURL(image)
             reader.onload = (e) => {
-                this.logoOne = e.target.result
-                console.log(this.logoOne)
+                this.logoLight = e.target.result
+                console.log(this.logoLight)
             }
         },
         uploadLogoTwo(e) {
@@ -285,8 +289,8 @@ export default {
             const reader = new FileReader()
             reader.readAsDataURL(image)
             reader.onload = (e) => {
-                this.logoTwo = e.target.result
-                console.log(this.logoTwo)
+                this.logoDark = e.target.result
+                console.log(this.logoDark)
             }
         },
     }, // End of Component > methods

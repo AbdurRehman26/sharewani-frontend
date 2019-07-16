@@ -50,6 +50,14 @@
     }
 }
 
+.brand-logo-area {
+    max-width: 570px;
+}
+
+.brand-color-area {
+    max-width: 870px;
+}
+
 .config-card-switch {
     .fields-area {
         border-bottom: 1px solid $grey-dark;
@@ -673,9 +681,18 @@
             height: 43px;
             border-radius: 7px;
             margin-top: 21px;
+            display: flex;
+            padding: 7px 14px;
             img {
-                height: 100%;
+                height: auto;
                 margin: auto;
+            }
+            .logo-area-preview {
+                width: 100%;
+                background-size: 100%;
+                height: auto;
+                background-repeat: no-repeat;
+                background-position: 50%;
             }
             &.light {
                 background-color: #f2f2f6;
