@@ -18,7 +18,10 @@
                             >
                         </li>
                         <li>
-                            <b-button type="button" variant="secondary"
+                            <b-button
+                                type="button"
+                                variant="secondary"
+                                v-b-modal.add-relationship
                                 >+ Add Relationship Length</b-button
                             >
                         </li>
@@ -45,15 +48,18 @@
             </b-table>
         </div>
         <pagination></pagination>
+        <add-relationship-popup></add-relationship-popup>
     </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
 import pagination from '@/components/Pagination.vue'
+import addRelationshipPopup from '@/components/popups/AddRelationshipPopup.vue'
 export default {
     components: {
         pagination,
+        addRelationshipPopup,
     },
 
     /*

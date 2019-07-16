@@ -16,22 +16,25 @@
                     </div>
                 </template>
                 <template slot="action" slot-scope="data">
-                    <div class="action-review">
+                    <div class="action-review" v-b-modal.modify-risk-factor>
                         <base-action :actionType="data.value"> </base-action>
                     </div>
                 </template>
             </b-table>
         </div>
         <pagination></pagination>
+        <modify-risk-factor-popup></modify-risk-factor-popup>
     </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
 import pagination from '@/components/Pagination.vue'
+import modifyRiskFactorPopup from '@/components/popups/ModifyRiskFactorPopup.vue'
 export default {
     components: {
         pagination,
+        modifyRiskFactorPopup,
     },
 
     /*

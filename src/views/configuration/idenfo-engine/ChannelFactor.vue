@@ -6,7 +6,7 @@
                     <h2>Channel Type Factor</h2>
                 </div>
                 <div class="col-md-8 text-right">
-                    <ul>
+                    <!--  <ul>
                         <li>
                             <base-search
                                 :placeholder="'Search Channel Type'"
@@ -22,7 +22,7 @@
                                 >+ Add Channel Type</b-button
                             >
                         </li>
-                    </ul>
+                    </ul> -->
                 </div>
             </div>
         </div>
@@ -38,22 +38,25 @@
                     <base-status :statusType="data.value"></base-status>
                 </template>
                 <template slot="action" slot-scope="data">
-                    <div class="action-review">
+                    <div class="action-review" v-b-modal.modify-channel>
                         <base-action :actionType="data.value"> </base-action>
                     </div>
                 </template>
             </b-table>
         </div>
         <pagination></pagination>
+        <modify-channel-popup></modify-channel-popup>
     </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
 import pagination from '@/components/Pagination.vue'
+import modifyChannelPopup from '@/components/popups/ModifyChannelPopup.vue'
 export default {
     components: {
         pagination,
+        modifyChannelPopup,
     },
 
     /*

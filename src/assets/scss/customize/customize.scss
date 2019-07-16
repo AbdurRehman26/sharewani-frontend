@@ -900,6 +900,24 @@
         color: $body-color;
         margin-bottom: 10px;
     }
+
+    .scale-type {
+        h4 {
+            font-family: $font_medium;
+            font-size: 1.125rem;
+            margin-bottom: 18px;
+        }
+
+        .row {
+            margin-right: -5px;
+            margin-left: -5px;
+
+            .col-md-4 {
+                padding-left: 7px;
+                padding-right: 7px;
+            }
+        }
+    }
 }
 
 .kyc-status-radio {
@@ -976,5 +994,18 @@
 .archive-popup {
     .close {
         top: -2px !important;
+    }
+}
+
+.months-length {
+    position: relative;
+
+    &:after {
+        content: 'to';
+        position: absolute;
+        top: 14px;
+        left: -8px;
+        color: $nav-color;
+        font-size: 12px;
     }
 }

@@ -27,12 +27,12 @@
                     </div>
                     <div class="col-md-6">
                         <b-form-group
-                            id="input-group-1"
+                            id="input-group-2"
                             label="Dialing Code"
-                            label-for="input-1"
+                            label-for="input-2"
                         >
                             <b-form-input
-                                id="input-1"
+                                id="input-2"
                                 type="text"
                                 v-model="form.dialingCode"
                                 required
@@ -42,12 +42,12 @@
                     </div>
                     <div class="col-md-12">
                         <b-form-group
-                            id="input-group-2"
+                            id="input-group-3"
                             label="Country Title"
-                            label-for="input-2"
+                            label-for="input-3"
                         >
                             <b-form-input
-                                id="input-2"
+                                id="input-3"
                                 type="text"
                                 v-model="form.countryTitle"
                                 required
@@ -57,7 +57,7 @@
                     </div>
                     <div class="col-md-12">
                         <b-form-group
-                            id="input-group-3"
+                            id="input-group-4"
                             label="Rating"
                             label-for="nationality"
                         >
@@ -71,7 +71,7 @@
                     <div class="col-md-12">
                         <b-form-group
                             class="mb-0 kyc-status-radio overwrite-radio"
-                            id="input-group-4"
+                            id="input-group-5"
                             label="Is Sanction"
                             label-for="sanction"
                         >
@@ -104,11 +104,9 @@ export default {
 
             rating: [
                 { value: null, text: 'Select Rating' },
-                '1',
-                '2',
-                '3',
-                '4',
-                '5',
+                'High Risk',
+                'Medium Risk',
+                'Low Risk',
             ],
         }
     },
