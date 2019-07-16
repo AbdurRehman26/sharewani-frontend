@@ -50,6 +50,22 @@
     }
 }
 
+.brand-logo-area {
+    max-width: 570px;
+}
+
+.brand-color-area {
+    max-width: 870px;
+}
+
+.config-card-switch {
+    .fields-area {
+        border-bottom: 1px solid $grey-dark;
+        margin-bottom: 34px;
+        padding-bottom: 9px;
+    }
+}
+
 .registration-completed {
     p {
         font-size: 0.875rem;
@@ -640,7 +656,7 @@
     }
 }
 
-.review-switch {
+.config-card-switch {
     .card {
         &.custom-card {
             text-align: left;
@@ -651,8 +667,9 @@
             p {
                 text-align: left;
                 color: $body-color;
+                margin-bottom: 22px;
                 &.review-alert {
-                    color: $high;
+                    color: #ed1c24;
                 }
             }
             button {
@@ -660,6 +677,64 @@
                 text-transform: initial;
             }
         }
+        .brand-logo {
+            height: 43px;
+            border-radius: 7px;
+            margin-top: 21px;
+            display: flex;
+            padding: 7px 14px;
+            img {
+                height: auto;
+                margin: auto;
+            }
+            .logo-area-preview {
+                width: 100%;
+                background-size: 100%;
+                height: auto;
+                background-repeat: no-repeat;
+                background-position: 50%;
+            }
+            &.light {
+                background-color: #f2f2f6;
+            }
+            &.dark {
+                background-color: #1b1b1e;
+            }
+        }
+    }
+}
+
+.color-area {
+    position: relative;
+    input[type='color'] {
+        position: absolute;
+        top: 0;
+        opacity: 0;
+        width: 20%;
+        right: 0;
+        z-index: 9;
+        cursor: pointer;
+    }
+    .input-color {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        width: 72px;
+        .color-pallet {
+            width: 24px;
+            height: 24px;
+            border-radius: 4px;
+        }
+        i {
+            position: absolute;
+            right: 16px;
+        }
+    }
+    input[type='text'] {
+        color: $grey-lite;
     }
 }
 

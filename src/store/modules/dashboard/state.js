@@ -1147,9 +1147,21 @@ export default {
                     customer: '1250976',
                     full_name: 'Zeng Wen',
                     nationality: 'British',
-                    name_screening: 'Pending',
-                    documentation: 'High Risk',
-                    risk_rating: 'Sanctions',
+                    name_screening: [
+                        {
+                            cssClass: 'icon-cross-with-circle danger',
+                        },
+                    ],
+                    documentation: [
+                        {
+                            cssClass: 'icon-tick-with-circle',
+                        },
+                    ],
+                    risk_rating: [
+                        {
+                            cssClass: 'icon-cross-with-circle pending',
+                        },
+                    ],
                     action: [
                         {
                             text: 'In Review',
@@ -1163,9 +1175,21 @@ export default {
                     customer: '1250976',
                     full_name: 'Edward Lindgren',
                     nationality: 'British',
-                    name_screening: 'Sanctions',
-                    documentation: 'pending',
-                    risk_rating: 'pending',
+                    name_screening: [
+                        {
+                            cssClass: 'icon-cross-with-circle pending',
+                        },
+                    ],
+                    documentation: [
+                        {
+                            cssClass: 'icon-tick-with-circle pending',
+                        },
+                    ],
+                    risk_rating: [
+                        {
+                            cssClass: 'icon-cross-with-circle pending',
+                        },
+                    ],
                     action: [
                         {
                             text: 'Review',
@@ -1178,9 +1202,21 @@ export default {
                     customer: '3282345',
                     full_name: 'Christian Russell',
                     nationality: 'American',
-                    name_screening: 'High Risk',
-                    documentation: 'Sanctions',
-                    risk_rating: 'Pending',
+                    name_screening: [
+                        {
+                            cssClass: 'icon-cross-with-circle pending',
+                        },
+                    ],
+                    documentation: [
+                        {
+                            cssClass: 'icon-tick-with-circle ',
+                        },
+                    ],
+                    risk_rating: [
+                        {
+                            cssClass: 'icon-cross-with-circle pending',
+                        },
+                    ],
                     action: [
                         {
                             text: 'In Review',
@@ -1194,9 +1230,21 @@ export default {
                     customer: '3312353',
                     full_name: 'Fua Lamba',
                     nationality: 'Singaporean',
-                    name_screening: 'High Risk',
-                    documentation: 'pending',
-                    risk_rating: 'Pending',
+                    name_screening: [
+                        {
+                            cssClass: 'icon-cross-with-circle pending',
+                        },
+                    ],
+                    documentation: [
+                        {
+                            cssClass: 'icon-tick-with-circle pending',
+                        },
+                    ],
+                    risk_rating: [
+                        {
+                            cssClass: 'icon-cross-with-circle danger',
+                        },
+                    ],
                     action: [
                         {
                             text: 'In Review',
@@ -1210,9 +1258,21 @@ export default {
                     customer: '1250976',
                     full_name: 'Alexander Ljung',
                     nationality: 'Greek',
-                    name_screening: 'pending',
-                    documentation: 'pending',
-                    risk_rating: 'pending',
+                    name_screening: [
+                        {
+                            cssClass: 'icon-cross-with-circle danger',
+                        },
+                    ],
+                    documentation: [
+                        {
+                            cssClass: 'icon-tick-with-circle pending',
+                        },
+                    ],
+                    risk_rating: [
+                        {
+                            cssClass: 'icon-cross-with-circle pending',
+                        },
+                    ],
                     action: [
                         {
                             text: 'In Review',
@@ -1226,9 +1286,21 @@ export default {
                     customer: '2489573',
                     full_name: 'Chukwudi Udo',
                     nationality: 'Mexican',
-                    name_screening: 'Sanctions',
-                    documentation: 'pending',
-                    risk_rating: 'pending',
+                    name_screening: [
+                        {
+                            cssClass: 'icon-cross-with-circle pending',
+                        },
+                    ],
+                    documentation: [
+                        {
+                            cssClass: 'icon-tick-with-circle pending',
+                        },
+                    ],
+                    risk_rating: [
+                        {
+                            cssClass: 'icon-cross-with-circle danger',
+                        },
+                    ],
                     action: [
                         {
                             text: 'Review',
@@ -1241,9 +1313,21 @@ export default {
                     customer: '3312353',
                     full_name: 'Linzell Bowman',
                     nationality: 'British',
-                    name_screening: 'Sanctions',
-                    documentation: 'pending',
-                    risk_rating: 'pending',
+                    name_screening: [
+                        {
+                            cssClass: 'icon-cross-with-circle pending',
+                        },
+                    ],
+                    documentation: [
+                        {
+                            cssClass: 'icon-tick-with-circle pending',
+                        },
+                    ],
+                    risk_rating: [
+                        {
+                            cssClass: 'icon-cross-with-circle danger',
+                        },
+                    ],
                     action: [
                         {
                             text: 'Review',
@@ -1256,9 +1340,21 @@ export default {
                     customer: '3282345',
                     full_name: 'Vương Mộng Nhi',
                     nationality: 'Chinese',
-                    name_screening: 'pending',
-                    documentation: 'High Risk',
-                    risk_rating: 'Sanctions',
+                    name_screening: [
+                        {
+                            cssClass: 'icon-cross-with-circle danger',
+                        },
+                    ],
+                    documentation: [
+                        {
+                            cssClass: 'icon-tick-with-circle ',
+                        },
+                    ],
+                    risk_rating: [
+                        {
+                            cssClass: 'icon-cross-with-circle ',
+                        },
+                    ],
                     action: [
                         {
                             text: 'Review',
@@ -1271,9 +1367,21 @@ export default {
                     customer: '2321345',
                     full_name: 'Lew Silverton',
                     nationality: 'British',
-                    name_screening: 'pending',
-                    documentation: 'Sanctions',
-                    risk_rating: 'Sanctions',
+                    name_screening: [
+                        {
+                            cssClass: 'icon-cross-with-circle danger',
+                        },
+                    ],
+                    documentation: [
+                        {
+                            cssClass: 'icon-tick-with-circle pending',
+                        },
+                    ],
+                    risk_rating: [
+                        {
+                            cssClass: 'icon-cross-with-circle ',
+                        },
+                    ],
                     action: [
                         {
                             text: 'Review',
@@ -1286,9 +1394,21 @@ export default {
                     customer: '2223535',
                     full_name: 'Xun Guiying',
                     nationality: 'Chinese',
-                    name_screening: 'pending',
-                    documentation: 'Sanctions',
-                    risk_rating: 'Sanctions',
+                    name_screening: [
+                        {
+                            cssClass: 'icon-cross-with-circle danger',
+                        },
+                    ],
+                    documentation: [
+                        {
+                            cssClass: 'icon-tick-with-circle pending',
+                        },
+                    ],
+                    risk_rating: [
+                        {
+                            cssClass: 'icon-cross-with-circle ',
+                        },
+                    ],
                     action: [
                         {
                             text: 'Review',

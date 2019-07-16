@@ -398,20 +398,23 @@ $sides: (top, bottom, left, right); // Leave this variable alone
         text-align: center;
     }
 
-    &.pending {
+    &.pending,
+    &.medium-risk {
         background-color: #f4c200;
         i {
             top: 2px;
         }
     }
 
-    &.approved {
+    &.approved,
+    &.low-risk {
         background-color: #00c535;
         i {
             font-size: 10px;
         }
     }
-    &.rejected {
+    &.rejected,
+    &.high-risk {
         background-color: #c91f37;
         i {
             font-size: 11px;

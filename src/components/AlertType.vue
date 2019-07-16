@@ -1,29 +1,8 @@
 <template>
     <div class="status-type-icon">
-        <span
-            v-if="
-                statusTypeIcon == 'sanctions' || statusTypeIcon == 'Sanctions'
-            "
-            :class="iconTheme"
-        >
-            <i class="icon-cross-with-circle"></i>
-        </span>
-        <span
-            v-if="
-                statusTypeIcon == 'high risk' ||
-                    statusTypeIcon == 'High Risk' ||
-                    statusTypeIcon == 'High risk'
-            "
-            :class="iconTheme"
-        >
-            <i class="icon-cross-with-circle danger"></i>
-        </span>
-        <span
-            v-if="statusTypeIcon == 'pending' || statusTypeIcon == 'Pending'"
-            :class="iconTheme"
-        >
-            <i class="icon-tick-with-circle pending"></i>
-        </span>
+        <div v-for="(list, index) in statusType" :key="index">
+            <i :class="list.cssClass"></i>
+        </div>
     </div>
 </template>
 
@@ -45,12 +24,8 @@ export default {
             type: String,
             default: 'add',
         },
-        statusTypeIcon: {
-            type: String,
-            default: null,
-        },
-        iconTheme: {
-            type: String,
+        statusType: {
+            type: Array,
             default: null,
         },
     }, // End of Component > props

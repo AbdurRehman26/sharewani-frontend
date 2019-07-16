@@ -127,7 +127,7 @@ export default {
     |--------------------------------------------------------------------------
     */
     computed: {
-        ...mapGetters(['configuration']),
+        ...mapGetters(['configurationData']),
     }, // End of Component > computed
 
     /*
@@ -138,10 +138,10 @@ export default {
     methods: {
         initializeData() {
             //system log table
-            let configTableFields = this.configuration.idenfoEngine.industry
+            let configTableFields = this.configurationData.idenfoEngine.industry
                 .fields //get user data from store
             this.fields = configTableFields //push data into array
-            let configTableItems = this.configuration.idenfoEngine.industry
+            let configTableItems = this.configurationData.idenfoEngine.industry
                 .items //get user data from store
             this.items = configTableItems //push data into array
         },

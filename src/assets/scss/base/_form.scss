@@ -1,7 +1,8 @@
-label {
-    font-size: $label-font-size;
+label,
+legend {
+    font-size: $label-font-size !important;
     font-family: $font-medium;
-    color: #7f8fa4;
+    color: $grey-lite;
     text-transform: uppercase;
 }
 
