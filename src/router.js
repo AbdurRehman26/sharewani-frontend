@@ -267,6 +267,20 @@ export default new Router({
                             component: () =>
                                 import(/* webpackChunkName: "riskRating" */ './views/configuration/idenfo-engine/RiskRating.vue'),
                         },
+                        {
+                            path:
+                                '/configuration/idenfo-engine/document-verification-factor',
+                            name: 'documentVerificationFactors',
+                            component: () =>
+                                import(/* webpackChunkName: "riskRating" */ './views/configuration/idenfo-engine/DocumentVerificationFactors.vue'),
+                        },
+                        {
+                            path:
+                                '/configuration/idenfo-engine/name-screen-score',
+                            name: 'nameScreenScore',
+                            component: () =>
+                                import(/* webpackChunkName: "riskRating" */ './views/configuration/idenfo-engine/NameScreenScore.vue'),
+                        },
                     ],
                 },
                 {
@@ -274,6 +288,18 @@ export default new Router({
                     name: 'import-data',
                     component: () =>
                         import(/* webpackChunkName: "customer" */ './views/configuration/ImportData.vue'),
+                },
+                {
+                    path: '/configuration/manual-review/',
+                    name: 'manual-review',
+                    component: () =>
+                        import(/* webpackChunkName: "customer" */ './views/configuration/ManualReviewSwitch.vue'),
+                },
+                {
+                    path: '/configuration/branding/',
+                    name: 'branding',
+                    component: () =>
+                        import(/* webpackChunkName: "customer" */ './views/configuration/Branding.vue'),
                 },
             ],
         },

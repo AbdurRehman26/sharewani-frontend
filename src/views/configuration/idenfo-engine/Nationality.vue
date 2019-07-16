@@ -16,7 +16,10 @@
                             >
                         </li>
                         <li>
-                            <b-button type="button" variant="secondary"
+                            <b-button
+                                type="button"
+                                variant="secondary"
+                                v-b-modal.add-nationality
                                 >+ Add Nationality</b-button
                             >
                         </li>
@@ -32,34 +35,31 @@
 
                 <template slot="action" slot-scope="data">
                     <div class="action-review">
-                        <a
-                            href="/"
-                            v-for="(list, index) in data.value"
-                            :key="index"
-                        >
-                            <div v-if="list.text === 'Modify'">
-                                <i class="icon-edit"></i>
-                                <span>{{ list.text }}</span>
-                            </div>
-                            <div v-if="list.text === 'Archive'">
-                                <i class="icon-trash"></i>
-                                <span>{{ list.text }}</span>
-                            </div>
-                        </a>
+                        <base-action :actionType="data.value"> </base-action>
                     </div>
                 </template>
             </b-table>
         </div>
         <pagination></pagination>
+        <add-nationality></add-nationality>
+        <archive-popup
+            title="Archive Nationality Factor"
+            description="Are you sure you want to archive this nationality factor? You can re-activate it later."
+        ></archive-popup>
     </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
 import pagination from '@/components/Pagination.vue'
+import addNationality from '@/components/popups/AddNationalityPopup.vue'
+import archivePopup from '@/components/popups/ArchivePopup.vue'
+
 export default {
     components: {
         pagination,
+        addNationality,
+        archivePopup,
     },
 
     /*

@@ -3,7 +3,7 @@
         <div class="config-list" ref="listingArea">
             <ul v-show="listVal <= 1100">
                 <li
-                    v-for="(list, index) in menuListing.slice(0, 7)"
+                    v-for="(list, index) in menuListing.slice(0, 8)"
                     :key="index"
                 >
                     <router-link :to="list.anchorLink">
@@ -19,7 +19,7 @@
                         <ul>
                             <li
                                 v-for="(listo, index) in menuListing.slice(
-                                    7,
+                                    8,
                                     menuListing.length
                                 )"
                                 :key="index"
@@ -32,7 +32,7 @@
                     </div>
                 </li>
             </ul>
-            <ul v-show="listVal >= 1100">
+            <ul v-show="listVal >= 1101">
                 <li v-for="(list, index) in menuListing" :key="index">
                     <router-link :to="list.anchorLink">
                         <span>{{ list.menuLabel }}</span>
@@ -112,6 +112,16 @@ export default {
                 {
                     anchorLink: '/configuration/idenfo-engine/risk-rating',
                     menuLabel: 'Risk Rating Score',
+                },
+                {
+                    anchorLink:
+                        '/configuration/idenfo-engine/document-verification-factor',
+                    menuLabel: 'Document Verification Score',
+                },
+                {
+                    anchorLink:
+                        '/configuration/idenfo-engine/name-screen-score',
+                    menuLabel: 'Name Screening Score',
                 },
             ],
         }
