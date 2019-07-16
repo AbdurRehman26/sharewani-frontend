@@ -62,17 +62,17 @@
                 </template>
                 <template slot="name_screening" slot-scope="data">
                     <status-type-icon
-                        :statusTypeIcon="data.value"
+                        :statusType="data.value"
                     ></status-type-icon>
                 </template>
                 <template slot="documentation" slot-scope="data">
                     <status-type-icon
-                        :statusTypeIcon="data.value"
+                        :statusType="data.value"
                     ></status-type-icon>
                 </template>
                 <template slot="risk_rating" slot-scope="data">
                     <status-type-icon
-                        :statusTypeIcon="data.value"
+                        :statusType="data.value"
                     ></status-type-icon>
                 </template>
 

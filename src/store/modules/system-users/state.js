@@ -38,13 +38,21 @@ export default {
                     role: 'Super Admin',
                     date_segments: 'All',
                     join_date: 'Jun 10, 2019 6:35 p.m.',
-                    status: 'Active',
+                    status: [
+                        {
+                            cssClass: 'approved',
+                            icon: 'icon-check',
+                            label: 'Active',
+                        },
+                    ],
                     action: [
                         {
                             text: 'Modify',
+                            icon: 'icon-edit',
                         },
                         {
                             text: 'Archive',
+                            icon: 'icon-trash',
                         },
                     ],
                 },
@@ -54,13 +62,21 @@ export default {
                     role: 'Maker',
                     date_segments: 'PK',
                     join_date: 'Jun 10, 2019 6:35 p.m.',
-                    status: 'Active',
+                    status: [
+                        {
+                            cssClass: 'approved',
+                            icon: 'icon-check',
+                            label: 'Active',
+                        },
+                    ],
                     action: [
                         {
                             text: 'Modify',
+                            icon: 'icon-edit',
                         },
                         {
                             text: 'Archive',
+                            icon: 'icon-trash',
                         },
                     ],
                 },
@@ -70,13 +86,21 @@ export default {
                     role: 'Checker',
                     date_segments: 'PK',
                     join_date: 'Jun 10, 2019 6:35 p.m.',
-                    status: 'Pending',
+                    status: [
+                        {
+                            cssClass: 'pending',
+                            icon: 'icon-loading',
+                            label: 'Pending',
+                        },
+                    ],
                     action: [
                         {
                             text: 'Modify',
+                            icon: 'icon-edit',
                         },
                         {
                             text: 'Archive',
+                            icon: 'icon-trash',
                         },
                     ],
                 },
@@ -86,13 +110,21 @@ export default {
                     role: 'Maker',
                     date_segments: 'PK',
                     join_date: 'Jun 9, 2019 6:35 p.m.',
-                    status: 'Active',
+                    status: [
+                        {
+                            cssClass: 'approved',
+                            icon: 'icon-check',
+                            label: 'Active',
+                        },
+                    ],
                     action: [
                         {
                             text: 'Modify',
+                            icon: 'icon-edit',
                         },
                         {
                             text: 'Archive',
+                            icon: 'icon-trash',
                         },
                     ],
                 },
@@ -102,13 +134,21 @@ export default {
                     role: 'Checker',
                     date_segments: 'UAE',
                     join_date: 'Jun 9, 2019 6:35 p.m.',
-                    status: 'Active',
+                    status: [
+                        {
+                            cssClass: 'approved',
+                            icon: 'icon-check',
+                            label: 'Active',
+                        },
+                    ],
                     action: [
                         {
                             text: 'Modify',
+                            icon: 'icon-edit',
                         },
                         {
                             text: 'Archive',
+                            icon: 'icon-trash',
                         },
                     ],
                 },
@@ -118,13 +158,21 @@ export default {
                     role: 'Maker',
                     date_segments: 'UAE',
                     join_date: 'Jun 9, 2019 6:35 p.m.',
-                    status: 'Active',
+                    status: [
+                        {
+                            cssClass: 'approved',
+                            icon: 'icon-check',
+                            label: 'Active',
+                        },
+                    ],
                     action: [
                         {
                             text: 'Modify',
+                            icon: 'icon-edit',
                         },
                         {
                             text: 'Archive',
+                            icon: 'icon-trash',
                         },
                     ],
                 },
@@ -134,13 +182,21 @@ export default {
                     role: 'Maker',
                     date_segments: 'UAE',
                     join_date: 'Jun 8, 2019 6:35 p.m.',
-                    status: 'Active',
+                    status: [
+                        {
+                            cssClass: 'approved',
+                            icon: 'icon-check',
+                            label: 'Active',
+                        },
+                    ],
                     action: [
                         {
                             text: 'Modify',
+                            icon: 'icon-edit',
                         },
                         {
-                            text: 'Archive',
+                            text: 'Modify',
+                            icon: 'icon-trash',
                         },
                     ],
                 },
@@ -150,13 +206,21 @@ export default {
                     role: 'Approver',
                     date_segments: 'UK',
                     join_date: 'Jun 8, 2019 6:35 p.m.',
-                    status: 'Active',
+                    status: [
+                        {
+                            cssClass: 'approved',
+                            icon: 'icon-check',
+                            label: 'Active',
+                        },
+                    ],
                     action: [
                         {
                             text: 'Modify',
+                            icon: 'icon-edit',
                         },
                         {
                             text: 'Archive',
+                            icon: 'icon-trash',
                         },
                     ],
                 },
@@ -166,13 +230,21 @@ export default {
                     role: 'Relationship Manager',
                     date_segments: 'UK',
                     join_date: 'Jun 9, 2019 6:35 p.m.',
-                    status: 'Active',
+                    status: [
+                        {
+                            cssClass: 'approved',
+                            icon: 'icon-check',
+                            label: 'Active',
+                        },
+                    ],
                     action: [
                         {
                             text: 'Modify',
+                            icon: 'icon-edit',
                         },
                         {
                             text: 'Archive',
+                            icon: 'icon-trash',
                         },
                     ],
                 },
@@ -182,13 +254,21 @@ export default {
                     role: 'Maker',
                     date_segments: 'PK',
                     join_date: 'Jun 7, 2019 6:35 p.m.',
-                    status: 'Archived',
+                    status: [
+                        {
+                            cssClass: 'rejected',
+                            icon: 'icon-wrong',
+                            label: 'Archived',
+                        },
+                    ],
                     action: [
                         {
                             text: 'Modify',
+                            icon: 'icon-edit',
                         },
                         {
-                            text: 'Archive',
+                            text: 'Activate',
+                            icon: 'icon-done',
                         },
                     ],
                 },
@@ -220,84 +300,140 @@ export default {
                 {
                     role_title: 'Super Admin',
                     associate_users: '2',
-                    status: 'locked',
+                    status: [
+                        {
+                            cssClass: 'locked',
+                            icon: 'icon-change-password',
+                            label: 'locked',
+                        },
+                    ],
                     action: [
                         {
                             text: 'Modify',
+                            icon: 'icon-edit',
+                            cssClass: 'disabled',
                         },
                         {
                             text: 'Archive',
+                            icon: 'icon-trash',
+                            cssClass: 'disabled',
                         },
                     ],
                 },
                 {
                     role_title: 'Maker',
                     associate_users: '5',
-                    status: 'locked',
+                    status: [
+                        {
+                            cssClass: 'locked',
+                            icon: 'icon-change-password',
+                            label: 'locked',
+                        },
+                    ],
                     action: [
                         {
                             text: 'Modify',
+                            icon: 'icon-edit',
+                            cssClass: 'disabled',
                         },
                         {
                             text: 'Archive',
+                            icon: 'icon-trash',
+                            cssClass: 'disabled',
                         },
                     ],
                 },
                 {
                     role_title: 'Checker',
                     associate_users: '3',
-                    status: 'locked',
+                    status: [
+                        {
+                            cssClass: 'locked',
+                            icon: 'icon-change-password',
+                            label: 'locked',
+                        },
+                    ],
                     action: [
                         {
                             text: 'Modify',
+                            icon: 'icon-edit',
+                            cssClass: 'disabled',
                         },
                         {
                             text: 'Archive',
+                            icon: 'icon-trash',
+                            cssClass: 'disabled',
                         },
                     ],
                 },
                 {
                     role_title: 'Approver',
                     associate_users: '2',
-                    status: 'locked',
+                    status: [
+                        {
+                            cssClass: 'locked',
+                            icon: 'icon-change-password',
+                            label: 'locked',
+                        },
+                    ],
                     action: [
                         {
                             text: 'Modify',
+                            icon: 'icon-edit',
+                            cssClass: 'disabled',
                         },
                         {
                             text: 'Archive',
+                            icon: 'icon-trash',
+                            cssClass: 'disabled',
                         },
                     ],
                 },
                 {
                     role_title: 'Relationship Manager',
                     associate_users: '3',
-                    status: 'active',
+                    status: [
+                        {
+                            cssClass: 'approved',
+                            icon: 'icon-check',
+                            label: 'Active',
+                        },
+                    ],
                     action: [
                         {
                             text: 'Modify',
+                            icon: 'icon-edit',
                         },
                         {
                             text: 'Archive',
+                            icon: 'icon-trash',
                         },
                     ],
                 },
                 {
                     role_title: 'System Analyst',
                     associate_users: '0',
-                    status: 'archived',
+                    status: [
+                        {
+                            cssClass: 'rejected',
+                            icon: 'icon-wrong',
+                            label: 'Archived',
+                        },
+                    ],
                     action: [
                         {
                             text: 'Modify',
+                            icon: 'icon-edit',
                         },
                         {
                             text: 'Activate',
+                            icon: 'icon-done',
                         },
                     ],
                 },
             ],
         },
-        branches: {
+        segments: {
             fields: [
                 {
                     key: 'branch_title',
@@ -322,52 +458,84 @@ export default {
                 {
                     branch_title: 'United Arab Emirates',
                     short_code: 'UAE',
-                    status: 'Active',
+                    status: [
+                        {
+                            cssClass: 'approved',
+                            icon: 'icon-check',
+                            label: 'Active',
+                        },
+                    ],
                     action: [
                         {
                             text: 'Modify',
+                            icon: 'icon-edit',
                         },
                         {
                             text: 'Archive',
+                            icon: 'icon-trash',
                         },
                     ],
                 },
                 {
                     branch_title: 'Pakistan',
                     short_code: 'PK',
-                    status: 'Active',
+                    status: [
+                        {
+                            cssClass: 'approved',
+                            icon: 'icon-check',
+                            label: 'Active',
+                        },
+                    ],
                     action: [
                         {
                             text: 'Modify',
+                            icon: 'icon-edit',
                         },
                         {
                             text: 'Archive',
+                            icon: 'icon-trash',
                         },
                     ],
                 },
                 {
                     branch_title: 'United Kingdom',
                     short_code: 'UK',
-                    status: 'Active',
+                    status: [
+                        {
+                            cssClass: 'approved',
+                            icon: 'icon-check',
+                            label: 'Active',
+                        },
+                    ],
                     action: [
                         {
                             text: 'Modify',
+                            icon: 'icon-edit',
                         },
                         {
                             text: 'Archive',
+                            icon: 'icon-trash',
                         },
                     ],
                 },
                 {
                     branch_title: 'United States of America',
                     short_code: 'USA',
-                    status: 'Archived',
+                    status: [
+                        {
+                            cssClass: 'rejected',
+                            icon: 'icon-wrong',
+                            label: 'Archived',
+                        },
+                    ],
                     action: [
                         {
                             text: 'Modify',
+                            icon: 'icon-edit',
                         },
                         {
                             text: 'Activate',
+                            icon: 'icon-done',
                         },
                     ],
                 },
@@ -397,52 +565,84 @@ export default {
                 {
                     application_title: 'Core Banking System',
                     branches: 'PK, UAE',
-                    status: 'Active',
+                    status: [
+                        {
+                            cssClass: 'approved',
+                            icon: 'icon-check',
+                            label: 'Active',
+                        },
+                    ],
                     action: [
                         {
                             text: 'Modify',
+                            icon: 'icon-edit',
                         },
                         {
                             text: 'Archive',
+                            icon: 'icon-trash',
                         },
                     ],
                 },
                 {
                     application_title: 'Financial Reporting System',
                     branches: 'PK',
-                    status: 'Active',
+                    status: [
+                        {
+                            cssClass: 'approved',
+                            icon: 'icon-check',
+                            label: 'Active',
+                        },
+                    ],
                     action: [
                         {
                             text: 'Modify',
+                            icon: 'icon-edit',
                         },
                         {
                             text: 'Archive',
+                            icon: 'icon-trash',
                         },
                     ],
                 },
                 {
                     application_title: 'Banking CRM',
                     branches: 'PK, UAE, UK',
-                    status: 'Active',
+                    status: [
+                        {
+                            cssClass: 'approved',
+                            icon: 'icon-check',
+                            label: 'Active',
+                        },
+                    ],
                     action: [
                         {
                             text: 'Modify',
+                            icon: 'icon-edit',
                         },
                         {
                             text: 'Archive',
+                            icon: 'icon-trash',
                         },
                     ],
                 },
                 {
                     application_title: 'Testing App',
                     branches: 'USA',
-                    status: 'Archived',
+                    status: [
+                        {
+                            cssClass: 'rejected',
+                            icon: 'icon-wrong',
+                            label: 'Archived',
+                        },
+                    ],
                     action: [
                         {
                             text: 'Modify',
+                            icon: 'icon-edit',
                         },
                         {
-                            text: 'Archive',
+                            text: 'Activate',
+                            icon: 'icon-done',
                         },
                     ],
                 },
