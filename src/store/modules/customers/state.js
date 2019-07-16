@@ -1,5 +1,5 @@
 export default {
-    profileData: {
+    customersData: {
         customers: {
             fields: [
                 {

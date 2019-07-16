@@ -128,7 +128,7 @@ export default {
     | Component > computed
     |--------------------------------------------------------------------------
     */
-    computed: { ...mapGetters(['profileData']) }, // End of Component > computed
+    computed: { ...mapGetters(['customersData']) }, // End of Component > computed
 
     /*
     |--------------------------------------------------------------------------
@@ -138,9 +138,9 @@ export default {
     methods: {
         initializeData() {
             //system log table
-            let tableFields = this.profileData.customers.fields //get user data from store
+            let tableFields = this.customersData.customers.fields //get user data from store
             this.fields = tableFields //push data into array
-            let tableItems = this.profileData.customers.items //get user data from store
+            let tableItems = this.customersData.customers.items //get user data from store
             this.items = tableItems //push data into array
         },
     }, // End of Component > methods

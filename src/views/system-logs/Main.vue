@@ -1,7 +1,6 @@
 <template>
     <div class="dashboard">
         <div class="content-area">
-            <base-header :menuListing="menuListing"></base-header>
             <div class="right-panel">
                 <div class="wrap-content">
                     <div class="filter-section">
@@ -169,7 +168,7 @@ export default {
     |--------------------------------------------------------------------------
     */
     computed: {
-        ...mapGetters(['logsTotalActions', 'systemLogsTable']),
+        ...mapGetters(['systemLogsData', 'logsTotalActions']),
     }, // End of Component > computed
 
     /*
@@ -180,14 +179,14 @@ export default {
     methods: {
         initializeData() {
             //alerts by type  data
-            let logsTotalActions = this.logsTotalActions
+            let logsTotalActions = this.systemLogsData.totalActions
             window.AmCharts.makeChart('logs-total-actions', logsTotalActions)
 
             //system log table
-            let logsTableFields = this.systemLogsTable.fields //get user data from store
-            this.fields = logsTableFields //push data into array
-            let logsTableItems = this.systemLogsTable.items //get user data from store
-            this.items = logsTableItems //push data into array
+            let tableFields = this.systemLogsData.logs.fields //get user data from store
+            this.fields = tableFields //push data into array
+            let tableItems = this.systemLogsData.logs.items //get user data from store
+            this.items = tableItems //push data into array
         },
     }, // End of Component > methods
 

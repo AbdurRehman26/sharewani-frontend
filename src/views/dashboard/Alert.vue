@@ -174,11 +174,10 @@ export default {
     methods: {
         initializeData() {
             //system log table
-            let dashboardAlertsTableFields = this.dashboardData.alertsTable
-                .fields //get user data from store
-            this.fields = dashboardAlertsTableFields //push data into array
-            let dashboardAlertsTableItems = this.dashboardData.alertsTable.items //get user data from store
-            this.items = dashboardAlertsTableItems //push data into array
+            let tableFields = this.dashboardData.alertsTable.fields //get user data from store
+            this.fields = tableFields //push data into array
+            let tableItems = this.dashboardData.alertsTable.items //get user data from store
+            this.items = tableItems //push data into array
         },
     }, // End of Component > methods
 
