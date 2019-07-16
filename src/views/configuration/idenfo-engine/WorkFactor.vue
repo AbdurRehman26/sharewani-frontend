@@ -18,7 +18,10 @@
                             >
                         </li>
                         <li>
-                            <b-button type="button" variant="secondary"
+                            <b-button
+                                type="button"
+                                variant="secondary"
+                                v-b-modal.add-country
                                 >+ Add Work Type</b-button
                             >
                         </li>
@@ -36,15 +39,19 @@
             </b-table>
         </div>
         <pagination></pagination>
+        <add-country></add-country>
     </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
 import pagination from '@/components/Pagination.vue'
+import addCountry from '@/components/popups/AddCountryPopup.vue'
+
 export default {
     components: {
         pagination,
+        addCountry,
     },
 
     /*

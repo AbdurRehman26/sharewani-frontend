@@ -123,10 +123,10 @@
 <script>
 import customerInformation from '@/components/CustomerInfo.vue'
 import documentsSubmitted from '@/components/DocumentsSubmitted.vue'
-import kycStatusReview from '@/components/popups/KYCStatusReview.vue'
-import cancelReviewProcess from '@/components/popups/CancelReviewProcess.vue'
-import overwriteResult from '@/components/popups/OverwriteResult.vue'
-import documentPreview from '@/components/popups/DocumentPreview.vue'
+import kycStatusReview from '@/components/popups/KYCStatusReviewPopup.vue'
+import cancelReviewProcess from '@/components/popups/CancelReviewProcessPopup.vue'
+import overwriteResult from '@/components/popups/OverwriteResultPopup.vue'
+import documentPreview from '@/components/popups/DocumentPreviewPopup.vue'
 
 export default {
     components: {

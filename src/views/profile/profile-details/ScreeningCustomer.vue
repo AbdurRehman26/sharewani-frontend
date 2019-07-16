@@ -198,9 +198,9 @@
 </template>
 <script>
 import customerInformation from '@/components/CustomerInfo.vue'
-import kycStatusReview from '@/components/popups/KYCStatusReview.vue'
-import cancelReviewProcess from '@/components/popups/CancelReviewProcess.vue'
-import screeningDetail from '@/components/popups/ScreeningDetail.vue'
+import kycStatusReview from '@/components/popups/KYCStatusReviewPopup.vue'
+import cancelReviewProcess from '@/components/popups/CancelReviewProcessPopup.vue'
+import screeningDetail from '@/components/popups/ScreeningDetailPopup.vue'
 
 export default {
     components: {

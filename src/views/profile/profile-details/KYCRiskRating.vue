@@ -102,8 +102,8 @@
 </template>
 <script>
 import customerInformation from '@/components/CustomerInfo.vue'
-import kycStatusReview from '@/components/popups/KYCStatusReview.vue'
-import cancelReviewProcess from '@/components/popups/CancelReviewProcess.vue'
+import kycStatusReview from '@/components/popups/KYCStatusReviewPopup.vue'
+import cancelReviewProcess from '@/components/popups/CancelReviewProcessPopup.vue'
 export default {
     components: {
         customerInformation,
