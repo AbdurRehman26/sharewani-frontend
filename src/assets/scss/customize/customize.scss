@@ -869,6 +869,13 @@
             font-family: $font_medium;
         }
     }
+
+    h5 {
+        font-size: 0.875rem;
+        font-family: $font_medium;
+        color: $body-color;
+        margin-bottom: 10px;
+    }
 }
 
 .kyc-status-radio {

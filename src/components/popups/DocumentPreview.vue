@@ -1,14 +1,14 @@
 <template>
-    <div>
+    <div class="upload-video-modal">
         <b-modal
             id="document-preview"
             title="Document Preview"
             size="md"
+            ok-only
             okTitle="Close"
-            cancelTitle=""
-            cancelVariant="link"
+            okVariant="primary"
         >
-            <label>Recorded Video</label>
+            <h5>Recorded Video</h5>
 
             <div class="document-preview-section">
                 <iframe
