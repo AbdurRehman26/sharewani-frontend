@@ -1,11 +1,11 @@
 <template>
     <div>
-        <span
-            class="approved status-view"
-            v-if="statusType == 'active' || statusType == 'Active'"
-        >
-            <i class="icon-check"></i> <span>Active</span>
-        </span>
+        <div v-for="(list, index) in statusType" :key="index">
+            <span class="status-view" :class="list.cssClass">
+                <i :class="list.icon"></i> <span>{{ list.label }}</span>
+            </span>
+        </div>
+        <!-- 
         <span
             class="locked status-view"
             v-if="statusType == 'locked' || statusType == 'Locked'"
@@ -54,7 +54,7 @@
             v-if="statusType == 'low risk' || statusType == 'Low Risk'"
         >
             <i class="icon-low-risk"></i> <span>Low Risk</span>
-        </span>
+        </span> -->
     </div>
 </template>
 
@@ -77,7 +77,7 @@ export default {
             default: 'add',
         },
         statusType: {
-            type: String,
+            type: Array,
             default: null,
         },
     }, // End of Component > props

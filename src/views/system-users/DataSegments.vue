@@ -98,9 +98,9 @@ export default {
     methods: {
         initializeData() {
             //system log table
-            let tableFields = this.systemUsersData.branches.fields //get user data from store
+            let tableFields = this.systemUsersData.segments.fields //get user data from store
             this.fields = tableFields //push data into array
-            let tableItems = this.systemUsersData.branches.items //get user data from store
+            let tableItems = this.systemUsersData.segments.items //get user data from store
             this.items = tableItems //push data into array
         },
     }, // End of Component > methods

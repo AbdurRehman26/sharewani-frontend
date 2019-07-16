@@ -33,7 +33,6 @@
         <div class="table-section">
             <b-table :items="items" :fields="fields" class="user-roles-table">
                 <!-- status slot -->
-                <!-- status slot -->
                 <template slot="status" slot-scope="data">
                     <base-status :statusType="data.value"></base-status>
                 </template>
