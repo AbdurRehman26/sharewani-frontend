@@ -62,7 +62,7 @@ export default {
     |--------------------------------------------------------------------------
     */
     computed: {
-        ...mapGetters(['configuration']),
+        ...mapGetters(['configurationData']),
     }, // End of Component > computed
 
     /*
@@ -73,10 +73,10 @@ export default {
     methods: {
         initializeData() {
             //system log table
-            let screenScoreFactorFields = this.configuration.idenfoEngine
+            let screenScoreFactorFields = this.configurationData.idenfoEngine
                 .screenScoreFactor.fields //get user data from store
             this.fields = screenScoreFactorFields //push data into array
-            let screenScoreFactorItems = this.configuration.idenfoEngine
+            let screenScoreFactorItems = this.configurationData.idenfoEngine
                 .screenScoreFactor.items //get user data from store
             this.items = screenScoreFactorItems //push data into array
         },

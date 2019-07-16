@@ -71,7 +71,7 @@ export default {
     |--------------------------------------------------------------------------
     */
     computed: {
-        ...mapGetters(['configuration']),
+        ...mapGetters(['configurationData']),
     }, // End of Component > computed
 
     /*
@@ -82,11 +82,11 @@ export default {
     methods: {
         initializeData() {
             //system log table
-            let configTableFields = this.configuration.idenfoEngine.riskRating
-                .fields //get user data from store
+            let configTableFields = this.configurationData.idenfoEngine
+                .riskRating.fields //get user data from store
             this.fields = configTableFields //push data into array
-            let configTableItems = this.configuration.idenfoEngine.riskRating
-                .items //get user data from store
+            let configTableItems = this.configurationData.idenfoEngine
+                .riskRating.items //get user data from store
             this.items = configTableItems //push data into array
         },
     }, // End of Component > methods

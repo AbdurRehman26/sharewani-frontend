@@ -6,6 +6,7 @@ import dashboard from './modules/dashboard/'
 import customers from './modules/customers/'
 import systemsUsers from './modules/system-users/'
 import systemLogs from './modules/system-logs/'
+import configuration from './modules/configuration/'
 
 Vue.use(Vuex)
 
@@ -19,6 +20,7 @@ export default new Vuex.Store({
         customers,
         systemsUsers,
         systemLogs,
+        configuration,
     },
     strict: debug,
 })

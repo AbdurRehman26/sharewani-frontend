@@ -62,7 +62,7 @@ export default {
     |--------------------------------------------------------------------------
     */
     computed: {
-        ...mapGetters(['configuration']),
+        ...mapGetters(['configurationData']),
     }, // End of Component > computed
 
     /*
@@ -73,10 +73,10 @@ export default {
     methods: {
         initializeData() {
             //system log table
-            let documentVerificationFields = this.configuration.idenfoEngine
+            let documentVerificationFields = this.configurationData.idenfoEngine
                 .documentVerification.fields //get user data from store
             this.fields = documentVerificationFields //push data into array
-            let documentVerificationItems = this.configuration.idenfoEngine
+            let documentVerificationItems = this.configurationData.idenfoEngine
                 .documentVerification.items //get user data from store
             this.items = documentVerificationItems //push data into array
         },

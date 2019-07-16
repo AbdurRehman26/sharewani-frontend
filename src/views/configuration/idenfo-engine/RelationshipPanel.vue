@@ -90,7 +90,7 @@ export default {
     |--------------------------------------------------------------------------
     */
     computed: {
-        ...mapGetters(['configuration']),
+        ...mapGetters(['configurationData']),
     }, // End of Component > computed
 
     /*
@@ -101,10 +101,10 @@ export default {
     methods: {
         initializeData() {
             //system log table
-            let configTableFields = this.configuration.idenfoEngine
+            let configTableFields = this.configurationData.idenfoEngine
                 .relationshipData.fields //get user data from store
             this.fields = configTableFields //push data into array
-            let configTableItems = this.configuration.idenfoEngine
+            let configTableItems = this.configurationData.idenfoEngine
                 .relationshipData.items //get user data from store
             this.items = configTableItems //push data into array
         },
