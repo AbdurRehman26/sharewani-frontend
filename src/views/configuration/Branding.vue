@@ -34,7 +34,7 @@
                                             </b-form-group>
                                         </div>
                                         <div class="col-lg-3">
-                                            <div class="brand-logo">
+                                            <div class="brand-logo light">
                                                 <img :src="logoOne" />
                                             </div>
                                         </div>
@@ -53,7 +53,7 @@
                                             </b-form-group>
                                         </div>
                                         <div class="col-lg-3">
-                                            <div class="brand-logo">
+                                            <div class="brand-logo dark">
                                                 <img :src="logoTwo" />
                                             </div>
                                         </div>

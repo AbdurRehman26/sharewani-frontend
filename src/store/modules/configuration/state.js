@@ -31,7 +31,13 @@ export default {
                     {
                         countrycode: 'AF',
                         countrytitle: 'Afghanistan',
-                        rating: 'High Risk',
+                        rating: [
+                            {
+                                icon: 'icon-high-risk',
+                                label: 'High Risk',
+                                cssClass: 'high-risk',
+                            },
+                        ],
                         isSanction: 'No',
                         action: [
                             {
@@ -47,7 +53,13 @@ export default {
                     {
                         countrycode: 'AX',
                         countrytitle: 'Aland Islands',
-                        rating: 'High Risk',
+                        rating: [
+                            {
+                                icon: 'icon-high-risk',
+                                label: 'High Risk',
+                                cssClass: 'high-risk',
+                            },
+                        ],
                         isSanction: 'No',
                         action: [
                             {
@@ -63,7 +75,13 @@ export default {
                     {
                         countrycode: 'AL',
                         countrytitle: 'Albania',
-                        rating: 'High Risk',
+                        rating: [
+                            {
+                                icon: 'icon-high-risk',
+                                label: 'High Risk',
+                                cssClass: 'high-risk',
+                            },
+                        ],
                         isSanction: 'No',
                         action: [
                             {
@@ -79,7 +97,13 @@ export default {
                     {
                         countrycode: 'DZ',
                         countrytitle: 'Algeria',
-                        rating: 'High Risk',
+                        rating: [
+                            {
+                                icon: 'icon-high-risk',
+                                label: 'High Risk',
+                                cssClass: 'high-risk',
+                            },
+                        ],
                         isSanction: 'No',
                         action: [
                             {
@@ -95,7 +119,13 @@ export default {
                     {
                         countrycode: 'AS',
                         countrytitle: 'American Samoa',
-                        rating: 'High Risk',
+                        rating: [
+                            {
+                                icon: 'icon-high-risk',
+                                label: 'High Risk',
+                                cssClass: 'high-risk',
+                            },
+                        ],
                         isSanction: 'No',
                         action: [
                             {
@@ -111,7 +141,13 @@ export default {
                     {
                         countrycode: 'AD',
                         countrytitle: 'Andorra',
-                        rating: 'High Risk',
+                        rating: [
+                            {
+                                icon: 'icon-high-risk',
+                                label: 'High Risk',
+                                cssClass: 'high-risk',
+                            },
+                        ],
                         isSanction: 'No',
                         action: [
                             {
@@ -127,7 +163,13 @@ export default {
                     {
                         countrycode: 'AO',
                         countrytitle: 'Angola',
-                        rating: 'High Risk',
+                        rating: [
+                            {
+                                icon: 'icon-high-risk',
+                                label: 'High Risk',
+                                cssClass: 'high-risk',
+                            },
+                        ],
                         isSanction: 'No',
                         action: [
                             {
@@ -143,7 +185,13 @@ export default {
                     {
                         countrycode: 'AI',
                         countrytitle: 'Anguilla',
-                        rating: 'High Risk',
+                        rating: [
+                            {
+                                icon: 'icon-high-risk',
+                                label: 'High Risk',
+                                cssClass: 'high-risk',
+                            },
+                        ],
                         isSanction: 'No',
                         action: [
                             {
@@ -159,7 +207,13 @@ export default {
                     {
                         countrycode: 'AQ',
                         countrytitle: 'Antarctica',
-                        rating: 'High Risk',
+                        rating: [
+                            {
+                                icon: 'icon-high-risk',
+                                label: 'High Risk',
+                                cssClass: 'high-risk',
+                            },
+                        ],
                         isSanction: 'No',
                         action: [
                             {
@@ -175,7 +229,13 @@ export default {
                     {
                         countrycode: 'AG',
                         countrytitle: 'Antigua and Barbuda',
-                        rating: 'High Risk',
+                        rating: [
+                            {
+                                icon: 'icon-high-risk',
+                                label: 'High Risk',
+                                cssClass: 'high-risk',
+                            },
+                        ],
                         isSanction: 'No',
                         action: [
                             {
@@ -512,7 +572,13 @@ export default {
                     {
                         productCode: 1501,
                         productIndustry: 'Virtual Currency Wallet',
-                        rating: 'High Risk',
+                        rating: [
+                            {
+                                icon: 'icon-high-risk',
+                                label: 'High Risk',
+                                cssClass: 'high-risk',
+                            },
+                        ],
                         action: [
                             {
                                 text: 'Modify',
@@ -527,7 +593,13 @@ export default {
                     {
                         productCode: 1502,
                         productIndustry: 'Virtual Currency Exchange',
-                        rating: 'High Risk',
+                        rating: [
+                            {
+                                icon: 'icon-high-risk',
+                                label: 'High Risk',
+                                cssClass: 'high-risk',
+                            },
+                        ],
                         action: [
                             {
                                 text: 'Modify',
@@ -542,7 +614,13 @@ export default {
                     {
                         productCode: 1503,
                         productIndustry: 'Current Account',
-                        rating: 'High Risk',
+                        rating: [
+                            {
+                                icon: 'icon-high-risk',
+                                label: 'High Risk',
+                                cssClass: 'high-risk',
+                            },
+                        ],
                         action: [
                             {
                                 text: 'Modify',
@@ -557,7 +635,13 @@ export default {
                     {
                         productCode: 1504,
                         productIndustry: 'Saving Account',
-                        rating: 'High Risk',
+                        rating: [
+                            {
+                                icon: 'icon-high-risk',
+                                label: 'High Risk',
+                                cssClass: 'high-risk',
+                            },
+                        ],
                         action: [
                             {
                                 text: 'Modify',
@@ -572,7 +656,13 @@ export default {
                     {
                         productCode: 1505,
                         productIndustry: 'Credit Card',
-                        rating: 'Medium Risk',
+                        rating: [
+                            {
+                                icon: 'icon-medium-risk',
+                                label: 'Medium Risk',
+                                cssClass: 'medium-risk',
+                            },
+                        ],
                         action: [
                             {
                                 text: 'Modify',
@@ -587,7 +677,13 @@ export default {
                     {
                         productCode: 1506,
                         productIndustry: 'Short Term Loan',
-                        rating: 'Medium Risk',
+                        rating: [
+                            {
+                                icon: 'icon-medium-risk',
+                                label: 'Medium Risk',
+                                cssClass: 'medium-risk',
+                            },
+                        ],
                         action: [
                             {
                                 text: 'Modify',
@@ -602,7 +698,13 @@ export default {
                     {
                         productCode: 1507,
                         productIndustry: 'Financial Investment',
-                        rating: 'High Risk',
+                        rating: [
+                            {
+                                icon: 'icon-high-risk',
+                                label: 'High Risk',
+                                cssClass: 'high-risk',
+                            },
+                        ],
                         action: [
                             {
                                 text: 'Modify',
@@ -643,7 +745,13 @@ export default {
                     {
                         stateCode: 1,
                         stateTitle: 'Sindh',
-                        rating: 'Medium Risk',
+                        rating: [
+                            {
+                                icon: 'icon-medium-risk',
+                                label: 'Medium Risk',
+                                cssClass: 'medium-risk',
+                            },
+                        ],
                         action: [
                             {
                                 text: 'Modify',
@@ -658,7 +766,13 @@ export default {
                     {
                         stateCode: 2,
                         stateTitle: 'Punjab',
-                        rating: 'Medium Risk',
+                        rating: [
+                            {
+                                icon: 'icon-medium-risk',
+                                label: 'Medium Risk',
+                                cssClass: 'medium-risk',
+                            },
+                        ],
                         action: [
                             {
                                 text: 'Modify',
@@ -673,7 +787,13 @@ export default {
                     {
                         stateCode: 3,
                         stateTitle: 'Khyber Pakhtunkhwa',
-                        rating: 'Low Risk',
+                        rating: [
+                            {
+                                icon: 'icon-low-risk',
+                                label: 'Low Risk',
+                                cssClass: 'low-risk',
+                            },
+                        ],
                         action: [
                             {
                                 text: 'Modify',
@@ -688,7 +808,13 @@ export default {
                     {
                         stateCode: 4,
                         stateTitle: 'Balochistan',
-                        rating: 'High Risk',
+                        rating: [
+                            {
+                                icon: 'icon-high-risk',
+                                label: 'High Risk',
+                                cssClass: 'high-risk',
+                            },
+                        ],
                         action: [
                             {
                                 text: 'Modify',
@@ -703,7 +829,13 @@ export default {
                     {
                         stateCode: 5,
                         stateTitle: 'Gilgit Baltistan',
-                        rating: 'High Risk',
+                        rating: [
+                            {
+                                icon: 'icon-high-risk',
+                                label: 'High Risk',
+                                cssClass: 'high-risk',
+                            },
+                        ],
                         action: [
                             {
                                 text: 'Modify',
@@ -743,7 +875,13 @@ export default {
                     {
                         rule: '0 Months to 24 Months',
                         relationshipLength: 'Less than 24 months',
-                        rating: 'High Risk',
+                        rating: [
+                            {
+                                icon: 'icon-high-risk',
+                                label: 'High Risk',
+                                cssClass: 'high-risk',
+                            },
+                        ],
                         action: [
                             {
                                 text: 'Modify',
@@ -758,7 +896,13 @@ export default {
                     {
                         rule: '24 Months to 48 Months',
                         relationshipLength: 'Between 24 months to 48 months',
-                        rating: 'Medium Risk',
+                        rating: [
+                            {
+                                icon: 'icon-medium-risk',
+                                label: 'Medium Risk',
+                                cssClass: 'medium-risk',
+                            },
+                        ],
                         action: [
                             {
                                 text: 'Modify',
@@ -773,7 +917,13 @@ export default {
                     {
                         rule: '48 Months to 1000 Months',
                         relationshipLength: 'More than 48 months',
-                        rating: 'Low Risk',
+                        rating: [
+                            {
+                                icon: 'icon-low-risk',
+                                label: 'Low Risk',
+                                cssClass: 'low-risk',
+                            },
+                        ],
                         action: [
                             {
                                 text: 'Modify',
@@ -813,7 +963,13 @@ export default {
                     {
                         chanelTypeCode: 'F2F',
                         chanelTypeTitle: 'Face to Face',
-                        rating: 'Low Risk',
+                        rating: [
+                            {
+                                icon: 'icon-low-risk',
+                                label: 'Low Risk',
+                                cssClass: 'low-risk',
+                            },
+                        ],
                         action: [
                             {
                                 text: 'Modify',
@@ -824,7 +980,13 @@ export default {
                     {
                         chanelTypeCode: 'NF2F',
                         chanelTypeTitle: 'Non Face to Face',
-                        rating: 'High Risk',
+                        rating: [
+                            {
+                                icon: 'icon-high-risk',
+                                label: 'High Risk',
+                                cssClass: 'high-risk',
+                            },
+                        ],
                         action: [
                             {
                                 text: 'Modify',
@@ -1041,7 +1203,13 @@ export default {
                 items: [
                     {
                         pointscore: '0 to 40 Points',
-                        rating: 'Low Risk',
+                        rating: [
+                            {
+                                icon: 'icon-low-risk',
+                                label: 'Low Risk',
+                                cssClass: 'low-risk',
+                            },
+                        ],
                         reviewperiod: '6 Years',
                         alert: 'No',
                         action: [
@@ -1053,7 +1221,13 @@ export default {
                     },
                     {
                         pointscore: '41 to 69 Points',
-                        rating: 'Medium Risk',
+                        rating: [
+                            {
+                                icon: 'icon-medium-risk',
+                                label: 'Medium Risk',
+                                cssClass: 'medium-risk',
+                            },
+                        ],
                         reviewperiod: '3 Years',
                         alert: 'No',
                         action: [
@@ -1065,7 +1239,13 @@ export default {
                     },
                     {
                         pointscore: '70 to 100 Points',
-                        rating: 'High Risk',
+                        rating: [
+                            {
+                                icon: 'icon-high-risk',
+                                label: 'High Risk',
+                                cssClass: 'high-risk',
+                            },
+                        ],
                         reviewperiod: '1 Year',
                         alert: 'Yes',
                         action: [
@@ -1077,7 +1257,13 @@ export default {
                     },
                     {
                         pointscore: 'PEP Hit',
-                        rating: 'High Risk',
+                        rating: [
+                            {
+                                icon: 'icon-high-risk',
+                                label: 'High Risk',
+                                cssClass: 'high-risk',
+                            },
+                        ],
                         reviewperiod: 'Rejected',
                         alert: 'Yes',
                         action: [
@@ -1089,7 +1275,13 @@ export default {
                     },
                     {
                         pointscore: 'Enforcement Hit',
-                        rating: 'High Risk',
+                        rating: [
+                            {
+                                icon: 'icon-high-risk',
+                                label: 'High Risk',
+                                cssClass: 'high-risk',
+                            },
+                        ],
                         reviewperiod: 'Rejected',
                         alert: 'Yes',
                         action: [
@@ -1101,7 +1293,13 @@ export default {
                     },
                     {
                         pointscore: 'Client Blacklist Hit',
-                        rating: 'High Risk',
+                        rating: [
+                            {
+                                icon: 'icon-high-risk',
+                                label: 'High Risk',
+                                cssClass: 'high-risk',
+                            },
+                        ],
                         reviewperiod: 'Rejected',
                         alert: 'Yes',
                         action: [
@@ -1113,7 +1311,13 @@ export default {
                     },
                     {
                         pointscore: 'Sanction Hit',
-                        rating: 'High Risk',
+                        rating: [
+                            {
+                                icon: 'icon-high-risk',
+                                label: 'High Risk',
+                                cssClass: 'high-risk',
+                            },
+                        ],
                         reviewperiod: 'Rejected',
                         alert: 'Yes',
                         action: [
@@ -1125,7 +1329,13 @@ export default {
                     },
                     {
                         pointscore: 'Document Verification Mismatch ',
-                        rating: 'High Risk',
+                        rating: [
+                            {
+                                icon: 'icon-high-risk',
+                                label: 'High Risk',
+                                cssClass: 'high-risk',
+                            },
+                        ],
                         reviewperiod: 'Rejected',
                         alert: 'Yes',
                         action: [
@@ -1137,7 +1347,13 @@ export default {
                     },
                     {
                         pointscore: 'If Residence Country is Sanctioned',
-                        rating: 'High Risk',
+                        rating: [
+                            {
+                                icon: 'icon-high-risk',
+                                label: 'High Risk',
+                                cssClass: 'high-risk',
+                            },
+                        ],
                         reviewperiod: 'Rejected',
                         alert: 'Yes',
                         action: [
@@ -1150,7 +1366,13 @@ export default {
 
                     {
                         pointscore: 'If Nationality Country is Sanctioned',
-                        rating: 'High Risk',
+                        rating: [
+                            {
+                                icon: 'icon-high-risk',
+                                label: 'High Risk',
+                                cssClass: 'high-risk',
+                            },
+                        ],
                         reviewperiod: 'Rejected',
                         alert: 'Yes',
                         action: [
@@ -1162,7 +1384,13 @@ export default {
                     },
                     {
                         pointscore: 'If Contact No. Code Country is Sanctioned',
-                        rating: 'High Risk',
+                        rating: [
+                            {
+                                icon: 'icon-high-risk',
+                                label: 'High Risk',
+                                cssClass: 'high-risk',
+                            },
+                        ],
                         reviewperiod: 'Rejected',
                         alert: 'Yes',
                         action: [

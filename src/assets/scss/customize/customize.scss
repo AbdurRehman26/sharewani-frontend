@@ -670,10 +670,18 @@
             }
         }
         .brand-logo {
-            height: 70px;
+            height: 43px;
+            border-radius: 7px;
+            margin-top: 21px;
             img {
                 height: 100%;
                 margin: auto;
+            }
+            &.light {
+                background-color: #f2f2f6;
+            }
+            &.dark {
+                background-color: #1b1b1e;
             }
         }
     }
