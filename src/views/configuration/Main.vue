@@ -49,6 +49,10 @@ export default {
                     anchorLink: '/configuration/form-builder/',
                     menuLabel: 'Registration Form Builder',
                 },
+                {
+                    anchorLink: '/configuration/manual-review/',
+                    menuLabel: 'Manual Review Switch',
+                },
             ],
         }
     }, // End of Component > data

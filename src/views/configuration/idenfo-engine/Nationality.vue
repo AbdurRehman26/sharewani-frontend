@@ -32,20 +32,7 @@
 
                 <template slot="action" slot-scope="data">
                     <div class="action-review">
-                        <a
-                            href="/"
-                            v-for="(list, index) in data.value"
-                            :key="index"
-                        >
-                            <div v-if="list.text === 'Modify'">
-                                <i class="icon-edit"></i>
-                                <span>{{ list.text }}</span>
-                            </div>
-                            <div v-if="list.text === 'Archive'">
-                                <i class="icon-trash"></i>
-                                <span>{{ list.text }}</span>
-                            </div>
-                        </a>
+                        <base-action :actionType="data.value"> </base-action>
                     </div>
                 </template>
             </b-table>

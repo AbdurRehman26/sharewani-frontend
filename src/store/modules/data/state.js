@@ -1128,9 +1128,11 @@ export default {
                         action: [
                             {
                                 text: 'Modify',
+                                icon: 'icon-edit',
                             },
                             {
                                 text: 'Archive',
+                                icon: 'icon-trash',
                             },
                         ],
                     },
@@ -1142,9 +1144,11 @@ export default {
                         action: [
                             {
                                 text: 'Modify',
+                                icon: 'icon-edit',
                             },
                             {
                                 text: 'Archive',
+                                icon: 'icon-trash',
                             },
                         ],
                     },
@@ -1156,9 +1160,11 @@ export default {
                         action: [
                             {
                                 text: 'Modify',
+                                icon: 'icon-edit',
                             },
                             {
                                 text: 'Archive',
+                                icon: 'icon-trash',
                             },
                         ],
                     },
@@ -1170,9 +1176,11 @@ export default {
                         action: [
                             {
                                 text: 'Modify',
+                                icon: 'icon-edit',
                             },
                             {
                                 text: 'Archive',
+                                icon: 'icon-trash',
                             },
                         ],
                     },
@@ -1184,9 +1192,11 @@ export default {
                         action: [
                             {
                                 text: 'Modify',
+                                icon: 'icon-edit',
                             },
                             {
                                 text: 'Archive',
+                                icon: 'icon-trash',
                             },
                         ],
                     },
@@ -1198,9 +1208,11 @@ export default {
                         action: [
                             {
                                 text: 'Modify',
+                                icon: 'icon-edit',
                             },
                             {
                                 text: 'Archive',
+                                icon: 'icon-trash',
                             },
                         ],
                     },
@@ -1212,9 +1224,11 @@ export default {
                         action: [
                             {
                                 text: 'Modify',
+                                icon: 'icon-edit',
                             },
                             {
                                 text: 'Archive',
+                                icon: 'icon-trash',
                             },
                         ],
                     },
@@ -1226,9 +1240,11 @@ export default {
                         action: [
                             {
                                 text: 'Modify',
+                                icon: 'icon-edit',
                             },
                             {
                                 text: 'Archive',
+                                icon: 'icon-trash',
                             },
                         ],
                     },
@@ -1240,9 +1256,11 @@ export default {
                         action: [
                             {
                                 text: 'Modify',
+                                icon: 'icon-edit',
                             },
                             {
                                 text: 'Archive',
+                                icon: 'icon-trash',
                             },
                         ],
                     },
@@ -1254,9 +1272,11 @@ export default {
                         action: [
                             {
                                 text: 'Modify',
+                                icon: 'icon-edit',
                             },
                             {
                                 text: 'Archive',
+                                icon: 'icon-trash',
                             },
                         ],
                     },
@@ -1285,9 +1305,11 @@ export default {
                         action: [
                             {
                                 text: 'Modify',
+                                icon: 'icon-edit',
                             },
                             {
                                 text: 'Archive',
+                                icon: 'icon-trash',
                             },
                         ],
                     },
@@ -1297,9 +1319,11 @@ export default {
                         action: [
                             {
                                 text: 'Modify',
+                                icon: 'icon-edit',
                             },
                             {
                                 text: 'Archive',
+                                icon: 'icon-trash',
                             },
                         ],
                     },
@@ -1309,9 +1333,11 @@ export default {
                         action: [
                             {
                                 text: 'Modify',
+                                icon: 'icon-edit',
                             },
                             {
                                 text: 'Archive',
+                                icon: 'icon-trash',
                             },
                         ],
                     },
@@ -1321,9 +1347,11 @@ export default {
                         action: [
                             {
                                 text: 'Modify',
+                                icon: 'icon-edit',
                             },
                             {
                                 text: 'Archive',
+                                icon: 'icon-trash',
                             },
                         ],
                     },
@@ -1333,9 +1361,11 @@ export default {
                         action: [
                             {
                                 text: 'Modify',
+                                icon: 'icon-edit',
                             },
                             {
                                 text: 'Archive',
+                                icon: 'icon-trash',
                             },
                         ],
                     },
@@ -1345,9 +1375,11 @@ export default {
                         action: [
                             {
                                 text: 'Modify',
+                                icon: 'icon-edit',
                             },
                             {
                                 text: 'Archive',
+                                icon: 'icon-trash',
                             },
                         ],
                     },
@@ -1357,9 +1389,11 @@ export default {
                         action: [
                             {
                                 text: 'Modify',
+                                icon: 'icon-edit',
                             },
                             {
                                 text: 'Archive',
+                                icon: 'icon-trash',
                             },
                         ],
                     },
@@ -1394,9 +1428,11 @@ export default {
                         action: [
                             {
                                 text: 'Modify',
+                                icon: 'icon-edit',
                             },
                             {
                                 text: 'Archive',
+                                icon: 'icon-trash',
                             },
                         ],
                     },
@@ -1407,9 +1443,11 @@ export default {
                         action: [
                             {
                                 text: 'Modify',
+                                icon: 'icon-edit',
                             },
                             {
                                 text: 'Archive',
+                                icon: 'icon-trash',
                             },
                         ],
                     },
@@ -1420,9 +1458,11 @@ export default {
                         action: [
                             {
                                 text: 'Modify',
+                                icon: 'icon-edit',
                             },
                             {
                                 text: 'Archive',
+                                icon: 'icon-trash',
                             },
                         ],
                     },
@@ -1434,9 +1474,11 @@ export default {
                         action: [
                             {
                                 text: 'Modify',
+                                icon: 'icon-edit',
                             },
                             {
                                 text: 'Archive',
+                                icon: 'icon-trash',
                             },
                         ],
                     },
@@ -1448,9 +1490,11 @@ export default {
                         action: [
                             {
                                 text: 'Modify',
+                                icon: 'icon-edit',
                             },
                             {
                                 text: 'Archive',
+                                icon: 'icon-trash',
                             },
                         ],
                     },
@@ -1461,9 +1505,11 @@ export default {
                         action: [
                             {
                                 text: 'Modify',
+                                icon: 'icon-edit',
                             },
                             {
                                 text: 'Archive',
+                                icon: 'icon-trash',
                             },
                         ],
                     },
@@ -1475,9 +1521,11 @@ export default {
                         action: [
                             {
                                 text: 'Modify',
+                                icon: 'icon-edit',
                             },
                             {
                                 text: 'Archive',
+                                icon: 'icon-trash',
                             },
                         ],
                     },
@@ -1488,9 +1536,11 @@ export default {
                         action: [
                             {
                                 text: 'Modify',
+                                icon: 'icon-edit',
                             },
                             {
                                 text: 'Archive',
+                                icon: 'icon-trash',
                             },
                         ],
                     },
@@ -1502,9 +1552,11 @@ export default {
                         action: [
                             {
                                 text: 'Modify',
+                                icon: 'icon-edit',
                             },
                             {
                                 text: 'Archive',
+                                icon: 'icon-trash',
                             },
                         ],
                     },
@@ -1515,9 +1567,11 @@ export default {
                         action: [
                             {
                                 text: 'Modify',
+                                icon: 'icon-edit',
                             },
                             {
                                 text: 'Archive',
+                                icon: 'icon-trash',
                             },
                         ],
                     },
@@ -1554,9 +1608,11 @@ export default {
                         action: [
                             {
                                 text: 'Modify',
+                                icon: 'icon-edit',
                             },
                             {
                                 text: 'Archive',
+                                icon: 'icon-trash',
                             },
                         ],
                     },
@@ -1567,9 +1623,11 @@ export default {
                         action: [
                             {
                                 text: 'Modify',
+                                icon: 'icon-edit',
                             },
                             {
                                 text: 'Archive',
+                                icon: 'icon-trash',
                             },
                         ],
                     },
@@ -1580,9 +1638,11 @@ export default {
                         action: [
                             {
                                 text: 'Modify',
+                                icon: 'icon-edit',
                             },
                             {
                                 text: 'Archive',
+                                icon: 'icon-trash',
                             },
                         ],
                     },
@@ -1593,9 +1653,11 @@ export default {
                         action: [
                             {
                                 text: 'Modify',
+                                icon: 'icon-edit',
                             },
                             {
                                 text: 'Archive',
+                                icon: 'icon-trash',
                             },
                         ],
                     },
@@ -1606,9 +1668,11 @@ export default {
                         action: [
                             {
                                 text: 'Modify',
+                                icon: 'icon-edit',
                             },
                             {
                                 text: 'Archive',
+                                icon: 'icon-trash',
                             },
                         ],
                     },
@@ -1619,9 +1683,11 @@ export default {
                         action: [
                             {
                                 text: 'Modify',
+                                icon: 'icon-edit',
                             },
                             {
                                 text: 'Archive',
+                                icon: 'icon-trash',
                             },
                         ],
                     },
@@ -1632,9 +1698,11 @@ export default {
                         action: [
                             {
                                 text: 'Modify',
+                                icon: 'icon-edit',
                             },
                             {
                                 text: 'Archive',
+                                icon: 'icon-trash',
                             },
                         ],
                     },
@@ -1671,9 +1739,11 @@ export default {
                         action: [
                             {
                                 text: 'Modify',
+                                icon: 'icon-edit',
                             },
                             {
                                 text: 'Archive',
+                                icon: 'icon-trash',
                             },
                         ],
                     },
@@ -1684,9 +1754,11 @@ export default {
                         action: [
                             {
                                 text: 'Modify',
+                                icon: 'icon-edit',
                             },
                             {
                                 text: 'Archive',
+                                icon: 'icon-trash',
                             },
                         ],
                     },
@@ -1697,9 +1769,11 @@ export default {
                         action: [
                             {
                                 text: 'Modify',
+                                icon: 'icon-edit',
                             },
                             {
                                 text: 'Archive',
+                                icon: 'icon-trash',
                             },
                         ],
                     },
@@ -1710,9 +1784,11 @@ export default {
                         action: [
                             {
                                 text: 'Modify',
+                                icon: 'icon-edit',
                             },
                             {
                                 text: 'Archive',
+                                icon: 'icon-trash',
                             },
                         ],
                     },
@@ -1723,9 +1799,11 @@ export default {
                         action: [
                             {
                                 text: 'Modify',
+                                icon: 'icon-edit',
                             },
                             {
                                 text: 'Archive',
+                                icon: 'icon-trash',
                             },
                         ],
                     },
@@ -1761,9 +1839,11 @@ export default {
                         action: [
                             {
                                 text: 'Modify',
+                                icon: 'icon-edit',
                             },
                             {
                                 text: 'Archive',
+                                icon: 'icon-trash',
                             },
                         ],
                     },
@@ -1774,9 +1854,11 @@ export default {
                         action: [
                             {
                                 text: 'Modify',
+                                icon: 'icon-edit',
                             },
                             {
                                 text: 'Archive',
+                                icon: 'icon-trash',
                             },
                         ],
                     },
@@ -1787,9 +1869,11 @@ export default {
                         action: [
                             {
                                 text: 'Modify',
+                                icon: 'icon-edit',
                             },
                             {
                                 text: 'Archive',
+                                icon: 'icon-trash',
                             },
                         ],
                     },
@@ -1825,6 +1909,7 @@ export default {
                         action: [
                             {
                                 text: 'Modify',
+                                icon: 'icon-edit',
                             },
                         ],
                     },
@@ -1835,6 +1920,7 @@ export default {
                         action: [
                             {
                                 text: 'Modify',
+                                icon: 'icon-edit',
                             },
                         ],
                     },
@@ -1877,6 +1963,7 @@ export default {
                         action: [
                             {
                                 text: 'Modify',
+                                icon: 'icon-edit',
                             },
                         ],
                     },
@@ -1888,6 +1975,7 @@ export default {
                         action: [
                             {
                                 text: 'Modify',
+                                icon: 'icon-edit',
                             },
                         ],
                     },
@@ -1899,6 +1987,7 @@ export default {
                         action: [
                             {
                                 text: 'Modify',
+                                icon: 'icon-edit',
                             },
                         ],
                     },
@@ -1910,6 +1999,7 @@ export default {
                         action: [
                             {
                                 text: 'Modify',
+                                icon: 'icon-edit',
                             },
                         ],
                     },
@@ -1921,6 +2011,7 @@ export default {
                         action: [
                             {
                                 text: 'Modify',
+                                icon: 'icon-edit',
                             },
                         ],
                     },
@@ -1932,6 +2023,7 @@ export default {
                         action: [
                             {
                                 text: 'Modify',
+                                icon: 'icon-edit',
                             },
                         ],
                     },
@@ -1943,6 +2035,7 @@ export default {
                         action: [
                             {
                                 text: 'Modify',
+                                icon: 'icon-edit',
                             },
                         ],
                     },
@@ -1954,6 +2047,7 @@ export default {
                         action: [
                             {
                                 text: 'Modify',
+                                icon: 'icon-edit',
                             },
                         ],
                     },
@@ -1965,6 +2059,7 @@ export default {
                         action: [
                             {
                                 text: 'Modify',
+                                icon: 'icon-edit',
                             },
                         ],
                     },
@@ -1976,6 +2071,7 @@ export default {
                         action: [
                             {
                                 text: 'Modify',
+                                icon: 'icon-edit',
                             },
                         ],
                     },
@@ -1987,6 +2083,7 @@ export default {
                         action: [
                             {
                                 text: 'Modify',
+                                icon: 'icon-edit',
                             },
                         ],
                     },
@@ -1998,6 +2095,7 @@ export default {
                         action: [
                             {
                                 text: 'Modify',
+                                icon: 'icon-edit',
                             },
                         ],
                     },
@@ -2041,6 +2139,7 @@ export default {
                         action: [
                             {
                                 text: 'Modify',
+                                icon: 'icon-edit',
                             },
                         ],
                     },
@@ -2052,6 +2151,7 @@ export default {
                         action: [
                             {
                                 text: 'Modify',
+                                icon: 'icon-edit',
                             },
                         ],
                     },
@@ -2063,6 +2163,7 @@ export default {
                         action: [
                             {
                                 text: 'Modify',
+                                icon: 'icon-edit',
                             },
                         ],
                     },
@@ -2074,6 +2175,7 @@ export default {
                         action: [
                             {
                                 text: 'Modify',
+                                icon: 'icon-edit',
                             },
                         ],
                     },
@@ -2085,6 +2187,7 @@ export default {
                         action: [
                             {
                                 text: 'Modify',
+                                icon: 'icon-edit',
                             },
                         ],
                     },
@@ -2096,6 +2199,7 @@ export default {
                         action: [
                             {
                                 text: 'Modify',
+                                icon: 'icon-edit',
                             },
                         ],
                     },
@@ -2107,6 +2211,7 @@ export default {
                         action: [
                             {
                                 text: 'Modify',
+                                icon: 'icon-edit',
                             },
                         ],
                     },
@@ -2118,6 +2223,7 @@ export default {
                         action: [
                             {
                                 text: 'Modify',
+                                icon: 'icon-edit',
                             },
                         ],
                     },
@@ -2129,6 +2235,7 @@ export default {
                         action: [
                             {
                                 text: 'Modify',
+                                icon: 'icon-edit',
                             },
                         ],
                     },
@@ -2141,6 +2248,7 @@ export default {
                         action: [
                             {
                                 text: 'Modify',
+                                icon: 'icon-edit',
                             },
                         ],
                     },
@@ -2152,6 +2260,348 @@ export default {
                         action: [
                             {
                                 text: 'Modify',
+                                icon: 'icon-edit',
+                            },
+                        ],
+                    },
+                ],
+            },
+
+            documentVerification: {
+                fields: [
+                    {
+                        key: 'verificationcode',
+                        label: 'Verification Code',
+                        class: 'w-320px',
+                    },
+                    {
+                        key: 'verificationtype',
+                        label: 'Verification Type',
+                        class: 'text-center',
+                    },
+                    {
+                        key: 'matchedscorethreshold',
+                        label: 'Matched Scored Therehold',
+                        class: 'text-center',
+                    },
+                    {
+                        key: 'action',
+                        label: 'ACTION',
+                        class: 'single-list',
+                    },
+                ],
+                items: [
+                    {
+                        verificationcode: 'LD',
+                        verificationtype: 'Liveness Detection',
+                        matchedscorethreshold: 75,
+                        action: [
+                            {
+                                text: 'Modify',
+                                icon: 'icon-edit',
+                            },
+                        ],
+                    },
+                    {
+                        verificationcode: 'FC',
+                        verificationtype: 'Face Comparision',
+                        matchedscorethreshold: 70,
+                        action: [
+                            {
+                                text: 'Modify',
+                                icon: 'icon-edit',
+                            },
+                        ],
+                    },
+                ],
+            },
+
+            screenScoreFactor: {
+                fields: [
+                    {
+                        key: 'code',
+                        label: 'Code',
+                        class: 'w-320px',
+                    },
+                    {
+                        key: 'screenfactor',
+                        label: 'Screening Factor',
+                        class: 'w-320px',
+                    },
+                    {
+                        key: 'score',
+                        label: 'Score',
+                        class: 'text-center',
+                    },
+                    {
+                        key: 'action',
+                        label: 'ACTION',
+                        class: 'single-list',
+                    },
+                ],
+                items: [
+                    {
+                        code: 'EFN',
+                        screenfactor: 'Exact- First Name Score',
+                        score: 50,
+                        action: [
+                            {
+                                text: 'Modify',
+                                icon: 'icon-edit',
+                            },
+                        ],
+                    },
+                    {
+                        code: 'ELN',
+                        screenfactor: 'Exact- Last Name Score',
+                        score: 50,
+                        action: [
+                            {
+                                text: 'Modify',
+                                icon: 'icon-edit',
+                            },
+                        ],
+                    },
+                    {
+                        code: 'DL1',
+                        screenfactor: 'Fuzzy - DL=1',
+                        score: 45,
+                        action: [
+                            {
+                                text: 'Modify',
+                                icon: 'icon-edit',
+                            },
+                        ],
+                    },
+
+                    {
+                        code: 'DL2',
+                        screenfactor: 'Fuzzy - DL=2',
+                        score: 25,
+                        action: [
+                            {
+                                text: 'Modify',
+                                icon: 'icon-edit',
+                            },
+                        ],
+                    },
+
+                    {
+                        code: 'SOH',
+                        screenfactor: 'Screening on Hypocorisms',
+                        score: 50,
+                        action: [
+                            {
+                                text: 'Modify',
+                                icon: 'icon-edit',
+                            },
+                        ],
+                    },
+
+                    {
+                        code: 'DB1',
+                        screenfactor: 'if year of birth matches',
+                        score: 0,
+                        action: [
+                            {
+                                text: 'Modify',
+                                icon: 'icon-edit',
+                            },
+                        ],
+                    },
+
+                    {
+                        code: 'DB2',
+                        screenfactor:
+                            'if year of birth is NULL in list provider',
+                        score: 0,
+                        action: [
+                            {
+                                text: 'Modify',
+                                icon: 'icon-edit',
+                            },
+                        ],
+                    },
+
+                    {
+                        code: 'DB3',
+                        screenfactor: 'if year of birth is +1/-1',
+                        score: -5,
+                        action: [
+                            {
+                                text: 'Modify',
+                                icon: 'icon-edit',
+                            },
+                        ],
+                    },
+
+                    {
+                        code: 'DB4',
+                        screenfactor: 'if year of birth is mismatch',
+                        score: -20,
+                        action: [
+                            {
+                                text: 'Modify',
+                                icon: 'icon-edit',
+                            },
+                        ],
+                    },
+
+                    {
+                        code: 'NA1',
+                        screenfactor: 'if nationality matches',
+                        score: 0,
+                        action: [
+                            {
+                                text: 'Modify',
+                                icon: 'icon-edit',
+                            },
+                        ],
+                    },
+
+                    {
+                        code: 'NA2',
+                        screenfactor: 'if nationality is NULL in list provider',
+                        score: 0,
+                        action: [
+                            {
+                                text: 'Modify',
+                                icon: 'icon-edit',
+                            },
+                        ],
+                    },
+
+                    {
+                        code: 'NA3',
+                        screenfactor: 'if nationality is mismatch',
+                        score: -10,
+                        action: [
+                            {
+                                text: 'Modify',
+                                icon: 'icon-edit',
+                            },
+                        ],
+                    },
+
+                    {
+                        code: 'CR1',
+                        screenfactor: 'if country of residence matches',
+                        score: 0,
+                        action: [
+                            {
+                                text: 'Modify',
+                                icon: 'icon-edit',
+                            },
+                        ],
+                    },
+
+                    {
+                        code: 'CR2',
+                        screenfactor:
+                            'if country of residence is NULL in list provider',
+                        score: 0,
+                        action: [
+                            {
+                                text: 'Modify',
+                                icon: 'icon-edit',
+                            },
+                        ],
+                    },
+
+                    {
+                        code: 'CR3',
+                        screenfactor: 'if country of residence is mismatch',
+                        score: -10,
+                        action: [
+                            {
+                                text: 'Modify',
+                                icon: 'icon-edit',
+                            },
+                        ],
+                    },
+
+                    {
+                        code: 'ID1',
+                        screenfactor: 'if ID document number matches',
+                        score: 0,
+                        action: [
+                            {
+                                text: 'Modify',
+                                icon: 'icon-edit',
+                            },
+                        ],
+                    },
+
+                    {
+                        code: 'ID2',
+                        screenfactor:
+                            'if ID document number is NULL in list provider',
+                        score: 0,
+                        action: [
+                            {
+                                text: 'Modify',
+                                icon: 'icon-edit',
+                            },
+                        ],
+                    },
+
+                    {
+                        code: 'ID3',
+                        screenfactor: 'if ID document number is mismatch',
+                        score: -5,
+                        action: [
+                            {
+                                text: 'Modify',
+                                icon: 'icon-edit',
+                            },
+                        ],
+                    },
+
+                    {
+                        code: 'GN1',
+                        screenfactor: 'if gender matches',
+                        score: 0,
+                        action: [
+                            {
+                                text: 'Modify',
+                                icon: 'icon-edit',
+                            },
+                        ],
+                    },
+
+                    {
+                        code: 'GN2',
+                        screenfactor:
+                            'if gender is NULL/Unknown in list provider',
+                        score: 0,
+                        action: [
+                            {
+                                text: 'Modify',
+                                icon: 'icon-edit',
+                            },
+                        ],
+                    },
+
+                    {
+                        code: 'GN3',
+                        screenfactor: 'if gender is mismatch',
+                        score: -5,
+                        action: [
+                            {
+                                text: 'Modify',
+                                icon: 'icon-edit',
+                            },
+                        ],
+                    },
+
+                    {
+                        code: 'TS1',
+                        screenfactor: 'Safe Score',
+                        score: '< 75',
+                        action: [
+                            {
+                                text: 'Modify',
+                                icon: 'icon-edit',
                             },
                         ],
                     },
