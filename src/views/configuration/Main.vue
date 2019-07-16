@@ -53,6 +53,10 @@ export default {
                     anchorLink: '/configuration/manual-review/',
                     menuLabel: 'Manual Review Switch',
                 },
+                {
+                    anchorLink: '/configuration/branding/',
+                    menuLabel: 'Branding',
+                },
             ],
         }
     }, // End of Component > data

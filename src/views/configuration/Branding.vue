@@ -3,44 +3,216 @@
         <div class="filter-section">
             <div class="row">
                 <div class="col-md-4">
-                    <h2>Manual Review Switch</h2>
+                    <h2>Branding Configurations</h2>
                 </div>
             </div>
         </div>
 
-        <div class="review-switch">
+        <div class="config-card-switch">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="card custom-card">
+                        <div class="fields-area">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <h5>
+                                        Brand Logo
+                                    </h5>
+                                    <div class="row">
+                                        <div class="col-lg-9">
+                                            <b-form-group
+                                                id="input-group-6"
+                                                label="LOGO FOR LIGHT BACKGROUND"
+                                                label-for="documentScan"
+                                            >
+                                                <b-form-file
+                                                    @change="uploadLogoOne"
+                                                    accept="image/jpeg, image/png"
+                                                    placeholder="Choose transparent logo image file (PNG)"
+                                                    drop-placeholder="Drop file here..."
+                                                ></b-form-file>
+                                            </b-form-group>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="brand-logo">
+                                                <img :src="logoOne" />
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-9">
+                                            <b-form-group
+                                                id="input-group-6"
+                                                label="LOGO FOR DARK BACKGROUND"
+                                                label-for="documentScan"
+                                            >
+                                                <b-form-file
+                                                    @change="uploadLogoTwo"
+                                                    accept="image/jpeg, image/png"
+                                                    placeholder="Choose transparent logo image file (PNG)"
+                                                    drop-placeholder="Drop file here..."
+                                                ></b-form-file>
+                                            </b-form-group>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="brand-logo">
+                                                <img :src="logoTwo" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6"></div>
+                            </div>
+                        </div>
+
+                        <div class="fields-area">
+                            <div class="row">
+                                <div class="col-lg-9">
+                                    <h5>
+                                        Brand Colors
+                                    </h5>
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <b-form-group
+                                                id="input-group-6"
+                                                label="PRIMARY COLOR CODE"
+                                            >
+                                                <div class="color-area">
+                                                    <b-form-input
+                                                        type="text"
+                                                        v-model="primaryColor"
+                                                        placeholder="Primary Color"
+                                                    ></b-form-input>
+                                                    <b-form-input
+                                                        type="color"
+                                                        v-model="primaryColor"
+                                                    ></b-form-input>
+                                                    <div class="input-color">
+                                                        <div
+                                                            class="color-pallet"
+                                                            v-bind:style="{
+                                                                'background-color':
+                                                                    '' +
+                                                                    primaryColor +
+                                                                    '',
+                                                            }"
+                                                        ></div>
+                                                        <i
+                                                            class="icon-documentation"
+                                                        ></i>
+                                                    </div>
+                                                </div>
+                                            </b-form-group>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <b-form-group
+                                                id="input-group-6"
+                                                label="SECONDARY COLOR CODE"
+                                            >
+                                                <div class="color-area">
+                                                    <b-form-input
+                                                        type="text"
+                                                        v-model="secondaryColor"
+                                                        placeholder="Secondary Color"
+                                                    ></b-form-input>
+                                                    <b-form-input
+                                                        type="color"
+                                                        v-model="secondaryColor"
+                                                    ></b-form-input>
+                                                    <div class="input-color">
+                                                        <div
+                                                            class="color-pallet"
+                                                            v-bind:style="{
+                                                                'background-color':
+                                                                    '' +
+                                                                    secondaryColor +
+                                                                    '',
+                                                            }"
+                                                        ></div>
+                                                        <i
+                                                            class="icon-documentation"
+                                                        ></i>
+                                                    </div>
+                                                </div>
+                                            </b-form-group>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <b-form-group
+                                                id="input-group-6"
+                                                label="INTERFACE DARK COLOR CODE"
+                                            >
+                                                <div class="color-area">
+                                                    <b-form-input
+                                                        type="text"
+                                                        v-model="darkColor"
+                                                        placeholder="Secondary Color"
+                                                    ></b-form-input>
+                                                    <b-form-input
+                                                        type="color"
+                                                        v-model="darkColor"
+                                                    ></b-form-input>
+                                                    <div class="input-color">
+                                                        <div
+                                                            class="color-pallet"
+                                                            v-bind:style="{
+                                                                'background-color':
+                                                                    '' +
+                                                                    darkColor +
+                                                                    '',
+                                                            }"
+                                                        ></div>
+                                                        <i
+                                                            class="icon-documentation"
+                                                        ></i>
+                                                    </div>
+                                                </div>
+                                            </b-form-group>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <b-form-group
+                                                id="input-group-6"
+                                                label="INTERFACE DARK COLOR CODE"
+                                            >
+                                                <div class="color-area">
+                                                    <b-form-input
+                                                        type="text"
+                                                        v-model="
+                                                            darkMediumColor
+                                                        "
+                                                        placeholder="Secondary Color"
+                                                    ></b-form-input>
+                                                    <b-form-input
+                                                        type="color"
+                                                        v-model="
+                                                            darkMediumColor
+                                                        "
+                                                    ></b-form-input>
+                                                    <div class="input-color">
+                                                        <div
+                                                            class="color-pallet"
+                                                            v-bind:style="{
+                                                                'background-color':
+                                                                    '' +
+                                                                    darkMediumColor +
+                                                                    '',
+                                                            }"
+                                                        ></div>
+                                                        <i
+                                                            class="icon-documentation"
+                                                        ></i>
+                                                    </div>
+                                                </div>
+                                            </b-form-group>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3"></div>
+                            </div>
+                        </div>
+
                         <div class="row">
-                            <div class="col-lg-9">
-                                <h5>
-                                    Would you like to manually initiate the
-                                    review process of all customer profiles?
-                                </h5>
-                                <p>
-                                    If you have made any major changes in the
-                                    configuration which might change the name
-                                    screening or risk rating outcome of customer
-                                    profiles, you can manually initate the
-                                    review process.
-                                </p>
-                                <p>
-                                    The action isn't required if you have
-                                    modified registration form or did changes
-                                    which isn't affect the existing customer
-                                    profiles
-                                </p>
-                                <p class="review-alert">
-                                    Please note, this action is not revertable
-                                </p>
+                            <div class="col-lg-12">
                                 <base-button
                                     btnVariant="primary"
-                                    btnLabel="Manually Initate Review Process"
-                                ></base-button>
-                                <base-button
-                                    btnVariant="secondary"
-                                    btnLabel="Preview Review Process"
+                                    btnLabel="UPDATE"
                                 ></base-button>
                             </div>
                         </div>
@@ -52,7 +224,6 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
 export default {
     components: {},
 
@@ -79,7 +250,12 @@ export default {
     */
     data() {
         return {
-            listData: [],
+            logoOne: null,
+            logoTwo: null,
+            primaryColor: '#662d91',
+            secondaryColor: '#b35fa5',
+            darkColor: '#22003c',
+            darkMediumColor: '#3c1559',
         }
     }, // End of Component > data
 
@@ -88,19 +264,30 @@ export default {
     | Component > computed
     |--------------------------------------------------------------------------
     */
-    computed: {
-        ...mapGetters(['configuration']),
-    }, // End of Component > computed
+    computed: {}, // End of Component > computed
     /*
     |--------------------------------------------------------------------------
     | Component > methods
     |--------------------------------------------------------------------------
     */
     methods: {
-        initializeData() {
-            //system log table
-            let configImportFields = this.configuration.importData //get user data from store
-            this.listData = configImportFields //push data into array
+        uploadLogoOne(e) {
+            const image = e.target.files[0]
+            const reader = new FileReader()
+            reader.readAsDataURL(image)
+            reader.onload = (e) => {
+                this.logoOne = e.target.result
+                console.log(this.logoOne)
+            }
+        },
+        uploadLogoTwo(e) {
+            const image = e.target.files[0]
+            const reader = new FileReader()
+            reader.readAsDataURL(image)
+            reader.onload = (e) => {
+                this.logoTwo = e.target.result
+                console.log(this.logoTwo)
+            }
         },
     }, // End of Component > methods
 
@@ -109,8 +296,6 @@ export default {
     | Component > mounted
     |--------------------------------------------------------------------------
     */
-    mounted() {
-        this.initializeData()
-    }, // End of Component > mounted
+    mounted() {}, // End of Component > mounted
 } // End of export default
 </script>

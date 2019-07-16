@@ -8,12 +8,12 @@
             </div>
         </div>
 
-        <div class="review-switch">
+        <div class="config-card-switch">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="card custom-card">
                         <div class="row">
-                            <div class="col-lg-9">
+                            <div class="col-lg-7">
                                 <h5>
                                     Would you like to manually initiate the
                                     review process of all customer profiles?
