@@ -76,26 +76,22 @@
                     ></status-type-icon>
                 </template>
 
-                <!--  <template slot="status" slot-scope="data">
-                    <div class="status-review" v-if="data.value == 'review'">
-                        <a href="javascript:void(0);" v-b-modal.initiate-review>
-                            <i class="icon-review"></i>
-                            <span>Review</span>
-                        </a>
-                    </div>
-                    <div class="status-review" v-if="data.value == 'lock'">
-                        <router-link class="disable" to="/">
-                            <i class="icon-change-password"></i>
-                            <span>In Review</span>
-                        </router-link>
-                    </div>
-                </template> -->
-
                 <template slot="action" slot-scope="data">
-                    <base-action
-                        :actionType="data.value"
-                        v-b-modal.initiate-review
-                    ></base-action>
+                    <div class="action-review">
+                        <base-action
+                            v-if="data.value == 'in review'"
+                            cssClass="disabled"
+                            icon="icon-lock_outline"
+                            label="In Review"
+                            v-b-modal.initiate-review
+                        ></base-action>
+                        <base-action
+                            v-if="data.value == 'review'"
+                            icon="icon-review"
+                            label="Review"
+                            v-b-modal.initiate-review
+                        ></base-action>
+                    </div>
                 </template>
             </b-table>
         </div>
