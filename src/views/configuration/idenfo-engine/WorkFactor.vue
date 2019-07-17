@@ -33,26 +33,30 @@
             <b-table :items="items" :fields="fields">
                 <template slot="action" slot-scope="data">
                     <div class="action-review">
-                        <a
-                            href="/"
-                            v-for="(list, index) in data.value"
-                            :key="index"
-                        >
-                            <div v-if="list.text === 'Modify'">
-                                <i class="icon-edit"></i>
-                                <span>{{ list.text }}</span>
-                            </div>
-                            <div v-if="list.text === 'Archive'">
-                                <i class="icon-trash"></i>
-                                <span>{{ list.text }}</span>
-                            </div>
-                        </a>
+                        <!-- if action modify -->
+                        <base-action
+                            v-if="data.value == 'active'"
+                            icon="icon-edit"
+                            label="Modify"
+                            v-b-modal.add-work-popup
+                        ></base-action>
+                        <!-- if action archive -->
+                        <base-action
+                            v-if="data.value == 'active'"
+                            icon="icon-trash"
+                            label="Archive"
+                            v-b-modal.archive-popup
+                        ></base-action>
                     </div>
                 </template>
             </b-table>
         </div>
         <pagination></pagination>
         <add-work-popup></add-work-popup>
+        <archive-popup
+            title="Archive Work Type Factor"
+            description="Are you sure you want to archive this work type factor? You can re-activate it later."
+        ></archive-popup>
     </div>
 </template>
 
@@ -60,10 +64,12 @@
 import { mapGetters } from 'vuex'
 import pagination from '@/components/Pagination.vue'
 import addWorkPopup from '@/components/popups/AddWorkPopup.vue'
+import archivePopup from '@/components/popups/ArchivePopup.vue'
 
 export default {
     components: {
         pagination,
+        archivePopup,
         addWorkPopup,
     },
 

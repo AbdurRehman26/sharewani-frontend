@@ -71,8 +71,14 @@
                 <template slot="status" slot-scope="data">
                     <base-status :statusType="data.value"></base-status>
                 </template>
-                <template slot="action" slot-scope="data">
-                    <base-action :actionType="data.value"></base-action>
+                <template slot="action">
+                    <div class="action-review">
+                        <base-action
+                            icon="icon-eye-view"
+                            label="View Profile"
+                            @click="$router.push('/customer-information')"
+                        ></base-action>
+                    </div>
                 </template>
             </b-table>
         </div>

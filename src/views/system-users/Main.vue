@@ -46,7 +46,7 @@ export default {
                     menuLabel: 'Roles & Permissions',
                 },
                 {
-                    anchorLink: '/system-users/branches',
+                    anchorLink: '/system-users/data-segments',
                     menuLabel: 'Data Segments',
                 },
                 {

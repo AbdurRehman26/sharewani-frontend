@@ -107,13 +107,18 @@
         -webkit-transition: 0.3s ease-in-out;
         transition: 0.3s ease-in-out;
         opacity: 0;
+        box-shadow: 0px 2px 14px rgba(50, 50, 93, 0.4);
         display: none;
         ul {
             list-style: none;
             padding: 0;
             margin-bottom: 0;
             li {
-                margin-bottom: 3px;
+                // margin-bottom: 3px;
+                margin-bottom: 8px;
+                label {
+                    color: $body-color !important;
+                }
                 &:last-child {
                     label {
                         margin-bottom: 0px;
@@ -124,6 +129,20 @@
                     color: $dark;
                 }
             }
+        }
+        &:before {
+            content: '';
+            width: 0;
+            height: 0;
+            border-left: 11px solid transparent;
+            border-right: 11px solid transparent;
+            border-bottom: 11px solid #fff;
+            position: absolute;
+            top: -10px;
+            margin: auto;
+            right: 0;
+            left: 0;
+            box-shadow: 0px 3px 74px rgba(50, 50, 93, 0.5);
         }
     }
     &:hover,
@@ -627,8 +646,8 @@
                 .dropdown-open {
                     position: absolute;
                     z-index: 9;
-                    width: 190px;
-                    right: 0;
+                    width: 232px;
+                    right: 10px;
                     border: 1px solid $border-color;
                     li {
                         width: 100%;
@@ -637,10 +656,10 @@
                         a {
                             box-shadow: 0px 0.5px 0px rgba(50, 50, 93, 0.2);
                             background-color: #fff;
-                            padding: 9px 13px 9px 13px;
+                            padding: 11px 24px;
                             margin-right: 0px;
                             border-radius: 0px;
-                            font-size: 0.75rem;
+                            font-size: 0.875rem;
                             &.router-link-exact-active.router-link-active {
                                 color: $secondary;
                             }
@@ -767,7 +786,7 @@
 }
 
 .work-impact {
-    color: $nav-color;
+    color: $nav-color !important;
 }
 
 .config-card-block {
@@ -789,6 +808,26 @@
         }
         &.danger {
             color: $danger;
+        }
+        &.circle-area {
+            border-radius: 10px;
+            color: #fff;
+            font-size: 0.9rem;
+            display: flex;
+            width: 24px;
+            height: 24px;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            &.pending {
+                background-color: $grey-xlite;
+            }
+            &.danger.circle-area {
+                background-color: $danger;
+            }
+            &.sanctions.circle-area {
+                background-color: $body-color;
+            }
         }
     }
 }

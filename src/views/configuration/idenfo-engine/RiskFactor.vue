@@ -16,11 +16,13 @@
                     </div>
                 </template>
                 <template slot="action" slot-scope="data">
-                    <div
-                        class="action-review"
-                        v-b-modal.modify-risk-factor-popup
-                    >
-                        <base-action :actionType="data.value"> </base-action>
+                    <div class="action-review">
+                        <base-action
+                            v-if="data.value == 'active'"
+                            icon="icon-edit"
+                            label="Modify"
+                            v-b-modal.modify-risk-factor-popup
+                        ></base-action>
                     </div>
                 </template>
             </b-table>

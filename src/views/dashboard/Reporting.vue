@@ -105,19 +105,68 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="row">
                     <div class="col-xs-12 col-md-12">
-                        <div class="card dashboard-card  sm-radius">
-                            <div class="dashboard-charts">
-                                <h2 class="heading">
-                                    Customers by Nationality
-                                </h2>
-                                <!-- Customers by Industry -->
-                                <div
-                                    id="customers-by-nationality"
-                                    class="amcharts-div customers-by-nationality"
-                                ></div>
-                                <!-- Customers by Industry end -->
+                        <div
+                            class="card dashboard-card sm-radius no-label-chart"
+                        >
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="dashboard-charts">
+                                        <h2 class="heading">
+                                            Customers by Nationality
+                                        </h2>
+                                        <!-- customers by age group -->
+                                        <div
+                                            id="customers-by-nationality"
+                                            class="amcharts-div customers-by-nationality"
+                                        ></div>
+                                        <div class="chart-highest-record">
+                                            <h2>HIGHEST NATIONALITY GROUP</h2>
+                                            <p>
+                                                United Kingdom
+                                                <strong>720</strong> (4.0%)
+                                            </p>
+                                        </div>
+                                        <!-- customers by age group end-->
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div id="style-2" class="table-scroll">
+                                        <b-table
+                                            :items="countryResidence.items"
+                                            :fields="countryResidence.fields"
+                                            thead-class="hidden_header"
+                                        >
+                                            <!-- status slot -->
+                                            <template
+                                                slot="color"
+                                                slot-scope="data"
+                                            >
+                                                <div
+                                                    class="color-pallet"
+                                                    v-bind:style="{
+                                                        'background-color':
+                                                            '' +
+                                                            data.value +
+                                                            '',
+                                                    }"
+                                                ></div>
+                                            </template>
+                                            <!-- action slot -->
+                                            <template
+                                                slot="residence_percentage"
+                                                slot-scope="data"
+                                            >
+                                                <strong>{{
+                                                    data.value
+                                                }}</strong>
+                                            </template>
+                                        </b-table>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -125,23 +174,27 @@
 
                 <div class="row">
                     <div class="col-xs-12 col-md-12">
-                        <div class="card dashboard-card sm-radius">
+                        <div
+                            class="card dashboard-card sm-radius no-label-chart"
+                        >
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="dashboard-charts">
                                         <h2 class="heading">
-                                            Customers by Age Group
+                                            Customers by Country of Residence
                                         </h2>
                                         <!-- customers by age group -->
                                         <div
-                                            id="customer-by-age"
-                                            class="amcharts-div customer-by-age"
+                                            id="customers-by-residence"
+                                            class="amcharts-div customers-by-nationality"
                                         ></div>
                                         <div class="chart-highest-record">
-                                            <h2>HIGHEST</h2>
+                                            <h2>
+                                                HIGHEST COUNTRY OF RESIDENCE
+                                            </h2>
                                             <p>
-                                                55 - 64:
-                                                <strong>950</strong> (30.1%)
+                                                United Kingdom
+                                                <strong>720</strong> (4.0%)
                                             </p>
                                         </div>
                                         <!-- customers by age group end-->
@@ -373,12 +426,18 @@ export default {
                 'customers-by-industry',
                 customersByIndustry
             )
-            //customers by industry
+            //customers by Nationality
             let customersByNationality = this.dashboardData
                 .customersByNationality
             window.AmCharts.makeChart(
                 'customers-by-nationality',
                 customersByNationality
+            )
+            //customers by Country Residence
+            let customersByResidence = this.dashboardData.customersByResidence
+            window.AmCharts.makeChart(
+                'customers-by-residence',
+                customersByResidence
             )
         },
     }, // End of Component > methods

@@ -9,22 +9,27 @@ export default {
                 {
                     key: 'user',
                     label: 'User',
+                    sortable: true,
                 },
                 {
                     key: 'role',
                     label: 'Role',
+                    sortable: true,
                 },
                 {
                     key: 'date_segments',
                     label: 'Date Segments',
+                    sortable: true,
                 },
                 {
                     key: 'join_date',
                     label: 'Join Date',
+                    sortable: true,
                 },
                 {
                     key: 'status',
                     label: 'Status',
+                    sortable: true,
                 },
                 {
                     key: 'action',
@@ -45,16 +50,7 @@ export default {
                             label: 'Active',
                         },
                     ],
-                    action: [
-                        {
-                            text: 'Modify',
-                            icon: 'icon-edit',
-                        },
-                        {
-                            text: 'Archive',
-                            icon: 'icon-trash',
-                        },
-                    ],
+                    action: 'active',
                 },
                 {
                     profile: 'member-2.png',
@@ -69,16 +65,7 @@ export default {
                             label: 'Active',
                         },
                     ],
-                    action: [
-                        {
-                            text: 'Modify',
-                            icon: 'icon-edit',
-                        },
-                        {
-                            text: 'Archive',
-                            icon: 'icon-trash',
-                        },
-                    ],
+                    action: 'active',
                 },
                 {
                     profile: 'member-3.png',
@@ -93,16 +80,7 @@ export default {
                             label: 'Pending',
                         },
                     ],
-                    action: [
-                        {
-                            text: 'Modify',
-                            icon: 'icon-edit',
-                        },
-                        {
-                            text: 'Archive',
-                            icon: 'icon-trash',
-                        },
-                    ],
+                    action: 'active',
                 },
                 {
                     profile: 'member-4.png',
@@ -117,16 +95,7 @@ export default {
                             label: 'Active',
                         },
                     ],
-                    action: [
-                        {
-                            text: 'Modify',
-                            icon: 'icon-edit',
-                        },
-                        {
-                            text: 'Archive',
-                            icon: 'icon-trash',
-                        },
-                    ],
+                    action: 'active',
                 },
                 {
                     profile: 'member-5.png',
@@ -141,16 +110,7 @@ export default {
                             label: 'Active',
                         },
                     ],
-                    action: [
-                        {
-                            text: 'Modify',
-                            icon: 'icon-edit',
-                        },
-                        {
-                            text: 'Archive',
-                            icon: 'icon-trash',
-                        },
-                    ],
+                    action: 'active',
                 },
                 {
                     profile: 'member-6.png',
@@ -165,16 +125,7 @@ export default {
                             label: 'Active',
                         },
                     ],
-                    action: [
-                        {
-                            text: 'Modify',
-                            icon: 'icon-edit',
-                        },
-                        {
-                            text: 'Archive',
-                            icon: 'icon-trash',
-                        },
-                    ],
+                    action: 'active',
                 },
                 {
                     profile: 'member-7.png',
@@ -189,16 +140,7 @@ export default {
                             label: 'Active',
                         },
                     ],
-                    action: [
-                        {
-                            text: 'Modify',
-                            icon: 'icon-edit',
-                        },
-                        {
-                            text: 'Modify',
-                            icon: 'icon-trash',
-                        },
-                    ],
+                    action: 'active',
                 },
                 {
                     profile: 'member-8.png',
@@ -213,16 +155,7 @@ export default {
                             label: 'Active',
                         },
                     ],
-                    action: [
-                        {
-                            text: 'Modify',
-                            icon: 'icon-edit',
-                        },
-                        {
-                            text: 'Archive',
-                            icon: 'icon-trash',
-                        },
-                    ],
+                    action: 'active',
                 },
                 {
                     profile: 'member-9.png',
@@ -237,16 +170,7 @@ export default {
                             label: 'Active',
                         },
                     ],
-                    action: [
-                        {
-                            text: 'Modify',
-                            icon: 'icon-edit',
-                        },
-                        {
-                            text: 'Archive',
-                            icon: 'icon-trash',
-                        },
-                    ],
+                    action: 'active',
                 },
                 {
                     profile: 'member-10.png',
@@ -261,16 +185,7 @@ export default {
                             label: 'Archived',
                         },
                     ],
-                    action: [
-                        {
-                            text: 'Modify',
-                            icon: 'icon-edit',
-                        },
-                        {
-                            text: 'Activate',
-                            icon: 'icon-done',
-                        },
-                    ],
+                    action: 'archive',
                 },
             ],
         },
@@ -279,16 +194,19 @@ export default {
                 {
                     key: 'role_title',
                     label: 'Role Title',
+                    sortable: true,
                 },
                 {
                     key: 'associate_users',
                     label: 'Associate Users',
                     class: 'text-center',
+                    sortable: true,
                 },
                 {
                     key: 'status',
                     label: 'Status',
                     class: 'text-center',
+                    sortable: true,
                 },
                 {
                     key: 'action',
@@ -307,18 +225,7 @@ export default {
                             label: 'locked',
                         },
                     ],
-                    action: [
-                        {
-                            text: 'Modify',
-                            icon: 'icon-edit',
-                            cssClass: 'disabled',
-                        },
-                        {
-                            text: 'Archive',
-                            icon: 'icon-trash',
-                            cssClass: 'disabled',
-                        },
-                    ],
+                    action: 'active',
                 },
                 {
                     role_title: 'Maker',
@@ -330,18 +237,7 @@ export default {
                             label: 'locked',
                         },
                     ],
-                    action: [
-                        {
-                            text: 'Modify',
-                            icon: 'icon-edit',
-                            cssClass: 'disabled',
-                        },
-                        {
-                            text: 'Archive',
-                            icon: 'icon-trash',
-                            cssClass: 'disabled',
-                        },
-                    ],
+                    action: 'active',
                 },
                 {
                     role_title: 'Checker',
@@ -353,18 +249,7 @@ export default {
                             label: 'locked',
                         },
                     ],
-                    action: [
-                        {
-                            text: 'Modify',
-                            icon: 'icon-edit',
-                            cssClass: 'disabled',
-                        },
-                        {
-                            text: 'Archive',
-                            icon: 'icon-trash',
-                            cssClass: 'disabled',
-                        },
-                    ],
+                    action: 'active',
                 },
                 {
                     role_title: 'Approver',
@@ -376,18 +261,7 @@ export default {
                             label: 'locked',
                         },
                     ],
-                    action: [
-                        {
-                            text: 'Modify',
-                            icon: 'icon-edit',
-                            cssClass: 'disabled',
-                        },
-                        {
-                            text: 'Archive',
-                            icon: 'icon-trash',
-                            cssClass: 'disabled',
-                        },
-                    ],
+                    action: 'active',
                 },
                 {
                     role_title: 'Relationship Manager',
@@ -399,16 +273,7 @@ export default {
                             label: 'Active',
                         },
                     ],
-                    action: [
-                        {
-                            text: 'Modify',
-                            icon: 'icon-edit',
-                        },
-                        {
-                            text: 'Archive',
-                            icon: 'icon-trash',
-                        },
-                    ],
+                    action: 'active',
                 },
                 {
                     role_title: 'System Analyst',
@@ -420,16 +285,7 @@ export default {
                             label: 'Archived',
                         },
                     ],
-                    action: [
-                        {
-                            text: 'Modify',
-                            icon: 'icon-edit',
-                        },
-                        {
-                            text: 'Activate',
-                            icon: 'icon-done',
-                        },
-                    ],
+                    action: 'archive',
                 },
             ],
         },
@@ -437,16 +293,19 @@ export default {
             fields: [
                 {
                     key: 'branch_title',
-                    label: 'Branch Title',
+                    label: 'Data Segment Title',
+                    sortable: true,
                 },
                 {
                     key: 'short_code',
                     label: 'Short Code',
                     class: 'text-center',
+                    sortable: true,
                 },
                 {
                     key: 'status',
                     label: 'Status',
+                    sortable: true,
                 },
                 {
                     key: 'action',
@@ -465,16 +324,7 @@ export default {
                             label: 'Active',
                         },
                     ],
-                    action: [
-                        {
-                            text: 'Modify',
-                            icon: 'icon-edit',
-                        },
-                        {
-                            text: 'Archive',
-                            icon: 'icon-trash',
-                        },
-                    ],
+                    action: 'active',
                 },
                 {
                     branch_title: 'Pakistan',
@@ -486,16 +336,7 @@ export default {
                             label: 'Active',
                         },
                     ],
-                    action: [
-                        {
-                            text: 'Modify',
-                            icon: 'icon-edit',
-                        },
-                        {
-                            text: 'Archive',
-                            icon: 'icon-trash',
-                        },
-                    ],
+                    action: 'active',
                 },
                 {
                     branch_title: 'United Kingdom',
@@ -507,16 +348,7 @@ export default {
                             label: 'Active',
                         },
                     ],
-                    action: [
-                        {
-                            text: 'Modify',
-                            icon: 'icon-edit',
-                        },
-                        {
-                            text: 'Archive',
-                            icon: 'icon-trash',
-                        },
-                    ],
+                    action: 'active',
                 },
                 {
                     branch_title: 'United States of America',
@@ -528,16 +360,7 @@ export default {
                             label: 'Archived',
                         },
                     ],
-                    action: [
-                        {
-                            text: 'Modify',
-                            icon: 'icon-edit',
-                        },
-                        {
-                            text: 'Activate',
-                            icon: 'icon-done',
-                        },
-                    ],
+                    action: 'archive',
                 },
             ],
         },
@@ -546,14 +369,17 @@ export default {
                 {
                     key: 'application_title',
                     label: 'Application Title',
+                    sortable: true,
                 },
                 {
                     key: 'branches',
-                    label: 'BRANCHES',
+                    label: 'Data Segments',
+                    sortable: true,
                 },
                 {
                     key: 'status',
                     label: 'Status',
+                    sortable: true,
                 },
                 {
                     key: 'action',
@@ -572,16 +398,7 @@ export default {
                             label: 'Active',
                         },
                     ],
-                    action: [
-                        {
-                            text: 'Modify',
-                            icon: 'icon-edit',
-                        },
-                        {
-                            text: 'Archive',
-                            icon: 'icon-trash',
-                        },
-                    ],
+                    action: 'active',
                 },
                 {
                     application_title: 'Financial Reporting System',
@@ -593,16 +410,7 @@ export default {
                             label: 'Active',
                         },
                     ],
-                    action: [
-                        {
-                            text: 'Modify',
-                            icon: 'icon-edit',
-                        },
-                        {
-                            text: 'Archive',
-                            icon: 'icon-trash',
-                        },
-                    ],
+                    action: 'active',
                 },
                 {
                     application_title: 'Banking CRM',
@@ -614,16 +422,7 @@ export default {
                             label: 'Active',
                         },
                     ],
-                    action: [
-                        {
-                            text: 'Modify',
-                            icon: 'icon-edit',
-                        },
-                        {
-                            text: 'Archive',
-                            icon: 'icon-trash',
-                        },
-                    ],
+                    action: 'active',
                 },
                 {
                     application_title: 'Testing App',
@@ -635,16 +434,7 @@ export default {
                             label: 'Archived',
                         },
                     ],
-                    action: [
-                        {
-                            text: 'Modify',
-                            icon: 'icon-edit',
-                        },
-                        {
-                            text: 'Activate',
-                            icon: 'icon-done',
-                        },
-                    ],
+                    action: 'archive',
                 },
             ],
         },

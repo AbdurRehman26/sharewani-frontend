@@ -49,149 +49,31 @@
         <div class="table-section">
             <b-table :items="items" :fields="fields">
                 <template slot="sanction" slot-scope="data">
-                    <a
-                        href="javascript:void(0);"
+                    <status-type-icon
+                        :statusType="data.value"
                         v-b-modal.screening-detail-popup
-                    >
-                        <div
-                            class="pending indication-icons"
-                            v-if="data.value == 'disabled'"
-                        >
-                            <i class="icon-check"></i>
-                        </div>
-                        <div
-                            class="inreview indication-icons"
-                            v-if="data.value == 'pending'"
-                        >
-                            <i class="icon-wrong"></i>
-                        </div>
-                        <div
-                            class="reject indication-icons"
-                            v-if="data.value == 'reject'"
-                        >
-                            <i class="icon-wrong"></i>
-                        </div>
-                        <div
-                            class="pending indication-icons"
-                            v-if="data.value == 'wait'"
-                        >
-                            <i class="icon-loading"></i>
-                        </div>
-                    </a>
+                    ></status-type-icon>
                 </template>
                 <template slot="rep" slot-scope="data">
-                    <a
-                        href="javascript:void(0);"
+                    <status-type-icon
+                        :statusType="data.value"
                         v-b-modal.screening-detail-popup
-                    >
-                        <div
-                            class="pending indication-icons"
-                            v-if="data.value == 'disabled'"
-                        >
-                            <i class="icon-check"></i>
-                        </div>
-                        <div
-                            class="inreview indication-icons"
-                            v-if="data.value == 'pending'"
-                        >
-                            <i class="icon-wrong"></i>
-                        </div>
-                        <div
-                            class="reject indication-icons"
-                            v-if="data.value == 'reject'"
-                        >
-                            <i class="icon-wrong"></i>
-                        </div>
-                        <div
-                            class="pending indication-icons"
-                            v-if="data.value == 'wait'"
-                        >
-                            <i class="icon-loading"></i>
-                        </div>
-                    </a>
+                    ></status-type-icon>
                 </template>
                 <template slot="enforcement" slot-scope="data">
-                    <a
-                        href="javascript:void(0);"
+                    <status-type-icon
+                        :statusType="data.value"
                         v-b-modal.screening-detail-popup
-                    >
-                        <div
-                            class="pending indication-icons"
-                            v-if="data.value == 'disabled'"
-                        >
-                            <i class="icon-check"></i>
-                        </div>
-                        <div
-                            class="inreview indication-icons"
-                            v-if="data.value == 'pending'"
-                        >
-                            <i class="icon-wrong"></i>
-                        </div>
-                        <div
-                            class="reject indication-icons"
-                            v-if="data.value == 'reject'"
-                        >
-                            <i class="icon-wrong"></i>
-                        </div>
-                        <div
-                            class="pending indication-icons"
-                            v-if="data.value == 'wait'"
-                        >
-                            <i class="icon-loading"></i>
-                        </div>
-                    </a>
+                    ></status-type-icon>
                 </template>
                 <template slot="blackList" slot-scope="data">
-                    <a
-                        href="javascript:void(0);"
+                    <status-type-icon
+                        :statusType="data.value"
                         v-b-modal.screening-detail-popup
-                    >
-                        <div
-                            class="pending indication-icons"
-                            v-if="data.value == 'disabled'"
-                        >
-                            <i class="icon-check"></i>
-                        </div>
-                        <div
-                            class="inreview indication-icons"
-                            v-if="data.value == 'pending'"
-                        >
-                            <i class="icon-wrong"></i>
-                        </div>
-                        <div
-                            class="reject indication-icons"
-                            v-if="data.value == 'reject'"
-                        >
-                            <i class="icon-wrong"></i>
-                        </div>
-                        <div
-                            class="pending indication-icons"
-                            v-if="data.value == 'wait'"
-                        >
-                            <i class="icon-loading"></i>
-                        </div>
-                    </a>
+                    ></status-type-icon>
                 </template>
                 <template slot="hit" slot-scope="data">
-                    <div
-                        class="pending status-view"
-                        v-if="data.value == 'pending'"
-                    >
-                        <i class="icon-loading"></i>
-                        <span>Pending</span>
-                    </div>
-                    <div
-                        class="approved status-view"
-                        v-if="data.value == 'notHit'"
-                    >
-                        <i class="icon-check"></i> <span>Not Hit</span>
-                    </div>
-                    <div
-                        class="rejected status-view"
-                        v-if="data.value == 'hit'"
-                    >
-                        <i class="icon-wrong"></i> <span>Hit</span>
-                    </div>
+                    <base-status :statusType="data.value"></base-status>
                 </template>
             </b-table>
         </div>
@@ -209,10 +91,12 @@
     </div>
 </template>
 <script>
+import { mapGetters } from 'vuex'
 import customerInformation from '@/components/CustomerInfo.vue'
 import kycStatusReviewPopup from '@/components/popups/KYCStatusReviewPopup.vue'
 import cancelReviewProcessPopup from '@/components/popups/CancelReviewProcessPopup.vue'
 import screeningDetailPopup from '@/components/popups/ScreeningDetailPopup.vue'
+import statusTypeIcon from '@/components/AlertType.vue'
 
 export default {
     components: {
@@ -220,6 +104,7 @@ export default {
         kycStatusReviewPopup,
         cancelReviewProcessPopup,
         screeningDetailPopup,
+        statusTypeIcon,
     },
 
     /*
@@ -246,116 +131,10 @@ export default {
     */
     data() {
         return {
-            customerDetails: [
-                {
-                    heading: 'Basic Information',
-                    descriptions: [
-                        {
-                            title: 'Customer ID:',
-                            detail: '210345',
-                        },
-                        {
-                            title: 'First Name:',
-                            detail: 'Henk',
-                        },
-                        {
-                            title: 'Middle Name:',
-                            detail: 'John',
-                        },
-                        {
-                            title: 'Last Name:',
-                            detail: 'Fortuin',
-                        },
-                        {
-                            title: 'Gender:',
-                            detail: 'Male',
-                        },
-                        {
-                            title: 'Date of Birth:',
-                            detail: 'June 24, 1984',
-                        },
-                        {
-                            title: 'Nationality:',
-                            detail: 'American',
-                        },
-                        {
-                            title: 'Country of Residence:',
-                            detail: 'United Kingdom',
-                        },
-                    ],
-                },
-            ],
+            customerDetails: [],
 
-            fields: [
-                {
-                    key: 'full_name',
-                    label: 'FULL NAME',
-                },
-                {
-                    key: 'country',
-                    label: 'COUNTRY',
-                },
-                {
-                    key: 'associates',
-                    label: 'Associates',
-                },
-                {
-                    key: 'sanction',
-                    label: 'SANCTION',
-                    thClass: 'sanction-icon',
-                },
-                {
-                    key: 'rep',
-                    label: 'REP',
-                    thClass: 'rep-icon',
-                },
-                {
-                    key: 'enforcement',
-                    label: 'Enforcement',
-                    thClass: 'enforcement-icon',
-                },
-                {
-                    key: 'blackList',
-                    label: 'Client Black List',
-                    thClass: 'blacklist-icon',
-                },
-                {
-                    key: 'hit',
-                    label: 'HIT determination',
-                },
-            ],
-            items: [
-                {
-                    full_name: 'Henk Fortuin',
-                    country: 'United Kingdom',
-                    associates: 'N/A',
-                    sanction: 'reject',
-                    rep: 'disabled',
-                    enforcement: 'disabled',
-                    blackList: 'disabled',
-                    hit: 'notHit',
-                },
-                {
-                    full_name: 'Henk John Fortuin',
-                    country: 'United Kingdom',
-                    associates: 'Robert W & 2 more',
-                    sanction: 'reject',
-                    rep: 'pending',
-                    enforcement: 'disabled',
-                    blackList: 'disabled',
-                    hit: 'hit',
-                },
-                {
-                    full_name: 'Henk John Fortuin',
-                    country: 'United Kingdom',
-                    associates: 'N/A',
-                    sanction: 'wait',
-                    rep: 'wait',
-                    enforcement: 'wait',
-                    blackList: 'wait',
-                    hit: 'pending',
-                },
-            ],
+            fields: [],
+            items: [],
         }
     }, // End of Component > data
 
@@ -364,20 +143,35 @@ export default {
     | Component > computed
     |--------------------------------------------------------------------------
     */
-    computed: {}, // End of Component > computed
-
+    computed: {
+        ...mapGetters(['profile']),
+    }, // End of Component > computed
     /*
     |--------------------------------------------------------------------------
     | Component > methods
     |--------------------------------------------------------------------------
     */
-    methods: {}, // End of Component > methods
+    methods: {
+        initializeData() {
+            //system log table
+            let customerDetails = this.profile.screenCustomer.customerDetails //get user data from store
+            this.customerDetails = customerDetails //push data into array
+
+            let fields = this.profile.screenCustomer.fields //get user data from store
+            this.fields = fields //push data into array
+
+            let items = this.profile.screenCustomer.items //get user data from store
+            this.items = items //push data into array
+        },
+    }, // End of Component > methods
 
     /*
     |--------------------------------------------------------------------------
     | Component > mounted
     |--------------------------------------------------------------------------
     */
-    mounted() {}, // End of Component > mounted
+    mounted() {
+        this.initializeData()
+    }, // End of Component > mounted
 } // End of export default
 </script>

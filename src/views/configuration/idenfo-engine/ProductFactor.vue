@@ -42,13 +42,30 @@
                 </template>
                 <template slot="action" slot-scope="data">
                     <div class="action-review">
-                        <base-action :actionType="data.value"> </base-action>
+                        <!-- if action modify -->
+                        <base-action
+                            v-if="data.value == 'active'"
+                            icon="icon-edit"
+                            label="Modify"
+                            v-b-modal.add-product-popup
+                        ></base-action>
+                        <!-- if action archive -->
+                        <base-action
+                            v-if="data.value == 'active'"
+                            icon="icon-trash"
+                            label="Archive"
+                            v-b-modal.archive-popup
+                        ></base-action>
                     </div>
                 </template>
             </b-table>
         </div>
         <pagination></pagination>
         <add-product-popup></add-product-popup>
+        <archive-popup
+            title="Archive Product Factor"
+            description="Are you sure you want to archive this product factor? You can re-activate it later."
+        ></archive-popup>
     </div>
 </template>
 
@@ -56,10 +73,12 @@
 import { mapGetters } from 'vuex'
 import pagination from '@/components/Pagination.vue'
 import addProductPopup from '@/components/popups/AddProductPopup.vue'
+import archivePopup from '@/components/popups/ArchivePopup.vue'
 export default {
     components: {
         pagination,
         addProductPopup,
+        archivePopup,
     },
 
     /*

@@ -1,7 +1,7 @@
 <template>
     <div class="wrap-content">
         <div class="config-list" ref="listingArea">
-            <ul v-show="listVal <= 1500">
+            <ul>
                 <li
                     v-for="(list, index) in menuListing.slice(0, 8)"
                     :key="index"
@@ -10,45 +10,51 @@
                         <span>{{ list.menuLabel }}</span>
                     </router-link>
                 </li>
-                <li class="open-dropdown">
-                    <a @click="listDropdown ^= true" href="javascript:void(0);">
-                        <i class="icon-dropdown-icon"></i>
-                    </a>
-
-                    <div v-if="listDropdown" class="dropdown-open">
-                        <ul>
-                            <li
-                                v-for="(listo, index) in menuListing.slice(
-                                    8,
-                                    menuListing.length
-                                )"
-                                :key="index"
-                            >
-                                <router-link :to="listo.anchorLink">
-                                    <span>{{ listo.menuLabel }}</span>
-                                </router-link>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-            </ul>
-            <ul v-show="listVal >= 1499">
-                <li v-for="(list, index) in menuListing" :key="index">
-                    <router-link :to="list.anchorLink">
-                        <span>{{ list.menuLabel }}</span>
-                    </router-link>
-                </li>
             </ul>
         </div>
         <div class="config-card-block">
-            <router-view />
+            <div class="row">
+                <div class="col-xs-12 col-md-8">
+                    <draggable
+                        class="dragArea list-group"
+                        :list="list2"
+                        group="people"
+                        @change="log"
+                    >
+                        <div
+                            class="list-group-item"
+                            v-for="element in list2"
+                            :key="element.name"
+                        >
+                            {{ element.name }}
+                        </div>
+                    </draggable>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                    <draggable
+                        class="dragArea list-group"
+                        :list="list1"
+                        :group="{ name: 'people', pull: 'clone', put: false }"
+                        @change="log"
+                    >
+                        <div
+                            class="list-group-item"
+                            v-for="element in list1"
+                            :key="element.name"
+                        >
+                            {{ element.name }}
+                        </div>
+                    </draggable>
+                </div>
+            </div>
         </div>
     </div>
 </template>
 
 <script>
+import draggable from 'vuedraggable'
 export default {
-    components: {},
+    components: { draggable },
 
     /*
     |--------------------------------------------------------------------------
@@ -85,44 +91,17 @@ export default {
                     anchorLink: '/configuration/idenfo-engine/work',
                     menuLabel: 'Work Type',
                 },
-                {
-                    anchorLink: '/configuration/idenfo-engine/industry',
-                    menuLabel: 'Industry',
-                },
-                {
-                    anchorLink: '/configuration/idenfo-engine/product',
-                    menuLabel: 'Product',
-                },
-                {
-                    anchorLink: '/configuration/idenfo-engine/state',
-                    menuLabel: 'State',
-                },
-                {
-                    anchorLink: '/configuration/idenfo-engine/relationship',
-                    menuLabel: 'Relationship',
-                },
-                {
-                    anchorLink: '/configuration/idenfo-engine/channel',
-                    menuLabel: 'Channel Type',
-                },
-                {
-                    anchorLink: '/configuration/idenfo-engine/risk',
-                    menuLabel: 'Risk Factor',
-                },
-                {
-                    anchorLink: '/configuration/idenfo-engine/risk-rating',
-                    menuLabel: 'Risk Rating Score',
-                },
-                {
-                    anchorLink:
-                        '/configuration/idenfo-engine/document-verification-factor',
-                    menuLabel: 'Document Verification Score',
-                },
-                {
-                    anchorLink:
-                        '/configuration/idenfo-engine/name-screen-score',
-                    menuLabel: 'Name Screening Score',
-                },
+            ],
+            list1: [
+                { name: 'John', id: 1 },
+                { name: 'Joao', id: 2 },
+                { name: 'Jean', id: 3 },
+                { name: 'Gerard', id: 4 },
+            ],
+            list2: [
+                { name: 'Juan', id: 5 },
+                { name: 'Edgard', id: 6 },
+                { name: 'Johnson', id: 7 },
             ],
         }
     }, // End of Component > data

@@ -73,13 +73,30 @@
                 </template>
                 <template slot="action" slot-scope="data">
                     <div class="action-review">
-                        <base-action :actionType="data.value"> </base-action>
+                        <!-- if action modify -->
+                        <base-action
+                            v-if="data.value == 'active'"
+                            icon="icon-edit"
+                            label="Modify"
+                            v-b-modal.add-industry-popup
+                        ></base-action>
+                        <!-- if action archive -->
+                        <base-action
+                            v-if="data.value == 'active'"
+                            icon="icon-trash"
+                            label="Archive"
+                            v-b-modal.archive-popup
+                        ></base-action>
                     </div>
                 </template>
             </b-table>
         </div>
         <pagination></pagination>
         <add-industry-popup></add-industry-popup>
+        <archive-popup
+            title="Archive Industry Factor"
+            description="Are you sure you want to archive this industry factor? You can re-activate it later."
+        ></archive-popup>
     </div>
 </template>
 
@@ -87,10 +104,12 @@
 import { mapGetters } from 'vuex'
 import pagination from '@/components/Pagination.vue'
 import addIndustryPopup from '@/components/popups/AddIndustryPopup.vue'
+import archivePopup from '@/components/popups/ArchivePopup.vue'
 export default {
     components: {
         pagination,
         addIndustryPopup,
+        archivePopup,
     },
 
     /*

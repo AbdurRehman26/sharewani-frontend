@@ -45,6 +45,15 @@
         </div>
         <div class="table-section">
             <b-table :items="items" :fields="fields">
+                <template slot="alerts" slot-scope="data">
+                    <div
+                        class="bar-line"
+                        :class="data.value"
+                        v-b-tooltip.hover
+                        :title="data.value"
+                    ></div>
+                </template>
+
                 <template slot="profile" slot-scope="data">
                     <div class="profile-area">
                         <div
@@ -76,26 +85,22 @@
                     ></status-type-icon>
                 </template>
 
-                <!--  <template slot="status" slot-scope="data">
-                    <div class="status-review" v-if="data.value == 'review'">
-                        <a href="javascript:void(0);" v-b-modal.initiate-review>
-                            <i class="icon-review"></i>
-                            <span>Review</span>
-                        </a>
-                    </div>
-                    <div class="status-review" v-if="data.value == 'lock'">
-                        <router-link class="disable" to="/">
-                            <i class="icon-change-password"></i>
-                            <span>In Review</span>
-                        </router-link>
-                    </div>
-                </template> -->
-
                 <template slot="action" slot-scope="data">
-                    <base-action
-                        :actionType="data.value"
-                        v-b-modal.initiate-review-popup
-                    ></base-action>
+                    <div class="action-review">
+                        <base-action
+                            v-if="data.value == 'in review'"
+                            cssClass="disabled"
+                            icon="icon-lock_outline"
+                            label="In Review"
+                            v-b-modal.initiate-review
+                        ></base-action>
+                        <base-action
+                            v-if="data.value == 'review'"
+                            icon="icon-review"
+                            label="Review"
+                            v-b-modal.initiate-review
+                        ></base-action>
+                    </div>
                 </template>
             </b-table>
         </div>

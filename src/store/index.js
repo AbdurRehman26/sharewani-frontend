@@ -7,6 +7,7 @@ import customers from './modules/customers/'
 import systemsUsers from './modules/system-users/'
 import systemLogs from './modules/system-logs/'
 import configuration from './modules/configuration/'
+import profile from './modules/profile/'
 
 Vue.use(Vuex)
 
@@ -21,6 +22,7 @@ export default new Vuex.Store({
         systemsUsers,
         systemLogs,
         configuration,
+        profile,
     },
     strict: debug,
 })

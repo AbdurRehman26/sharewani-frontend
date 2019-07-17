@@ -38,8 +38,14 @@
                     <base-status :statusType="data.value"></base-status>
                 </template>
                 <template slot="action" slot-scope="data">
-                    <div class="action-review" v-b-modal.modify-channel-popup>
-                        <base-action :actionType="data.value"> </base-action>
+                    <div class="action-review">
+                        <!-- if action modify -->
+                        <base-action
+                            v-if="data.value == 'active'"
+                            icon="icon-edit"
+                            label="Modify"
+                            v-b-modal.modify-channel-popup
+                        ></base-action>
                     </div>
                 </template>
             </b-table>

@@ -5,18 +5,22 @@ export default {
                 {
                     key: 'user',
                     label: 'User',
+                    sortable: true,
                 },
                 {
                     key: 'module',
                     label: 'Module',
+                    sortable: true,
                 },
                 {
                     key: 'action_type',
                     label: 'Action',
+                    sortable: true,
                 },
                 {
                     key: 'time_stamp',
                     label: 'Timestamp',
+                    sortable: true,
                 },
             ],
             items: [

@@ -937,9 +937,173 @@ export default {
             ],
         },
         //customer by nationality chart
+        // customersByNationality: {
+        //     type: 'serial',
+        //     categoryField: 'category',
+        //     colors: [
+        //         '#7f1ec5',
+        //         '#00a4f2',
+        //         '#00c535',
+        //         '#eb8300',
+        //         '#f4c200',
+        //         '#c1c1c1',
+        //     ],
+        //     rotate: false,
+        //     startDuration: 1,
+        //     color: '#1B1B1E',
+        //     fontFamily: 'Proxima Nova',
+        //     fontSize: 14,
+        //     categoryAxis: {
+        //         gridPosition: 'start',
+        //         axisColor: '#1B1B1E',
+        //         gridAlpha: 1,
+        //         gridColor: '#F2F2F6',
+        //         labelRotation: 45,
+        //     },
+        //     trendLines: [],
+        //     graphs: [
+        //         {
+        //             accessibleLabel: '[[category]]: [[value]]',
+        //             balloonText: '[[category]]: [[value]]',
+        //             id: 'AmGraph-1',
+        //             title: 'graph 1',
+        //             type: 'column',
+        //             valueField: 'column-1',
+        //             fillAlphas: 1,
+        //             lineColorField: 'color',
+        //             fillColorsField: 'color',
+        //         },
+        //     ],
+        //     guides: [],
+        //     valueAxes: [
+        //         {
+        //             id: 'ValueAxis-1',
+        //             axisColor: '#1B1B1E',
+        //             gridAlpha: 1,
+        //             gridColor: '#F2F2F6',
+        //             title: '',
+        //             titleFontSize: 14,
+        //             titleRotation: 0,
+        //         },
+        //     ],
+        //     allLabels: [],
+        //     balloon: {},
+        //     titles: [
+        //         {
+        //             bold: false,
+        //             id: 'Title-1',
+        //             size: 0,
+        //             text: '',
+        //         },
+        //     ],
+        //     dataProvider: [
+        //         {
+        //             category: 'Australia',
+        //             'column-1': '300',
+        //             color: '#7f1ec5',
+        //         },
+        //         {
+        //             category: 'Bangladesh',
+        //             'column-1': '240',
+        //             color: '#00a4f2',
+        //         },
+        //         {
+        //             category: 'Belgium',
+        //             'column-1': '450',
+        //             color: '#00c535',
+        //         },
+        //         {
+        //             category: 'UK',
+        //             'column-1': '570',
+        //             color: '#eb8300',
+        //         },
+        //         {
+        //             category: 'USA',
+        //             'column-1': '640',
+        //             color: '#f4c200',
+        //         },
+        //         {
+        //             category: 'India',
+        //             'column-1': '720',
+        //             color: '#c1c1c1',
+        //         },
+        //         {
+        //             category: 'Canada',
+        //             'column-1': '655',
+        //             color: '#F8508C',
+        //         },
+        //         {
+        //             category: 'China',
+        //             'column-1': '740',
+        //             color: '#00b1a5',
+        //         },
+        //         {
+        //             category: 'Netherlands',
+        //             'column-1': '480',
+        //             color: '#84dc2b',
+        //         },
+        //         {
+        //             category: 'Greece',
+        //             'column-1': '380',
+        //             color: '#5172fa',
+        //         },
+        //         {
+        //             category: 'Japan',
+        //             'column-1': '290',
+        //             color: '#798bb0',
+        //         },
+        //         {
+        //             category: 'Mexico',
+        //             'column-1': '180',
+        //             color: '#b31493',
+        //         },
+        //         {
+        //             category: 'Pakistan',
+        //             'column-1': '150',
+        //             color: '#7000f7',
+        //         },
+        //         {
+        //             category: 'Russia',
+        //             'column-1': '541',
+        //             color: '#4a005e',
+        //         },
+        //         {
+        //             category: 'Turkey',
+        //             'column-1': '321',
+        //             color: '#a388b0',
+        //         },
+        //         {
+        //             category: 'Malaysia',
+        //             'column-1': '487',
+        //             color: '#770d42',
+        //         },
+        //         {
+        //             category: 'Lebnan',
+        //             'column-1': '380',
+        //             color: '#388b79',
+        //         },
+        //         {
+        //             category: 'Japan',
+        //             'column-1': '630',
+        //             color: '#fc7400',
+        //         },
+        //         {
+        //             category: 'Sweden',
+        //             'column-1': '420',
+        //             color: '#ff87e6',
+        //         },
+        //         {
+        //             category: 'Germany',
+        //             'column-1': '370',
+        //             color: '#f8e08e',
+        //         },
+        //     ],
+        // },
+
+        //Customers by Nationality
         customersByNationality: {
-            type: 'serial',
-            categoryField: 'category',
+            type: 'pie',
+            innerRadius: '80%',
             colors: [
                 '#7f1ec5',
                 '#00a4f2',
@@ -948,160 +1112,142 @@ export default {
                 '#f4c200',
                 '#c1c1c1',
             ],
-            rotate: false,
-            startDuration: 1,
+            labelsEnabled: false,
+            pullOutRadius: '0%',
+            balloonText: '[[title]]: <b>[[value]]</b> [[percents]]%',
+            marginBottom: 0,
+            marginTop: 0,
+            outlineAlpha: 1,
+            outlineThickness: 2,
+            titleField: 'category',
+            valueField: 'column-1',
             color: '#1B1B1E',
             fontFamily: 'Proxima Nova',
             fontSize: 14,
-            categoryAxis: {
-                gridPosition: 'start',
-                axisColor: '#1B1B1E',
-                gridAlpha: 1,
-                gridColor: '#F2F2F6',
-                labelRotation: 45,
-            },
-            trendLines: [],
-            graphs: [
-                {
-                    accessibleLabel: '[[category]]: [[value]]',
-                    balloonText: '[[category]]: [[value]]',
-                    id: 'AmGraph-1',
-                    title: 'graph 1',
-                    type: 'column',
-                    valueField: 'column-1',
-                    fillAlphas: 1,
-                    lineColorField: 'color',
-                    fillColorsField: 'color',
-                },
-            ],
-            guides: [],
-            valueAxes: [
-                {
-                    id: 'ValueAxis-1',
-                    axisColor: '#1B1B1E',
-                    gridAlpha: 1,
-                    gridColor: '#F2F2F6',
-                    title: '',
-                    titleFontSize: 14,
-                    titleRotation: 0,
-                },
-            ],
             allLabels: [],
-            balloon: {},
-            titles: [
-                {
-                    bold: false,
-                    id: 'Title-1',
-                    size: 0,
-                    text: '',
-                },
-            ],
+            balloon: {
+                color: '#1B1B1E',
+            },
+            legend: {
+                enabled: false,
+                align: 'center',
+                markerBorderAlpha: 0.27,
+                markerBorderThickness: 0,
+                markerCorner: 12,
+                markerLabelGap: 12,
+                markerSize: 20,
+                spacing: 8,
+                labelText: '[[title]]',
+                valueText: '[[percents]]%',
+                verticalGap: 20,
+            },
+            titles: [],
             dataProvider: [
                 {
-                    category: 'Australia',
-                    'column-1': '300',
-                    color: '#7f1ec5',
+                    category: '18 - 24',
+                    'column-1': '800',
                 },
                 {
-                    category: 'Bangladesh',
-                    'column-1': '240',
-                    color: '#00a4f2',
+                    category: '25 - 34',
+                    'column-1': '600',
                 },
                 {
-                    category: 'Belgium',
-                    'column-1': '450',
-                    color: '#00c535',
+                    category: '45 - 54',
+                    'column-1': '200',
                 },
                 {
-                    category: 'UK',
-                    'column-1': '570',
-                    color: '#eb8300',
+                    category: '55 - 64',
+                    'column-1': '950',
                 },
                 {
-                    category: 'USA',
-                    'column-1': '640',
-                    color: '#f4c200',
+                    category: '65 - 74',
+                    'column-1': '400',
                 },
                 {
-                    category: 'India',
-                    'column-1': '720',
-                    color: '#c1c1c1',
-                },
-                {
-                    category: 'Canada',
-                    'column-1': '655',
-                    color: '#F8508C',
-                },
-                {
-                    category: 'China',
-                    'column-1': '740',
-                    color: '#00b1a5',
-                },
-                {
-                    category: 'Netherlands',
-                    'column-1': '480',
-                    color: '#84dc2b',
-                },
-                {
-                    category: 'Greece',
-                    'column-1': '380',
-                    color: '#5172fa',
-                },
-                {
-                    category: 'Japan',
-                    'column-1': '290',
-                    color: '#798bb0',
-                },
-                {
-                    category: 'Mexico',
-                    'column-1': '180',
-                    color: '#b31493',
-                },
-                {
-                    category: 'Pakistan',
-                    'column-1': '150',
-                    color: '#7000f7',
-                },
-                {
-                    category: 'Russia',
-                    'column-1': '541',
-                    color: '#4a005e',
-                },
-                {
-                    category: 'Turkey',
-                    'column-1': '321',
-                    color: '#a388b0',
-                },
-                {
-                    category: 'Malaysia',
-                    'column-1': '487',
-                    color: '#770d42',
-                },
-                {
-                    category: 'Lebnan',
-                    'column-1': '380',
-                    color: '#388b79',
-                },
-                {
-                    category: 'Japan',
-                    'column-1': '630',
-                    color: '#fc7400',
-                },
-                {
-                    category: 'Sweden',
-                    'column-1': '420',
-                    color: '#ff87e6',
-                },
-                {
-                    category: 'Germany',
-                    'column-1': '370',
-                    color: '#f8e08e',
+                    category: '75+',
+                    'column-1': '200',
                 },
             ],
         },
+
+        //Customers by Country Residence
+        customersByResidence: {
+            type: 'pie',
+            innerRadius: '80%',
+            colors: [
+                '#7f1ec5',
+                '#00a4f2',
+                '#00c535',
+                '#eb8300',
+                '#f4c200',
+                '#c1c1c1',
+            ],
+            labelsEnabled: false,
+            pullOutRadius: '0%',
+            balloonText: '[[title]]: <b>[[value]]</b> [[percents]]%',
+            marginBottom: 0,
+            marginTop: 0,
+            outlineAlpha: 1,
+            outlineThickness: 2,
+            titleField: 'category',
+            valueField: 'column-1',
+            color: '#1B1B1E',
+            fontFamily: 'Proxima Nova',
+            fontSize: 14,
+            allLabels: [],
+            balloon: {
+                color: '#1B1B1E',
+            },
+            legend: {
+                enabled: false,
+                align: 'center',
+                markerBorderAlpha: 0.27,
+                markerBorderThickness: 0,
+                markerCorner: 12,
+                markerLabelGap: 12,
+                markerSize: 20,
+                spacing: 8,
+                labelText: '[[title]]',
+                valueText: '[[percents]]%',
+                verticalGap: 20,
+            },
+            titles: [],
+            dataProvider: [
+                {
+                    category: '18 - 24',
+                    'column-1': '800',
+                },
+                {
+                    category: '25 - 34',
+                    'column-1': '600',
+                },
+                {
+                    category: '45 - 54',
+                    'column-1': '200',
+                },
+                {
+                    category: '55 - 64',
+                    'column-1': '950',
+                },
+                {
+                    category: '65 - 74',
+                    'column-1': '400',
+                },
+                {
+                    category: '75+',
+                    'column-1': '200',
+                },
+            ],
+        },
+
         //dashboard alerts table
         alertsTable: {
             fields: [
+                {
+                    key: 'alerts',
+                    label: '',
+                    class: 'p-r-0',
+                },
                 {
                     key: 'profile',
                     label: '',
@@ -1109,14 +1255,17 @@ export default {
                 {
                     key: 'customer',
                     label: 'CUSTOMER',
+                    sortable: true,
                 },
                 {
                     key: 'full_name',
                     label: 'FULL NAME',
+                    sortable: true,
                 },
                 {
                     key: 'nationality',
                     label: 'NATIONALITY',
+                    sortable: true,
                 },
                 {
                     key: 'name_screening',
@@ -1139,10 +1288,12 @@ export default {
                 {
                     key: 'action',
                     label: 'STATUS',
+                    sortable: true,
                 },
             ],
             items: [
                 {
+                    alerts: 'high',
                     profile: 'member-1.png',
                     customer: '1250976',
                     full_name: 'Zeng Wen',
@@ -1162,15 +1313,10 @@ export default {
                             cssClass: 'icon-cross-with-circle pending',
                         },
                     ],
-                    action: [
-                        {
-                            text: 'In Review',
-                            icon: 'icon-lock_outline',
-                            cssClass: 'disabled',
-                        },
-                    ],
+                    action: 'in review',
                 },
                 {
+                    alerts: 'high',
                     profile: 'member-2.png',
                     customer: '1250976',
                     full_name: 'Edward Lindgren',
@@ -1190,14 +1336,10 @@ export default {
                             cssClass: 'icon-cross-with-circle pending',
                         },
                     ],
-                    action: [
-                        {
-                            text: 'Review',
-                            icon: 'icon-review',
-                        },
-                    ],
+                    action: 'review',
                 },
                 {
+                    alerts: 'medium',
                     profile: 'member-3.png',
                     customer: '3282345',
                     full_name: 'Christian Russell',
@@ -1217,15 +1359,10 @@ export default {
                             cssClass: 'icon-cross-with-circle pending',
                         },
                     ],
-                    action: [
-                        {
-                            text: 'In Review',
-                            icon: 'icon-lock_outline',
-                            cssClass: 'disabled',
-                        },
-                    ],
+                    action: 'in review',
                 },
                 {
+                    alerts: 'high',
                     profile: 'member-4.png',
                     customer: '3312353',
                     full_name: 'Fua Lamba',
@@ -1245,15 +1382,10 @@ export default {
                             cssClass: 'icon-cross-with-circle danger',
                         },
                     ],
-                    action: [
-                        {
-                            text: 'In Review',
-                            icon: 'icon-lock_outline',
-                            cssClass: 'disabled',
-                        },
-                    ],
+                    action: 'in review',
                 },
                 {
+                    alerts: 'medium',
                     profile: 'member-5.png',
                     customer: '1250976',
                     full_name: 'Alexander Ljung',
@@ -1273,15 +1405,10 @@ export default {
                             cssClass: 'icon-cross-with-circle pending',
                         },
                     ],
-                    action: [
-                        {
-                            text: 'In Review',
-                            icon: 'icon-lock_outline',
-                            cssClass: 'disabled',
-                        },
-                    ],
+                    action: 'in review',
                 },
                 {
+                    alerts: 'high',
                     profile: 'member-6.png',
                     customer: '2489573',
                     full_name: 'Chukwudi Udo',
@@ -1301,14 +1428,10 @@ export default {
                             cssClass: 'icon-cross-with-circle danger',
                         },
                     ],
-                    action: [
-                        {
-                            text: 'Review',
-                            icon: 'icon-review',
-                        },
-                    ],
+                    action: 'review',
                 },
                 {
+                    alerts: 'medium',
                     profile: 'member-7.png',
                     customer: '3312353',
                     full_name: 'Linzell Bowman',
@@ -1328,14 +1451,10 @@ export default {
                             cssClass: 'icon-cross-with-circle danger',
                         },
                     ],
-                    action: [
-                        {
-                            text: 'Review',
-                            icon: 'icon-review',
-                        },
-                    ],
+                    action: 'review',
                 },
                 {
+                    alerts: 'medium',
                     profile: 'member-8.png',
                     customer: '3282345',
                     full_name: 'Vương Mộng Nhi',
@@ -1355,14 +1474,10 @@ export default {
                             cssClass: 'icon-cross-with-circle ',
                         },
                     ],
-                    action: [
-                        {
-                            text: 'Review',
-                            icon: 'icon-review',
-                        },
-                    ],
+                    action: 'review',
                 },
                 {
+                    alerts: 'high',
                     profile: 'member-9.png',
                     customer: '2321345',
                     full_name: 'Lew Silverton',
@@ -1382,14 +1497,10 @@ export default {
                             cssClass: 'icon-cross-with-circle ',
                         },
                     ],
-                    action: [
-                        {
-                            text: 'Review',
-                            icon: 'icon-review',
-                        },
-                    ],
+                    action: 'review',
                 },
                 {
+                    alerts: 'high',
                     profile: 'member-10.png',
                     customer: '2223535',
                     full_name: 'Xun Guiying',
@@ -1409,12 +1520,7 @@ export default {
                             cssClass: 'icon-cross-with-circle ',
                         },
                     ],
-                    action: [
-                        {
-                            text: 'Review',
-                            icon: 'icon-review',
-                        },
-                    ],
+                    action: 'review',
                 },
             ],
         },

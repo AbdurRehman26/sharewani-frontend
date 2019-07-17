@@ -47,25 +47,7 @@
         <div class="table-section risk-factor-table">
             <b-table :items="items" :fields="fields">
                 <template slot="risk_level" slot-scope="data">
-                    <div
-                        class="pending status-view"
-                        v-if="data.value == 'pending'"
-                    >
-                        <i class="icon-medium-risk"></i>
-                        <span>Medium Risk</span>
-                    </div>
-                    <div
-                        class="approved status-view"
-                        v-if="data.value == 'approved'"
-                    >
-                        <i class="icon-low-risk"></i> <span>Low Risk</span>
-                    </div>
-                    <div
-                        class="rejected status-view"
-                        v-if="data.value == 'rejected'"
-                    >
-                        <i class="icon-high-risk"></i> <span>High Risk</span>
-                    </div>
+                    <base-status :statusType="data.value"></base-status>
                 </template>
             </b-table>
         </div>
@@ -73,25 +55,7 @@
         <div class="table-section">
             <b-table :items="overrideList" :fields="overrideFields">
                 <template slot="risk_level" slot-scope="data">
-                    <div
-                        class="pending status-view"
-                        v-if="data.value == 'pending'"
-                    >
-                        <i class="icon-medium-risk"></i>
-                        <span>Medium Risk</span>
-                    </div>
-                    <div
-                        class="approved status-view"
-                        v-if="data.value == 'approved'"
-                    >
-                        <i class="icon-low-risk"></i> <span>Low Risk</span>
-                    </div>
-                    <div
-                        class="rejected status-view"
-                        v-if="data.value == 'rejected'"
-                    >
-                        <i class="icon-high-risk"></i> <span>High Risk</span>
-                    </div>
+                    <base-status :statusType="data.value"></base-status>
                 </template>
             </b-table>
         </div>
@@ -101,6 +65,7 @@
     </div>
 </template>
 <script>
+import { mapGetters } from 'vuex'
 import customerInformation from '@/components/CustomerInfo.vue'
 import kycStatusReviewPopup from '@/components/popups/KYCStatusReviewPopup.vue'
 import cancelReviewProcessPopup from '@/components/popups/CancelReviewProcessPopup.vue'
@@ -134,143 +99,14 @@ export default {
     */
     data() {
         return {
-            customerDetails: [
-                {
-                    heading: 'Basic Information',
-                    descriptions: [
-                        {
-                            title: 'Customer ID:',
-                            detail: '210345',
-                        },
-                        {
-                            title: 'First Name:',
-                            detail: 'Henk',
-                        },
-                        {
-                            title: 'Middle Name:',
-                            detail: 'John',
-                        },
-                        {
-                            title: 'Last Name:',
-                            detail: 'Fortuin',
-                        },
-                        {
-                            title: 'Gender:',
-                            detail: 'Male',
-                        },
-                        {
-                            title: 'Date of Birth:',
-                            detail: 'June 24, 1984',
-                        },
-                        {
-                            title: 'Nationality:',
-                            detail: 'American',
-                        },
-                        {
-                            title: 'Country of Residence:',
-                            detail: 'United Kingdom',
-                        },
-                    ],
-                },
-            ],
+            customerDetails: [],
 
-            fields: [
-                {
-                    key: 'risk_factor',
-                    label: 'RISK FACTOR',
-                },
-                {
-                    key: 'score',
-                    label: 'SCORE',
-                    class: 'text-center',
-                },
-                {
-                    key: 'risk_level',
-                    label: 'Risk Level',
-                    class: 'text-center',
-                },
-            ],
-            items: [
-                {
-                    risk_factor: 'Address in High Risk Country',
-                    score: '7.5',
-                    risk_level: 'pending',
-                },
-                {
-                    risk_factor: 'Nationality',
-                    score: '5',
-                    risk_level: 'pending',
-                },
-                {
-                    risk_factor: 'Work Status',
-                    score: '5',
-                    risk_level: 'pending',
-                },
-                {
-                    risk_factor: 'Length of Relationship',
-                    score: '5',
-                    risk_level: 'rejected',
-                },
-                {
-                    risk_factor: 'Channel Type',
-                    score: '5',
-                    risk_level: 'rejected',
-                },
-                {
-                    risk_factor: 'Product',
-                    score: '10',
-                    risk_level: 'rejected',
-                },
-                {
-                    risk_factor: 'PEP Hit',
-                    score: '15',
-                    risk_level: 'rejected',
-                },
-                {
-                    risk_factor: 'Enforcement Hit',
-                    score: '0',
-                    risk_level: 'approved',
-                },
-                {
-                    risk_factor: 'Client Blacklist Hit',
-                    score: '0',
-                    risk_level: 'approved',
-                },
-                {
-                    risk_factor: 'Overall',
-                    score: '52.5',
-                    risk_level: 'pending',
-                },
-            ],
+            fields: [],
+            items: [],
 
-            overrideFields: [
-                {
-                    key: 'risk_factor_override',
-                    label: 'RISK FACTOR OVERRIDE',
-                },
-                {
-                    key: 'override_to',
-                    label: 'Override To',
-                },
-                {
-                    key: 'risk_level',
-                    label: 'Risk Level',
-                    class: 'text-center',
-                },
-            ],
+            overrideFields: [],
 
-            overrideList: [
-                {
-                    risk_factor_override: 'Sanction Hit',
-                    override_to: 'Sanctioned',
-                    risk_level: 'rejected',
-                },
-                {
-                    risk_factor_override: 'Document Verification',
-                    override_to: 'High',
-                    risk_level: 'approved',
-                },
-            ],
+            overrideList: [],
         }
     }, // End of Component > data
 
@@ -279,20 +115,41 @@ export default {
     | Component > computed
     |--------------------------------------------------------------------------
     */
-    computed: {}, // End of Component > computed
-
+    computed: {
+        ...mapGetters(['profile']),
+    }, // End of Component > computed
     /*
     |--------------------------------------------------------------------------
     | Component > methods
     |--------------------------------------------------------------------------
     */
-    methods: {}, // End of Component > methods
+    methods: {
+        initializeData() {
+            //system log table
+            let customerDetails = this.profile.kycData.customerDetails //get user data from store
+            this.customerDetails = customerDetails //push data into array
+
+            let fields = this.profile.kycData.fields //get user data from store
+            this.fields = fields //push data into array
+
+            let items = this.profile.kycData.items //get user data from store
+            this.items = items //push data into array
+
+            let overrideFields = this.profile.kycData.overrideFields //get user data from store
+            this.overrideFields = overrideFields //push data into array
+
+            let overrideList = this.profile.kycData.overrideList //get user data from store
+            this.overrideList = overrideList //push data into array
+        },
+    }, // End of Component > methods
 
     /*
     |--------------------------------------------------------------------------
     | Component > mounted
     |--------------------------------------------------------------------------
     */
-    mounted() {}, // End of Component > mounted
+    mounted() {
+        this.initializeData()
+    }, // End of Component > mounted
 } // End of export default
 </script>

@@ -133,7 +133,7 @@ export default new Router({
                 import(/* webpackChunkName: "system-logs" */ '@/views/system-logs/Main.vue'),
         },
         {
-            path: '/customers',
+            path: '/customer-profiles',
             name: 'profile',
             // route level code-splitting
             // this generates a separate chunk (about.[hash].js) for this route
@@ -306,6 +306,12 @@ export default new Router({
                     name: 'branding',
                     component: () =>
                         import(/* webpackChunkName: "customer" */ './views/configuration/Branding.vue'),
+                },
+                {
+                    path: '/configuration/from-builder/',
+                    name: 'branding',
+                    component: () =>
+                        import(/* webpackChunkName: "builder" */ './views/configuration/FormBuilder.vue'),
                 },
             ],
         },
