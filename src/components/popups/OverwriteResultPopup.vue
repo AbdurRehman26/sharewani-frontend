@@ -1,7 +1,7 @@
 <template>
     <div>
         <b-modal
-            id="overwrite-result"
+            id="overwrite-result-popup"
             title="Manually Overwrite Result"
             size="sm"
             okTitle="Submit"
@@ -15,11 +15,11 @@
             <b-form>
                 <b-form-group
                     id="input-group-1"
-                    class="kyc-status-radio overwrite-radio mb-0"
+                    class="kyc-status-radio overwrite-radio"
                     label="KYC Status"
                     label-for="kyc-status"
                 >
-                    <b-form-group class="mb-0">
+                    <b-form-group>
                         <b-form-radio-group
                             v-model="result"
                             :options="form.result"

@@ -15,7 +15,7 @@
                         </li>
                         <li>
                             <b-button
-                                v-b-modal.cancel-review-process
+                                v-b-modal.cancel-review-process-popup
                                 type="button"
                                 variant="link font-semibold"
                             >
@@ -24,7 +24,7 @@
                         </li>
                         <li>
                             <b-button
-                                v-b-modal.kyc-status-review
+                                v-b-modal.kyc-status-review-popup
                                 type="button"
                                 variant="primary"
                             >
@@ -49,7 +49,10 @@
         <div class="table-section">
             <b-table :items="items" :fields="fields">
                 <template slot="sanction" slot-scope="data">
-                    <a href="javascript:void(0);" v-b-modal.screening-detail>
+                    <a
+                        href="javascript:void(0);"
+                        v-b-modal.screening-detail-popup
+                    >
                         <div
                             class="pending indication-icons"
                             v-if="data.value == 'disabled'"
@@ -77,7 +80,10 @@
                     </a>
                 </template>
                 <template slot="rep" slot-scope="data">
-                    <a href="javascript:void(0);" v-b-modal.screening-detail>
+                    <a
+                        href="javascript:void(0);"
+                        v-b-modal.screening-detail-popup
+                    >
                         <div
                             class="pending indication-icons"
                             v-if="data.value == 'disabled'"
@@ -105,7 +111,10 @@
                     </a>
                 </template>
                 <template slot="enforcement" slot-scope="data">
-                    <a href="javascript:void(0);" v-b-modal.screening-detail>
+                    <a
+                        href="javascript:void(0);"
+                        v-b-modal.screening-detail-popup
+                    >
                         <div
                             class="pending indication-icons"
                             v-if="data.value == 'disabled'"
@@ -133,7 +142,10 @@
                     </a>
                 </template>
                 <template slot="blackList" slot-scope="data">
-                    <a href="javascript:void(0);" v-b-modal.screening-detail>
+                    <a
+                        href="javascript:void(0);"
+                        v-b-modal.screening-detail-popup
+                    >
                         <div
                             class="pending indication-icons"
                             v-if="data.value == 'disabled'"
@@ -191,23 +203,23 @@
                 <img :src="require('@/assets/images/dummy/google-pic.png')" />
             </div>
         </div>
-        <cancel-review-process></cancel-review-process>
-        <kyc-status-review></kyc-status-review>
-        <screening-detail></screening-detail>
+        <cancel-review-process-popup></cancel-review-process-popup>
+        <kyc-status-review-popup></kyc-status-review-popup>
+        <screening-detail-popup></screening-detail-popup>
     </div>
 </template>
 <script>
 import customerInformation from '@/components/CustomerInfo.vue'
-import kycStatusReview from '@/components/popups/KYCStatusReviewPopup.vue'
-import cancelReviewProcess from '@/components/popups/CancelReviewProcessPopup.vue'
-import screeningDetail from '@/components/popups/ScreeningDetailPopup.vue'
+import kycStatusReviewPopup from '@/components/popups/KYCStatusReviewPopup.vue'
+import cancelReviewProcessPopup from '@/components/popups/CancelReviewProcessPopup.vue'
+import screeningDetailPopup from '@/components/popups/ScreeningDetailPopup.vue'
 
 export default {
     components: {
         customerInformation,
-        kycStatusReview,
-        cancelReviewProcess,
-        screeningDetail,
+        kycStatusReviewPopup,
+        cancelReviewProcessPopup,
+        screeningDetailPopup,
     },
 
     /*
