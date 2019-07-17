@@ -133,7 +133,7 @@ export default new Router({
                 import(/* webpackChunkName: "system-logs" */ '@/views/system-logs/Main.vue'),
         },
         {
-            path: '/customers',
+            path: '/customer-profiles',
             name: 'profile',
             // route level code-splitting
             // this generates a separate chunk (about.[hash].js) for this route

@@ -43,7 +43,13 @@ export default {
                     nationality: 'Indian',
                     residence: 'United Kingdom',
                     registration_date: 'Jun 10, 2019 6:35 p.m.',
-                    status: 'pending',
+                    status: [
+                        {
+                            cssClass: 'pending',
+                            icon: 'icon-loading',
+                            label: 'Pending',
+                        },
+                    ],
                     action: [
                         {
                             text: 'View Profile',
@@ -58,7 +64,13 @@ export default {
                     nationality: 'Pakistani',
                     residence: 'Pakistan',
                     registration_date: 'Jun 10, 2019 10:30 p.m.',
-                    status: 'approved',
+                    status: [
+                        {
+                            cssClass: 'approved',
+                            icon: 'icon-check',
+                            label: 'Approved',
+                        },
+                    ],
                     action: [
                         {
                             text: 'View Profile',
@@ -73,7 +85,13 @@ export default {
                     nationality: 'British',
                     residence: 'United Kingdom',
                     registration_date: 'Jun 9, 2019 10:45 a.m.',
-                    status: 'rejected',
+                    status: [
+                        {
+                            cssClass: 'rejected',
+                            icon: 'icon-wrong',
+                            label: 'Rejected',
+                        },
+                    ],
                     action: [
                         {
                             text: 'View Profile',
@@ -88,7 +106,13 @@ export default {
                     nationality: 'American',
                     residence: 'United Kingdom',
                     registration_date: 'Jun 9, 2019 9:30 p.m.',
-                    status: 'approved',
+                    status: [
+                        {
+                            cssClass: 'approved',
+                            icon: 'icon-check',
+                            label: 'Approved',
+                        },
+                    ],
                     action: [
                         {
                             text: 'View Profile',
@@ -103,7 +127,13 @@ export default {
                     nationality: 'Algerian',
                     residence: 'United Kingdom',
                     registration_date: 'Jun 9, 2019 9:10 p.m.',
-                    status: 'approved',
+                    status: [
+                        {
+                            cssClass: 'approved',
+                            icon: 'icon-check',
+                            label: 'Approved',
+                        },
+                    ],
                     action: [
                         {
                             text: 'View Profile',
@@ -118,7 +148,13 @@ export default {
                     nationality: 'Belgian',
                     residence: 'United Kingdom',
                     registration_date: 'Jun 8, 2019 6:45 p.m.',
-                    status: 'approved',
+                    status: [
+                        {
+                            cssClass: 'approved',
+                            icon: 'icon-check',
+                            label: 'Approved',
+                        },
+                    ],
                     action: [
                         {
                             text: 'View Profile',
@@ -133,7 +169,13 @@ export default {
                     nationality: 'Colombian',
                     residence: 'United Kingdom',
                     registration_date: 'Jun 8, 2019 4:24 p.m.',
-                    status: 'rejected',
+                    status: [
+                        {
+                            cssClass: 'rejected',
+                            icon: 'icon-wrong',
+                            label: 'Rejected',
+                        },
+                    ],
                     action: [
                         {
                             text: 'View Profile',
@@ -148,7 +190,13 @@ export default {
                     nationality: 'British',
                     residence: 'Pakistan',
                     registration_date: 'Jun 8, 2019 3:10 p.m.',
-                    status: 'pending',
+                    status: [
+                        {
+                            cssClass: 'pending',
+                            icon: 'icon-loading',
+                            label: 'Pending',
+                        },
+                    ],
                     action: [
                         {
                             text: 'View Profile',
@@ -163,7 +211,13 @@ export default {
                     nationality: 'Indian',
                     residence: 'Indian',
                     registration_date: 'Jun 8, 2019 11:32 p.m.',
-                    status: 'approved',
+                    status: [
+                        {
+                            cssClass: 'approved',
+                            icon: 'icon-check',
+                            label: 'Approved',
+                        },
+                    ],
                     action: [
                         {
                             text: 'View Profile',
@@ -178,7 +232,13 @@ export default {
                     nationality: 'Pakistani',
                     residence: 'Pakistan',
                     registration_date: 'Jun 7, 2019 5:45 p.m.',
-                    status: 'approved',
+                    status: [
+                        {
+                            cssClass: 'approved',
+                            icon: 'icon-check',
+                            label: 'Approved',
+                        },
+                    ],
                     action: [
                         {
                             text: 'View Profile',
