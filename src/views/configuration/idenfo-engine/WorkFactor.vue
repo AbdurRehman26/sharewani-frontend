@@ -33,20 +33,20 @@
             <b-table :items="items" :fields="fields">
                 <template slot="action" slot-scope="data">
                     <div class="action-review">
-                        <a
-                            href="/"
-                            v-for="(list, index) in data.value"
-                            :key="index"
-                        >
-                            <div v-if="list.text === 'Modify'">
-                                <i class="icon-edit"></i>
-                                <span>{{ list.text }}</span>
-                            </div>
-                            <div v-if="list.text === 'Archive'">
-                                <i class="icon-trash"></i>
-                                <span>{{ list.text }}</span>
-                            </div>
-                        </a>
+                        <!-- if action modify -->
+                        <base-action
+                            v-if="data.value == 'active'"
+                            icon="icon-edit"
+                            label="Modify"
+                            v-b-modal.initiate-review
+                        ></base-action>
+                        <!-- if action archive -->
+                        <base-action
+                            v-if="data.value == 'active'"
+                            icon="icon-trash"
+                            label="Archive"
+                            v-b-modal.initiate-review
+                        ></base-action>
                     </div>
                 </template>
             </b-table>
