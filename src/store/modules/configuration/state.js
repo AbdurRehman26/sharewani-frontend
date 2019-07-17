@@ -43,16 +43,7 @@ export default {
                             },
                         ],
                         isSanction: 'No',
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                            {
-                                text: 'Archive',
-                                icon: 'icon-trash',
-                            },
-                        ],
+                        action: 'active',
                     },
                     {
                         countrycode: 'AX',
@@ -65,16 +56,7 @@ export default {
                             },
                         ],
                         isSanction: 'No',
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                            {
-                                text: 'Archive',
-                                icon: 'icon-trash',
-                            },
-                        ],
+                        action: 'active',
                     },
                     {
                         countrycode: 'AL',
@@ -87,16 +69,7 @@ export default {
                             },
                         ],
                         isSanction: 'No',
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                            {
-                                text: 'Archive',
-                                icon: 'icon-trash',
-                            },
-                        ],
+                        action: 'active',
                     },
                     {
                         countrycode: 'DZ',
@@ -109,16 +82,7 @@ export default {
                             },
                         ],
                         isSanction: 'No',
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                            {
-                                text: 'Archive',
-                                icon: 'icon-trash',
-                            },
-                        ],
+                        action: 'active',
                     },
                     {
                         countrycode: 'AS',
@@ -131,16 +95,7 @@ export default {
                             },
                         ],
                         isSanction: 'No',
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                            {
-                                text: 'Archive',
-                                icon: 'icon-trash',
-                            },
-                        ],
+                        action: 'active',
                     },
                     {
                         countrycode: 'AD',
@@ -153,16 +108,7 @@ export default {
                             },
                         ],
                         isSanction: 'No',
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                            {
-                                text: 'Archive',
-                                icon: 'icon-trash',
-                            },
-                        ],
+                        action: 'active',
                     },
                     {
                         countrycode: 'AO',
@@ -175,16 +121,7 @@ export default {
                             },
                         ],
                         isSanction: 'No',
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                            {
-                                text: 'Archive',
-                                icon: 'icon-trash',
-                            },
-                        ],
+                        action: 'active',
                     },
                     {
                         countrycode: 'AI',
@@ -197,16 +134,7 @@ export default {
                             },
                         ],
                         isSanction: 'No',
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                            {
-                                text: 'Archive',
-                                icon: 'icon-trash',
-                            },
-                        ],
+                        action: 'active',
                     },
                     {
                         countrycode: 'AQ',
@@ -219,16 +147,7 @@ export default {
                             },
                         ],
                         isSanction: 'No',
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                            {
-                                text: 'Archive',
-                                icon: 'icon-trash',
-                            },
-                        ],
+                        action: 'active',
                     },
                     {
                         countrycode: 'AG',
@@ -241,16 +160,7 @@ export default {
                             },
                         ],
                         isSanction: 'No',
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                            {
-                                text: 'Archive',
-                                icon: 'icon-trash',
-                            },
-                        ],
+                        action: 'active',
                     },
                 ],
             },
@@ -276,100 +186,37 @@ export default {
                     {
                         worktypecode: 1,
                         worktypetitle: 'Self-Employed / Business Owner',
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                            {
-                                text: 'Archive',
-                                icon: 'icon-trash',
-                            },
-                        ],
+                        action: 'active',
                     },
                     {
                         worktypecode: 2,
                         worktypetitle: 'Salaried-Executive Level',
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                            {
-                                text: 'Archive',
-                                icon: 'icon-trash',
-                            },
-                        ],
+                        action: 'active',
                     },
                     {
                         worktypecode: 3,
                         worktypetitle: 'Salaried-General',
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                            {
-                                text: 'Archive',
-                                icon: 'icon-trash',
-                            },
-                        ],
+                        action: 'active',
                     },
                     {
                         worktypecode: 4,
                         worktypetitle: 'Homemaker',
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                            {
-                                text: 'Archive',
-                                icon: 'icon-trash',
-                            },
-                        ],
+                        action: 'active',
                     },
                     {
                         worktypecode: 5,
                         worktypetitle: 'Student',
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                            {
-                                text: 'Archive',
-                                icon: 'icon-trash',
-                            },
-                        ],
+                        action: 'active',
                     },
                     {
                         worktypecode: 6,
                         worktypetitle: 'Unemployed',
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                            {
-                                text: 'Archive',
-                                icon: 'icon-trash',
-                            },
-                        ],
+                        action: 'active',
                     },
                     {
                         worktypecode: 7,
                         worktypetitle: 'Retired',
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                            {
-                                text: 'Archive',
-                                icon: 'icon-trash',
-                            },
-                        ],
+                        action: 'active',
                     },
                 ],
             },
@@ -402,155 +249,65 @@ export default {
                         industrycode: 1,
                         industrytitle: 'Agriculture, forestry and fishing',
                         worktypeimpact: 'View Work Type Impact',
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                            {
-                                text: 'Archive',
-                                icon: 'icon-trash',
-                            },
-                        ],
+                        action: 'active',
                     },
                     {
                         industrycode: 2,
                         industrytitle: 'Mining and quarrying',
                         worktypeimpact: 'View Work Type Impact',
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                            {
-                                text: 'Archive',
-                                icon: 'icon-trash',
-                            },
-                        ],
+                        action: 'active',
                     },
                     {
                         industrycode: 3,
                         industrytitle: 'Manufacturing',
                         worktypeimpact: 'View Work Type Impact',
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                            {
-                                text: 'Archive',
-                                icon: 'icon-trash',
-                            },
-                        ],
+                        action: 'active',
                     },
                     {
                         industrycode: 4,
                         industrytitle:
                             'Electricity, gas, steam and air conditioning supply',
                         worktypeimpact: 'View Work Type Impact',
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                            {
-                                text: 'Archive',
-                                icon: 'icon-trash',
-                            },
-                        ],
+                        action: 'active',
                     },
                     {
                         industrycode: 5,
                         industrytitle:
                             'Water supply; sewerage, waste management',
                         worktypeimpact: 'View Work Type Impact',
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                            {
-                                text: 'Archive',
-                                icon: 'icon-trash',
-                            },
-                        ],
+                        action: 'active',
                     },
                     {
                         industrycode: 6,
                         industrytitle: 'Construction',
                         worktypeimpact: 'View Work Type Impact',
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                            {
-                                text: 'Archive',
-                                icon: 'icon-trash',
-                            },
-                        ],
+                        action: 'active',
                     },
                     {
                         industrycode: 7,
                         industrytitle:
                             'Wholesale and retail trade; repair of motor vehicles',
                         worktypeimpact: 'View Work Type Impact',
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                            {
-                                text: 'Archive',
-                                icon: 'icon-trash',
-                            },
-                        ],
+                        action: 'active',
                     },
                     {
                         industrycode: 8,
                         industrytitle: 'Transportation and storage',
                         worktypeimpact: 'View Work Type Impact',
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                            {
-                                text: 'Archive',
-                                icon: 'icon-trash',
-                            },
-                        ],
+                        action: 'active',
                     },
                     {
                         industrycode: 9,
                         industrytitle:
                             'Accommodation and food service activities',
                         worktypeimpact: 'View Work Type Impact',
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                            {
-                                text: 'Archive',
-                                icon: 'icon-trash',
-                            },
-                        ],
+                        action: 'active',
                     },
                     {
                         industrycode: 10,
                         industrytitle: 'Information and communication',
                         worktypeimpact: 'View Work Type Impact',
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                            {
-                                text: 'Archive',
-                                icon: 'icon-trash',
-                            },
-                        ],
+                        action: 'active',
                     },
                 ],
             },
@@ -591,16 +348,7 @@ export default {
                                 cssClass: 'high-risk',
                             },
                         ],
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                            {
-                                text: 'Archive',
-                                icon: 'icon-trash',
-                            },
-                        ],
+                        action: 'active',
                     },
                     {
                         productCode: 1502,
@@ -612,16 +360,7 @@ export default {
                                 cssClass: 'high-risk',
                             },
                         ],
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                            {
-                                text: 'Archive',
-                                icon: 'icon-trash',
-                            },
-                        ],
+                        action: 'active',
                     },
                     {
                         productCode: 1503,
@@ -633,16 +372,7 @@ export default {
                                 cssClass: 'high-risk',
                             },
                         ],
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                            {
-                                text: 'Archive',
-                                icon: 'icon-trash',
-                            },
-                        ],
+                        action: 'active',
                     },
                     {
                         productCode: 1504,
@@ -654,16 +384,7 @@ export default {
                                 cssClass: 'high-risk',
                             },
                         ],
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                            {
-                                text: 'Archive',
-                                icon: 'icon-trash',
-                            },
-                        ],
+                        action: 'active',
                     },
                     {
                         productCode: 1505,
@@ -675,16 +396,7 @@ export default {
                                 cssClass: 'medium-risk',
                             },
                         ],
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                            {
-                                text: 'Archive',
-                                icon: 'icon-trash',
-                            },
-                        ],
+                        action: 'active',
                     },
                     {
                         productCode: 1506,
@@ -696,16 +408,7 @@ export default {
                                 cssClass: 'medium-risk',
                             },
                         ],
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                            {
-                                text: 'Archive',
-                                icon: 'icon-trash',
-                            },
-                        ],
+                        action: 'active',
                     },
                     {
                         productCode: 1507,
@@ -717,16 +420,7 @@ export default {
                                 cssClass: 'high-risk',
                             },
                         ],
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                            {
-                                text: 'Archive',
-                                icon: 'icon-trash',
-                            },
-                        ],
+                        action: 'active',
                     },
                 ],
             },
@@ -767,16 +461,7 @@ export default {
                                 cssClass: 'medium-risk',
                             },
                         ],
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                            {
-                                text: 'Archive',
-                                icon: 'icon-trash',
-                            },
-                        ],
+                        action: 'active',
                     },
                     {
                         stateCode: 2,
@@ -788,16 +473,7 @@ export default {
                                 cssClass: 'medium-risk',
                             },
                         ],
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                            {
-                                text: 'Archive',
-                                icon: 'icon-trash',
-                            },
-                        ],
+                        action: 'active',
                     },
                     {
                         stateCode: 3,
@@ -809,16 +485,7 @@ export default {
                                 cssClass: 'low-risk',
                             },
                         ],
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                            {
-                                text: 'Archive',
-                                icon: 'icon-trash',
-                            },
-                        ],
+                        action: 'active',
                     },
                     {
                         stateCode: 4,
@@ -830,16 +497,7 @@ export default {
                                 cssClass: 'high-risk',
                             },
                         ],
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                            {
-                                text: 'Archive',
-                                icon: 'icon-trash',
-                            },
-                        ],
+                        action: 'active',
                     },
                     {
                         stateCode: 5,
@@ -851,16 +509,7 @@ export default {
                                 cssClass: 'high-risk',
                             },
                         ],
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                            {
-                                text: 'Archive',
-                                icon: 'icon-trash',
-                            },
-                        ],
+                        action: 'active',
                     },
                 ],
             },
@@ -900,16 +549,7 @@ export default {
                                 cssClass: 'high-risk',
                             },
                         ],
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                            {
-                                text: 'Archive',
-                                icon: 'icon-trash',
-                            },
-                        ],
+                        action: 'active',
                     },
                     {
                         rule: '24 Months to 48 Months',
@@ -921,16 +561,7 @@ export default {
                                 cssClass: 'medium-risk',
                             },
                         ],
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                            {
-                                text: 'Archive',
-                                icon: 'icon-trash',
-                            },
-                        ],
+                        action: 'active',
                     },
                     {
                         rule: '48 Months to 1000 Months',
@@ -942,16 +573,7 @@ export default {
                                 cssClass: 'low-risk',
                             },
                         ],
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                            {
-                                text: 'Archive',
-                                icon: 'icon-trash',
-                            },
-                        ],
+                        action: 'active',
                     },
                 ],
             },
@@ -991,12 +613,7 @@ export default {
                                 cssClass: 'low-risk',
                             },
                         ],
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                        ],
+                        action: 'active',
                     },
                     {
                         chanelTypeCode: 'NF2F',
@@ -1008,12 +625,7 @@ export default {
                                 cssClass: 'high-risk',
                             },
                         ],
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                        ],
+                        action: 'active',
                     },
                 ],
             },
@@ -1055,144 +667,84 @@ export default {
                         weight: 15,
                         overrideTo: 'N/A',
                         scorescale: 'View Score Scale',
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                        ],
+                        action: 'active',
                     },
                     {
                         riskCode: 'Nationality',
                         weight: 10,
                         overrideTo: 'N/A',
                         scorescale: 'View Score Scale',
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                        ],
+                        action: 'active',
                     },
                     {
                         riskCode: 'State',
                         weight: 0,
                         overrideTo: 'N/A',
                         scorescale: 'View Score Scale',
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                        ],
+                        action: 'active',
                     },
                     {
                         riskCode: 'Work Status',
                         weight: 10,
                         overrideTo: 'N/A',
                         scorescale: 'View Score Scale',
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                        ],
+                        action: 'active',
                     },
                     {
                         riskCode: 'Length of Relationship',
                         weight: 5,
                         overrideTo: 'N/A',
                         scorescale: 'View Score Scale',
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                        ],
+                        action: 'active',
                     },
                     {
                         riskCode: 'Channel Type',
                         weight: 5,
                         overrideTo: 'N/A',
                         scorescale: 'View Score Scale',
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                        ],
+                        action: 'active',
                     },
                     {
                         riskCode: 'Product',
                         weight: 10,
                         overrideTo: 'N/A',
                         scorescale: 'View Score Scale',
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                        ],
+                        action: 'active',
                     },
                     {
                         riskCode: 'PEP Hit',
                         weight: 15,
                         overrideTo: 'High',
                         scorescale: 'View Score Scale',
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                        ],
+                        action: 'active',
                     },
                     {
                         riskCode: 'Enforcement Hit',
                         weight: 15,
                         overrideTo: 'High',
                         scorescale: 'View Score Scale',
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                        ],
+                        action: 'active',
                     },
                     {
                         riskCode: 'Blacklist Hit',
                         weight: 15,
                         overrideTo: 'High',
                         scorescale: 'View Score Scale',
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                        ],
+                        action: 'active',
                     },
                     {
                         riskCode: 'Sanction Hit',
                         weight: 0,
                         overrideTo: 'Sanction',
                         scorescale: 'View Score Scale',
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                        ],
+                        action: 'active',
                     },
                     {
                         riskCode: 'Document Verification',
                         weight: 0,
                         overrideTo: 'High',
                         scorescale: 'View Score Scale',
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                        ],
+                        action: 'active',
                     },
                 ],
             },
@@ -1241,12 +793,7 @@ export default {
                         ],
                         reviewperiod: '6 Years',
                         alert: 'No',
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                        ],
+                        action: 'active',
                     },
                     {
                         pointscore: '41 to 69 Points',
@@ -1259,12 +806,7 @@ export default {
                         ],
                         reviewperiod: '3 Years',
                         alert: 'No',
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                        ],
+                        action: 'active',
                     },
                     {
                         pointscore: '70 to 100 Points',
@@ -1277,12 +819,7 @@ export default {
                         ],
                         reviewperiod: '1 Year',
                         alert: 'Yes',
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                        ],
+                        action: 'active',
                     },
                     {
                         pointscore: 'PEP Hit',
@@ -1295,12 +832,7 @@ export default {
                         ],
                         reviewperiod: 'Rejected',
                         alert: 'Yes',
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                        ],
+                        action: 'active',
                     },
                     {
                         pointscore: 'Enforcement Hit',
@@ -1313,12 +845,7 @@ export default {
                         ],
                         reviewperiod: 'Rejected',
                         alert: 'Yes',
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                        ],
+                        action: 'active',
                     },
                     {
                         pointscore: 'Client Blacklist Hit',
@@ -1331,12 +858,7 @@ export default {
                         ],
                         reviewperiod: 'Rejected',
                         alert: 'Yes',
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                        ],
+                        action: 'active',
                     },
                     {
                         pointscore: 'Sanction Hit',
@@ -1349,12 +871,7 @@ export default {
                         ],
                         reviewperiod: 'Rejected',
                         alert: 'Yes',
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                        ],
+                        action: 'active',
                     },
                     {
                         pointscore: 'Document Verification Mismatch ',
@@ -1367,12 +884,7 @@ export default {
                         ],
                         reviewperiod: 'Rejected',
                         alert: 'Yes',
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                        ],
+                        action: 'active',
                     },
                     {
                         pointscore: 'If Residence Country is Sanctioned',
@@ -1385,12 +897,7 @@ export default {
                         ],
                         reviewperiod: 'Rejected',
                         alert: 'Yes',
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                        ],
+                        action: 'active',
                     },
 
                     {
@@ -1404,12 +911,7 @@ export default {
                         ],
                         reviewperiod: 'Rejected',
                         alert: 'Yes',
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                        ],
+                        action: 'active',
                     },
                     {
                         pointscore: 'If Contact No. Code Country is Sanctioned',
@@ -1422,12 +924,7 @@ export default {
                         ],
                         reviewperiod: 'Rejected',
                         alert: 'Yes',
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                        ],
+                        action: 'active',
                     },
                 ],
             },
@@ -1463,23 +960,13 @@ export default {
                         verificationcode: 'LD',
                         verificationtype: 'Liveness Detection',
                         matchedscorethreshold: 75,
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                        ],
+                        action: 'active',
                     },
                     {
                         verificationcode: 'FC',
                         verificationtype: 'Face Comparision',
                         matchedscorethreshold: 70,
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                        ],
+                        action: 'active',
                     },
                 ],
             },
@@ -1515,70 +1002,40 @@ export default {
                         code: 'EFN',
                         screenfactor: 'Exact- First Name Score',
                         score: 50,
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                        ],
+                        action: 'active',
                     },
                     {
                         code: 'ELN',
                         screenfactor: 'Exact- Last Name Score',
                         score: 50,
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                        ],
+                        action: 'active',
                     },
                     {
                         code: 'DL1',
                         screenfactor: 'Fuzzy - DL=1',
                         score: 45,
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                        ],
+                        action: 'active',
                     },
 
                     {
                         code: 'DL2',
                         screenfactor: 'Fuzzy - DL=2',
                         score: 25,
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                        ],
+                        action: 'active',
                     },
 
                     {
                         code: 'SOH',
                         screenfactor: 'Screening on Hypocorisms',
                         score: 50,
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                        ],
+                        action: 'active',
                     },
 
                     {
                         code: 'DB1',
                         screenfactor: 'if year of birth matches',
                         score: 0,
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                        ],
+                        action: 'active',
                     },
 
                     {
@@ -1586,84 +1043,49 @@ export default {
                         screenfactor:
                             'if year of birth is NULL in list provider',
                         score: 0,
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                        ],
+                        action: 'active',
                     },
 
                     {
                         code: 'DB3',
                         screenfactor: 'if year of birth is +1/-1',
                         score: -5,
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                        ],
+                        action: 'active',
                     },
 
                     {
                         code: 'DB4',
                         screenfactor: 'if year of birth is mismatch',
                         score: -20,
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                        ],
+                        action: 'active',
                     },
 
                     {
                         code: 'NA1',
                         screenfactor: 'if nationality matches',
                         score: 0,
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                        ],
+                        action: 'active',
                     },
 
                     {
                         code: 'NA2',
                         screenfactor: 'if nationality is NULL in list provider',
                         score: 0,
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                        ],
+                        action: 'active',
                     },
 
                     {
                         code: 'NA3',
                         screenfactor: 'if nationality is mismatch',
                         score: -10,
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                        ],
+                        action: 'active',
                     },
 
                     {
                         code: 'CR1',
                         screenfactor: 'if country of residence matches',
                         score: 0,
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                        ],
+                        action: 'active',
                     },
 
                     {
@@ -1671,36 +1093,21 @@ export default {
                         screenfactor:
                             'if country of residence is NULL in list provider',
                         score: 0,
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                        ],
+                        action: 'active',
                     },
 
                     {
                         code: 'CR3',
                         screenfactor: 'if country of residence is mismatch',
                         score: -10,
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                        ],
+                        action: 'active',
                     },
 
                     {
                         code: 'ID1',
                         screenfactor: 'if ID document number matches',
                         score: 0,
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                        ],
+                        action: 'active',
                     },
 
                     {
@@ -1708,36 +1115,21 @@ export default {
                         screenfactor:
                             'if ID document number is NULL in list provider',
                         score: 0,
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                        ],
+                        action: 'active',
                     },
 
                     {
                         code: 'ID3',
                         screenfactor: 'if ID document number is mismatch',
                         score: -5,
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                        ],
+                        action: 'active',
                     },
 
                     {
                         code: 'GN1',
                         screenfactor: 'if gender matches',
                         score: 0,
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                        ],
+                        action: 'active',
                     },
 
                     {
@@ -1745,36 +1137,21 @@ export default {
                         screenfactor:
                             'if gender is NULL/Unknown in list provider',
                         score: 0,
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                        ],
+                        action: 'active',
                     },
 
                     {
                         code: 'GN3',
                         screenfactor: 'if gender is mismatch',
                         score: -5,
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                        ],
+                        action: 'active',
                     },
 
                     {
                         code: 'TS1',
                         screenfactor: 'Safe Score',
                         score: '< 75',
-                        action: [
-                            {
-                                text: 'Modify',
-                                icon: 'icon-edit',
-                            },
-                        ],
+                        action: 'active',
                     },
                 ],
             },

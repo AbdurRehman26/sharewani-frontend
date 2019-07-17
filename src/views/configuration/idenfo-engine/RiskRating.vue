@@ -20,7 +20,12 @@
                 </template>
                 <template slot="action" slot-scope="data">
                     <div class="action-review" v-b-modal.modify-risk-rating>
-                        <base-action :actionType="data.value"> </base-action>
+                        <base-action
+                            v-if="data.value == 'active'"
+                            icon="icon-edit"
+                            label="Modify"
+                            v-b-modal.initiate-review
+                        ></base-action>
                     </div>
                 </template>
             </b-table>

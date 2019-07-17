@@ -1,6 +1,6 @@
 <template>
     <span :class="cssClass">
-        <a href="javascript:void(0)">
+        <a href="javascript:void(0)" @click="$emit('click')">
             <i :class="icon"></i>
             <p>{{ label }}</p>
             <!--         <span v-for="(list, index) in actionType" :key="index">
