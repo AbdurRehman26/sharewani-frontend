@@ -19,22 +19,26 @@
                     <base-status :statusType="data.value"></base-status>
                 </template>
                 <template slot="action" slot-scope="data">
-                    <div class="action-review">
+                    <div class="action-review" v-b-modal.modify-risk-rating>
                         <base-action :actionType="data.value"> </base-action>
                     </div>
                 </template>
             </b-table>
         </div>
         <pagination></pagination>
+        <modify-risk-rating-popup></modify-risk-rating-popup>
     </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
 import pagination from '@/components/Pagination.vue'
+import modifyRiskRatingPopup from '@/components/popups/ModifyRiskRatingPopup.vue'
+
 export default {
     components: {
         pagination,
+        modifyRiskRatingPopup,
     },
 
     /*

@@ -56,35 +56,48 @@
                         <div class="nav-dropdown">
                             <ul>
                                 <li>
-                                    <router-link to="/">
+                                    <a
+                                        href="javascript:void(0);"
+                                        v-b-modal.update-profile
+                                    >
                                         <i class="icon-person"></i>
                                         <span>Update Profile</span>
-                                    </router-link>
+                                    </a>
                                 </li>
                                 <li>
-                                    <router-link to="/">
+                                    <a
+                                        href="javascript:void(0);"
+                                        v-b-modal.change-password
+                                    >
                                         <i class="icon-change-password"></i>
                                         <span>Change Password</span>
-                                    </router-link>
+                                    </a>
                                 </li>
                                 <li>
-                                    <router-link to="/">
+                                    <a href="/">
                                         <i class="icon-sign-out"></i>
                                         <span>Sign Out</span>
-                                    </router-link>
+                                    </a>
                                 </li>
                             </ul>
                         </div>
                     </div>
                 </div>
+                <update-profile-popup></update-profile-popup>
+                <change-password-popup></change-password-popup>
             </div>
         </header>
     </div>
 </template>
 
 <script>
+import updateProfilePopup from '@/components/popups/UpdateProfilePopup.vue'
+import changePasswordPopup from '@/components/popups/ChangePasswordPopup.vue'
 export default {
-    components: {},
+    components: {
+        changePasswordPopup,
+        updateProfilePopup,
+    },
 
     /*
     |--------------------------------------------------------------------------
