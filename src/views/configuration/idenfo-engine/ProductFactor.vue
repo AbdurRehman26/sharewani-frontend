@@ -21,7 +21,7 @@
                             <b-button
                                 type="button"
                                 variant="secondary"
-                                v-b-modal.add-product
+                                v-b-modal.add-product-popup
                                 >+ Add Product</b-button
                             >
                         </li>

@@ -12,7 +12,7 @@
                 <template slot="action" slot-scope="data">
                     <div
                         class="action-review"
-                        v-b-modal.modify-liveness-detection
+                        v-b-modal.modify-liveness-detection-popup
                     >
                         <base-action :actionType="data.value"> </base-action>
                     </div>

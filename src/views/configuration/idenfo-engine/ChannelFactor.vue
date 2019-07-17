@@ -38,7 +38,7 @@
                     <base-status :statusType="data.value"></base-status>
                 </template>
                 <template slot="action" slot-scope="data">
-                    <div class="action-review" v-b-modal.modify-channel>
+                    <div class="action-review" v-b-modal.modify-channel-popup>
                         <base-action :actionType="data.value"> </base-action>
                     </div>
                 </template>

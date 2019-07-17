@@ -1,18 +1,17 @@
 <template>
     <div>
         <b-modal
-            id="modify-liveness-detection"
+            id="modify-liveness-detection-popup"
             title="Modify Liveness Detection"
             size="sm"
             okTitle="Update"
             cancelTitle="Cancel"
             cancelVariant="link"
         >
-            <b-form class="modal-form-format">
+            <b-form>
                 <div class="row">
                     <div class="col-md-12">
                         <b-form-group
-                            class="mb-0"
                             id="input-group-1"
                             label="Liveness Detection Matched Threshold"
                             label-for="input-1"

@@ -30,7 +30,7 @@
                         </li>
                         <li>
                             <base-button
-                                v-b-modal.export-report
+                                v-b-modal.export-report-popup
                                 btnLabel="Export"
                                 btnType="submit"
                                 btnVariant="secondary"
@@ -105,7 +105,7 @@
                 </div>
             </div>
         </div>
-        <export-report></export-report>
+        <export-report-popup></export-report-popup>
     </div>
 </template>
 
@@ -115,11 +115,11 @@ require('amcharts3')
 require('amcharts3/amcharts/serial')
 require('amcharts3/amcharts/pie')
 import Datepicker from 'vuejs-datepicker'
-import exportReport from '@/components/popups/ExportReportPopup.vue'
+import exportReportPopup from '@/components/popups/ExportReportPopup.vue'
 export default {
     components: {
         Datepicker,
-        exportReport,
+        exportReportPopup,
     },
 
     /*

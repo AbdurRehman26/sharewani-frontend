@@ -1,23 +1,23 @@
 <template>
     <div>
         <b-modal
-            id="change-password"
+            id="change-password-popup"
             title="Change Password"
             size="sm"
             okTitle="Submit"
             cancelTitle="Cancel"
             cancelVariant="link"
         >
-            <b-form class="modal-form-format">
+            <b-form>
                 <div class="row">
                     <div class="col-md-12">
                         <b-form-group
                             id="input-group-1"
                             label="Old Password"
-                            label-for="input-1"
+                            label-for="old-password"
                         >
                             <b-form-input
-                                id="input-1"
+                                id="old-password"
                                 type="password"
                                 v-model="form.oldPassword"
                                 required
@@ -29,10 +29,10 @@
                         <b-form-group
                             id="input-group-2"
                             label="New Password"
-                            label-for="input-2"
+                            label-for="new-password"
                         >
                             <b-form-input
-                                id="input-2"
+                                id="new-password"
                                 type="password"
                                 v-model="form.newPassword"
                                 required
@@ -43,13 +43,12 @@
 
                     <div class="col-md-12">
                         <b-form-group
-                            class="mb-0"
                             id="input-group-3"
                             label="Confirm Password"
-                            label-for="input-3"
+                            label-for="confirm-password"
                         >
                             <b-form-input
-                                id="input-23"
+                                id="confirm-password"
                                 type="password"
                                 v-model="form.confirmPassword"
                                 required

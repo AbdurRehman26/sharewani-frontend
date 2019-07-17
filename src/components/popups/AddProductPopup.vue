@@ -1,7 +1,7 @@
 <template>
     <div>
         <b-modal
-            id="add-product"
+            id="add-product-popup"
             title="Add Product Factor"
             size="sm"
             okTitle="Create"
@@ -42,7 +42,6 @@
                     </div>
                     <div class="col-md-12">
                         <b-form-group
-                            class="mb-0"
                             id="input-group-3"
                             label="Rating"
                             label-for="select-1"

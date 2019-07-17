@@ -1,18 +1,17 @@
 <template>
     <div>
         <b-modal
-            id="modify-score"
+            id="modify-score-popup"
             title="Modify DB3 Score"
             size="sm"
             okTitle="Update"
             cancelTitle="Cancel"
             cancelVariant="link"
         >
-            <b-form class="modal-form-format">
+            <b-form>
                 <div class="row">
                     <div class="col-md-12">
                         <b-form-group
-                            class="mb-0"
                             id="input-group-1"
                             label="If Year Of Birth Is +1/-1"
                             label-for="input-1"

@@ -950,6 +950,10 @@
         }
     }
 
+    .custom-file-label {
+        text-transform: inherit;
+    }
+
     .scrollable {
         overflow-x: hidden;
         height: 420px;
@@ -1102,4 +1106,190 @@
         color: $nav-color;
         font-size: 12px;
     }
+}
+
+.upload-files {
+    position: relative;
+    margin-bottom: 16px;
+
+    input {
+        height: 92px;
+        width: 100%;
+        box-shadow: none;
+        cursor: pointer;
+    }
+
+    label {
+        display: none;
+    }
+
+    .custom-file {
+        height: 92px;
+        cursor: pointer;
+    }
+
+    .file-detail {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: $upload-bg;
+        border: 1px solid $border-color;
+        border-radius: $upload-border-radius;
+        overflow: hidden;
+        pointer-events: none;
+
+        .file-title {
+            h5 {
+                font-size: 0.875rem;
+                font-family: $font_medium;
+                margin-bottom: 7px;
+            }
+
+            p {
+                color: $nav-color;
+                font-size: 0.875rem;
+                margin-bottom: 0 !important;
+            }
+        }
+    }
+}
+
+.file-activity {
+    width: 100%;
+    float: left;
+    margin-bottom: 24px;
+
+    .file-thumbnail {
+        width: 22px;
+        float: left;
+    }
+
+    .file-progress {
+        width: calc(100% - 22px);
+        float: left;
+        padding-left: 10px;
+        position: relative;
+
+        h6 {
+            color: $nav-color;
+            font-family: $font_regular;
+            font-size: 0.75rem;
+            margin-bottom: 7px;
+        }
+
+        span {
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-family: $font_medium;
+            font-size: 0.75rem;
+        }
+    }
+}
+
+.progress {
+    height: 12px;
+    border-radius: $progress-radius;
+    background-color: $white;
+    border: 1px $border-color solid;
+    padding: 2px;
+    margin-bottom: 0 !important;
+
+    .progress-bar {
+        border-radius: $border-radius;
+        background-color: $secondary;
+    }
+}
+
+.selectize-control {
+    position: relative;
+}
+
+.selectize-control.multi .selectize-input.has-items {
+    padding: 5px 8px 2px;
+}
+
+.selectize-input.dropdown-active {
+    border-radius: 3px 3px 0 0;
+}
+.selectize-control.multi .selectize-input [data-value] {
+    border-radius: $input-border-radius;
+    background-color: $grey-dark;
+}
+.selectize-control.multi .selectize-input > div {
+    cursor: pointer;
+    margin: 1px 8px 5px 4px;
+    padding: 5px 8px 4px 8px;
+    color: $body-color;
+    text-transform: uppercase;
+    font-family: $font_regular;
+    font-size: 0.875rem;
+    border: 1px solid $grey-dark;
+}
+.selectize-input > * {
+    vertical-align: baseline;
+    display: -moz-inline-stack;
+    display: inline-block;
+    zoom: 1;
+    display: inline;
+}
+
+.selectize-input > input {
+    display: inline-block !important;
+    padding: 0 !important;
+    border: 1px #000 solid;
+    min-height: 0 !important;
+    max-height: none !important;
+    max-width: 100% !important;
+    margin: 0 1px !important;
+    text-indent: 0 !important;
+    border: 0 none !important;
+    background: none !important;
+    line-height: inherit !important;
+    -webkit-user-select: auto !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+.selectize-dropdown,
+.selectize-input,
+.selectize-input input {
+    color: #303030;
+    font-family: inherit;
+    font-size: 13px;
+    line-height: 18px;
+    -webkit-font-smoothing: inherit;
+}
+.selectize-input > * {
+    vertical-align: baseline;
+    display: -moz-inline-stack;
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+}
+.selectize-input::after {
+    content: ' ';
+    display: block;
+    clear: left;
+}
+.selectize-dropdown-content {
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: absolute;
+    background-color: $white;
+    width: 100%;
+    padding: 5px;
+    z-index: 99;
+    border: 1px solid $border-color;
+    border-top: none;
+    max-height: 200px;
+    -webkit-overflow-scrolling: touch;
+}
+.selectize-input {
+    @extend .form-control;
+    overflow-y: auto;
 }

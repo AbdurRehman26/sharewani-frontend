@@ -19,7 +19,10 @@
                     <base-status :statusType="data.value"></base-status>
                 </template>
                 <template slot="action" slot-scope="data">
-                    <div class="action-review" v-b-modal.modify-risk-rating>
+                    <div
+                        class="action-review"
+                        v-b-modal.modify-risk-rating-popup
+                    >
                         <base-action :actionType="data.value"> </base-action>
                     </div>
                 </template>

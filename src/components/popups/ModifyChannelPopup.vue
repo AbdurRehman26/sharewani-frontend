@@ -1,18 +1,17 @@
 <template>
     <div>
         <b-modal
-            id="modify-channel"
+            id="modify-channel-popup"
             title="Modify Face to Face Channel Rating"
             size="sm"
             okTitle="Update"
             cancelTitle="Cancel"
             cancelVariant="link"
         >
-            <b-form class="modal-form-format">
+            <b-form>
                 <div class="row">
                     <div class="col-md-12">
                         <b-form-group
-                            class="mb-0"
                             id="input-group-3"
                             label="Face to Face Channel Rating"
                             label-for="select-1"

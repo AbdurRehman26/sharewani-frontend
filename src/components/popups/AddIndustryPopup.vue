@@ -1,14 +1,14 @@
 <template>
     <div>
         <b-modal
-            id="add-industry"
+            id="add-industry-popup"
             title="Add Industry Factor"
             size="lg"
             okTitle="Create"
             cancelTitle="Cancel"
             cancelVariant="link"
         >
-            <b-form class="modal-form-format">
+            <b-form>
                 <div class="row">
                     <div class="col-md-6">
                         <b-form-group
@@ -130,7 +130,6 @@
                         <b-form-group
                             id="input-group-9"
                             label="Retired"
-                            class="mb-0"
                             label-for="select-7"
                         >
                             <b-form-select

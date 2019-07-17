@@ -21,7 +21,7 @@
                             <b-button
                                 type="button"
                                 variant="secondary"
-                                v-b-modal.add-industry
+                                v-b-modal.add-industry-popup
                                 >+ Add Industry</b-button
                             >
                         </li>

@@ -60,6 +60,7 @@
                                 </div>
                                 <div class="col-xs-12 col-md-7">
                                     <base-button
+                                        v-b-modal.add-system-user-popup
                                         btnLabel="+ Add User"
                                         btnType="submit"
                                         btnVariant="secondary"
@@ -120,15 +121,18 @@
             </b-table>
         </div>
         <pagination></pagination>
+        <add-system-user-popup></add-system-user-popup>
     </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
 import pagination from '@/components/Pagination.vue'
+import addSystemUserPopup from '@/components/popups/AddSystemUserPopup.vue'
 export default {
     components: {
         pagination,
+        addSystemUserPopup,
     },
 
     /*

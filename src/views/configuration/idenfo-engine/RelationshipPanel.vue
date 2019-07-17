@@ -21,7 +21,7 @@
                             <b-button
                                 type="button"
                                 variant="secondary"
-                                v-b-modal.add-relationship
+                                v-b-modal.add-relationship-popup
                                 >+ Add Relationship Length</b-button
                             >
                         </li>

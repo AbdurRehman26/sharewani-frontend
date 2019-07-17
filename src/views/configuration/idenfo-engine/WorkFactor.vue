@@ -21,7 +21,7 @@
                             <b-button
                                 type="button"
                                 variant="secondary"
-                                v-b-modal.add-work
+                                v-b-modal.add-work-popup
                                 >+ Add Work Type</b-button
                             >
                         </li>
@@ -52,19 +52,19 @@
             </b-table>
         </div>
         <pagination></pagination>
-        <add-work></add-work>
+        <add-work-popup></add-work-popup>
     </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
 import pagination from '@/components/Pagination.vue'
-import addWork from '@/components/popups/AddWorkPopup.vue'
+import addWorkPopup from '@/components/popups/AddWorkPopup.vue'
 
 export default {
     components: {
         pagination,
-        addWork,
+        addWorkPopup,
     },
 
     /*

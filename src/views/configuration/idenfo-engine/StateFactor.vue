@@ -21,7 +21,7 @@
                             <b-button
                                 type="button"
                                 variant="secondary"
-                                v-b-modal.add-state
+                                v-b-modal.add-state-popup
                                 >+ Add State</b-button
                             >
                         </li>

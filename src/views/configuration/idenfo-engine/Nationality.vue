@@ -19,7 +19,7 @@
                             <b-button
                                 type="button"
                                 variant="secondary"
-                                v-b-modal.add-nationality
+                                v-b-modal.add-nationality-popup
                                 >+ Add Nationality</b-button
                             >
                         </li>
@@ -41,7 +41,7 @@
             </b-table>
         </div>
         <pagination></pagination>
-        <add-nationality></add-nationality>
+        <add-nationality-popup></add-nationality-popup>
         <archive-popup
             title="Archive Nationality Factor"
             description="Are you sure you want to archive this nationality factor? You can re-activate it later."
@@ -52,13 +52,13 @@
 <script>
 import { mapGetters } from 'vuex'
 import pagination from '@/components/Pagination.vue'
-import addNationality from '@/components/popups/AddNationalityPopup.vue'
+import addNationalityPopup from '@/components/popups/AddNationalityPopup.vue'
 import archivePopup from '@/components/popups/ArchivePopup.vue'
 
 export default {
     components: {
         pagination,
-        addNationality,
+        addNationalityPopup,
         archivePopup,
     },
 
