@@ -106,7 +106,7 @@
                                                         }"
                                                     ></div>
                                                     <i
-                                                        class="icon-documentation"
+                                                        class="icon-color-picker"
                                                     ></i>
                                                 </div>
                                             </div>
@@ -138,7 +138,7 @@
                                                         }"
                                                     ></div>
                                                     <i
-                                                        class="icon-documentation"
+                                                        class="icon-color-picker"
                                                     ></i>
                                                 </div>
                                             </div>
@@ -170,7 +170,7 @@
                                                         }"
                                                     ></div>
                                                     <i
-                                                        class="icon-documentation"
+                                                        class="icon-color-picker"
                                                     ></i>
                                                 </div>
                                             </div>
@@ -202,7 +202,7 @@
                                                         }"
                                                     ></div>
                                                     <i
-                                                        class="icon-documentation"
+                                                        class="icon-color-picker"
                                                     ></i>
                                                 </div>
                                             </div>
