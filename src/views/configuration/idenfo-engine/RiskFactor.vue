@@ -16,22 +16,25 @@
                     </div>
                 </template>
                 <template slot="action" slot-scope="data">
-                    <div class="action-review">
+                    <div class="action-review" v-b-modal.modify-risk-factor>
                         <base-action :actionType="data.value"> </base-action>
                     </div>
                 </template>
             </b-table>
         </div>
         <pagination></pagination>
+        <modify-risk-factor-popup></modify-risk-factor-popup>
     </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
 import pagination from '@/components/Pagination.vue'
+import modifyRiskFactorPopup from '@/components/popups/ModifyRiskFactorPopup.vue'
 export default {
     components: {
         pagination,
+        modifyRiskFactorPopup,
     },
 
     /*
@@ -68,7 +71,7 @@ export default {
     |--------------------------------------------------------------------------
     */
     computed: {
-        ...mapGetters(['configuration']),
+        ...mapGetters(['configurationData']),
     }, // End of Component > computed
 
     /*
@@ -79,11 +82,11 @@ export default {
     methods: {
         initializeData() {
             //system log table
-            let configTableFields = this.configuration.idenfoEngine.riskFactor
-                .fields //get user data from store
+            let configTableFields = this.configurationData.idenfoEngine
+                .riskFactor.fields //get user data from store
             this.fields = configTableFields //push data into array
-            let configTableItems = this.configuration.idenfoEngine.riskFactor
-                .items //get user data from store
+            let configTableItems = this.configurationData.idenfoEngine
+                .riskFactor.items //get user data from store
             this.items = configTableItems //push data into array
         },
     }, // End of Component > methods

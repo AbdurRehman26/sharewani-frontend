@@ -10,22 +10,25 @@
         <div class="table-section m-b-30">
             <b-table :items="items" :fields="fields">
                 <template slot="action" slot-scope="data">
-                    <div class="action-review">
+                    <div class="action-review" v-b-modal.modify-score>
                         <base-action :actionType="data.value"> </base-action>
                     </div>
                 </template>
             </b-table>
         </div>
         <pagination></pagination>
+        <modify-score-popup></modify-score-popup>
     </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
 import pagination from '@/components/Pagination.vue'
+import modifyScorePopup from '@/components/popups/ModifyScorePopup.vue'
 export default {
     components: {
         pagination,
+        modifyScorePopup,
     },
 
     /*
@@ -62,7 +65,7 @@ export default {
     |--------------------------------------------------------------------------
     */
     computed: {
-        ...mapGetters(['configuration']),
+        ...mapGetters(['configurationData']),
     }, // End of Component > computed
 
     /*
@@ -73,10 +76,10 @@ export default {
     methods: {
         initializeData() {
             //system log table
-            let screenScoreFactorFields = this.configuration.idenfoEngine
+            let screenScoreFactorFields = this.configurationData.idenfoEngine
                 .screenScoreFactor.fields //get user data from store
             this.fields = screenScoreFactorFields //push data into array
-            let screenScoreFactorItems = this.configuration.idenfoEngine
+            let screenScoreFactorItems = this.configurationData.idenfoEngine
                 .screenScoreFactor.items //get user data from store
             this.items = screenScoreFactorItems //push data into array
         },

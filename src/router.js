@@ -75,6 +75,12 @@ export default new Router({
                         import(/* webpackChunkName: "dashboard-alerts" */ '@/views/dashboard/Alert.vue'),
                 },
                 {
+                    path: 'alerts',
+                    name: 'dashbaord-alerts',
+                    component: () =>
+                        import(/* webpackChunkName: "dashboard-alerts" */ '@/views/dashboard/Alert.vue'),
+                },
+                {
                     path: 'activity',
                     name: 'dashboard-activity-page',
                     component: () =>
@@ -127,7 +133,7 @@ export default new Router({
                 import(/* webpackChunkName: "system-logs" */ '@/views/system-logs/Main.vue'),
         },
         {
-            path: '/customers',
+            path: '/customer-profiles',
             name: 'profile',
             // route level code-splitting
             // this generates a separate chunk (about.[hash].js) for this route

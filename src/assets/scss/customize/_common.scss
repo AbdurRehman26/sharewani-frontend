@@ -270,7 +270,7 @@ textarea {
 }
 
 #style-2::-webkit-scrollbar {
-    width: 12px;
+    width: 6px;
     background-color: #ced3d8;
 }
 
@@ -356,6 +356,13 @@ $sides: (top, bottom, left, right); // Leave this variable alone
 .not-allowed {
     cursor: not-allowed;
 }
+
+.color-pallet {
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+}
+
 .truncate-title {
     width: 145px;
     white-space: nowrap;
@@ -398,20 +405,23 @@ $sides: (top, bottom, left, right); // Leave this variable alone
         text-align: center;
     }
 
-    &.pending {
+    &.pending,
+    &.medium-risk {
         background-color: #f4c200;
         i {
             top: 2px;
         }
     }
 
-    &.approved {
+    &.approved,
+    &.low-risk {
         background-color: #00c535;
         i {
             font-size: 10px;
         }
     }
-    &.rejected {
+    &.rejected,
+    &.high-risk {
         background-color: #c91f37;
         i {
             font-size: 11px;

@@ -68,7 +68,7 @@ export default {
     |--------------------------------------------------------------------------
     */
     computed: {
-        ...mapGetters(['configuration']),
+        ...mapGetters(['configurationData']),
     }, // End of Component > computed
     /*
     |--------------------------------------------------------------------------
@@ -78,7 +78,7 @@ export default {
     methods: {
         initializeData() {
             //system log table
-            let configImportFields = this.configuration.importData //get user data from store
+            let configImportFields = this.configurationData.importData //get user data from store
             this.listData = configImportFields //push data into array
         },
     }, // End of Component > methods

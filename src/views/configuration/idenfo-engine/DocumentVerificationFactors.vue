@@ -10,22 +10,28 @@
         <div class="table-section m-b-30">
             <b-table :items="items" :fields="fields">
                 <template slot="action" slot-scope="data">
-                    <div class="action-review">
+                    <div
+                        class="action-review"
+                        v-b-modal.modify-liveness-detection
+                    >
                         <base-action :actionType="data.value"> </base-action>
                     </div>
                 </template>
             </b-table>
         </div>
         <pagination></pagination>
+        <modify-liveness-detection-popup></modify-liveness-detection-popup>
     </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
 import pagination from '@/components/Pagination.vue'
+import modifyLivenessDetectionPopup from '@/components/popups/ModifyLivenessDetectionPopup.vue'
 export default {
     components: {
         pagination,
+        modifyLivenessDetectionPopup,
     },
 
     /*
@@ -62,7 +68,7 @@ export default {
     |--------------------------------------------------------------------------
     */
     computed: {
-        ...mapGetters(['configuration']),
+        ...mapGetters(['configurationData']),
     }, // End of Component > computed
 
     /*
@@ -73,10 +79,10 @@ export default {
     methods: {
         initializeData() {
             //system log table
-            let documentVerificationFields = this.configuration.idenfoEngine
+            let documentVerificationFields = this.configurationData.idenfoEngine
                 .documentVerification.fields //get user data from store
             this.fields = documentVerificationFields //push data into array
-            let documentVerificationItems = this.configuration.idenfoEngine
+            let documentVerificationItems = this.configurationData.idenfoEngine
                 .documentVerification.items //get user data from store
             this.items = documentVerificationItems //push data into array
         },

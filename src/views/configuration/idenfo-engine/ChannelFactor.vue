@@ -6,7 +6,7 @@
                     <h2>Channel Type Factor</h2>
                 </div>
                 <div class="col-md-8 text-right">
-                    <ul>
+                    <!--  <ul>
                         <li>
                             <base-search
                                 :placeholder="'Search Channel Type'"
@@ -22,7 +22,7 @@
                                 >+ Add Channel Type</b-button
                             >
                         </li>
-                    </ul>
+                    </ul> -->
                 </div>
             </div>
         </div>
@@ -38,22 +38,25 @@
                     <base-status :statusType="data.value"></base-status>
                 </template>
                 <template slot="action" slot-scope="data">
-                    <div class="action-review">
+                    <div class="action-review" v-b-modal.modify-channel>
                         <base-action :actionType="data.value"> </base-action>
                     </div>
                 </template>
             </b-table>
         </div>
         <pagination></pagination>
+        <modify-channel-popup></modify-channel-popup>
     </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
 import pagination from '@/components/Pagination.vue'
+import modifyChannelPopup from '@/components/popups/ModifyChannelPopup.vue'
 export default {
     components: {
         pagination,
+        modifyChannelPopup,
     },
 
     /*
@@ -90,7 +93,7 @@ export default {
     |--------------------------------------------------------------------------
     */
     computed: {
-        ...mapGetters(['configuration']),
+        ...mapGetters(['configurationData']),
     }, // End of Component > computed
 
     /*
@@ -101,11 +104,11 @@ export default {
     methods: {
         initializeData() {
             //system log table
-            let configTableFields = this.configuration.idenfoEngine
+            let configTableFields = this.configurationData.idenfoEngine
                 .channelFactor.fields //get user data from store
             this.fields = configTableFields //push data into array
-            let configTableItems = this.configuration.idenfoEngine.channelFactor
-                .items //get user data from store
+            let configTableItems = this.configurationData.idenfoEngine
+                .channelFactor.items //get user data from store
             this.items = configTableItems //push data into array
         },
     }, // End of Component > methods

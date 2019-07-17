@@ -21,7 +21,7 @@
                             <b-button
                                 type="button"
                                 variant="secondary"
-                                v-b-modal.add-country
+                                v-b-modal.add-work
                                 >+ Add Work Type</b-button
                             >
                         </li>
@@ -33,25 +33,38 @@
             <b-table :items="items" :fields="fields">
                 <template slot="action" slot-scope="data">
                     <div class="action-review">
-                        <base-action :actionType="data.value"> </base-action>
+                        <a
+                            href="/"
+                            v-for="(list, index) in data.value"
+                            :key="index"
+                        >
+                            <div v-if="list.text === 'Modify'">
+                                <i class="icon-edit"></i>
+                                <span>{{ list.text }}</span>
+                            </div>
+                            <div v-if="list.text === 'Archive'">
+                                <i class="icon-trash"></i>
+                                <span>{{ list.text }}</span>
+                            </div>
+                        </a>
                     </div>
                 </template>
             </b-table>
         </div>
         <pagination></pagination>
-        <add-country></add-country>
+        <add-work></add-work>
     </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
 import pagination from '@/components/Pagination.vue'
-import addCountry from '@/components/popups/AddCountryPopup.vue'
+import addWork from '@/components/popups/AddWorkPopup.vue'
 
 export default {
     components: {
         pagination,
-        addCountry,
+        addWork,
     },
 
     /*
@@ -88,7 +101,7 @@ export default {
     |--------------------------------------------------------------------------
     */
     computed: {
-        ...mapGetters(['configuration']),
+        ...mapGetters(['configurationData']),
     }, // End of Component > computed
 
     /*
@@ -99,11 +112,11 @@ export default {
     methods: {
         initializeData() {
             //system log table
-            let configTableFields = this.configuration.idenfoEngine.workfactor
-                .fields //get user data from store
+            let configTableFields = this.configurationData.idenfoEngine
+                .workfactor.fields //get user data from store
             this.fields = configTableFields //push data into array
-            let configTableItems = this.configuration.idenfoEngine.workfactor
-                .items //get user data from store
+            let configTableItems = this.configurationData.idenfoEngine
+                .workfactor.items //get user data from store
             this.items = configTableItems //push data into array
         },
     }, // End of Component > methods

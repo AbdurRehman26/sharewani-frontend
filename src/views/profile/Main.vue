@@ -36,7 +36,7 @@ export default {
         return {
             menuListing: [
                 {
-                    anchorLink: '/customer-profile',
+                    anchorLink: '/customer-profiles',
                     menuLabel: 'All Customer',
                 },
                 {

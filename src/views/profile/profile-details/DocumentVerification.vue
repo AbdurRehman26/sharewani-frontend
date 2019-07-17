@@ -15,7 +15,7 @@
                         </li>
                         <li>
                             <b-button
-                                v-b-modal.cancel-review-process
+                                v-b-modal.cancel-review-process-popup
                                 type="button"
                                 variant="link font-semibold"
                             >
@@ -24,7 +24,7 @@
                         </li>
                         <li>
                             <b-button
-                                v-b-modal.kyc-status-review
+                                v-b-modal.kyc-status-review-popup
                                 type="button"
                                 variant="primary"
                             >
@@ -71,7 +71,7 @@
                                         <label>
                                             <a
                                                 href="javascript:void(0)"
-                                                v-b-modal.overwrite-result
+                                                v-b-modal.overwrite-result-popup
                                                 v-if="
                                                     descriptions.title ==
                                                         'Manually Overwrite Result'
@@ -114,28 +114,28 @@
                 </li>
             </ul>
         </div>
-        <cancel-review-process></cancel-review-process>
-        <kyc-status-review></kyc-status-review>
-        <overwrite-result></overwrite-result>
-        <document-preview></document-preview>
+        <cancel-review-process-popup></cancel-review-process-popup>
+        <kyc-status-review-popup></kyc-status-review-popup>
+        <overwrite-result-popup></overwrite-result-popup>
+        <document-preview-popup></document-preview-popup>
     </div>
 </template>
 <script>
 import customerInformation from '@/components/CustomerInfo.vue'
 import documentsSubmitted from '@/components/DocumentsSubmitted.vue'
-import kycStatusReview from '@/components/popups/KYCStatusReviewPopup.vue'
-import cancelReviewProcess from '@/components/popups/CancelReviewProcessPopup.vue'
-import overwriteResult from '@/components/popups/OverwriteResultPopup.vue'
-import documentPreview from '@/components/popups/DocumentPreviewPopup.vue'
+import kycStatusReviewPopup from '@/components/popups/KYCStatusReviewPopup.vue'
+import cancelReviewProcessPopup from '@/components/popups/CancelReviewProcessPopup.vue'
+import overwriteResultPopup from '@/components/popups/OverwriteResultPopup.vue'
+import documentPreviewPopup from '@/components/popups/DocumentPreviewPopup.vue'
 
 export default {
     components: {
         customerInformation,
         documentsSubmitted,
-        kycStatusReview,
-        cancelReviewProcess,
-        overwriteResult,
-        documentPreview,
+        kycStatusReviewPopup,
+        cancelReviewProcessPopup,
+        overwriteResultPopup,
+        documentPreviewPopup,
     },
 
     /*

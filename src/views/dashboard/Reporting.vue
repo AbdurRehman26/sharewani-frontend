@@ -122,6 +122,70 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="row">
+                    <div class="col-xs-12 col-md-12">
+                        <div class="card dashboard-card sm-radius">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="dashboard-charts">
+                                        <h2 class="heading">
+                                            Customers by Age Group
+                                        </h2>
+                                        <!-- customers by age group -->
+                                        <div
+                                            id="customer-by-age"
+                                            class="amcharts-div customer-by-age"
+                                        ></div>
+                                        <div class="chart-highest-record">
+                                            <h2>HIGHEST</h2>
+                                            <p>
+                                                55 - 64:
+                                                <strong>950</strong> (30.1%)
+                                            </p>
+                                        </div>
+                                        <!-- customers by age group end-->
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div id="style-2" class="table-scroll">
+                                        <b-table
+                                            :items="countryResidence.items"
+                                            :fields="countryResidence.fields"
+                                            thead-class="hidden_header"
+                                        >
+                                            <!-- status slot -->
+                                            <template
+                                                slot="color"
+                                                slot-scope="data"
+                                            >
+                                                <div
+                                                    class="color-pallet"
+                                                    v-bind:style="{
+                                                        'background-color':
+                                                            '' +
+                                                            data.value +
+                                                            '',
+                                                    }"
+                                                ></div>
+                                            </template>
+                                            <!-- action slot -->
+                                            <template
+                                                slot="residence_percentage"
+                                                slot-scope="data"
+                                            >
+                                                <strong>{{
+                                                    data.value
+                                                }}</strong>
+                                            </template>
+                                        </b-table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <export-report></export-report>
@@ -163,6 +227,108 @@ export default {
     data() {
         return {
             selected: null,
+
+            countryResidence: {
+                fields: [
+                    {
+                        key: 'color',
+                        label: 'Color',
+                    },
+                    {
+                        key: 'country_name',
+                        label: 'Country Name',
+                        class: 'w-320px p-l-20',
+                    },
+                    {
+                        key: 'country_residence',
+                        label: 'Country Residence',
+                    },
+                    {
+                        key: 'residence_percentage',
+                        label: 'Residence Percentage',
+                    },
+                ],
+                items: [
+                    {
+                        color: '#111',
+                        country_name: 'Australia',
+                        country_residence: 300,
+                        residence_percentage: '1.6%',
+                    },
+                    {
+                        color: '#7f1ec5',
+                        country_name: 'Bangladesh',
+                        country_residence: 240,
+                        residence_percentage: '1.3%',
+                    },
+                    {
+                        color: '#00a4f2',
+                        country_name: 'Belgium',
+                        country_residence: 450,
+                        residence_percentage: '2.5%',
+                    },
+                    {
+                        color: '#00c535',
+                        country_name: 'United Kingdom',
+                        country_residence: 720,
+                        residence_percentage: '4.0%',
+                    },
+                    {
+                        color: '#eb8300',
+                        country_name: 'United States of America',
+                        country_residence: 640,
+                        residence_percentage: '3.5%',
+                    },
+                    {
+                        color: '#f4c200',
+                        country_name: 'India',
+                        country_residence: 450,
+                        residence_percentage: '3.1%',
+                    },
+                    {
+                        color: '#c1c1c1',
+                        country_name: 'Canada',
+                        country_residence: 655,
+                        residence_percentage: '3.5%',
+                    },
+                    {
+                        color: '#f8508c',
+                        country_name: 'China',
+                        country_residence: 710,
+                        residence_percentage: '3.9%',
+                    },
+                    {
+                        color: '#00b1a5',
+                        country_name: 'Netherlands',
+                        country_residence: 89,
+                        residence_percentage: '0.3%',
+                    },
+                    {
+                        color: '#84dc2b',
+                        country_name: 'Bangladesh',
+                        country_residence: 240,
+                        residence_percentage: '1.3%',
+                    },
+                    {
+                        color: '#5172fa',
+                        country_name: 'Bangladesh',
+                        country_residence: 240,
+                        residence_percentage: '1.3%',
+                    },
+                    {
+                        color: '#798bb0',
+                        country_name: 'Bangladesh',
+                        country_residence: 240,
+                        residence_percentage: '1.3%',
+                    },
+                    {
+                        color: '#b31493',
+                        country_name: 'Bangladesh',
+                        country_residence: 240,
+                        residence_percentage: '1.3%',
+                    },
+                ],
+            },
         }
     }, // End of Component > data
 

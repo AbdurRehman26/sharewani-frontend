@@ -18,7 +18,10 @@
                             >
                         </li>
                         <li>
-                            <b-button type="button" variant="secondary"
+                            <b-button
+                                type="button"
+                                variant="secondary"
+                                v-b-modal.add-product
                                 >+ Add Product</b-button
                             >
                         </li>
@@ -45,15 +48,18 @@
             </b-table>
         </div>
         <pagination></pagination>
+        <add-product-popup></add-product-popup>
     </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
 import pagination from '@/components/Pagination.vue'
+import addProductPopup from '@/components/popups/AddProductPopup.vue'
 export default {
     components: {
         pagination,
+        addProductPopup,
     },
 
     /*
@@ -90,7 +96,7 @@ export default {
     |--------------------------------------------------------------------------
     */
     computed: {
-        ...mapGetters(['configuration']),
+        ...mapGetters(['configurationData']),
     }, // End of Component > computed
 
     /*
@@ -101,11 +107,11 @@ export default {
     methods: {
         initializeData() {
             //system log table
-            let configTableFields = this.configuration.idenfoEngine
+            let configTableFields = this.configurationData.idenfoEngine
                 .productFactor.fields //get user data from store
             this.fields = configTableFields //push data into array
-            let configTableItems = this.configuration.idenfoEngine.productFactor
-                .items //get user data from store
+            let configTableItems = this.configurationData.idenfoEngine
+                .productFactor.items //get user data from store
             this.items = configTableItems //push data into array
         },
     }, // End of Component > methods

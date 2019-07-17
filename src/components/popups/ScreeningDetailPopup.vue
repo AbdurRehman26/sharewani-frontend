@@ -1,7 +1,7 @@
 <template>
     <div>
         <b-modal
-            id="screening-detail"
+            id="screening-detail-popup"
             title="Name Screening Hit Detail"
             size="md"
             okTitle="Print"
