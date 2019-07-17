@@ -35,22 +35,20 @@
 
                 <template slot="action" slot-scope="data">
                     <div class="action-review">
-                        <div class="action-review">
-                            <!-- if action modify -->
-                            <base-action
-                                v-if="data.value == 'active'"
-                                icon="icon-edit"
-                                label="Modify"
-                                v-b-modal.add-nationality-popup
-                            ></base-action>
-                            <!-- if action archive -->
-                            <base-action
-                                v-if="data.value == 'active'"
-                                icon="icon-trash"
-                                label="Archive"
-                                v-b-modal.archive-popup
-                            ></base-action>
-                        </div>
+                        <!-- if action modify -->
+                        <base-action
+                            v-if="data.value == 'active'"
+                            icon="icon-edit"
+                            label="Modify"
+                            v-b-modal.add-nationality-popup
+                        ></base-action>
+                        <!-- if action archive -->
+                        <base-action
+                            v-if="data.value == 'active'"
+                            icon="icon-trash"
+                            label="Archive"
+                            v-b-modal.archive-popup
+                        ></base-action>
                     </div>
                 </template>
             </b-table>

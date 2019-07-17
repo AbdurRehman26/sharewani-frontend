@@ -21,6 +21,7 @@ export default new Router({
                         import(/* webpackChunkName: "forgot-password" */ '@/views/auth/Login.vue'),
                     meta: {
                         noSidebar: true,
+                        bodyClass: 'auth-body',
                     },
                 },
                 {
@@ -30,6 +31,7 @@ export default new Router({
                         import(/* webpackChunkName: "forgot-password" */ '@/views/auth/ForgotPassword.vue'),
                     meta: {
                         noSidebar: true,
+                        bodyClass: 'auth-body',
                     },
                 },
                 {
@@ -39,6 +41,7 @@ export default new Router({
                         import(/* webpackChunkName: "reset-password" */ '@/views/auth/ResetPassword.vue'),
                     meta: {
                         noSidebar: true,
+                        bodyClass: 'auth-body',
                     },
                 },
                 {
@@ -48,6 +51,7 @@ export default new Router({
                         import(/* webpackChunkName: "email-sent" */ '@/views/auth/EmailSent.vue'),
                     meta: {
                         noSidebar: true,
+                        bodyClass: 'auth-body',
                     },
                 },
             ],
@@ -60,6 +64,7 @@ export default new Router({
                 import(/* webpackChunkName: "contact-us" */ '@/views/ContactUs.vue'),
             meta: {
                 noSidebar: true,
+                bodyClass: 'auth-body',
             },
         },
         {
