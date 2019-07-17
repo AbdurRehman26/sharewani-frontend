@@ -25,6 +25,9 @@
             text-transform: uppercase;
             border-top: none !important;
         }
+        &.hidden_header {
+            display: none;
+        }
     }
 
     tbody {
@@ -131,6 +134,13 @@
                         bottom: 28px !important;
                     }
                 }
+            }
+
+            .color-pallet {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                margin: auto;
             }
         }
     }

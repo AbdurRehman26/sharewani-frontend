@@ -75,6 +75,12 @@ export default new Router({
                         import(/* webpackChunkName: "dashboard-alerts" */ '@/views/dashboard/Alert.vue'),
                 },
                 {
+                    path: 'alerts',
+                    name: 'dashbaord-alerts',
+                    component: () =>
+                        import(/* webpackChunkName: "dashboard-alerts" */ '@/views/dashboard/Alert.vue'),
+                },
+                {
                     path: 'activity',
                     name: 'dashboard-activity-page',
                     component: () =>

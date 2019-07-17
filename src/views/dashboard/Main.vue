@@ -38,7 +38,7 @@ export default {
         return {
             menuListing: [
                 {
-                    anchorLink: '/dashboard',
+                    anchorLink: '/dashboard/alerts',
                     menuLabel: 'Alerts',
                 },
                 {
