@@ -417,20 +417,23 @@ $sides: (top, bottom, left, right); // Leave this variable alone
     &.low-risk {
         background-color: #00c535;
         i {
-            font-size: 10px;
+            font-size: 0.625rem;
         }
     }
     &.rejected,
     &.high-risk {
         background-color: #c91f37;
         i {
-            font-size: 11px;
+            font-size: 0.6875rem;
+            &.icon-wrong {
+                font-size: 1rem;
+            }
         }
     }
     &.locked {
         background-color: #00af2f;
         i {
-            font-size: 11px;
+            font-size: 0.6875rem;
         }
     }
 }

@@ -72,7 +72,10 @@
                     <base-status :statusType="data.value"></base-status>
                 </template>
                 <template slot="action" slot-scope="data">
-                    <base-action :actionType="data.value"></base-action>
+                    <base-action
+                        @click="$router.push('/customer-information')"
+                        :actionType="data.value"
+                    ></base-action>
                 </template>
             </b-table>
         </div>

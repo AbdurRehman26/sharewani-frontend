@@ -790,6 +790,26 @@
         &.danger {
             color: $danger;
         }
+        &.circle-area {
+            border-radius: 10px;
+            color: #fff;
+            font-size: 0.9rem;
+            display: flex;
+            width: 24px;
+            height: 24px;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            &.pending {
+                background-color: $grey-xlite;
+            }
+            &.danger.circle-area {
+                background-color: $danger;
+            }
+            &.sanctions.circle-area {
+                background-color: $body-color;
+            }
+        }
     }
 }
 .risk-factor-table {
