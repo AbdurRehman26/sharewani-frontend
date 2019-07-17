@@ -1303,13 +1303,7 @@ export default {
                             cssClass: 'icon-cross-with-circle pending',
                         },
                     ],
-                    action: [
-                        {
-                            text: 'In Review',
-                            icon: 'icon-lock_outline',
-                            cssClass: 'disabled',
-                        },
-                    ],
+                    action: 'in review',
                 },
                 {
                     profile: 'member-2.png',
@@ -1331,12 +1325,7 @@ export default {
                             cssClass: 'icon-cross-with-circle pending',
                         },
                     ],
-                    action: [
-                        {
-                            text: 'Review',
-                            icon: 'icon-review',
-                        },
-                    ],
+                    action: 'review',
                 },
                 {
                     profile: 'member-3.png',
@@ -1358,13 +1347,7 @@ export default {
                             cssClass: 'icon-cross-with-circle pending',
                         },
                     ],
-                    action: [
-                        {
-                            text: 'In Review',
-                            icon: 'icon-lock_outline',
-                            cssClass: 'disabled',
-                        },
-                    ],
+                    action: 'in review',
                 },
                 {
                     profile: 'member-4.png',
@@ -1386,13 +1369,7 @@ export default {
                             cssClass: 'icon-cross-with-circle danger',
                         },
                     ],
-                    action: [
-                        {
-                            text: 'In Review',
-                            icon: 'icon-lock_outline',
-                            cssClass: 'disabled',
-                        },
-                    ],
+                    action: 'in review',
                 },
                 {
                     profile: 'member-5.png',
@@ -1414,13 +1391,7 @@ export default {
                             cssClass: 'icon-cross-with-circle pending',
                         },
                     ],
-                    action: [
-                        {
-                            text: 'In Review',
-                            icon: 'icon-lock_outline',
-                            cssClass: 'disabled',
-                        },
-                    ],
+                    action: 'in review',
                 },
                 {
                     profile: 'member-6.png',
@@ -1442,12 +1413,7 @@ export default {
                             cssClass: 'icon-cross-with-circle danger',
                         },
                     ],
-                    action: [
-                        {
-                            text: 'Review',
-                            icon: 'icon-review',
-                        },
-                    ],
+                    action: 'review',
                 },
                 {
                     profile: 'member-7.png',
@@ -1469,12 +1435,7 @@ export default {
                             cssClass: 'icon-cross-with-circle danger',
                         },
                     ],
-                    action: [
-                        {
-                            text: 'Review',
-                            icon: 'icon-review',
-                        },
-                    ],
+                    action: 'review',
                 },
                 {
                     profile: 'member-8.png',
@@ -1496,12 +1457,7 @@ export default {
                             cssClass: 'icon-cross-with-circle ',
                         },
                     ],
-                    action: [
-                        {
-                            text: 'Review',
-                            icon: 'icon-review',
-                        },
-                    ],
+                    action: 'review',
                 },
                 {
                     profile: 'member-9.png',
@@ -1523,12 +1479,7 @@ export default {
                             cssClass: 'icon-cross-with-circle ',
                         },
                     ],
-                    action: [
-                        {
-                            text: 'Review',
-                            icon: 'icon-review',
-                        },
-                    ],
+                    action: 'review',
                 },
                 {
                     profile: 'member-10.png',
@@ -1550,12 +1501,7 @@ export default {
                             cssClass: 'icon-cross-with-circle ',
                         },
                     ],
-                    action: [
-                        {
-                            text: 'Review',
-                            icon: 'icon-review',
-                        },
-                    ],
+                    action: 'review',
                 },
             ],
         },

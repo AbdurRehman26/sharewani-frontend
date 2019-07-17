@@ -115,7 +115,32 @@
                 </template>
                 <!-- action slot -->
                 <template slot="action" slot-scope="data">
-                    <base-action :actionType="data.value"></base-action>
+                    <div class="action-review">
+                        <!-- if action modify -->
+                        <base-action
+                            v-if="
+                                data.value == 'active' ||
+                                    data.value == 'archive'
+                            "
+                            icon="icon-edit"
+                            label="Modify"
+                            v-b-modal.initiate-review
+                        ></base-action>
+                        <!-- if action archive -->
+                        <base-action
+                            v-if="data.value == 'active'"
+                            icon="icon-trash"
+                            label="Archive"
+                            v-b-modal.initiate-review
+                        ></base-action>
+                        <!-- if action activate -->
+                        <base-action
+                            v-if="data.value == 'archive'"
+                            icon="icon-done"
+                            label="Activate"
+                            v-b-modal.initiate-review
+                        ></base-action>
+                    </div>
                 </template>
             </b-table>
         </div>
