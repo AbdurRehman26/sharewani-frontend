@@ -9,26 +9,32 @@ export default {
                 {
                     key: 'customer',
                     label: 'CUSTOMER',
+                    sortable: true,
                 },
                 {
                     key: 'full_name',
                     label: 'FULL NAME',
+                    sortable: true,
                 },
                 {
                     key: 'nationality',
                     label: 'NATIONALITY',
+                    sortable: true,
                 },
                 {
                     key: 'residence',
                     label: 'RESIDENCE',
+                    sortable: true,
                 },
                 {
                     key: 'registration_date',
                     label: 'Registration Date',
+                    sortable: true,
                 },
                 {
                     key: 'status',
                     label: 'Status',
+                    sortable: true,
                 },
                 {
                     key: 'action',

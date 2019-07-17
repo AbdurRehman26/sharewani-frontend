@@ -45,14 +45,17 @@ export default {
                 {
                     key: 'full_name',
                     label: 'FULL NAME',
+                    sortable: true,
                 },
                 {
                     key: 'country',
                     label: 'COUNTRY',
+                    sortable: true,
                 },
                 {
                     key: 'associates',
                     label: 'Associates',
+                    sortable: true,
                 },
                 {
                     key: 'sanction',
@@ -81,6 +84,7 @@ export default {
                 {
                     key: 'hit',
                     label: 'HIT determination',
+                    sortable: true,
                 },
             ],
             items: [
@@ -229,16 +233,19 @@ export default {
                 {
                     key: 'risk_factor',
                     label: 'RISK FACTOR',
+                    sortable: true,
                 },
                 {
                     key: 'score',
                     label: 'SCORE',
                     class: 'text-center',
+                    sortable: true,
                 },
                 {
                     key: 'risk_level',
                     label: 'Risk Level',
                     class: 'text-center',
+                    sortable: true,
                 },
             ],
             items: [
@@ -358,15 +365,18 @@ export default {
                 {
                     key: 'risk_factor_override',
                     label: 'RISK FACTOR OVERRIDE',
+                    sortable: true,
                 },
                 {
                     key: 'override_to',
                     label: 'Override To',
+                    sortable: true,
                 },
                 {
                     key: 'risk_level',
                     label: 'Risk Level',
                     class: 'text-center',
+                    sortable: true,
                 },
             ],
 

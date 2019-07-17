@@ -5,21 +5,25 @@ export default {
                 fields: [
                     {
                         key: 'countrycode',
-                        label: 'Country Code',
+                        label: 'Nationality Code',
+                        sortable: true,
                     },
                     {
                         key: 'countrytitle',
-                        label: 'Country Title',
+                        label: 'Nationality Title',
+                        sortable: true,
                     },
                     {
                         key: 'rating',
                         label: 'RATING',
                         class: 'text-center rating-field',
+                        sortable: true,
                     },
                     {
                         key: 'isSanction',
                         label: 'IS SANCTION',
                         class: 'text-center',
+                        sortable: true,
                     },
                     {
                         key: 'action',
@@ -255,10 +259,12 @@ export default {
                     {
                         key: 'worktypecode',
                         label: 'Work Type Code',
+                        sortable: true,
                     },
                     {
                         key: 'worktypetitle',
                         label: 'Work Type Title',
+                        sortable: true,
                     },
                     {
                         key: 'action',
@@ -373,14 +379,17 @@ export default {
                         key: 'industrycode',
                         label: 'Industry Code',
                         class: 'text-center w-150px',
+                        sortable: true,
                     },
                     {
                         key: 'industrytitle',
                         label: 'Industry Title',
+                        sortable: true,
                     },
                     {
                         key: 'worktypeimpact',
                         label: 'WORK TYPE IMPACT',
+                        sortable: true,
                     },
                     {
                         key: 'action',
@@ -552,15 +561,18 @@ export default {
                         key: 'productCode',
                         label: 'PRODUCT CODE',
                         class: 'text-center w-150px',
+                        sortable: true,
                     },
                     {
                         key: 'productIndustry',
                         label: 'Product Title',
+                        sortable: true,
                     },
                     {
                         key: 'rating',
                         label: 'RATING',
                         class: 'text-center',
+                        sortable: true,
                     },
                     {
                         key: 'action',
@@ -725,15 +737,18 @@ export default {
                         key: 'stateCode',
                         label: 'STATE CODE',
                         class: 'text-center w-150px',
+                        sortable: true,
                     },
                     {
                         key: 'stateTitle',
                         label: 'STATE TITLE',
+                        sortable: true,
                     },
                     {
                         key: 'rating',
                         label: 'RATING',
                         class: 'text-center',
+                        sortable: true,
                     },
                     {
                         key: 'action',
@@ -855,15 +870,18 @@ export default {
                     {
                         key: 'rule',
                         label: 'RULE',
+                        sortable: true,
                     },
                     {
                         key: 'relationshipLength',
                         label: 'RELATIONSHIP LENGTH TITLE',
+                        sortable: true,
                     },
                     {
                         key: 'rating',
                         label: 'RATING',
                         class: 'text-center',
+                        sortable: true,
                     },
                     {
                         key: 'action',
@@ -943,15 +961,18 @@ export default {
                     {
                         key: 'chanelTypeCode',
                         label: 'CHANNEL TYPE CODE',
+                        sortable: true,
                     },
                     {
                         key: 'chanelTypeTitle',
                         label: 'CHANNEL TYPE TITLE',
+                        sortable: true,
                     },
                     {
                         key: 'rating',
                         label: 'RATING',
                         class: 'text-center',
+                        sortable: true,
                     },
                     {
                         key: 'action',
@@ -1003,20 +1024,24 @@ export default {
                         key: 'riskCode',
                         label: 'Risk Factor',
                         class: 'w-320px',
+                        sortable: true,
                     },
                     {
                         key: 'weight',
                         label: 'WEIGHT',
                         class: 'text-center',
+                        sortable: true,
                     },
                     {
                         key: 'overrideTo',
                         label: 'OVERRIDE TO',
                         class: 'text-center',
+                        sortable: true,
                     },
                     {
                         key: 'scorescale',
                         label: 'Score Scale',
+                        sortable: true,
                     },
                     {
                         key: 'action',
@@ -1178,21 +1203,25 @@ export default {
                         key: 'pointscore',
                         label: 'POINT SCORE / CASE',
                         class: 'w-320px',
+                        sortable: true,
                     },
                     {
                         key: 'rating',
                         label: 'RATING',
                         class: 'text-center',
+                        sortable: true,
                     },
                     {
                         key: 'reviewperiod',
                         label: 'REVIEW PERIOD',
                         class: 'text-center',
+                        sortable: true,
                     },
                     {
                         key: 'alert',
                         label: 'Alert',
                         class: 'text-center',
+                        sortable: true,
                     },
                     {
                         key: 'action',
@@ -1409,16 +1438,19 @@ export default {
                         key: 'verificationcode',
                         label: 'Verification Code',
                         class: 'w-320px',
+                        sortable: true,
                     },
                     {
                         key: 'verificationtype',
                         label: 'Verification Type',
                         class: 'text-center',
+                        sortable: true,
                     },
                     {
                         key: 'matchedscorethreshold',
                         label: 'Matched Scored Therehold',
                         class: 'text-center',
+                        sortable: true,
                     },
                     {
                         key: 'action',
@@ -1458,16 +1490,19 @@ export default {
                         key: 'code',
                         label: 'Code',
                         class: 'w-320px',
+                        sortable: true,
                     },
                     {
                         key: 'screenfactor',
                         label: 'Screening Factor',
                         class: 'w-320px',
+                        sortable: true,
                     },
                     {
                         key: 'score',
                         label: 'Score',
                         class: 'text-center',
+                        sortable: true,
                     },
                     {
                         key: 'action',

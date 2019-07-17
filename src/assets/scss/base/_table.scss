@@ -24,6 +24,16 @@
             font-family: $font_medium;
             text-transform: uppercase;
             border-top: none !important;
+            &[aria-sort] {
+                position: relative;
+                outline: 0;
+                cursor: pointer;
+                &:after {
+                    content: '\E904';
+                    font-family: 'icomoon';
+                    padding-left: 8px;
+                }
+            }
         }
         &.hidden_header {
             display: none;
@@ -130,6 +140,11 @@
                     .custom-popover {
                         top: auto !important;
                         bottom: 28px !important;
+                        &:before {
+                            top: auto;
+                            bottom: -12px !important;
+                            transform: rotate(180deg);
+                        }
                     }
                 }
             }
@@ -141,6 +156,24 @@
                 margin: auto;
             }
         }
+    }
+}
+
+.bar-line {
+    height: 34px;
+    width: 5px;
+    position: relative;
+    display: block;
+    border-radius: 10px;
+    margin-right: 0px;
+    &.high {
+        background-color: $high;
+    }
+    &.medium {
+        background-color: $medium;
+    }
+    &.low {
+        background-color: $low;
     }
 }
 
