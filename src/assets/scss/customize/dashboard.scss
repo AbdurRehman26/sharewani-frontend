@@ -48,6 +48,16 @@
 	}
 }
 
+.no-label-chart {
+	.chart-highest-record {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		text-align: center;
+		width: 100%;
+	}
+}
+
 .amcharts-chart-div > a {
 	display: none !important;
 }

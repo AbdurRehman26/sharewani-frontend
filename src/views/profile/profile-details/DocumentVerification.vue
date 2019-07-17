@@ -121,6 +121,7 @@
     </div>
 </template>
 <script>
+import { mapGetters } from 'vuex'
 import customerInformation from '@/components/CustomerInfo.vue'
 import documentsSubmitted from '@/components/DocumentsSubmitted.vue'
 import kycStatusReviewPopup from '@/components/popups/KYCStatusReviewPopup.vue'
@@ -161,126 +162,11 @@ export default {
     */
     data() {
         return {
-            customerDetails: [
-                {
-                    heading: 'Basic Information',
-                    descriptions: [
-                        {
-                            title: 'Customer ID:',
-                            detail: '210345',
-                        },
-                        {
-                            title: 'First Name:',
-                            detail: 'Henk',
-                        },
-                        {
-                            title: 'Middle Name:',
-                            detail: 'John',
-                        },
-                        {
-                            title: 'Last Name:',
-                            detail: 'Fortuin',
-                        },
-                        {
-                            title: 'Gender:',
-                            detail: 'Male',
-                        },
-                        {
-                            title: 'Date of Birth:',
-                            detail: 'June 24, 1984',
-                        },
-                        {
-                            title: 'Nationality:',
-                            detail: 'American',
-                        },
-                        {
-                            title: 'Country of Residence:',
-                            detail: 'United Kingdom',
-                        },
-                    ],
-                },
-            ],
+            customerDetails: [],
 
-            vacationDetails: [
-                {
-                    heading: 'Liveness Detection',
-                    descriptions: [
-                        {
-                            title: 'Verification Timestamp:',
-                            detail: 'June 1, 2019 10:45 am',
-                        },
-                        {
-                            title: 'Score:',
-                            detail: '78.5',
-                        },
-                        {
-                            title: 'Result:',
-                            detail: 'Matched',
-                        },
-                        {
-                            title: 'Is Manually Overwrited:',
-                            detail: 'No',
-                        },
-                        {
-                            title: 'Manually Overwrite Result',
-                            detail: '',
-                        },
-                    ],
-                },
-                {
-                    heading: 'Face Comparision',
-                    descriptions: [
-                        {
-                            title: 'Verification Timestamp:',
-                            detail: 'June 1, 2019 10:52 am',
-                        },
-                        {
-                            title: 'Score:',
-                            detail: '54.5',
-                        },
-                        {
-                            title: 'Result:',
-                            detail: 'Not Matched',
-                        },
-                        {
-                            title: 'Is Manually Overwrited:',
-                            detail:
-                                'Yes, overwrited by Greg Eliss on June 2, 2019',
-                        },
-                        {
-                            title: 'Manually Overwrite Result',
-                            detail: '',
-                        },
-                    ],
-                },
-            ],
+            vacationDetails: [],
 
-            uploadDetails: [
-                {
-                    image: 'bill.png',
-                    thumbnail: 'thumbnail-jpg.png',
-                    title: 'Utility Bill',
-                    uploadDate: 'Uploaded June 1, 2019',
-                },
-                {
-                    image: 'nic.png',
-                    thumbnail: 'thumbnail-jpg.png',
-                    title: 'ID Card',
-                    uploadDate: 'Uploaded June 1, 2019',
-                },
-                {
-                    image: 'image5.png',
-                    thumbnail: 'thumbnail-jpg.png',
-                    title: 'Selfie From Video',
-                    uploadDate: 'Uploaded June 1, 2019',
-                },
-                {
-                    image: 'video.png',
-                    thumbnail: 'thumbnail-mp4.png',
-                    title: 'Recorded Video',
-                    uploadDate: 'Uploaded June 1, 2019',
-                },
-            ],
+            uploadDetails: [],
         }
     }, // End of Component > data
 
@@ -289,20 +175,39 @@ export default {
     | Component > computed
     |--------------------------------------------------------------------------
     */
-    computed: {}, // End of Component > computed
+    computed: {
+        ...mapGetters(['profile']),
+    }, // End of Component > computed
 
     /*
     |--------------------------------------------------------------------------
     | Component > methods
     |--------------------------------------------------------------------------
     */
-    methods: {}, // End of Component > methods
+    methods: {
+        initializeData() {
+            //system log table
+            let doccustomerDetails = this.profile.documentVerification
+                .customerDetails //get user data from store
+            this.customerDetails = doccustomerDetails //push data into array
+
+            let docvacationDetails = this.profile.documentVerification
+                .vacationDetails //get user data from store
+            this.vacationDetails = docvacationDetails //push data into array
+
+            let docuploadDetails = this.profile.documentVerification
+                .uploadDetails //get user data from store
+            this.uploadDetails = docuploadDetails //push data into array
+        },
+    }, // End of Component > methods
 
     /*
     |--------------------------------------------------------------------------
     | Component > mounted
     |--------------------------------------------------------------------------
     */
-    mounted() {}, // End of Component > mounted
+    mounted() {
+        this.initializeData()
+    }, // End of Component > mounted
 } // End of export default
 </script>

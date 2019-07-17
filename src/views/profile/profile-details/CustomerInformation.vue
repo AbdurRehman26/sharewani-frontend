@@ -99,6 +99,7 @@
     </div>
 </template>
 <script>
+import { mapGetters } from 'vuex'
 import customerInformation from '@/components/CustomerInfo.vue'
 import kycStatusReviewPopup from '@/components/popups/KYCStatusReviewPopup.vue'
 import cancelReviewProcessPopup from '@/components/popups/CancelReviewProcessPopup.vue'
@@ -134,217 +135,11 @@ export default {
     */
     data() {
         return {
-            customerDetails: [
-                {
-                    heading: 'Basic Information',
-                    descriptions: [
-                        {
-                            title: 'Customer ID:',
-                            detail: '210345',
-                        },
-                        {
-                            title: 'First Name:',
-                            detail: 'Henk',
-                        },
-                        {
-                            title: 'Middle Name:',
-                            detail: 'John',
-                        },
-                        {
-                            title: 'Last Name:',
-                            detail: 'Fortuin',
-                        },
-                        {
-                            title: 'Gender:',
-                            detail: 'Male',
-                        },
-                        {
-                            title: 'Date of Birth:',
-                            detail: 'June 24, 1984',
-                        },
-                        {
-                            title: 'Nationality:',
-                            detail: 'American',
-                        },
-                        {
-                            title: 'Country of Residence:',
-                            detail: 'United Kingdom',
-                        },
-                    ],
-                },
-                {
-                    heading: 'Contact Information',
-                    descriptions: [
-                        {
-                            title: 'Address:',
-                            detail: '89 St. John’s Road',
-                        },
-                        {
-                            title: 'City:',
-                            detail: 'Bristol',
-                        },
-                        {
-                            title: 'State:',
-                            detail: 'N/A',
-                        },
-                        {
-                            title: 'Country:',
-                            detail: 'United Kingdom',
-                        },
-                        {
-                            title: 'Postal Code:',
-                            detail: 'BS96 5IS',
-                        },
-                        {
-                            title: 'Phone Number:',
-                            detail: '+44 7700 900077',
-                        },
-                        {
-                            title: 'Email Address:',
-                            detail: 'henk.fortuin@outlook.com',
-                        },
-                    ],
-                },
-                {
-                    heading: 'Occupation',
-                    descriptions: [
-                        {
-                            title: 'Work Type:',
-                            detail: 'Self Employed',
-                        },
-                        {
-                            title: 'Industry:',
-                            detail: 'Automotive Industry',
-                        },
-                        {
-                            title: 'Tax ID:',
-                            detail: '234-92934993-9',
-                        },
-                    ],
-                },
-                {
-                    heading: 'ID Document',
-                    descriptions: [
-                        {
-                            title: 'Document Type:',
-                            detail: 'National Identity Card',
-                        },
-                        {
-                            title: 'ID Number:',
-                            detail: 'NL 60 76 93 B',
-                        },
-                        {
-                            title: 'Expiry Date:',
-                            detail: 'April 20, 2022',
-                        },
-                    ],
-                },
+            customerDetails: [],
 
-                {
-                    heading: 'Account Information',
-                    descriptions: [
-                        {
-                            title: 'Purpose of action :',
-                            detail: 'Short Term Investment',
-                        },
-                        {
-                            title: 'Planned Investment:',
-                            detail: '£ 500 to £ 1,000 (per month)',
-                        },
-                        {
-                            title: 'System Holding:',
-                            detail: 'Pound',
-                        },
-                        {
-                            title: 'Account Open Date:',
-                            detail: 'June 10, 2019',
-                        },
-                        {
-                            title: 'Channel Mode:',
-                            detail: 'Face to Face',
-                        },
-                        {
-                            title: 'Product Type:',
-                            detail: 'Saving Account',
-                        },
-                        {
-                            title: 'Wallet ID:',
-                            detail: '18238129399',
-                        },
-                    ],
-                },
-                {
-                    heading: 'On-Going Due Diligence',
-                    descriptions: [
-                        {
-                            title: 'Last Review:',
-                            detail: 'N/A',
-                        },
-                        {
-                            title: 'Next Review:',
-                            detail: 'Now',
-                        },
-                        {
-                            title: 'Expiry Date:',
-                            detail: 'April 20, 2022',
-                        },
-                    ],
-                },
-            ],
+            tags: [],
 
-            tags: [
-                {
-                    description: [
-                        {
-                            headings: 'Sanction Hit',
-                            icon: 'icon-sanction',
-                            actions: 'Rejected',
-                        },
-                        {
-                            headings: 'PEP Hit',
-                            icon: 'icon-pep',
-                            actions: 'Rejected',
-                        },
-                    ],
-                },
-                {
-                    description: [
-                        {
-                            headings: 'Enforcement Hit',
-                            icon: 'icon-enforcement',
-                            actions: 'Active',
-                        },
-                        {
-                            headings: 'Client Black List Hit',
-                            icon: 'icon-blacklist',
-                            actions: 'Active',
-                        },
-                    ],
-                },
-            ],
-
-            tagsList: [
-                {
-                    statusHeading: 'Documents Verification',
-                    description: [
-                        {
-                            headings: 'Document Matched',
-                            icon: 'icon-documentation',
-                            actions: 'Active',
-                        },
-                    ],
-                },
-                {
-                    statusHeading: 'Risk Rating',
-                    description: [
-                        {
-                            headings: 'Sanctioned',
-                            icon: 'icon-graph',
-                            actions: 'Rejected',
-                        },
-                    ],
-                },
-            ],
+            tagsList: [],
         }
     }, // End of Component > data
 
@@ -353,20 +148,32 @@ export default {
     | Component > computed
     |--------------------------------------------------------------------------
     */
-    computed: {}, // End of Component > computed
+    computed: { ...mapGetters(['profile']) }, // End of Component > computed
 
     /*
     |--------------------------------------------------------------------------
     | Component > methods
     |--------------------------------------------------------------------------
     */
-    methods: {}, // End of Component > methods
+    methods: {
+        initializeData() {
+            let customerDetails = this.profile.customerInformation
+                .customerDetails //get user data from store
+            this.customerDetails = customerDetails //push data into array
+            let tags = this.profile.customerInformation.tags //get user data from store
+            this.tags = tags //push data into array
+            let tagsList = this.profile.customerInformation.tagsList //get user data from store
+            this.tagsList = tagsList //push data into array
+        },
+    }, // End of Component > methods
 
     /*
     |--------------------------------------------------------------------------
     | Component > mounted
     |--------------------------------------------------------------------------
     */
-    mounted() {}, // End of Component > mounted
+    mounted() {
+        this.initializeData()
+    }, // End of Component > mounted
 } // End of export default
 </script>

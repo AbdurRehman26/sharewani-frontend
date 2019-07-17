@@ -48,6 +48,7 @@
     </div>
 </template>
 <script>
+import { mapGetters } from 'vuex'
 import timeLine from '@/components/TimeLine.vue'
 import customerInformation from '@/components/CustomerInfo.vue'
 import kycStatusReviewPopup from '@/components/popups/KYCStatusReviewPopup.vue'
@@ -83,120 +84,9 @@ export default {
     */
     data() {
         return {
-            customerDetails: [
-                {
-                    heading: 'Basic Information',
-                    descriptions: [
-                        {
-                            title: 'Customer ID:',
-                            detail: '210345',
-                        },
-                        {
-                            title: 'First Name:',
-                            detail: 'Henk',
-                        },
-                        {
-                            title: 'Middle Name:',
-                            detail: 'John',
-                        },
-                        {
-                            title: 'Last Name:',
-                            detail: 'Fortuin',
-                        },
-                        {
-                            title: 'Gender:',
-                            detail: 'Male',
-                        },
-                        {
-                            title: 'Date of Birth:',
-                            detail: 'June 24, 1984',
-                        },
-                        {
-                            title: 'Nationality:',
-                            detail: 'American',
-                        },
-                        {
-                            title: 'Country of Residence:',
-                            detail: 'United Kingdom',
-                        },
-                    ],
-                },
-            ],
+            customerDetails: [],
 
-            yearDetails: [
-                {
-                    days: 'Today',
-                    describe: [
-                        {
-                            image: 'member-4.png',
-                            name: 'Jacqueline Asong',
-                            subHeading: 'Approver',
-                            date: 'July 4, 2019 10:45 a.m.',
-                            details:
-                                'Submitted KYC Review Status and changed KYC Status to Approved with the following comment, \n \nSubmitted KYC Review Status and changed KYC Status to Approved with the following comment,',
-                        },
-                        {
-                            image: 'member-4.png',
-                            name: 'Jacqueline Asong',
-                            subHeading: 'Approver',
-                            date: 'July 4, 2019 10:15 a.m.',
-                            details: 'Initiated KYC Review process related to,',
-                            blockTags: {
-                                headings: 'Sanctioned',
-                                icon: 'icon-graph',
-                                actions: 'Rejected',
-                            },
-                        },
-                    ],
-                },
-                {
-                    days: 'June 3, 2019',
-                    describe: [
-                        {
-                            image: 'idenfo.png',
-                            name: 'IDENFO',
-                            subHeading: 'System Activity',
-                            date: 'July 3, 2019 12:10 p.m.',
-                            details:
-                                'Generated system alert related to following factor,',
-                            blockTags: {
-                                headings: 'Sanctioned',
-                                icon: 'icon-graph',
-                                actions: 'Rejected',
-                            },
-                        },
-                    ],
-                },
-                {
-                    days: 'June 1, 2019',
-                    describe: [
-                        {
-                            image: 'idenfo.png',
-                            name: 'IDENFO',
-                            subHeading: 'System Activity',
-                            date: 'July 1, 2019 11:10 a.m.',
-                            details:
-                                'Completed liveness detection process with the Matched result.',
-                        },
-                        {
-                            image: 'idenfo.png',
-                            name: 'IDENFO',
-                            subHeading: 'System Activity',
-                            date: 'July 1, 2019 11:10 a.m.',
-                            details:
-                                'Completed liveness detection process with the Matched result.',
-                        },
-                        {
-                            image: 'member-5.png',
-                            name: 'Cvita Doleschall',
-                            subHeading: 'Relationship Manager',
-                            date: 'July 1, 2019 11:05 a.m.',
-                            details:
-                                'Registered new customer in to the system and uploaded required documents. ',
-                        },
-                    ],
-                },
-            ],
+            yearDetails: [],
         }
     }, // End of Component > data
 
@@ -205,20 +95,34 @@ export default {
     | Component > computed
     |--------------------------------------------------------------------------
     */
-    computed: {}, // End of Component > computed
+    computed: {
+        ...mapGetters(['profile']),
+    }, // End of Component > computed
 
     /*
     |--------------------------------------------------------------------------
     | Component > methods
     |--------------------------------------------------------------------------
     */
-    methods: {}, // End of Component > methods
+    methods: {
+        initializeData() {
+            //system log table
+            let doccustomerDetails = this.profile.activityTimeline
+                .customerDetails //get user data from store
+            this.customerDetails = doccustomerDetails //push data into array
+
+            let docvyearDetails = this.profile.activityTimeline.yearDetails //get user data from store
+            this.yearDetails = docvyearDetails //push data into array
+        },
+    }, // End of Component > methods
 
     /*
     |--------------------------------------------------------------------------
     | Component > mounted
     |--------------------------------------------------------------------------
     */
-    mounted() {}, // End of Component > mounted
+    mounted() {
+        this.initializeData()
+    }, // End of Component > mounted
 } // End of export default
 </script>
