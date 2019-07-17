@@ -42,6 +42,11 @@
                     </b-form>
                 </div>
             </div>
+            <div class="contact-link text-center">
+                Existing system user?
+                <router-link to="/">Sign In</router-link>
+            </div>
         </div>
+        <base-footer></base-footer>
     </div>
 </template>

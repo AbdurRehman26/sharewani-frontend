@@ -1,8 +1,17 @@
+body {
+    &.auth-body {
+        .sidebar {
+            display: none !important;
+        }
+    }
+}
+
 .sidebar {
     background-color: #3c1559;
     width: 252px;
     height: 100%;
     position: fixed;
+
     .sidebar-listing {
         display: flex;
         overflow: hidden;

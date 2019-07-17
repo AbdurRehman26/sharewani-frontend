@@ -24,5 +24,14 @@
 @import 'customize/customize';
 
 .amcharts-chart-div > a {
-    display: none !important;
+	display: none !important;
+}
+.auth-overlay-div {
+	position: fixed;
+	width: 300px;
+	left: 0;
+	top: 0;
+	height: 100%;
+	background: #000;
+	z-index: 999;
 }

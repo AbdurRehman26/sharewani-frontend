@@ -4,9 +4,11 @@ import router from './router'
 import store from '@/store/index'
 import './registerServiceWorker'
 import BootstrapVue from 'bootstrap-vue'
+import vbclass from 'vue-body-class'
 require('@/auto-import.js')
 
 Vue.use(BootstrapVue)
+Vue.use(vbclass, router)
 
 Vue.config.productionTip = false
 
