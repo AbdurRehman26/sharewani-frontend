@@ -1,7 +1,7 @@
 <template>
     <div>
         <b-modal
-            id="cancel-review-process"
+            id="cancel-review-process-popup"
             title="Cancel Review Process"
             size="sm"
             okTitle="Cancel"

@@ -1,14 +1,14 @@
 <template>
     <div>
         <b-modal
-            id="kyc-status-review"
+            id="kyc-status-review-popup"
             title="KYC Status Review"
             size="sm"
             okTitle="Submit"
             cancelTitle="Cancel"
             cancelVariant="link"
         >
-            <b-form class="modal-form-format">
+            <b-form>
                 <b-form-group
                     id="input-group-1"
                     label="KYC Update Date"
@@ -49,7 +49,7 @@
                     </b-form-group>
                 </b-form-group>
 
-                <div class="form-group mb-0">
+                <div class="form-group">
                     <label for="kyc-status">KYC Comments</label>
                     <textarea
                         class="form-control"

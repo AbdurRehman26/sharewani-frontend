@@ -15,7 +15,7 @@
                         </li>
                         <li>
                             <b-button
-                                v-b-modal.cancel-review-process
+                                v-b-modal.cancel-review-process-popup
                                 type="button"
                                 variant="link font-semibold"
                             >
@@ -24,7 +24,7 @@
                         </li>
                         <li>
                             <b-button
-                                v-b-modal.kyc-status-review
+                                v-b-modal.kyc-status-review-popup
                                 type="button"
                                 variant="primary"
                             >
@@ -94,21 +94,21 @@
                 </div>
             </div>
         </div>
-        <cancel-review-process></cancel-review-process>
-        <kyc-status-review></kyc-status-review>
+        <cancel-review-process-popup></cancel-review-process-popup>
+        <kyc-status-review-popup></kyc-status-review-popup>
     </div>
 </template>
 <script>
 import customerInformation from '@/components/CustomerInfo.vue'
-import kycStatusReview from '@/components/popups/KYCStatusReviewPopup.vue'
-import cancelReviewProcess from '@/components/popups/CancelReviewProcessPopup.vue'
+import kycStatusReviewPopup from '@/components/popups/KYCStatusReviewPopup.vue'
+import cancelReviewProcessPopup from '@/components/popups/CancelReviewProcessPopup.vue'
 import tags from '@/components/Tags.vue'
 export default {
     components: {
         customerInformation,
         tags,
-        cancelReviewProcess,
-        kycStatusReview,
+        cancelReviewProcessPopup,
+        kycStatusReviewPopup,
     },
 
     /*
