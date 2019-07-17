@@ -18,7 +18,10 @@
                             >
                         </li>
                         <li>
-                            <b-button type="button" variant="secondary"
+                            <b-button
+                                type="button"
+                                variant="secondary"
+                                v-b-modal.add-industry
                                 >+ Add Industry</b-button
                             >
                         </li>
@@ -76,15 +79,18 @@
             </b-table>
         </div>
         <pagination></pagination>
+        <add-industry-popup></add-industry-popup>
     </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
 import pagination from '@/components/Pagination.vue'
+import addIndustryPopup from '@/components/popups/AddIndustryPopup.vue'
 export default {
     components: {
         pagination,
+        addIndustryPopup,
     },
 
     /*

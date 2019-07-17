@@ -18,7 +18,10 @@
                             >
                         </li>
                         <li>
-                            <b-button type="button" variant="secondary"
+                            <b-button
+                                type="button"
+                                variant="secondary"
+                                v-b-modal.add-state
                                 >+ Add State</b-button
                             >
                         </li>
@@ -45,15 +48,19 @@
             </b-table>
         </div>
         <pagination></pagination>
+        <add-state-popup></add-state-popup>
     </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
 import pagination from '@/components/Pagination.vue'
+import addStatePopup from '@/components/popups/AddStatePopup.vue'
+
 export default {
     components: {
         pagination,
+        addStatePopup,
     },
 
     /*
