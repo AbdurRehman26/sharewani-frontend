@@ -1244,20 +1244,28 @@ export default {
         alertsTable: {
             fields: [
                 {
+                    key: 'alerts',
+                    label: '',
+                    class: 'p-r-0',
+                },
+                {
                     key: 'profile',
                     label: '',
                 },
                 {
                     key: 'customer',
                     label: 'CUSTOMER',
+                    sortable: true,
                 },
                 {
                     key: 'full_name',
                     label: 'FULL NAME',
+                    sortable: true,
                 },
                 {
                     key: 'nationality',
                     label: 'NATIONALITY',
+                    sortable: true,
                 },
                 {
                     key: 'name_screening',
@@ -1280,10 +1288,12 @@ export default {
                 {
                     key: 'action',
                     label: 'STATUS',
+                    sortable: true,
                 },
             ],
             items: [
                 {
+                    alerts: 'high',
                     profile: 'member-1.png',
                     customer: '1250976',
                     full_name: 'Zeng Wen',
@@ -1306,6 +1316,7 @@ export default {
                     action: 'in review',
                 },
                 {
+                    alerts: 'high',
                     profile: 'member-2.png',
                     customer: '1250976',
                     full_name: 'Edward Lindgren',
@@ -1328,6 +1339,7 @@ export default {
                     action: 'review',
                 },
                 {
+                    alerts: 'medium',
                     profile: 'member-3.png',
                     customer: '3282345',
                     full_name: 'Christian Russell',
@@ -1350,6 +1362,7 @@ export default {
                     action: 'in review',
                 },
                 {
+                    alerts: 'high',
                     profile: 'member-4.png',
                     customer: '3312353',
                     full_name: 'Fua Lamba',
@@ -1372,6 +1385,7 @@ export default {
                     action: 'in review',
                 },
                 {
+                    alerts: 'medium',
                     profile: 'member-5.png',
                     customer: '1250976',
                     full_name: 'Alexander Ljung',
@@ -1394,6 +1408,7 @@ export default {
                     action: 'in review',
                 },
                 {
+                    alerts: 'high',
                     profile: 'member-6.png',
                     customer: '2489573',
                     full_name: 'Chukwudi Udo',
@@ -1416,6 +1431,7 @@ export default {
                     action: 'review',
                 },
                 {
+                    alerts: 'medium',
                     profile: 'member-7.png',
                     customer: '3312353',
                     full_name: 'Linzell Bowman',
@@ -1438,6 +1454,7 @@ export default {
                     action: 'review',
                 },
                 {
+                    alerts: 'medium',
                     profile: 'member-8.png',
                     customer: '3282345',
                     full_name: 'Vương Mộng Nhi',
@@ -1460,6 +1477,7 @@ export default {
                     action: 'review',
                 },
                 {
+                    alerts: 'high',
                     profile: 'member-9.png',
                     customer: '2321345',
                     full_name: 'Lew Silverton',
@@ -1482,6 +1500,7 @@ export default {
                     action: 'review',
                 },
                 {
+                    alerts: 'high',
                     profile: 'member-10.png',
                     customer: '2223535',
                     full_name: 'Xun Guiying',

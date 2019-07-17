@@ -9,22 +9,27 @@ export default {
                 {
                     key: 'user',
                     label: 'User',
+                    sortable: true,
                 },
                 {
                     key: 'role',
                     label: 'Role',
+                    sortable: true,
                 },
                 {
                     key: 'date_segments',
                     label: 'Date Segments',
+                    sortable: true,
                 },
                 {
                     key: 'join_date',
                     label: 'Join Date',
+                    sortable: true,
                 },
                 {
                     key: 'status',
                     label: 'Status',
+                    sortable: true,
                 },
                 {
                     key: 'action',
@@ -189,16 +194,19 @@ export default {
                 {
                     key: 'role_title',
                     label: 'Role Title',
+                    sortable: true,
                 },
                 {
                     key: 'associate_users',
                     label: 'Associate Users',
                     class: 'text-center',
+                    sortable: true,
                 },
                 {
                     key: 'status',
                     label: 'Status',
                     class: 'text-center',
+                    sortable: true,
                 },
                 {
                     key: 'action',
@@ -285,16 +293,19 @@ export default {
             fields: [
                 {
                     key: 'branch_title',
-                    label: 'Branch Title',
+                    label: 'Data Segment Title',
+                    sortable: true,
                 },
                 {
                     key: 'short_code',
                     label: 'Short Code',
                     class: 'text-center',
+                    sortable: true,
                 },
                 {
                     key: 'status',
                     label: 'Status',
+                    sortable: true,
                 },
                 {
                     key: 'action',
@@ -358,14 +369,17 @@ export default {
                 {
                     key: 'application_title',
                     label: 'Application Title',
+                    sortable: true,
                 },
                 {
                     key: 'branches',
-                    label: 'BRANCHES',
+                    label: 'Data Segments',
+                    sortable: true,
                 },
                 {
                     key: 'status',
                     label: 'Status',
+                    sortable: true,
                 },
                 {
                     key: 'action',

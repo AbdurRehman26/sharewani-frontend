@@ -45,6 +45,15 @@
         </div>
         <div class="table-section">
             <b-table :items="items" :fields="fields">
+                <template slot="alerts" slot-scope="data">
+                    <div
+                        class="bar-line"
+                        :class="data.value"
+                        v-b-tooltip.hover
+                        :title="data.value"
+                    ></div>
+                </template>
+
                 <template slot="profile" slot-scope="data">
                     <div class="profile-area">
                         <div
