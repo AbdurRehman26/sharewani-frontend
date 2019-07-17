@@ -301,6 +301,12 @@ export default new Router({
                     component: () =>
                         import(/* webpackChunkName: "customer" */ './views/configuration/Branding.vue'),
                 },
+                {
+                    path: '/configuration/from-builder/',
+                    name: 'branding',
+                    component: () =>
+                        import(/* webpackChunkName: "builder" */ './views/configuration/FormBuilder.vue'),
+                },
             ],
         },
 
