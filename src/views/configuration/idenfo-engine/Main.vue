@@ -1,7 +1,7 @@
 <template>
     <div class="wrap-content">
         <div class="config-list" ref="listingArea">
-            <ul v-show="listVal <= 1100">
+            <ul v-show="listVal <= 1500">
                 <li
                     v-for="(list, index) in menuListing.slice(0, 8)"
                     :key="index"
@@ -12,7 +12,7 @@
                 </li>
                 <li class="open-dropdown">
                     <a @click="listDropdown ^= true" href="javascript:void(0);">
-                        .....
+                        <i class="icon-dropdown-icon"></i>
                     </a>
 
                     <div v-if="listDropdown" class="dropdown-open">
@@ -32,7 +32,7 @@
                     </div>
                 </li>
             </ul>
-            <ul v-show="listVal >= 1101">
+            <ul v-show="listVal >= 1499">
                 <li v-for="(list, index) in menuListing" :key="index">
                     <router-link :to="list.anchorLink">
                         <span>{{ list.menuLabel }}</span>
