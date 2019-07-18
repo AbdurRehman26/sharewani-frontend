@@ -24,9 +24,16 @@
                         <div
                             class="list-group-item"
                             v-for="element in list2"
-                            :key="element.name"
+                            :key="element.fieldName"
                         >
-                            {{ element.name }}
+                            <div
+                                class="form-control"
+                                v-if="element.fieldName == element.fieldName"
+                            >
+                                <span class="move-icon"></span>
+                                <i :class="element.fieldIcon"></i>
+                                <p>{{ element.fieldName }}</p>
+                            </div>
                         </div>
                     </draggable>
                 </div>
@@ -38,11 +45,16 @@
                         @change="log"
                     >
                         <div
-                            class="list-group-item"
+                            class=""
                             v-for="element in list1"
-                            :key="element.name"
+                            :key="element.fieldName"
                         >
-                            {{ element.name }}
+                            <div class="form-group">
+                                <div class="form-control">
+                                    <i :class="element.fieldIcon"></i>
+                                    <span>{{ element.fieldName }}</span>
+                                </div>
+                            </div>
                         </div>
                     </draggable>
                 </div>
@@ -93,15 +105,23 @@ export default {
                 },
             ],
             list1: [
-                { name: 'John', id: 1 },
-                { name: 'Joao', id: 2 },
-                { name: 'Jean', id: 3 },
-                { name: 'Gerard', id: 4 },
+                {
+                    fieldName: 'heading',
+                    fieldIcon: 'icon-edit',
+                    id: 1,
+                },
+                {
+                    fieldName: 'text field',
+                    fieldIcon: 'icon-done',
+                    id: 2,
+                },
             ],
             list2: [
-                { name: 'Juan', id: 5 },
-                { name: 'Edgard', id: 6 },
-                { name: 'Johnson', id: 7 },
+                {
+                    fieldName: 'heading',
+                    fieldIcon: 'icon-edit',
+                    id: 1,
+                },
             ],
         }
     }, // End of Component > data
@@ -130,6 +150,9 @@ export default {
                     this.navWidth = false
                 }
             }, 500)
+        },
+        log: function(evt) {
+            window.console.log(evt)
         },
     }, // End of Component > methods
 
