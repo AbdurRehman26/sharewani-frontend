@@ -4,12 +4,21 @@
             <div class="col-lg-12">
                 <h3>Step 2: Record Video</h3>
                 <p class="info">
-                    Please point video camera on customer face and make sure
-                    their straight face is completly visible in the video. Click
-                    on Record button to record 10 seconds video.
+                    <i class="icon-error_outline"></i>Please point video camera
+                    on customer face and make sure their straight face is
+                    completly visible in the video. Click on Record button to
+                    record 10 seconds video.
                 </p>
                 <div class="video-record">
-                    <img src="@/assets/images/Video.png" />
+                    <img src="@/assets/images/video.png" />
+                    <div class="video-play">
+                        <i class="icon-record">
+                            <i class="path1"></i>
+                            <i class="path2"></i>
+                            <i class="path3"></i>
+                        </i>
+                        <p>Record</p>
+                    </div>
                 </div>
                 <base-button
                     btnType="submit"

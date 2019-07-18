@@ -61,6 +61,20 @@ $other_font_bold: 'ProximanovaBold';
     -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-record .path1:before {
+    content: '\e95f';
+    color: rgb(255, 255, 255);
+}
+.icon-record .path2:before {
+    content: '\e960';
+    margin-left: -1em;
+    color: rgb(201, 31, 55);
+}
+.icon-record .path3:before {
+    content: '\e961';
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+}
 .icon-dropdown-icon:before {
     content: '\e95e';
 }
@@ -250,7 +264,7 @@ $other_font_bold: 'ProximanovaBold';
 .icon-delete:before {
     content: '\e935';
 }
-.icon-insights:before {
+.icon-Insights:before {
     content: '\e936';
 }
 .icon-low-risk:before {

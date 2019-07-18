@@ -27,6 +27,16 @@
 
 .info {
     color: $nav-color;
+    position: relative;
+    padding-left: 30px;
+    i {
+        font-size: 1.375rem;
+        position: absolute;
+        left: 0;
+        bottom: auto;
+        top: -4px;
+        margin: auto;
+    }
 }
 
 .step-form {
@@ -84,7 +94,7 @@
     align-content: center;
     max-width: 200px;
     h4 {
-        font-family: $font_thin;
+        font-family: $font_medium;
     }
     p {
         margin-bottom: 0px;
@@ -689,6 +699,44 @@
                 }
             }
         }
+    }
+}
+.video-record {
+    position: relative;
+    max-width: 500px;
+    margin-bottom: 80px;
+    .video-play {
+        position: absolute;
+        top: 90%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        cursor: pointer;
+        text-align: center;
+        max-width: 100px;
+        i {
+            &.icon-record {
+                font-size: 70px;
+            }
+        }
+        p {
+            color: $red;
+            text-transform: uppercase;
+            font-family: $font_medium;
+            margin-top: 5px;
+        }
+        &:hover,
+        &:focus {
+            p {
+                color: $body-color;
+            }
+        }
+    }
+}
+
+.icon-record {
+    i {
+        font-style: normal;
     }
 }
 

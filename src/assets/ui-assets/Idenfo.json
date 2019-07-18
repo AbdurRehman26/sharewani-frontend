@@ -1,311 +1,322 @@
 {
   "selection": [
     {
-      "order": 0,
-      "name": "dropdown-icon"
+      "order": 195,
+      "name": "record",
+      "prevSize": 32,
+      "codes": [
+        59743,
+        59744,
+        59745
+      ]
     },
     {
-      "order": 0,
+      "order": 196,
+      "name": "dropdown-icon",
+      "prevSize": 32
+    },
+    {
+      "order": 197,
       "name": "heading",
       "prevSize": 32
     },
     {
-      "order": 0,
+      "order": 198,
       "name": "radio",
       "prevSize": 32
     },
     {
-      "order": 0,
+      "order": 199,
       "name": "select-field",
       "prevSize": 32
     },
     {
-      "order": 0,
+      "order": 200,
       "name": "settings",
       "prevSize": 32
     },
     {
-      "order": 0,
+      "order": 201,
       "name": "table-sort",
       "prevSize": 32
     },
     {
-      "order": 0,
+      "order": 202,
       "name": "text-area",
       "prevSize": 32
     },
     {
-      "order": 0,
+      "order": 203,
       "name": "text-field",
       "prevSize": 32
     },
     {
-      "order": 0,
+      "order": 204,
       "name": "color-picker",
       "prevSize": 32
     },
     {
-      "order": 0,
+      "order": 205,
       "name": "checkbox",
       "prevSize": 32
     },
     {
-      "order": 0,
+      "order": 206,
       "name": "cross-with-circle",
       "prevSize": 32
     },
     {
-      "order": 0,
+      "order": 207,
       "name": "tick-with-circle",
       "prevSize": 32
     },
     {
-      "order": 0,
+      "order": 208,
       "name": "documentation",
       "prevSize": 32
     },
     {
-      "order": 0,
+      "order": 209,
       "ligatures": "add",
       "name": "add",
       "prevSize": 24
     },
     {
-      "order": 0,
+      "order": 210,
       "ligatures": "add_circle",
       "name": "add_circle",
       "prevSize": 24
     },
     {
-      "order": 0,
+      "order": 211,
       "ligatures": "clear, close",
       "name": "clear, close",
       "prevSize": 24
     },
     {
-      "order": 0,
+      "order": 212,
       "ligatures": "remove",
       "name": "remove",
       "prevSize": 24
     },
     {
-      "order": 0,
+      "order": 213,
       "ligatures": "remove_circle, do_not_disturb_on",
       "name": "remove_circle, do_not_disturb_on",
       "prevSize": 24
     },
     {
-      "order": 0,
+      "order": 214,
       "ligatures": "expand_less",
       "name": "expand_less",
       "prevSize": 24
     },
     {
-      "order": 0,
+      "order": 215,
       "ligatures": "expand_more",
       "name": "expand_more",
       "prevSize": 24
     },
     {
-      "order": 0,
+      "order": 216,
       "ligatures": "arrow_back_ios",
       "name": "arrow_back_ios",
       "prevSize": 24
     },
     {
-      "order": 0,
+      "order": 217,
       "ligatures": "arrow_forward_ios",
       "name": "arrow_forward_ios",
       "prevSize": 24
     },
     {
-      "order": 0,
+      "order": 218,
       "ligatures": "error",
       "prevSize": 24,
       "name": "error"
     },
     {
-      "order": 0,
+      "order": 219,
       "ligatures": "error_outline",
       "name": "error_outline",
       "prevSize": 24
     },
     {
-      "order": 0,
+      "order": 220,
       "ligatures": "warning, report_problem",
       "name": "warning, report_problem",
       "prevSize": 24
     },
     {
-      "order": 0,
+      "order": 221,
       "ligatures": "loop, sync",
       "name": "loop, sync",
       "prevSize": 24
     },
     {
-      "order": 0,
+      "order": 222,
       "ligatures": "mic",
       "name": "mic",
       "prevSize": 24
     },
     {
-      "order": 0,
+      "order": 223,
       "ligatures": "mic_none",
       "name": "mic_none",
       "prevSize": 24
     },
     {
-      "order": 0,
+      "order": 224,
       "ligatures": "mic_off",
       "name": "mic_off",
       "prevSize": 24
     },
     {
-      "order": 0,
+      "order": 225,
       "ligatures": "replay",
       "name": "replay",
       "prevSize": 24
     },
     {
-      "order": 0,
+      "order": 226,
       "ligatures": "videocam",
       "name": "videocam",
       "prevSize": 24
     },
     {
-      "order": 0,
+      "order": 227,
       "ligatures": "videocam_off",
       "name": "videocam_off",
       "prevSize": 24
     },
     {
-      "order": 0,
+      "order": 228,
       "ligatures": "volume_down",
       "name": "volume_down",
       "prevSize": 24
     },
     {
-      "order": 0,
+      "order": 229,
       "ligatures": "volume_mute",
       "name": "volume_mute",
       "prevSize": 24
     },
     {
-      "order": 0,
+      "order": 230,
       "ligatures": "volume_off",
       "name": "volume_off",
       "prevSize": 24
     },
     {
-      "order": 0,
+      "order": 231,
       "ligatures": "volume_up",
       "name": "volume_up",
       "prevSize": 24
     },
     {
-      "order": 0,
+      "order": 232,
       "ligatures": "chat",
       "name": "chat",
       "prevSize": 24
     },
     {
-      "order": 0,
+      "order": 233,
       "ligatures": "contact_phone",
       "name": "contact_phone",
       "prevSize": 24
     },
     {
-      "order": 0,
+      "order": 234,
       "ligatures": "expand_less",
       "name": "expand_less1",
       "prevSize": 24
     },
     {
-      "order": 0,
+      "order": 235,
       "ligatures": "expand_more",
       "name": "expand_more1",
       "prevSize": 24
     },
     {
-      "order": 0,
+      "order": 236,
       "ligatures": "arrow_back_ios",
       "name": "arrow_back_ios1",
       "prevSize": 24
     },
     {
-      "order": 0,
+      "order": 237,
       "ligatures": "arrow_forward_ios",
       "name": "arrow_forward_ios1",
       "prevSize": 24
     },
     {
-      "order": 0,
+      "order": 238,
       "ligatures": "star, grade",
       "name": "star, grade",
       "prevSize": 24
     },
     {
-      "order": 0,
+      "order": 239,
       "ligatures": "star_outline",
       "name": "star_outline",
       "prevSize": 24
     },
     {
-      "order": 0,
+      "order": 240,
       "ligatures": "account_balance",
       "name": "account_balance",
       "prevSize": 24
     },
     {
-      "order": 0,
+      "order": 241,
       "ligatures": "account_box",
       "name": "account_box",
       "prevSize": 24
     },
     {
-      "order": 0,
+      "order": 242,
       "ligatures": "account_circle",
       "name": "account_circle",
       "prevSize": 24
     },
     {
-      "order": 0,
+      "order": 243,
       "ligatures": "assignment_ind",
       "name": "assignment_ind",
       "prevSize": 24
     },
     {
-      "order": 0,
+      "order": 244,
       "ligatures": "cached",
       "name": "cached",
       "prevSize": 24
     },
     {
-      "order": 0,
+      "order": 245,
       "ligatures": "check_circle",
       "name": "check_circle",
       "prevSize": 24
     },
     {
-      "order": 0,
+      "order": 246,
       "ligatures": "done",
       "name": "done",
       "prevSize": 24
     },
     {
-      "order": 0,
+      "order": 247,
       "ligatures": "lock_open",
       "name": "lock_open",
       "prevSize": 24
     },
     {
-      "order": 0,
+      "order": 248,
       "ligatures": "lock_outline",
       "name": "lock_outline",
       "prevSize": 24
     },
     {
-      "order": 0,
+      "order": 249,
       "name": "tomb",
       "prevSize": 32,
       "codes": [
@@ -314,152 +325,152 @@
       ]
     },
     {
-      "order": 0,
+      "order": 250,
       "prevSize": 24,
       "name": "chevron-down"
     },
     {
-      "order": 0,
+      "order": 251,
       "prevSize": 32,
       "name": "check-circle"
     },
     {
-      "order": 0,
+      "order": 252,
       "prevSize": 32,
       "name": "minus"
     },
     {
-      "order": 0,
+      "order": 253,
       "prevSize": 24,
       "name": "delete"
     },
     {
-      "order": 0,
+      "order": 254,
       "name": "Insights",
       "prevSize": 24
     },
     {
-      "order": 0,
+      "order": 255,
       "name": "low-risk",
       "prevSize": 24
     },
     {
-      "order": 0,
+      "order": 256,
       "name": "high-risk",
       "prevSize": 24
     },
     {
-      "order": 0,
+      "order": 257,
       "name": "caret-right",
       "prevSize": 24
     },
     {
-      "order": 0,
+      "order": 258,
       "name": "edit",
       "prevSize": 24
     },
     {
-      "order": 0,
+      "order": 259,
       "name": "medium-risk",
       "prevSize": 24
     },
     {
-      "order": 0,
+      "order": 260,
       "name": "trash",
       "prevSize": 24
     },
     {
-      "order": 0,
+      "order": 261,
       "name": "add-customer",
       "prevSize": 24
     },
     {
-      "order": 0,
+      "order": 262,
       "name": "blacklist",
       "prevSize": 24
     },
     {
-      "order": 0,
+      "order": 263,
       "name": "calendar",
       "prevSize": 24
     },
     {
-      "order": 0,
+      "order": 264,
       "name": "caret-down",
       "prevSize": 24
     },
     {
-      "order": 0,
+      "order": 265,
       "name": "caret-left",
       "prevSize": 24
     },
     {
-      "order": 0,
+      "order": 266,
       "name": "change-password",
       "prevSize": 24
     },
     {
-      "order": 0,
+      "order": 267,
       "name": "check",
       "prevSize": 24
     },
     {
-      "order": 0,
+      "order": 268,
       "name": "cloud",
       "prevSize": 24
     },
     {
-      "order": 0,
+      "order": 269,
       "name": "configurations",
       "prevSize": 24
     },
     {
-      "order": 0,
+      "order": 270,
       "name": "customer-profil",
       "prevSize": 24
     },
     {
-      "order": 0,
+      "order": 271,
       "name": "documentation1",
       "prevSize": 24
     },
     {
-      "order": 0,
+      "order": 272,
       "name": "eforms",
       "prevSize": 24
     },
     {
-      "order": 0,
+      "order": 273,
       "name": "enforcement",
       "prevSize": 24
     },
     {
-      "order": 0,
+      "order": 274,
       "name": "export",
       "prevSize": 24
     },
     {
-      "order": 0,
+      "order": 275,
       "name": "eye-view",
       "prevSize": 24
     },
     {
-      "order": 0,
+      "order": 276,
       "name": "graph",
       "prevSize": 24
     },
     {
-      "order": 0,
+      "order": 277,
       "name": "id-card",
       "prevSize": 24
     },
     {
-      "order": 0,
+      "order": 278,
       "name": "loading",
       "prevSize": 24
     },
     {
-      "order": 0,
+      "order": 279,
       "name": "loading-spinner",
       "prevSize": 24,
       "codes": [
@@ -474,57 +485,57 @@
       ]
     },
     {
-      "order": 0,
+      "order": 280,
       "name": "person",
       "prevSize": 24
     },
     {
-      "order": 0,
+      "order": 281,
       "name": "plus",
       "prevSize": 24
     },
     {
-      "order": 0,
+      "order": 282,
       "name": "review",
       "prevSize": 24
     },
     {
-      "order": 0,
+      "order": 283,
       "name": "sanction",
       "prevSize": 24
     },
     {
-      "order": 0,
+      "order": 284,
       "name": "search",
       "prevSize": 24
     },
     {
-      "order": 0,
+      "order": 285,
       "name": "setting",
       "prevSize": 24
     },
     {
-      "order": 0,
+      "order": 286,
       "name": "sign-out",
       "prevSize": 24
     },
     {
-      "order": 0,
+      "order": 287,
       "name": "system-log",
       "prevSize": 24
     },
     {
-      "order": 0,
+      "order": 288,
       "name": "system-users",
       "prevSize": 24
     },
     {
-      "order": 0,
+      "order": 289,
       "name": "world",
       "prevSize": 24
     },
     {
-      "order": 0,
+      "order": 290,
       "name": "wrong",
       "prevSize": 24
     }
@@ -532,14 +543,51 @@
   "metadata": {
     "name": "Idenfo",
     "importSize": {
-      "width": 20,
-      "height": 20
+      "width": 64,
+      "height": 64
     },
-    "iconsHash": 1236550092
+    "iconsHash": 1453540972
   },
   "height": 1024,
   "prevSize": 32,
   "icons": [
+    {
+      "paths": [
+        "M512 1024c282.77 0 512-229.23 512-512s-229.23-512-512-512c-282.77 0-512 229.23-512 512s229.23 512 512 512z",
+        "M512 944c238.587 0 432-193.413 432-432s-193.413-432-432-432c-238.587 0-432 193.413-432 432s193.413 432 432 432z",
+        "M512 704c106.038 0 192-85.962 192-192s-85.962-192-192-192c-106.038 0-192 85.962-192 192s85.962 192 192 192z"
+      ],
+      "attrs": [
+        {
+          "fill": "rgb(255, 255, 255)"
+        },
+        {
+          "fill": "rgb(201, 31, 55)"
+        },
+        {
+          "fill": "rgb(255, 255, 255)"
+        }
+      ],
+      "isMulticolor": true,
+      "grid": 14,
+      "tags": [
+        "record"
+      ],
+      "colorPermutations": {
+        "1271431641201315512552552551": [
+          {
+            "f": 2
+          },
+          {
+            "f": 0
+          },
+          {
+            "f": 2
+          }
+        ]
+      },
+      "defaultCode": 59743
+    },
     {
       "paths": [
         "M143.36 358.4c-76.8 0-143.36 61.44-143.36 138.24s66.56 138.24 143.36 138.24 143.36-61.44 143.36-138.24c0-76.8-66.56-138.24-143.36-138.24z",
@@ -549,7 +597,8 @@
       "grid": 14,
       "tags": [
         "dropdown-icon"
-      ]
+      ],
+      "defaultCode": 59742
     },
     {
       "paths": [
@@ -1547,7 +1596,28 @@
       "grid": 24
     }
   ],
-  "colorThemes": [],
+  "colorThemes": [
+    [
+      [
+        201,
+        31,
+        55,
+        1
+      ],
+      [
+        127,
+        143,
+        164,
+        1
+      ],
+      [
+        255,
+        255,
+        255,
+        1
+      ]
+    ]
+  ],
   "colorThemeIdx": 0,
   "preferences": {
     "showGlyphs": true,
