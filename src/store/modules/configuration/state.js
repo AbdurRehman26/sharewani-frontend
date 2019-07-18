@@ -164,6 +164,186 @@ export default {
                     },
                 ],
             },
+
+            country: {
+                fields: [
+                    {
+                        key: 'countrycode',
+                        label: 'Country Code',
+                        sortable: true,
+                    },
+                    {
+                        key: 'countrytitle',
+                        label: 'Country Title',
+                        sortable: true,
+                    },
+                    {
+                        key: 'dialingcode',
+                        label: 'Dialing Code',
+                        sortable: true,
+                    },
+                    {
+                        key: 'rating',
+                        label: 'RATING',
+                        class: 'text-center rating-field',
+                        sortable: true,
+                    },
+                    {
+                        key: 'isSanction',
+                        label: 'IS SANCTION',
+                        class: 'text-center',
+                        sortable: true,
+                    },
+                    {
+                        key: 'action',
+                        label: 'ACTION',
+                        class: 'two-list',
+                    },
+                ],
+                items: [
+                    {
+                        countrycode: 'AF',
+                        countrytitle: 'Afghanistan',
+                        dialingcode: '+93',
+                        rating: [
+                            {
+                                icon: 'icon-high-risk',
+                                label: 'High Risk',
+                                cssClass: 'high-risk',
+                            },
+                        ],
+                        isSanction: 'No',
+                        action: 'active',
+                    },
+                    {
+                        countrycode: 'AX',
+                        countrytitle: 'Aland Islands',
+                        dialingcode: '+358',
+                        rating: [
+                            {
+                                icon: 'icon-high-risk',
+                                label: 'High Risk',
+                                cssClass: 'high-risk',
+                            },
+                        ],
+                        isSanction: 'No',
+                        action: 'active',
+                    },
+                    {
+                        countrycode: 'AL',
+                        countrytitle: 'Albania',
+                        dialingcode: '+355',
+                        rating: [
+                            {
+                                icon: 'icon-high-risk',
+                                label: 'High Risk',
+                                cssClass: 'high-risk',
+                            },
+                        ],
+                        isSanction: 'No',
+                        action: 'active',
+                    },
+                    {
+                        countrycode: 'DZ',
+                        countrytitle: 'Algeria',
+                        dialingcode: '+213',
+                        rating: [
+                            {
+                                icon: 'icon-high-risk',
+                                label: 'High Risk',
+                                cssClass: 'high-risk',
+                            },
+                        ],
+                        isSanction: 'No',
+                        action: 'active',
+                    },
+                    {
+                        countrycode: 'AS',
+                        countrytitle: 'American Samoa',
+                        dialingcode: '+1685',
+                        rating: [
+                            {
+                                icon: 'icon-high-risk',
+                                label: 'High Risk',
+                                cssClass: 'high-risk',
+                            },
+                        ],
+                        isSanction: 'No',
+                        action: 'active',
+                    },
+                    {
+                        countrycode: 'AD',
+                        countrytitle: 'Andorra',
+                        dialingcode: '+376',
+                        rating: [
+                            {
+                                icon: 'icon-high-risk',
+                                label: 'High Risk',
+                                cssClass: 'high-risk',
+                            },
+                        ],
+                        isSanction: 'No',
+                        action: 'active',
+                    },
+                    {
+                        countrycode: 'AO',
+                        countrytitle: 'Angola',
+                        dialingcode: '+244',
+                        rating: [
+                            {
+                                icon: 'icon-high-risk',
+                                label: 'High Risk',
+                                cssClass: 'high-risk',
+                            },
+                        ],
+                        isSanction: 'No',
+                        action: 'active',
+                    },
+                    {
+                        countrycode: 'AI',
+                        countrytitle: 'Anguilla',
+                        dialingcode: '+1264',
+                        rating: [
+                            {
+                                icon: 'icon-high-risk',
+                                label: 'High Risk',
+                                cssClass: 'high-risk',
+                            },
+                        ],
+                        isSanction: 'No',
+                        action: 'active',
+                    },
+                    {
+                        countrycode: 'AQ',
+                        countrytitle: 'Antarctica',
+                        dialingcode: '+672',
+                        rating: [
+                            {
+                                icon: 'icon-high-risk',
+                                label: 'High Risk',
+                                cssClass: 'high-risk',
+                            },
+                        ],
+                        isSanction: 'No',
+                        action: 'active',
+                    },
+                    {
+                        countrycode: 'AG',
+                        countrytitle: 'Antigua and Barbuda',
+                        dialingcode: '+1268',
+                        rating: [
+                            {
+                                icon: 'icon-high-risk',
+                                label: 'High Risk',
+                                cssClass: 'high-risk',
+                            },
+                        ],
+                        isSanction: 'No',
+                        action: 'active',
+                    },
+                ],
+            },
+
             workfactor: {
                 fields: [
                     {

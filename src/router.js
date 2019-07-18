@@ -177,12 +177,18 @@ export default new Router({
                     name: 'customer-information',
                     component: () =>
                         import(/* webpackChunkName: "customer-information" */ './views/profile/profile-details/CustomerInformation.vue'),
+                    meta: {
+                        name: 'Customer Profile',
+                    },
                 },
                 {
                     path: '/screening-customer',
                     name: 'screening-customer',
                     component: () =>
                         import(/* webpackChunkName: "screening-customer" */ './views/profile/profile-details/ScreeningCustomer.vue'),
+                    meta: {
+                        name: 'Name Screening',
+                    },
                 },
 
                 {
@@ -190,18 +196,27 @@ export default new Router({
                     name: 'document-verification',
                     component: () =>
                         import(/* webpackChunkName: "document-verification" */ './views/profile/profile-details/DocumentVerification.vue'),
+                    meta: {
+                        name: 'Document Verification',
+                    },
                 },
                 {
                     path: '/kyc-risk-rating',
                     name: 'kyc-risk-rating',
                     component: () =>
                         import(/* webpackChunkName: "kyc-risk-rating" */ './views/profile/profile-details/KYCRiskRating.vue'),
+                    meta: {
+                        name: 'KYC Risk Rating',
+                    },
                 },
                 {
                     path: '/activity-timeline',
                     name: 'activity-timeline',
                     component: () =>
                         import(/* webpackChunkName: "activity-timeline" */ './views/profile/profile-details/ActivityTimeline.vue'),
+                    meta: {
+                        name: 'Activity Timeline',
+                    },
                 },
             ],
         },
@@ -229,7 +244,12 @@ export default new Router({
                             component: () =>
                                 import(/* webpackChunkName: "nationality" */ './views/configuration/idenfo-engine/Nationality.vue'),
                         },
-
+                        {
+                            path: '/configuration/idenfo-engine/country',
+                            name: 'Country',
+                            component: () =>
+                                import(/* webpackChunkName: "nationality" */ './views/configuration/idenfo-engine/Country.vue'),
+                        },
                         {
                             path: '/configuration/idenfo-engine/work',
                             name: 'workFactor',
@@ -271,12 +291,18 @@ export default new Router({
                             name: 'riskFactor',
                             component: () =>
                                 import(/* webpackChunkName: "riskFactor" */ './views/configuration/idenfo-engine/RiskFactor.vue'),
+                            meta: {
+                                responsiveMenuItem: true,
+                            },
                         },
                         {
                             path: '/configuration/idenfo-engine/risk-rating',
                             name: 'riskRating',
                             component: () =>
                                 import(/* webpackChunkName: "riskRating" */ './views/configuration/idenfo-engine/RiskRating.vue'),
+                            meta: {
+                                responsiveMenuItem: true,
+                            },
                         },
                         {
                             path:
@@ -284,6 +310,9 @@ export default new Router({
                             name: 'documentVerificationFactors',
                             component: () =>
                                 import(/* webpackChunkName: "riskRating" */ './views/configuration/idenfo-engine/DocumentVerificationFactors.vue'),
+                            meta: {
+                                responsiveMenuItem: true,
+                            },
                         },
                         {
                             path:
@@ -291,6 +320,9 @@ export default new Router({
                             name: 'nameScreenScore',
                             component: () =>
                                 import(/* webpackChunkName: "riskRating" */ './views/configuration/idenfo-engine/NameScreenScore.vue'),
+                            meta: {
+                                responsiveMenuItem: true,
+                            },
                         },
                     ],
                 },

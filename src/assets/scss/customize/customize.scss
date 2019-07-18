@@ -409,6 +409,9 @@
                     font-size: 1.125rem;
                     font-family: $font_medium;
                 }
+                label {
+                    font-size: 0.875rem !important;
+                }
 
                 ul {
                     margin-bottom: 0;
@@ -622,12 +625,14 @@
         flex-wrap: wrap;
         margin-bottom: 0;
         li {
-            margin-right: 10px;
+            // margin-right: 3px;
+            margin-right: 0px;
             a {
                 padding: 14px 16px 14px 16px;
                 color: #7f8fa4;
                 background: #ebebf2;
                 margin-right: 10px;
+                font-family: $font_light;
                 border-radius: 8px 8px 0px 0px;
                 text-decoration: none;
                 border-color: transparent !important;
@@ -643,16 +648,21 @@
             }
             &.open-dropdown {
                 position: relative;
+                > a {
+                    padding: 14px 26px 14px 26px;
+                    margin-right: 0;
+                }
                 .dropdown-open {
                     position: absolute;
                     z-index: 9;
                     width: 232px;
-                    right: 10px;
-                    border: 1px solid $border-color;
+                    right: 0;
+                    // border: 0.5px solid $border-color;
+                    box-shadow: 2px 3px 13px rgba(50, 50, 93, 0.2);
                     li {
                         width: 100%;
                         margin-right: 0px;
-                        border-bottom: 1px solid $border-color;
+                        border-bottom: 0.5px solid $border-color;
                         a {
                             box-shadow: 0px 0.5px 0px rgba(50, 50, 93, 0.2);
                             background-color: #fff;
@@ -667,7 +677,14 @@
                         &:last-child {
                             border-bottom: 0px solid $border-color;
                             text-transform: initial;
+                            margin-bottom: 0px;
                         }
+                    }
+                }
+                &.router-link-exact-active {
+                    > a {
+                        background-color: #fff;
+                        color: $secondary;
                     }
                 }
             }
