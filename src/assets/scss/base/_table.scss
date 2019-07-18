@@ -24,9 +24,9 @@
             font-family: $font_medium;
             text-transform: uppercase;
             border-top: none !important;
+            outline: 0;
             &[aria-sort] {
                 position: relative;
-                outline: 0;
                 cursor: pointer;
                 &:after {
                     content: '\E904';

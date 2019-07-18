@@ -38,7 +38,7 @@ export default {
         return {
             menuListing: [
                 {
-                    anchorLink: '/system-users',
+                    anchorLink: '/system-users/users',
                     menuLabel: 'System Users',
                 },
                 {

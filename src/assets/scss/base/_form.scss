@@ -46,6 +46,10 @@ input[type='number']::-webkit-outer-spin-button {
             0px 1px 3px rgba(50, 50, 93, 0.1) !important;
         padding-top: 11px;
         color: $grey-medium;
+        padding-right: 70px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
         &:after {
             background-color: transparent !important;
             color: $primary;

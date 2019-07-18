@@ -17,6 +17,9 @@
             @include tablet {
                 margin-right: 40px;
             }
+            @include windowS {
+                margin-right: 20px;
+            }
             &:first-child {
                 /*                margin-left: 0px;
                 margin-right: 0;*/
@@ -49,7 +52,8 @@
                         background-color: #b35fa5;
                         height: 3px;
                         width: 100%;
-                        bottom: 0px;
+                        // bottom: 0px;
+                        bottom: 3px;
                         left: 0;
                         position: absolute;
                         border-radius: 10px 10px 0px 0px;
@@ -64,7 +68,7 @@
                         background-color: $secondary;
                         height: 3px;
                         width: 100%;
-                        bottom: 0px;
+                        bottom: 3px;
                         left: 0;
                         position: absolute;
                         border-radius: 10px 10px 0px 0px;
