@@ -12,6 +12,8 @@
 @import 'base/table';
 @import 'base/datepicker';
 @import 'base/radio';
+@import 'base/checkbox';
+@import 'base/selectize';
 
 // //customize css
 @import 'customize/common';
@@ -25,14 +27,14 @@
 @import 'customize/customize';
 
 .amcharts-chart-div > a {
-	display: none !important;
+    display: none !important;
 }
 .auth-overlay-div {
-	position: fixed;
-	width: 300px;
-	left: 0;
-	top: 0;
-	height: 100%;
-	background: #000;
-	z-index: 999;
+    position: fixed;
+    width: 300px;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background: #000;
+    z-index: 999;
 }

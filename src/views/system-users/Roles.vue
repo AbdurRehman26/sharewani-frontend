@@ -22,6 +22,7 @@
                                 btnLabel="+ Add Role"
                                 btnType="submit"
                                 btnVariant="secondary"
+                                v-b-modal.add-role-popup
                             ></base-button>
                         </li>
                     </ul>
@@ -54,7 +55,7 @@
                             v-if="data.value == 'active'"
                             icon="icon-trash"
                             label="Archive"
-                            v-b-modal.initiate-review
+                            v-b-modal.archive-popup
                         ></base-action>
                         <!-- if action activate -->
                         <base-action
@@ -67,13 +68,24 @@
                 </template>
             </b-table>
         </div>
+        <add-role-popup></add-role-popup>
+        <archive-popup
+            title="Archive Role"
+            description="Are you sure you want to archive this role? You can re-activate it later."
+        ></archive-popup>
     </div>
 </template>
 
 <script>
+import addRolePopup from '@/components/popups/AddRolePopup.vue'
+import archivePopup from '@/components/popups/ArchivePopup.vue'
+
 import { mapGetters } from 'vuex'
 export default {
-    components: {},
+    components: {
+        addRolePopup,
+        archivePopup,
+    },
 
     /*
     |--------------------------------------------------------------------------

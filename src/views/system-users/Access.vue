@@ -22,6 +22,7 @@
                                 btnLabel="+ Add Application"
                                 btnType="submit"
                                 btnVariant="secondary"
+                                v-b-modal.add-application-popup
                             ></base-button>
                         </li>
                     </ul>
@@ -68,14 +69,17 @@
                 </template>
             </b-table>
         </div>
+        <add-application-popup></add-application-popup>
     </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
-
+import addApplicationPopup from '@/components/popups/AddApplicationPopup.vue'
 export default {
-    components: {},
+    components: {
+        addApplicationPopup,
+    },
 
     /*
     |--------------------------------------------------------------------------

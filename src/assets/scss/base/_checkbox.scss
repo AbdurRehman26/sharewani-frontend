@@ -1,0 +1,47 @@
+.custom-checkbox {
+    .custom-control-label {
+        &:before,
+        &:after {
+            width: 21px;
+            height: 21px;
+        }
+
+        color: $body-color;
+        text-transform: capitalize;
+        font-size: 0.875rem !important;
+
+        span {
+            margin-left: 5px;
+            margin-top: 5px;
+            display: block;
+        }
+    }
+}
+
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label::after {
+    background-image: none !important;
+    background-repeat: no-repeat;
+    content: '\e943';
+    font-family: 'icomoon';
+    font-size: 10px;
+    top: 9px;
+    left: -21px;
+    color: $secondary;
+}
+
+.custom-control-input:not(:disabled):active ~ .custom-control-label:before {
+    color: $secondary;
+    background-color: transparent;
+    border-color: $border-color;
+}
+
+.custom-control-input:focus:not(:checked) ~ .custom-control-label::before {
+    box-shadow: none;
+    border-color: $border-color;
+}
+
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
+    border-color: $border-color;
+    background-color: transparent;
+    box-shadow: none;
+}
