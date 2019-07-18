@@ -112,6 +112,12 @@ export default new Router({
                         import(/* webpackChunkName: "system-users" */ '@/views/system-users/Users.vue'),
                 },
                 {
+                    path: 'users',
+                    name: 'users',
+                    component: () =>
+                        import(/* webpackChunkName: "system-users" */ '@/views/system-users/Users.vue'),
+                },
+                {
                     path: 'roles',
                     name: 'roles-and-permission',
                     component: () =>

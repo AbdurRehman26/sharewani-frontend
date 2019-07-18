@@ -61,6 +61,12 @@ $other_font_bold: 'ProximanovaBold';
     -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-copy:before {
+    content: '\e962';
+}
+.icon-move:before {
+    content: '\e963';
+}
 .icon-record .path1:before {
     content: '\e95f';
     color: rgb(255, 255, 255);
