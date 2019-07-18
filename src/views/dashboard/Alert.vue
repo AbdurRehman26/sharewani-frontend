@@ -105,7 +105,7 @@
             </b-table>
         </div>
         <pagination></pagination>
-        <initiate-review></initiate-review>
+        <initiate-review-popup></initiate-review-popup>
     </div>
 </template>
 
@@ -113,11 +113,11 @@
 import { mapGetters } from 'vuex'
 import pagination from '@/components/Pagination.vue'
 import statusTypeIcon from '@/components/AlertType.vue'
-import initiateReview from '@/components/popups/InitiateReviewPopup.vue'
+import initiateReviewPopup from '@/components/popups/InitiateReviewPopup.vue'
 export default {
     components: {
         pagination,
-        initiateReview,
+        initiateReviewPopup,
         statusTypeIcon,
     },
 

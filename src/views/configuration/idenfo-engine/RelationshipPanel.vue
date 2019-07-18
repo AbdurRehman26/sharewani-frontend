@@ -21,7 +21,7 @@
                             <b-button
                                 type="button"
                                 variant="secondary"
-                                v-b-modal.add-relationship
+                                v-b-modal.add-relationship-popup
                                 >+ Add Relationship Length</b-button
                             >
                         </li>
@@ -47,14 +47,14 @@
                             v-if="data.value == 'active'"
                             icon="icon-edit"
                             label="Modify"
-                            v-b-modal.initiate-review
+                            v-b-modal.add-relationship-popup
                         ></base-action>
                         <!-- if action archive -->
                         <base-action
                             v-if="data.value == 'active'"
                             icon="icon-trash"
                             label="Archive"
-                            v-b-modal.initiate-review
+                            v-b-modal.archive-popup
                         ></base-action>
                     </div>
                 </template>
@@ -62,6 +62,10 @@
         </div>
         <pagination></pagination>
         <add-relationship-popup></add-relationship-popup>
+        <archive-popup
+            title="Archive Relationship Length Factor"
+            description="Are you sure you want to archive this relationship length factor? You can re-activate it later."
+        ></archive-popup>
     </div>
 </template>
 
@@ -69,10 +73,12 @@
 import { mapGetters } from 'vuex'
 import pagination from '@/components/Pagination.vue'
 import addRelationshipPopup from '@/components/popups/AddRelationshipPopup.vue'
+import archivePopup from '@/components/popups/ArchivePopup.vue'
 export default {
     components: {
         pagination,
         addRelationshipPopup,
+        archivePopup,
     },
 
     /*

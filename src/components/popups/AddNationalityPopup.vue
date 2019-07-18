@@ -1,23 +1,23 @@
 <template>
     <div>
         <b-modal
-            id="add-nationality"
+            id="add-nationality-popup"
             title="Add Nationality Factor"
             size="sm"
             okTitle="Create"
             cancelTitle="Cancel"
             cancelVariant="link"
         >
-            <b-form class="modal-form-format">
+            <b-form>
                 <div class="row">
                     <div class="col-md-12">
                         <b-form-group
                             id="input-group-1"
                             label="Country Code"
-                            label-for="input-1"
+                            label-for="country-code"
                         >
                             <b-form-input
-                                id="input-1"
+                                id="country-code"
                                 type="text"
                                 v-model="form.countryCode"
                                 required
@@ -29,10 +29,10 @@
                         <b-form-group
                             id="input-group-2"
                             label="Country Title"
-                            label-for="input-2"
+                            label-for="country-title"
                         >
                             <b-form-input
-                                id="input-2"
+                                id="country-title"
                                 type="text"
                                 v-model="form.countryTitle"
                                 required
@@ -44,9 +44,10 @@
                         <b-form-group
                             id="input-group-3"
                             label="Rating"
-                            label-for="nationality"
+                            label-for="rating"
                         >
                             <b-form-select
+                                id="rating"
                                 class="form-control"
                                 v-model="form.rating"
                                 :options="rating"
@@ -55,13 +56,14 @@
                     </div>
                     <div class="col-md-12">
                         <b-form-group
-                            class="mb-0 kyc-status-radio overwrite-radio"
+                            class="kyc-status-radio overwrite-radio"
                             id="input-group-4"
                             label="Is Sanction"
                             label-for="sanction"
                         >
                             <b-form-group>
                                 <b-form-radio-group
+                                    id="sanction"
                                     v-model="sanction"
                                     :options="form.sanction"
                                     name="sanction"

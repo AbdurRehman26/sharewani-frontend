@@ -1,14 +1,14 @@
 <template>
     <div>
         <b-modal
-            id="modify-risk-rating"
+            id="modify-risk-rating-popup"
             title="Modify Risk Rating Score"
             size="sm"
             okTitle="Update"
             cancelTitle="Cancel"
             cancelVariant="link"
         >
-            <b-form class="modal-form-format">
+            <b-form>
                 <div class="row">
                     <div class="col-md-12">
                         <h5 class="mb-20">PEP Hit Risk Rating Score</h5>

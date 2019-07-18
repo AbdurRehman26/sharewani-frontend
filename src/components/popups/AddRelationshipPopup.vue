@@ -1,14 +1,14 @@
 <template>
     <div>
         <b-modal
-            id="add-relationship"
+            id="add-relationship-popup"
             title="Add Relationship Length Factor"
             size="sm"
             okTitle="Create"
             cancelTitle="Cancel"
             cancelVariant="link"
         >
-            <b-form class="modal-form-format">
+            <b-form>
                 <div class="row">
                     <div class="col-md-12">
                         <label for="select-1"> Rule (in Months)</label>
@@ -54,7 +54,6 @@
                     </div>
                     <div class="col-md-12">
                         <b-form-group
-                            class="mb-0"
                             id="input-group-3"
                             label="Rating"
                             label-for="select-3"

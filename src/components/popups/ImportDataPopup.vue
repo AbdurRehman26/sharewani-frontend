@@ -1,23 +1,25 @@
 <template>
     <div>
         <b-modal
-            id="initiate-review-popup"
-            title="Initiate Review"
+            id="import-data-popup"
+            title="Update Dow Jones Data"
             size="sm"
-            okTitle="Yes, Initate Review"
+            okTitle="Update"
             cancelTitle="Cancel"
             cancelVariant="link"
         >
-            <p>
-                Are you sure you want to initiate review process of this
-                customer profile?
-            </p>
+            <h5>Dow Jones Data</h5>
+            <upload-file></upload-file>
         </b-modal>
     </div>
 </template>
 
 <script>
+import uploadFile from '@/components/UploadFile.vue'
 export default {
+    components: {
+        uploadFile,
+    },
     data() {
         return {}
     },

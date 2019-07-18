@@ -58,7 +58,7 @@
                                 <li>
                                     <a
                                         href="javascript:void(0);"
-                                        v-b-modal.update-profile
+                                        v-b-modal.update-profile-popup
                                     >
                                         <i class="icon-person"></i>
                                         <span>Update Profile</span>
@@ -67,7 +67,7 @@
                                 <li>
                                     <a
                                         href="javascript:void(0);"
-                                        v-b-modal.change-password
+                                        v-b-modal.change-password-popup
                                     >
                                         <i class="icon-change-password"></i>
                                         <span>Change Password</span>

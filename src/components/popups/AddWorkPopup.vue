@@ -1,23 +1,23 @@
 <template>
     <div>
         <b-modal
-            id="add-work"
+            id="add-work-popup"
             title="Add Work Type Factor"
             size="sm"
             okTitle="Create"
             cancelTitle="Cancel"
             cancelVariant="link"
         >
-            <b-form class="modal-form-format">
+            <b-form>
                 <div class="row">
                     <div class="col-md-12">
                         <b-form-group
                             id="input-group-1"
                             label="Work Type Code"
-                            label-for="input-1"
+                            label-for="work-type-code"
                         >
                             <b-form-input
-                                id="input-1"
+                                id="work-type-code"
                                 type="text"
                                 v-model="form.workCode"
                                 required
@@ -30,11 +30,10 @@
                         <b-form-group
                             id="input-group-2"
                             label="Work Type Title"
-                            label-for="input-2"
-                            class="mb-0"
+                            label-for="work-type-title"
                         >
                             <b-form-input
-                                id="input-2"
+                                id="work-type-title"
                                 type="text"
                                 v-model="form.workTitle"
                                 required

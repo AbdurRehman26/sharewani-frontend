@@ -21,7 +21,7 @@
                             <b-button
                                 type="button"
                                 variant="secondary"
-                                v-b-modal.add-work
+                                v-b-modal.add-work-popup
                                 >+ Add Work Type</b-button
                             >
                         </li>
@@ -38,33 +38,39 @@
                             v-if="data.value == 'active'"
                             icon="icon-edit"
                             label="Modify"
-                            v-b-modal.initiate-review
+                            v-b-modal.add-work-popup
                         ></base-action>
                         <!-- if action archive -->
                         <base-action
                             v-if="data.value == 'active'"
                             icon="icon-trash"
                             label="Archive"
-                            v-b-modal.initiate-review
+                            v-b-modal.archive-popup
                         ></base-action>
                     </div>
                 </template>
             </b-table>
         </div>
         <pagination></pagination>
-        <add-work></add-work>
+        <add-work-popup></add-work-popup>
+        <archive-popup
+            title="Archive Work Type Factor"
+            description="Are you sure you want to archive this work type factor? You can re-activate it later."
+        ></archive-popup>
     </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
 import pagination from '@/components/Pagination.vue'
-import addWork from '@/components/popups/AddWorkPopup.vue'
+import addWorkPopup from '@/components/popups/AddWorkPopup.vue'
+import archivePopup from '@/components/popups/ArchivePopup.vue'
 
 export default {
     components: {
         pagination,
-        addWork,
+        archivePopup,
+        addWorkPopup,
     },
 
     /*

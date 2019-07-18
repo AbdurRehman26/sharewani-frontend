@@ -44,7 +44,7 @@
                             v-if="data.value == 'active'"
                             icon="icon-edit"
                             label="Modify"
-                            v-b-modal.initiate-review
+                            v-b-modal.modify-channel-popup
                         ></base-action>
                     </div>
                 </template>

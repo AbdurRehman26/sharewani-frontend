@@ -9,7 +9,7 @@
                     <ul>
                         <li>
                             <base-button
-                                v-b-modal.export-report
+                                v-b-modal.export-report-popup
                                 btnLabel="Export"
                                 btnType="submit"
                                 btnVariant="secondary"
@@ -241,7 +241,7 @@
                 </div>
             </div>
         </div>
-        <export-report></export-report>
+        <export-report-popup></export-report-popup>
     </div>
 </template>
 
@@ -249,11 +249,11 @@
 import { mapGetters } from 'vuex'
 require('amcharts3')
 require('amcharts3/amcharts/serial')
-import exportReport from '@/components/popups/ExportReportPopup.vue'
+import exportReportPopup from '@/components/popups/ExportReportPopup.vue'
 require('amcharts3/amcharts/pie')
 export default {
     components: {
-        exportReport,
+        exportReportPopup,
     },
 
     /*

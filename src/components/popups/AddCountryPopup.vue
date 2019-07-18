@@ -1,7 +1,7 @@
 <template>
     <div>
         <b-modal
-            id="add-country"
+            id="add-country-popup"
             title="Add Country of Residence Factor"
             size="sm"
             okTitle="Create"

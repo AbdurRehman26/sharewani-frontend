@@ -10,15 +10,12 @@
         <div class="table-section m-b-30">
             <b-table :items="items" :fields="fields">
                 <template slot="action" slot-scope="data">
-                    <div
-                        class="action-review"
-                        v-b-modal.modify-liveness-detection
-                    >
+                    <div class="action-review">
                         <base-action
                             v-if="data.value == 'active'"
                             icon="icon-edit"
                             label="Modify"
-                            v-b-modal.initiate-review
+                            v-b-modal.modify-liveness-detection-popup
                         ></base-action>
                     </div>
                 </template>
