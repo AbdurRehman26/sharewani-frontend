@@ -1,0 +1,73 @@
+.form-field-types {
+	background: $upload-bg;
+	border: 1px solid $border-color;
+	box-sizing: border-box;
+	border-radius: $upload-border-radius;
+	height: $input-height;
+	position: relative;
+	overflow: hidden;
+	margin-bottom: 15px;
+	cursor: pointer;
+	span {
+		border-top-left-radius: $upload-border-radius;
+		border-bottom-left-radius: $upload-border-radius;
+		display: inline-block;
+		vertical-align: middle;
+		color: $grey-lite;
+		text-align: center;
+		background: #fff;
+		position: relative;
+		left: 0;
+		top: 0;
+		font-size: $font-size-base + 0.4;
+		height: $input-height;
+		width: 42px;
+		padding: 10px 11px;
+		display: inline-block;
+		align-items: center;
+		margin-top: -2px;
+		border-right: solid 1px $border-color;
+		i {
+			margin: 0 auto;
+		}
+	}
+	.move-icon {
+		background: none;
+	}
+	p {
+		display: inline-block;
+		vertical-align: middle;
+		color: $grey-lite;
+		margin-top: -1px;
+		padding: 14px 16px;
+		margin: 0;
+		font-family: $font-medium;
+	}
+	&.draggable-fields {
+		p {
+			color: $body-color;
+		}
+		.action-items {
+			position: absolute;
+			right: 0;
+			top: 11px;
+			i {
+				font-size: $font-size-base + 0.4;
+				margin-right: 24px;
+				color: $secondary;
+			}
+		}
+		&.disabled {
+			pointer-events: none;
+			.action-items {
+				i {
+					color: $grey-lite;
+				}
+			}
+		}
+	}
+}
+.form-create-panel {
+	border-top-left-radius: 0px !important;
+	border-top-right-radius: 0px !important;
+}

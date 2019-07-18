@@ -12,61 +12,67 @@
                 </li>
             </ul>
         </div>
-        <div class="config-card-block">
-            <div class="row">
-                <div class="col-xs-12 col-md-8">
+        <div class="row">
+            <div class="col-xs-12 col-md-8">
+                <div
+                    class="card card-builder form-create-panel config-card-block"
+                >
+                    <!-- draggable area -->
                     <draggable
                         class="dragArea list-group"
-                        :list="list2"
+                        :list="formData"
                         group="people"
                         @change="log"
                     >
                         <div
-                            class="list-group-item"
-                            v-for="element in list2"
-                            :key="element.fieldName"
+                            class="form-field-types draggable-fields"
+                            v-for="(field, index) in formData"
+                            :key="index"
+                            v-b-modal.add-nationality-popup
                         >
-                            <div
-                                class="form-control"
-                                v-if="element.fieldName == element.fieldName"
-                            >
-                                <span class="move-icon"></span>
-                                <i :class="element.fieldIcon"></i>
-                                <p>{{ element.fieldName }}</p>
-                            </div>
-                        </div>
-                    </draggable>
-                </div>
-                <div class="col-xs-12 col-md-4">
-                    <draggable
-                        class="dragArea list-group"
-                        :list="list1"
-                        :group="{ name: 'people', pull: 'clone', put: false }"
-                        @change="log"
-                    >
-                        <div
-                            class=""
-                            v-for="element in list1"
-                            :key="element.fieldName"
-                        >
-                            <div class="form-group">
-                                <div class="form-control">
-                                    <i :class="element.fieldIcon"></i>
-                                    <span>{{ element.fieldName }}</span>
-                                </div>
+                            <span class="move-icon"
+                                ><i class="field.icon"></i
+                            ></span>
+                            <span><i :class="field.icon"></i></span>
+                            <p>{{ field.label }}</p>
+                            <div class="action-items">
+                                <i class="action-icons icon-settings"></i>
+                                <i class="action-icons icon-settings"></i>
+                                <i class="change-password icon-settings"></i>
                             </div>
                         </div>
                     </draggable>
                 </div>
             </div>
+            <!-- Fields Type-->
+            <div class="col-xs-12 col-md-4">
+                <div
+                    class="card card-builder field-type-panel with-shadow config-card-block"
+                >
+                    <h4>Components</h4>
+                    <div>
+                        <div
+                            class="form-field-types"
+                            v-for="(field, index) in fieldType"
+                            :key="index"
+                            v-b-modal.add-nationality-popup
+                        >
+                            <span><i :class="field.icon"></i></span>
+                            <p>{{ field.label }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+        <add-nationality-popup></add-nationality-popup>
     </div>
 </template>
 
 <script>
 import draggable from 'vuedraggable'
+import addNationalityPopup from '@/components/popups/AddNationalityPopup.vue'
 export default {
-    components: { draggable },
+    components: { draggable, addNationalityPopup },
 
     /*
     |--------------------------------------------------------------------------
@@ -97,30 +103,120 @@ export default {
             menuListing: [
                 {
                     anchorLink: '/configuration/idenfo-engine/',
-                    menuLabel: 'Nationality',
+                    menuLabel: 'Setup Profile',
                 },
                 {
                     anchorLink: '/configuration/idenfo-engine/work',
-                    menuLabel: 'Work Type',
+                    menuLabel: 'Account Info',
                 },
             ],
-            list1: [
+            fieldType: [
                 {
-                    fieldName: 'heading',
-                    fieldIcon: 'icon-edit',
+                    icon: 'icon-heading',
+                    label: 'Heading',
+                    popup: '',
                     id: 1,
                 },
                 {
-                    fieldName: 'text field',
-                    fieldIcon: 'icon-done',
+                    icon: 'icon-text-field',
+                    label: 'Text Field',
+                    popup: '',
                     id: 2,
                 },
-            ],
-            list2: [
                 {
-                    fieldName: 'heading',
-                    fieldIcon: 'icon-edit',
+                    icon: 'icon-text-area',
+                    label: 'Text Area',
+                    popup: '',
+                    id: 3,
+                },
+                {
+                    icon: 'icon-calendar',
+                    label: 'Date Field',
+                    popup: '',
+                    id: 4,
+                },
+                {
+                    icon: 'icon-select-field',
+                    label: 'Dropdown / Select Field',
+                    popup: '',
+                    id: 5,
+                },
+                {
+                    icon: 'icon-radio',
+                    label: 'Radio Button Group',
+                    popup: '',
+                    id: 6,
+                },
+                {
+                    icon: 'icon-checkbox',
+                    label: 'Checkbox Group',
+                    popup: '',
+                    id: 7,
+                },
+            ],
+            formData: [
+                {
                     id: 1,
+                    icon: 'icon-heading',
+                    label: 'Basic Information',
+                    popup: '',
+                    status: 'disabled',
+                },
+                {
+                    id: 1,
+                    icon: 'icon-text-field',
+                    label: 'First Name',
+                    popup: '',
+                    status: 'disabled',
+                },
+                {
+                    id: 1,
+                    icon: 'icon-text-field',
+                    label: 'Middle Name',
+                    popup: '',
+                    status: 'disabled',
+                },
+                {
+                    id: 1,
+                    icon: 'icon-text-field',
+                    label: 'Last Name',
+                    popup: '',
+                    status: 'disabled',
+                },
+                {
+                    id: 1,
+                    icon: 'icon-text-field',
+                    label: 'Father Name',
+                    popup: '',
+                    status: 'editable',
+                },
+                {
+                    id: 1,
+                    icon: 'icon-text-field',
+                    label: 'Next of Kin',
+                    popup: '',
+                    status: 'editable',
+                },
+                {
+                    id: 1,
+                    icon: 'icon-radio',
+                    label: 'Gender',
+                    popup: '',
+                    status: 'disabled',
+                },
+                {
+                    id: 1,
+                    icon: 'icon-calendar',
+                    label: 'Date of Birth',
+                    popup: '',
+                    status: 'disabled',
+                },
+                {
+                    id: 1,
+                    icon: 'icon-checkbox',
+                    label: 'Checkbox Group',
+                    popup: '',
+                    status: 'disabled',
                 },
             ],
         }
