@@ -4,7 +4,7 @@
             id="add-system-user-popup"
             title="Add System User"
             size="sm"
-            okTitle="Update"
+            okTitle="Create"
             cancelTitle="Cancel"
             cancelVariant="link"
         >
@@ -88,8 +88,9 @@
                     </div>
                     <div class="col-md-12">
                         <div class="form-group">
-                            <label>Data Segments</label>
+                            <label for="data-segments">Data Segments</label>
                             <v-selectize
+                                id="data-segments"
                                 :options="options"
                                 v-model="selected"
                                 multiple
@@ -97,11 +98,15 @@
                         </div>
                     </div>
                     <div class="col-md-12">
-                        <i class=""></i>
-                        <p>
-                            We will send email to user to create password and
-                            activate account.
-                        </p>
+                        <div class="system-user-warning">
+                            <i class="icon-error_outline"></i>
+                        </div>
+                        <div class="system-user-details">
+                            <p>
+                                We will send email to user to create password
+                                and activate account.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </b-form>

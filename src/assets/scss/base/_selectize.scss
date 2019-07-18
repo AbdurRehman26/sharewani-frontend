@@ -1,0 +1,81 @@
+.selectize-control {
+    position: relative;
+}
+
+.selectize-control.multi .selectize-input.has-items {
+    padding: 5px 8px 2px;
+}
+
+.selectize-control.multi .selectize-input [data-value] {
+    border-radius: $input-border-radius;
+    background-color: $grey-dark;
+}
+.selectize-control.multi .selectize-input > div {
+    cursor: pointer;
+    margin: 1px 8px 4px 4px;
+    padding: 5px 8px 4px 8px;
+    color: $body-color;
+    text-transform: uppercase;
+    font-family: $font_regular;
+    font-size: 0.875rem;
+    border: 1px solid $grey-dark;
+}
+.selectize-input > * {
+    vertical-align: baseline;
+    display: -moz-inline-stack;
+    display: inline-block;
+    zoom: 1;
+    display: inline;
+}
+
+.selectize-input > input {
+    display: inline-block !important;
+    padding: 0 !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    max-width: 100% !important;
+    margin: 0 1px !important;
+    text-indent: 0 !important;
+    border: 0 none !important;
+    background: none !important;
+    line-height: inherit !important;
+    -webkit-user-select: auto !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+.selectize-dropdown,
+.selectize-input,
+.selectize-input input {
+    font-family: inherit;
+    line-height: 18px;
+    -webkit-font-smoothing: inherit;
+}
+.selectize-input > * {
+    vertical-align: baseline;
+    display: -moz-inline-stack;
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+}
+.selectize-input::after {
+    content: '';
+    display: block;
+    clear: left;
+}
+.selectize-dropdown-content {
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: absolute;
+    background-color: $white;
+    width: 100%;
+    padding: 5px;
+    z-index: 99;
+    border: 1px solid $border-color;
+    border-top: none;
+    max-height: 200px;
+    -webkit-overflow-scrolling: touch;
+}
+.selectize-input {
+    @extend .form-control;
+    overflow-y: auto;
+}
