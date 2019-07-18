@@ -31,10 +31,10 @@
                                 :key="index"
                             >
                                 <ul class="row">
-                                    <li class="col-md-6">
+                                    <li class="col-md-5">
                                         <label>{{ descriptions.title }}</label>
                                     </li>
-                                    <li class="col-md-6">
+                                    <li class="col-md-7">
                                         {{ descriptions.detail }}
                                     </li>
                                 </ul>
