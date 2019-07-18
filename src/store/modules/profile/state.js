@@ -521,28 +521,56 @@ export default {
                             detail: 'Short Term Investment',
                         },
                         {
-                            title: 'Planned Investment:',
-                            detail: '£ 500 to £ 1,000 (per month)',
+                            title: 'Product Type:',
+                            detail: 'Saving Account, Current Account',
                         },
                         {
-                            title: 'System Holding:',
-                            detail: 'Pound',
+                            title: 'Expected Credit:',
+                            detail: '$500 (Monthly turnover)',
                         },
                         {
-                            title: 'Account Open Date:',
-                            detail: 'June 10, 2019',
+                            title: 'Max Upper Credit Limit:',
+                            detail: '$2.000 (Expected in month)',
                         },
                         {
                             title: 'Channel Mode:',
                             detail: 'Face to Face',
                         },
                         {
-                            title: 'Product Type:',
-                            detail: 'Saving Account',
+                            title: 'Gross Income of Client:',
+                            detail: '$1,500',
                         },
                         {
-                            title: 'Wallet ID:',
-                            detail: '18238129399',
+                            title: 'Initial Balance:',
+                            detail: '$,500',
+                        },
+                        {
+                            title: 'Current Account No:',
+                            detail: '8123818238',
+                        },
+                        {
+                            title: 'Saving Account No:',
+                            detail: '9123991239',
+                        },
+                        {
+                            title: 'Credit Card No:',
+                            detail: 'N/A',
+                        },
+                        {
+                            title: 'Short Term Loan No:',
+                            detail: 'N/A',
+                        },
+                        {
+                            title: 'Mortgage No:',
+                            detail: 'N/A',
+                        },
+                        {
+                            title: 'Financial Investment No:',
+                            detail: 'N/A',
+                        },
+                        {
+                            title: 'Account Opening Date:',
+                            detail: 'June 12, 2019',
                         },
                     ],
                 },
