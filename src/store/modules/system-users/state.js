@@ -30,6 +30,7 @@ export default {
                     key: 'status',
                     label: 'Status',
                     sortable: true,
+                    class: 'text-center',
                 },
                 {
                     key: 'action',
@@ -306,6 +307,7 @@ export default {
                     key: 'status',
                     label: 'Status',
                     sortable: true,
+                    class: 'text-center',
                 },
                 {
                     key: 'action',
@@ -380,6 +382,7 @@ export default {
                     key: 'status',
                     label: 'Status',
                     sortable: true,
+                    class: 'text-center',
                 },
                 {
                     key: 'action',

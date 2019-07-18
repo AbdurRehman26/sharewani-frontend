@@ -936,169 +936,6 @@ export default {
                 },
             ],
         },
-        //customer by nationality chart
-        // customersByNationality: {
-        //     type: 'serial',
-        //     categoryField: 'category',
-        //     colors: [
-        //         '#7f1ec5',
-        //         '#00a4f2',
-        //         '#00c535',
-        //         '#eb8300',
-        //         '#f4c200',
-        //         '#c1c1c1',
-        //     ],
-        //     rotate: false,
-        //     startDuration: 1,
-        //     color: '#1B1B1E',
-        //     fontFamily: 'Proxima Nova',
-        //     fontSize: 14,
-        //     categoryAxis: {
-        //         gridPosition: 'start',
-        //         axisColor: '#1B1B1E',
-        //         gridAlpha: 1,
-        //         gridColor: '#F2F2F6',
-        //         labelRotation: 45,
-        //     },
-        //     trendLines: [],
-        //     graphs: [
-        //         {
-        //             accessibleLabel: '[[category]]: [[value]]',
-        //             balloonText: '[[category]]: [[value]]',
-        //             id: 'AmGraph-1',
-        //             title: 'graph 1',
-        //             type: 'column',
-        //             valueField: 'column-1',
-        //             fillAlphas: 1,
-        //             lineColorField: 'color',
-        //             fillColorsField: 'color',
-        //         },
-        //     ],
-        //     guides: [],
-        //     valueAxes: [
-        //         {
-        //             id: 'ValueAxis-1',
-        //             axisColor: '#1B1B1E',
-        //             gridAlpha: 1,
-        //             gridColor: '#F2F2F6',
-        //             title: '',
-        //             titleFontSize: 14,
-        //             titleRotation: 0,
-        //         },
-        //     ],
-        //     allLabels: [],
-        //     balloon: {},
-        //     titles: [
-        //         {
-        //             bold: false,
-        //             id: 'Title-1',
-        //             size: 0,
-        //             text: '',
-        //         },
-        //     ],
-        //     dataProvider: [
-        //         {
-        //             category: 'Australia',
-        //             'column-1': '300',
-        //             color: '#7f1ec5',
-        //         },
-        //         {
-        //             category: 'Bangladesh',
-        //             'column-1': '240',
-        //             color: '#00a4f2',
-        //         },
-        //         {
-        //             category: 'Belgium',
-        //             'column-1': '450',
-        //             color: '#00c535',
-        //         },
-        //         {
-        //             category: 'UK',
-        //             'column-1': '570',
-        //             color: '#eb8300',
-        //         },
-        //         {
-        //             category: 'USA',
-        //             'column-1': '640',
-        //             color: '#f4c200',
-        //         },
-        //         {
-        //             category: 'India',
-        //             'column-1': '720',
-        //             color: '#c1c1c1',
-        //         },
-        //         {
-        //             category: 'Canada',
-        //             'column-1': '655',
-        //             color: '#F8508C',
-        //         },
-        //         {
-        //             category: 'China',
-        //             'column-1': '740',
-        //             color: '#00b1a5',
-        //         },
-        //         {
-        //             category: 'Netherlands',
-        //             'column-1': '480',
-        //             color: '#84dc2b',
-        //         },
-        //         {
-        //             category: 'Greece',
-        //             'column-1': '380',
-        //             color: '#5172fa',
-        //         },
-        //         {
-        //             category: 'Japan',
-        //             'column-1': '290',
-        //             color: '#798bb0',
-        //         },
-        //         {
-        //             category: 'Mexico',
-        //             'column-1': '180',
-        //             color: '#b31493',
-        //         },
-        //         {
-        //             category: 'Pakistan',
-        //             'column-1': '150',
-        //             color: '#7000f7',
-        //         },
-        //         {
-        //             category: 'Russia',
-        //             'column-1': '541',
-        //             color: '#4a005e',
-        //         },
-        //         {
-        //             category: 'Turkey',
-        //             'column-1': '321',
-        //             color: '#a388b0',
-        //         },
-        //         {
-        //             category: 'Malaysia',
-        //             'column-1': '487',
-        //             color: '#770d42',
-        //         },
-        //         {
-        //             category: 'Lebnan',
-        //             'column-1': '380',
-        //             color: '#388b79',
-        //         },
-        //         {
-        //             category: 'Japan',
-        //             'column-1': '630',
-        //             color: '#fc7400',
-        //         },
-        //         {
-        //             category: 'Sweden',
-        //             'column-1': '420',
-        //             color: '#ff87e6',
-        //         },
-        //         {
-        //             category: 'Germany',
-        //             'column-1': '370',
-        //             color: '#f8e08e',
-        //         },
-        //     ],
-        // },
 
         //Customers by Nationality
         customersByNationality: {
@@ -1521,6 +1358,109 @@ export default {
                         },
                     ],
                     action: 'review',
+                },
+            ],
+        },
+
+        // residence table
+        countryResidence: {
+            fields: [
+                {
+                    key: 'color',
+                    label: 'Color',
+                },
+                {
+                    key: 'country_name',
+                    label: 'Country Name',
+                    class: 'w-320px p-l-20',
+                },
+                {
+                    key: 'country_residence',
+                    label: 'Country Residence',
+                },
+                {
+                    key: 'residence_percentage',
+                    label: 'Residence Percentage',
+                },
+            ],
+            items: [
+                {
+                    color: '#111',
+                    country_name: 'Australia',
+                    country_residence: 300,
+                    residence_percentage: '1.6%',
+                },
+                {
+                    color: '#7f1ec5',
+                    country_name: 'Bangladesh',
+                    country_residence: 240,
+                    residence_percentage: '1.3%',
+                },
+                {
+                    color: '#00a4f2',
+                    country_name: 'Belgium',
+                    country_residence: 450,
+                    residence_percentage: '2.5%',
+                },
+                {
+                    color: '#00c535',
+                    country_name: 'United Kingdom',
+                    country_residence: 720,
+                    residence_percentage: '4.0%',
+                },
+                {
+                    color: '#eb8300',
+                    country_name: 'United States of America',
+                    country_residence: 640,
+                    residence_percentage: '3.5%',
+                },
+                {
+                    color: '#f4c200',
+                    country_name: 'India',
+                    country_residence: 450,
+                    residence_percentage: '3.1%',
+                },
+                {
+                    color: '#c1c1c1',
+                    country_name: 'Canada',
+                    country_residence: 655,
+                    residence_percentage: '3.5%',
+                },
+                {
+                    color: '#f8508c',
+                    country_name: 'China',
+                    country_residence: 710,
+                    residence_percentage: '3.9%',
+                },
+                {
+                    color: '#00b1a5',
+                    country_name: 'Netherlands',
+                    country_residence: 89,
+                    residence_percentage: '0.3%',
+                },
+                {
+                    color: '#84dc2b',
+                    country_name: 'Srilanka',
+                    country_residence: 240,
+                    residence_percentage: '1.3%',
+                },
+                {
+                    color: '#5172fa',
+                    country_name: 'Pakistan',
+                    country_residence: 110,
+                    residence_percentage: '2.4%',
+                },
+                {
+                    color: '#798bb0',
+                    country_name: 'Afghanistan',
+                    country_residence: 100,
+                    residence_percentage: '2.3%',
+                },
+                {
+                    color: '#b31493',
+                    country_name: 'Iraq',
+                    country_residence: 150,
+                    residence_percentage: '2.9%',
                 },
             ],
         },
