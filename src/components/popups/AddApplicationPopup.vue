@@ -40,6 +40,21 @@
                     <div class="col-sm-12">
                         <div class="form-group">
                             <label>API KEY</label>
+                            <div class="clipboard">
+                                <span
+                                    >7cfac137-c87a-4ad6-b5e4-b0422c00f891</span
+                                >
+                                <i class="icon-copy"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <label>SECRET KEY</label>
+                            <div class="clipboard">
+                                <span>y/B?E(H+MbPeShVmYq3t6w9z$C&F)J@N</span>
+                                <i class="icon-copy"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
