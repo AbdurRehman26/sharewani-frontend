@@ -3,7 +3,44 @@
         <div class="content-area">
             <base-header :menuListing="menuListing"></base-header>
             <div class="right-panel">
-                <router-view></router-view>
+                <div class="wrap-content">
+                    <div class="filter-section">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h2>{{ $route.meta.name }}</h2>
+                            </div>
+                            <div class="col-md-6 text-right">
+                                <ul>
+                                    <li>
+                                        <b-button type="button" variant="link">
+                                            <i class="icon-caret-left"></i> Go
+                                            back</b-button
+                                        >
+                                    </li>
+                                    <li>
+                                        <b-button
+                                            v-b-modal.cancel-review-process-popup
+                                            type="button"
+                                            variant="link font-semibold"
+                                        >
+                                            Cancel Review Process
+                                        </b-button>
+                                    </li>
+                                    <li>
+                                        <b-button
+                                            v-b-modal.kyc-status-review-popup
+                                            type="button"
+                                            variant="primary"
+                                        >
+                                            KYC STATUS REVIEW</b-button
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <router-view></router-view>
+                </div>
             </div>
         </div>
     </div>

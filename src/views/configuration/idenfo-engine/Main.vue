@@ -10,7 +10,14 @@
                         <span>{{ list.menuLabel }}</span>
                     </router-link>
                 </li>
-                <li class="open-dropdown">
+                <li
+                    class="open-dropdown"
+                    :class="[
+                        $route.meta.responsiveMenuItem == true
+                            ? 'router-link-exact-active'
+                            : '',
+                    ]"
+                >
                     <a @click="listDropdown ^= true" href="javascript:void(0);">
                         <i class="icon-dropdown-icon"></i>
                     </a>
@@ -73,13 +80,16 @@ export default {
     */
     data() {
         return {
-            navWidth: true,
             listVal: null,
             listDropdown: false,
             menuListing: [
                 {
                     anchorLink: '/configuration/idenfo-engine/',
                     menuLabel: 'Nationality',
+                },
+                {
+                    anchorLink: '/configuration/idenfo-engine/country',
+                    menuLabel: 'Country',
                 },
                 {
                     anchorLink: '/configuration/idenfo-engine/work',
@@ -143,15 +153,6 @@ export default {
         listWidthVal() {
             this.listVal = this.$refs.listingArea.offsetWidth
         },
-        menuFunc() {
-            setTimeout(function() {
-                if (this.listVal > 940) {
-                    this.navWidth = true
-                } else {
-                    this.navWidth = false
-                }
-            }, 500)
-        },
     }, // End of Component > methods
 
     /*
@@ -161,7 +162,6 @@ export default {
     */
     mounted() {
         this.listWidthVal()
-        this.menuFunc()
     }, // End of Component > mounted
 } // End of export default
 </script>

@@ -1,41 +1,5 @@
 <template>
-    <div class="wrap-content screen-customer">
-        <div class="filter-section">
-            <div class="row">
-                <div class="col-md-3">
-                    <h2>Name Screening</h2>
-                </div>
-                <div class="col-md-9 text-right">
-                    <ul>
-                        <li>
-                            <b-button type="button" variant="link">
-                                <i class="icon-caret-left"></i> Go
-                                back</b-button
-                            >
-                        </li>
-                        <li>
-                            <b-button
-                                v-b-modal.cancel-review-process-popup
-                                type="button"
-                                variant="link font-semibold"
-                            >
-                                Cancel Review Process
-                            </b-button>
-                        </li>
-                        <li>
-                            <b-button
-                                v-b-modal.kyc-status-review-popup
-                                type="button"
-                                variant="primary"
-                            >
-                                KYC STATUS REVIEW</b-button
-                            >
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
+    <div>
         <div class="card customer-info screen-section">
             <customer-information
                 profilePic="image5.png"

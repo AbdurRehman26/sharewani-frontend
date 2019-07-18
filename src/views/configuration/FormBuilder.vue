@@ -12,49 +12,95 @@
                 </li>
             </ul>
         </div>
-        <div class="config-card-block">
-            <div class="row">
-                <div class="col-xs-12 col-md-8">
+        <div class="row">
+            <div class="col-xs-12 col-md-8">
+                <div
+                    class="card card-builder form-create-panel config-card-block"
+                >
+                    <!-- draggable area -->
                     <draggable
                         class="dragArea list-group"
-                        :list="list2"
+                        :list="formData"
                         group="people"
                         @change="log"
                     >
                         <div
-                            class="list-group-item"
-                            v-for="element in list2"
-                            :key="element.name"
+                            class="form-field-types draggable-fields"
+                            v-for="(field, index) in formData"
+                            :key="index"
                         >
-                            {{ element.name }}
-                        </div>
-                    </draggable>
-                </div>
-                <div class="col-xs-12 col-md-4">
-                    <draggable
-                        class="dragArea list-group"
-                        :list="list1"
-                        :group="{ name: 'people', pull: 'clone', put: false }"
-                        @change="log"
-                    >
-                        <div
-                            class="list-group-item"
-                            v-for="element in list1"
-                            :key="element.name"
-                        >
-                            {{ element.name }}
+                            <!-- field move icon -->
+                            <span class="move-icon"
+                                ><i class="icon-move"></i
+                            ></span>
+                            <!-- field type icon -->
+                            <span><i :class="field.icon"></i></span>
+                            <!-- field label text -->
+                            <p>{{ field.label }}</p>
+                            <div class="action-items" :class="field.status">
+                                <!-- settings icon -->
+                                <i
+                                    class="action-icons icon-settings"
+                                    @click="openPopup(field.id)"
+                                ></i>
+                                <!-- field locked icon -->
+                                <i
+                                    v-if="field.status == 'disabled'"
+                                    class="action-icons icon-change-password"
+                                ></i>
+                                <!-- delete icon -->
+                                <i
+                                    v-if="field.status == 'editable'"
+                                    class="change-password icon-trash"
+                                    v-b-modal.remove-field
+                                ></i>
+                            </div>
                         </div>
                     </draggable>
                 </div>
             </div>
+            <!-- Fields Type-->
+            <div class="col-xs-12 col-md-4">
+                <div
+                    class="card card-builder field-type-panel with-shadow config-card-block"
+                >
+                    <h4>Components</h4>
+                    <div>
+                        <div
+                            class="form-field-types"
+                            v-for="(field, index) in fieldType"
+                            :key="index"
+                        >
+                            <div @click="openPopup(field.id)">
+                                <span><i :class="field.icon"></i></span>
+                                <p>{{ field.label }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+        <add-heading-popup></add-heading-popup>
+        <add-text-field-popup></add-text-field-popup>
+        <add-select-field-popup></add-select-field-popup>
+        <remove-field-popup></remove-field-popup>
     </div>
 </template>
 
 <script>
 import draggable from 'vuedraggable'
+import addHeadingPopup from '@/components/popups/form-builder/AddHeadingPopup.vue'
+import addTextFieldPopup from '@/components/popups/form-builder/AddTextFieldPopup.vue'
+import addSelectFieldPopup from '@/components/popups/form-builder/AddSelectFieldPopup.vue'
+import removeFieldPopup from '@/components/popups/form-builder/RemoveFieldPopup.vue'
 export default {
-    components: { draggable },
+    components: {
+        draggable,
+        addHeadingPopup,
+        addTextFieldPopup,
+        addSelectFieldPopup,
+        removeFieldPopup,
+    },
 
     /*
     |--------------------------------------------------------------------------
@@ -84,24 +130,122 @@ export default {
             listDropdown: false,
             menuListing: [
                 {
-                    anchorLink: '/configuration/idenfo-engine/',
-                    menuLabel: 'Nationality',
+                    anchorLink: '/configuration/form-builder/',
+                    menuLabel: 'Setup Profile',
                 },
                 {
                     anchorLink: '/configuration/idenfo-engine/work',
-                    menuLabel: 'Work Type',
+                    menuLabel: 'Account Info',
                 },
             ],
-            list1: [
-                { name: 'John', id: 1 },
-                { name: 'Joao', id: 2 },
-                { name: 'Jean', id: 3 },
-                { name: 'Gerard', id: 4 },
+            fieldType: [
+                {
+                    icon: 'icon-heading',
+                    label: 'Heading',
+                    popup: '',
+                    id: 1,
+                },
+                {
+                    icon: 'icon-text-field',
+                    label: 'Text Field',
+                    popup: '',
+                    id: 2,
+                },
+                {
+                    icon: 'icon-text-area',
+                    label: 'Text Area',
+                    popup: '',
+                    id: 3,
+                },
+                {
+                    icon: 'icon-calendar',
+                    label: 'Date Field',
+                    popup: '',
+                    id: 4,
+                },
+                {
+                    icon: 'icon-select-field',
+                    label: 'Dropdown / Select Field',
+                    popup: '',
+                    id: 5,
+                },
+                {
+                    icon: 'icon-radio',
+                    label: 'Radio Button Group',
+                    popup: '',
+                    id: 6,
+                },
+                {
+                    icon: 'icon-checkbox',
+                    label: 'Checkbox Group',
+                    popup: '',
+                    id: 7,
+                },
             ],
-            list2: [
-                { name: 'Juan', id: 5 },
-                { name: 'Edgard', id: 6 },
-                { name: 'Johnson', id: 7 },
+            formData: [
+                {
+                    id: 1,
+                    icon: 'icon-heading',
+                    label: 'Basic Information',
+                    popup: '',
+                    status: 'disabled',
+                },
+                {
+                    id: 2,
+                    icon: 'icon-text-field',
+                    label: 'First Name',
+                    popup: '',
+                    status: 'disabled',
+                },
+                {
+                    id: 2,
+                    icon: 'icon-text-field',
+                    label: 'Middle Name',
+                    popup: '',
+                    status: 'disabled',
+                },
+                {
+                    id: 2,
+                    icon: 'icon-text-field',
+                    label: 'Last Name',
+                    popup: '',
+                    status: 'disabled',
+                },
+                {
+                    id: 2,
+                    icon: 'icon-text-field',
+                    label: 'Father Name',
+                    popup: '',
+                    status: 'editable',
+                },
+                {
+                    id: 2,
+                    icon: 'icon-text-field',
+                    label: 'Next of Kin',
+                    popup: '',
+                    status: 'editable',
+                },
+                {
+                    id: 6,
+                    icon: 'icon-radio',
+                    label: 'Gender',
+                    popup: '',
+                    status: 'disabled',
+                },
+                {
+                    id: 4,
+                    icon: 'icon-calendar',
+                    label: 'Date of Birth',
+                    popup: '',
+                    status: 'disabled',
+                },
+                {
+                    id: 7,
+                    icon: 'icon-checkbox',
+                    label: 'Checkbox Group',
+                    popup: '',
+                    status: 'disabled',
+                },
             ],
         }
     }, // End of Component > data
@@ -119,17 +263,16 @@ export default {
     |--------------------------------------------------------------------------
     */
     methods: {
-        listWidthVal() {
-            this.listVal = this.$refs.listingArea.offsetWidth
-        },
-        menuFunc() {
-            setTimeout(function() {
-                if (this.listVal > 940) {
-                    this.navWidth = true
-                } else {
-                    this.navWidth = false
-                }
-            }, 500)
+        openPopup(val) {
+            if (val == 1) {
+                this.$bvModal.show('add-heading-popup')
+            }
+            if (val == 2 || val == 3 || val == 4) {
+                this.$bvModal.show('add-text-field-popup')
+            }
+            if (val == 5 || val == 6 || val == 7) {
+                this.$bvModal.show('add-select-field-popup')
+            }
         },
     }, // End of Component > methods
 
@@ -138,9 +281,6 @@ export default {
     | Component > mounted
     |--------------------------------------------------------------------------
     */
-    mounted() {
-        this.listWidthVal()
-        this.menuFunc()
-    }, // End of Component > mounted
+    mounted() {}, // End of Component > mounted
 } // End of export default
 </script>

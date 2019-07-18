@@ -27,6 +27,16 @@
 
 .info {
     color: $nav-color;
+    position: relative;
+    padding-left: 30px;
+    i {
+        font-size: 1.375rem;
+        position: absolute;
+        left: 0;
+        bottom: auto;
+        top: -4px;
+        margin: auto;
+    }
 }
 
 .step-form {
@@ -84,7 +94,7 @@
     align-content: center;
     max-width: 200px;
     h4 {
-        font-family: $font_thin;
+        font-family: $font_medium;
     }
     p {
         margin-bottom: 0px;
@@ -409,6 +419,9 @@
                     font-size: 1.125rem;
                     font-family: $font_medium;
                 }
+                label {
+                    font-size: 0.875rem !important;
+                }
 
                 ul {
                     margin-bottom: 0;
@@ -622,12 +635,14 @@
         flex-wrap: wrap;
         margin-bottom: 0;
         li {
-            margin-right: 10px;
+            // margin-right: 3px;
+            margin-right: 0px;
             a {
                 padding: 14px 16px 14px 16px;
                 color: #7f8fa4;
                 background: #ebebf2;
                 margin-right: 10px;
+                font-family: $font_light;
                 border-radius: 8px 8px 0px 0px;
                 text-decoration: none;
                 border-color: transparent !important;
@@ -643,18 +658,23 @@
             }
             &.open-dropdown {
                 position: relative;
+                > a {
+                    padding: 14px 26px 14px 26px;
+                    margin-right: 0;
+                }
                 .dropdown-open {
                     position: absolute;
                     z-index: 9;
                     width: 232px;
-                    right: 10px;
-                    border: 1px solid $border-color;
+                    right: 0;
+                    // border: 0.5px solid $border-color;
+                    box-shadow: 2px 3px 13px rgba(50, 50, 93, 0.2);
                     li {
                         width: 100%;
                         margin-right: 0px;
-                        border-bottom: 1px solid $border-color;
+                        border-bottom: 1px solid $body-bg;
                         a {
-                            box-shadow: 0px 0.5px 0px rgba(50, 50, 93, 0.2);
+                            // box-shadow: 0px 0.5px 0px rgba(50, 50, 93, 0.2);
                             background-color: #fff;
                             padding: 11px 24px;
                             margin-right: 0px;
@@ -667,11 +687,56 @@
                         &:last-child {
                             border-bottom: 0px solid $border-color;
                             text-transform: initial;
+                            margin-bottom: 0px;
                         }
+                    }
+                }
+                &.router-link-exact-active {
+                    > a {
+                        background-color: #fff;
+                        color: $secondary;
                     }
                 }
             }
         }
+    }
+}
+.video-record {
+    position: relative;
+    max-width: 500px;
+    margin-bottom: 80px;
+    .video-play {
+        position: absolute;
+        top: 90%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        cursor: pointer;
+        text-align: center;
+        max-width: 100px;
+        i {
+            &.icon-record {
+                font-size: 70px;
+            }
+        }
+        p {
+            color: $red;
+            text-transform: uppercase;
+            font-family: $font_medium;
+            margin-top: 5px;
+        }
+        &:hover,
+        &:focus {
+            p {
+                color: $body-color;
+            }
+        }
+    }
+}
+
+.icon-record {
+    i {
+        font-style: normal;
     }
 }
 
@@ -995,7 +1060,7 @@
 
     .scrollable {
         overflow-x: hidden;
-        height: 420px;
+        max-height: 420px;
         margin-bottom: 24px;
     }
 

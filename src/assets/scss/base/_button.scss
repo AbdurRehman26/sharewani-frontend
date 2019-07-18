@@ -43,6 +43,9 @@
             top: 8px;
         }
     }
+    &.btn-transparent {
+        color: $secondary;
+    }
     &.disable {
         color: $grey-medium !important;
         background: #f2f2f6 !important;
