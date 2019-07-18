@@ -40,20 +40,6 @@
                     <div class="col-sm-12">
                         <div class="form-group">
                             <label>API KEY</label>
-                            <div class="clipboard">
-                                <span class="code text-red">{{
-                                    testingCode
-                                }}</span>
-                                <i
-                                    class="icon-check"
-                                    @click.stop.prevent="copyTestingCode"
-                                ></i>
-                                <input
-                                    type="hidden"
-                                    id="testing-code"
-                                    :value="testingCode"
-                                />
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -78,21 +64,9 @@ export default {
 
             options: ['pk', 'uae', 'usa', 'uk'],
             selected: ['pk', 'uae'],
-
-            testingCode: '7cfac137-c87a-4ad6-b5e4-b0422c00f891',
         }
     },
     methods: {
-        copyTestingCode() {
-            let testingCodeToCopy = document.querySelector('#testing-code')
-            testingCodeToCopy.setAttribute('type', 'text')
-            testingCodeToCopy.select()
-
-            /* unselect the range */
-            testingCodeToCopy.setAttribute('type', 'hidden')
-            window.getSelection().removeAllRanges()
-        },
-
         /**
          * Handle when the modal is canceled
          *
