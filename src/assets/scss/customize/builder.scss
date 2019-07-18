@@ -44,6 +44,10 @@
 		font-family: $font-medium;
 	}
 	&.draggable-fields {
+		.icon-move {
+			color: $secondary;
+			cursor: move;
+		}
 		p {
 			color: $body-color;
 		}
@@ -57,11 +61,11 @@
 				color: $secondary;
 			}
 		}
-		&.disabled {
-			pointer-events: none;
-			.action-items {
+		.action-items {
+			&.disabled {
+				pointer-events: none;
 				i {
-					color: $grey-lite;
+					color: $dark;
 				}
 			}
 		}

@@ -28,17 +28,32 @@
                             class="form-field-types draggable-fields"
                             v-for="(field, index) in formData"
                             :key="index"
-                            v-b-modal.add-nationality-popup
                         >
+                            <!-- field move icon -->
                             <span class="move-icon"
-                                ><i class="field.icon"></i
+                                ><i class="icon-move"></i
                             ></span>
+                            <!-- field type icon -->
                             <span><i :class="field.icon"></i></span>
+                            <!-- field label text -->
                             <p>{{ field.label }}</p>
-                            <div class="action-items">
-                                <i class="action-icons icon-settings"></i>
-                                <i class="action-icons icon-settings"></i>
-                                <i class="change-password icon-settings"></i>
+                            <div class="action-items" :class="field.status">
+                                <!-- settings icon -->
+                                <i
+                                    class="action-icons icon-settings"
+                                    v-b-modal.add-nationality-popup
+                                ></i>
+                                <!-- field locked icon -->
+                                <i
+                                    v-if="field.status == 'disabled'"
+                                    class="action-icons icon-change-password"
+                                ></i>
+                                <!-- delete icon -->
+                                <i
+                                    v-if="field.status == 'editable'"
+                                    class="change-password icon-trash"
+                                    v-b-modal.add-nationality-popup
+                                ></i>
                             </div>
                         </div>
                     </draggable>
