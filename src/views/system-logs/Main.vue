@@ -67,6 +67,14 @@
                                             >Apply</b-button
                                         >
                                     </li>
+                                    <li>
+                                        <b-button
+                                            v-b-modal.export-process-popup
+                                            type="button"
+                                            variant="secondary"
+                                            >Export</b-button
+                                        >
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -94,6 +102,10 @@
                 </div>
             </div>
         </div>
+        <export-process-popup
+            title="Export System Log"
+            totalExport="Total Records Exported: 1,340"
+        ></export-process-popup>
     </div>
 </template>
 
@@ -104,10 +116,12 @@ require('amcharts3/amcharts/serial')
 require('amcharts3/amcharts/pie')
 import pagination from '@/components/Pagination.vue'
 import Datepicker from 'vuejs-datepicker'
+import exportProcessPopup from '@/components/popups/ExportProcessPopup.vue'
 export default {
     components: {
         pagination,
         Datepicker,
+        exportProcessPopup,
     },
 
     /*

@@ -39,7 +39,7 @@
                             ></b-form-select>
                         </b-form-group>
                     </div>
-                    <div class="col-md-12 scale-type">
+                    <div class="col-md-12 scale-type row-min-space">
                         <h4>Score Scale</h4>
                         <div class="row">
                             <div class="col-md-4">

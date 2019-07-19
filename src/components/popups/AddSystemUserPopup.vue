@@ -25,37 +25,42 @@
                             ></b-form-input>
                         </b-form-group>
                     </div>
-                    <div class="col-md-6">
-                        <b-form-group
-                            id="input-group-2"
-                            label="First Name"
-                            label-for="first-name"
-                        >
-                            <b-form-input
-                                id="first-name"
-                                type="text"
-                                v-model="form.firstName"
-                                required
-                                placeholder="Enter first name"
-                            ></b-form-input>
-                        </b-form-group>
+                    <div class="col-md-12 row-min-space">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <b-form-group
+                                    id="input-group-2"
+                                    label="First Name"
+                                    label-for="first-name"
+                                >
+                                    <b-form-input
+                                        id="first-name"
+                                        type="text"
+                                        v-model="form.firstName"
+                                        required
+                                        placeholder="Enter first name"
+                                    ></b-form-input>
+                                </b-form-group>
+                            </div>
+
+                            <div class="col-md-6">
+                                <b-form-group
+                                    id="input-group-3"
+                                    label="Last Name"
+                                    label-for="last-name"
+                                >
+                                    <b-form-input
+                                        id="last-name"
+                                        type="password"
+                                        v-model="form.lastName"
+                                        required
+                                        placeholder="Enter last name"
+                                    ></b-form-input>
+                                </b-form-group>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="col-md-6">
-                        <b-form-group
-                            id="input-group-3"
-                            label="Last Name"
-                            label-for="last-name"
-                        >
-                            <b-form-input
-                                id="last-name"
-                                type="password"
-                                v-model="form.lastName"
-                                required
-                                placeholder="Enter last name"
-                            ></b-form-input>
-                        </b-form-group>
-                    </div>
                     <div class="col-md-12">
                         <b-form-group
                             id="input-group-4"

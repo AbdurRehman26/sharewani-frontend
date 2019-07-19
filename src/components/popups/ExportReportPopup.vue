@@ -1,7 +1,7 @@
 <template>
     <div>
         <b-modal
-            id="export-report"
+            id="export-report-popup"
             title="Export Report"
             size="sm"
             okTitle="Download"

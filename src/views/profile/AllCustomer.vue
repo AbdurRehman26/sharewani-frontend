@@ -27,6 +27,14 @@
                                 >Apply</b-button
                             >
                         </li>
+                        <li>
+                            <b-button
+                                v-b-modal.export-process-popup
+                                type="button"
+                                variant="secondary"
+                                >Export</b-button
+                            >
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -83,14 +91,20 @@
             </b-table>
         </div>
         <pagination></pagination>
+        <export-process-popup
+            title="Export Customer's Data"
+            totalExport="Total Records Exported: 1,890"
+        ></export-process-popup>
     </div>
 </template>
 <script>
 import { mapGetters } from 'vuex'
 import pagination from '@/components/Pagination.vue'
+import exportProcessPopup from '@/components/popups/ExportProcessPopup.vue'
 export default {
     components: {
         pagination,
+        exportProcessPopup,
     },
 
     /*

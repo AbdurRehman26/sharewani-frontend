@@ -25,7 +25,7 @@
                             ></b-form-input>
                         </b-form-group>
                     </div>
-                    <div class="col-md-12">
+                    <div class="col-md-12 row-min-space">
                         <div class="row">
                             <div class="col-md-6">
                                 <label class="m-b-15">OPTIONS</label>
@@ -77,12 +77,12 @@
                     </div>
                     <div class="col-md-12">
                         <b-form-group
-                            class="kyc-status-radio overwrite-radio"
+                            class="kyc-status-radio overwrite-radio mb-0"
                             id="input-group-4"
                             label="Is Required?"
                             label-for="isrequired"
                         >
-                            <b-form-group>
+                            <b-form-group class="mb-0">
                                 <b-form-radio-group
                                     id="isrequired"
                                     v-model="form.isrequiredModel"
