@@ -16,8 +16,8 @@
                 <b-form-group
                     id="input-group-1"
                     class="kyc-status-radio overwrite-radio"
-                    label="KYC Status"
-                    label-for="kyc-status"
+                    label="Liveness Detection Result"
+                    label-for="detection-result"
                 >
                     <b-form-group>
                         <b-form-radio-group

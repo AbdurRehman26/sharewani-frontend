@@ -1,6 +1,7 @@
 <template>
     <div class="dashboard">
         <div class="content-area">
+            <base-header :menuListing="menuListing"></base-header>
             <div class="right-panel">
                 <div class="wrap-content">
                     <div class="filter-section">
@@ -66,6 +67,14 @@
                                             >Apply</b-button
                                         >
                                     </li>
+                                    <li>
+                                        <b-button
+                                            v-b-modal.export-process-popup
+                                            type="button"
+                                            variant="secondary"
+                                            >Export</b-button
+                                        >
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -93,6 +102,10 @@
                 </div>
             </div>
         </div>
+        <export-process-popup
+            title="Export System Log"
+            totalExport="Total Records Exported: 1,340"
+        ></export-process-popup>
     </div>
 </template>
 
@@ -103,10 +116,12 @@ require('amcharts3/amcharts/serial')
 require('amcharts3/amcharts/pie')
 import pagination from '@/components/Pagination.vue'
 import Datepicker from 'vuejs-datepicker'
+import exportProcessPopup from '@/components/popups/ExportProcessPopup.vue'
 export default {
     components: {
         pagination,
         Datepicker,
+        exportProcessPopup,
     },
 
     /*
@@ -132,6 +147,12 @@ export default {
     */
     data() {
         return {
+            menuListing: [
+                {
+                    anchorLink: '/system-logs',
+                    menuLabel: 'System Log',
+                },
+            ],
             fields: [],
             items: [],
             filterByModule: null,

@@ -587,6 +587,13 @@
     .scrollable {
         max-height: 470px;
     }
+
+    iframe {
+        width: 100%;
+        min-height: 400px;
+        border: none;
+        overflow: hidden;
+    }
 }
 
 .document-section {
@@ -1132,12 +1139,16 @@
             font-size: 1.125rem;
             margin-bottom: 18px;
         }
+    }
 
+    .row-min-space {
         .row {
             margin-right: -5px;
             margin-left: -5px;
 
-            .col-md-4 {
+            .col-md-4,
+            .col-md-6,
+            .col-md-12 {
                 padding-left: 7px;
                 padding-right: 7px;
             }
@@ -1202,9 +1213,12 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    iframe {
+    margin-bottom: 24px;
+
+    .preview-video {
         width: 100%;
-        height: 100%;
+        min-height: 290px;
+        background-size: cover;
     }
     img {
         position: absolute;
@@ -1370,10 +1384,48 @@
     border-radius: $border-radius;
     position: relative;
     padding: 12px 10px 5px;
+    color: $body-color;
 
     i {
         position: absolute;
-        right: 0;
+        right: 13px;
+        top: 8px;
+        color: $secondary;
+        font-size: 22px;
         cursor: pointer;
+    }
+}
+
+.export-process {
+    text-align: center;
+    margin-bottom: 24px;
+
+    p {
+        margin-bottom: 0;
+    }
+
+    label {
+        text-transform: capitalize;
+        color: $body-color;
+        font-family: $font_bold;
+        margin: 19px 0 3px;
+        font-size: 0.875rem !important;
+    }
+
+    .loading {
+        width: 75px;
+        margin: 0 auto 3px;
+    }
+}
+
+.export-timeline {
+    position: relative;
+    width: 100%;
+
+    .btn-secondary {
+        position: absolute;
+        right: 0;
+        top: 38px;
+        z-index: 9;
     }
 }

@@ -7,9 +7,22 @@
             ></customer-information>
         </div>
 
+        <div class="export-timeline">
+            <b-button
+                v-b-modal.export-process-popup
+                type="button"
+                variant="secondary"
+                >Export Timeline</b-button
+            >
+        </div>
+
         <time-line :yearDetails="yearDetails"></time-line>
         <cancel-review-process-popup></cancel-review-process-popup>
         <kyc-status-review-popup></kyc-status-review-popup>
+        <export-process-popup
+            title="Export Activity Timeline"
+            totalExport="Total Activities Exported: 145"
+        ></export-process-popup>
     </div>
 </template>
 <script>
@@ -17,6 +30,7 @@ import { mapGetters } from 'vuex'
 import timeLine from '@/components/TimeLine.vue'
 import customerInformation from '@/components/CustomerInfo.vue'
 import kycStatusReviewPopup from '@/components/popups/KYCStatusReviewPopup.vue'
+import exportProcessPopup from '@/components/popups/ExportProcessPopup.vue'
 import cancelReviewProcessPopup from '@/components/popups/CancelReviewProcessPopup.vue'
 export default {
     components: {
@@ -24,6 +38,7 @@ export default {
         kycStatusReviewPopup,
         cancelReviewProcessPopup,
         timeLine,
+        exportProcessPopup,
     },
 
     /*

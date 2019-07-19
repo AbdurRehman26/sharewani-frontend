@@ -46,7 +46,10 @@
         </div>
         <div class="card iframe-section">
             <div class="scrollable" id="style-2">
-                <img :src="require('@/assets/images/dummy/google-pic.png')" />
+                <iframe
+                    scroll
+                    src="https://php72.cygnismedia.com/google-search.html"
+                ></iframe>
             </div>
         </div>
         <cancel-review-process-popup></cancel-review-process-popup>
