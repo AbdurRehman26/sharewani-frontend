@@ -7,7 +7,7 @@ body {
 }
 
 .sidebar {
-    background-color: #3c1559;
+    background-color: $interface-medium;
     width: 252px;
     height: 100%;
     position: fixed;
@@ -16,7 +16,7 @@ body {
         display: flex;
         overflow: hidden;
         .country-selection {
-            background-color: #22003c;
+            background-color: $interface-dark;
             height: 100vh;
             padding: 10px 10px;
             ul {
@@ -95,7 +95,7 @@ body {
                             font-size: 14px;
                         }
                         &.router-link-active {
-                            background-color: #22003c;
+                            background-color: $interface-dark;
                             color: #fff;
                             border-radius: 8px;
                             position: relative;
