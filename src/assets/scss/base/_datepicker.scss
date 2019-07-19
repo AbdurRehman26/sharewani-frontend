@@ -56,6 +56,13 @@
     }
 }
 
+.vdp-datepicker__calendar {
+    .cell {
+        height: 35px;
+        line-height: 35px;
+    }
+}
+
 // Time picker
 .time-picker {
     width: 100% !important;
