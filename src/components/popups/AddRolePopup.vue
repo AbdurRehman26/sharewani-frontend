@@ -29,7 +29,22 @@
                         <div class="col-md-12 scale-type">
                             <h4>Permissions</h4>
                         </div>
-                        <div class="col-md-12"></div>
+                        <div class="col-md-12 permissions-section">
+                            <check-box-listing
+                                :checkBoxListing="form.insights"
+                                checkboxName="noprofile"
+                                parentName="Insights"
+                            ></check-box-listing>
+                            <check-box-listing
+                                :checkBoxListing="form.customerProfile"
+                                checkboxName="customerprofile"
+                                parentName="Customer Profiles"
+                            ></check-box-listing>
+                            <radio-listing
+                                :radioListing="form.statusReview"
+                                parentName="KYC Status Review Role"
+                            ></radio-listing>
+                        </div>
                     </div>
                 </div>
             </b-form>
@@ -38,12 +53,42 @@
 </template>
 
 <script>
+import checkBoxListing from '@/components/CheckBoxListing.vue'
+import radioListing from '@/components/RadioListing.vue'
 export default {
+    components: {
+        checkBoxListing,
+        radioListing,
+    },
     data() {
         return {
             form: {
                 roleTitle: '',
+                insights: [
+                    'View Alerts',
+                    'View Activity Dashboard',
+                    'View Customer Statistics',
+                ],
+                customerProfile: [
+                    'View Customer Profile',
+                    'Register Customer',
+                    'KYC Status Investigation & Review',
+                ],
+
+                statusReview: [
+                    { text: 'Maker', value: 'maker' },
+                    {
+                        text: 'Checker',
+                        value: 'checker',
+                    },
+                    {
+                        text: 'Approver',
+                        value: 'approver',
+                    },
+                ],
             },
+
+            selected: 'maker',
         }
     },
     methods: {

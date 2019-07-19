@@ -25,12 +25,12 @@ $pink: #aa2f78;
 $yellow: #ffb54c;
 $radio-check: #9d9f8f;
 $theme-colors: (
-	'primary': $primary,
-	'secondary': $secondary,
-	'success': $success,
-	'light': $light,
-	'dark': $dark,
-	'danger': $danger
+    'primary': $primary,
+    'secondary': $secondary,
+    'success': $success,
+    'light': $light,
+    'dark': $dark,
+    'danger': $danger
 );
 // header height
 $header-height: 52px !default;
@@ -108,7 +108,7 @@ $button-height: $input-height !default;
 //** Modal footer border color
 $modal-footer-border-color: $modal-header-border-color !default;
 
-$modal-lg: 773px !default;
+$modal-lg: 800px !default;
 $modal-md: 640px !default;
 $modal-sm: 400px !default;
 
