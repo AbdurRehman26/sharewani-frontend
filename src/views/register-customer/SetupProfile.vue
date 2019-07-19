@@ -262,7 +262,21 @@
                                 ></b-form-select>
                             </b-form-group>
                         </div>
-
+                        <div class="col-md-4">
+                            <b-form-group
+                                id="input-group-1"
+                                label="Length of Relationship"
+                                label-for="taxid"
+                            >
+                                <b-form-input
+                                    id="address"
+                                    type="text"
+                                    v-model="form.relationship"
+                                    required
+                                    placeholder="Enter Length of relationship (in months)"
+                                ></b-form-input>
+                            </b-form-group>
+                        </div>
                         <div class="col-md-4">
                             <b-form-group
                                 id="input-group-1"
@@ -381,6 +395,7 @@ export default {
                 address: null,
                 country: null,
                 state: null,
+                relationship: null,
                 city: null,
                 zipcode: null,
                 countrycode: null,

@@ -45,6 +45,12 @@
         </div>
         <div class="table-section">
             <b-table :items="items" :fields="fields">
+                <template slot="aging" slot-scope="data">
+                    <span :class="data.value[0].riskRate">
+                        {{ data.value[0].name }}
+                    </span>
+                </template>
+
                 <template slot="alerts" slot-scope="data">
                     <div
                         class="bar-line"
@@ -53,7 +59,7 @@
                         :title="data.value[0].riskRate + ' Risk'"
                     ></div>
                     <div class="indecation">
-                        <a href="javascript:void(0);">
+                        <router-link to="/customer-information">
                             <i
                                 v-if="data.value[0].riskType == 'flag'"
                                 class="icon-flag"
@@ -66,23 +72,39 @@
                                 v-if="data.value[0].riskType == 'rating'"
                                 class="icon-star"
                             ></i>
-                        </a>
+                        </router-link>
                     </div>
                 </template>
-
+                <template slot="customer" slot-scope="data">
+                    <router-link to="/customer-information">{{
+                        data.value
+                    }}</router-link>
+                </template>
+                <template slot="full_name" slot-scope="data">
+                    <router-link to="/customer-information">{{
+                        data.value
+                    }}</router-link>
+                </template>
+                <template slot="nationality" slot-scope="data">
+                    <router-link to="/customer-information">{{
+                        data.value
+                    }}</router-link>
+                </template>
                 <template slot="profile" slot-scope="data">
                     <div class="profile-area">
-                        <div
-                            class="profile-pic"
-                            :style="{
-                                'background-image':
-                                    'url(' +
-                                    require('@/assets/images/members/' +
-                                        data.value +
-                                        '') +
-                                    ')',
-                            }"
-                        ></div>
+                        <router-link to="/customer-information">
+                            <div
+                                class="profile-pic"
+                                :style="{
+                                    'background-image':
+                                        'url(' +
+                                        require('@/assets/images/members/' +
+                                            data.value +
+                                            '') +
+                                        ')',
+                                }"
+                            ></div>
+                        </router-link>
                     </div>
                 </template>
                 <template slot="name_screening" slot-scope="data">
@@ -105,15 +127,18 @@
                     <div class="action-review">
                         <base-action
                             v-if="data.value == 'in review'"
-                            cssClass="disabled"
                             icon="icon-lock_outline"
+                            class="disable-color"
                             label="In Review"
+                            v-b-tooltip.hover
+                            title="Reviewing by Andrew John"
                             v-b-modal.initiate-review
                         ></base-action>
                         <base-action
                             v-if="data.value == 'review'"
                             icon="icon-review"
                             label="Review"
+                            @click="initialReview"
                             v-b-modal.initiate-review
                         ></base-action>
                     </div>
@@ -199,6 +224,10 @@ export default {
             this.fields = tableFields //push data into array
             let tableItems = this.dashboardData.alertsTable.items //get user data from store
             this.items = tableItems //push data into array
+        },
+
+        initialReview() {
+            this.$bvModal.show('initiate-review-popup')
         },
     }, // End of Component > methods
 

@@ -28,7 +28,7 @@
                                 btnVariant="primary"
                             ></base-button>
                         </li>
-                        icon-error_outline
+
                         <li>
                             <base-button
                                 v-b-modal.export-report-popup
@@ -77,7 +77,9 @@
                     <div class="col-xs-12 col-md-6">
                         <div class="card dashboard-card  sm-radius">
                             <div class="dashboard-charts">
-                                <h2 class="heading">KYC Alters by Type</h2>
+                                <h2 class="heading">
+                                    KYC Alters by Screening Type
+                                </h2>
                                 <!-- dashboard alerts report -->
                                 <div
                                     id="alerts-by-type"
@@ -90,7 +92,7 @@
                         <div class="card dashboard-card sm-radius">
                             <div class="dashboard-charts">
                                 <h2 class="heading">
-                                    Name Screening Hit by Type
+                                    KYC Alerts by Alert Type
                                 </h2>
                                 <!-- screening hit by type report -->
                                 <div
@@ -99,8 +101,69 @@
                                 ></div>
                                 <div class="chart-highest-record">
                                     <h2>HIGHEST</h2>
+                                    <p>
+                                        Periodic Alerts:
+                                        <strong>420</strong> (44.9%)
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-md-6">
+                        <div class="card dashboard-card  sm-radius">
+                            <div class="dashboard-charts">
+                                <h2 class="heading">
+                                    Name Screening Hit by Type
+                                </h2>
+                                <!-- dashboard alerts report -->
+                                <div
+                                    id="screen-hit-by-type"
+                                    class="amcharts-div alerts-by-type"
+                                ></div>
+                                <div class="chart-highest-record">
+                                    <h2>HIGHEST</h2>
                                     <p>PEP Hit: <strong>320</strong> (44.9%)</p>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6">
+                        <div class="card dashboard-card  sm-radius">
+                            <div class="dashboard-charts">
+                                <h2 class="heading">
+                                    Customer Onboarding With / Without Alert
+                                </h2>
+                                <!-- dashboard alerts report -->
+                                <div
+                                    id="on-board-issue"
+                                    class="amcharts-div alerts-by-type"
+                                ></div>
+                                <div class="chart-highest-record">
+                                    <h2>HIGHEST</h2>
+                                    <p>
+                                        Without Alert:
+                                        <strong>2173</strong> (68.9%)
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12 col-md-6">
+                        <div class="card dashboard-card  sm-radius">
+                            <div class="dashboard-charts">
+                                <h2 class="heading">
+                                    Aging by Alert Type
+                                </h2>
+                                <!-- dashboard alerts report -->
+                                <div
+                                    id="aging-by-alert-type"
+                                    class="amcharts-div alerts-by-type"
+                                ></div>
                             </div>
                         </div>
                     </div>
@@ -184,12 +247,23 @@ export default {
             window.AmCharts.makeChart('alerts-by-type', alertsByTypeData)
 
             //alerts by type  data
-            let screeningHitByTypeData = this.dashboardData
-                .screeningHitByTypeData
+            let screeningHitByTypeData = this.dashboardData.alertByAlertType
             window.AmCharts.makeChart(
                 'screening-by-type',
                 screeningHitByTypeData
             )
+
+            let screenHitByTypeChart = this.dashboardData.screenHitByTypeChart
+            window.AmCharts.makeChart(
+                'screen-hit-by-type',
+                screenHitByTypeChart
+            )
+
+            let onBoardingIssue = this.dashboardData.onBoardingIssue
+            window.AmCharts.makeChart('on-board-issue', onBoardingIssue)
+
+            let agingByAlertType = this.dashboardData.agingByAlertType
+            window.AmCharts.makeChart('aging-by-alert-type', agingByAlertType)
         },
     }, // End of Component > methods
 

@@ -424,6 +424,131 @@ export default {
                 },
             ],
         },
+
+        //alert by alert type
+
+        alertByAlertType: {
+            type: 'pie',
+            innerRadius: '80%',
+            colors: [
+                '#7f1ec5',
+                '#00a4f2',
+                '#00c535',
+                '#eb8300',
+                '#f4c200',
+                '#c1c1c1',
+            ],
+            labelsEnabled: false,
+            pullOutRadius: '0%',
+            balloonText: '[[title]]: <b>[[value]]</b> [[percents]]%',
+            marginBottom: 0,
+            marginTop: 0,
+            outlineAlpha: 1,
+            outlineThickness: 2,
+            titleField: 'category',
+            valueField: 'column-1',
+            color: '#1B1B1E',
+            fontFamily: 'Proxima Nova',
+            fontSize: 14,
+            allLabels: [],
+            balloon: {
+                color: '#1B1B1E',
+                fillAlpha: 1,
+            },
+            legend: {
+                enabled: true,
+                align: 'center',
+                markerBorderAlpha: 0.27,
+                markerBorderThickness: 0,
+                markerCorner: 12,
+                markerLabelGap: 12,
+                markerSize: 20,
+                spacing: 8,
+                labelText: '[[title]]',
+                valueText: '[[percents]]%',
+                verticalGap: 20,
+            },
+            titles: [],
+            dataProvider: [
+                {
+                    category: 'New Alerts',
+                    'column-1': '180',
+                },
+                {
+                    category: 'Periodic Alerts',
+                    'column-1': '420',
+                },
+                {
+                    category: 'Trigger Alerts',
+                    'column-1': '120',
+                },
+            ],
+        },
+
+        //Name Screen Hit By Type
+
+        screenHitByTypeChart: {
+            type: 'pie',
+            innerRadius: '80%',
+            colors: [
+                '#7f1ec5',
+                '#00a4f2',
+                '#00c535',
+                '#eb8300',
+                '#f4c200',
+                '#c1c1c1',
+            ],
+            labelsEnabled: false,
+            pullOutRadius: '0%',
+            balloonText: '[[title]]: <b>[[value]]</b> [[percents]]%',
+            marginBottom: 0,
+            marginTop: 0,
+            outlineAlpha: 1,
+            outlineThickness: 2,
+            titleField: 'category',
+            valueField: 'column-1',
+            color: '#1B1B1E',
+            fontFamily: 'Proxima Nova',
+            fontSize: 14,
+            allLabels: [],
+            balloon: {
+                color: '#1B1B1E',
+                fillAlpha: 1,
+            },
+            legend: {
+                enabled: true,
+                align: 'center',
+                markerBorderAlpha: 0.27,
+                markerBorderThickness: 0,
+                markerCorner: 12,
+                markerLabelGap: 12,
+                markerSize: 20,
+                spacing: 8,
+                labelText: '[[title]]',
+                valueText: '[[percents]]%',
+                verticalGap: 20,
+            },
+            titles: [],
+            dataProvider: [
+                {
+                    category: 'Sanction Hit',
+                    'column-1': '180',
+                },
+                {
+                    category: 'PEP Hit',
+                    'column-1': '320',
+                },
+                {
+                    category: 'Enforcement Hit',
+                    'column-1': '120',
+                },
+                {
+                    category: 'Client Black List Hit',
+                    'column-1': '92',
+                },
+            ],
+        },
+
         //customer by age chart
         customerByAge: {
             type: 'pie',
@@ -493,6 +618,171 @@ export default {
                 },
             ],
         },
+
+        // onBoarding with Issue
+
+        onBoardingIssue: {
+            type: 'pie',
+            balloonText: '[[title]]: <b>[[value]]</b> [[percents]]%',
+            innerRadius: '80%',
+            pullOutRadius: '0%',
+            colors: [
+                '#00c535',
+                '#C91F37',
+                '#00c535',
+                '#eb8300',
+                '#f4c200',
+                '#c1c1c1',
+            ],
+            gradientRatio: [],
+            labelColorField: '#1B1B1E',
+            labelsEnabled: false,
+            labelTickAlpha: 0,
+            labelTickColor: '#1B1B1E',
+            marginBottom: 0,
+            marginTop: 0,
+            maxLabelWidth: 0,
+            outlineAlpha: 1,
+            outlineThickness: 2,
+            titleField: 'category',
+            valueField: 'column-1',
+            accessible: false,
+            color: '#1B1B1E',
+            fontFamily: 'Proxima Nova',
+            fontSize: 14,
+            allLabels: [],
+            balloon: {
+                color: '#1B1B1E',
+                fillAlpha: 1,
+            },
+            legend: {
+                enabled: true,
+                align: 'center',
+                markerBorderAlpha: 0.27,
+                markerBorderThickness: 0,
+                markerCorner: 12,
+                markerLabelGap: 12,
+                markerSize: 20,
+                spacing: 8,
+                labelText: '[[title]]',
+                valueText: '[[percents]]%',
+                verticalGap: 20,
+            },
+            titles: [],
+            dataProvider: [
+                {
+                    category: 'Onboarding Without Issue',
+                    'column-1': '2173',
+                },
+                {
+                    category: 'Onboarding With Issue',
+                    'column-1': '980',
+                },
+            ],
+        },
+
+        // Aging By Alert Type
+        agingByAlertType: {
+            type: 'serial',
+            categoryField: 'category',
+            colors: [
+                '#7F1EC5',
+                '#00A4F2',
+                '#EB8300',
+                '#0D8ECF',
+                '#2A0CD0',
+                '#CD0D74',
+                '#CC0000',
+                '#00CC00',
+                '#0000CC',
+                '#DDDDDD',
+                '#999999',
+                '#333333',
+                '#990000',
+            ],
+            startDuration: 1,
+            color: '#1B1B1E',
+            fontFamily: 'Proxima Nova',
+            fontSize: 14,
+            categoryAxis: {
+                gridPosition: 'start',
+                gridAlpha: 1,
+                gridColor: '#F2F2F6',
+            },
+            trendLines: [],
+            graphs: [
+                {
+                    balloonText:
+                        'Total [[value]] [[title]] handled in b/w [[category]]',
+                    fillAlphas: 1,
+                    id: 'AmGraph-1',
+                    title: 'Onboarding Alerts',
+                    type: 'column',
+                    valueField: 'column-1',
+                },
+                {
+                    balloonText:
+                        'Total [[value]] [[title]] handled in b/w [[category]]',
+                    fillAlphas: 1,
+                    id: 'AmGraph-2',
+                    title: 'Periodic Alerts',
+                    type: 'column',
+                    valueField: 'column-2',
+                },
+                {
+                    balloonText:
+                        'Total [[value]] [[title]] handled in b/w [[category]]',
+                    fillAlphas: 1,
+                    id: 'AmGraph-3',
+                    title: 'Trigger Alerts',
+                    type: 'column',
+                    valueField: 'column-3',
+                },
+            ],
+            guides: [],
+            valueAxes: [
+                {
+                    id: 'ValueAxis-1',
+                    stackType: 'regular',
+                    title: 'Total Alerts',
+                    gridAlpha: 1,
+                    gridColor: '#F2F2F6',
+                },
+            ],
+            allLabels: [],
+            balloon: {
+                color: '#1B1B1E',
+                fillAlpha: 1,
+            },
+            titles: [],
+            dataProvider: [
+                {
+                    category: '0 to 30 days',
+                    'column-1': 80,
+                    'column-2': 50,
+                    'column-3': 30,
+                },
+                {
+                    category: '31 to 60 days',
+                    'column-1': 60,
+                    'column-2': 70,
+                    'column-3': 60,
+                },
+                {
+                    category: '60 to 90 days',
+                    'column-1': 20,
+                    'column-2': 30,
+                    'column-3': 80,
+                },
+                {
+                    category: '90+ days',
+                    'column-1': 40,
+                    'column-2': 30,
+                    'column-3': 50,
+                },
+            ],
+        },
+
         //customer by gender chart
         customersByGender: {
             type: 'pie',
@@ -953,6 +1243,20 @@ export default {
                 '#eb8300',
                 '#f4c200',
                 '#c1c1c1',
+                '#F8508C',
+                '#00b1a5',
+                '#84dc2b',
+                '#5172fa',
+                '#798bb0',
+                '#b31493',
+                '#7000f7',
+                '#4a005e',
+                '#a388b0',
+                '#770d42',
+                '#388b79',
+                '#fc7400',
+                '#ff87e6',
+                '#f8e08e',
             ],
             labelsEnabled: false,
             pullOutRadius: '0%',
@@ -969,45 +1273,209 @@ export default {
             allLabels: [],
             balloon: {
                 color: '#1B1B1E',
-            },
-            legend: {
-                enabled: false,
-                align: 'center',
-                markerBorderAlpha: 0.27,
-                markerBorderThickness: 0,
-                markerCorner: 12,
-                markerLabelGap: 12,
-                markerSize: 20,
-                spacing: 8,
-                labelText: '[[title]]',
-                valueText: '[[percents]]%',
-                verticalGap: 20,
+                fillAlpha: 1,
             },
             titles: [],
             dataProvider: [
                 {
-                    category: '18 - 24',
-                    'column-1': '800',
+                    category: 'Australia',
+                    'column-1': '300',
+                    color: '#7f1ec5',
                 },
                 {
-                    category: '25 - 34',
-                    'column-1': '600',
+                    category: 'Bangladesh',
+                    'column-1': '240',
+                    color: '#00a4f2',
                 },
                 {
-                    category: '45 - 54',
-                    'column-1': '200',
+                    category: 'Belgium',
+                    'column-1': '450',
+                    color: '#00c535',
                 },
                 {
-                    category: '55 - 64',
-                    'column-1': '950',
+                    category: 'UK',
+                    'column-1': '570',
+                    color: '#eb8300',
                 },
                 {
-                    category: '65 - 74',
-                    'column-1': '400',
+                    category: 'USA',
+                    'column-1': '640',
+                    color: '#f4c200',
                 },
                 {
-                    category: '75+',
-                    'column-1': '200',
+                    category: 'India',
+                    'column-1': '720',
+                    color: '#c1c1c1',
+                },
+                {
+                    category: 'Canada',
+                    'column-1': '655',
+                    color: '#F8508C',
+                },
+                {
+                    category: 'China',
+                    'column-1': '740',
+                    color: '#00b1a5',
+                },
+                {
+                    category: 'Netherlands',
+                    'column-1': '480',
+                    color: '#84dc2b',
+                },
+                {
+                    category: 'Greece',
+                    'column-1': '380',
+                    color: '#5172fa',
+                },
+                {
+                    category: 'Japan',
+                    'column-1': '290',
+                    color: '#798bb0',
+                },
+                {
+                    category: 'Mexico',
+                    'column-1': '180',
+                    color: '#b31493',
+                },
+                {
+                    category: 'Pakistan',
+                    'column-1': '150',
+                    color: '#7000f7',
+                },
+                {
+                    category: 'Russia',
+                    'column-1': '541',
+                    color: '#4a005e',
+                },
+                {
+                    category: 'Turkey',
+                    'column-1': '321',
+                    color: '#a388b0',
+                },
+                {
+                    category: 'Malaysia',
+                    'column-1': '487',
+                    color: '#770d42',
+                },
+                {
+                    category: 'Lebnan',
+                    'column-1': '380',
+                    color: '#388b79',
+                },
+                {
+                    category: 'Japan',
+                    'column-1': '630',
+                    color: '#fc7400',
+                },
+                {
+                    category: 'Sweden',
+                    'column-1': '420',
+                    color: '#ff87e6',
+                },
+                {
+                    category: 'Germany',
+                    'column-1': '370',
+                    color: '#f8e08e',
+                },
+                {
+                    category: 'Australia',
+                    'column-1': '300',
+                    color: '#7f1ec5',
+                },
+                {
+                    category: 'Bangladesh',
+                    'column-1': '240',
+                    color: '#00a4f2',
+                },
+                {
+                    category: 'Belgium',
+                    'column-1': '450',
+                    color: '#00c535',
+                },
+                {
+                    category: 'UK',
+                    'column-1': '570',
+                    color: '#eb8300',
+                },
+                {
+                    category: 'USA',
+                    'column-1': '640',
+                    color: '#f4c200',
+                },
+                {
+                    category: 'India',
+                    'column-1': '720',
+                    color: '#c1c1c1',
+                },
+                {
+                    category: 'Canada',
+                    'column-1': '655',
+                    color: '#F8508C',
+                },
+                {
+                    category: 'China',
+                    'column-1': '740',
+                    color: '#00b1a5',
+                },
+                {
+                    category: 'Netherlands',
+                    'column-1': '480',
+                    color: '#84dc2b',
+                },
+                {
+                    category: 'Greece',
+                    'column-1': '380',
+                    color: '#5172fa',
+                },
+                {
+                    category: 'Japan',
+                    'column-1': '290',
+                    color: '#798bb0',
+                },
+                {
+                    category: 'Mexico',
+                    'column-1': '180',
+                    color: '#b31493',
+                },
+                {
+                    category: 'Pakistan',
+                    'column-1': '150',
+                    color: '#7000f7',
+                },
+                {
+                    category: 'Russia',
+                    'column-1': '541',
+                    color: '#4a005e',
+                },
+                {
+                    category: 'Turkey',
+                    'column-1': '321',
+                    color: '#a388b0',
+                },
+                {
+                    category: 'Malaysia',
+                    'column-1': '487',
+                    color: '#770d42',
+                },
+                {
+                    category: 'Lebnan',
+                    'column-1': '380',
+                    color: '#388b79',
+                },
+                {
+                    category: 'Japan',
+                    'column-1': '630',
+                    color: '#fc7400',
+                },
+                {
+                    category: 'Sweden',
+                    'column-1': '420',
+                    color: '#ff87e6',
+                },
+                {
+                    category: 'Germany',
+                    'column-1': '370',
+                    color: '#f8e08e',
                 },
             ],
         },
@@ -1023,6 +1491,20 @@ export default {
                 '#eb8300',
                 '#f4c200',
                 '#c1c1c1',
+                '#F8508C',
+                '#00b1a5',
+                '#84dc2b',
+                '#5172fa',
+                '#798bb0',
+                '#b31493',
+                '#7000f7',
+                '#4a005e',
+                '#a388b0',
+                '#770d42',
+                '#388b79',
+                '#fc7400',
+                '#ff87e6',
+                '#f8e08e',
             ],
             labelsEnabled: false,
             pullOutRadius: '0%',
@@ -1039,45 +1521,209 @@ export default {
             allLabels: [],
             balloon: {
                 color: '#1B1B1E',
-            },
-            legend: {
-                enabled: false,
-                align: 'center',
-                markerBorderAlpha: 0.27,
-                markerBorderThickness: 0,
-                markerCorner: 12,
-                markerLabelGap: 12,
-                markerSize: 20,
-                spacing: 8,
-                labelText: '[[title]]',
-                valueText: '[[percents]]%',
-                verticalGap: 20,
+                fillAlpha: 1,
             },
             titles: [],
             dataProvider: [
                 {
-                    category: '18 - 24',
-                    'column-1': '800',
+                    category: 'Australia',
+                    'column-1': '300',
+                    color: '#7f1ec5',
                 },
                 {
-                    category: '25 - 34',
-                    'column-1': '600',
+                    category: 'Bangladesh',
+                    'column-1': '240',
+                    color: '#00a4f2',
                 },
                 {
-                    category: '45 - 54',
-                    'column-1': '200',
+                    category: 'Belgium',
+                    'column-1': '450',
+                    color: '#00c535',
                 },
                 {
-                    category: '55 - 64',
-                    'column-1': '950',
+                    category: 'UK',
+                    'column-1': '570',
+                    color: '#eb8300',
                 },
                 {
-                    category: '65 - 74',
-                    'column-1': '400',
+                    category: 'USA',
+                    'column-1': '640',
+                    color: '#f4c200',
                 },
                 {
-                    category: '75+',
-                    'column-1': '200',
+                    category: 'India',
+                    'column-1': '720',
+                    color: '#c1c1c1',
+                },
+                {
+                    category: 'Canada',
+                    'column-1': '655',
+                    color: '#F8508C',
+                },
+                {
+                    category: 'China',
+                    'column-1': '740',
+                    color: '#00b1a5',
+                },
+                {
+                    category: 'Netherlands',
+                    'column-1': '480',
+                    color: '#84dc2b',
+                },
+                {
+                    category: 'Greece',
+                    'column-1': '380',
+                    color: '#5172fa',
+                },
+                {
+                    category: 'Japan',
+                    'column-1': '290',
+                    color: '#798bb0',
+                },
+                {
+                    category: 'Mexico',
+                    'column-1': '180',
+                    color: '#b31493',
+                },
+                {
+                    category: 'Pakistan',
+                    'column-1': '150',
+                    color: '#7000f7',
+                },
+                {
+                    category: 'Russia',
+                    'column-1': '541',
+                    color: '#4a005e',
+                },
+                {
+                    category: 'Turkey',
+                    'column-1': '321',
+                    color: '#a388b0',
+                },
+                {
+                    category: 'Malaysia',
+                    'column-1': '487',
+                    color: '#770d42',
+                },
+                {
+                    category: 'Lebnan',
+                    'column-1': '380',
+                    color: '#388b79',
+                },
+                {
+                    category: 'Japan',
+                    'column-1': '630',
+                    color: '#fc7400',
+                },
+                {
+                    category: 'Sweden',
+                    'column-1': '420',
+                    color: '#ff87e6',
+                },
+                {
+                    category: 'Germany',
+                    'column-1': '370',
+                    color: '#f8e08e',
+                },
+                {
+                    category: 'Australia',
+                    'column-1': '300',
+                    color: '#7f1ec5',
+                },
+                {
+                    category: 'Bangladesh',
+                    'column-1': '240',
+                    color: '#00a4f2',
+                },
+                {
+                    category: 'Belgium',
+                    'column-1': '450',
+                    color: '#00c535',
+                },
+                {
+                    category: 'UK',
+                    'column-1': '570',
+                    color: '#eb8300',
+                },
+                {
+                    category: 'USA',
+                    'column-1': '640',
+                    color: '#f4c200',
+                },
+                {
+                    category: 'India',
+                    'column-1': '720',
+                    color: '#c1c1c1',
+                },
+                {
+                    category: 'Canada',
+                    'column-1': '655',
+                    color: '#F8508C',
+                },
+                {
+                    category: 'China',
+                    'column-1': '740',
+                    color: '#00b1a5',
+                },
+                {
+                    category: 'Netherlands',
+                    'column-1': '480',
+                    color: '#84dc2b',
+                },
+                {
+                    category: 'Greece',
+                    'column-1': '380',
+                    color: '#5172fa',
+                },
+                {
+                    category: 'Japan',
+                    'column-1': '290',
+                    color: '#798bb0',
+                },
+                {
+                    category: 'Mexico',
+                    'column-1': '180',
+                    color: '#b31493',
+                },
+                {
+                    category: 'Pakistan',
+                    'column-1': '150',
+                    color: '#7000f7',
+                },
+                {
+                    category: 'Russia',
+                    'column-1': '541',
+                    color: '#4a005e',
+                },
+                {
+                    category: 'Turkey',
+                    'column-1': '321',
+                    color: '#a388b0',
+                },
+                {
+                    category: 'Malaysia',
+                    'column-1': '487',
+                    color: '#770d42',
+                },
+                {
+                    category: 'Lebnan',
+                    'column-1': '380',
+                    color: '#388b79',
+                },
+                {
+                    category: 'Japan',
+                    'column-1': '630',
+                    color: '#fc7400',
+                },
+                {
+                    category: 'Sweden',
+                    'column-1': '420',
+                    color: '#ff87e6',
+                },
+                {
+                    category: 'Germany',
+                    'column-1': '370',
+                    color: '#f8e08e',
                 },
             ],
         },
@@ -1109,6 +1755,11 @@ export default {
                 {
                     key: 'nationality',
                     label: 'NATIONALITY',
+                    sortable: true,
+                },
+                {
+                    key: 'aging',
+                    label: 'Aging',
                     sortable: true,
                 },
                 {
@@ -1147,6 +1798,12 @@ export default {
                     customer: '1250976',
                     full_name: 'Zeng Wen',
                     nationality: 'British',
+                    aging: [
+                        {
+                            name: '16 D',
+                            riskRate: 'low',
+                        },
+                    ],
                     name_screening: [
                         {
                             cssClass: 'icon-cross-with-circle danger',
@@ -1175,6 +1832,13 @@ export default {
                     customer: '1250976',
                     full_name: 'Edward Lindgren',
                     nationality: 'British',
+
+                    aging: [
+                        {
+                            name: '85 D',
+                            riskRate: 'high',
+                        },
+                    ],
                     name_screening: [
                         {
                             cssClass: 'icon-cross-with-circle pending',
@@ -1203,6 +1867,12 @@ export default {
                     customer: '3282345',
                     full_name: 'Christian Russell',
                     nationality: 'American',
+                    aging: [
+                        {
+                            name: '29 D',
+                            riskRate: 'low',
+                        },
+                    ],
                     name_screening: [
                         {
                             cssClass: 'icon-cross-with-circle pending',
@@ -1231,6 +1901,12 @@ export default {
                     customer: '3312353',
                     full_name: 'Fua Lamba',
                     nationality: 'Singaporean',
+                    aging: [
+                        {
+                            name: '65 D',
+                            riskRate: 'high',
+                        },
+                    ],
                     name_screening: [
                         {
                             cssClass: 'icon-cross-with-circle pending',
@@ -1259,6 +1935,12 @@ export default {
                     customer: '1250976',
                     full_name: 'Alexander Ljung',
                     nationality: 'Greek',
+                    aging: [
+                        {
+                            name: '38 D',
+                            riskRate: 'medium',
+                        },
+                    ],
                     name_screening: [
                         {
                             cssClass: 'icon-cross-with-circle danger',
@@ -1287,6 +1969,12 @@ export default {
                     customer: '2489573',
                     full_name: 'Chukwudi Udo',
                     nationality: 'Mexican',
+                    aging: [
+                        {
+                            name: '72 D',
+                            riskRate: 'high',
+                        },
+                    ],
                     name_screening: [
                         {
                             cssClass: 'icon-cross-with-circle pending',
@@ -1315,6 +2003,12 @@ export default {
                     customer: '3312353',
                     full_name: 'Linzell Bowman',
                     nationality: 'British',
+                    aging: [
+                        {
+                            name: '10 D',
+                            riskRate: 'low',
+                        },
+                    ],
                     name_screening: [
                         {
                             cssClass: 'icon-cross-with-circle pending',
@@ -1343,6 +2037,12 @@ export default {
                     customer: '3282345',
                     full_name: 'Vương Mộng Nhi',
                     nationality: 'Chinese',
+                    aging: [
+                        {
+                            name: '41 D',
+                            riskRate: 'medium',
+                        },
+                    ],
                     name_screening: [
                         {
                             cssClass: 'icon-cross-with-circle danger',
@@ -1371,6 +2071,12 @@ export default {
                     customer: '2321345',
                     full_name: 'Lew Silverton',
                     nationality: 'British',
+                    aging: [
+                        {
+                            name: '8 D',
+                            riskRate: 'low',
+                        },
+                    ],
                     name_screening: [
                         {
                             cssClass: 'icon-cross-with-circle danger',
@@ -1399,6 +2105,12 @@ export default {
                     customer: '2223535',
                     full_name: 'Xun Guiying',
                     nationality: 'Chinese',
+                    aging: [
+                        {
+                            name: '22 D',
+                            riskRate: 'low',
+                        },
+                    ],
                     name_screening: [
                         {
                             cssClass: 'icon-cross-with-circle danger',
