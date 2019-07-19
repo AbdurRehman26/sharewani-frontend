@@ -31,10 +31,10 @@
                 display: block;
                 span {
                     font-size: $font-size-base;
-                    font-family: $font-regular;
+                    font-family: $font-light;
                     vertical-align: super;
                     position: relative;
-                    top: 4px;
+                    top: 2px;
                 }
                 i {
                     font-size: 21px;
@@ -47,6 +47,10 @@
                     position: relative;
                     padding-left: 12px;
                     padding-right: 12px;
+                    span {
+                        font-family: $font-regular;
+                        color: $body-color;
+                    }
                     &:after {
                         content: '';
                         background-color: #b35fa5;
