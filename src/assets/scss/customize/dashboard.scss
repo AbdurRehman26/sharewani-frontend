@@ -17,6 +17,13 @@
 			color: $grey-darkest;
 			margin-bottom: 0;
 		}
+		i {
+			position: absolute;
+			right: 10px;
+			bottom: 10px;
+			font-size: 1.25rem;
+			color: $grey-xlite;
+		}
 	}
 	.dashboard-charts {
 		height: 400px;

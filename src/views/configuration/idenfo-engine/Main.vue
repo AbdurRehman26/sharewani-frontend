@@ -85,11 +85,33 @@ export default {
             menuListing: [
                 {
                     anchorLink: '/configuration/idenfo-engine/',
+                    menuLabel: 'Risk Factor',
+                },
+                {
+                    anchorLink: '/configuration/idenfo-engine/risk-rating',
+                    menuLabel: 'Risk Rating',
+                },
+                {
+                    anchorLink:
+                        '/configuration/idenfo-engine/document-verification-factor',
+                    menuLabel: 'Document Verification',
+                },
+                {
+                    anchorLink:
+                        '/configuration/idenfo-engine/name-screen-score',
+                    menuLabel: 'Name Screening',
+                },
+                {
+                    anchorLink: '/configuration/idenfo-engine/nationality',
                     menuLabel: 'Nationality',
                 },
                 {
                     anchorLink: '/configuration/idenfo-engine/country',
                     menuLabel: 'Country',
+                },
+                {
+                    anchorLink: '/configuration/idenfo-engine/state',
+                    menuLabel: 'State',
                 },
                 {
                     anchorLink: '/configuration/idenfo-engine/work',
@@ -101,11 +123,7 @@ export default {
                 },
                 {
                     anchorLink: '/configuration/idenfo-engine/product',
-                    menuLabel: 'Product',
-                },
-                {
-                    anchorLink: '/configuration/idenfo-engine/state',
-                    menuLabel: 'State',
+                    menuLabel: 'Product Type',
                 },
                 {
                     anchorLink: '/configuration/idenfo-engine/relationship',
@@ -116,22 +134,9 @@ export default {
                     menuLabel: 'Channel Type',
                 },
                 {
-                    anchorLink: '/configuration/idenfo-engine/risk',
-                    menuLabel: 'Risk Factor',
-                },
-                {
-                    anchorLink: '/configuration/idenfo-engine/risk-rating',
-                    menuLabel: 'Risk Rating Score',
-                },
-                {
                     anchorLink:
-                        '/configuration/idenfo-engine/document-verification-factor',
-                    menuLabel: 'Document Verification Score',
-                },
-                {
-                    anchorLink:
-                        '/configuration/idenfo-engine/name-screen-score',
-                    menuLabel: 'Name Screening Score',
+                        '/configuration/idenfo-engine/purpose-of-action',
+                    menuLabel: 'Purpose of Action',
                 },
             ],
         }

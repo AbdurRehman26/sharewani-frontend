@@ -2,8 +2,28 @@
     <div class="infoengine">
         <div class="filter-section">
             <div class="row">
-                <div class="col-md-6">
-                    <h2>Risk Factor & Weightage</h2>
+                <div class="col-md-5">
+                    <h2>Purpose of Action Management</h2>
+                </div>
+                <div class="col-md-7 text-right">
+                    <ul>
+                        <li>
+                            <base-search></base-search>
+                        </li>
+                        <li>
+                            <b-button type="button" variant="primary"
+                                >Apply</b-button
+                            >
+                        </li>
+                        <li>
+                            <b-button
+                                type="button"
+                                variant="secondary"
+                                v-b-modal.add-nationality-popup
+                                >+ Add Purpose</b-button
+                            >
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -13,31 +33,23 @@
                     <div class="work-impact">
                         <span>{{ data.value }}</span>
                         <i class="icon-caret-right"></i>
-                        <div class="custom-popover small">
-                            <ul>
-                                <li>
-                                    <label>High: </label>
-                                    <span class="bold">1</span>
-                                </li>
-                                <li>
-                                    <label>Medium: </label>
-                                    <span class="bold">0.5</span>
-                                </li>
-                                <li>
-                                    <label>Low: </label>
-                                    <span class="bold">0</span>
-                                </li>
-                            </ul>
-                        </div>
                     </div>
                 </template>
                 <template slot="action" slot-scope="data">
                     <div class="action-review">
+                        <!-- if action modify -->
                         <base-action
                             v-if="data.value == 'active'"
                             icon="icon-edit"
                             label="Modify"
                             v-b-modal.modify-risk-factor-popup
+                        ></base-action>
+                        <!-- if action archive -->
+                        <base-action
+                            v-if="data.value == 'active'"
+                            icon="icon-trash"
+                            label="Archive"
+                            v-b-modal.archive-popup
                         ></base-action>
                     </div>
                 </template>
@@ -45,6 +57,10 @@
         </div>
         <pagination></pagination>
         <modify-risk-factor-popup></modify-risk-factor-popup>
+        <archive-popup
+            title="Archive Action Management Factor"
+            description="Are you sure you want to archive this action factor? You can re-activate it later."
+        ></archive-popup>
     </div>
 </template>
 
@@ -52,10 +68,12 @@
 import { mapGetters } from 'vuex'
 import pagination from '@/components/Pagination.vue'
 import modifyRiskFactorPopup from '@/components/popups/ModifyRiskFactorPopup.vue'
+import archivePopup from '@/components/popups/ArchivePopup.vue'
 export default {
     components: {
         pagination,
         modifyRiskFactorPopup,
+        archivePopup,
     },
 
     /*
@@ -104,10 +122,10 @@ export default {
         initializeData() {
             //system log table
             let configTableFields = this.configurationData.idenfoEngine
-                .riskFactor.fields //get user data from store
+                .purposeActionManagement.fields //get user data from store
             this.fields = configTableFields //push data into array
             let configTableItems = this.configurationData.idenfoEngine
-                .riskFactor.items //get user data from store
+                .purposeActionManagement.items //get user data from store
             this.items = configTableItems //push data into array
         },
     }, // End of Component > methods

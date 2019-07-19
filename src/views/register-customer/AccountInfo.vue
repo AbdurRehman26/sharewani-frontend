@@ -9,25 +9,11 @@
                         </div>
                         <div class="col-md-4">
                             <b-form-group
-                                id="input-group-5"
-                                label="Account Opening Date"
-                                label-for="accountopening"
-                            >
-                                <div class="form-group date-pickers">
-                                    <i class="icon-calendar"></i>
-                                    <datepicker
-                                        placeholder="10 / 06 / 2019"
-                                    ></datepicker>
-                                </div>
-                            </b-form-group>
-                        </div>
-                        <div class="col-md-4">
-                            <b-form-group
-                                id="input-group-5"
                                 label="Purpose of action"
-                                label-for="purposeaction"
+                                label-for="purpose-action"
                             >
                                 <b-form-select
+                                    id="purpose-action"
                                     class="form-control"
                                     v-model="form.purposeaction"
                                     :options="form.purposeactionOptions"
@@ -35,73 +21,70 @@
                             </b-form-group>
                         </div>
                         <div class="col-md-4">
-                            <b-form-group
-                                id="input-group-1"
-                                label="Planned Investment Amount"
-                                label-for="invesmentamount"
-                                class="rangeto"
-                            >
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <b-form-input
-                                            id="startrange"
-                                            type="number"
-                                            v-model="form.startrange"
-                                            required
-                                            placeholder="Start Range"
-                                        ></b-form-input>
-                                    </div>
-                                    <span>to</span>
-                                    <div class="col-md-6">
-                                        <b-form-input
-                                            id="endrange"
-                                            type="number"
-                                            v-model="form.endrange"
-                                            required
-                                            placeholder="End Range"
-                                        ></b-form-input>
-                                    </div>
-                                </div>
-                            </b-form-group>
+                            <div class="form-group">
+                                <label for="data-segments">Product Type</label>
+                                <v-selectize
+                                    id="data-segments"
+                                    :options="form.productOption"
+                                    v-model="form.productSelected"
+                                    multiple
+                                />
+                            </div>
                         </div>
                         <div class="col-md-4">
                             <b-form-group
-                                id="input-group-6"
-                                label="SYSTEM HOLDING"
-                                label-for="currency"
-                            >
-                                <b-form-select
-                                    class="form-control"
-                                    v-model="form.currency"
-                                    :options="form.currencyOptions"
-                                ></b-form-select>
-                            </b-form-group>
-                        </div>
-                        <div class="col-md-4">
-                            <b-form-group
-                                id="input-group-6"
-                                label="Product Type"
-                                label-for="producttype"
-                            >
-                                <b-form-select
-                                    class="form-control"
-                                    v-model="form.productType"
-                                    :options="form.productTypeOptions"
-                                ></b-form-select>
-                            </b-form-group>
-                        </div>
-                        <div class="col-md-4">
-                            <b-form-group
-                                id="input-group-3"
-                                label="WALLET ID"
-                                label-for="input-3"
+                                label="Expected Monthly Credit TurnOver"
+                                label-for="credit-turnover"
                             >
                                 <b-form-input
-                                    id="input-3"
+                                    id="credit-turnover"
                                     type="text"
-                                    v-model="form.walletId"
+                                    v-model="form.monthlyCredit"
                                     required
-                                    placeholder="Enter wallet id"
+                                    placeholder="Enter expected monthly credit turnover"
+                                ></b-form-input>
+                            </b-form-group>
+                        </div>
+
+                        <div class="col-md-8">
+                            <b-form-group
+                                label="Maxiumum Upper Limit of Single Credit Expected in a Month"
+                                label-for="expectation-in-month"
+                            >
+                                <b-form-input
+                                    id="expectation-in-month"
+                                    type="text"
+                                    v-model="form.monthlyExpectation"
+                                    required
+                                    placeholder="Enter Maxiumum upper limit of single credit expected in a month"
+                                ></b-form-input>
+                            </b-form-group>
+                        </div>
+                        <div class="col-md-4">
+                            <b-form-group
+                                label="Gross Income of client"
+                                label-for="gross-income"
+                            >
+                                <b-form-input
+                                    id="gross-income"
+                                    type="text"
+                                    v-model="form.grossIncome"
+                                    required
+                                    placeholder="Enter gross income of client"
+                                ></b-form-input>
+                            </b-form-group>
+                        </div>
+                        <div class="col-md-8">
+                            <b-form-group
+                                label="Initial Balance"
+                                label-for="initial-balance"
+                            >
+                                <b-form-input
+                                    id="initial-balance"
+                                    type="text"
+                                    v-model="form.initialBalance"
+                                    required
+                                    placeholder="Enter Initial balance (expected with 30 days of account opening)"
                                 ></b-form-input>
                             </b-form-group>
                         </div>
@@ -118,10 +101,10 @@
     </b-form>
 </template>
 <script>
-import Datepicker from 'vuejs-datepicker'
+import VSelectize from '@isneezy/vue-selectize'
 export default {
     components: {
-        Datepicker,
+        VSelectize,
     },
 
     /*
@@ -151,9 +134,9 @@ export default {
                 purposeaction: null,
                 currency: null,
                 productType: null,
-                startrange: '',
-                endrange: '',
-                walletId: '',
+                monthlyCredit: '',
+                monthlyExpectation: '',
+                grossIncome: '',
                 purposeactionOptions: [
                     {
                         value: null,
@@ -162,22 +145,13 @@ export default {
                     'For Business Purpose',
                     'For Saving Purpose',
                 ],
-                currencyOptions: [
-                    {
-                        value: null,
-                        text: 'Select currency',
-                    },
-                    'USD',
-                    'UK',
+                productOption: [
+                    'Saving Account',
+                    'Current Account',
+                    'Online Account',
                 ],
-                productTypeOptions: [
-                    {
-                        value: null,
-                        text: 'Select product type',
-                    },
-                    'Cosmetics',
-                    'Guns',
-                ],
+                productSelected: ['Saving Account', 'Current Account'],
+                initialBalance: '',
             },
         }
     }, // End of Component > data

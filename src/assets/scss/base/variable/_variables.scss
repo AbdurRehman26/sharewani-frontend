@@ -20,12 +20,12 @@ $pink: #aa2f78;
 $yellow: #ffb54c;
 $radio-check: #9d9f8f;
 $theme-colors: (
-	'primary': $primary,
-	'secondary': $secondary,
-	'success': $success,
-	'light': $light,
-	'dark': $dark,
-	'danger': $danger
+    'primary': $primary,
+    'secondary': $secondary,
+    'success': $success,
+    'light': $light,
+    'dark': $dark,
+    'danger': $danger
 );
 // header height
 $header-height: 52px !default;
@@ -165,5 +165,5 @@ $alert-danger-border: #f5c6cb !default;
 // table
 
 $table-footer-bg: #fdfaff;
-$table-row-padding: 10px 12px 8px;
+$table-row-padding: 14px 12px 14px;
 $table-row-padding-th: 14px 12px 12px;

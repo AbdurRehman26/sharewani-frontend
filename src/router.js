@@ -239,22 +239,61 @@ export default new Router({
                         import(/* webpackChunkName: "idenfo-engine" */ './views/configuration/idenfo-engine/Main.vue'),
                     children: [
                         {
-                            path: '/',
-                            name: 'nationality',
+                            path: '/configuration/idenfo-engine/risk',
+                            name: 'riskFactor',
                             component: () =>
-                                import(/* webpackChunkName: "nationality" */ './views/configuration/idenfo-engine/Nationality.vue'),
+                                import(/* webpackChunkName: "riskFactor" */ './views/configuration/idenfo-engine/RiskFactor.vue'),
+                        },
+                        {
+                            path: '/',
+                            name: 'riskFactor',
+                            component: () =>
+                                import(/* webpackChunkName: "nationality" */ './views/configuration/idenfo-engine/RiskFactor.vue'),
                         },
                         {
                             path: '/configuration/idenfo-engine/',
                             name: 'nationality',
                             component: () =>
-                                import(/* webpackChunkName: "nationality" */ './views/configuration/idenfo-engine/Nationality.vue'),
+                                import(/* webpackChunkName: "nationality" */ './views/configuration/idenfo-engine/RiskFactor.vue'),
+                        },
+                        {
+                            path: '/configuration/idenfo-engine/risk-rating',
+                            name: 'riskRating',
+                            component: () =>
+                                import(/* webpackChunkName: "riskRating" */ './views/configuration/idenfo-engine/RiskRating.vue'),
+                        },
+                        {
+                            path:
+                                '/configuration/idenfo-engine/document-verification-factor',
+                            name: 'documentVerificationFactors',
+                            component: () =>
+                                import(/* webpackChunkName: "riskRating" */ './views/configuration/idenfo-engine/DocumentVerificationFactors.vue'),
+                        },
+
+                        {
+                            path:
+                                '/configuration/idenfo-engine/name-screen-score',
+                            name: 'nameScreenScore',
+                            component: () =>
+                                import(/* webpackChunkName: "riskRating" */ './views/configuration/idenfo-engine/NameScreenScore.vue'),
+                        },
+                        {
+                            path: '/configuration/idenfo-engine/nationality',
+                            name: 'nameScreenScore',
+                            component: () =>
+                                import(/* webpackChunkName: "riskRating" */ './views/configuration/idenfo-engine/Nationality.vue'),
                         },
                         {
                             path: '/configuration/idenfo-engine/country',
                             name: 'Country',
                             component: () =>
                                 import(/* webpackChunkName: "nationality" */ './views/configuration/idenfo-engine/Country.vue'),
+                        },
+                        {
+                            path: '/configuration/idenfo-engine/state',
+                            name: 'stateFactor',
+                            component: () =>
+                                import(/* webpackChunkName: "stateFactor" */ './views/configuration/idenfo-engine/StateFactor.vue'),
                         },
                         {
                             path: '/configuration/idenfo-engine/work',
@@ -267,65 +306,43 @@ export default new Router({
                             name: 'industryFactor',
                             component: () =>
                                 import(/* webpackChunkName: "industryFactor" */ './views/configuration/idenfo-engine/IndustryFactor.vue'),
+                            meta: {
+                                responsiveMenuItem: true,
+                            },
                         },
                         {
                             path: '/configuration/idenfo-engine/product',
                             name: 'productFactor',
                             component: () =>
                                 import(/* webpackChunkName: "productFactor" */ './views/configuration/idenfo-engine/ProductFactor.vue'),
-                        },
-                        {
-                            path: '/configuration/idenfo-engine/state',
-                            name: 'stateFactor',
-                            component: () =>
-                                import(/* webpackChunkName: "stateFactor" */ './views/configuration/idenfo-engine/StateFactor.vue'),
+                            meta: {
+                                responsiveMenuItem: true,
+                            },
                         },
                         {
                             path: '/configuration/idenfo-engine/relationship',
                             name: 'relationshipFactor',
                             component: () =>
                                 import(/* webpackChunkName: "relationshipFactor" */ './views/configuration/idenfo-engine/RelationshipPanel.vue'),
+                            meta: {
+                                responsiveMenuItem: true,
+                            },
                         },
                         {
                             path: '/configuration/idenfo-engine/channel',
                             name: 'channelFactor',
                             component: () =>
                                 import(/* webpackChunkName: "channelFactor" */ './views/configuration/idenfo-engine/ChannelFactor.vue'),
-                        },
-                        {
-                            path: '/configuration/idenfo-engine/risk',
-                            name: 'riskFactor',
-                            component: () =>
-                                import(/* webpackChunkName: "riskFactor" */ './views/configuration/idenfo-engine/RiskFactor.vue'),
-                            meta: {
-                                responsiveMenuItem: true,
-                            },
-                        },
-                        {
-                            path: '/configuration/idenfo-engine/risk-rating',
-                            name: 'riskRating',
-                            component: () =>
-                                import(/* webpackChunkName: "riskRating" */ './views/configuration/idenfo-engine/RiskRating.vue'),
                             meta: {
                                 responsiveMenuItem: true,
                             },
                         },
                         {
                             path:
-                                '/configuration/idenfo-engine/document-verification-factor',
-                            name: 'documentVerificationFactors',
+                                '/configuration/idenfo-engine/purpose-of-action',
+                            name: 'purposeAction',
                             component: () =>
-                                import(/* webpackChunkName: "riskRating" */ './views/configuration/idenfo-engine/DocumentVerificationFactors.vue'),
-                            meta: {
-                                responsiveMenuItem: true,
-                            },
-                        },
-                        {
-                            path:
-                                '/configuration/idenfo-engine/name-screen-score',
-                            name: 'nameScreenScore',
-                            component: () =>
-                                import(/* webpackChunkName: "riskRating" */ './views/configuration/idenfo-engine/NameScreenScore.vue'),
+                                import(/* webpackChunkName: "riskRating" */ './views/configuration/idenfo-engine/PurposeAction.vue'),
                             meta: {
                                 responsiveMenuItem: true,
                             },

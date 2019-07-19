@@ -48,10 +48,26 @@
                 <template slot="alerts" slot-scope="data">
                     <div
                         class="bar-line"
-                        :class="data.value"
+                        :class="data.value[0].riskRate"
                         v-b-tooltip.hover
-                        :title="data.value"
+                        :title="data.value[0].riskRate + ' Risk'"
                     ></div>
+                    <div class="indecation">
+                        <a href="javascript:void(0);">
+                            <i
+                                v-if="data.value[0].riskType == 'flag'"
+                                class="icon-flag"
+                            ></i>
+                            <i
+                                v-if="data.value[0].riskType == 'reload'"
+                                class="icon-rotate-inverse"
+                            ></i>
+                            <i
+                                v-if="data.value[0].riskType == 'rating'"
+                                class="icon-star"
+                            ></i>
+                        </a>
+                    </div>
                 </template>
 
                 <template slot="profile" slot-scope="data">

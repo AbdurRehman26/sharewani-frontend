@@ -28,6 +28,7 @@
                                 btnVariant="primary"
                             ></base-button>
                         </li>
+                        icon-error_outline
                         <li>
                             <base-button
                                 v-b-modal.export-report-popup
@@ -53,6 +54,7 @@
                         >
                             <h2>{{ list.title }}</h2>
                             <p>{{ list.value }}</p>
+                            <i class="icon-error_outline" v-if="list.icon"></i>
                         </div>
                     </div>
                 </div>

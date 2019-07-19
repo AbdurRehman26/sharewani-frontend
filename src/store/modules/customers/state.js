@@ -5,6 +5,7 @@ export default {
                 {
                     key: 'profile',
                     label: '',
+                    class: 'profile-absolute',
                 },
                 {
                     key: 'customer',
@@ -35,7 +36,7 @@ export default {
                     key: 'status',
                     label: 'Status',
                     sortable: true,
-                    class: 'text-center',
+                    class: 'text-center status-absolute-pos',
                 },
                 {
                     key: 'action',
