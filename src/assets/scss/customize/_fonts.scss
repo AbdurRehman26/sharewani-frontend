@@ -61,6 +61,20 @@ $other_font_bold: 'ProximanovaBold';
     -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-rotate-inverse:before {
+    content: '\e967';
+}
+.icon-flag:before {
+    content: '\e964';
+    font-weight: bold;
+}
+.icon-rotate:before {
+    content: '\e965';
+}
+.icon-star:before {
+    content: '\e966';
+    font-weight: bold;
+}
 .icon-copy:before {
     content: '\e962';
 }
@@ -228,7 +242,7 @@ $other_font_bold: 'ProximanovaBold';
 .icon-arrow_forward_ios1:before {
     content: '\e925';
 }
-.icon-star:before {
+.icon-star1:before {
     content: '\e926';
 }
 .icon-grade:before {

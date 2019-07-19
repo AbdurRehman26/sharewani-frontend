@@ -16,7 +16,7 @@ export default {
                     {
                         key: 'rating',
                         label: 'RATING',
-                        class: 'text-center rating-field',
+                        class: 'text-center rating-field status-absolute-pos',
                         sortable: true,
                     },
                     {
@@ -185,7 +185,7 @@ export default {
                     {
                         key: 'rating',
                         label: 'RATING',
-                        class: 'text-center rating-field',
+                        class: 'text-center rating-field status-absolute-pos',
                         sortable: true,
                     },
                     {
@@ -508,7 +508,7 @@ export default {
                     {
                         key: 'rating',
                         label: 'RATING',
-                        class: 'text-center',
+                        class: 'text-center status-absolute-pos',
                         sortable: true,
                     },
                     {
@@ -621,7 +621,7 @@ export default {
                     {
                         key: 'rating',
                         label: 'RATING',
-                        class: 'text-center',
+                        class: 'text-center status-absolute-pos',
                         sortable: true,
                     },
                     {
@@ -709,7 +709,7 @@ export default {
                     {
                         key: 'rating',
                         label: 'RATING',
-                        class: 'text-center',
+                        class: 'text-center status-absolute-pos',
                         sortable: true,
                     },
                     {
@@ -773,7 +773,7 @@ export default {
                     {
                         key: 'rating',
                         label: 'RATING',
-                        class: 'text-center',
+                        class: 'text-center status-absolute-pos',
                         sortable: true,
                     },
                     {
@@ -940,7 +940,7 @@ export default {
                     {
                         key: 'rating',
                         label: 'RATING',
-                        class: 'text-center',
+                        class: 'text-center status-absolute-pos',
                         sortable: true,
                     },
                     {
@@ -1146,6 +1146,39 @@ export default {
                         verificationcode: 'FC',
                         verificationtype: 'Face Comparision',
                         matchedscorethreshold: 70,
+                        action: 'active',
+                    },
+                ],
+            },
+
+            purposeActionManagement: {
+                fields: [
+                    {
+                        key: 'purposeCode',
+                        label: 'Purpose Code',
+                        class: 'text-center w-150px',
+                        sortable: true,
+                    },
+                    {
+                        key: 'purposeTitle',
+                        label: 'Purpose of Action Title',
+                        sortable: true,
+                    },
+                    {
+                        key: 'action',
+                        label: 'ACTION',
+                        class: 'two-list',
+                    },
+                ],
+                items: [
+                    {
+                        purposeCode: 1601,
+                        purposeTitle: 'For Salary',
+                        action: 'active',
+                    },
+                    {
+                        purposeCode: 1602,
+                        purposeTitle: 'For Business Activities',
                         action: 'active',
                     },
                 ],

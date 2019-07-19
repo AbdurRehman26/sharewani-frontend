@@ -148,10 +148,10 @@ export default {
     data() {
         return {
             menuListing: [
-                {
-                    anchorLink: '/system-logs',
-                    menuLabel: 'System Log',
-                },
+                // {
+                //     anchorLink: '/system-logs',
+                //     menuLabel: 'System Log',
+                // },
             ],
             fields: [],
             items: [],

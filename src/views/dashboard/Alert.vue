@@ -5,9 +5,9 @@
                 <div class="col-md-2">
                     <h2>Alert</h2>
                 </div>
-                <div class="col-md-10 text-right">
-                    <ul>
-                        <li>
+                <div class="col-md-12 text-right">
+                    <ul class="flex-items">
+                        <li class="alert-switch">
                             <b-form-group>
                                 <b-form-radio-group
                                     v-model="selected"
@@ -18,16 +18,38 @@
                                 ></b-form-radio-group>
                             </b-form-group>
                         </li>
-                        <li>
+                        <li class="search-filter">
                             <base-search></base-search>
+                        </li>
+                        <li class="filter-selection">
+                            <b-form-group>
+                                <b-form-select
+                                    id="input-3"
+                                    class="form-control"
+                                    v-model="filterByAlert"
+                                    :options="filterAlertOptions"
+                                    required
+                                ></b-form-select>
+                            </b-form-group>
                         </li>
                         <li>
                             <b-form-group>
                                 <b-form-select
                                     id="input-3"
                                     class="form-control"
-                                    v-model="filterBy"
-                                    :options="filterOptions"
+                                    v-model="filterByRiskLevel"
+                                    :options="filterRiskLevelOptions"
+                                    required
+                                ></b-form-select>
+                            </b-form-group>
+                        </li>
+                        <li>
+                            <b-form-group>
+                                <b-form-select
+                                    id="input-3"
+                                    class="form-control"
+                                    v-model="filterByAging"
+                                    :options="filterAgingOptions"
                                     required
                                 ></b-form-select>
                             </b-form-group>
@@ -45,28 +67,66 @@
         </div>
         <div class="table-section">
             <b-table :items="items" :fields="fields">
+                <template slot="aging" slot-scope="data">
+                    <span :class="data.value[0].riskRate">
+                        {{ data.value[0].name }}
+                    </span>
+                </template>
+
                 <template slot="alerts" slot-scope="data">
                     <div
                         class="bar-line"
-                        :class="data.value"
+                        :class="data.value[0].riskRate"
                         v-b-tooltip.hover
-                        :title="data.value"
+                        :title="data.value[0].riskRate + ' Risk'"
                     ></div>
+                    <div class="indecation">
+                        <router-link to="/customer-information">
+                            <i
+                                v-if="data.value[0].riskType == 'flag'"
+                                class="icon-flag"
+                            ></i>
+                            <i
+                                v-if="data.value[0].riskType == 'reload'"
+                                class="icon-rotate-inverse"
+                            ></i>
+                            <i
+                                v-if="data.value[0].riskType == 'rating'"
+                                class="icon-star"
+                            ></i>
+                        </router-link>
+                    </div>
                 </template>
-
+                <template slot="customer" slot-scope="data">
+                    <router-link to="/customer-information">{{
+                        data.value
+                    }}</router-link>
+                </template>
+                <template slot="full_name" slot-scope="data">
+                    <router-link to="/customer-information">{{
+                        data.value
+                    }}</router-link>
+                </template>
+                <template slot="nationality" slot-scope="data">
+                    <router-link to="/customer-information">{{
+                        data.value
+                    }}</router-link>
+                </template>
                 <template slot="profile" slot-scope="data">
                     <div class="profile-area">
-                        <div
-                            class="profile-pic"
-                            :style="{
-                                'background-image':
-                                    'url(' +
-                                    require('@/assets/images/members/' +
-                                        data.value +
-                                        '') +
-                                    ')',
-                            }"
-                        ></div>
+                        <router-link to="/customer-information">
+                            <div
+                                class="profile-pic"
+                                :style="{
+                                    'background-image':
+                                        'url(' +
+                                        require('@/assets/images/members/' +
+                                            data.value +
+                                            '') +
+                                        ')',
+                                }"
+                            ></div>
+                        </router-link>
                     </div>
                 </template>
                 <template slot="name_screening" slot-scope="data">
@@ -89,15 +149,18 @@
                     <div class="action-review">
                         <base-action
                             v-if="data.value == 'in review'"
-                            cssClass="disabled"
                             icon="icon-lock_outline"
+                            class="disable-color"
                             label="In Review"
+                            v-b-tooltip.hover
+                            title="Reviewing by Andrew John"
                             v-b-modal.initiate-review
                         ></base-action>
                         <base-action
                             v-if="data.value == 'review'"
                             icon="icon-review"
                             label="Review"
+                            @click="initialReview"
                             v-b-modal.initiate-review
                         ></base-action>
                     </div>
@@ -153,13 +216,26 @@ export default {
                 { text: 'In Review', value: '3' },
             ],
             filterName: null,
-            filterBy: null,
-            filterOptions: [
-                { text: 'Filter by', value: null },
-                'Name Screening',
-                'Documentation',
-                'Risk Rating',
-                'Status',
+            filterByAlert: null,
+            filterAlertOptions: [
+                { text: 'Filter by Alert Type', value: null },
+                'High Risk',
+                'Medium Risk',
+                'Low Risk',
+            ],
+            filterByRiskLevel: null,
+            filterRiskLevelOptions: [
+                { text: 'Filter by risk level', value: null },
+                'High Risk',
+                'Medium Risk',
+                'Low Risk',
+            ],
+            filterByAging: null,
+            filterAgingOptions: [
+                { text: 'Filter by aging', value: null },
+                '16 D',
+                '85 D',
+                '29 D',
             ],
         }
     }, // End of Component > data
@@ -183,6 +259,10 @@ export default {
             this.fields = tableFields //push data into array
             let tableItems = this.dashboardData.alertsTable.items //get user data from store
             this.items = tableItems //push data into array
+        },
+
+        initialReview() {
+            this.$bvModal.show('initiate-review-popup')
         },
     }, // End of Component > methods
 

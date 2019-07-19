@@ -106,10 +106,10 @@ export default {
             type: 'serial',
             categoryField: 'category',
             dataDateFormat: 'YYYY-MM-DD',
-            autoMarginOffset: 0,
+            fontSize: 14,
             colors: [
-                '#3c1559',
-                '#FCD202',
+                '#662D91',
+                '#ff7217',
                 '#B0DE09',
                 '#0D8ECF',
                 '#2A0CD0',
@@ -122,104 +122,186 @@ export default {
                 '#333333',
                 '#990000',
             ],
+            color: '#1B1B1E',
+            fontFamily: 'Proxima Nova',
+            theme: 'default',
+            autoMargins: true,
             startDuration: 1,
             categoryAxis: {
                 gridPosition: 'start',
                 parseDates: true,
-                gridAlpha: 0,
+                gridColor: '#F2F2F6',
             },
             chartCursor: {
                 enabled: true,
+                categoryBalloonDateFormat: 'DD MMM YYYY',
+                bulletSize: 6,
+                cursorColor: '#B35FA5',
+            },
+            chartScrollbar: {
+                enabled: false,
+                backgroundColor: '#E8E8EF',
+                graphFillColor: '#D7D7E2',
+                graphLineColor: '#d7d7e2',
+                selectedBackgroundColor: '#F2F2F6',
+                tabIndex: 0,
             },
             trendLines: [],
             graphs: [
                 {
                     fillAlphas: 1,
                     id: 'AmGraph-1',
-                    title: 'graph 1',
+                    title: 'Total actions',
                     type: 'column',
                     valueField: 'column-1',
+                    balloonText: '[[title]]: [[value]]',
                 },
             ],
             guides: [],
             valueAxes: [
                 {
                     id: 'ValueAxis-1',
-                    gridAlpha: 0.04,
-                    minorGridAlpha: 0,
-                    minVerticalGap: 31,
-                    title: 'Axis title',
+                    gridColor: '#E8E8EF',
+                    gridAlpha: 1,
+                    title: 'Total Actions',
                 },
             ],
             allLabels: [],
-            balloon: {},
-            titles: [
-                {
-                    id: 'Title-1',
-                    size: 15,
-                    text: '',
-                },
-            ],
+            balloon: {
+                horizontalPadding: 6,
+                offsetX: 5,
+                verticalPadding: 6,
+                fillAlphas: 1,
+            },
+            titles: [],
             dataProvider: [
                 {
-                    category: '2014-03-01',
-                    'column-1': 8,
+                    category: '2019-07-27',
+                    'column-1': 13,
                 },
                 {
-                    category: '2014-03-02',
-                    'column-1': 16,
+                    category: '2019-07-28',
+                    'column-1': 11,
                 },
                 {
-                    category: '2014-03-03',
-                    'column-1': 2,
-                },
-                {
-                    category: '2014-03-04',
-                    'column-1': 7,
-                },
-                {
-                    category: '2014-03-05',
-                    'column-1': 5,
-                },
-                {
-                    category: '2014-03-06',
-                    'column-1': 9,
-                },
-                {
-                    category: '2014-03-07',
-                    'column-1': 4,
-                },
-                {
-                    category: '2014-03-08',
+                    category: '2019-07-29',
                     'column-1': 15,
                 },
                 {
-                    category: '2014-03-09',
-                    'column-1': 12,
+                    category: '2019-07-30',
+                    'column-1': 16,
                 },
                 {
-                    category: '2014-03-10',
-                    'column-1': 17,
-                },
-                {
-                    category: '2014-03-11',
+                    category: '2019-07-31',
                     'column-1': 18,
                 },
                 {
-                    category: '2014-03-12',
-                    'column-1': 21,
+                    category: '2019-08-01',
+                    'column-1': 13,
                 },
                 {
-                    category: '2014-03-13',
-                    'column-1': 24,
+                    category: '2019-08-02',
+                    'column-1': 22,
                 },
                 {
-                    category: '2014-03-14',
+                    category: '2019-08-03',
                     'column-1': 23,
                 },
                 {
-                    category: '2014-03-15',
+                    category: '2019-08-04',
+                    'column-1': 20,
+                },
+                {
+                    category: '2019-08-05',
+                    'column-1': 17,
+                },
+                {
+                    category: '2019-08-06',
+                    'column-1': 16,
+                },
+                {
+                    category: '2019-08-07',
+                    'column-1': 18,
+                },
+                {
+                    category: '2019-08-08',
+                    'column-1': 21,
+                },
+                {
+                    category: '2019-08-09',
+                    'column-1': 26,
+                },
+                {
+                    category: '2019-08-10',
                     'column-1': 24,
+                },
+                {
+                    category: '2019-08-11',
+                    'column-1': 29,
+                },
+                {
+                    category: '2019-08-12',
+                    'column-1': 32,
+                },
+                {
+                    category: '2019-08-13',
+                    'column-1': 18,
+                },
+                {
+                    category: '2019-08-14',
+                    'column-1': 24,
+                },
+                {
+                    category: '2019-08-15',
+                    'column-1': 22,
+                },
+                {
+                    category: '2019-08-16',
+                    'column-1': 18,
+                },
+                {
+                    category: '2019-08-17',
+                    'column-1': 19,
+                },
+                {
+                    category: '2019-08-18',
+                    'column-1': 14,
+                },
+                {
+                    category: '2019-08-19',
+                    'column-1': 15,
+                },
+                {
+                    category: '2019-08-20',
+                    'column-1': 12,
+                },
+                {
+                    category: '2019-08-21',
+                    'column-1': 8,
+                },
+                {
+                    category: '2019-08-22',
+                    'column-1': 9,
+                },
+                {
+                    category: '2019-08-23',
+                    'column-1': 8,
+                },
+                {
+                    category: '2019-08-24',
+                    'column-1': 7,
+                },
+                {
+                    category: '2019-08-25',
+                    'column-1': 5,
+                },
+                {
+                    category: '2019-08-26',
+                    'column-1': 11,
+                },
+                {
+                    category: '2019-08-27',
+                    'column-1': 13,
                 },
             ],
         },

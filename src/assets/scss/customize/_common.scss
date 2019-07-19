@@ -380,6 +380,17 @@ $sides: (top, bottom, left, right); // Leave this variable alone
     justify-content: center;
 }
 
+.status-type-icon {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    display: flex;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+}
+
 .status-view {
     color: #fff;
     border-radius: 16px;
@@ -389,7 +400,12 @@ $sides: (top, bottom, left, right); // Leave this variable alone
     padding: 9px 10px;
     min-width: 120px;
     display: inline-block;
-
+    position: absolute;
+    top: 5px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    max-width: 130px;
     i {
         font-size: 14px;
         vertical-align: bottom;
