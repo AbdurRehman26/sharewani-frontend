@@ -18,7 +18,10 @@
     }
 }
 
-.custom-checkbox .custom-control-input:checked ~ .custom-control-label::after {
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label::after,
+.custom-checkbox
+    .custom-control-input:indeterminate
+    ~ .custom-control-label::after {
     background-image: none !important;
     background-repeat: no-repeat;
     content: '\e943';
@@ -44,4 +47,11 @@
     border-color: $border-color;
     background-color: transparent;
     box-shadow: none;
+}
+
+.custom-checkbox
+    .custom-control-input:indeterminate
+    ~ .custom-control-label::before {
+    border-color: $border-color;
+    background-color: transparent;
 }

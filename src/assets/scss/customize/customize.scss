@@ -1402,3 +1402,36 @@
         z-index: 9;
     }
 }
+
+.permissions-section {
+    .custom-checkbox {
+        width: 33.3%;
+        float: left;
+    }
+
+    .custom-radio {
+        width: 31%;
+        float: left;
+    }
+
+    .col-form-label {
+        .custom-checkbox
+            .custom-control-input:checked
+            ~ .custom-control-label::after,
+        .custom-checkbox
+            .custom-control-input:indeterminate
+            ~ .custom-control-label::after {
+            top: 7px;
+        }
+
+        label {
+            font-family: $font_medium;
+            margin-bottom: 15px;
+            span {
+                margin-left: 5px;
+                margin-top: 3px;
+                display: block;
+            }
+        }
+    }
+}

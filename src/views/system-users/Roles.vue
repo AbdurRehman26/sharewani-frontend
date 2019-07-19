@@ -48,7 +48,7 @@
                             "
                             icon="icon-edit"
                             label="Modify"
-                            v-b-modal.initiate-review
+                            v-b-modal.v-b-modal.add-role-popup
                         ></base-action>
                         <!-- if action archive -->
                         <base-action
@@ -62,7 +62,7 @@
                             v-if="data.value == 'archive'"
                             icon="icon-done"
                             label="Activate"
-                            v-b-modal.initiate-review
+                            v-b-modal.v-b-modal.add-role-popup
                         ></base-action>
                     </div>
                 </template>
