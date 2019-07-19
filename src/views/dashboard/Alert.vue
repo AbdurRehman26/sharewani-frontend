@@ -5,9 +5,9 @@
                 <div class="col-md-2">
                     <h2>Alert</h2>
                 </div>
-                <div class="col-md-10 text-right">
-                    <ul>
-                        <li>
+                <div class="col-md-12 text-right">
+                    <ul class="flex-items">
+                        <li class="alert-switch">
                             <b-form-group>
                                 <b-form-radio-group
                                     v-model="selected"
@@ -18,16 +18,38 @@
                                 ></b-form-radio-group>
                             </b-form-group>
                         </li>
-                        <li>
+                        <li class="search-filter">
                             <base-search></base-search>
+                        </li>
+                        <li class="filter-selection">
+                            <b-form-group>
+                                <b-form-select
+                                    id="input-3"
+                                    class="form-control"
+                                    v-model="filterByAlert"
+                                    :options="filterAlertOptions"
+                                    required
+                                ></b-form-select>
+                            </b-form-group>
                         </li>
                         <li>
                             <b-form-group>
                                 <b-form-select
                                     id="input-3"
                                     class="form-control"
-                                    v-model="filterBy"
-                                    :options="filterOptions"
+                                    v-model="filterByRiskLevel"
+                                    :options="filterRiskLevelOptions"
+                                    required
+                                ></b-form-select>
+                            </b-form-group>
+                        </li>
+                        <li>
+                            <b-form-group>
+                                <b-form-select
+                                    id="input-3"
+                                    class="form-control"
+                                    v-model="filterByAging"
+                                    :options="filterAgingOptions"
                                     required
                                 ></b-form-select>
                             </b-form-group>
@@ -194,13 +216,26 @@ export default {
                 { text: 'In Review', value: '3' },
             ],
             filterName: null,
-            filterBy: null,
-            filterOptions: [
-                { text: 'Filter by', value: null },
-                'Name Screening',
-                'Documentation',
-                'Risk Rating',
-                'Status',
+            filterByAlert: null,
+            filterAlertOptions: [
+                { text: 'Filter by Alert Type', value: null },
+                'High Risk',
+                'Medium Risk',
+                'Low Risk',
+            ],
+            filterByRiskLevel: null,
+            filterRiskLevelOptions: [
+                { text: 'Filter by risk level', value: null },
+                'High Risk',
+                'Medium Risk',
+                'Low Risk',
+            ],
+            filterByAging: null,
+            filterAgingOptions: [
+                { text: 'Filter by aging', value: null },
+                '16 D',
+                '85 D',
+                '29 D',
             ],
         }
     }, // End of Component > data

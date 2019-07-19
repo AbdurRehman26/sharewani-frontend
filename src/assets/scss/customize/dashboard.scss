@@ -26,13 +26,24 @@
 		}
 	}
 	.dashboard-charts {
-		height: 400px;
+		height: 430px;
 
 		.amcharts-div {
-			height: 95%;
+			height: 100%;
 
 			&.customer-by-gender {
 				height: 85%;
+			}
+		}
+
+		&.activy-dashboard-chart {
+			.chart-highest-record {
+				top: 40%;
+			}
+		}
+		&.single-line-dashboard-chart {
+			.chart-highest-record {
+				top: 44%;
 			}
 		}
 	}

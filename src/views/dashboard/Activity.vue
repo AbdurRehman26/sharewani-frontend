@@ -90,7 +90,9 @@
                     </div>
                     <div class="col-xs-12 col-md-6">
                         <div class="card dashboard-card sm-radius">
-                            <div class="dashboard-charts">
+                            <div
+                                class="dashboard-charts single-line-dashboard-chart"
+                            >
                                 <h2 class="heading">
                                     KYC Alerts by Alert Type
                                 </h2>
@@ -113,7 +115,9 @@
                 <div class="row">
                     <div class="col-xs-12 col-md-6">
                         <div class="card dashboard-card  sm-radius">
-                            <div class="dashboard-charts">
+                            <div
+                                class="dashboard-charts activy-dashboard-chart"
+                            >
                                 <h2 class="heading">
                                     Name Screening Hit by Type
                                 </h2>
@@ -131,7 +135,9 @@
                     </div>
                     <div class="col-xs-12 col-md-6">
                         <div class="card dashboard-card  sm-radius">
-                            <div class="dashboard-charts">
+                            <div
+                                class="dashboard-charts single-line-dashboard-chart"
+                            >
                                 <h2 class="heading">
                                     Customer Onboarding With / Without Alert
                                 </h2>

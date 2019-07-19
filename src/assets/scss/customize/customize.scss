@@ -25,6 +25,28 @@
     padding: 36px 44px;
 }
 
+.flex-items {
+    display: flex;
+    li {
+        width: 100%;
+        &.search-filter {
+            width: 70%;
+        }
+        &.filter-selection {
+            width: 70%;
+        }
+        &.alert-switch {
+            width: 150%;
+            .btn-group-toggle {
+                width: 100%;
+            }
+        }
+        button {
+            width: 100%;
+        }
+    }
+}
+
 .info {
     color: $nav-color;
     position: relative;
