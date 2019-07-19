@@ -8,38 +8,43 @@
             cancelTitle="Cancel"
             cancelVariant="link"
         >
-            <b-form class="modal-form-format">
+            <b-form>
                 <div class="row">
-                    <div class="col-md-6">
-                        <b-form-group
-                            id="input-group-1"
-                            label="Country Code"
-                            label-for="input-1"
-                        >
-                            <b-form-input
-                                id="input-1"
-                                type="text"
-                                v-model="form.countryCode"
-                                required
-                                placeholder="Enter country code"
-                            ></b-form-input>
-                        </b-form-group>
+                    <div class="col-md-12 row-min-space">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <b-form-group
+                                    id="input-group-1"
+                                    label="Country Code"
+                                    label-for="input-1"
+                                >
+                                    <b-form-input
+                                        id="input-1"
+                                        type="text"
+                                        v-model="form.countryCode"
+                                        required
+                                        placeholder="Enter country code"
+                                    ></b-form-input>
+                                </b-form-group>
+                            </div>
+                            <div class="col-md-6">
+                                <b-form-group
+                                    id="input-group-2"
+                                    label="Dialing Code"
+                                    label-for="input-2"
+                                >
+                                    <b-form-input
+                                        id="input-2"
+                                        type="text"
+                                        v-model="form.dialingCode"
+                                        required
+                                        placeholder="Enter dialing code"
+                                    ></b-form-input>
+                                </b-form-group>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-md-6">
-                        <b-form-group
-                            id="input-group-2"
-                            label="Dialing Code"
-                            label-for="input-2"
-                        >
-                            <b-form-input
-                                id="input-2"
-                                type="text"
-                                v-model="form.dialingCode"
-                                required
-                                placeholder="Enter dialing code"
-                            ></b-form-input>
-                        </b-form-group>
-                    </div>
+
                     <div class="col-md-12">
                         <b-form-group
                             id="input-group-3"

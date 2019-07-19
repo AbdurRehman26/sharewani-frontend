@@ -1163,20 +1163,6 @@
         }
     }
 
-    .row-min-space {
-        .row {
-            margin-right: -5px;
-            margin-left: -5px;
-
-            .col-md-4,
-            .col-md-6,
-            .col-md-12 {
-                padding-left: 7px;
-                padding-right: 7px;
-            }
-        }
-    }
-
     .system-user-warning {
         width: 22px;
         float: left;
@@ -1194,6 +1180,20 @@
 
         p {
             color: $grey-lite;
+        }
+    }
+}
+
+.row-min-space {
+    .row {
+        margin-right: -5px;
+        margin-left: -5px;
+
+        .col-md-4,
+        .col-md-6,
+        .col-md-12 {
+            padding-left: 7px;
+            padding-right: 7px;
         }
     }
 }

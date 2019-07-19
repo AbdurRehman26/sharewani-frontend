@@ -17,9 +17,9 @@
                         </li>
                         <li>
                             <b-button
+                                v-b-modal.add-purpose-popup
                                 type="button"
                                 variant="secondary"
-                                v-b-modal.add-nationality-popup
                                 >+ Add Purpose</b-button
                             >
                         </li>
@@ -42,7 +42,7 @@
                             v-if="data.value == 'active'"
                             icon="icon-edit"
                             label="Modify"
-                            v-b-modal.modify-risk-factor-popup
+                            v-b-modal.v-b-modal.add-purpose-popup
                         ></base-action>
                         <!-- if action archive -->
                         <base-action
@@ -56,10 +56,10 @@
             </b-table>
         </div>
         <pagination></pagination>
-        <modify-risk-factor-popup></modify-risk-factor-popup>
+        <add-purpose-popup></add-purpose-popup>
         <archive-popup
-            title="Archive Action Management Factor"
-            description="Are you sure you want to archive this action factor? You can re-activate it later."
+            title="Archive Purpose of Action"
+            description="Are you sure you want to archive this purpose of action? You can re-activate it later."
         ></archive-popup>
     </div>
 </template>
@@ -67,12 +67,12 @@
 <script>
 import { mapGetters } from 'vuex'
 import pagination from '@/components/Pagination.vue'
-import modifyRiskFactorPopup from '@/components/popups/ModifyRiskFactorPopup.vue'
+import addPurposePopup from '@/components/popups/AddPurposePopup.vue'
 import archivePopup from '@/components/popups/ArchivePopup.vue'
 export default {
     components: {
         pagination,
-        modifyRiskFactorPopup,
+        addPurposePopup,
         archivePopup,
     },
 
