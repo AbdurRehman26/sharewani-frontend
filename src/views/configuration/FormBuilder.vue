@@ -41,7 +41,7 @@
                                 <!-- settings icon -->
                                 <i
                                     class="action-icons icon-settings"
-                                    v-b-modal.add-nationality-popup
+                                    @click="openPopup(field.id)"
                                 ></i>
                                 <!-- field locked icon -->
                                 <i
@@ -52,7 +52,7 @@
                                 <i
                                     v-if="field.status == 'editable'"
                                     class="change-password icon-trash"
-                                    v-b-modal.add-nationality-popup
+                                    v-b-modal.remove-field
                                 ></i>
                             </div>
                         </div>
@@ -70,24 +70,37 @@
                             class="form-field-types"
                             v-for="(field, index) in fieldType"
                             :key="index"
-                            v-b-modal.add-nationality-popup
                         >
-                            <span><i :class="field.icon"></i></span>
-                            <p>{{ field.label }}</p>
+                            <div @click="openPopup(field.id)">
+                                <span><i :class="field.icon"></i></span>
+                                <p>{{ field.label }}</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <add-nationality-popup></add-nationality-popup>
+        <add-heading-popup></add-heading-popup>
+        <add-text-field-popup></add-text-field-popup>
+        <add-select-field-popup></add-select-field-popup>
+        <remove-field-popup></remove-field-popup>
     </div>
 </template>
 
 <script>
 import draggable from 'vuedraggable'
-import addNationalityPopup from '@/components/popups/AddNationalityPopup.vue'
+import addHeadingPopup from '@/components/popups/form-builder/AddHeadingPopup.vue'
+import addTextFieldPopup from '@/components/popups/form-builder/AddTextFieldPopup.vue'
+import addSelectFieldPopup from '@/components/popups/form-builder/AddSelectFieldPopup.vue'
+import removeFieldPopup from '@/components/popups/form-builder/RemoveFieldPopup.vue'
 export default {
-    components: { draggable, addNationalityPopup },
+    components: {
+        draggable,
+        addHeadingPopup,
+        addTextFieldPopup,
+        addSelectFieldPopup,
+        removeFieldPopup,
+    },
 
     /*
     |--------------------------------------------------------------------------
@@ -117,7 +130,7 @@ export default {
             listDropdown: false,
             menuListing: [
                 {
-                    anchorLink: '/configuration/idenfo-engine/',
+                    anchorLink: '/configuration/form-builder/',
                     menuLabel: 'Setup Profile',
                 },
                 {
@@ -178,56 +191,56 @@ export default {
                     status: 'disabled',
                 },
                 {
-                    id: 1,
+                    id: 2,
                     icon: 'icon-text-field',
                     label: 'First Name',
                     popup: '',
                     status: 'disabled',
                 },
                 {
-                    id: 1,
+                    id: 2,
                     icon: 'icon-text-field',
                     label: 'Middle Name',
                     popup: '',
                     status: 'disabled',
                 },
                 {
-                    id: 1,
+                    id: 2,
                     icon: 'icon-text-field',
                     label: 'Last Name',
                     popup: '',
                     status: 'disabled',
                 },
                 {
-                    id: 1,
+                    id: 2,
                     icon: 'icon-text-field',
                     label: 'Father Name',
                     popup: '',
                     status: 'editable',
                 },
                 {
-                    id: 1,
+                    id: 2,
                     icon: 'icon-text-field',
                     label: 'Next of Kin',
                     popup: '',
                     status: 'editable',
                 },
                 {
-                    id: 1,
+                    id: 6,
                     icon: 'icon-radio',
                     label: 'Gender',
                     popup: '',
                     status: 'disabled',
                 },
                 {
-                    id: 1,
+                    id: 4,
                     icon: 'icon-calendar',
                     label: 'Date of Birth',
                     popup: '',
                     status: 'disabled',
                 },
                 {
-                    id: 1,
+                    id: 7,
                     icon: 'icon-checkbox',
                     label: 'Checkbox Group',
                     popup: '',
@@ -250,20 +263,16 @@ export default {
     |--------------------------------------------------------------------------
     */
     methods: {
-        listWidthVal() {
-            this.listVal = this.$refs.listingArea.offsetWidth
-        },
-        menuFunc() {
-            setTimeout(function() {
-                if (this.listVal > 940) {
-                    this.navWidth = true
-                } else {
-                    this.navWidth = false
-                }
-            }, 500)
-        },
-        log: function(evt) {
-            window.console.log(evt)
+        openPopup(val) {
+            if (val == 1) {
+                this.$bvModal.show('add-heading-popup')
+            }
+            if (val == 2 || val == 3 || val == 4) {
+                this.$bvModal.show('add-text-field-popup')
+            }
+            if (val == 5 || val == 6 || val == 7) {
+                this.$bvModal.show('add-select-field-popup')
+            }
         },
     }, // End of Component > methods
 
@@ -272,9 +281,6 @@ export default {
     | Component > mounted
     |--------------------------------------------------------------------------
     */
-    mounted() {
-        this.listWidthVal()
-        this.menuFunc()
-    }, // End of Component > mounted
+    mounted() {}, // End of Component > mounted
 } // End of export default
 </script>

@@ -22,6 +22,7 @@
                                 btnLabel="+ Add Application"
                                 btnType="submit"
                                 btnVariant="secondary"
+                                v-b-modal.add-application-popup
                             ></base-button>
                         </li>
                     </ul>
@@ -48,14 +49,14 @@
                             "
                             icon="icon-edit"
                             label="Modify"
-                            v-b-modal.initiate-review
+                            v-b-modal.add-application-popup
                         ></base-action>
                         <!-- if action archive -->
                         <base-action
                             v-if="data.value == 'active'"
                             icon="icon-trash"
                             label="Archive"
-                            v-b-modal.initiate-review
+                            v-b-modal.archive-popup
                         ></base-action>
                         <!-- if action activate -->
                         <base-action
@@ -68,14 +69,23 @@
                 </template>
             </b-table>
         </div>
+        <add-application-popup></add-application-popup>
+        <archive-popup
+            title="Archive Application"
+            description="Are you sure you want to archive this application ? You can activate it later."
+        ></archive-popup>
     </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
-
+import addApplicationPopup from '@/components/popups/AddApplicationPopup.vue'
+import archivePopup from '@/components/popups/ArchivePopup.vue'
 export default {
-    components: {},
+    components: {
+        addApplicationPopup,
+        archivePopup,
+    },
 
     /*
     |--------------------------------------------------------------------------

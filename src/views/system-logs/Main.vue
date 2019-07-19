@@ -1,6 +1,7 @@
 <template>
     <div class="dashboard">
         <div class="content-area">
+            <base-header :menuListing="menuListing"></base-header>
             <div class="right-panel">
                 <div class="wrap-content">
                     <div class="filter-section">
@@ -132,6 +133,12 @@ export default {
     */
     data() {
         return {
+            menuListing: [
+                {
+                    anchorLink: '/system-logs',
+                    menuLabel: 'System Log',
+                },
+            ],
             fields: [],
             items: [],
             filterByModule: null,

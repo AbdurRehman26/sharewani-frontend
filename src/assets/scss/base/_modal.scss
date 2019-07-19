@@ -47,7 +47,7 @@
                     overflow: hidden;
 
                     &:after {
-                        content: '\e959';
+                        content: '\e95c';
                         font-family: 'icomoon';
                         position: absolute;
                         color: $white;
@@ -62,10 +62,6 @@
                 p {
                     line-height: 21px;
                     margin-bottom: 24px;
-                }
-
-                .modal-form-format {
-                    margin-top: 0 !important;
                 }
             }
 

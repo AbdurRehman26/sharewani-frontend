@@ -125,21 +125,21 @@
                             "
                             icon="icon-edit"
                             label="Modify"
-                            v-b-modal.initiate-review
+                            v-b-modal.add-system-user-popup
                         ></base-action>
                         <!-- if action archive -->
                         <base-action
                             v-if="data.value == 'active'"
                             icon="icon-trash"
                             label="Archive"
-                            v-b-modal.initiate-review
+                            v-b-modal.archive-popup
                         ></base-action>
                         <!-- if action activate -->
                         <base-action
                             v-if="data.value == 'archive'"
                             icon="icon-done"
                             label="Activate"
-                            v-b-modal.initiate-review
+                            v-b-modal.add-system-user-popup
                         ></base-action>
                     </div>
                 </template>
@@ -147,6 +147,10 @@
         </div>
         <pagination></pagination>
         <add-system-user-popup></add-system-user-popup>
+        <archive-popup
+            title="Archive User"
+            description="Are you sure you want to archive this user? You can re-activate account later."
+        ></archive-popup>
     </div>
 </template>
 
@@ -154,10 +158,12 @@
 import { mapGetters } from 'vuex'
 import pagination from '@/components/Pagination.vue'
 import addSystemUserPopup from '@/components/popups/AddSystemUserPopup.vue'
+import archivePopup from '@/components/popups/ArchivePopup.vue'
 export default {
     components: {
         pagination,
         addSystemUserPopup,
+        archivePopup,
     },
 
     /*
