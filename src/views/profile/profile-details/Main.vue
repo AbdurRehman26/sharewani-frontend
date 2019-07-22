@@ -4,38 +4,41 @@
             <base-header :menuListing="menuListing"></base-header>
             <div class="right-panel">
                 <div class="wrap-content">
-                    <div class="filter-section">
+                    <div class="filter-section row-min-space profile-filter">
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-6 filter-title-section">
                                 <h2>{{ $route.meta.name }}</h2>
                             </div>
                             <div class="col-md-6 text-right">
-                                <ul>
-                                    <li>
-                                        <router-link to="/customer-profiles">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <router-link
+                                            to="/customer-profiles"
+                                            class="btn btn-link"
+                                        >
                                             <span>
                                                 <i class="icon-caret-left"></i>
                                             </span>
                                             <span>Go back</span>
                                         </router-link>
-                                    </li>
-                                    <li>
+                                    </div>
+                                    <div class="col-md-4">
                                         <base-button
                                             v-b-modal.cancel-review-process-popup
                                             btnLabel="Cancel Review Process"
                                             btnType="button"
                                             btnVariant="link font-semibold"
                                         ></base-button>
-                                    </li>
-                                    <li>
+                                    </div>
+                                    <div class="col-md-5">
                                         <base-button
                                             v-b-modal.kyc-status-review-popup
                                             btnLabel="KYC STATUS REVIEW"
                                             btnType="button"
                                             btnVariant="primary"
                                         ></base-button>
-                                    </li>
-                                </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

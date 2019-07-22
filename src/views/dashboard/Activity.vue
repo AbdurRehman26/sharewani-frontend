@@ -2,7 +2,7 @@
     <div class="wrap-content">
         <div class="filter-section row-min-space">
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-4 filter-title-section">
                     <h2>Activity Dashboard</h2>
                 </div>
                 <div class="col-md-8 text-right">

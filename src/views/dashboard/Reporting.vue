@@ -2,7 +2,7 @@
     <div class="wrap-content">
         <div class="filter-section">
             <div class="row">
-                <div class="col-md-10">
+                <div class="col-md-10 filter-title-section">
                     <h2>Customer Statistics</h2>
                 </div>
                 <div class="col-md-2">
