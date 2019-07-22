@@ -4,78 +4,125 @@
             <base-header :menuListing="menuListing"></base-header>
             <div class="right-panel">
                 <div class="wrap-content">
-                    <div class="filter-section">
+                    <div class="filter-section row-min-space">
                         <div class="row">
-                            <div class="col-md-12 system-user-filter">
-                                <ul>
-                                    <li>
-                                        <h2>System Log</h2>
-                                    </li>
-                                    <li>
-                                        <div class="form-group date-pickers">
-                                            <i class="icon-calendar"></i>
-                                            <datepicker
-                                                placeholder="Start Date"
-                                            ></datepicker>
+                            <div class="col-xs-12 col-md-12">
+                                <h2>System Log</h2>
+                            </div>
+                            <div class="col-xs-12 col-md-12">
+                                <div class="row">
+                                    <div class="col-xs-12 col-md-9">
+                                        <div class="row">
+                                            <div class="col-xs-12 col-md-5">
+                                                <div class="row">
+                                                    <div
+                                                        class="col-xs-12 col-md-6"
+                                                    >
+                                                        <div
+                                                            class="form-group date-pickers"
+                                                        >
+                                                            <i
+                                                                class="icon-calendar"
+                                                            ></i>
+                                                            <datepicker
+                                                                placeholder="Start Date"
+                                                            ></datepicker>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="col-xs-12 col-md-6"
+                                                    >
+                                                        <div
+                                                            class="form-group date-pickers"
+                                                        >
+                                                            <i
+                                                                class="icon-calendar"
+                                                            ></i>
+                                                            <datepicker
+                                                                placeholder="End Date"
+                                                            ></datepicker>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-md-7">
+                                                <div class="row">
+                                                    <div
+                                                        class="col-xs-12 col-md-4"
+                                                    >
+                                                        <b-form-group>
+                                                            <b-form-select
+                                                                id="input-3"
+                                                                class="form-control"
+                                                                v-model="
+                                                                    filterByModule
+                                                                "
+                                                                :options="
+                                                                    filterModule
+                                                                "
+                                                                required
+                                                            ></b-form-select>
+                                                        </b-form-group>
+                                                    </div>
+                                                    <div
+                                                        class="col-xs-12 col-md-4"
+                                                    >
+                                                        <b-form-group>
+                                                            <b-form-select
+                                                                id="input-3"
+                                                                class="form-control"
+                                                                v-model="
+                                                                    filterByAction
+                                                                "
+                                                                :options="
+                                                                    filterAction
+                                                                "
+                                                                required
+                                                            ></b-form-select>
+                                                        </b-form-group>
+                                                    </div>
+                                                    <div
+                                                        class="col-xs-12 col-md-4"
+                                                    >
+                                                        <b-form-group>
+                                                            <b-form-select
+                                                                id="input-3"
+                                                                class="form-control"
+                                                                v-model="
+                                                                    filterByUser
+                                                                "
+                                                                :options="
+                                                                    filterUser
+                                                                "
+                                                                required
+                                                            ></b-form-select>
+                                                        </b-form-group>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </li>
-                                    <li>
-                                        <div class="form-group date-pickers">
-                                            <i class="icon-calendar"></i>
-                                            <datepicker
-                                                placeholder="End Date"
-                                            ></datepicker>
+                                    </div>
+                                    <div class="col-xs-12 col-md-3">
+                                        <div class="row">
+                                            <div class="col-xs-12 col-md-6">
+                                                <base-button
+                                                    btnLabel="Apply"
+                                                    btnType="submit"
+                                                    btnVariant="primary"
+                                                    class="btn-block"
+                                                ></base-button>
+                                            </div>
+                                            <div class="col-xs-12 col-md-6">
+                                                <base-button
+                                                    v-b-modal.add-system-user-popup
+                                                    btnLabel="Export"
+                                                    btnType="submit"
+                                                    btnVariant="secondary"
+                                                ></base-button>
+                                            </div>
                                         </div>
-                                    </li>
-                                    <li>
-                                        <b-form-group>
-                                            <b-form-select
-                                                id="input-3"
-                                                class="form-control"
-                                                v-model="filterByModule"
-                                                :options="filterModule"
-                                                required
-                                            ></b-form-select>
-                                        </b-form-group>
-                                    </li>
-                                    <li>
-                                        <b-form-group>
-                                            <b-form-select
-                                                id="input-3"
-                                                class="form-control"
-                                                v-model="filterByAction"
-                                                :options="filterAction"
-                                                required
-                                            ></b-form-select>
-                                        </b-form-group>
-                                    </li>
-                                    <li>
-                                        <b-form-group>
-                                            <b-form-select
-                                                id="input-3"
-                                                class="form-control"
-                                                v-model="filterByUser"
-                                                :options="filterUser"
-                                                required
-                                            ></b-form-select>
-                                        </b-form-group>
-                                    </li>
-                                    <li>
-                                        <b-button
-                                            type="button"
-                                            variant="primary"
-                                            >Apply</b-button
-                                        >
-                                    </li>
-                                    <li>
-                                        <b-button
-                                            v-b-modal.export-process-popup
-                                            type="button"
-                                            variant="secondary"
-                                            >Export</b-button
-                                        >
-                                    </li>
-                                </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

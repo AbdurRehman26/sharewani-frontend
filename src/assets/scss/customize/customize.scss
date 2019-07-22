@@ -22,7 +22,7 @@
 }
 
 .right-panel {
-    padding: 36px 44px;
+    padding: 29px 34px;
 }
 
 .flex-items {
@@ -817,6 +817,9 @@
 .table-scroll {
     overflow-y: auto;
     max-height: 393px;
+    .table {
+        min-width: 0;
+    }
 }
 
 .brand-color-area {
