@@ -2,7 +2,7 @@
     <div class="wrap-content customer-section">
         <div class="filter-section row-min-space">
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-md-3 filter-title-section">
                     <h2>All Customers</h2>
                 </div>
                 <div class="col-md-9 ">

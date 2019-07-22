@@ -114,7 +114,7 @@
                                             </div>
                                             <div class="col-xs-12 col-md-6">
                                                 <base-button
-                                                    v-b-modal.add-system-user-popup
+                                                    v-b-modal.export-process-popup
                                                     btnLabel="Export"
                                                     btnType="submit"
                                                     btnVariant="secondary"

@@ -1,8 +1,8 @@
 <template>
     <div class="wrap-content">
-        <div class="filter-section full-area">
+        <div class="filter-section row-min-space">
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-md-12">
                     <h2>System Users</h2>
                 </div>
 

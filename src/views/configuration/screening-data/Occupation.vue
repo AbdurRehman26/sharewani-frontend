@@ -3,13 +3,13 @@
         <div class="filter-section">
             <div class="row">
                 <div class="col-md-6">
-                    <h2>Gender</h2>
+                    <h2>Occupation</h2>
                 </div>
                 <div class="col-md-6 text-right">
                     <ul>
                         <li>
                             <base-search
-                                placeholder="Search gender"
+                                placeholder="Search Occupation"
                             ></base-search>
                         </li>
                         <li>
@@ -39,8 +39,8 @@
             </b-table>
         </div>
         <modify-status-popup
-            modalTitle="Modify Gender Status"
-            modalLabel="Male"
+            modalTitle="Modify Occupation Status"
+            modalLabel="National Government Ministers"
         ></modify-status-popup>
     </div>
 </template>
@@ -99,10 +99,10 @@ export default {
         initializeData() {
             //system log table
             let documentVerificationFields = this.configurationData
-                .screeningData.genderTable.fields //get user data from store
+                .screeningData.occupation.fields //get user data from store
             this.fields = documentVerificationFields //push data into array
             let documentVerificationItems = this.configurationData.screeningData
-                .genderTable.items //get user data from store
+                .occupation.items //get user data from store
             this.items = documentVerificationItems //push data into array
             this.$emit('item-length', this.items.length)
         },

@@ -319,6 +319,7 @@
 // Filter Section
 
 .filter-section {
+    margin-bottom: 14px;
     &.full-area {
         .row {
             margin-left: -10px;
@@ -329,12 +330,32 @@
             }
         }
     }
+    .filter-title-section {
+        h2 {
+            margin-top: 7px;
+        }
+    }
     h2 {
         font-family: $font_medium;
         color: $grey-darkest;
         font-size: 1.625rem;
         margin-top: 0;
         margin-bottom: 20px;
+    }
+
+    a {
+        text-decoration: none;
+        color: $secondary;
+
+        span {
+            margin-top: 3px;
+            display: inline-block;
+        }
+        i {
+            margin-right: 8px;
+            color: $secondary;
+            font-size: 10px;
+        }
     }
     ul {
         list-style-type: none;
@@ -350,17 +371,6 @@
 
             &:last-child {
                 margin-right: 0;
-            }
-
-            a {
-                text-decoration: none;
-                color: $secondary;
-
-                i {
-                    margin-right: 8px;
-                    color: $secondary;
-                    font-size: 10px;
-                }
             }
         }
     }
@@ -755,6 +765,10 @@
 
 .w-320px {
     width: 320px;
+}
+
+.w-230px {
+    width: 230px;
 }
 
 .config-list {
@@ -1579,5 +1593,11 @@
     .btn-primary {
         padding-left: 10px;
         padding-right: 10px;
+    }
+}
+
+.profile-filter {
+    .btn-link {
+        padding: 7px 6px;
     }
 }
