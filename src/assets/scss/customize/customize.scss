@@ -22,7 +22,7 @@
 }
 
 .right-panel {
-    padding: 36px 44px;
+    padding: 29px 34px;
 }
 
 .flex-items {
@@ -351,16 +351,25 @@
             &:last-child {
                 margin-right: 0;
             }
-        }
-    }
 
-    fieldset {
-        margin-bottom: 0 !important;
+            a {
+                text-decoration: none;
+                color: $secondary;
+
+                i {
+                    margin-right: 8px;
+                    color: $secondary;
+                    font-size: 10px;
+                }
+            }
+        }
     }
 
     .btn-secondary,
     .btn-primary {
         min-width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 
     &.sub-filter {
@@ -864,6 +873,9 @@
 .table-scroll {
     overflow-y: auto;
     max-height: 393px;
+    .table {
+        min-width: 0;
+    }
 }
 
 .brand-color-area {
@@ -1251,9 +1263,11 @@
 
 .row-min-space {
     .row {
-        margin-right: -6px;
-        margin-left: -6px;
+        margin-right: -4px;
+        margin-left: -4px;
 
+        .col-md-1,
+        .col-md-2,
         .col-md-3,
         .col-md-4,
         .col-md-5,
@@ -1261,9 +1275,11 @@
         .col-md-7,
         .col-md-8,
         .col-md-9,
+        .col-md-10,
+        .col-md-11,
         .col-md-12 {
-            padding-left: 7px;
-            padding-right: 7px;
+            padding-left: 4px;
+            padding-right: 4px;
         }
     }
 }
@@ -1552,5 +1568,16 @@
                 display: block;
             }
         }
+    }
+}
+
+.alert-filter {
+    .btn-group-toggle {
+        width: 100%;
+    }
+    .btn-secondary,
+    .btn-primary {
+        padding-left: 10px;
+        padding-right: 10px;
     }
 }

@@ -12,28 +12,28 @@
                             <div class="col-md-6 text-right">
                                 <ul>
                                     <li>
-                                        <b-button type="button" variant="link">
-                                            <i class="icon-caret-left"></i> Go
-                                            back</b-button
-                                        >
+                                        <router-link to="/customer-profiles">
+                                            <span>
+                                                <i class="icon-caret-left"></i>
+                                            </span>
+                                            <span>Go back</span>
+                                        </router-link>
                                     </li>
                                     <li>
-                                        <b-button
+                                        <base-button
                                             v-b-modal.cancel-review-process-popup
-                                            type="button"
-                                            variant="link font-semibold"
-                                        >
-                                            Cancel Review Process
-                                        </b-button>
+                                            btnLabel="Cancel Review Process"
+                                            btnType="button"
+                                            btnVariant="link font-semibold"
+                                        ></base-button>
                                     </li>
                                     <li>
-                                        <b-button
+                                        <base-button
                                             v-b-modal.kyc-status-review-popup
-                                            type="button"
-                                            variant="primary"
-                                        >
-                                            KYC STATUS REVIEW</b-button
-                                        >
+                                            btnLabel="KYC STATUS REVIEW"
+                                            btnType="button"
+                                            btnVariant="primary"
+                                        ></base-button>
                                     </li>
                                 </ul>
                             </div>

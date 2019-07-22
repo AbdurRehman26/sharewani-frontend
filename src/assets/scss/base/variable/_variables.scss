@@ -70,7 +70,7 @@ $input-border-color: transparent !default;
 $input-border-radius: 4px !default;
 $input-height: 43px !default;
 $input-font-size: $font-size-base;
-$input-padding: 14px 21px;
+$input-padding: 14px 15px;
 
 //label
 $label-font-size: $font-size-sm;
@@ -171,6 +171,6 @@ $alert-danger-border: #f5c6cb !default;
 // table
 
 $table-footer-bg: #fdfaff;
-$table-row-padding: 14px 12px 14px;
-$table-row-padding-th: 14px 12px 12px;
+$table-row-padding: 14px 8px 14px;
+$table-row-padding-th: 14px 8px 12px;
 $table-hover: lighten($secondary, 43%);
