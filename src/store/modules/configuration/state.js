@@ -1488,7 +1488,7 @@ export default {
                         status: [
                             {
                                 cssClass: 'inapproved',
-                                icon: 'icon-close',
+                                icon: 'icon-wrong',
                                 label: 'Inactive',
                             },
                         ],
@@ -1534,7 +1534,7 @@ export default {
                         status: [
                             {
                                 cssClass: 'inapproved',
-                                icon: 'icon-close',
+                                icon: 'icon-wrong',
                                 label: 'Inactive',
                             },
                         ],
@@ -1607,7 +1607,7 @@ export default {
                         status: [
                             {
                                 cssClass: 'inapproved',
-                                icon: 'icon-close',
+                                icon: 'icon-wrong',
                                 label: 'Inactive',
                             },
                         ],
@@ -1693,7 +1693,7 @@ export default {
                         status: [
                             {
                                 cssClass: 'inapproved',
-                                icon: 'icon-close',
+                                icon: 'icon-wrong',
                                 label: 'Inactive',
                             },
                         ],
@@ -1766,7 +1766,7 @@ export default {
                         status: [
                             {
                                 cssClass: 'inapproved',
-                                icon: 'icon-close',
+                                icon: 'icon-wrong',
                                 label: 'Inactive',
                             },
                         ],
@@ -1779,7 +1779,7 @@ export default {
                         status: [
                             {
                                 cssClass: 'inapproved',
-                                icon: 'icon-close',
+                                icon: 'icon-wrong',
                                 label: 'Inactive',
                             },
                         ],
@@ -1854,6 +1854,644 @@ export default {
                         descriptionid: 10,
                         description1: 'Special Intrest Person (SIP)',
                         description2: 'War Crimes',
+                        status: [
+                            {
+                                cssClass: 'approved',
+                                icon: 'icon-check',
+                                label: 'Active',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                ],
+            },
+
+            descriptionStatusThree: {
+                fields: [
+                    {
+                        key: 'descriptionid',
+                        label: 'Description 3 ID',
+                        sortable: true,
+                        class: 'id-center',
+                    },
+                    {
+                        key: 'description2',
+                        label: 'Description 2',
+                        sortable: true,
+                    },
+                    {
+                        key: 'description3',
+                        label: 'Description 3',
+                        sortable: true,
+                    },
+                    {
+                        key: 'status',
+                        label: 'status',
+                        class: 'text-center',
+                        sortable: true,
+                    },
+                    {
+                        key: 'action',
+                        label: 'ACTION',
+                        class: 'single-list',
+                    },
+                ],
+                items: [
+                    {
+                        descriptionid: 1,
+                        description2: 'Secntions List',
+                        description3: 'Ship',
+                        status: [
+                            {
+                                cssClass: 'inapproved',
+                                icon: 'icon-wrong',
+                                label: 'Inactive',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        descriptionid: 2,
+                        description2: 'Secntions List',
+                        description3: 'Company',
+                        status: [
+                            {
+                                cssClass: 'inapproved',
+                                icon: 'icon-wrong',
+                                label: 'Inactive',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        descriptionid: 3,
+                        description2: 'Secntions List',
+                        description3: 'Bank',
+                        status: [
+                            {
+                                cssClass: 'inapproved',
+                                icon: 'icon-wrong',
+                                label: 'Inactive',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        descriptionid: 4,
+                        description2: 'Secntions List',
+                        description3: 'Government Entity',
+                        status: [
+                            {
+                                cssClass: 'inapproved',
+                                icon: 'icon-wrong',
+                                label: 'Inactive',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        descriptionid: 5,
+                        description2: 'Secntions List',
+                        description3: 'State Owned Company',
+                        status: [
+                            {
+                                cssClass: 'inapproved',
+                                icon: 'icon-wrong',
+                                label: 'Inactive',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        descriptionid: 6,
+                        description2: 'Secntions List',
+                        description3: 'Charity',
+                        status: [
+                            {
+                                cssClass: 'inapproved',
+                                icon: 'icon-wrong',
+                                label: 'Inactive',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        descriptionid: 7,
+                        description2: 'Secntions List',
+                        description3: 'Criminal/Terroist',
+                        status: [
+                            {
+                                cssClass: 'inapproved',
+                                icon: 'icon-wrong',
+                                label: 'Inactive',
+                            },
+                        ],
+                        action: 'active',
+                    },
+
+                    {
+                        descriptionid: 8,
+                        description2: 'Secntions List',
+                        description3: 'Religious Sect',
+                        status: [
+                            {
+                                cssClass: 'inapproved',
+                                icon: 'icon-wrong',
+                                label: 'Inactive',
+                            },
+                        ],
+                        action: 'active',
+                    },
+
+                    {
+                        descriptionid: 9,
+                        description2: 'Secntions List',
+                        description3: 'Country',
+                        status: [
+                            {
+                                cssClass: 'inapproved',
+                                icon: 'icon-wrong',
+                                label: 'Inactive',
+                            },
+                        ],
+                        action: 'active',
+                    },
+
+                    {
+                        descriptionid: 10,
+                        description2: 'Secntions List',
+                        description3: 'Ship',
+                        status: [
+                            {
+                                cssClass: 'inapproved',
+                                icon: 'icon-wrong',
+                                label: 'Inactive',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                ],
+            },
+
+            roleTypeTable: {
+                fields: [
+                    {
+                        key: 'roleTypeId',
+                        label: 'Role Type ID',
+                        class: 'id-center',
+                        sortable: true,
+                    },
+                    {
+                        key: 'roleType',
+                        label: 'Role Type',
+                        sortable: true,
+                    },
+                    {
+                        key: 'status',
+                        label: 'Status',
+                        class: 'text-center',
+                        sortable: true,
+                    },
+                    {
+                        key: 'action',
+                        label: 'ACTION',
+                        class: 'single-list',
+                    },
+                ],
+                items: [
+                    {
+                        roleTypeId: 1,
+                        roleType: 'Primary Occupation',
+                        status: [
+                            {
+                                cssClass: 'approved',
+                                icon: 'icon-check',
+                                label: 'Active',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        roleTypeId: 2,
+                        roleType: 'Other Roles',
+                        status: [
+                            {
+                                cssClass: 'approved',
+                                icon: 'icon-check',
+                                label: 'Active',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        roleTypeId: 3,
+                        roleType: 'Previous Roles',
+                        status: [
+                            {
+                                cssClass: 'approved',
+                                icon: 'icon-check',
+                                label: 'Active',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                ],
+            },
+
+            occupation: {
+                fields: [
+                    {
+                        key: 'occupationId',
+                        label: 'Occupation ID',
+                        class: 'id-center',
+                        sortable: true,
+                    },
+                    {
+                        key: 'occupation',
+                        label: 'Occupation',
+                        sortable: true,
+                    },
+                    {
+                        key: 'status',
+                        label: 'Status',
+                        class: 'text-center',
+                        sortable: true,
+                    },
+                    {
+                        key: 'action',
+                        label: 'ACTION',
+                        class: 'single-list',
+                    },
+                ],
+                items: [
+                    {
+                        occupationId: 1,
+                        occupation: 'Head & Deputies State/National Government',
+                        status: [
+                            {
+                                cssClass: 'approved',
+                                icon: 'icon-check',
+                                label: 'Active',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        occupationId: 2,
+                        occupation: 'National Government Ministers',
+                        status: [
+                            {
+                                cssClass: 'approved',
+                                icon: 'icon-check',
+                                label: 'Active',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        occupationId: 3,
+                        occupation: 'Member of the National Legislature',
+                        status: [
+                            {
+                                cssClass: 'approved',
+                                icon: 'icon-check',
+                                label: 'Active',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        occupationId: 4,
+                        occupation: 'Senior Civil Servants-National Government',
+                        status: [
+                            {
+                                cssClass: 'approved',
+                                icon: 'icon-check',
+                                label: 'Active',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        occupationId: 5,
+                        occupation: 'Senior Civil Servants-Regional Government',
+                        status: [
+                            {
+                                cssClass: 'inapproved',
+                                icon: 'icon-wrong',
+                                label: 'Inactive',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        occupationId: 6,
+                        occupation: 'Embassy & Consular Staff',
+                        status: [
+                            {
+                                cssClass: 'inapproved',
+                                icon: 'icon-wrong',
+                                label: 'Inactive',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        occupationId: 7,
+                        occupation: 'Senior Members of the Armed Forces',
+                        status: [
+                            {
+                                cssClass: 'approved',
+                                icon: 'icon-check',
+                                label: 'Active',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        occupationId: 8,
+                        occupation: 'Senior Members of the Police Forces',
+                        status: [
+                            {
+                                cssClass: 'inapproved',
+                                icon: 'icon-wrong',
+                                label: 'Inactive',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        occupationId: 9,
+                        occupation: 'Senior Members of the Secret Forces',
+                        status: [
+                            {
+                                cssClass: 'inapproved',
+                                icon: 'icon-wrong',
+                                label: 'Inactive',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        occupationId: 10,
+                        occupation: 'Senior Members of the Judiciary',
+                        status: [
+                            {
+                                cssClass: 'approved',
+                                icon: 'icon-check',
+                                label: 'Active',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                ],
+            },
+
+            dataTypeTable: {
+                fields: [
+                    {
+                        key: 'datatypeId',
+                        label: 'Data Type ID',
+                        class: 'id-center',
+                        sortable: true,
+                    },
+                    {
+                        key: 'datatype',
+                        label: 'Data Type',
+                        sortable: true,
+                    },
+                    {
+                        key: 'recordtype',
+                        label: 'Record Type',
+                        sortable: true,
+                    },
+                    {
+                        key: 'status',
+                        label: 'Status',
+                        class: 'text-center',
+                        sortable: true,
+                    },
+                    {
+                        key: 'action',
+                        label: 'ACTION',
+                        class: 'single-list',
+                    },
+                ],
+                items: [
+                    {
+                        datatypeId: 1,
+                        datatype: 'Date of Birth',
+                        recordtype: 'Person',
+                        status: [
+                            {
+                                cssClass: 'approved',
+                                icon: 'icon-check',
+                                label: 'Active',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        datatypeId: 2,
+                        datatype: 'Deceased Date',
+                        recordtype: 'Person',
+                        status: [
+                            {
+                                cssClass: 'approved',
+                                icon: 'icon-check',
+                                label: 'Active',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        datatypeId: 3,
+                        datatype: 'Date of Registration',
+                        recordtype: 'Entity',
+                        status: [
+                            {
+                                cssClass: 'inapproved',
+                                icon: 'icon-wrong',
+                                label: 'Inactive',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        datatypeId: 4,
+                        datatype: 'Cessation Date',
+                        recordtype: 'Entity',
+                        status: [
+                            {
+                                cssClass: 'inapproved',
+                                icon: 'icon-wrong',
+                                label: 'Inactive',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        datatypeId: 5,
+                        datatype: 'Inactive as of (PEP)',
+                        recordtype: 'Person',
+                        status: [
+                            {
+                                cssClass: 'approved',
+                                icon: 'icon-check',
+                                label: 'Active',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        datatypeId: 6,
+                        datatype: 'Inactive as of (RCA related to PEP)',
+                        recordtype: 'Person',
+                        status: [
+                            {
+                                cssClass: 'approved',
+                                icon: 'icon-check',
+                                label: 'Active',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                ],
+            },
+
+            sectionReferenceTable: {
+                fields: [
+                    {
+                        key: 'person',
+                        label: 'RID (PERSON)',
+                        class: 'id-center',
+                        sortable: true,
+                    },
+                    {
+                        key: 'entity',
+                        label: 'RID (ENTITY)',
+                        sortable: true,
+                    },
+                    {
+                        key: 'country',
+                        label: 'COUNTRY',
+                        sortable: true,
+                    },
+                    {
+                        key: 'referenece_name',
+                        label: 'Referenece Name',
+                        sortable: true,
+                    },
+                    {
+                        key: 'status',
+                        label: 'Status',
+                        class: 'text-center w-230px',
+                        sortable: true,
+                    },
+                    {
+                        key: 'action',
+                        label: 'ACTION',
+                        class: 'single-list',
+                    },
+                ],
+                items: [
+                    {
+                        person: 1254,
+                        entity: 1255,
+                        country: 'International',
+                        referenece_name:
+                            'FATF Non-Cooperative Countries and Territories',
+                        status: [
+                            {
+                                cssClass: 'inapproved',
+                                icon: 'icon-wrong',
+                                label: 'Inactive',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        person: 1432,
+                        entity: 1433,
+                        country: 'International',
+                        referenece_name:
+                            'FATF Strategic Deficiencies Jurisdictions',
+                        status: [
+                            {
+                                cssClass: 'inapproved',
+                                icon: 'icon-wrong',
+                                label: 'Inactive',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        person: 1530,
+                        entity: 1531,
+                        country: 'International',
+                        referenece_name:
+                            'FATF Strategic Deficiencies Jurisdictions - On-going',
+                        status: [
+                            {
+                                cssClass: 'inapproved',
+                                icon: 'icon-wrong',
+                                label: 'Inactive',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        person: 517,
+                        entity: 518,
+                        country: 'International',
+                        referenece_name: 'Interpol Recent Red Notices',
+                        status: [
+                            {
+                                cssClass: 'inapproved',
+                                icon: 'icon-wrong',
+                                label: 'Inactive',
+                            },
+                        ],
+                        action: 'active',
+                    },
+
+                    {
+                        person: 1072,
+                        entity: 1073,
+                        country: 'International',
+                        referenece_name: 'Interpol Red Notices',
+                        status: [
+                            {
+                                cssClass: 'approved',
+                                icon: 'icon-check',
+                                label: 'Active',
+                            },
+                        ],
+                        action: 'active',
+                    },
+
+                    {
+                        person: 1154,
+                        entity: 1155,
+                        country: 'International',
+                        referenece_name:
+                            'Interpol-United Nations Security Concil Special',
+                        status: [
+                            {
+                                cssClass: 'inapproved',
+                                icon: 'icon-wrong',
+                                label: 'Inactive',
+                            },
+                        ],
+                        action: 'active',
+                    },
+
+                    {
+                        person: 1156,
+                        entity: 1157,
+                        country: 'International',
+                        referenece_name:
+                            'Interpol-United Nations Security Concil Special',
                         status: [
                             {
                                 cssClass: 'approved',
