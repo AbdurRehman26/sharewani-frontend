@@ -131,39 +131,41 @@ export default {
                     menuLabel: 'Description 2',
                 },
                 {
-                    anchorLink: '#',
+                    anchorLink: '/configuration/screening-data/descprition-3',
                     menuLabel: 'Description 3',
                 },
                 {
-                    anchorLink: '#',
+                    anchorLink: '/configuration/screening-data/role-type',
                     menuLabel: 'Role Type',
                 },
                 {
-                    anchorLink: '#',
+                    anchorLink: '/configuration/screening-data/occupation',
                     menuLabel: 'Occupation',
                 },
                 {
-                    anchorLink: '#',
+                    anchorLink: '/configuration/screening-data/data-type',
                     menuLabel: 'Data Type',
                 },
                 {
-                    anchorLink: '#',
+                    anchorLink:
+                        '/configuration/screening-data/sanction-refereneve',
                     menuLabel: 'Sanctions Refereneve',
                 },
                 {
-                    anchorLink: '#',
+                    anchorLink: '/configuration/screening-data/country',
                     menuLabel: 'Country',
                 },
                 {
-                    anchorLink: '#',
+                    anchorLink: '/configuration/screening-data/country-type',
                     menuLabel: 'Country Type',
                 },
                 {
-                    anchorLink: '#',
+                    anchorLink: '/configuration/screening-data/indentification',
                     menuLabel: 'indentification ',
                 },
                 {
-                    anchorLink: '#',
+                    anchorLink:
+                        '/configuration/screening-data/relationship-type',
                     menuLabel: 'Relationship Type',
                 },
             ],
