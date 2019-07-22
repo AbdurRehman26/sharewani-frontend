@@ -357,21 +357,57 @@ export default new Router({
                     children: [
                         {
                             path: '/configuration/screening-data/gender',
-                            name: 'riskFactor',
+                            name: 'gender',
                             component: () =>
-                                import(/* webpackChunkName: "riskFactor" */ './views/configuration/screening-data/Main.vue'),
+                                import(/* webpackChunkName: "riskFactor" */ './views/configuration/screening-data/Gender.vue'),
                         },
                         {
                             path: '/',
-                            name: 'riskFactor',
+                            name: 'gender',
                             component: () =>
-                                import(/* webpackChunkName: "nationality" */ './views/configuration/screening-data/Main.vue'),
+                                import(/* webpackChunkName: "nationality" */ './views/configuration/screening-data/Gender.vue'),
                         },
                         {
                             path: '/configuration/screening-data/',
-                            name: 'nationality',
+                            name: 'gender',
                             component: () =>
-                                import(/* webpackChunkName: "nationality" */ './views/configuration/screening-data/Main.vue'),
+                                import(/* webpackChunkName: "nationality" */ './views/configuration/screening-data/Gender.vue'),
+                        },
+                        {
+                            path: '/configuration/screening-data/deceased',
+                            name: 'deceased',
+                            component: () =>
+                                import(/* webpackChunkName: "nationality" */ './views/configuration/screening-data/Deceased.vue'),
+                        },
+                        {
+                            path: '/configuration/screening-data/record-status',
+                            name: 'record-status',
+                            component: () =>
+                                import(/* webpackChunkName: "nationality" */ './views/configuration/screening-data/RecordStatus.vue'),
+                        },
+                        {
+                            path: '/configuration/screening-data/name-type',
+                            name: 'name-type',
+                            component: () =>
+                                import(/* webpackChunkName: "nationality" */ './views/configuration/screening-data/NameType.vue'),
+                        },
+                        {
+                            path: '/configuration/screening-data/name-type',
+                            name: 'name-type',
+                            component: () =>
+                                import(/* webpackChunkName: "nationality" */ './views/configuration/screening-data/NameType.vue'),
+                        },
+                        {
+                            path: '/configuration/screening-data/descprition-1',
+                            name: 'descprition-1',
+                            component: () =>
+                                import(/* webpackChunkName: "nationality" */ './views/configuration/screening-data/Descprition1.vue'),
+                        },
+                        {
+                            path: '/configuration/screening-data/descprition-2',
+                            name: 'descprition-2',
+                            component: () =>
+                                import(/* webpackChunkName: "nationality" */ './views/configuration/screening-data/Descprition2.vue'),
                         },
                     ],
                 },

@@ -22,7 +22,7 @@
 }
 
 .right-panel {
-    padding: 36px 44px;
+    padding: 29px 34px;
 }
 
 .flex-items {
@@ -264,6 +264,53 @@
                 i {
                     margin-right: 10px;
                 }
+            }
+        }
+        &.small-card {
+            .logo {
+                display: inline-block !important;
+            }
+            h4 {
+                display: inline-block !important;
+            }
+        }
+    }
+}
+
+.small-card {
+    margin-bottom: 20px;
+    .card {
+        &.custom-card {
+            border-color: transparent;
+            background-color: $grey-dark;
+            .logo {
+                display: inline-block !important;
+                margin-left: 0;
+                position: absolute;
+                top: 20px;
+                width: 25px;
+                height: 25px;
+                background-size: 100% 100%;
+                border: 0px solid;
+            }
+            h4 {
+                display: inline-block !important;
+                text-align: left;
+                padding-left: 35px;
+                font-size: 1rem;
+                margin-bottom: 0;
+            }
+            p {
+                &.caption-description {
+                    text-align: left;
+                    color: $body-color;
+                    padding-top: 11px;
+                    margin-bottom: 0;
+                    padding-left: 0px;
+                }
+            }
+            &.active {
+                background-color: #fff;
             }
         }
     }
@@ -828,6 +875,9 @@
 .table-scroll {
     overflow-y: auto;
     max-height: 393px;
+    .table {
+        min-width: 0;
+    }
 }
 
 .brand-color-area {

@@ -452,4 +452,13 @@ $sides: (top, bottom, left, right); // Leave this variable alone
             font-size: 0.6875rem;
         }
     }
+    &.inapproved {
+        background-color: $grey-lite;
+        i {
+            font-size: 1.5rem;
+            position: absolute;
+            top: 5px;
+            left: 20px;
+        }
+    }
 }

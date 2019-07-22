@@ -1,26 +1,17 @@
 <template>
     <div class="wrap-content">
-        <div class="filter-section">
-            <div class="row">
-                <div class="col-md-4">
-                    <h2>Import Data</h2>
-                </div>
-            </div>
-        </div>
-
-        <div class="data-import">
+        <div class="data-import small-card">
             <div class="row">
                 <div
-                    class="col-lg-4 col-md-6"
+                    class="col-lg-3 col-md-6"
                     v-for="(data, index) in listData"
                     :key="index"
                 >
                     <card-data
                         :logo="data.logo"
                         :name="data.name"
-                        :lastUpdate="data.lastUpdate"
-                        :totalRecord="data.totalRecord"
-                        @updateData="uploadModal()"
+                        :description="data.description"
+                        :active="data.active"
                     ></card-data>
                 </div>
             </div>
@@ -111,61 +102,71 @@ export default {
     */
     data() {
         return {
+            tableItemData: null,
+            listVal: null,
+            listDropdown: false,
             menuListing: [
                 {
-                    anchorLink: '/configuration/idenfo-engine/',
-                    menuLabel: 'Risk Factor',
+                    anchorLink: '/configuration/screening-data/',
+                    menuLabel: 'Gender',
                 },
                 {
-                    anchorLink: '/configuration/idenfo-engine/risk-rating',
-                    menuLabel: 'Risk Rating',
+                    anchorLink: '/configuration/screening-data/deceased',
+                    menuLabel: 'Deceased',
+                },
+                {
+                    anchorLink: '/configuration/screening-data/record-status',
+                    menuLabel: 'Record Status',
+                },
+                {
+                    anchorLink: '/configuration/screening-data/name-type',
+                    menuLabel: 'Name Type',
+                },
+                {
+                    anchorLink: '/configuration/screening-data/descprition-1',
+                    menuLabel: 'Description 1',
+                },
+                {
+                    anchorLink: '/configuration/screening-data/descprition-2',
+                    menuLabel: 'Description 2',
+                },
+                {
+                    anchorLink: '/configuration/screening-data/descprition-3',
+                    menuLabel: 'Description 3',
+                },
+                {
+                    anchorLink: '/configuration/screening-data/role-type',
+                    menuLabel: 'Role Type',
+                },
+                {
+                    anchorLink: '/configuration/screening-data/occupation',
+                    menuLabel: 'Occupation',
+                },
+                {
+                    anchorLink: '/configuration/screening-data/data-type',
+                    menuLabel: 'Data Type',
                 },
                 {
                     anchorLink:
-                        '/configuration/idenfo-engine/document-verification-factor',
-                    menuLabel: 'Document Verification',
+                        '/configuration/screening-data/sanction-refereneve',
+                    menuLabel: 'Sanctions Refereneve',
                 },
                 {
-                    anchorLink:
-                        '/configuration/idenfo-engine/name-screen-score',
-                    menuLabel: 'Name Screening',
-                },
-                {
-                    anchorLink: '/configuration/idenfo-engine/nationality',
-                    menuLabel: 'Nationality',
-                },
-                {
-                    anchorLink: '/configuration/idenfo-engine/country',
+                    anchorLink: '/configuration/screening-data/country',
                     menuLabel: 'Country',
                 },
                 {
-                    anchorLink: '/configuration/idenfo-engine/state',
-                    menuLabel: 'State',
+                    anchorLink: '/configuration/screening-data/country-type',
+                    menuLabel: 'Country Type',
                 },
                 {
-                    anchorLink: '/configuration/idenfo-engine/work',
-                    menuLabel: 'Work Type',
-                },
-                {
-                    anchorLink: '/configuration/idenfo-engine/industry',
-                    menuLabel: 'Industry',
-                },
-                {
-                    anchorLink: '/configuration/idenfo-engine/product',
-                    menuLabel: 'Product Type',
-                },
-                {
-                    anchorLink: '/configuration/idenfo-engine/relationship',
-                    menuLabel: 'Relationship',
-                },
-                {
-                    anchorLink: '/configuration/idenfo-engine/channel',
-                    menuLabel: 'Channel Type',
+                    anchorLink: '/configuration/screening-data/indentification',
+                    menuLabel: 'indentification ',
                 },
                 {
                     anchorLink:
-                        '/configuration/idenfo-engine/purpose-of-action',
-                    menuLabel: 'Purpose of Action',
+                        '/configuration/screening-data/relationship-type',
+                    menuLabel: 'Relationship Type',
                 },
             ],
         }
