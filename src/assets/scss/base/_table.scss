@@ -2,12 +2,14 @@
     border: 1px #d7d7e2 solid;
     overflow: hidden;
     border-radius: 8px 8px 0 0;
+    overflow-x: auto;
 }
 .table {
     border-radius: 8px 8px 0 0;
     border: 0px #d7d7e2 solid;
     overflow: hidden;
     margin-bottom: 0;
+    min-width: 1080px;
 
     thead {
         border: 0px #d7d7e2 solid;
