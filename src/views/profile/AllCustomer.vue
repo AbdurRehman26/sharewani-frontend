@@ -1,40 +1,53 @@
 <template>
     <div class="wrap-content customer-section">
-        <div class="filter-section">
+        <div class="filter-section row-min-space">
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-md-12">
                     <h2>All Customers</h2>
                 </div>
-                <div class="col-md-9 text-right">
+                <div class="col-md-12 row-min-space">
+                    <div class="row">
+                        <div class="col-md-9 row-min-space">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <b-form-group>
+                                        <b-form-radio-group
+                                            :id="index"
+                                            v-model="filterSelected"
+                                            :options="filterList"
+                                            buttons
+                                            button-variant="outline-primary"
+                                            :name="filterName"
+                                        ></b-form-radio-group>
+                                    </b-form-group>
+                                </div>
+                                <div class="col-md-4">
+                                    <base-search></base-search>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 row-min-space">
+                            <div class="row">
+                                <div class="col-md-6 text-right">
+                                    <b-button type="button" variant="primary">
+                                        Apply
+                                    </b-button>
+                                </div>
+                                <div class="col-md-6 text-right">
+                                    <b-button
+                                        v-b-modal.export-process-popup
+                                        type="button"
+                                        variant="secondary"
+                                    >
+                                        Export
+                                    </b-button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <ul>
-                        <li>
-                            <b-form-group>
-                                <b-form-radio-group
-                                    :id="index"
-                                    v-model="filterSelected"
-                                    :options="filterList"
-                                    buttons
-                                    button-variant="outline-primary"
-                                    :name="filterName"
-                                ></b-form-radio-group>
-                            </b-form-group>
-                        </li>
-                        <li>
-                            <base-search></base-search>
-                        </li>
-                        <li>
-                            <b-button type="button" variant="primary"
-                                >Apply</b-button
-                            >
-                        </li>
-                        <li>
-                            <b-button
-                                v-b-modal.export-process-popup
-                                type="button"
-                                variant="secondary"
-                                >Export</b-button
-                            >
-                        </li>
+                        <li></li>
+                        <li></li>
                     </ul>
                 </div>
             </div>
