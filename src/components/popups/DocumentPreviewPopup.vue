@@ -15,7 +15,9 @@
                     class="preview-video"
                     :style="{
                         'background-image':
-                            'url(' + require('@/assets/images/video.png') + ')',
+                            'url(' +
+                            require('@/assets/images/video-cover.png') +
+                            ')',
                     }"
                 ></div>
 
