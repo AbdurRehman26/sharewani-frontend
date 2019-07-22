@@ -4,10 +4,10 @@
 	.heading {
 		font-family: $font-medium;
 		font-size: 1.125rem;
+		margin-bottom: 20px;
 	}
 	&.dashbaord-stastics {
-		padding-left: 10px;
-		padding-right: 10px;
+		padding: 20px 10px;
 		h2 {
 			font-size: $font-size-base;
 			color: $grey-lite;
@@ -29,6 +29,8 @@
 	}
 	.dashboard-charts {
 		height: 430px;
+		padding-bottom: 30px;
+		position: relative;
 
 		.amcharts-div {
 			height: 100%;
@@ -85,3 +87,4 @@
 .logs-total-actions {
 	height: 270px;
 }
+

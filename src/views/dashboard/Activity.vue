@@ -63,7 +63,9 @@
                 </div>
                 <div class="row">
                     <div class="col-xs-12 col-md-12">
-                        <div class="card dashboard-card sm-radius">
+                        <div
+                            class="card dashboard-card activity-timeline-graph sm-radius"
+                        >
                             <div class="dashboard-charts">
                                 <h2 class="heading">Activity Timeline</h2>
                                 <!-- activity timeline dashboard chart -->
