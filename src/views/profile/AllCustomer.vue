@@ -25,18 +25,19 @@
                                     <base-search></base-search>
                                 </div>
                                 <div class="col-md-3 text-right">
-                                    <b-button type="button" variant="primary">
-                                        Apply
-                                    </b-button>
+                                    <base-button
+                                        btnLabel="Apply"
+                                        btnType="submit"
+                                        btnVariant="primary"
+                                    ></base-button>
                                 </div>
                                 <div class="col-md-3 text-right">
-                                    <b-button
+                                    <base-button
                                         v-b-modal.export-process-popup
-                                        type="button"
-                                        variant="secondary"
-                                    >
-                                        Export
-                                    </b-button>
+                                        btnLabel="Export"
+                                        btnType="button"
+                                        btnVariant="secondary"
+                                    ></base-button>
                                 </div>
                             </div>
                         </div>

@@ -304,6 +304,17 @@
             &:last-child {
                 margin-right: 0;
             }
+
+            a {
+                text-decoration: none;
+                color: $secondary;
+
+                i {
+                    margin-right: 8px;
+                    color: $secondary;
+                    font-size: 10px;
+                }
+            }
         }
     }
 
@@ -1204,9 +1215,10 @@
 
 .row-min-space {
     .row {
-        margin-right: -6px;
-        margin-left: -6px;
+        margin-right: -7px;
+        margin-left: -7px;
 
+        .col-md-2,
         .col-md-3,
         .col-md-4,
         .col-md-5,
@@ -1214,6 +1226,7 @@
         .col-md-7,
         .col-md-8,
         .col-md-9,
+        .col-md-10,
         .col-md-12 {
             padding-left: 7px;
             padding-right: 7px;
@@ -1505,5 +1518,11 @@
                 display: block;
             }
         }
+    }
+}
+
+.alert-filter {
+    .btn-group-toggle {
+        width: 100%;
     }
 }

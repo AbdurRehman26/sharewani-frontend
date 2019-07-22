@@ -203,9 +203,11 @@
                     </div>
                     <div class="col-md-12 seprator-line"><hr /></div>
                     <div class="col-md-12">
-                        <b-button type="submit" variant="primary"
-                            >Search now</b-button
-                        >
+                        <base-button
+                            btnLabel="Search now"
+                            btnType="submit"
+                            btnVariant="primary"
+                        ></base-button>
                     </div>
                 </div>
             </b-form>

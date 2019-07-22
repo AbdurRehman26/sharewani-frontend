@@ -8,12 +8,12 @@
         </div>
 
         <div class="export-timeline">
-            <b-button
+            <base-button
                 v-b-modal.export-process-popup
-                type="button"
-                variant="secondary"
-                >Export Timeline</b-button
-            >
+                btnLabel="Export Timeline"
+                btnType="button"
+                btnVariant="secondary"
+            ></base-button>
         </div>
 
         <time-line :yearDetails="yearDetails"></time-line>

@@ -1,67 +1,71 @@
 <template>
     <div class="wrap-content">
-        <div class="filter-section">
+        <div class="filter-section alert-filter">
             <div class="row">
-                <div class="col-md-2">
+                <div class="col-md-12">
                     <h2>Alert</h2>
                 </div>
-                <div class="col-md-12 text-right">
-                    <ul class="flex-items">
-                        <li class="alert-switch">
-                            <b-form-group>
-                                <b-form-radio-group
-                                    v-model="selected"
-                                    :options="options"
-                                    buttons
-                                    button-variant="outline-primary"
-                                    :name="filterName"
-                                ></b-form-radio-group>
-                            </b-form-group>
-                        </li>
-                        <li class="search-filter">
-                            <base-search></base-search>
-                        </li>
-                        <li class="filter-selection">
-                            <b-form-group>
-                                <b-form-select
-                                    id="input-3"
-                                    class="form-control"
-                                    v-model="filterByAlert"
-                                    :options="filterAlertOptions"
-                                    required
-                                ></b-form-select>
-                            </b-form-group>
-                        </li>
-                        <li>
-                            <b-form-group>
-                                <b-form-select
-                                    id="input-3"
-                                    class="form-control"
-                                    v-model="filterByRiskLevel"
-                                    :options="filterRiskLevelOptions"
-                                    required
-                                ></b-form-select>
-                            </b-form-group>
-                        </li>
-                        <li>
-                            <b-form-group>
-                                <b-form-select
-                                    id="input-3"
-                                    class="form-control"
-                                    v-model="filterByAging"
-                                    :options="filterAgingOptions"
-                                    required
-                                ></b-form-select>
-                            </b-form-group>
-                        </li>
-                        <li>
+                <div class="col-md-12 text-right row-min-space">
+                    <div class="row">
+                        <div class="col-md-10 row-min-space">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <b-form-group>
+                                        <b-form-radio-group
+                                            v-model="selected"
+                                            :options="options"
+                                            buttons
+                                            button-variant="outline-primary"
+                                            :name="filterName"
+                                        ></b-form-radio-group>
+                                    </b-form-group>
+                                </div>
+                                <div class="col-md-2">
+                                    <base-search></base-search>
+                                </div>
+                                <div class="col-md-2">
+                                    <b-form-group>
+                                        <b-form-select
+                                            id="input-3"
+                                            class="form-control"
+                                            v-model="filterByAlert"
+                                            :options="filterAlertOptions"
+                                            required
+                                        ></b-form-select>
+                                    </b-form-group>
+                                </div>
+                                <div class="col-md-2">
+                                    <b-form-group>
+                                        <b-form-select
+                                            id="input-3"
+                                            class="form-control"
+                                            v-model="filterByRiskLevel"
+                                            :options="filterRiskLevelOptions"
+                                            required
+                                        ></b-form-select>
+                                    </b-form-group>
+                                </div>
+                                <div class="col-md-2">
+                                    <b-form-group>
+                                        <b-form-select
+                                            id="input-3"
+                                            class="form-control"
+                                            v-model="filterByAging"
+                                            :options="filterAgingOptions"
+                                            required
+                                        ></b-form-select>
+                                    </b-form-group>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
                             <base-button
                                 btnLabel="Apply"
                                 btnType="submit"
                                 btnVariant="primary"
                             ></base-button>
-                        </li>
-                    </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -218,7 +222,7 @@ export default {
             filterName: null,
             filterByAlert: null,
             filterAlertOptions: [
-                { text: 'Filter by Alert Type', value: null },
+                { text: 'Filter by alert type', value: null },
                 'High Risk',
                 'Medium Risk',
                 'Low Risk',
