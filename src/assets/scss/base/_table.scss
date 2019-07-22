@@ -43,6 +43,11 @@
     tbody {
         background-color: $white;
         border: 0px #d7d7e2 solid;
+        tr {
+            &:hover {
+                background: $table-hover;
+            }
+        }
         td {
             color: $grey-darkest;
             padding: $table-row-padding;
@@ -77,6 +82,15 @@
                     font-size: 1rem;
                     &:hover,
                     &:focus {
+                        color: $secondary;
+                    }
+                }
+            }
+        }
+        tr {
+            &:hover {
+                td {
+                    a {
                         color: $secondary;
                     }
                 }

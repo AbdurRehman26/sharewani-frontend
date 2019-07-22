@@ -2,12 +2,12 @@
     <div class="wrap-content customer-section">
         <div class="filter-section">
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-md-12">
                     <h2>All Customers</h2>
                 </div>
-                <div class="col-md-9 text-right">
-                    <ul>
-                        <li>
+                <div class="col-md-12 row-min-space">
+                    <div class="row">
+                        <div class="col-md-6">
                             <b-form-group>
                                 <b-form-radio-group
                                     :id="index"
@@ -18,24 +18,29 @@
                                     :name="filterName"
                                 ></b-form-radio-group>
                             </b-form-group>
-                        </li>
-                        <li>
-                            <base-search></base-search>
-                        </li>
-                        <li>
-                            <b-button type="button" variant="primary"
-                                >Apply</b-button
-                            >
-                        </li>
-                        <li>
-                            <b-button
-                                v-b-modal.export-process-popup
-                                type="button"
-                                variant="secondary"
-                                >Export</b-button
-                            >
-                        </li>
-                    </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <base-search></base-search>
+                                </div>
+                                <div class="col-md-3 text-right">
+                                    <b-button type="button" variant="primary">
+                                        Apply
+                                    </b-button>
+                                </div>
+                                <div class="col-md-3 text-right">
+                                    <b-button
+                                        v-b-modal.export-process-popup
+                                        type="button"
+                                        variant="secondary"
+                                    >
+                                        Export
+                                    </b-button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -334,7 +334,7 @@
         color: $grey-darkest;
         font-size: 1.625rem;
         margin-top: 0;
-        margin-bottom: 32px;
+        margin-bottom: 20px;
     }
     ul {
         list-style-type: none;
@@ -352,6 +352,15 @@
                 margin-right: 0;
             }
         }
+    }
+
+    fieldset {
+        margin-bottom: 0 !important;
+    }
+
+    .btn-secondary,
+    .btn-primary {
+        min-width: 100%;
     }
 
     &.sub-filter {
@@ -1242,11 +1251,16 @@
 
 .row-min-space {
     .row {
-        margin-right: -5px;
-        margin-left: -5px;
+        margin-right: -6px;
+        margin-left: -6px;
 
+        .col-md-3,
         .col-md-4,
+        .col-md-5,
         .col-md-6,
+        .col-md-7,
+        .col-md-8,
+        .col-md-9,
         .col-md-12 {
             padding-left: 7px;
             padding-right: 7px;
