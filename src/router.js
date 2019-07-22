@@ -409,6 +409,37 @@ export default new Router({
                             component: () =>
                                 import(/* webpackChunkName: "nationality" */ './views/configuration/screening-data/Descprition2.vue'),
                         },
+                        {
+                            path: '/configuration/screening-data/descprition-3',
+                            name: 'descprition-3',
+                            component: () =>
+                                import(/* webpackChunkName: "nationality" */ './views/configuration/screening-data/Descprition3.vue'),
+                        },
+                        {
+                            path: '/configuration/screening-data/role-type',
+                            name: 'role-type',
+                            component: () =>
+                                import(/* webpackChunkName: "nationality" */ './views/configuration/screening-data/RoleType.vue'),
+                        },
+                        {
+                            path: '/configuration/screening-data/occupation',
+                            name: 'occupation',
+                            component: () =>
+                                import(/* webpackChunkName: "nationality" */ './views/configuration/screening-data/Occupation.vue'),
+                        },
+                        {
+                            path: '/configuration/screening-data/data-type',
+                            name: 'data-type',
+                            component: () =>
+                                import(/* webpackChunkName: "nationality" */ './views/configuration/screening-data/DataType.vue'),
+                        },
+                        {
+                            path:
+                                '/configuration/screening-data/sanction-reference',
+                            name: 'sanction-reference',
+                            component: () =>
+                                import(/* webpackChunkName: "nationality" */ './views/configuration/screening-data/SactionReference.vue'),
+                        },
                     ],
                 },
                 {

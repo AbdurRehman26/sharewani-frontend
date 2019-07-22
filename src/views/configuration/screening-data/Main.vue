@@ -148,8 +148,8 @@ export default {
                 },
                 {
                     anchorLink:
-                        '/configuration/screening-data/sanction-refereneve',
-                    menuLabel: 'Sanctions Refereneve',
+                        '/configuration/screening-data/sanction-reference',
+                    menuLabel: 'Sanctions Reference',
                 },
                 {
                     anchorLink: '/configuration/screening-data/country',
