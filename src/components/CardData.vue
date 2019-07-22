@@ -1,5 +1,5 @@
 <template>
-    <div class="card custom-card">
+    <div class="card custom-card" :class="active == true ? 'active' : ''">
         <div
             class="logo"
             :style="{
@@ -10,14 +10,15 @@
             }"
         ></div>
         <h4>{{ name }}</h4>
-        <p>{{ lastUpdate }}</p>
-        <p>{{ totalRecord }}</p>
-        <b-button @click="$emit('updateData')" variant="primary"
+        <p v-if="lastUpdate">{{ lastUpdate }}</p>
+        <p v-if="totalRecord">{{ totalRecord }}</p>
+        <p v-if="description" class="caption-description">{{ description }}</p>
+        <!-- <b-button @click="$emit('updateData')" variant="primary"
             >Update Data Set</b-button
         >
         <b-button @click="$emit('currentData')" variant="link"
             ><i class="icon-cloud"></i> Download Current Data Set</b-button
-        >
+        > -->
     </div>
 </template>
 <script>
@@ -45,6 +46,14 @@ export default {
         totalRecord: {
             type: String,
             default: null,
+        },
+        description: {
+            type: String,
+            default: null,
+        },
+        active: {
+            type: Boolean,
+            default: false,
         },
     }, // End of Component > props
 
