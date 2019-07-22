@@ -1,5 +1,5 @@
 <template>
-    <b-form class="step-form text-center">
+    <b-form class="step-form text-center registered-customer-id">
         <div class="row">
             <div class="col-lg-12">
                 <div class="fields-area registration-completed">

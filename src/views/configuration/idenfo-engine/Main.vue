@@ -48,14 +48,18 @@
             </ul>
         </div>
         <div class="config-card-block">
-            <router-view />
+            <router-view @item-length="tableItemLength" />
+            <pagination v-if="tableItemData > 9"></pagination>
         </div>
     </div>
 </template>
 
 <script>
+import pagination from '@/components/Pagination.vue'
 export default {
-    components: {},
+    components: {
+        pagination,
+    },
 
     /*
     |--------------------------------------------------------------------------
@@ -80,6 +84,7 @@ export default {
     */
     data() {
         return {
+            tableItemData: null,
             listVal: null,
             listDropdown: false,
             menuListing: [
@@ -157,6 +162,9 @@ export default {
     methods: {
         listWidthVal() {
             this.listVal = this.$refs.listingArea.offsetWidth
+        },
+        tableItemLength(val) {
+            this.tableItemData = val
         },
     }, // End of Component > methods
 

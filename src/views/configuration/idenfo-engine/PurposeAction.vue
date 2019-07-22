@@ -55,7 +55,6 @@
                 </template>
             </b-table>
         </div>
-        <pagination></pagination>
         <modify-risk-factor-popup></modify-risk-factor-popup>
         <archive-popup
             title="Archive Action Management Factor"
@@ -66,12 +65,10 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import pagination from '@/components/Pagination.vue'
 import modifyRiskFactorPopup from '@/components/popups/ModifyRiskFactorPopup.vue'
 import archivePopup from '@/components/popups/ArchivePopup.vue'
 export default {
     components: {
-        pagination,
         modifyRiskFactorPopup,
         archivePopup,
     },
@@ -127,6 +124,7 @@ export default {
             let configTableItems = this.configurationData.idenfoEngine
                 .purposeActionManagement.items //get user data from store
             this.items = configTableItems //push data into array
+            this.$emit('item-length', this.items.length)
         },
     }, // End of Component > methods
 

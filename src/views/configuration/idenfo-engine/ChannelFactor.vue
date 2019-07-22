@@ -50,18 +50,15 @@
                 </template>
             </b-table>
         </div>
-        <pagination></pagination>
         <modify-channel-popup></modify-channel-popup>
     </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
-import pagination from '@/components/Pagination.vue'
 import modifyChannelPopup from '@/components/popups/ModifyChannelPopup.vue'
 export default {
     components: {
-        pagination,
         modifyChannelPopup,
     },
 
@@ -116,6 +113,7 @@ export default {
             let configTableItems = this.configurationData.idenfoEngine
                 .channelFactor.items //get user data from store
             this.items = configTableItems //push data into array
+            this.$emit('item-length', this.items.length)
         },
     }, // End of Component > methods
 

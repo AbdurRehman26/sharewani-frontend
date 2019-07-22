@@ -21,18 +21,15 @@
                 </template>
             </b-table>
         </div>
-        <pagination></pagination>
         <modify-liveness-detection-popup></modify-liveness-detection-popup>
     </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
-import pagination from '@/components/Pagination.vue'
 import modifyLivenessDetectionPopup from '@/components/popups/ModifyLivenessDetectionPopup.vue'
 export default {
     components: {
-        pagination,
         modifyLivenessDetectionPopup,
     },
 
@@ -87,6 +84,7 @@ export default {
             let documentVerificationItems = this.configurationData.idenfoEngine
                 .documentVerification.items //get user data from store
             this.items = documentVerificationItems //push data into array
+            this.$emit('item-length', this.items.length)
         },
     }, // End of Component > methods
 

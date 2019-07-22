@@ -91,7 +91,7 @@ export default {
                     menuLabel: 'Register Customer',
                 },
                 {
-                    anchorLink: '/configuration',
+                    anchorLink: '/configuration/idenfo-engine/',
                     icon: 'icon-configurations',
                     menuLabel: 'Configurations',
                 },

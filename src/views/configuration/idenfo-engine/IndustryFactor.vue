@@ -91,7 +91,6 @@
                 </template>
             </b-table>
         </div>
-        <pagination></pagination>
         <add-industry-popup></add-industry-popup>
         <archive-popup
             title="Archive Industry Factor"
@@ -102,12 +101,10 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import pagination from '@/components/Pagination.vue'
 import addIndustryPopup from '@/components/popups/AddIndustryPopup.vue'
 import archivePopup from '@/components/popups/ArchivePopup.vue'
 export default {
     components: {
-        pagination,
         addIndustryPopup,
         archivePopup,
     },
@@ -163,6 +160,7 @@ export default {
             let configTableItems = this.configurationData.idenfoEngine.industry
                 .items //get user data from store
             this.items = configTableItems //push data into array
+            this.$emit('item-length', this.items.length)
         },
     }, // End of Component > methods
 
