@@ -1373,21 +1373,498 @@ export default {
             {
                 logo: 'logo1.png',
                 name: 'Do Jones Data',
-                lastUpdate: 'Last updated: June 10, 2019',
-                totalRecord: 'Total Records: 45,650',
+                description: 'Manage Dow Jones Data',
+                active: true,
+                // lastUpdate: 'Last updated: June 10, 2019',
+                // totalRecord: 'Total Records: 45,650',
             },
             {
                 logo: 'logo2.png',
                 name: 'World Bank Data',
-                lastUpdate: 'Last updated: June 9, 2019',
-                totalRecord: 'Total Records: 23,956',
+                description: 'Manage World Check Data',
+                // lastUpdate: 'Last updated: June 9, 2019',
+                // totalRecord: 'Total Records: 23,956',
             },
             {
                 logo: 'logo3.png',
                 name: 'Client Blacklist Data',
-                lastUpdate: 'Last updated: June 12, 2019',
-                totalRecord: 'Total Records: 2,450',
+                description: "Manage Client's Blacklist Data",
+                // lastUpdate: 'Last updated: June 12, 2019',
+                // totalRecord: 'Total Records: 2,450',
             },
         ],
+        screeningData: {
+            genderTable: {
+                fields: [
+                    {
+                        key: 'gendertype',
+                        label: 'Gender Type',
+                        class: 'w-320px',
+                        sortable: true,
+                    },
+                    {
+                        key: 'status',
+                        label: 'Status',
+                        class: 'text-center',
+                        sortable: true,
+                    },
+                    {
+                        key: 'action',
+                        label: 'ACTION',
+                        class: 'single-list',
+                    },
+                ],
+                items: [
+                    {
+                        gendertype: 'Male',
+                        status: [
+                            {
+                                cssClass: 'approved',
+                                icon: 'icon-check',
+                                label: 'Active',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        gendertype: 'Female',
+                        status: [
+                            {
+                                cssClass: 'approved',
+                                icon: 'icon-check',
+                                label: 'Active',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        gendertype: 'Unknown',
+                        status: [
+                            {
+                                cssClass: 'approved',
+                                icon: 'icon-check',
+                                label: 'Active',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                ],
+            },
+
+            deceasedTable: {
+                fields: [
+                    {
+                        key: 'deceasedVal',
+                        label: 'Deceased Value',
+                        class: 'w-320px',
+                        sortable: true,
+                    },
+                    {
+                        key: 'status',
+                        label: 'Status',
+                        class: 'text-center',
+                        sortable: true,
+                    },
+                    {
+                        key: 'action',
+                        label: 'ACTION',
+                        class: 'single-list',
+                    },
+                ],
+                items: [
+                    {
+                        deceasedVal: 'No',
+                        status: [
+                            {
+                                cssClass: 'approved',
+                                icon: 'icon-check',
+                                label: 'Active',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        deceasedVal: 'Yes',
+                        status: [
+                            {
+                                cssClass: 'inapproved',
+                                icon: 'icon-close',
+                                label: 'Inactive',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                ],
+            },
+
+            recordStatus: {
+                fields: [
+                    {
+                        key: 'recordStatus',
+                        label: 'Record Status',
+                        class: 'w-320px',
+                        sortable: true,
+                    },
+                    {
+                        key: 'status',
+                        label: 'Status',
+                        class: 'text-center',
+                        sortable: true,
+                    },
+                    {
+                        key: 'action',
+                        label: 'ACTION',
+                        class: 'single-list',
+                    },
+                ],
+                items: [
+                    {
+                        recordStatus: 'Active',
+                        status: [
+                            {
+                                cssClass: 'approved',
+                                icon: 'icon-check',
+                                label: 'Active',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        recordStatus: 'inactive',
+                        status: [
+                            {
+                                cssClass: 'inapproved',
+                                icon: 'icon-close',
+                                label: 'Inactive',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                ],
+            },
+
+            nameType: {
+                fields: [
+                    {
+                        key: 'descriptionid',
+                        label: 'Name Type Id',
+                        sortable: true,
+                        class: 'id-center',
+                    },
+                    {
+                        key: 'nametype',
+                        label: 'Name Type',
+                        sortable: true,
+                    },
+                    {
+                        key: 'recordtype',
+                        label: 'Record Type',
+                        sortable: true,
+                    },
+                    {
+                        key: 'status',
+                        label: 'status',
+                        class: 'text-center',
+                        sortable: true,
+                    },
+                    {
+                        key: 'action',
+                        label: 'ACTION',
+                        class: 'single-list',
+                    },
+                ],
+                items: [
+                    {
+                        descriptionid: 1,
+                        nametype: 'Primary Name',
+                        recordtype: 'Person',
+                        status: [
+                            {
+                                cssClass: 'approved',
+                                icon: 'icon-check',
+                                label: 'Active',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        descriptionid: 2,
+                        nametype: 'Also Known As',
+                        recordtype: 'Person',
+                        status: [
+                            {
+                                cssClass: 'approved',
+                                icon: 'icon-check',
+                                label: 'Active',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        descriptionid: 3,
+                        nametype: 'Low Quality AKA',
+                        recordtype: 'Person',
+                        status: [
+                            {
+                                cssClass: 'inapproved',
+                                icon: 'icon-close',
+                                label: 'Inactive',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                ],
+            },
+
+            descriptionStatusOne: {
+                fields: [
+                    {
+                        key: 'descriptionid',
+                        label: 'Description 1 ID',
+                        sortable: true,
+                        class: 'id-center',
+                    },
+                    {
+                        key: 'description',
+                        label: 'Description 1',
+                        sortable: true,
+                    },
+                    {
+                        key: 'recordtype',
+                        label: 'Record Type',
+                        sortable: true,
+                    },
+                    {
+                        key: 'status',
+                        label: 'status',
+                        class: 'text-center',
+                        sortable: true,
+                    },
+                    {
+                        key: 'action',
+                        label: 'ACTION',
+                        class: 'single-list',
+                    },
+                ],
+                items: [
+                    {
+                        descriptionid: 1,
+                        description: 'Politically Exposed Person (PEP)',
+                        recordtype: 'Person',
+                        status: [
+                            {
+                                cssClass: 'approved',
+                                icon: 'icon-check',
+                                label: 'Active',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        descriptionid: 2,
+                        description: 'Relative or Close Associate (RCA)',
+                        recordtype: 'Person',
+                        status: [
+                            {
+                                cssClass: 'approved',
+                                icon: 'icon-check',
+                                label: 'Active',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        descriptionid: 3,
+                        description: 'Special Intrest Person (SIP)',
+                        recordtype: 'Person',
+                        status: [
+                            {
+                                cssClass: 'approved',
+                                icon: 'icon-check',
+                                label: 'Active',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        descriptionid: 4,
+                        description: 'Special Intrest Entity (SIE)',
+                        recordtype: 'Person',
+                        status: [
+                            {
+                                cssClass: 'inapproved',
+                                icon: 'icon-close',
+                                label: 'Inactive',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                ],
+            },
+
+            descriptionStatusTwo: {
+                fields: [
+                    {
+                        key: 'descriptionid',
+                        label: 'Description 2 ID',
+                        sortable: true,
+                        class: 'id-center',
+                    },
+                    {
+                        key: 'description1',
+                        label: 'Description 1',
+                        sortable: true,
+                    },
+                    {
+                        key: 'description2',
+                        label: 'Description 2',
+                        sortable: true,
+                    },
+                    {
+                        key: 'status',
+                        label: 'status',
+                        class: 'text-center',
+                        sortable: true,
+                    },
+                    {
+                        key: 'action',
+                        label: 'ACTION',
+                        class: 'single-list',
+                    },
+                ],
+                items: [
+                    {
+                        descriptionid: 1,
+                        description1: 'Special Intrest Person (SIP)',
+                        description2: 'Section Lists',
+                        status: [
+                            {
+                                cssClass: 'approved',
+                                icon: 'icon-check',
+                                label: 'Active',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        descriptionid: 2,
+                        description1: 'Special Intrest Person (SIP)',
+                        description2: 'Other Offical Lists',
+                        status: [
+                            {
+                                cssClass: 'approved',
+                                icon: 'icon-check',
+                                label: 'Active',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        descriptionid: 3,
+                        description1: 'Special Intrest Entity (SIE)',
+                        description2: 'Section Lists',
+                        status: [
+                            {
+                                cssClass: 'inapproved',
+                                icon: 'icon-close',
+                                label: 'Inactive',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        descriptionid: 4,
+                        description1: 'Special Intrest Entity (SIE)',
+                        description2: 'Other Offical Lists',
+                        status: [
+                            {
+                                cssClass: 'inapproved',
+                                icon: 'icon-close',
+                                label: 'Inactive',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        descriptionid: 5,
+                        description1: 'Special Intrest Person (SIP)',
+                        description2: 'Terror',
+                        status: [
+                            {
+                                cssClass: 'approved',
+                                icon: 'icon-check',
+                                label: 'Active',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        descriptionid: 6,
+                        description1: 'Special Intrest Person (SIP)',
+                        description2: 'Organised Crime',
+                        status: [
+                            {
+                                cssClass: 'approved',
+                                icon: 'icon-check',
+                                label: 'Active',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        descriptionid: 7,
+                        description1: 'Special Intrest Person (SIP)',
+                        description2: 'Financial Crime',
+                        status: [
+                            {
+                                cssClass: 'approved',
+                                icon: 'icon-check',
+                                label: 'Active',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        descriptionid: 8,
+                        description1: 'Special Intrest Person (SIP)',
+                        description2: 'Trafflicking',
+                        status: [
+                            {
+                                cssClass: 'approved',
+                                icon: 'icon-check',
+                                label: 'Active',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        descriptionid: 9,
+                        description1: 'Special Intrest Person (SIP)',
+                        description2: 'Corruption',
+                        status: [
+                            {
+                                cssClass: 'approved',
+                                icon: 'icon-check',
+                                label: 'Active',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        descriptionid: 10,
+                        description1: 'Special Intrest Person (SIP)',
+                        description2: 'War Crimes',
+                        status: [
+                            {
+                                cssClass: 'approved',
+                                icon: 'icon-check',
+                                label: 'Active',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                ],
+            },
+        },
     },
 }
