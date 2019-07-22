@@ -1035,7 +1035,7 @@
             text-transform: capitalize;
             color: $body-color;
             font-family: $font_medium;
-            font-size: 0.875rem;
+            font-size: 0.875rem !important;
             margin-bottom: 0;
         }
     }
