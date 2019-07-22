@@ -1,43 +1,46 @@
 <template>
     <div class="wrap-content">
-        <div class="filter-section">
+        <div class="filter-section row-min-space">
             <div class="row">
                 <div class="col-md-4">
                     <h2>Activity Dashboard</h2>
                 </div>
                 <div class="col-md-8 text-right">
-                    <ul>
-                        <li>
+                    <div class="row">
+                        <div class="col-md-4 col-xs-12">
                             <div class="form-group date-pickers">
                                 <i class="icon-calendar"></i>
                                 <datepicker
                                     placeholder="Start Date"
                                 ></datepicker>
                             </div>
-                        </li>
-                        <li>
+                        </div>
+                        <div class="col-md-4 col-xs-12">
                             <div class="form-group date-pickers">
                                 <i class="icon-calendar"></i>
                                 <datepicker placeholder="End Date"></datepicker>
                             </div>
-                        </li>
-                        <li>
-                            <base-button
-                                btnLabel="Apply"
-                                btnType="submit"
-                                btnVariant="primary"
-                            ></base-button>
-                        </li>
-
-                        <li>
-                            <base-button
-                                v-b-modal.export-report-popup
-                                btnLabel="Export"
-                                btnType="submit"
-                                btnVariant="secondary"
-                            ></base-button>
-                        </li>
-                    </ul>
+                        </div>
+                        <div class="col-md-4 col-xs-12">
+                            <div class="row">
+                                <div class="col-xs-12 col-md-5">
+                                    <base-button
+                                        btnLabel="Apply"
+                                        btnType="submit"
+                                        btnVariant="primary"
+                                    ></base-button>
+                                </div>
+                                <div class="col-xs-12 col-md-7">
+                                    <base-button
+                                        v-b-modal.export-report-popup
+                                        btnLabel="Export"
+                                        btnType="submit"
+                                        btnVariant="secondary"
+                                    ></base-button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

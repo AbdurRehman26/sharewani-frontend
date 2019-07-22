@@ -1,15 +1,15 @@
 <template>
     <div class="wrap-content">
-        <div class="filter-section alert-filter">
+        <div class="filter-section alert-filter row-min-space">
             <div class="row">
                 <div class="col-md-12">
                     <h2>Alert</h2>
                 </div>
-                <div class="col-md-12 text-right row-min-space">
+                <div class="col-md-12">
                     <div class="row">
-                        <div class="col-md-10 row-min-space">
+                        <div class="col-md-11">
                             <div class="row">
-                                <div class="col-md-4">
+                                <div class="col-xs-12 col-md-3">
                                     <b-form-group>
                                         <b-form-radio-group
                                             v-model="selected"
@@ -20,45 +20,55 @@
                                         ></b-form-radio-group>
                                     </b-form-group>
                                 </div>
-                                <div class="col-md-2">
-                                    <base-search></base-search>
-                                </div>
-                                <div class="col-md-2">
-                                    <b-form-group>
-                                        <b-form-select
-                                            id="input-3"
-                                            class="form-control"
-                                            v-model="filterByAlert"
-                                            :options="filterAlertOptions"
-                                            required
-                                        ></b-form-select>
-                                    </b-form-group>
-                                </div>
-                                <div class="col-md-2">
-                                    <b-form-group>
-                                        <b-form-select
-                                            id="input-3"
-                                            class="form-control"
-                                            v-model="filterByRiskLevel"
-                                            :options="filterRiskLevelOptions"
-                                            required
-                                        ></b-form-select>
-                                    </b-form-group>
-                                </div>
-                                <div class="col-md-2">
-                                    <b-form-group>
-                                        <b-form-select
-                                            id="input-3"
-                                            class="form-control"
-                                            v-model="filterByAging"
-                                            :options="filterAgingOptions"
-                                            required
-                                        ></b-form-select>
-                                    </b-form-group>
+                                <div class="col-xs-12 col-md-9">
+                                    <div class="row">
+                                        <div class="col-xs-12 col-md-3">
+                                            <base-search></base-search>
+                                        </div>
+                                        <div class="col-xs-12 col-md-3">
+                                            <b-form-group>
+                                                <b-form-select
+                                                    id="input-3"
+                                                    class="form-control"
+                                                    v-model="filterByAlert"
+                                                    :options="
+                                                        filterAlertOptions
+                                                    "
+                                                    required
+                                                ></b-form-select>
+                                            </b-form-group>
+                                        </div>
+                                        <div class="col-xs-12 col-md-3">
+                                            <b-form-group>
+                                                <b-form-select
+                                                    id="input-3"
+                                                    class="form-control"
+                                                    v-model="filterByRiskLevel"
+                                                    :options="
+                                                        filterRiskLevelOptions
+                                                    "
+                                                    required
+                                                ></b-form-select>
+                                            </b-form-group>
+                                        </div>
+                                        <div class="col-xs-12 col-md-3">
+                                            <b-form-group>
+                                                <b-form-select
+                                                    id="input-3"
+                                                    class="form-control"
+                                                    v-model="filterByAging"
+                                                    :options="
+                                                        filterAgingOptions
+                                                    "
+                                                    required
+                                                ></b-form-select>
+                                            </b-form-group>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-2">
+                        <div class="col-md-1">
                             <base-button
                                 btnLabel="Apply"
                                 btnType="submit"

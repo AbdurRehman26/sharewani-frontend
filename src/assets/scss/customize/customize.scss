@@ -365,13 +365,11 @@
         }
     }
 
-    fieldset {
-        margin-bottom: 0 !important;
-    }
-
     .btn-secondary,
     .btn-primary {
         min-width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 
     &.sub-filter {
@@ -1265,9 +1263,10 @@
 
 .row-min-space {
     .row {
-        margin-right: -7px;
-        margin-left: -7px;
+        margin-right: -4px;
+        margin-left: -4px;
 
+        .col-md-1,
         .col-md-2,
         .col-md-3,
         .col-md-4,
@@ -1277,9 +1276,10 @@
         .col-md-8,
         .col-md-9,
         .col-md-10,
+        .col-md-11,
         .col-md-12 {
-            padding-left: 7px;
-            padding-right: 7px;
+            padding-left: 4px;
+            padding-right: 4px;
         }
     }
 }
@@ -1574,5 +1574,10 @@
 .alert-filter {
     .btn-group-toggle {
         width: 100%;
+    }
+    .btn-secondary,
+    .btn-primary {
+        padding-left: 10px;
+        padding-right: 10px;
     }
 }

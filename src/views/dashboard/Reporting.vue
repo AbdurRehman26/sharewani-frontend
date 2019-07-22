@@ -2,20 +2,19 @@
     <div class="wrap-content">
         <div class="filter-section">
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-10">
                     <h2>Customer Statistics</h2>
                 </div>
-                <div class="col-md-8 text-right">
-                    <ul>
-                        <li>
-                            <base-button
-                                v-b-modal.export-report-popup
-                                btnLabel="Export"
-                                btnType="submit"
-                                btnVariant="secondary"
-                            ></base-button>
-                        </li>
-                    </ul>
+                <div class="col-md-2">
+                    <b-form-group>
+                        <base-button
+                            v-b-modal.export-report-popup
+                            btnLabel="Export"
+                            btnType="submit"
+                            btnVariant="secondary"
+                            class="btn-block"
+                        ></base-button>
+                    </b-form-group>
                 </div>
             </div>
         </div>

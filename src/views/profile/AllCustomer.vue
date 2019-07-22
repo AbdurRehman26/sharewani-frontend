@@ -1,11 +1,11 @@
 <template>
     <div class="wrap-content customer-section">
-        <div class="filter-section">
+        <div class="filter-section row-min-space">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-3">
                     <h2>All Customers</h2>
                 </div>
-                <div class="col-md-12 row-min-space">
+                <div class="col-md-9 ">
                     <div class="row">
                         <div class="col-md-6">
                             <b-form-group>
