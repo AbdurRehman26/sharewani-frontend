@@ -30,19 +30,16 @@
                 </template>
             </b-table>
         </div>
-        <pagination></pagination>
         <modify-risk-rating-popup></modify-risk-rating-popup>
     </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
-import pagination from '@/components/Pagination.vue'
 import modifyRiskRatingPopup from '@/components/popups/ModifyRiskRatingPopup.vue'
 
 export default {
     components: {
-        pagination,
         modifyRiskRatingPopup,
     },
 
@@ -97,6 +94,7 @@ export default {
             let configTableItems = this.configurationData.idenfoEngine
                 .riskRating.items //get user data from store
             this.items = configTableItems //push data into array
+            this.$emit('item-length', this.items.length)
         },
     }, // End of Component > methods
 

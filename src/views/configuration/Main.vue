@@ -42,8 +42,8 @@ export default {
                     menuLabel: 'Idenfo Engine',
                 },
                 {
-                    anchorLink: '/configuration/import-data/',
-                    menuLabel: 'Import Data',
+                    anchorLink: '/configuration/screening-data/',
+                    menuLabel: 'Screening Data',
                 },
                 {
                     anchorLink: '/configuration/form-builder/',

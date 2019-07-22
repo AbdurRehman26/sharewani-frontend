@@ -55,7 +55,6 @@
                 </template>
             </b-table>
         </div>
-        <pagination></pagination>
         <add-purpose-popup></add-purpose-popup>
         <archive-popup
             title="Archive Purpose of Action"
@@ -66,12 +65,10 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import pagination from '@/components/Pagination.vue'
 import addPurposePopup from '@/components/popups/AddPurposePopup.vue'
 import archivePopup from '@/components/popups/ArchivePopup.vue'
 export default {
     components: {
-        pagination,
         addPurposePopup,
         archivePopup,
     },
@@ -127,6 +124,7 @@ export default {
             let configTableItems = this.configurationData.idenfoEngine
                 .purposeActionManagement.items //get user data from store
             this.items = configTableItems //push data into array
+            this.$emit('item-length', this.items.length)
         },
     }, // End of Component > methods
 

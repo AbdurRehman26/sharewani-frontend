@@ -10,7 +10,7 @@
                     record 10 seconds video.
                 </p>
                 <div class="video-record">
-                    <img src="@/assets/images/video.png" />
+                    <img src="@/assets/images/video-cover.png" />
                     <div class="video-play">
                         <i class="icon-record">
                             <i class="path1"></i>

@@ -350,10 +350,30 @@ export default new Router({
                     ],
                 },
                 {
-                    path: '/configuration/import-data/',
-                    name: 'import-data',
+                    path: '/configuration/screening-data/',
+                    name: 'screening-data',
                     component: () =>
-                        import(/* webpackChunkName: "customer" */ './views/configuration/ImportData.vue'),
+                        import(/* webpackChunkName: "customer" */ './views/configuration/screening-data/Main.vue'),
+                    children: [
+                        {
+                            path: '/configuration/screening-data/gender',
+                            name: 'riskFactor',
+                            component: () =>
+                                import(/* webpackChunkName: "riskFactor" */ './views/configuration/screening-data/Main.vue'),
+                        },
+                        {
+                            path: '/',
+                            name: 'riskFactor',
+                            component: () =>
+                                import(/* webpackChunkName: "nationality" */ './views/configuration/screening-data/Main.vue'),
+                        },
+                        {
+                            path: '/configuration/screening-data/',
+                            name: 'nationality',
+                            component: () =>
+                                import(/* webpackChunkName: "nationality" */ './views/configuration/screening-data/Main.vue'),
+                        },
+                    ],
                 },
                 {
                     path: '/configuration/manual-review/',

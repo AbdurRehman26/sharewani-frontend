@@ -1,0 +1,18 @@
+image: node:8.12.0
+
+pipelines:
+    branches:
+        html-deploy-firebase:
+            - step:
+                  name: Deploy html to firebase
+                  deployment: staging
+                  caches:
+                      - node
+                  script:
+                      - export VUE_APP_TITLE="$VUE_APP_TITLE_HTML"
+                      - npm install
+                      - npm run build
+                      - pipe: atlassian/firebase-deploy:0.3.1
+                        variables:
+                            FIREBASE_TOKEN: $FIREBASE_TOKEN
+                            PROJECT_ID: idenfo-html

@@ -21,18 +21,15 @@
                 </template>
             </b-table>
         </div>
-        <pagination></pagination>
         <modify-score-popup></modify-score-popup>
     </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
-import pagination from '@/components/Pagination.vue'
 import modifyScorePopup from '@/components/popups/ModifyScorePopup.vue'
 export default {
     components: {
-        pagination,
         modifyScorePopup,
     },
 
@@ -87,6 +84,7 @@ export default {
             let screenScoreFactorItems = this.configurationData.idenfoEngine
                 .screenScoreFactor.items //get user data from store
             this.items = screenScoreFactorItems //push data into array
+            this.$emit('item-length', this.items.length)
         },
     }, // End of Component > methods
 

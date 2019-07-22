@@ -51,7 +51,6 @@
                 </template>
             </b-table>
         </div>
-        <pagination></pagination>
         <add-work-popup></add-work-popup>
         <archive-popup
             title="Archive Work Type Factor"
@@ -62,13 +61,11 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import pagination from '@/components/Pagination.vue'
 import addWorkPopup from '@/components/popups/AddWorkPopup.vue'
 import archivePopup from '@/components/popups/ArchivePopup.vue'
 
 export default {
     components: {
-        pagination,
         archivePopup,
         addWorkPopup,
     },
@@ -124,6 +121,7 @@ export default {
             let configTableItems = this.configurationData.idenfoEngine
                 .workfactor.items //get user data from store
             this.items = configTableItems //push data into array
+            this.$emit('item-length', this.items.length)
         },
     }, // End of Component > methods
 

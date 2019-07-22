@@ -53,7 +53,6 @@
                 </template>
             </b-table>
         </div>
-        <pagination></pagination>
         <add-country-popup></add-country-popup>
         <archive-popup
             title="Archive Country Factor"
@@ -64,13 +63,11 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import pagination from '@/components/Pagination.vue'
 import addCountryPopup from '@/components/popups/AddCountryPopup.vue'
 import archivePopup from '@/components/popups/ArchivePopup.vue'
 
 export default {
     components: {
-        pagination,
         addCountryPopup,
         archivePopup,
     },
@@ -127,6 +124,7 @@ export default {
             let configTableItems = this.configurationData.idenfoEngine.country
                 .items //get user data from store
             this.items = configTableItems //push data into array
+            this.$emit('item-length', this.items.length)
         },
     }, // End of Component > methods
 
