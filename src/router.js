@@ -426,12 +426,18 @@ export default new Router({
                             name: 'occupation',
                             component: () =>
                                 import(/* webpackChunkName: "nationality" */ './views/configuration/screening-data/Occupation.vue'),
+                            meta: {
+                                responsiveMenuItem: true,
+                            },
                         },
                         {
                             path: '/configuration/screening-data/data-type',
                             name: 'data-type',
                             component: () =>
                                 import(/* webpackChunkName: "nationality" */ './views/configuration/screening-data/DataType.vue'),
+                            meta: {
+                                responsiveMenuItem: true,
+                            },
                         },
                         {
                             path:
@@ -439,6 +445,9 @@ export default new Router({
                             name: 'sanction-reference',
                             component: () =>
                                 import(/* webpackChunkName: "nationality" */ './views/configuration/screening-data/SactionReference.vue'),
+                            meta: {
+                                responsiveMenuItem: true,
+                            },
                         },
                     ],
                 },

@@ -1488,7 +1488,7 @@ export default {
                         status: [
                             {
                                 cssClass: 'inapproved',
-                                icon: 'icon-close',
+                                icon: 'icon-wrong',
                                 label: 'Inactive',
                             },
                         ],
@@ -1534,7 +1534,7 @@ export default {
                         status: [
                             {
                                 cssClass: 'inapproved',
-                                icon: 'icon-close',
+                                icon: 'icon-wrong',
                                 label: 'Inactive',
                             },
                         ],
@@ -1607,7 +1607,7 @@ export default {
                         status: [
                             {
                                 cssClass: 'inapproved',
-                                icon: 'icon-close',
+                                icon: 'icon-wrong',
                                 label: 'Inactive',
                             },
                         ],
@@ -1693,7 +1693,7 @@ export default {
                         status: [
                             {
                                 cssClass: 'inapproved',
-                                icon: 'icon-close',
+                                icon: 'icon-wrong',
                                 label: 'Inactive',
                             },
                         ],
@@ -1766,7 +1766,7 @@ export default {
                         status: [
                             {
                                 cssClass: 'inapproved',
-                                icon: 'icon-close',
+                                icon: 'icon-wrong',
                                 label: 'Inactive',
                             },
                         ],
@@ -1779,7 +1779,7 @@ export default {
                         status: [
                             {
                                 cssClass: 'inapproved',
-                                icon: 'icon-close',
+                                icon: 'icon-wrong',
                                 label: 'Inactive',
                             },
                         ],
@@ -1904,7 +1904,7 @@ export default {
                         status: [
                             {
                                 cssClass: 'inapproved',
-                                icon: 'icon-close',
+                                icon: 'icon-wrong',
                                 label: 'Inactive',
                             },
                         ],
@@ -1917,7 +1917,7 @@ export default {
                         status: [
                             {
                                 cssClass: 'inapproved',
-                                icon: 'icon-close',
+                                icon: 'icon-wrong',
                                 label: 'Inactive',
                             },
                         ],
@@ -1930,7 +1930,7 @@ export default {
                         status: [
                             {
                                 cssClass: 'inapproved',
-                                icon: 'icon-close',
+                                icon: 'icon-wrong',
                                 label: 'Inactive',
                             },
                         ],
@@ -1943,7 +1943,7 @@ export default {
                         status: [
                             {
                                 cssClass: 'inapproved',
-                                icon: 'icon-close',
+                                icon: 'icon-wrong',
                                 label: 'Inactive',
                             },
                         ],
@@ -1956,7 +1956,7 @@ export default {
                         status: [
                             {
                                 cssClass: 'inapproved',
-                                icon: 'icon-close',
+                                icon: 'icon-wrong',
                                 label: 'Inactive',
                             },
                         ],
@@ -1969,7 +1969,7 @@ export default {
                         status: [
                             {
                                 cssClass: 'inapproved',
-                                icon: 'icon-close',
+                                icon: 'icon-wrong',
                                 label: 'Inactive',
                             },
                         ],
@@ -1982,7 +1982,7 @@ export default {
                         status: [
                             {
                                 cssClass: 'inapproved',
-                                icon: 'icon-close',
+                                icon: 'icon-wrong',
                                 label: 'Inactive',
                             },
                         ],
@@ -1996,7 +1996,7 @@ export default {
                         status: [
                             {
                                 cssClass: 'inapproved',
-                                icon: 'icon-close',
+                                icon: 'icon-wrong',
                                 label: 'Inactive',
                             },
                         ],
@@ -2010,7 +2010,7 @@ export default {
                         status: [
                             {
                                 cssClass: 'inapproved',
-                                icon: 'icon-close',
+                                icon: 'icon-wrong',
                                 label: 'Inactive',
                             },
                         ],
@@ -2024,7 +2024,7 @@ export default {
                         status: [
                             {
                                 cssClass: 'inapproved',
-                                icon: 'icon-close',
+                                icon: 'icon-wrong',
                                 label: 'Inactive',
                             },
                         ],
@@ -2178,7 +2178,7 @@ export default {
                         status: [
                             {
                                 cssClass: 'inapproved',
-                                icon: 'icon-close',
+                                icon: 'icon-wrong',
                                 label: 'Inactive',
                             },
                         ],
@@ -2190,7 +2190,7 @@ export default {
                         status: [
                             {
                                 cssClass: 'inapproved',
-                                icon: 'icon-close',
+                                icon: 'icon-wrong',
                                 label: 'Inactive',
                             },
                         ],
@@ -2214,7 +2214,7 @@ export default {
                         status: [
                             {
                                 cssClass: 'inapproved',
-                                icon: 'icon-close',
+                                icon: 'icon-wrong',
                                 label: 'Inactive',
                             },
                         ],
@@ -2226,7 +2226,7 @@ export default {
                         status: [
                             {
                                 cssClass: 'inapproved',
-                                icon: 'icon-close',
+                                icon: 'icon-wrong',
                                 label: 'Inactive',
                             },
                         ],
@@ -2311,7 +2311,7 @@ export default {
                         status: [
                             {
                                 cssClass: 'inapproved',
-                                icon: 'icon-close',
+                                icon: 'icon-wrong',
                                 label: 'Inactive',
                             },
                         ],
@@ -2324,7 +2324,7 @@ export default {
                         status: [
                             {
                                 cssClass: 'inapproved',
-                                icon: 'icon-close',
+                                icon: 'icon-wrong',
                                 label: 'Inactive',
                             },
                         ],
@@ -2385,7 +2385,7 @@ export default {
                     {
                         key: 'status',
                         label: 'Status',
-                        class: 'text-center',
+                        class: 'text-center w-230px',
                         sortable: true,
                     },
                     {
@@ -2404,7 +2404,7 @@ export default {
                         status: [
                             {
                                 cssClass: 'inapproved',
-                                icon: 'icon-close',
+                                icon: 'icon-wrong',
                                 label: 'Inactive',
                             },
                         ],
@@ -2419,7 +2419,7 @@ export default {
                         status: [
                             {
                                 cssClass: 'inapproved',
-                                icon: 'icon-close',
+                                icon: 'icon-wrong',
                                 label: 'Inactive',
                             },
                         ],
@@ -2434,7 +2434,7 @@ export default {
                         status: [
                             {
                                 cssClass: 'inapproved',
-                                icon: 'icon-close',
+                                icon: 'icon-wrong',
                                 label: 'Inactive',
                             },
                         ],
@@ -2448,7 +2448,7 @@ export default {
                         status: [
                             {
                                 cssClass: 'inapproved',
-                                icon: 'icon-close',
+                                icon: 'icon-wrong',
                                 label: 'Inactive',
                             },
                         ],
@@ -2479,7 +2479,7 @@ export default {
                         status: [
                             {
                                 cssClass: 'inapproved',
-                                icon: 'icon-close',
+                                icon: 'icon-wrong',
                                 label: 'Inactive',
                             },
                         ],
