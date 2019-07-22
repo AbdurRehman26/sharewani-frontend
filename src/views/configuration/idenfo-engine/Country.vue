@@ -19,7 +19,7 @@
                             <b-button
                                 type="button"
                                 variant="secondary"
-                                v-b-modal.add-nationality-popup
+                                v-b-modal.add-country-popup
                                 >+ Add Country</b-button
                             >
                         </li>
@@ -40,7 +40,7 @@
                             v-if="data.value == 'active'"
                             icon="icon-edit"
                             label="Modify"
-                            v-b-modal.add-nationality-popup
+                            v-b-modal.add-country-popup
                         ></base-action>
                         <!-- if action archive -->
                         <base-action
@@ -53,7 +53,7 @@
                 </template>
             </b-table>
         </div>
-        <add-nationality-popup></add-nationality-popup>
+        <add-country-popup></add-country-popup>
         <archive-popup
             title="Archive Country Factor"
             description="Are you sure you want to archive this country factor? You can re-activate it later."
@@ -63,12 +63,12 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import addNationalityPopup from '@/components/popups/AddNationalityPopup.vue'
+import addCountryPopup from '@/components/popups/AddCountryPopup.vue'
 import archivePopup from '@/components/popups/ArchivePopup.vue'
 
 export default {
     components: {
-        addNationalityPopup,
+        addCountryPopup,
         archivePopup,
     },
 
