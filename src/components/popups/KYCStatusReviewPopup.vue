@@ -18,16 +18,9 @@
                         v-model="yourValue"
                         noHeader="false"
                         noLabel="false"
-                        only-date="true"
                         no-button-now="false"
+                        formatted="DD-MM-YYYY hh:mm a"
                     />
-                    <!--  <b-form-input
-                        id="input-1"
-                        type="text"
-                        v-model="form.kycUpdate"
-                        required
-                        placeholder="Search by first name"
-                    ></b-form-input> -->
                 </b-form-group>
 
                 <div class="form-group">

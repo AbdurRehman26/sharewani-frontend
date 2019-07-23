@@ -503,6 +503,7 @@ export default {
                     {
                         key: 'productIndustry',
                         label: 'Product Title',
+                        class: 'w-320px',
                         sortable: true,
                     },
                     {
@@ -616,6 +617,7 @@ export default {
                     {
                         key: 'stateTitle',
                         label: 'STATE TITLE',
+                        class: 'w-320px',
                         sortable: true,
                     },
                     {
@@ -709,7 +711,7 @@ export default {
                     {
                         key: 'rating',
                         label: 'RATING',
-                        class: 'text-center status-absolute-pos',
+                        class: 'text-center status-absolute-pos w-320px ',
                         sortable: true,
                     },
                     {
@@ -773,7 +775,7 @@ export default {
                     {
                         key: 'rating',
                         label: 'RATING',
-                        class: 'text-center status-absolute-pos',
+                        class: 'text-center status-absolute-pos w-320px',
                         sortable: true,
                     },
                     {
