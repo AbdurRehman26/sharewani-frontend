@@ -101,12 +101,12 @@ export default {
     methods: {
         initializeData() {
             //system log table
-            let documentVerificationFields = this.configurationData
-                .screeningData.descriptionStatusTwo.fields //get user data from store
-            this.fields = documentVerificationFields //push data into array
-            let documentVerificationItems = this.configurationData.screeningData
+            let screeningFields = this.configurationData.screeningData
+                .descriptionStatusTwo.fields //get user data from store
+            this.fields = screeningFields //push data into array
+            let screeningItems = this.configurationData.screeningData
                 .descriptionStatusTwo.items //get user data from store
-            this.items = documentVerificationItems //push data into array
+            this.items = screeningItems //push data into array
             this.$emit('item-length', this.items.length)
         },
     }, // End of Component > methods

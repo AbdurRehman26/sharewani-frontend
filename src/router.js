@@ -449,6 +449,44 @@ export default new Router({
                                 responsiveMenuItem: true,
                             },
                         },
+                        {
+                            path: '/configuration/screening-data/country',
+                            name: 'screening-country',
+                            component: () =>
+                                import(/* webpackChunkName: "nationality" */ './views/configuration/screening-data/Countries.vue'),
+                            meta: {
+                                responsiveMenuItem: true,
+                            },
+                        },
+                        {
+                            path: '/configuration/screening-data/country-type',
+                            name: 'screening-country-type',
+                            component: () =>
+                                import(/* webpackChunkName: "nationality" */ './views/configuration/screening-data/CountryType.vue'),
+                            meta: {
+                                responsiveMenuItem: true,
+                            },
+                        },
+                        {
+                            path:
+                                '/configuration/screening-data/indentification',
+                            name: 'screening-indentification',
+                            component: () =>
+                                import(/* webpackChunkName: "nationality" */ './views/configuration/screening-data/Identification.vue'),
+                            meta: {
+                                responsiveMenuItem: true,
+                            },
+                        },
+                        {
+                            path:
+                                '/configuration/screening-data/relationship-type',
+                            name: 'screening-relationship',
+                            component: () =>
+                                import(/* webpackChunkName: "nationality" */ './views/configuration/screening-data/Relationship.vue'),
+                            meta: {
+                                responsiveMenuItem: true,
+                            },
+                        },
                     ],
                 },
                 {
@@ -458,16 +496,22 @@ export default new Router({
                         import(/* webpackChunkName: "customer" */ './views/configuration/ManualReviewSwitch.vue'),
                 },
                 {
+                    path: '/configuration/form-builder/',
+                    name: 'branding',
+                    component: () =>
+                        import(/* webpackChunkName: "builder" */ './views/configuration/FormBuilder.vue'),
+                },
+                {
                     path: '/configuration/branding/',
                     name: 'branding',
                     component: () =>
                         import(/* webpackChunkName: "customer" */ './views/configuration/Branding.vue'),
                 },
                 {
-                    path: '/configuration/form-builder/',
-                    name: 'branding',
+                    path: '/configuration/ocr-configuration/',
+                    name: 'ocr-configuration',
                     component: () =>
-                        import(/* webpackChunkName: "builder" */ './views/configuration/FormBuilder.vue'),
+                        import(/* webpackChunkName: "builder" */ './views/configuration/OcrConfiguration.vue'),
                 },
             ],
         },

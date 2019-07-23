@@ -1,5 +1,32 @@
 <template>
     <div class="wrap-content">
+        <div class="filter-section row-min-space">
+            <div class="row">
+                <div class="col-md-7 filter-title-section">
+                    <h2>Registration Form Builder</h2>
+                </div>
+                <div class="col-md-5 text-right">
+                    <div class="row">
+                        <div class="col-md-8 text-right">
+                            <base-button
+                                v-b-modal.export-process-popup
+                                btnLabel="Preview Registration Form"
+                                btnType="button"
+                                btnVariant="link"
+                            ></base-button>
+                        </div>
+                        <div class="col-md-4 text-right">
+                            <base-button
+                                btnLabel="Update Form"
+                                btnType="submit"
+                                btnVariant="primary"
+                            ></base-button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="config-list" ref="listingArea">
             <ul>
                 <li
