@@ -894,7 +894,12 @@
 
 .table-scroll {
     overflow-y: auto;
-    max-height: 393px;
+    max-height: 380px;
+    margin-top: 30px;
+    padding-right: 5px;
+    .inner {
+        border: solid 1px $border-color;
+    }
     .table {
         min-width: 0;
     }
