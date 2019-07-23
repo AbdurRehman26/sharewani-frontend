@@ -92,10 +92,10 @@ export default new Router({
                         import(/* webpackChunkName: "dashboard-activity" */ '@/views/dashboard/Activity.vue'),
                 },
                 {
-                    path: 'reporting',
+                    path: 'customer-statistics',
                     name: 'dashboard-reporting-page',
                     component: () =>
-                        import(/* webpackChunkName: "dashboard-reporting" */ '@/views/dashboard/Reporting.vue'),
+                        import(/* webpackChunkName: "dashboard-reporting" */ '@/views/dashboard/Statistics.vue'),
                 },
             ],
         },

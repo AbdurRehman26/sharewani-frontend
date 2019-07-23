@@ -130,3 +130,11 @@
 	font-family: $font-bold;
 	float: right;
 }
+
+#onBoardIssueLegend {
+	> div {
+		width: auto;
+		float: none;
+		display: inline-block;
+	}
+}
