@@ -233,9 +233,9 @@ export default {
             filterByAlert: null,
             filterAlertOptions: [
                 { text: 'Filter by alert type', value: null },
-                'High Risk',
-                'Medium Risk',
-                'Low Risk',
+                'New Alerts',
+                'Periodic Alerts',
+                'Trigger Alerts',
             ],
             filterByRiskLevel: null,
             filterRiskLevelOptions: [
@@ -247,9 +247,12 @@ export default {
             filterByAging: null,
             filterAgingOptions: [
                 { text: 'Filter by aging', value: null },
-                '16 D',
-                '85 D',
-                '29 D',
+                '18 - 24',
+                '25 - 34',
+                '45 - 54',
+                '55 - 64',
+                '65 - 74',
+                '75+',
             ],
         }
     }, // End of Component > data

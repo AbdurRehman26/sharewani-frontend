@@ -50,7 +50,9 @@
             <b-table :items="items" :fields="fields">
                 <template slot="profile" slot-scope="data">
                     <div class="profile-area">
-                        <router-link to="/customer-information">
+                        <router-link
+                            to="/customer-profiles/customer-information"
+                        >
                             <div
                                 class="profile-pic"
                                 :style="{
@@ -68,7 +70,9 @@
 
                 <template slot="customer" slot-scope="data">
                     <div class="customer-link">
-                        <router-link to="/customer-information">
+                        <router-link
+                            to="/customer-profiles/customer-information"
+                        >
                             <span>{{ data.value }}</span>
                         </router-link>
                     </div>
@@ -76,7 +80,9 @@
 
                 <template slot="full_name" slot-scope="data">
                     <div class="customer-link">
-                        <router-link to="/customer-information">
+                        <router-link
+                            to="/customer-profiles/customer-information"
+                        >
                             <span>{{ data.value }}</span>
                         </router-link>
                     </div>
@@ -90,7 +96,11 @@
                         <base-action
                             icon="icon-eye-view"
                             label="View Profile"
-                            @click="$router.push('/customer-information')"
+                            @click="
+                                $router.push(
+                                    '/customer-profiles/customer-information'
+                                )
+                            "
                         ></base-action>
                     </div>
                 </template>

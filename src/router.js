@@ -159,9 +159,15 @@ export default new Router({
                     component: () =>
                         import(/* webpackChunkName: "customer" */ './views/profile/AllCustomer.vue'),
                 },
+                {
+                    path: '/customer-profiles/all-customer',
+                    name: 'all-customer',
+                    component: () =>
+                        import(/* webpackChunkName: "customer" */ './views/profile/AllCustomer.vue'),
+                },
 
                 {
-                    path: '/advance-search',
+                    path: '/customer-profiles/advance-search',
                     name: 'advance-search',
                     // route level code-splitting
                     // this generates a separate chunk (about.[hash].js) for this route
@@ -173,7 +179,7 @@ export default new Router({
         },
 
         {
-            path: '/customer-information',
+            path: '/customer-profiles/customer-information',
             name: 'customer-details',
             component: () =>
                 import(/* webpackChunkName: "customer-details" */ './views/profile/profile-details/Main.vue'),
@@ -188,7 +194,7 @@ export default new Router({
                     },
                 },
                 {
-                    path: '/screening-customer',
+                    path: '/customer-profiles/screening-customer',
                     name: 'screening-customer',
                     component: () =>
                         import(/* webpackChunkName: "screening-customer" */ './views/profile/profile-details/ScreeningCustomer.vue'),
@@ -198,7 +204,7 @@ export default new Router({
                 },
 
                 {
-                    path: '/document-verification',
+                    path: '/customer-profiles/document-verification',
                     name: 'document-verification',
                     component: () =>
                         import(/* webpackChunkName: "document-verification" */ './views/profile/profile-details/DocumentVerification.vue'),
@@ -207,7 +213,7 @@ export default new Router({
                     },
                 },
                 {
-                    path: '/kyc-risk-rating',
+                    path: '/customer-profiles/kyc-risk-rating',
                     name: 'kyc-risk-rating',
                     component: () =>
                         import(/* webpackChunkName: "kyc-risk-rating" */ './views/profile/profile-details/KYCRiskRating.vue'),
@@ -216,7 +222,7 @@ export default new Router({
                     },
                 },
                 {
-                    path: '/activity-timeline',
+                    path: '/customer-profiles/activity-timeline',
                     name: 'activity-timeline',
                     component: () =>
                         import(/* webpackChunkName: "activity-timeline" */ './views/profile/profile-details/ActivityTimeline.vue'),

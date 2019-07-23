@@ -801,6 +801,9 @@
                     color: $body-color;
                     font-family: $font_medium;
                 }
+                @include windowS {
+                    margin-right: 5px;
+                }
             }
             &:last-child {
                 margin-right: 0px;
