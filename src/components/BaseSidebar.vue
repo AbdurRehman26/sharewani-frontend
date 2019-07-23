@@ -86,12 +86,12 @@ export default {
                     menuLabel: 'Customer Profiles',
                 },
                 {
-                    anchorLink: '/register-customer/upload-document',
+                    anchorLink: '/register-customer/',
                     icon: 'icon-add-customer',
                     menuLabel: 'Register Customer',
                 },
                 {
-                    anchorLink: '/configuration/idenfo-engine/',
+                    anchorLink: '/configuration/',
                     icon: 'icon-configurations',
                     menuLabel: 'Configurations',
                 },

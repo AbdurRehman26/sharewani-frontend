@@ -76,23 +76,23 @@ export default {
         return {
             menuListing: [
                 {
-                    anchorLink: '/customer-information',
+                    anchorLink: '/customer-profiles/customer-information',
                     menuLabel: 'Customer Profile',
                 },
                 {
-                    anchorLink: '/screening-customer',
+                    anchorLink: '/customer-profiles/screening-customer',
                     menuLabel: 'Name Screening',
                 },
                 {
-                    anchorLink: '/document-verification',
+                    anchorLink: '/customer-profiles/document-verification',
                     menuLabel: 'Document Verification',
                 },
                 {
-                    anchorLink: '/kyc-risk-rating',
+                    anchorLink: '/customer-profiles/kyc-risk-rating',
                     menuLabel: 'KYC Risk Rating',
                 },
                 {
-                    anchorLink: '/activity-timeline',
+                    anchorLink: '/customer-profiles/activity-timeline',
                     menuLabel: 'Activity Timeline',
                 },
             ],
