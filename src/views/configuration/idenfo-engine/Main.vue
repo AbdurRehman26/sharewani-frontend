@@ -22,7 +22,11 @@
                         <i class="icon-dropdown-icon"></i>
                     </a>
 
-                    <div v-if="listDropdown" class="dropdown-open">
+                    <div
+                        v-if="listDropdown"
+                        class="dropdown-open"
+                        v-on-click-outside="close"
+                    >
                         <ul>
                             <li
                                 v-for="(listo, index) in menuListing.slice(
@@ -56,11 +60,15 @@
 
 <script>
 import pagination from '@/components/Pagination.vue'
+import { directive as onClickOutside } from 'vue-on-click-outside'
 export default {
     components: {
         pagination,
     },
 
+    directives: {
+        onClickOutside: onClickOutside,
+    },
     /*
     |--------------------------------------------------------------------------
     | Component > props
@@ -165,6 +173,9 @@ export default {
         },
         tableItemLength(val) {
             this.tableItemData = val
+        },
+        close() {
+            this.listDropdown = false
         },
     }, // End of Component > methods
 

@@ -95,7 +95,9 @@
                         :title="data.value[0].riskRate + ' Risk'"
                     ></div>
                     <div class="indecation">
-                        <router-link to="/customer-information">
+                        <router-link
+                            to="/customer-profiles/customer-information"
+                        >
                             <i
                                 v-if="data.value[0].riskType == 'flag'"
                                 class="icon-flag"
