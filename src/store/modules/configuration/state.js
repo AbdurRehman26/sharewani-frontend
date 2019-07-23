@@ -1566,7 +1566,7 @@ export default {
                     {
                         key: 'status',
                         label: 'status',
-                        class: 'text-center',
+                        class: 'text-center w-320px',
                         sortable: true,
                     },
                     {
@@ -1639,7 +1639,7 @@ export default {
                     {
                         key: 'status',
                         label: 'status',
-                        class: 'text-center',
+                        class: 'text-center w-320px',
                         sortable: true,
                     },
                     {
@@ -1725,7 +1725,7 @@ export default {
                     {
                         key: 'status',
                         label: 'status',
-                        class: 'text-center',
+                        class: 'text-center w-320px',
                         sortable: true,
                     },
                     {
@@ -1889,7 +1889,7 @@ export default {
                     {
                         key: 'status',
                         label: 'status',
-                        class: 'text-center',
+                        class: 'text-center w-320px',
                         sortable: true,
                     },
                     {
@@ -2051,7 +2051,7 @@ export default {
                     {
                         key: 'status',
                         label: 'Status',
-                        class: 'text-center',
+                        class: 'text-center w-320px',
                         sortable: true,
                     },
                     {
@@ -2116,7 +2116,7 @@ export default {
                     {
                         key: 'status',
                         label: 'Status',
-                        class: 'text-center',
+                        class: 'text-center w-320px',
                         sortable: true,
                     },
                     {
@@ -2270,7 +2270,7 @@ export default {
                     {
                         key: 'status',
                         label: 'Status',
-                        class: 'text-center',
+                        class: 'text-center w-320px',
                         sortable: true,
                     },
                     {
@@ -2538,7 +2538,7 @@ export default {
                     {
                         key: 'action',
                         label: 'ACTION',
-                        class: 'single-list',
+                        class: 'single-list w-100px',
                     },
                 ],
                 items: [
@@ -2690,7 +2690,7 @@ export default {
                     {
                         key: 'countrytype',
                         label: 'Country Type',
-                        class: 'w-320px',
+                        class: 'text-center w-230px',
                         sortable: true,
                     },
                     {
@@ -2831,13 +2831,13 @@ export default {
                     {
                         key: 'status',
                         label: 'Status',
-                        class: 'text-center',
+                        class: 'text-center w-230px',
                         sortable: true,
                     },
                     {
                         key: 'action',
                         label: 'ACTION',
-                        class: 'single-list',
+                        class: 'single-list w-100px',
                     },
                 ],
                 items: [
@@ -2972,13 +2972,13 @@ export default {
                     {
                         key: 'status',
                         label: 'Status',
-                        class: 'text-center',
+                        class: 'text-center w-230px',
                         sortable: true,
                     },
                     {
                         key: 'action',
                         label: 'ACTION',
-                        class: 'single-list',
+                        class: 'single-list w-100px',
                     },
                 ],
                 items: [
