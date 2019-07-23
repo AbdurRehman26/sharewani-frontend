@@ -47,15 +47,19 @@ export default {
                 },
                 {
                     anchorLink: '/configuration/form-builder/',
-                    menuLabel: 'Registration Form Builder',
+                    menuLabel: 'Form Builder',
                 },
                 {
                     anchorLink: '/configuration/manual-review/',
-                    menuLabel: 'Manual Review Switch',
+                    menuLabel: 'Manual Review',
                 },
                 {
                     anchorLink: '/configuration/branding/',
                     menuLabel: 'Branding',
+                },
+                {
+                    anchorLink: '/configuration/ocr-configuration/',
+                    menuLabel: 'OCR',
                 },
             ],
         }

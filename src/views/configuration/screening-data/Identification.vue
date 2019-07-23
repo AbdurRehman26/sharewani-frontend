@@ -1,29 +1,26 @@
 <template>
     <div class="infoengine">
-        <div class="filter-section row-min-space">
+        <div class="filter-section">
             <div class="row">
-                <div class="col-md-8 filter-title-section">
-                    <h2>Role Type</h2>
+                <div class="col-md-6">
+                    <h2>Identification Type</h2>
                 </div>
-                <div class="col-md-4 text-right">
-                    <div class="row">
-                        <div class="col-md-9">
+                <div class="col-md-6 text-right">
+                    <ul>
+                        <li>
                             <base-search
-                                placeholder="Search role type"
+                                placeholder="Search country type"
                             ></base-search>
-                        </div>
-                        <div class="col-md-3">
-                            <base-button
-                                btnLabel="Apply"
-                                btnType="button"
-                                btnVariant="primary"
-                            ></base-button>
-                        </div>
-                    </div>
+                        </li>
+                        <li>
+                            <b-button type="button" variant="primary"
+                                >Apply</b-button
+                            >
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
-
         <div class="table-section m-b-30">
             <b-table :items="items" :fields="fields">
                 <template slot="status" slot-scope="data">
@@ -35,25 +32,22 @@
                             v-if="data.value == 'active'"
                             icon="icon-edit"
                             label="Modify"
-                            v-b-modal.modify-status-popup
+                            v-b-modal.modify-liveness-detection-popup
                         ></base-action>
                     </div>
                 </template>
             </b-table>
         </div>
-        <modify-status-popup
-            modalTitle="Modify Role Type Status"
-            modalLabel="Primary Occupation"
-        ></modify-status-popup>
+        <modify-liveness-detection-popup></modify-liveness-detection-popup>
     </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
-import modifyStatusPopup from '@/components/popups/ModifyStatusPopup.vue'
+import modifyLivenessDetectionPopup from '@/components/popups/ModifyLivenessDetectionPopup.vue'
 export default {
     components: {
-        modifyStatusPopup,
+        modifyLivenessDetectionPopup,
     },
 
     /*
@@ -102,10 +96,10 @@ export default {
         initializeData() {
             //system log table
             let screeningFields = this.configurationData.screeningData
-                .roleTypeTable.fields //get user data from store
+                .identificationtypeTable.fields //get user data from store
             this.fields = screeningFields //push data into array
             let screeningItems = this.configurationData.screeningData
-                .roleTypeTable.items //get user data from store
+                .identificationtypeTable.items //get user data from store
             this.items = screeningItems //push data into array
             this.$emit('item-length', this.items.length)
         },

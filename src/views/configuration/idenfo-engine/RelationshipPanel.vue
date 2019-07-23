@@ -1,34 +1,41 @@
 <template>
     <div class="infoengine">
-        <div class="filter-section">
+        <div class="filter-section row-min-space">
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-5 filter-title-section">
                     <h2>Relationship Length Factor</h2>
                 </div>
-                <div class="col-md-8 text-right">
-                    <ul>
-                        <li>
+                <div class="col-md-7 text-right">
+                    <div class="row">
+                        <div class="col-md-5">
                             <base-search
-                                :placeholder="'Search relationship length'"
+                                placeholder="Search relationship length"
                             ></base-search>
-                        </li>
-                        <li>
-                            <b-button type="button" variant="primary"
-                                >Apply</b-button
-                            >
-                        </li>
-                        <li>
-                            <b-button
-                                type="button"
-                                variant="secondary"
-                                v-b-modal.add-relationship-popup
-                                >+ Add Relationship Length</b-button
-                            >
-                        </li>
-                    </ul>
+                        </div>
+                        <div class="col-md-7">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <base-button
+                                        btnLabel="Apply"
+                                        btnType="button"
+                                        btnVariant="primary"
+                                    ></base-button>
+                                </div>
+                                <div class="col-md-9">
+                                    <base-button
+                                        v-b-modal.add-relationship-popup
+                                        btnLabel="+ Add Relationship Length"
+                                        btnType="button"
+                                        btnVariant="secondary"
+                                    ></base-button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+
         <div class="table-section m-b-30">
             <b-table :items="items" :fields="fields">
                 <template slot="worktypeimpact" slot-scope="data">
