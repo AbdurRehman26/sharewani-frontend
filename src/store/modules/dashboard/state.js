@@ -446,7 +446,7 @@ export default {
             outlineAlpha: 1,
             outlineThickness: 2,
             titleField: 'category',
-            valueField: 'column-1',
+            valueField: 'catValue',
             color: '#1B1B1E',
             fontFamily: 'Proxima Nova',
             fontSize: 14,
@@ -456,7 +456,7 @@ export default {
                 fillAlpha: 1,
             },
             legend: {
-                enabled: true,
+                enabled: false,
                 align: 'center',
                 markerBorderAlpha: 0.27,
                 markerBorderThickness: 0,
@@ -472,15 +472,61 @@ export default {
             dataProvider: [
                 {
                     category: 'New Alerts',
-                    'column-1': '180',
+                    catValue: '180',
+                    percents: '25%',
                 },
                 {
                     category: 'Periodic Alerts',
-                    'column-1': '420',
+                    catValue: '420',
+                    percents: '58%',
                 },
                 {
                     category: 'Trigger Alerts',
-                    'column-1': '120',
+                    catValue: '120',
+                    percents: '16%',
+                },
+            ],
+            listeners: [
+                {
+                    event: 'init',
+                    method: function(event) {
+                        // chart initialized
+                        // let's build a custom legend
+                        var chart = event.chart
+
+                        // get legend object
+
+                        var legend = document.getElementById('alertTypesLegend')
+                        // cycle through the data
+                        for (var i = 0; i < chart.dataProvider.length; i++) {
+                            // data point
+                            var dp = chart.dataProvider[i]
+
+                            // create a legend item holder
+                            var item = document.createElement('div')
+
+                            // create marker
+                            var marker = document.createElement('div')
+                            marker.className = 'legend-marker'
+                            marker.style.backgroundColor = chart.colors[i]
+                            item.appendChild(marker)
+
+                            // create title
+                            var title = document.createElement('div')
+                            title.className = 'legend-title'
+                            title.innerHTML = dp.category
+                            item.appendChild(title)
+
+                            // create absolute value
+                            var value = document.createElement('div')
+                            value.className = 'legend-value'
+                            value.innerHTML = dp.percents
+                            item.appendChild(value)
+
+                            // add item to legend
+                            legend.appendChild(item)
+                        }
+                    },
                 },
             ],
         },
