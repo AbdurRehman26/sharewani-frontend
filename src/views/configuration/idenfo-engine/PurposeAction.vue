@@ -1,32 +1,41 @@
 <template>
     <div class="infoengine">
-        <div class="filter-section">
+        <div class="filter-section row-min-space">
             <div class="row">
-                <div class="col-md-5">
+                <div class="col-md-6 filter-title-section">
                     <h2>Purpose of Action Management</h2>
                 </div>
-                <div class="col-md-7 text-right">
-                    <ul>
-                        <li>
-                            <base-search></base-search>
-                        </li>
-                        <li>
-                            <b-button type="button" variant="primary"
-                                >Apply</b-button
-                            >
-                        </li>
-                        <li>
-                            <b-button
-                                v-b-modal.add-purpose-popup
-                                type="button"
-                                variant="secondary"
-                                >+ Add Purpose</b-button
-                            >
-                        </li>
-                    </ul>
+                <div class="col-md-6 text-right">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <base-search
+                                placeholder="Search purpose of action"
+                            ></base-search>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <base-button
+                                        btnLabel="Apply"
+                                        btnType="button"
+                                        btnVariant="primary"
+                                    ></base-button>
+                                </div>
+                                <div class="col-md-8">
+                                    <base-button
+                                        v-b-modal.add-purpose-popup
+                                        btnLabel="+ Add Purpose"
+                                        btnType="button"
+                                        btnVariant="secondary"
+                                    ></base-button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+
         <div class="table-section m-b-30">
             <b-table :items="items" :fields="fields">
                 <template slot="scorescale" slot-scope="data">
