@@ -63,7 +63,9 @@
                 </div>
                 <div class="row">
                     <div class="col-xs-12 col-md-12">
-                        <div class="card dashboard-card sm-radius">
+                        <div
+                            class="card dashboard-card activity-timeline-graph sm-radius"
+                        >
                             <div class="dashboard-charts">
                                 <h2 class="heading">Activity Timeline</h2>
                                 <!-- activity timeline dashboard chart -->
@@ -103,6 +105,10 @@
                                 <div
                                     id="screening-by-type"
                                     class="amcharts-div screening-by-type"
+                                ></div>
+                                <div
+                                    id="alertTypesLegend"
+                                    class="custom-legend-wrapper"
                                 ></div>
                                 <div class="chart-highest-record">
                                     <h2>HIGHEST</h2>

@@ -1,29 +1,37 @@
 <template>
     <div class="infoengine">
-        <div class="filter-section">
+        <div class="filter-section row-min-space">
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-6 filter-title-section">
                     <h2>Nationality Factor</h2>
                 </div>
-                <div class="col-md-8 text-right">
-                    <ul>
-                        <li>
-                            <base-search></base-search>
-                        </li>
-                        <li>
-                            <b-button type="button" variant="primary"
-                                >Apply</b-button
-                            >
-                        </li>
-                        <li>
-                            <b-button
-                                type="button"
-                                variant="secondary"
-                                v-b-modal.add-nationality-popup
-                                >+ Add Nationality</b-button
-                            >
-                        </li>
-                    </ul>
+                <div class="col-md-6 text-right">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <base-search
+                                placeholder="Search nationality"
+                            ></base-search>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <base-button
+                                        btnLabel="Apply"
+                                        btnType="button"
+                                        btnVariant="primary"
+                                    ></base-button>
+                                </div>
+                                <div class="col-md-8">
+                                    <base-button
+                                        v-b-modal.add-nationality-popup
+                                        btnLabel="+ Add Nationality"
+                                        btnType="button"
+                                        btnVariant="secondary"
+                                    ></base-button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

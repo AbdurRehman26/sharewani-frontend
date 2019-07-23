@@ -32,22 +32,25 @@
                             v-if="data.value == 'active'"
                             icon="icon-edit"
                             label="Modify"
-                            v-b-modal.modify-liveness-detection-popup
+                            v-b-modal.modify-status-popup
                         ></base-action>
                     </div>
                 </template>
             </b-table>
         </div>
-        <modify-liveness-detection-popup></modify-liveness-detection-popup>
+        <modify-status-popup
+            modalTitle="Modify Occupation Status"
+            modalLabel="National Government Ministers"
+        ></modify-status-popup>
     </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
-import modifyLivenessDetectionPopup from '@/components/popups/ModifyLivenessDetectionPopup.vue'
+import modifyStatusPopup from '@/components/popups/ModifyStatusPopup.vue'
 export default {
     components: {
-        modifyLivenessDetectionPopup,
+        modifyStatusPopup,
     },
 
     /*
