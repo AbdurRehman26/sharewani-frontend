@@ -112,17 +112,17 @@
                     </div>
                 </template>
                 <template slot="customer" slot-scope="data">
-                    <router-link to="/customer-information">{{
+                    <router-link to="/customer-profiles/customer-information">{{
                         data.value
                     }}</router-link>
                 </template>
                 <template slot="full_name" slot-scope="data">
-                    <router-link to="/customer-information">{{
+                    <router-link to="/customer-profiles/customer-information">{{
                         data.value
                     }}</router-link>
                 </template>
                 <template slot="nationality" slot-scope="data">
-                    <router-link to="/customer-information">{{
+                    <router-link to="/customer-profiles/customer-information">{{
                         data.value
                     }}</router-link>
                 </template>
