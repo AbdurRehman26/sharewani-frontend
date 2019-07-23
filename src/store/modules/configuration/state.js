@@ -2503,6 +2503,605 @@ export default {
                     },
                 ],
             },
+
+            countriesTable: {
+                fields: [
+                    {
+                        key: 'person',
+                        label: 'RID (PERSON)',
+                        class: 'id-center',
+                        sortable: true,
+                    },
+                    {
+                        key: 'territory',
+                        label: 'IS TERRITORY',
+                        sortable: true,
+                    },
+                    {
+                        key: 'name',
+                        label: 'NAME',
+                        sortable: true,
+                    },
+                    {
+                        key: 'file_name',
+                        label: 'File Name',
+                        sortable: true,
+                    },
+                    {
+                        key: 'status',
+                        label: 'Status',
+                        class: 'text-center w-230px',
+                        sortable: true,
+                    },
+                    {
+                        key: 'action',
+                        label: 'ACTION',
+                        class: 'single-list',
+                    },
+                ],
+                items: [
+                    {
+                        person: 'ABKHAZ',
+                        territory: 'Yes',
+                        name: 'Abkhaz',
+                        file_name: '',
+                        status: [
+                            {
+                                cssClass: 'inapproved',
+                                icon: 'icon-wrong',
+                                label: 'Inactive',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        person: 'AFGH',
+                        territory: 'No',
+                        name: 'Afghanistan',
+                        file_name: 'afghanistan.doc',
+                        status: [
+                            {
+                                cssClass: 'approved',
+                                icon: 'icon-check',
+                                label: 'Active',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        person: 'ALB',
+                        territory: 'No',
+                        name: 'Albania',
+                        file_name: 'albania.doc',
+                        status: [
+                            {
+                                cssClass: 'approved',
+                                icon: 'icon-check',
+                                label: 'Active',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        person: 'ALG',
+                        territory: 'No',
+                        name: 'Algeria',
+                        file_name: 'algeria.doc',
+                        status: [
+                            {
+                                cssClass: 'approved',
+                                icon: 'icon-check',
+                                label: 'Active',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        person: 'AMSAM',
+                        territory: 'Yes',
+                        name: 'American Samoa',
+                        file_name: '',
+                        status: [
+                            {
+                                cssClass: 'inapproved',
+                                icon: 'icon-wrong',
+                                label: 'Inactive',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        person: 'ANDO',
+                        territory: 'No',
+                        name: 'Andorra',
+                        file_name: 'andorra.doc',
+                        status: [
+                            {
+                                cssClass: 'approved',
+                                icon: 'icon-check',
+                                label: 'Active',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        person: 'ANGOL',
+                        territory: 'No',
+                        name: 'Angola',
+                        file_name: 'angola.doc',
+                        status: [
+                            {
+                                cssClass: 'approved',
+                                icon: 'icon-check',
+                                label: 'Active',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        person: 'ANGUIL',
+                        territory: 'No',
+                        name: 'Anguilla',
+                        file_name: 'anguilla.doc',
+                        status: [
+                            {
+                                cssClass: 'approved',
+                                icon: 'icon-check',
+                                label: 'Active',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        person: 'AARCT',
+                        territory: 'Yes',
+                        name: 'Antarctica',
+                        file_name: '',
+                        status: [
+                            {
+                                cssClass: 'inapproved',
+                                icon: 'icon-wrong',
+                                label: 'Inactive',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        person: 'ANTA',
+                        territory: 'No',
+                        name: 'Antigua and Barbuda',
+                        file_name: 'antigua and barbuda.doc',
+                        status: [
+                            {
+                                cssClass: 'approved',
+                                icon: 'icon-check',
+                                label: 'Active',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                ],
+            },
+
+            countrytypeTable: {
+                fields: [
+                    {
+                        key: 'countrytype',
+                        label: 'Country Type',
+                        class: 'w-320px',
+                        sortable: true,
+                    },
+                    {
+                        key: 'status',
+                        label: 'Status',
+                        class: 'text-center',
+                        sortable: true,
+                    },
+                    {
+                        key: 'action',
+                        label: 'ACTION',
+                        class: 'single-list',
+                    },
+                ],
+                items: [
+                    {
+                        countrytype: 'Citizenship',
+                        status: [
+                            {
+                                cssClass: 'approved',
+                                icon: 'icon-check',
+                                label: 'Active',
+                            },
+                        ],
+                        action: 'active',
+                    },
+
+                    {
+                        countrytype: 'Resident of',
+                        status: [
+                            {
+                                cssClass: 'approved',
+                                icon: 'icon-check',
+                                label: 'Active',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        countrytype: 'Country of Registration',
+                        status: [
+                            {
+                                cssClass: 'inapproved',
+                                icon: 'icon-wrong',
+                                label: 'Inactive',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        countrytype: 'Jurisdictions',
+                        status: [
+                            {
+                                cssClass: 'inapproved',
+                                icon: 'icon-wrong',
+                                label: 'Inactive',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        countrytype: 'Country of Ownership',
+                        status: [
+                            {
+                                cssClass: 'inapproved',
+                                icon: 'icon-wrong',
+                                label: 'Inactive',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        countrytype: 'Country of Reported Allegation',
+                        status: [
+                            {
+                                cssClass: 'inapproved',
+                                icon: 'icon-wrong',
+                                label: 'Inactive',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        countrytype: 'Enhanced Risk Country',
+                        status: [
+                            {
+                                cssClass: 'inapproved',
+                                icon: 'icon-wrong',
+                                label: 'Inactive',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        countrytype: 'Country of Affiliation',
+                        status: [
+                            {
+                                cssClass: 'inapproved',
+                                icon: 'icon-wrong',
+                                label: 'Inactive',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        countrytype: 'Sanctioned Region',
+                        status: [
+                            {
+                                cssClass: 'inapproved',
+                                icon: 'icon-wrong',
+                                label: 'Inactive',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        countrytype: 'Formerly Sanctioned Region',
+                        status: [
+                            {
+                                cssClass: 'inapproved',
+                                icon: 'icon-wrong',
+                                label: 'Inactive',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                ],
+            },
+
+            identificationtypeTable: {
+                fields: [
+                    {
+                        key: 'identification',
+                        label: 'Identification Type',
+                        class: 'w-320px',
+                        sortable: true,
+                    },
+                    {
+                        key: 'status',
+                        label: 'Status',
+                        class: 'text-center',
+                        sortable: true,
+                    },
+                    {
+                        key: 'action',
+                        label: 'ACTION',
+                        class: 'single-list',
+                    },
+                ],
+                items: [
+                    {
+                        identification: 'National ID',
+                        status: [
+                            {
+                                cssClass: 'approved',
+                                icon: 'icon-check',
+                                label: 'Active',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        identification: 'Social Security No.',
+                        status: [
+                            {
+                                cssClass: 'inapproved',
+                                icon: 'icon-wrong',
+                                label: 'Inactive',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        identification: 'Passport No.',
+                        status: [
+                            {
+                                cssClass: 'approved',
+                                icon: 'icon-check',
+                                label: 'Active',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        identification: 'Driving Licence No.',
+                        status: [
+                            {
+                                cssClass: 'approved',
+                                icon: 'icon-check',
+                                label: 'Active',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        identification:
+                            'National Criminal Identification Code (USA)',
+                        status: [
+                            {
+                                cssClass: 'inapproved',
+                                icon: 'icon-wrong',
+                                label: 'Inactive',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        identification: 'Others',
+                        status: [
+                            {
+                                cssClass: 'inapproved',
+                                icon: 'icon-wrong',
+                                label: 'Inactive',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        identification: 'Company Identification No.',
+                        status: [
+                            {
+                                cssClass: 'inapproved',
+                                icon: 'icon-wrong',
+                                label: 'Inactive',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        identification: 'Others',
+                        status: [
+                            {
+                                cssClass: 'inapproved',
+                                icon: 'icon-wrong',
+                                label: 'Inactive',
+                            },
+                        ],
+                        action: 'active',
+                    },
+
+                    {
+                        identification: 'National Tax No.',
+                        status: [
+                            {
+                                cssClass: 'inapproved',
+                                icon: 'icon-wrong',
+                                label: 'Inactive',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        identification: 'OFAC Program ID',
+                        status: [
+                            {
+                                cssClass: 'inapproved',
+                                icon: 'icon-wrong',
+                                label: 'Inactive',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                ],
+            },
+
+            relationship: {
+                fields: [
+                    {
+                        key: 'relationshipId',
+                        label: 'Relationship ID',
+                        class: 'id-center',
+                        sortable: true,
+                    },
+                    {
+                        key: 'relationship',
+                        label: 'Relationship',
+                        sortable: true,
+                    },
+                    {
+                        key: 'status',
+                        label: 'Status',
+                        class: 'text-center',
+                        sortable: true,
+                    },
+                    {
+                        key: 'action',
+                        label: 'ACTION',
+                        class: 'single-list',
+                    },
+                ],
+                items: [
+                    {
+                        relationshipId: 1,
+                        relationship: 'Wife',
+                        status: [
+                            {
+                                cssClass: 'approved',
+                                icon: 'icon-check',
+                                label: 'Active',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        relationshipId: 2,
+                        relationship: 'Husband',
+                        status: [
+                            {
+                                cssClass: 'approved',
+                                icon: 'icon-check',
+                                label: 'Active',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        relationshipId: 3,
+                        relationship: 'Brother',
+                        status: [
+                            {
+                                cssClass: 'approved',
+                                icon: 'icon-check',
+                                label: 'Active',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        relationshipId: 4,
+                        relationship: 'Sister',
+                        status: [
+                            {
+                                cssClass: 'approved',
+                                icon: 'icon-check',
+                                label: 'Active',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        relationshipId: 5,
+                        relationship: 'Son',
+                        status: [
+                            {
+                                cssClass: 'approved',
+                                icon: 'icon-check',
+                                label: 'Active',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        relationshipId: 6,
+                        relationship: 'Daughter',
+                        status: [
+                            {
+                                cssClass: 'approved',
+                                icon: 'icon-check',
+                                label: 'Active',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        relationshipId: 7,
+                        relationship: 'Mother',
+                        status: [
+                            {
+                                cssClass: 'approved',
+                                icon: 'icon-check',
+                                label: 'Active',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        relationshipId: 8,
+                        relationship: 'Father',
+                        status: [
+                            {
+                                cssClass: 'approved',
+                                icon: 'icon-check',
+                                label: 'Active',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        relationshipId: 9,
+                        relationship: 'Cousin',
+                        status: [
+                            {
+                                cssClass: 'inapproved',
+                                icon: 'icon-wrong',
+                                label: 'Inactive',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        relationshipId: 10,
+                        relationship: 'Step-Son',
+                        status: [
+                            {
+                                cssClass: 'approved',
+                                icon: 'icon-check',
+                                label: 'Active',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                ],
+            },
         },
     },
 }

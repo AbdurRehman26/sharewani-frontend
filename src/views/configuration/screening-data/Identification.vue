@@ -3,13 +3,13 @@
         <div class="filter-section">
             <div class="row">
                 <div class="col-md-6">
-                    <h2>Name Type</h2>
+                    <h2>Identification Type</h2>
                 </div>
                 <div class="col-md-6 text-right">
                     <ul>
                         <li>
                             <base-search
-                                placeholder="Search name type"
+                                placeholder="Search country type"
                             ></base-search>
                         </li>
                         <li>
@@ -95,11 +95,11 @@ export default {
     methods: {
         initializeData() {
             //system log table
-            let screeningFields = this.configurationData.screeningData.nameType
-                .fields //get user data from store
+            let screeningFields = this.configurationData.screeningData
+                .identificationtypeTable.fields //get user data from store
             this.fields = screeningFields //push data into array
-            let screeningItems = this.configurationData.screeningData.nameType
-                .items //get user data from store
+            let screeningItems = this.configurationData.screeningData
+                .identificationtypeTable.items //get user data from store
             this.items = screeningItems //push data into array
             this.$emit('item-length', this.items.length)
         },
