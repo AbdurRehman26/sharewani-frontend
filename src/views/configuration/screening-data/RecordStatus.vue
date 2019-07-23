@@ -1,26 +1,29 @@
 <template>
     <div class="infoengine">
-        <div class="filter-section">
+        <div class="filter-section row-min-space">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-8 filter-title-section">
                     <h2>Record Status</h2>
                 </div>
-                <div class="col-md-6 text-right">
-                    <ul>
-                        <li>
+                <div class="col-md-4 text-right">
+                    <div class="row">
+                        <div class="col-md-9">
                             <base-search
                                 placeholder="Search record status"
                             ></base-search>
-                        </li>
-                        <li>
-                            <b-button type="button" variant="primary"
-                                >Apply</b-button
-                            >
-                        </li>
-                    </ul>
+                        </div>
+                        <div class="col-md-3">
+                            <base-button
+                                btnLabel="Apply"
+                                btnType="button"
+                                btnVariant="primary"
+                            ></base-button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+
         <div class="table-section m-b-30">
             <b-table :items="items" :fields="fields">
                 <template slot="status" slot-scope="data">

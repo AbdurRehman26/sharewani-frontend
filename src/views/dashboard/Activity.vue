@@ -104,7 +104,7 @@
                                 <!-- screening hit by type report -->
                                 <div
                                     id="screening-by-type"
-                                    class="amcharts-div screening-by-type"
+                                    class="amcharts-div pie-charts screening-by-type"
                                 ></div>
                                 <div
                                     id="alertTypesLegend"
@@ -133,7 +133,11 @@
                                 <!-- dashboard alerts report -->
                                 <div
                                     id="screen-hit-by-type"
-                                    class="amcharts-div alerts-by-type"
+                                    class="amcharts-div pie-charts alerts-by-type"
+                                ></div>
+                                <div
+                                    id="screenHitByTypeLegend"
+                                    class="custom-legend-wrapper"
                                 ></div>
                                 <div class="chart-highest-record">
                                     <h2>HIGHEST</h2>
@@ -153,7 +157,11 @@
                                 <!-- dashboard alerts report -->
                                 <div
                                     id="on-board-issue"
-                                    class="amcharts-div alerts-by-type"
+                                    class="amcharts-div pie-charts alerts-by-type"
+                                ></div>
+                                <div
+                                    id="onBoardIssueLegend"
+                                    class="custom-legend-wrapper"
                                 ></div>
                                 <div class="chart-highest-record">
                                     <h2>HIGHEST</h2>

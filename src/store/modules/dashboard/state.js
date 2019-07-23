@@ -451,6 +451,7 @@ export default {
             fontFamily: 'Proxima Nova',
             fontSize: 14,
             allLabels: [],
+            customLabels: '<b>[[value]]</b> [[percents]]%',
             balloon: {
                 color: '#1B1B1E',
                 fillAlpha: 1,
@@ -562,7 +563,7 @@ export default {
                 fillAlpha: 1,
             },
             legend: {
-                enabled: true,
+                enabled: false,
                 align: 'center',
                 markerBorderAlpha: 0.27,
                 markerBorderThickness: 0,
@@ -579,18 +580,67 @@ export default {
                 {
                     category: 'Sanction Hit',
                     'column-1': '180',
+                    percents: '25%',
                 },
                 {
                     category: 'PEP Hit',
                     'column-1': '320',
+                    percents: '50%',
                 },
                 {
                     category: 'Enforcement Hit',
                     'column-1': '120',
+                    percents: '15%',
                 },
                 {
                     category: 'Client Black List Hit',
                     'column-1': '92',
+                    percents: '10%',
+                },
+            ],
+            listeners: [
+                {
+                    event: 'init',
+                    method: function(event) {
+                        // chart initialized
+                        // let's build a custom legend
+                        var chart = event.chart
+
+                        // get legend object
+
+                        var legend = document.getElementById(
+                            'screenHitByTypeLegend'
+                        )
+                        // cycle through the data
+                        for (var i = 0; i < chart.dataProvider.length; i++) {
+                            // data point
+                            var dp = chart.dataProvider[i]
+
+                            // create a legend item holder
+                            var item = document.createElement('div')
+
+                            // create marker
+                            var marker = document.createElement('div')
+                            marker.className = 'legend-marker'
+                            marker.style.backgroundColor = chart.colors[i]
+                            item.appendChild(marker)
+
+                            // create title
+                            var title = document.createElement('div')
+                            title.className = 'legend-title'
+                            title.innerHTML = dp.category
+                            item.appendChild(title)
+
+                            // create absolute value
+                            var value = document.createElement('div')
+                            value.className = 'legend-value'
+                            value.innerHTML = dp.percents
+                            item.appendChild(value)
+
+                            // add item to legend
+                            legend.appendChild(item)
+                        }
+                    },
                 },
             ],
         },
@@ -702,7 +752,7 @@ export default {
                 fillAlpha: 1,
             },
             legend: {
-                enabled: true,
+                enabled: false,
                 align: 'center',
                 markerBorderAlpha: 0.27,
                 markerBorderThickness: 0,
@@ -719,10 +769,57 @@ export default {
                 {
                     category: 'Onboarding Without Issue',
                     'column-1': '2173',
+                    percents: '80%',
                 },
                 {
                     category: 'Onboarding With Issue',
                     'column-1': '980',
+                    percents: '20%',
+                },
+            ],
+            listeners: [
+                {
+                    event: 'init',
+                    method: function(event) {
+                        // chart initialized
+                        // let's build a custom legend
+                        var chart = event.chart
+
+                        // get legend object
+
+                        var legend = document.getElementById(
+                            'onBoardIssueLegend'
+                        )
+                        // cycle through the data
+                        for (var i = 0; i < chart.dataProvider.length; i++) {
+                            // data point
+                            var dp = chart.dataProvider[i]
+
+                            // create a legend item holder
+                            var item = document.createElement('div')
+
+                            // create marker
+                            var marker = document.createElement('div')
+                            marker.className = 'legend-marker'
+                            marker.style.backgroundColor = chart.colors[i]
+                            item.appendChild(marker)
+
+                            // create title
+                            var title = document.createElement('div')
+                            title.className = 'legend-title'
+                            title.innerHTML = dp.category
+                            item.appendChild(title)
+
+                            // create absolute value
+                            var value = document.createElement('div')
+                            value.className = 'legend-value'
+                            value.innerHTML = dp.percents
+                            item.appendChild(value)
+
+                            // add item to legend
+                            legend.appendChild(item)
+                        }
+                    },
                 },
             ],
         },
