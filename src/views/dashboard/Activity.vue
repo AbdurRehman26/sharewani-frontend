@@ -106,6 +106,10 @@
                                     id="screening-by-type"
                                     class="amcharts-div screening-by-type"
                                 ></div>
+                                <div
+                                    id="alertTypesLegend"
+                                    class="custom-legend-wrapper"
+                                ></div>
                                 <div class="chart-highest-record">
                                     <h2>HIGHEST</h2>
                                     <p>

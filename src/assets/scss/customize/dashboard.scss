@@ -45,17 +45,17 @@
 				top: 40%;
 			}
 		}
-		&.single-line-dashboard-chart {
+		/* 		&.single-line-dashboard-chart {
 			.chart-highest-record {
 				top: 44%;
 			}
-		}
+		} */
 	}
 }
 
 .chart-highest-record {
 	position: absolute;
-	top: 37%;
+	top: 40%;
 	left: 0;
 	text-align: center;
 	width: 100%;
@@ -88,3 +88,41 @@
 	height: 270px;
 }
 
+.screening-by-type {
+	height: 300px !important;
+}
+
+/*
+	Customize legends
+*/
+
+.custom-legend-wrapper {
+	margin-top: 30px;
+	> div {
+		float: left;
+		width: 50%;
+		padding: 0 0 0 15px;
+		margin-bottom: 15px;
+	}
+}
+
+.legend-marker {
+	width: 22px;
+	height: 22px;
+	border-radius: 4px;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 10px;
+}
+
+.legend-title {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 10px;
+}
+
+.legend-value {
+	display: inline-block;
+	font-family: $font-bold;
+	float: right;
+}
