@@ -1,6 +1,7 @@
 <template>
     <div>
         <b-modal
+            ref="my-modal"
             id="modify-status-popup"
             title="Add Nationality Factor"
             size="sm"
@@ -66,11 +67,7 @@ export default {
                 status: null,
             },
 
-            status: [
-                { value: null, text: 'Select Status' },
-                'Active',
-                'Inactive',
-            ],
+            status: [{ value: null, text: 'Active' }, 'Inactive'],
         }
     },
     methods: {

@@ -1,23 +1,25 @@
 <template>
     <div class="infoengine">
-        <div class="filter-section">
+        <div class="filter-section row-min-space">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-8 filter-title-section">
                     <h2>Identification Type</h2>
                 </div>
-                <div class="col-md-6 text-right">
-                    <ul>
-                        <li>
+                <div class="col-md-4 text-right">
+                    <div class="row">
+                        <div class="col-md-9">
                             <base-search
-                                placeholder="Search country type"
+                                placeholder="Search identification type"
                             ></base-search>
-                        </li>
-                        <li>
-                            <b-button type="button" variant="primary"
-                                >Apply</b-button
-                            >
-                        </li>
-                    </ul>
+                        </div>
+                        <div class="col-md-3">
+                            <base-button
+                                btnLabel="Apply"
+                                btnType="button"
+                                btnVariant="primary"
+                            ></base-button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -32,22 +34,25 @@
                             v-if="data.value == 'active'"
                             icon="icon-edit"
                             label="Modify"
-                            v-b-modal.modify-liveness-detection-popup
+                            v-b-modal.modify-status-popup
                         ></base-action>
                     </div>
                 </template>
             </b-table>
         </div>
-        <modify-liveness-detection-popup></modify-liveness-detection-popup>
+        <modify-status-popup
+            modalTitle="Modify Identification Type Status"
+            modalLabel="National ID"
+        ></modify-status-popup>
     </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
-import modifyLivenessDetectionPopup from '@/components/popups/ModifyLivenessDetectionPopup.vue'
+import modifyStatusPopup from '@/components/popups/ModifyStatusPopup.vue'
 export default {
     components: {
-        modifyLivenessDetectionPopup,
+        modifyStatusPopup,
     },
 
     /*
