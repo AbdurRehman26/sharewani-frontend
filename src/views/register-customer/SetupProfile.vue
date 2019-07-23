@@ -75,11 +75,14 @@
                                 label="Date of Birth"
                                 label-for="dateofbirth"
                             >
-                                <div class="form-group date-pickers">
-                                    <i class="icon-calendar"></i>
-                                    <datepicker
-                                        placeholder="DD / MM / YYYY"
-                                    ></datepicker>
+                                <div class="form-group">
+                                    <base-date-picker
+                                        dateFormat="ll"
+                                        placeholder="DD / MM/ YYYY"
+                                        date
+                                        close
+                                        noFooter
+                                    ></base-date-picker>
                                 </div>
                             </b-form-group>
                         </div>
@@ -335,11 +338,14 @@
                                 label="Expirty Date"
                                 label-for="expiredate"
                             >
-                                <div class="form-group date-pickers">
-                                    <i class="icon-calendar"></i>
-                                    <datepicker
-                                        placeholder="DD / MM / YYYY"
-                                    ></datepicker>
+                                <div class="form-group ">
+                                    <base-date-picker
+                                        dateFormat="ll"
+                                        placeholder="DD / MM/ YYYY"
+                                        date
+                                        close
+                                        noFooter
+                                    ></base-date-picker>
                                 </div>
                             </b-form-group>
                         </div>
@@ -356,11 +362,8 @@
     </b-form>
 </template>
 <script>
-import Datepicker from 'vuejs-datepicker'
 export default {
-    components: {
-        Datepicker,
-    },
+    components: {},
 
     /*
     |--------------------------------------------------------------------------

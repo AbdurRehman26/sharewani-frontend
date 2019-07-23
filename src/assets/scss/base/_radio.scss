@@ -1,6 +1,7 @@
 // radio button
 .custom-radio {
     .custom-control-label {
+        font-family: $font_regular;
         &:before {
             width: 20px;
             height: 20px;
