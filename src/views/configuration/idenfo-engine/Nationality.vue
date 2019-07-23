@@ -17,7 +17,7 @@
                                 <div class="col-md-4">
                                     <base-button
                                         btnLabel="Apply"
-                                        btnType="submit"
+                                        btnType="button"
                                         btnVariant="primary"
                                     ></base-button>
                                 </div>
