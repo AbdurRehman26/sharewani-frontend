@@ -15,6 +15,7 @@
                 <template slot="sanction" slot-scope="data">
                     <status-type-icon
                         :statusType="data.value"
+                        class="cursor-pointer"
                         v-b-modal.screening-detail-popup
                     ></status-type-icon>
                 </template>

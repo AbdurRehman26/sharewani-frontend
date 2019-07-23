@@ -50,7 +50,12 @@ export default {
     */
     data() {
         return {
-            showRecords: [{ text: 'Show 10 records', value: null }],
+            showRecords: [
+                { text: 'Show 10 records', value: null },
+                { text: 'Show 20 records', value: 20 },
+                { text: 'Show 50 records', value: 50 },
+                { text: 'Show 100 records', value: 100 },
+            ],
             record: null,
         }
     }, // End of Component > data

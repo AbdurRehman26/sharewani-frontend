@@ -674,7 +674,7 @@ export default {
                 color: '#1B1B1E',
             },
             legend: {
-                enabled: true,
+                enabled: false,
                 align: 'center',
                 markerBorderAlpha: 0.27,
                 markerBorderThickness: 0,
@@ -691,26 +691,77 @@ export default {
                 {
                     category: '18 - 24',
                     'column-1': '800',
+                    percents: '10%',
                 },
                 {
                     category: '25 - 34',
                     'column-1': '600',
+                    percents: '15%',
                 },
                 {
                     category: '45 - 54',
                     'column-1': '200',
+                    percents: '20%',
                 },
                 {
                     category: '55 - 64',
                     'column-1': '950',
+                    percents: '30%',
                 },
                 {
                     category: '65 - 74',
                     'column-1': '400',
+                    percents: '10%',
                 },
                 {
                     category: '75+',
                     'column-1': '200',
+                    percents: '10%',
+                },
+            ],
+            listeners: [
+                {
+                    event: 'init',
+                    method: function(event) {
+                        // chart initialized
+                        // let's build a custom legend
+                        var chart = event.chart
+
+                        // get legend object
+
+                        var legend = document.getElementById(
+                            'customerByAgeLegend'
+                        )
+                        // cycle through the data
+                        for (var i = 0; i < chart.dataProvider.length; i++) {
+                            // data point
+                            var dp = chart.dataProvider[i]
+
+                            // create a legend item holder
+                            var item = document.createElement('div')
+
+                            // create marker
+                            var marker = document.createElement('div')
+                            marker.className = 'legend-marker'
+                            marker.style.backgroundColor = chart.colors[i]
+                            item.appendChild(marker)
+
+                            // create title
+                            var title = document.createElement('div')
+                            title.className = 'legend-title'
+                            title.innerHTML = dp.category
+                            item.appendChild(title)
+
+                            // create absolute value
+                            var value = document.createElement('div')
+                            value.className = 'legend-value'
+                            value.innerHTML = dp.percents
+                            item.appendChild(value)
+
+                            // add item to legend
+                            legend.appendChild(item)
+                        }
+                    },
                 },
             ],
         },
@@ -963,7 +1014,7 @@ export default {
             },
             titles: [],
             legend: {
-                enabled: true,
+                enabled: false,
                 align: 'center',
                 markerBorderAlpha: 0.27,
                 markerBorderThickness: 0,
@@ -979,10 +1030,57 @@ export default {
                 {
                     category: 'Male',
                     'column-1': '2173',
+                    percents: '68.92%',
                 },
                 {
                     category: 'Female',
                     'column-1': '980',
+                    percents: '31.08%',
+                },
+            ],
+            listeners: [
+                {
+                    event: 'init',
+                    method: function(event) {
+                        // chart initialized
+                        // let's build a custom legend
+                        var chart = event.chart
+
+                        // get legend object
+
+                        var legend = document.getElementById(
+                            'customersByGenderLegend'
+                        )
+                        // cycle through the data
+                        for (var i = 0; i < chart.dataProvider.length; i++) {
+                            // data point
+                            var dp = chart.dataProvider[i]
+
+                            // create a legend item holder
+                            var item = document.createElement('div')
+
+                            // create marker
+                            var marker = document.createElement('div')
+                            marker.className = 'legend-marker'
+                            marker.style.backgroundColor = chart.colors[i]
+                            item.appendChild(marker)
+
+                            // create title
+                            var title = document.createElement('div')
+                            title.className = 'legend-title'
+                            title.innerHTML = dp.category
+                            item.appendChild(title)
+
+                            // create absolute value
+                            var value = document.createElement('div')
+                            value.className = 'legend-value'
+                            value.innerHTML = dp.percents
+                            item.appendChild(value)
+
+                            // add item to legend
+                            legend.appendChild(item)
+                        }
+                    },
                 },
             ],
         },
@@ -1400,234 +1498,26 @@ export default {
                 '#fc7400',
                 '#ff87e6',
                 '#f8e08e',
-            ],
-            labelsEnabled: false,
-            pullOutRadius: '0%',
-            balloonText: '[[title]]: <b>[[value]]</b> [[percents]]%',
-            marginBottom: 0,
-            marginTop: 0,
-            outlineAlpha: 1,
-            outlineThickness: 2,
-            titleField: 'category',
-            valueField: 'column-1',
-            color: '#1B1B1E',
-            fontFamily: 'Proxima Nova',
-            fontSize: 14,
-            allLabels: [],
-            balloon: {
-                color: '#1B1B1E',
-                fillAlpha: 1,
-            },
-            titles: [],
-            dataProvider: [
-                {
-                    category: 'Australia',
-                    'column-1': '300',
-                    color: '#7f1ec5',
-                },
-                {
-                    category: 'Bangladesh',
-                    'column-1': '240',
-                    color: '#00a4f2',
-                },
-                {
-                    category: 'Belgium',
-                    'column-1': '450',
-                    color: '#00c535',
-                },
-                {
-                    category: 'UK',
-                    'column-1': '570',
-                    color: '#eb8300',
-                },
-                {
-                    category: 'USA',
-                    'column-1': '640',
-                    color: '#f4c200',
-                },
-                {
-                    category: 'India',
-                    'column-1': '720',
-                    color: '#c1c1c1',
-                },
-                {
-                    category: 'Canada',
-                    'column-1': '655',
-                    color: '#F8508C',
-                },
-                {
-                    category: 'China',
-                    'column-1': '740',
-                    color: '#00b1a5',
-                },
-                {
-                    category: 'Netherlands',
-                    'column-1': '480',
-                    color: '#84dc2b',
-                },
-                {
-                    category: 'Greece',
-                    'column-1': '380',
-                    color: '#5172fa',
-                },
-                {
-                    category: 'Japan',
-                    'column-1': '290',
-                    color: '#798bb0',
-                },
-                {
-                    category: 'Mexico',
-                    'column-1': '180',
-                    color: '#b31493',
-                },
-                {
-                    category: 'Pakistan',
-                    'column-1': '150',
-                    color: '#7000f7',
-                },
-                {
-                    category: 'Russia',
-                    'column-1': '541',
-                    color: '#4a005e',
-                },
-                {
-                    category: 'Turkey',
-                    'column-1': '321',
-                    color: '#a388b0',
-                },
-                {
-                    category: 'Malaysia',
-                    'column-1': '487',
-                    color: '#770d42',
-                },
-                {
-                    category: 'Lebnan',
-                    'column-1': '380',
-                    color: '#388b79',
-                },
-                {
-                    category: 'Japan',
-                    'column-1': '630',
-                    color: '#fc7400',
-                },
-                {
-                    category: 'Sweden',
-                    'column-1': '420',
-                    color: '#ff87e6',
-                },
-                {
-                    category: 'Germany',
-                    'column-1': '370',
-                    color: '#f8e08e',
-                },
-                {
-                    category: 'Australia',
-                    'column-1': '300',
-                    color: '#7f1ec5',
-                },
-                {
-                    category: 'Bangladesh',
-                    'column-1': '240',
-                    color: '#00a4f2',
-                },
-                {
-                    category: 'Belgium',
-                    'column-1': '450',
-                    color: '#00c535',
-                },
-                {
-                    category: 'UK',
-                    'column-1': '570',
-                    color: '#eb8300',
-                },
-                {
-                    category: 'USA',
-                    'column-1': '640',
-                    color: '#f4c200',
-                },
-                {
-                    category: 'India',
-                    'column-1': '720',
-                    color: '#c1c1c1',
-                },
-                {
-                    category: 'Canada',
-                    'column-1': '655',
-                    color: '#F8508C',
-                },
-                {
-                    category: 'China',
-                    'column-1': '740',
-                    color: '#00b1a5',
-                },
-                {
-                    category: 'Netherlands',
-                    'column-1': '480',
-                    color: '#84dc2b',
-                },
-                {
-                    category: 'Greece',
-                    'column-1': '380',
-                    color: '#5172fa',
-                },
-                {
-                    category: 'Japan',
-                    'column-1': '290',
-                    color: '#798bb0',
-                },
-                {
-                    category: 'Mexico',
-                    'column-1': '180',
-                    color: '#b31493',
-                },
-                {
-                    category: 'Pakistan',
-                    'column-1': '150',
-                    color: '#7000f7',
-                },
-                {
-                    category: 'Russia',
-                    'column-1': '541',
-                    color: '#4a005e',
-                },
-                {
-                    category: 'Turkey',
-                    'column-1': '321',
-                    color: '#a388b0',
-                },
-                {
-                    category: 'Malaysia',
-                    'column-1': '487',
-                    color: '#770d42',
-                },
-                {
-                    category: 'Lebnan',
-                    'column-1': '380',
-                    color: '#388b79',
-                },
-                {
-                    category: 'Japan',
-                    'column-1': '630',
-                    color: '#fc7400',
-                },
-                {
-                    category: 'Sweden',
-                    'column-1': '420',
-                    color: '#ff87e6',
-                },
-                {
-                    category: 'Germany',
-                    'column-1': '370',
-                    color: '#f8e08e',
-                },
-            ],
-        },
-
-        //Customers by Country Residence
-        customersByResidence: {
-            type: 'pie',
-            innerRadius: '80%',
-            colors: [
+                '#7f1ec5',
+                '#00a4f2',
+                '#00c535',
+                '#eb8300',
+                '#f4c200',
+                '#c1c1c1',
+                '#F8508C',
+                '#00b1a5',
+                '#84dc2b',
+                '#5172fa',
+                '#798bb0',
+                '#b31493',
+                '#7000f7',
+                '#4a005e',
+                '#a388b0',
+                '#770d42',
+                '#388b79',
+                '#fc7400',
+                '#ff87e6',
+                '#f8e08e',
                 '#7f1ec5',
                 '#00a4f2',
                 '#00c535',
@@ -1657,7 +1547,7 @@ export default {
             outlineAlpha: 1,
             outlineThickness: 2,
             titleField: 'category',
-            valueField: 'column-1',
+            valueField: 'column',
             color: '#1B1B1E',
             fontFamily: 'Proxima Nova',
             fontSize: 14,
@@ -1670,203 +1560,573 @@ export default {
             dataProvider: [
                 {
                     category: 'Australia',
-                    'column-1': '300',
-                    color: '#7f1ec5',
+                    column: '300',
+                    percents: '1%',
                 },
                 {
                     category: 'Bangladesh',
-                    'column-1': '240',
-                    color: '#00a4f2',
+                    column: '240',
+                    percents: '2%',
                 },
                 {
                     category: 'Belgium',
-                    'column-1': '450',
-                    color: '#00c535',
+                    column: '450',
+                    percents: '1%',
                 },
                 {
                     category: 'UK',
-                    'column-1': '570',
-                    color: '#eb8300',
+                    column: '570',
+                    percents: '3%',
                 },
                 {
                     category: 'USA',
-                    'column-1': '640',
-                    color: '#f4c200',
+                    column: '640',
+                    percents: '2%',
                 },
                 {
                     category: 'India',
-                    'column-1': '720',
-                    color: '#c1c1c1',
+                    column: '720',
+                    percents: '1.5%',
                 },
                 {
                     category: 'Canada',
-                    'column-1': '655',
-                    color: '#F8508C',
+                    column: '655',
+                    percents: '2.2%',
                 },
                 {
                     category: 'China',
-                    'column-1': '740',
-                    color: '#00b1a5',
+                    column: '740',
+                    percents: '1%',
                 },
                 {
                     category: 'Netherlands',
-                    'column-1': '480',
-                    color: '#84dc2b',
+                    column: '480',
+                    percents: '1%',
                 },
                 {
                     category: 'Greece',
-                    'column-1': '380',
-                    color: '#5172fa',
+                    column: '380',
+                    percents: '1%',
                 },
                 {
                     category: 'Japan',
-                    'column-1': '290',
-                    color: '#798bb0',
+                    column: '290',
+                    percents: '1%',
                 },
                 {
                     category: 'Mexico',
-                    'column-1': '180',
-                    color: '#b31493',
+                    column: '180',
+                    percents: '4%',
                 },
                 {
                     category: 'Pakistan',
-                    'column-1': '150',
-                    color: '#7000f7',
+                    column: '150',
+                    percents: '6%',
                 },
                 {
                     category: 'Russia',
-                    'column-1': '541',
-                    color: '#4a005e',
+                    column: '541',
+                    percents: '1%',
                 },
                 {
                     category: 'Turkey',
-                    'column-1': '321',
-                    color: '#a388b0',
+                    column: '321',
+                    percents: '1%',
                 },
                 {
                     category: 'Malaysia',
-                    'column-1': '487',
-                    color: '#770d42',
+                    column: '487',
+                    percents: '1.5%',
                 },
                 {
                     category: 'Lebnan',
-                    'column-1': '380',
-                    color: '#388b79',
+                    column: '380',
+                    percents: '2.2%',
                 },
                 {
                     category: 'Japan',
-                    'column-1': '630',
-                    color: '#fc7400',
+                    column: '630',
+                    percents: '3%',
                 },
                 {
                     category: 'Sweden',
-                    'column-1': '420',
-                    color: '#ff87e6',
+                    column: '420',
+                    percents: '5%',
                 },
                 {
                     category: 'Germany',
-                    'column-1': '370',
-                    color: '#f8e08e',
+                    column: '370',
+                    percents: '1%',
                 },
                 {
                     category: 'Australia',
-                    'column-1': '300',
-                    color: '#7f1ec5',
+                    column: '300',
+                    percents: '1%',
                 },
                 {
                     category: 'Bangladesh',
-                    'column-1': '240',
-                    color: '#00a4f2',
+                    column: '240',
+                    percents: '8%',
                 },
                 {
                     category: 'Belgium',
-                    'column-1': '450',
-                    color: '#00c535',
+                    column: '450',
+                    percents: '10%',
                 },
                 {
                     category: 'UK',
-                    'column-1': '570',
-                    color: '#eb8300',
+                    column: '570',
+                    percents: '1%',
                 },
                 {
                     category: 'USA',
-                    'column-1': '640',
-                    color: '#f4c200',
+                    column: '640',
+                    percents: '8%',
                 },
                 {
                     category: 'India',
-                    'column-1': '720',
-                    color: '#c1c1c1',
+                    column: '720',
+                    percents: '4%',
                 },
                 {
                     category: 'Canada',
-                    'column-1': '655',
-                    color: '#F8508C',
+                    column: '655',
+                    percents: '11%',
                 },
                 {
                     category: 'China',
-                    'column-1': '740',
-                    color: '#00b1a5',
+                    column: '740',
+                    percents: '10%',
                 },
                 {
                     category: 'Netherlands',
-                    'column-1': '480',
-                    color: '#84dc2b',
+                    column: '480',
+                    percents: '1%',
                 },
                 {
                     category: 'Greece',
-                    'column-1': '380',
-                    color: '#5172fa',
+                    column: '380',
+                    percents: '1%',
                 },
                 {
                     category: 'Japan',
-                    'column-1': '290',
-                    color: '#798bb0',
+                    column: '290',
+                    percents: '1%',
                 },
                 {
                     category: 'Mexico',
-                    'column-1': '180',
-                    color: '#b31493',
+                    column: '180',
+                    percents: '1%',
                 },
                 {
                     category: 'Pakistan',
-                    'column-1': '150',
-                    color: '#7000f7',
+                    column: '150',
+                    percents: '1%',
                 },
                 {
                     category: 'Russia',
-                    'column-1': '541',
-                    color: '#4a005e',
+                    column: '541',
+                    percents: '1%',
                 },
                 {
                     category: 'Turkey',
-                    'column-1': '321',
-                    color: '#a388b0',
+                    column: '321',
+                    percents: '1%',
                 },
                 {
                     category: 'Malaysia',
-                    'column-1': '487',
-                    color: '#770d42',
+                    column: '487',
+                    percents: '1%',
                 },
                 {
                     category: 'Lebnan',
-                    'column-1': '380',
-                    color: '#388b79',
+                    column: '380',
+                    percents: '1%',
                 },
                 {
                     category: 'Japan',
-                    'column-1': '630',
-                    color: '#fc7400',
+                    column: '630',
+                    percents: '1%',
                 },
                 {
                     category: 'Sweden',
-                    'column-1': '420',
-                    color: '#ff87e6',
+                    column: '420',
+                    percents: '1%',
                 },
                 {
                     category: 'Germany',
-                    'column-1': '370',
-                    color: '#f8e08e',
+                    column: '370',
+                    percents: '1%',
+                },
+            ],
+            listeners: [
+                {
+                    event: 'init',
+                    method: function(event) {
+                        // chart initialized
+                        // let's build a custom legend
+                        var chart = event.chart
+
+                        // get legend object
+
+                        var legend = document.getElementById(
+                            'customersByNationalityLegend'
+                        )
+                        // cycle through the data
+                        for (var i = 0; i < chart.dataProvider.length; i++) {
+                            // data point
+                            var dp = chart.dataProvider[i]
+
+                            // create a legend item holder
+                            var item = document.createElement('div')
+
+                            // create marker
+                            var marker = document.createElement('div')
+                            marker.className = 'legend-marker'
+                            marker.style.backgroundColor = chart.colors[i]
+                            item.appendChild(marker)
+
+                            // create title
+                            var title = document.createElement('div')
+                            title.className = 'legend-title'
+                            title.innerHTML = dp.category
+                            item.appendChild(title)
+
+                            // create absolute value
+                            var value = document.createElement('div')
+                            value.className = 'legend-value'
+                            value.innerHTML = dp.percents
+                            item.appendChild(value)
+
+                            // users from each country
+                            var users = document.createElement('div')
+                            users.className = 'legend-country-users'
+                            users.innerHTML = dp.column
+                            item.appendChild(users)
+
+                            // add item to legend
+                            legend.appendChild(item)
+                        }
+                    },
+                },
+            ],
+        },
+
+        //Customers by Country Residence
+        customersByResidence: {
+            type: 'pie',
+            innerRadius: '80%',
+            colors: [
+                '#7f1ec5',
+                '#00a4f2',
+                '#00c535',
+                '#eb8300',
+                '#f4c200',
+                '#c1c1c1',
+                '#F8508C',
+                '#00b1a5',
+                '#84dc2b',
+                '#5172fa',
+                '#798bb0',
+                '#b31493',
+                '#7000f7',
+                '#4a005e',
+                '#a388b0',
+                '#770d42',
+                '#388b79',
+                '#fc7400',
+                '#ff87e6',
+                '#f8e08e',
+                '#7f1ec5',
+                '#00a4f2',
+                '#00c535',
+                '#eb8300',
+                '#f4c200',
+                '#c1c1c1',
+                '#F8508C',
+                '#00b1a5',
+                '#84dc2b',
+                '#5172fa',
+                '#798bb0',
+                '#b31493',
+                '#7000f7',
+                '#4a005e',
+                '#a388b0',
+                '#770d42',
+                '#388b79',
+                '#fc7400',
+                '#ff87e6',
+                '#f8e08e',
+            ],
+            labelsEnabled: false,
+            pullOutRadius: '0%',
+            balloonText: '[[title]]: <b>[[value]]</b> [[percents]]%',
+            marginBottom: 0,
+            marginTop: 0,
+            outlineAlpha: 1,
+            outlineThickness: 2,
+            titleField: 'category',
+            valueField: 'column',
+            color: '#1B1B1E',
+            fontFamily: 'Proxima Nova',
+            fontSize: 14,
+            allLabels: [],
+            balloon: {
+                color: '#1B1B1E',
+                fillAlpha: 1,
+            },
+            titles: [],
+            dataProvider: [
+                {
+                    category: 'Australia',
+                    column: '300',
+                    percents: '3%',
+                },
+                {
+                    category: 'Bangladesh',
+                    column: '240',
+                    percents: '4%',
+                },
+                {
+                    category: 'Belgium',
+                    column: '450',
+                    percents: '5%',
+                },
+                {
+                    category: 'UK',
+                    column: '570',
+                    percents: '10%',
+                },
+                {
+                    category: 'USA',
+                    column: '640',
+                    percents: '8%',
+                },
+                {
+                    category: 'India',
+                    column: '720',
+                    percents: '4%',
+                },
+                {
+                    category: 'Canada',
+                    column: '655',
+                    percents: '8%',
+                },
+                {
+                    category: 'China',
+                    column: '740',
+                    percents: '11%',
+                },
+                {
+                    category: 'Netherlands',
+                    column: '480',
+                    percents: '18%',
+                },
+                {
+                    category: 'Greece',
+                    column: '380',
+                    percents: '16%',
+                },
+                {
+                    category: 'Japan',
+                    column: '290',
+                    percents: '15%',
+                },
+                {
+                    category: 'Mexico',
+                    column: '180',
+                    percents: '11%',
+                },
+                {
+                    category: 'Pakistan',
+                    column: '150',
+                    percents: '20%',
+                },
+                {
+                    category: 'Russia',
+                    column: '541',
+                    percents: '6%',
+                },
+                {
+                    category: 'Turkey',
+                    column: '321',
+                    percents: '1%',
+                },
+                {
+                    category: 'Malaysia',
+                    column: '487',
+                    percents: '1%',
+                },
+                {
+                    category: 'Lebnan',
+                    column: '380',
+                    percents: '4%',
+                },
+                {
+                    category: 'Japan',
+                    column: '630',
+                    percents: '4%',
+                },
+                {
+                    category: 'Sweden',
+                    column: '420',
+                    percents: '5%',
+                },
+                {
+                    category: 'Germany',
+                    column: '370',
+                    percents: '4%',
+                },
+                {
+                    category: 'Australia',
+                    column: '300',
+                    percents: '4%',
+                },
+                {
+                    category: 'Bangladesh',
+                    column: '240',
+                    percents: '3%',
+                },
+                {
+                    category: 'Belgium',
+                    column: '450',
+                    percents: '12%',
+                },
+                {
+                    category: 'UK',
+                    column: '570',
+                    percents: '11%',
+                },
+                {
+                    category: 'USA',
+                    column: '640',
+                    percents: '10%',
+                },
+                {
+                    category: 'India',
+                    column: '720',
+                    percents: '6%',
+                },
+                {
+                    category: 'Canada',
+                    column: '655',
+                    percents: '4%',
+                },
+                {
+                    category: 'China',
+                    column: '740',
+                    percents: '4%',
+                },
+                {
+                    category: 'Netherlands',
+                    column: '480',
+                    percents: '5%',
+                },
+                {
+                    category: 'Greece',
+                    column: '380',
+                    percents: '8%',
+                },
+                {
+                    category: 'Japan',
+                    column: '290',
+                    percents: '4%',
+                },
+                {
+                    category: 'Mexico',
+                    column: '180',
+                    percents: '5%',
+                },
+                {
+                    category: 'Pakistan',
+                    column: '150',
+                    percents: '4%',
+                },
+                {
+                    category: 'Russia',
+                    column: '541',
+                    percents: '3%',
+                },
+                {
+                    category: 'Turkey',
+                    column: '321',
+                    percents: '0.5%',
+                },
+                {
+                    category: 'Malaysia',
+                    column: '487',
+                    percents: '1%',
+                },
+                {
+                    category: 'Lebnan',
+                    column: '380',
+                    percents: '2%',
+                },
+                {
+                    category: 'Japan',
+                    column: '630',
+                    percents: '3%',
+                },
+                {
+                    category: 'Sweden',
+                    column: '420',
+                    percents: '1.5%',
+                },
+                {
+                    category: 'Germany',
+                    column: '370',
+                    percents: '1%',
+                },
+            ],
+            listeners: [
+                {
+                    event: 'init',
+                    method: function(event) {
+                        // chart initialized
+                        // let's build a custom legend
+                        var chart = event.chart
+
+                        // get legend object
+
+                        var legend = document.getElementById(
+                            'customersbyResidenceLegend'
+                        )
+                        // cycle through the data
+                        for (var i = 0; i < chart.dataProvider.length; i++) {
+                            // data point
+                            var dp = chart.dataProvider[i]
+
+                            // create a legend item holder
+                            var item = document.createElement('div')
+
+                            // create marker
+                            var marker = document.createElement('div')
+                            marker.className = 'legend-marker'
+                            marker.style.backgroundColor = chart.colors[i]
+                            item.appendChild(marker)
+
+                            // create title
+                            var title = document.createElement('div')
+                            title.className = 'legend-title'
+                            title.innerHTML = dp.category
+                            item.appendChild(title)
+
+                            // create absolute value
+                            var value = document.createElement('div')
+                            value.className = 'legend-value'
+                            value.innerHTML = dp.percents
+                            item.appendChild(value)
+
+                            // users from each country
+                            var users = document.createElement('div')
+                            users.className = 'legend-country-users'
+                            users.innerHTML = dp.column
+                            item.appendChild(users)
+
+                            // add item to legend
+                            legend.appendChild(item)
+                        }
+                    },
                 },
             ],
         },

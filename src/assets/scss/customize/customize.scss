@@ -760,6 +760,10 @@
     }
 }
 
+.w-100px {
+    width: 100px !important;
+}
+
 .w-150px {
     width: 150px;
 }
@@ -796,6 +800,9 @@
                     background-color: #fff;
                     color: $body-color;
                     font-family: $font_medium;
+                }
+                @include windowS {
+                    margin-right: 5px;
                 }
             }
             &:last-child {
@@ -887,7 +894,12 @@
 
 .table-scroll {
     overflow-y: auto;
-    max-height: 393px;
+    max-height: 380px;
+    margin-top: 30px;
+    padding-right: 5px;
+    .inner {
+        border: solid 1px $border-color;
+    }
     .table {
         min-width: 0;
     }
@@ -950,6 +962,10 @@
     }
 }
 
+.cursor-pointer {
+    cursor: pointer;
+}
+
 .color-area {
     position: relative;
     input[type='color'] {
@@ -963,7 +979,7 @@
     }
     .input-color {
         position: absolute;
-        right: 0;
+        right: 13px;
         top: 0;
         height: 100%;
         display: flex;
@@ -976,7 +992,8 @@
         }
         i {
             position: absolute;
-            right: 16px;
+            right: 3px;
+            font-size: 1.3rem;
         }
     }
     input[type='text'] {

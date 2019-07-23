@@ -18,9 +18,9 @@
         </div>
 
         <div class="config-list" ref="listingArea">
-            <ul v-show="listVal <= 1500">
+            <ul v-show="listVal <= 1700">
                 <li
-                    v-for="(list, index) in menuListing.slice(0, 8)"
+                    v-for="(list, index) in menuListing.slice(0, 9)"
                     :key="index"
                 >
                     <router-link :to="list.anchorLink">
@@ -43,7 +43,7 @@
                         <ul>
                             <li
                                 v-for="(listo, index) in menuListing.slice(
-                                    8,
+                                    9,
                                     menuListing.length
                                 )"
                                 :key="index"
@@ -56,7 +56,7 @@
                     </div>
                 </li>
             </ul>
-            <ul v-show="listVal >= 1499">
+            <ul v-show="listVal >= 1699">
                 <li v-for="(list, index) in menuListing" :key="index">
                     <router-link :to="list.anchorLink">
                         <span>{{ list.menuLabel }}</span>
@@ -74,9 +74,11 @@
 <script>
 import { mapGetters } from 'vuex'
 import cardData from '@/components/CardData.vue'
+import pagination from '@/components/Pagination.vue'
 export default {
     components: {
         cardData,
+        pagination,
     },
 
     /*
@@ -161,7 +163,7 @@ export default {
                 },
                 {
                     anchorLink: '/configuration/screening-data/indentification',
-                    menuLabel: 'indentification ',
+                    menuLabel: 'Indentification ',
                 },
                 {
                     anchorLink:

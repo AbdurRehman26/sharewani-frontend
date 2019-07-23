@@ -108,6 +108,52 @@
 		padding: 0 10px;
 		margin-bottom: 15px;
 	}
+	&.cols-1 {
+		> div {
+			width: auto;
+			display: inline-block;
+			float: none;
+		}
+	}
+	&.cols-full {
+		> div {
+			width: 100%;
+			display: block;
+			float: none;
+		}
+	}
+	&.cols-3 {
+		> div {
+			width: 33%;
+			padding: 0 5px;
+			.legend-value {
+				padding-right: 5px;
+			}
+		}
+	}
+	&.table-style {
+		margin: 0;
+		position: relative;
+		> div {
+			border-bottom: solid 1px $border-color;
+			padding-top: 10.5px;
+			padding-bottom: 10.5px;
+			padding-left: 20px;
+			margin: 0;
+			&:last-child {
+				border-bottom: none;
+			}
+			.legend-value {
+				padding-right: 15px;
+				position: relative;
+				top: 4px;
+			}
+			.legend-country-users {
+				position: relative;
+				top: 4px;
+			}
+		}
+	}
 }
 
 .legend-marker {
@@ -129,6 +175,11 @@
 	display: inline-block;
 	font-family: $font-bold;
 	float: right;
+}
+
+.legend-country-users {
+	float: right;
+	margin-right: 30px;
 }
 
 #onBoardIssueLegend {

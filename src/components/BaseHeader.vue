@@ -41,17 +41,15 @@
                             :src="require('@/assets/images/profile-pic.png')"
                         />
                     </div>
-                    <div
-                        class="profile-detail"
-                        @click="showAccountDetails ^= true"
-                    >
+                    <div class="profile-detail" @click="open">
                         <h4>Sammy Lawson</h4>
                         <p>Admin</p>
                         <i class="icon-caret-down"></i>
                     </div>
                     <div
                         class="profile-popover"
-                        v-if="showAccountDetails == true"
+                        v-if="showPopover"
+                        v-on-click-outside="close"
                     >
                         <div class="nav-dropdown">
                             <ul>
@@ -93,12 +91,15 @@
 <script>
 import updateProfilePopup from '@/components/popups/UpdateProfilePopup.vue'
 import changePasswordPopup from '@/components/popups/ChangePasswordPopup.vue'
+import { directive as onClickOutside } from 'vue-on-click-outside'
 export default {
     components: {
         changePasswordPopup,
         updateProfilePopup,
     },
-
+    directives: {
+        onClickOutside: onClickOutside,
+    },
     /*
     |--------------------------------------------------------------------------
     | Component > props
@@ -126,7 +127,7 @@ export default {
     */
     data() {
         return {
-            showAccountDetails: false,
+            showPopover: false,
         }
     }, // End of Component > data
 
@@ -142,7 +143,14 @@ export default {
     | Component > methods
     |--------------------------------------------------------------------------
     */
-    methods: {}, // End of Component > methods
+    methods: {
+        open() {
+            this.showPopover = true
+        },
+        close() {
+            this.showPopover = false
+        },
+    }, // End of Component > methods
 
     /*
     |--------------------------------------------------------------------------

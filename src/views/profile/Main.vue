@@ -36,11 +36,11 @@ export default {
         return {
             menuListing: [
                 {
-                    anchorLink: '/customer-profiles',
+                    anchorLink: '/customer-profiles/all-customer',
                     menuLabel: 'All Customer',
                 },
                 {
-                    anchorLink: '/advance-search',
+                    anchorLink: '/customer-profiles/advance-search',
                     menuLabel: 'Advance Search',
                 },
             ],
