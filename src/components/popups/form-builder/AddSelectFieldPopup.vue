@@ -8,7 +8,7 @@
             cancelTitle="Cancel"
             cancelVariant="link"
         >
-            <b-form>
+            <b-form class="scrollable">
                 <div class="row">
                     <div class="col-md-12">
                         <b-form-group
@@ -54,7 +54,7 @@
                                 <b-form-group class="m-b-15">
                                     <b-form-input
                                         id="field-label"
-                                        type="number"
+                                        type="value"
                                         v-model="list.optionVal"
                                         required
                                         placeholder="Enter value"
@@ -82,7 +82,7 @@
                             label="Is Required?"
                             label-for="isrequired"
                         >
-                            <b-form-group>
+                            <b-form-group class="mb-0">
                                 <b-form-radio-group
                                     id="isrequired"
                                     v-model="form.isrequiredModel"
