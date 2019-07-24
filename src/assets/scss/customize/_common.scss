@@ -461,4 +461,13 @@ $sides: (top, bottom, left, right); // Leave this variable alone
             left: 1px;
         }
     }
+    &.sanctioned-risk {
+        background-color: $body-color;
+        i {
+            font-size: 0.925rem;
+            position: relative;
+            top: 2px;
+            left: 1px;
+        }
+    }
 }
