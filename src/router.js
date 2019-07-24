@@ -113,7 +113,7 @@ export default new Router({
                 },
                 {
                     path: 'users',
-                    name: 'users',
+                    name: 'system-users',
                     component: () =>
                         import(/* webpackChunkName: "system-users" */ '@/views/system-users/Users.vue'),
                 },
@@ -245,16 +245,16 @@ export default new Router({
                         import(/* webpackChunkName: "idenfo-engine" */ './views/configuration/idenfo-engine/Main.vue'),
                     children: [
                         {
+                            path: '/',
+                            name: 'idenfo-engine',
+                            component: () =>
+                                import(/* webpackChunkName: "nationality" */ './views/configuration/idenfo-engine/RiskFactor.vue'),
+                        },
+                        {
                             path: '/configuration/idenfo-engine/risk',
                             name: 'conf-risk',
                             component: () =>
                                 import(/* webpackChunkName: "riskFactor" */ './views/configuration/idenfo-engine/RiskFactor.vue'),
-                        },
-                        {
-                            path: '/',
-                            name: 'risk-factor',
-                            component: () =>
-                                import(/* webpackChunkName: "nationality" */ './views/configuration/idenfo-engine/RiskFactor.vue'),
                         },
                         {
                             path: '/configuration/idenfo-engine/',

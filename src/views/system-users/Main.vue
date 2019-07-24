@@ -40,18 +40,22 @@ export default {
                 {
                     anchorLink: '/system-users/users',
                     menuLabel: 'System Users',
+                    name: 'system-users',
                 },
                 {
                     anchorLink: '/system-users/roles',
                     menuLabel: 'Roles & Permissions',
+                    name: 'idenfo-engine',
                 },
                 {
                     anchorLink: '/system-users/data-segments',
                     menuLabel: 'Data Segments',
+                    name: 'idenfo-engine',
                 },
                 {
                     anchorLink: '/system-users/application-access',
                     menuLabel: 'Application Access',
+                    name: 'idenfo-engine',
                 },
             ],
         }

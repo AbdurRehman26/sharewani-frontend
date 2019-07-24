@@ -97,7 +97,7 @@ export default {
             listDropdown: false,
             menuListing: [
                 {
-                    anchorLink: '/configuration/idenfo-engine/',
+                    anchorLink: '/configuration/',
                     menuLabel: 'Risk Factor',
                 },
                 {
