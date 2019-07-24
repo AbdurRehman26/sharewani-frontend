@@ -35,7 +35,14 @@
                                         <label>{{ descriptions.title }}</label>
                                     </li>
                                     <li class="col-md-6">
-                                        {{ descriptions.detail }}
+                                        <span
+                                            :class="
+                                                descriptions.alert == true
+                                                    ? 'danger'
+                                                    : ''
+                                            "
+                                            >{{ descriptions.detail }}</span
+                                        >
                                     </li>
                                 </ul>
                             </div>

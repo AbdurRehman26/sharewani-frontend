@@ -36,6 +36,7 @@
                                         <label>
                                             <a
                                                 href="javascript:void(0)"
+                                                class="secondary"
                                                 v-b-modal.overwrite-result-popup
                                                 v-if="
                                                     descriptions.title ==
@@ -59,7 +60,7 @@
                                                 descriptions.detail ==
                                                     'Not Matched'
                                             "
-                                            class="text-danger"
+                                            class="danger"
                                         >
                                             {{ descriptions.detail }}
                                         </span>
