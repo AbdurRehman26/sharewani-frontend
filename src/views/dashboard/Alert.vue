@@ -130,7 +130,9 @@
                 </template>
                 <template slot="profile" slot-scope="data">
                     <div class="profile-area">
-                        <router-link to="/customer-information">
+                        <router-link
+                            to="/customer-profiles/customer-information"
+                        >
                             <div
                                 class="profile-pic"
                                 :style="{
@@ -235,9 +237,9 @@ export default {
             filterByAlert: null,
             filterAlertOptions: [
                 { text: 'Filter by alert type', value: null },
-                'New Alerts',
-                'Periodic Alerts',
+                'On-boarding Alert',
                 'Trigger Alerts',
+                'Periodic Alerts',
             ],
             filterByRiskLevel: null,
             filterRiskLevelOptions: [
@@ -249,12 +251,10 @@ export default {
             filterByAging: null,
             filterAgingOptions: [
                 { text: 'Filter by aging', value: null },
-                '18 - 24',
-                '25 - 34',
-                '45 - 54',
-                '55 - 64',
-                '65 - 74',
-                '75+',
+                '0-30 days',
+                '31-60 days',
+                '61-90 days',
+                '91 days+',
             ],
         }
     }, // End of Component > data
