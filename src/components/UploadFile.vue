@@ -19,7 +19,7 @@
             </b-form-group>
             <div class="file-activity">
                 <div class="file-thumbnail">
-                    <img :src="require('@/assets/images/xls.png')" />
+                    <excel-icon></excel-icon>
                 </div>
                 <div class="file-progress">
                     <h6>Uploading</h6>
@@ -35,8 +35,11 @@
     </div>
 </template>
 <script>
+import excelIcon from '@/components/icons/ExcelIcon.vue'
 export default {
-    components: {},
+    components: {
+        excelIcon,
+    },
 
     /*
     |--------------------------------------------------------------------------

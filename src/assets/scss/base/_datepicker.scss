@@ -44,7 +44,7 @@
     .datepicker-container {
         padding: 0 !important;
         .datepicker-controls {
-            background-color: $body-bg;
+            background-color: $primary;
             height: $input-height !important;
 
             .custom-button {
@@ -54,7 +54,7 @@
                     background-color: transparent !important;
                 }
                 .custom-button-content {
-                    color: $body-color !important;
+                    color: $white !important;
                     font-size: 0.875rem;
                     font-family: $font_medium;
                 }
@@ -62,7 +62,7 @@
 
             .datepicker-button {
                 svg {
-                    fill: $body-color !important;
+                    fill: $white !important;
                 }
             }
         }
