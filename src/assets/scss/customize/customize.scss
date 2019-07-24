@@ -1176,23 +1176,6 @@
 
 .modal {
     .modal-body {
-        .export-files {
-            .custom-control-inline {
-                display: flex;
-                margin-bottom: 15px;
-                background-image: url(assets/images/xls.png);
-                background-repeat: no-repeat;
-                height: 33px;
-                align-items: center;
-                padding-left: 56px;
-
-                &:last-of-type {
-                    margin-bottom: 0;
-                    background-image: url(assets/images/pdf.png);
-                }
-            }
-        }
-
         .selectize-control.multi .selectize-input > div {
             text-transform: uppercase;
         }
@@ -1206,6 +1189,41 @@
                     padding-left: 7px;
                     padding-right: 7px;
                 }
+            }
+        }
+    }
+}
+
+.export-radio-section {
+    width: 100%;
+    float: left;
+
+    .icon-section {
+        width: 32px;
+        float: left;
+
+        svg {
+            width: 23px;
+            margin-bottom: 15px;
+        }
+
+        .pdf-icons {
+            svg {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .export-form-section {
+        width: calc(100% - 32px);
+        float: left;
+        padding-left: 5px;
+
+        .export-files {
+            margin-bottom: 15px;
+            .custom-control-label {
+                margin-bottom: 23px;
+                margin-top: 7px;
             }
         }
     }
