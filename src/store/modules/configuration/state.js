@@ -1046,9 +1046,9 @@ export default {
                         pointscore: 'Sanction Hit',
                         rating: [
                             {
-                                icon: 'icon-high-risk',
-                                label: 'High Risk',
-                                cssClass: 'high-risk',
+                                icon: 'icon-sanction',
+                                label: 'Sanctioned',
+                                cssClass: 'sanctioned-risk',
                             },
                         ],
                         reviewperiod: 'Rejected',
@@ -1072,9 +1072,9 @@ export default {
                         pointscore: 'If Residence Country is Sanctioned',
                         rating: [
                             {
-                                icon: 'icon-high-risk',
-                                label: 'High Risk',
-                                cssClass: 'high-risk',
+                                icon: 'icon-sanction',
+                                label: 'Sanctioned',
+                                cssClass: 'sanctioned-risk',
                             },
                         ],
                         reviewperiod: 'Rejected',
@@ -1086,9 +1086,9 @@ export default {
                         pointscore: 'If Nationality Country is Sanctioned',
                         rating: [
                             {
-                                icon: 'icon-high-risk',
-                                label: 'High Risk',
-                                cssClass: 'high-risk',
+                                icon: 'icon-sanction',
+                                label: 'Sanctioned',
+                                cssClass: 'sanctioned-risk',
                             },
                         ],
                         reviewperiod: 'Rejected',
@@ -1099,9 +1099,9 @@ export default {
                         pointscore: 'If Contact No. Code Country is Sanctioned',
                         rating: [
                             {
-                                icon: 'icon-high-risk',
-                                label: 'High Risk',
-                                cssClass: 'high-risk',
+                                icon: 'icon-sanction',
+                                label: 'Sanctioned',
+                                cssClass: 'sanctioned-risk',
                             },
                         ],
                         reviewperiod: 'Rejected',
