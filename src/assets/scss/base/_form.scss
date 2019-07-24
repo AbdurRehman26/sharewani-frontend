@@ -74,6 +74,9 @@ input[type='number']::-webkit-outer-spin-button {
         color: $dark;
         pointer-events: none;
     }
+    input {
+        border-radius: 5px;
+    }
 }
 
 // select box
