@@ -1,7 +1,7 @@
 <template>
     <div class="upload-video-modal">
         <b-modal
-            id="document-preview"
+            id="document-preview-popup"
             title="Document Preview"
             size="md"
             ok-only
@@ -11,17 +11,39 @@
             <h5>Recorded Video</h5>
 
             <div class="document-preview-section">
-                <div
-                    class="preview-video"
-                    :style="{
-                        'background-image':
-                            'url(' +
-                            require('@/assets/images/video-cover.png') +
-                            ')',
-                    }"
-                ></div>
+                <div class="preview-video">
+                    <video
+                        v-if="play == true"
+                        autoPlay
+                        controls
+                        playsinline
+                        poster="@/assets/images/dummy/cover.png"
+                    >
+                        <source
+                            src="@/assets/images/dummy/video/cover-video.mp4"
+                            type="video/mp4"
+                        />
 
-                <img :src="require('@/assets/images/play.png')" />
+                        <source
+                            src="@/assets/images/dummy/video/cover-video.webm"
+                            type="video/webm"
+                        />
+
+                        Your browser does not support HTML5 video.
+                    </video>
+                    <img
+                        @click="play = true"
+                        v-if="play == false"
+                        :src="require('@/assets/images/dummy/cover.png')"
+                    />
+                </div>
+
+                <img
+                    @click="play = true"
+                    v-if="play == false"
+                    :src="require('@/assets/images/play.png')"
+                    class="play-btn"
+                />
             </div>
         </b-modal>
     </div>
@@ -30,7 +52,9 @@
 <script>
 export default {
     data() {
-        return {}
+        return {
+            play: false,
+        }
     },
     methods: {
         /**

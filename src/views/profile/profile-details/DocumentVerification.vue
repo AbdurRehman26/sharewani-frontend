@@ -8,7 +8,7 @@
         </div>
 
         <documents-submitted
-            v-b-modal.document-preview
+            @click="popup"
             :uploadDetails="uploadDetails"
         ></documents-submitted>
 
@@ -84,6 +84,7 @@
         <kyc-status-review-popup></kyc-status-review-popup>
         <overwrite-result-popup></overwrite-result-popup>
         <document-preview-popup></document-preview-popup>
+        <picture-preview-popup></picture-preview-popup>
     </div>
 </template>
 <script>
@@ -94,7 +95,7 @@ import kycStatusReviewPopup from '@/components/popups/KYCStatusReviewPopup.vue'
 import cancelReviewProcessPopup from '@/components/popups/CancelReviewProcessPopup.vue'
 import overwriteResultPopup from '@/components/popups/OverwriteResultPopup.vue'
 import documentPreviewPopup from '@/components/popups/DocumentPreviewPopup.vue'
-
+import picturePreviewPopup from '@/components/popups/PicturePreviewPopup.vue'
 export default {
     components: {
         customerInformation,
@@ -103,6 +104,7 @@ export default {
         cancelReviewProcessPopup,
         overwriteResultPopup,
         documentPreviewPopup,
+        picturePreviewPopup,
     },
 
     /*
@@ -164,6 +166,14 @@ export default {
             let docuploadDetails = this.profile.documentVerification
                 .uploadDetails //get user data from store
             this.uploadDetails = docuploadDetails //push data into array
+        },
+
+        popup(newVar) {
+            if (newVar == 'pic') {
+                this.$bvModal.show('picture-preview-popup')
+            } else {
+                this.$bvModal.show('document-preview-popup')
+            }
         },
     }, // End of Component > methods
 
