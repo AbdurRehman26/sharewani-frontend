@@ -283,7 +283,7 @@ export default {
                     status: [
                         {
                             cssClass: 'rejected',
-                            icon: 'icon-wrong',
+                            icon: 'icon-trash',
                             label: 'Archived',
                         },
                     ],

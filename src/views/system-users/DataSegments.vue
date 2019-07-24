@@ -67,7 +67,7 @@
                             v-if="data.value == 'archive'"
                             icon="icon-done"
                             label="Activate"
-                            v-b-modal.initiate-review
+                            v-b-modal.archive-popup
                         ></base-action>
                     </div>
                 </template>
