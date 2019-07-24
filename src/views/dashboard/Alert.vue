@@ -238,8 +238,8 @@ export default {
             filterAlertOptions: [
                 { text: 'Filter by alert type', value: null },
                 'On-boarding Alert',
-                'Trigger Alerts',
-                'Periodic Alerts',
+                'Trigger Alert',
+                'Periodic Alert',
             ],
             filterByRiskLevel: null,
             filterRiskLevelOptions: [
