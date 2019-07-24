@@ -412,7 +412,7 @@ export default {
                     heading: 'Basic Information',
                     descriptions: [
                         {
-                            title: 'Customer ID:',
+                            title: 'Idenfo ID:',
                             detail: '210345',
                         },
                         {
@@ -442,6 +442,14 @@ export default {
                         {
                             title: 'Country of Residence:',
                             detail: 'United Kingdom',
+                        },
+                        {
+                            title: 'Bank Customer ID:',
+                            detail: 'N/A',
+                        },
+                        {
+                            title: 'Record Last Updated:',
+                            detail: 'June 19,2019',
                         },
                     ],
                 },

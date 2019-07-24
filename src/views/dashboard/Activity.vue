@@ -5,20 +5,28 @@
                 <div class="col-md-4 filter-title-section">
                     <h2>Activity Dashboard</h2>
                 </div>
-                <div class="col-md-8 text-right">
+                <div class="col-md-8">
                     <div class="row">
                         <div class="col-md-4 col-xs-12">
-                            <div class="form-group date-pickers">
-                                <i class="icon-calendar"></i>
-                                <datepicker
-                                    placeholder="Start Date"
-                                ></datepicker>
+                            <div class="form-group">
+                                <base-date-picker
+                                    dateFormat="ll"
+                                    placeholder="Start date"
+                                    date
+                                    close
+                                    noFooter
+                                ></base-date-picker>
                             </div>
                         </div>
                         <div class="col-md-4 col-xs-12">
-                            <div class="form-group date-pickers">
-                                <i class="icon-calendar"></i>
-                                <datepicker placeholder="End Date"></datepicker>
+                            <div class="form-group">
+                                <base-date-picker
+                                    dateFormat="ll"
+                                    placeholder="End date"
+                                    date
+                                    close
+                                    noFooter
+                                ></base-date-picker>
                             </div>
                         </div>
                         <div class="col-md-4 col-xs-12">
@@ -202,11 +210,10 @@ import { mapGetters } from 'vuex'
 require('amcharts3')
 require('amcharts3/amcharts/serial')
 require('amcharts3/amcharts/pie')
-import Datepicker from 'vuejs-datepicker'
+
 import exportReportPopup from '@/components/popups/ExportReportPopup.vue'
 export default {
     components: {
-        Datepicker,
         exportReportPopup,
     },
 

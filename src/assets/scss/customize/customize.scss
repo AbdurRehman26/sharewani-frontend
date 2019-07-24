@@ -564,9 +564,9 @@
 
                         label {
                             text-transform: capitalize;
-                            margin-bottom: 0;
+                            margin-bottom: 7px;
                             font-size: 0.875rem;
-                            font-family: $font_regular;
+                            font-family: $font_light;
                             color: $nav-color;
 
                             a {
@@ -962,6 +962,10 @@
     }
 }
 
+.cursor-pointer {
+    cursor: pointer;
+}
+
 .color-area {
     position: relative;
     input[type='color'] {
@@ -975,7 +979,7 @@
     }
     .input-color {
         position: absolute;
-        right: 0;
+        right: 13px;
         top: 0;
         height: 100%;
         display: flex;
@@ -988,7 +992,8 @@
         }
         i {
             position: absolute;
-            right: 16px;
+            right: 3px;
+            font-size: 1.3rem;
         }
     }
     input[type='text'] {

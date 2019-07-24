@@ -19,28 +19,30 @@
                                                         class="col-xs-12 col-md-6"
                                                     >
                                                         <div
-                                                            class="form-group date-pickers"
+                                                            class="form-group "
                                                         >
-                                                            <i
-                                                                class="icon-calendar"
-                                                            ></i>
-                                                            <datepicker
-                                                                placeholder="Start Date"
-                                                            ></datepicker>
+                                                            <base-date-picker
+                                                                dateFormat="ll"
+                                                                placeholder="Start date"
+                                                                date
+                                                                close
+                                                                noFooter
+                                                            ></base-date-picker>
                                                         </div>
                                                     </div>
                                                     <div
                                                         class="col-xs-12 col-md-6"
                                                     >
                                                         <div
-                                                            class="form-group date-pickers"
+                                                            class="form-group "
                                                         >
-                                                            <i
-                                                                class="icon-calendar"
-                                                            ></i>
-                                                            <datepicker
-                                                                placeholder="End Date"
-                                                            ></datepicker>
+                                                            <base-date-picker
+                                                                dateFormat="ll"
+                                                                placeholder="End date"
+                                                                date
+                                                                close
+                                                                noFooter
+                                                            ></base-date-picker>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -162,12 +164,10 @@ require('amcharts3')
 require('amcharts3/amcharts/serial')
 require('amcharts3/amcharts/pie')
 import pagination from '@/components/Pagination.vue'
-import Datepicker from 'vuejs-datepicker'
 import exportProcessPopup from '@/components/popups/ExportProcessPopup.vue'
 export default {
     components: {
         pagination,
-        Datepicker,
         exportProcessPopup,
     },
 
