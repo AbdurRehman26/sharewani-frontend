@@ -101,14 +101,20 @@
                             <i
                                 v-if="data.value[0].riskType == 'flag'"
                                 class="icon-flag"
+                                v-b-tooltip.hover
+                                :title="' On Baording Alert'"
                             ></i>
                             <i
                                 v-if="data.value[0].riskType == 'reload'"
                                 class="icon-rotate-inverse"
+                                v-b-tooltip.hover
+                                :title="' Periodic'"
                             ></i>
                             <i
                                 v-if="data.value[0].riskType == 'rating'"
                                 class="icon-star"
+                                v-b-tooltip.hover
+                                :title="' Trigger Alert'"
                             ></i>
                         </router-link>
                     </div>

@@ -40,13 +40,16 @@ export default {
                 {
                     anchorLink: '/dashboard/alerts',
                     menuLabel: 'Alerts',
+                    name: 'dashboard-alerts',
                 },
                 {
                     anchorLink: '/dashboard/activity',
+                    name: 'dashboard-activity-page',
                     menuLabel: 'Activity Dashboard',
                 },
                 {
                     anchorLink: '/dashboard/customer-statistics',
+                    name: 'dashboard-reporting-page',
                     menuLabel: 'Customer Statistics',
                 },
             ],

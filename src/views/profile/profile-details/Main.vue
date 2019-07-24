@@ -78,22 +78,27 @@ export default {
                 {
                     anchorLink: '/customer-profiles/customer-information',
                     menuLabel: 'Customer Profile',
+                    name: 'customer-information',
                 },
                 {
                     anchorLink: '/customer-profiles/screening-customer',
                     menuLabel: 'Name Screening',
+                    name: 'screening-customer',
                 },
                 {
                     anchorLink: '/customer-profiles/document-verification',
                     menuLabel: 'Document Verification',
+                    name: 'document-verification',
                 },
                 {
                     anchorLink: '/customer-profiles/kyc-risk-rating',
                     menuLabel: 'KYC Risk Rating',
+                    name: 'kyc-risk-rating',
                 },
                 {
                     anchorLink: '/customer-profiles/activity-timeline',
                     menuLabel: 'Activity Timeline',
+                    name: 'activity-timeline',
                 },
             ],
         }

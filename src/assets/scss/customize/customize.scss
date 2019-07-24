@@ -25,6 +25,21 @@
     padding: 29px 34px;
 }
 
+span {
+    &.danger {
+        color: $danger;
+    }
+}
+
+a {
+    &.primary {
+        color: $primary !important;
+    }
+    &.secondary {
+        color: $secondary !important;
+    }
+}
+
 .flex-items {
     display: flex;
     li {
