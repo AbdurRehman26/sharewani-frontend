@@ -95,7 +95,9 @@
                         :title="data.value[0].riskRate + ' Risk'"
                     ></div>
                     <div class="indecation">
-                        <router-link to="/customer-information">
+                        <router-link
+                            to="/customer-profiles/customer-information"
+                        >
                             <i
                                 v-if="data.value[0].riskType == 'flag'"
                                 class="icon-flag"
@@ -128,7 +130,9 @@
                 </template>
                 <template slot="profile" slot-scope="data">
                     <div class="profile-area">
-                        <router-link to="/customer-information">
+                        <router-link
+                            to="/customer-profiles/customer-information"
+                        >
                             <div
                                 class="profile-pic"
                                 :style="{
@@ -233,9 +237,9 @@ export default {
             filterByAlert: null,
             filterAlertOptions: [
                 { text: 'Filter by alert type', value: null },
-                'New Alerts',
-                'Periodic Alerts',
-                'Trigger Alerts',
+                'On-boarding Alert',
+                'Trigger Alert',
+                'Periodic Alert',
             ],
             filterByRiskLevel: null,
             filterRiskLevelOptions: [
@@ -247,12 +251,10 @@ export default {
             filterByAging: null,
             filterAgingOptions: [
                 { text: 'Filter by aging', value: null },
-                '18 - 24',
-                '25 - 34',
-                '45 - 54',
-                '55 - 64',
-                '65 - 74',
-                '75+',
+                '0-30 days',
+                '31-60 days',
+                '61-90 days',
+                '91 days+',
             ],
         }
     }, // End of Component > data
