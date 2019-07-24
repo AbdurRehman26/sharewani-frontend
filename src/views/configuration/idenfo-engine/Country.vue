@@ -35,7 +35,7 @@
                 </div>
             </div>
         </div>
-        <div class="table-section m-b-30">
+        <div class="table-section">
             <b-table :items="items" :fields="fields">
                 <template slot="rating" slot-scope="data">
                     <base-status :statusType="data.value"></base-status>
