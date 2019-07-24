@@ -10,7 +10,7 @@
                     v-for="(list, index) in uploadDetails"
                     :key="index"
                 >
-                    <div class="document-detail">
+                    <div class="document-detail" @click="openPopup(list.type)">
                         <div class="photo-section">
                             <img
                                 :src="
@@ -76,7 +76,11 @@ export default {
         | Component > methods
         |--------------------------------------------------------------------------
         */
-    methods: {}, // End of Component > methods
+    methods: {
+        openPopup($val) {
+            this.$emit('click', $val)
+        },
+    }, // End of Component > methods
 
     /*
         |--------------------------------------------------------------------------

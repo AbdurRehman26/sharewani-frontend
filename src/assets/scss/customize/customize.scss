@@ -1411,9 +1411,12 @@ a {
         min-height: 290px;
         background-size: cover;
     }
-    img {
+    .play-btn {
         position: absolute;
-        pointer-events: none;
+    }
+
+    video {
+        width: 100%;
     }
 }
 .content-full-width {
