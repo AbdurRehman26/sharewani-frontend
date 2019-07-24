@@ -4,7 +4,14 @@
             <div class="country-selection">
                 <ul>
                     <li v-for="(list, index) in countryListing" :key="index">
-                        <router-link :to="list.anchorLink">
+                        <router-link
+                            :to="list.anchorLink"
+                            :class="
+                                index == 1
+                                    ? 'router-link-exact-active router-link-active'
+                                    : ''
+                            "
+                        >
                             <span>{{ list.menuLabel }}</span>
                         </router-link>
                     </li>
