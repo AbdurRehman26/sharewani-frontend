@@ -76,13 +76,13 @@
                                 label-for="dateofbirth"
                             >
                                 <div class="form-group">
-                                    <base-date-picker
+                                    <date-time-picker
                                         dateFormat="ll"
                                         placeholder="DD / MM/ YYYY"
                                         date
                                         close
                                         noFooter
-                                    ></base-date-picker>
+                                    ></date-time-picker>
                                 </div>
                             </b-form-group>
                         </div>
@@ -339,13 +339,13 @@
                                 label-for="expiredate"
                             >
                                 <div class="form-group ">
-                                    <base-date-picker
+                                    <date-time-picker
                                         dateFormat="ll"
                                         placeholder="DD / MM/ YYYY"
                                         date
                                         close
                                         noFooter
-                                    ></base-date-picker>
+                                    ></date-time-picker>
                                 </div>
                             </b-form-group>
                         </div>
@@ -362,8 +362,11 @@
     </b-form>
 </template>
 <script>
+import dateTimePicker from '@/components/DateTimePicker.vue'
 export default {
-    components: {},
+    components: {
+        dateTimePicker,
+    },
 
     /*
     |--------------------------------------------------------------------------

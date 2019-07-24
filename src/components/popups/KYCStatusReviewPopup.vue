@@ -14,10 +14,10 @@
                     label="KYC Update Date"
                     label-for="input-1"
                 >
-                    <base-date-picker
+                    <date-time-picker
                         dateFormat="lll"
                         placeholder="Select date time"
-                    ></base-date-picker>
+                    ></date-time-picker>
                 </b-form-group>
 
                 <div class="form-group">
@@ -61,10 +61,12 @@
 
 <script>
 import tags from '@/components/Tags.vue'
+import dateTimePicker from '@/components/DateTimePicker.vue'
 
 export default {
     components: {
         tags,
+        dateTimePicker,
     },
     data() {
         return {
