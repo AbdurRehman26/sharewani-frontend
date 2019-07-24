@@ -9,24 +9,24 @@
                     <div class="row">
                         <div class="col-md-4 col-xs-12">
                             <div class="form-group">
-                                <base-date-picker
+                                <date-time-picker
                                     dateFormat="ll"
                                     placeholder="Start date"
                                     date
                                     close
                                     noFooter
-                                ></base-date-picker>
+                                ></date-time-picker>
                             </div>
                         </div>
                         <div class="col-md-4 col-xs-12">
                             <div class="form-group">
-                                <base-date-picker
+                                <date-time-picker
                                     dateFormat="ll"
                                     placeholder="End date"
                                     date
                                     close
                                     noFooter
-                                ></base-date-picker>
+                                ></date-time-picker>
                             </div>
                         </div>
                         <div class="col-md-4 col-xs-12">
@@ -210,11 +210,12 @@ import { mapGetters } from 'vuex'
 require('amcharts3')
 require('amcharts3/amcharts/serial')
 require('amcharts3/amcharts/pie')
-
+import dateTimePicker from '@/components/DateTimePicker.vue'
 import exportReportPopup from '@/components/popups/ExportReportPopup.vue'
 export default {
     components: {
         exportReportPopup,
+        dateTimePicker,
     },
 
     /*

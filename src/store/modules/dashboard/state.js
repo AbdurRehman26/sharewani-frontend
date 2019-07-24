@@ -57,7 +57,7 @@ export default {
             graphs: [
                 {
                     accessibleLabel: '[[category]]: [[value]]',
-                    balloonText: 'Onboard on [[category]]: <b>[[value]]</b>',
+                    balloonText: 'Onboarded on [[category]]: <b>[[value]]</b>',
                     bullet: 'none',
                     fillAlphas: 0.3,
                     id: 'AmGraph-1',
@@ -286,6 +286,8 @@ export default {
         alertsByTypeData: {
             type: 'serial',
             categoryField: 'category',
+            categoryType1: 'category-type-1',
+            categoryType2: 'category-type-2',
             rotate: false,
             colors: [
                 '#C91F37',
@@ -315,7 +317,7 @@ export default {
             trendLines: [],
             graphs: [
                 {
-                    balloonText: '[[title]] of [[category]]:[[value]]',
+                    balloonText: '[[category-type-1]]: [[value]]',
                     fillAlphas: 1,
                     id: 'AmGraph-1',
                     title: 'graph 1',
@@ -323,7 +325,7 @@ export default {
                     valueField: 'column-1',
                 },
                 {
-                    balloonText: '[[title]] of [[category]]:[[value]]',
+                    balloonText: '[[category-type-2]]: [[value]]',
                     fillAlphas: 1,
                     id: 'AmGraph-2',
                     title: 'graph 2',
@@ -345,17 +347,26 @@ export default {
             titles: [],
             dataProvider: [
                 {
-                    category: 'Document Verification Hit',
+                    category: 'Document Verification Hit ',
+                    'category-type-1':
+                        ' ID Document going to expire in the next 60 days',
+                    'category-type-2': 'Documents  Mis-matched',
                     'column-1': '80',
                     'column-2': '50',
                 },
                 {
                     category: 'Name Screening Hit',
+                    'category-type-1': 'Sanction hit',
+                    'category-type-2':
+                        'PEP, Enforcement or Client Black list hit',
                     'column-1': '60',
                     'column-2': '70',
                 },
                 {
-                    category: 'Risk Rating Hit',
+                    category: 'Risk rating hit',
+                    'category-type-1':
+                        "Customer's periodic review due in the next 60 days",
+                    'category-type-2': 'High Risk or Sanctioned',
                     'column-1': '20',
                     'column-2': '30',
                 },

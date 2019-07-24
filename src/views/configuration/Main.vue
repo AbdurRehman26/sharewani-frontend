@@ -40,26 +40,32 @@ export default {
                 {
                     anchorLink: '/configuration/idenfo-engine/',
                     menuLabel: 'Idenfo Engine',
+                    name: 'idenfo-engine',
                 },
                 {
                     anchorLink: '/configuration/screening-data/',
                     menuLabel: 'Screening Data',
+                    name: 'customer-information',
                 },
                 {
                     anchorLink: '/configuration/form-builder/',
                     menuLabel: 'Form Builder',
+                    name: 'customer-information',
                 },
                 {
                     anchorLink: '/configuration/manual-review/',
                     menuLabel: 'Manual Review',
+                    name: 'customer-information',
                 },
                 {
                     anchorLink: '/configuration/branding/',
                     menuLabel: 'Branding',
+                    name: 'customer-information',
                 },
                 {
                     anchorLink: '/configuration/ocr-configuration/',
                     menuLabel: 'OCR',
+                    name: 'customer-information',
                 },
             ],
         }

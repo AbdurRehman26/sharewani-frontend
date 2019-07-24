@@ -38,10 +38,12 @@ export default {
                 {
                     anchorLink: '/customer-profiles/all-customer',
                     menuLabel: 'All Customer',
+                    name: 'all-customer',
                 },
                 {
                     anchorLink: '/customer-profiles/advance-search',
                     menuLabel: 'Advance Search',
+                    name: 'advance-search',
                 },
             ],
 

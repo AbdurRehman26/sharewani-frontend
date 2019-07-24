@@ -21,13 +21,13 @@
                                                         <div
                                                             class="form-group "
                                                         >
-                                                            <base-date-picker
+                                                            <date-time-picker
                                                                 dateFormat="ll"
                                                                 placeholder="Start date"
                                                                 date
                                                                 close
                                                                 noFooter
-                                                            ></base-date-picker>
+                                                            ></date-time-picker>
                                                         </div>
                                                     </div>
                                                     <div
@@ -36,13 +36,13 @@
                                                         <div
                                                             class="form-group "
                                                         >
-                                                            <base-date-picker
+                                                            <date-time-picker
                                                                 dateFormat="ll"
                                                                 placeholder="End date"
                                                                 date
                                                                 close
                                                                 noFooter
-                                                            ></base-date-picker>
+                                                            ></date-time-picker>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -164,11 +164,13 @@ require('amcharts3')
 require('amcharts3/amcharts/serial')
 require('amcharts3/amcharts/pie')
 import pagination from '@/components/Pagination.vue'
+import dateTimePicker from '@/components/DateTimePicker.vue'
 import exportProcessPopup from '@/components/popups/ExportProcessPopup.vue'
 export default {
     components: {
         pagination,
         exportProcessPopup,
+        dateTimePicker,
     },
 
     /*

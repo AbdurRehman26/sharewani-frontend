@@ -25,7 +25,14 @@
                                 : '',
                         ]"
                     >
-                        <router-link :to="list.anchorLink">
+                        <router-link
+                            :to="list.anchorLink"
+                            :class="[
+                                $route.name.toString() === list.name.toString()
+                                    ? 'router-link-active router-link-exact-active'
+                                    : '',
+                            ]"
+                        >
                             <span v-if="stepStyle" class="point">
                                 <i class="icon-check-circle"></i>
                             </span>

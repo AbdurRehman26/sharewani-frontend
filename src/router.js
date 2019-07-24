@@ -75,13 +75,13 @@ export default new Router({
             children: [
                 {
                     path: '/',
-                    name: 'dashbaord-alerts',
+                    name: 'dashboard-alerts',
                     component: () =>
                         import(/* webpackChunkName: "dashboard-alerts" */ '@/views/dashboard/Alert.vue'),
                 },
                 {
                     path: 'alerts',
-                    name: 'dashbaord-alerts',
+                    name: 'dashboard-alerts',
                     component: () =>
                         import(/* webpackChunkName: "dashboard-alerts" */ '@/views/dashboard/Alert.vue'),
                 },
@@ -239,39 +239,39 @@ export default new Router({
                 import(/* webpackChunkName: "configuration" */ '@/views/configuration/Main.vue'),
             children: [
                 {
-                    path: '/configuration',
+                    path: '/',
                     name: 'idenfo-engine',
                     component: () =>
                         import(/* webpackChunkName: "idenfo-engine" */ './views/configuration/idenfo-engine/Main.vue'),
                     children: [
                         {
                             path: '/configuration/idenfo-engine/risk',
-                            name: 'riskFactor',
+                            name: 'conf-risk',
                             component: () =>
                                 import(/* webpackChunkName: "riskFactor" */ './views/configuration/idenfo-engine/RiskFactor.vue'),
                         },
                         {
                             path: '/',
-                            name: 'riskFactor',
+                            name: 'risk-factor',
                             component: () =>
                                 import(/* webpackChunkName: "nationality" */ './views/configuration/idenfo-engine/RiskFactor.vue'),
                         },
                         {
                             path: '/configuration/idenfo-engine/',
-                            name: 'nationality',
+                            name: 'idenfo-engine',
                             component: () =>
                                 import(/* webpackChunkName: "nationality" */ './views/configuration/idenfo-engine/RiskFactor.vue'),
                         },
                         {
                             path: '/configuration/idenfo-engine/risk-rating',
-                            name: 'riskRating',
+                            name: 'risk-rating',
                             component: () =>
                                 import(/* webpackChunkName: "riskRating" */ './views/configuration/idenfo-engine/RiskRating.vue'),
                         },
                         {
                             path:
                                 '/configuration/idenfo-engine/document-verification-factor',
-                            name: 'documentVerificationFactors',
+                            name: 'document-verification-factor',
                             component: () =>
                                 import(/* webpackChunkName: "riskRating" */ './views/configuration/idenfo-engine/DocumentVerificationFactors.vue'),
                         },
@@ -279,37 +279,37 @@ export default new Router({
                         {
                             path:
                                 '/configuration/idenfo-engine/name-screen-score',
-                            name: 'nameScreenScore',
+                            name: 'name-screen-score',
                             component: () =>
                                 import(/* webpackChunkName: "riskRating" */ './views/configuration/idenfo-engine/NameScreenScore.vue'),
                         },
                         {
                             path: '/configuration/idenfo-engine/nationality',
-                            name: 'nameScreenScore',
+                            name: 'conf-nationality',
                             component: () =>
                                 import(/* webpackChunkName: "riskRating" */ './views/configuration/idenfo-engine/Nationality.vue'),
                         },
                         {
                             path: '/configuration/idenfo-engine/country',
-                            name: 'Country',
+                            name: 'conf-country',
                             component: () =>
                                 import(/* webpackChunkName: "nationality" */ './views/configuration/idenfo-engine/Country.vue'),
                         },
                         {
                             path: '/configuration/idenfo-engine/state',
-                            name: 'stateFactor',
+                            name: 'state-factor',
                             component: () =>
                                 import(/* webpackChunkName: "stateFactor" */ './views/configuration/idenfo-engine/StateFactor.vue'),
                         },
                         {
                             path: '/configuration/idenfo-engine/work',
-                            name: 'workFactor',
+                            name: 'work-factor',
                             component: () =>
                                 import(/* webpackChunkName: "workFactor" */ './views/configuration/idenfo-engine/WorkFactor.vue'),
                         },
                         {
                             path: '/configuration/idenfo-engine/industry',
-                            name: 'industryFactor',
+                            name: 'industry-factor',
                             component: () =>
                                 import(/* webpackChunkName: "industryFactor" */ './views/configuration/idenfo-engine/IndustryFactor.vue'),
                             meta: {
@@ -327,7 +327,7 @@ export default new Router({
                         },
                         {
                             path: '/configuration/idenfo-engine/relationship',
-                            name: 'relationshipFactor',
+                            name: 'relationship-factor',
                             component: () =>
                                 import(/* webpackChunkName: "relationshipFactor" */ './views/configuration/idenfo-engine/RelationshipPanel.vue'),
                             meta: {
@@ -336,7 +336,7 @@ export default new Router({
                         },
                         {
                             path: '/configuration/idenfo-engine/channel',
-                            name: 'channelFactor',
+                            name: 'channel-factor',
                             component: () =>
                                 import(/* webpackChunkName: "channelFactor" */ './views/configuration/idenfo-engine/ChannelFactor.vue'),
                             meta: {
@@ -346,7 +346,7 @@ export default new Router({
                         {
                             path:
                                 '/configuration/idenfo-engine/purpose-of-action',
-                            name: 'purposeAction',
+                            name: 'purpose-action',
                             component: () =>
                                 import(/* webpackChunkName: "riskRating" */ './views/configuration/idenfo-engine/PurposeAction.vue'),
                             meta: {
