@@ -754,25 +754,25 @@ export default {
             uploadDetails: [
                 {
                     image: 'bill.png',
-                    thumbnail: 'thumbnail-jpg.png',
+                    thumbnail: 'jpg.svg',
                     title: 'Utility Bill',
                     uploadDate: 'Uploaded June 1, 2019',
                 },
                 {
                     image: 'nic.png',
-                    thumbnail: 'thumbnail-jpg.png',
+                    thumbnail: 'jpg.svg',
                     title: 'ID Card',
                     uploadDate: 'Uploaded June 1, 2019',
                 },
                 {
                     image: 'image5.png',
-                    thumbnail: 'thumbnail-jpg.png',
+                    thumbnail: 'jpg.svg',
                     title: 'Selfie From Video',
                     uploadDate: 'Uploaded June 1, 2019',
                 },
                 {
                     image: 'video.png',
-                    thumbnail: 'thumbnail-mp4.png',
+                    thumbnail: 'mp4.svg',
                     title: 'Recorded Video',
                     uploadDate: 'Uploaded June 1, 2019',
                 },
