@@ -50,26 +50,31 @@ export default {
                     anchorLink: '/register-customer/upload-document',
                     menuLabel: 'Upload Documents',
                     sessionStep: '1',
+                    name: 'upload-document',
                 },
                 {
                     anchorLink: '/register-customer/record-video',
                     menuLabel: 'Record Video',
                     sessionStep: '2',
+                    name: 'record-video',
                 },
                 {
                     anchorLink: '/register-customer/setup-profile',
                     menuLabel: 'Setup Profile',
                     sessionStep: '3',
+                    name: 'setup-profile',
                 },
                 {
                     anchorLink: '/register-customer/account-info',
                     menuLabel: 'Account Info',
                     sessionStep: '4',
+                    name: 'account-info',
                 },
                 {
                     anchorLink: '/register-customer/finish',
                     menuLabel: 'Finish',
                     sessionStep: '5',
+                    name: 'finish',
                 },
             ],
         }
