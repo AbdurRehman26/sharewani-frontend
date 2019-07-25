@@ -85,6 +85,8 @@
         <overwrite-result-popup></overwrite-result-popup>
         <document-preview-popup></document-preview-popup>
         <picture-preview-popup></picture-preview-popup>
+        <id-card-preview-popup></id-card-preview-popup>
+        <bill-preview-popup></bill-preview-popup>
     </div>
 </template>
 <script>
@@ -96,6 +98,8 @@ import cancelReviewProcessPopup from '@/components/popups/CancelReviewProcessPop
 import overwriteResultPopup from '@/components/popups/OverwriteResultPopup.vue'
 import documentPreviewPopup from '@/components/popups/DocumentPreviewPopup.vue'
 import picturePreviewPopup from '@/components/popups/PicturePreviewPopup.vue'
+import idCardPreviewPopup from '@/components/popups/IDCardPreviewPopup.vue'
+import billPreviewPopup from '@/components/popups/BillPreviewPopup.vue'
 export default {
     components: {
         customerInformation,
@@ -105,6 +109,8 @@ export default {
         overwriteResultPopup,
         documentPreviewPopup,
         picturePreviewPopup,
+        idCardPreviewPopup,
+        billPreviewPopup,
     },
 
     /*
@@ -171,8 +177,12 @@ export default {
         popup(newVar) {
             if (newVar == 'pic') {
                 this.$bvModal.show('picture-preview-popup')
-            } else {
+            } else if (newVar == 'video') {
                 this.$bvModal.show('document-preview-popup')
+            } else if (newVar == 'card') {
+                this.$bvModal.show('id-card-preview-popup')
+            } else if (newVar == 'bill') {
+                this.$bvModal.show('bill-preview-popup')
             }
         },
     }, // End of Component > methods

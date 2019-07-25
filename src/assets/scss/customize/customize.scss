@@ -1443,7 +1443,6 @@ a {
 
 .document-preview-section {
     width: 100%;
-    height: 288px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1454,6 +1453,10 @@ a {
         width: 100%;
         min-height: 290px;
         background-size: cover;
+
+        .image-preview {
+            width: 100% !important;
+        }
     }
     .play-btn {
         position: absolute;
@@ -1736,4 +1739,31 @@ a {
 
 .secondary-add-btn {
     text-transform: capitalize;
+}
+
+.role-form-section {
+    h4 {
+        font-family: $font_regular !important;
+    }
+
+    .col-form-label {
+        label {
+            font-family: $font_bold;
+        }
+    }
+
+    .ml-4 {
+        .custom-control-label {
+            font-family: $font_regular;
+            color: $body-color !important;
+        }
+    }
+
+    .custom-radio {
+        label {
+            span {
+                color: $body-color !important;
+            }
+        }
+    }
 }
