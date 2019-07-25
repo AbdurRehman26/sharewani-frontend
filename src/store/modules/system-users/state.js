@@ -188,7 +188,7 @@ export default {
                             label: 'Archived',
                         },
                     ],
-                    action: 'archive',
+                    action: 'activate',
                 },
             ],
         },
@@ -225,7 +225,7 @@ export default {
                         {
                             cssClass: 'locked',
                             icon: 'icon-change-password',
-                            label: 'locked',
+                            label: 'Locked',
                         },
                     ],
                     action: 'active',
@@ -237,7 +237,7 @@ export default {
                         {
                             cssClass: 'locked',
                             icon: 'icon-change-password',
-                            label: 'locked',
+                            label: 'Locked',
                         },
                     ],
                     action: 'active',
@@ -249,7 +249,7 @@ export default {
                         {
                             cssClass: 'locked',
                             icon: 'icon-change-password',
-                            label: 'locked',
+                            label: 'Locked',
                         },
                     ],
                     action: 'active',
@@ -261,7 +261,7 @@ export default {
                         {
                             cssClass: 'locked',
                             icon: 'icon-change-password',
-                            label: 'locked',
+                            label: 'Locked',
                         },
                     ],
                     action: 'active',

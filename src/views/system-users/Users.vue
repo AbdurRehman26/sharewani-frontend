@@ -122,7 +122,7 @@
                         <base-action
                             v-if="
                                 data.value == 'active' ||
-                                    data.value == 'archive'
+                                    data.value == 'activate'
                             "
                             icon="icon-edit"
                             label="Modify"
@@ -137,10 +137,10 @@
                         ></base-action>
                         <!-- if action activate -->
                         <base-action
-                            v-if="data.value == 'archive'"
+                            v-if="data.value == 'activate'"
                             icon="icon-done"
                             label="Activate"
-                            v-b-modal.add-system-user-popup
+                            v-b-modal.archive-popup
                         ></base-action>
                     </div>
                 </template>

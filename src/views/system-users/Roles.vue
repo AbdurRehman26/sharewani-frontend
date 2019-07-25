@@ -67,7 +67,7 @@
                             v-if="data.value == 'archive'"
                             icon="icon-done"
                             label="Activate"
-                            v-b-modal.v-b-modal.add-role-popup
+                            v-b-modal.v-b-modal.archive-popup
                         ></base-action>
                     </div>
                 </template>

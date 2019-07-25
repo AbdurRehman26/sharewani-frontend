@@ -425,7 +425,7 @@ export default {
         customerInformation: {
             customerDetails: [
                 {
-                    heading: 'Basic Information',
+                    heading: 'Customer Information',
                     descriptions: [
                         {
                             title: 'Idenfo ID:',
@@ -781,14 +781,14 @@ export default {
                     image: 'bill.png',
                     thumbnail: 'jpg.svg',
                     title: 'Utility Bill',
-                    type: 'pic',
+                    type: 'bill',
                     uploadDate: 'Uploaded June 1, 2019',
                 },
                 {
                     image: 'nic.png',
                     thumbnail: 'jpg.svg',
                     title: 'ID Card',
-                    type: 'pic',
+                    type: 'card',
                     uploadDate: 'Uploaded June 1, 2019',
                 },
                 {
