@@ -325,7 +325,11 @@ a {
                     padding-left: 0px;
                 }
             }
-            &.active {
+        }
+    }
+    .active {
+        .card {
+            &.custom-card {
                 background-color: #fff;
                 p {
                     &.caption-description {
@@ -370,7 +374,7 @@ a {
 
     a {
         text-decoration: none;
-        color: $secondary;
+        color: $grey-lite !important;
 
         span {
             margin-top: 3px;
@@ -378,10 +382,11 @@ a {
         }
         i {
             margin-right: 8px;
-            color: $secondary;
+            color: $grey-lite !important;
             font-size: 10px;
         }
     }
+
     ul {
         list-style-type: none;
         padding-left: 0;
@@ -736,6 +741,7 @@ a {
         li {
             .document-detail {
                 width: 100%;
+                cursor: pointer;
                 border: 1px solid $border-color;
                 border-radius: $upload-border-radius;
                 overflow: hidden;
@@ -1448,6 +1454,11 @@ a {
     align-items: center;
     position: relative;
     margin-bottom: 24px;
+
+    &.video-modal {
+        height: 290px;
+        overflow: hidden;
+    }
 
     .preview-video {
         width: 100%;
