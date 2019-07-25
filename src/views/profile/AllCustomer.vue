@@ -10,7 +10,6 @@
                         <div class="col-md-6">
                             <b-form-group>
                                 <b-form-radio-group
-                                    :id="index"
                                     v-model="filterSelected"
                                     :options="filterList"
                                     buttons
@@ -46,7 +45,7 @@
             </div>
         </div>
 
-        <div class="table-section">
+        <div class="table-section table-min-width">
             <b-table :items="items" :fields="fields">
                 <template slot="profile" slot-scope="data">
                     <div class="profile-area">

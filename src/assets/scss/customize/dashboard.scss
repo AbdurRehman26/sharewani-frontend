@@ -128,6 +128,10 @@
 			padding: 0 5px;
 			.legend-value {
 				padding-right: 5px;
+				@include windowS {
+					font-size: 0.75rem;
+					margin-top: 3px;
+				}
 			}
 		}
 	}
@@ -147,6 +151,10 @@
 				padding-right: 15px;
 				position: relative;
 				top: 4px;
+				@include windowS {
+					font-size: 0.75rem;
+					margin-top: 3px;
+				}
 			}
 			.legend-country-users {
 				position: relative;
@@ -169,12 +177,19 @@
 	display: inline-block;
 	vertical-align: middle;
 	margin-right: 10px;
+	@include windowS {
+		font-size: 0.75rem;
+	}
 }
 
 .legend-value {
 	display: inline-block;
 	font-family: $font-bold;
 	float: right;
+	@include windowS {
+		font-size: 0.75rem;
+		margin-top: 3px;
+	}
 }
 
 .legend-country-users {

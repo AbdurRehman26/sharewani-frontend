@@ -832,7 +832,8 @@ a {
                     font-family: $font_medium;
                 }
                 @include windowS {
-                    margin-right: 5px;
+                    margin-right: 4px;
+                    font-size: 0.75rem;
                 }
             }
             &:last-child {
@@ -850,6 +851,7 @@ a {
                     width: 232px;
                     right: 0;
                     // border: 0.5px solid $border-color;
+                    top: 100%;
                     box-shadow: 2px 3px 13px rgba(50, 50, 93, 0.2);
                     li {
                         width: 100%;

@@ -26,6 +26,9 @@ h6,
 }
 p {
     font-size: 0.875rem;
+    @include windowS {
+        font-size: 0.75rem;
+    }
 }
 strong {
     font-family: $font-bold;
