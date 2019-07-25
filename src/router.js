@@ -194,7 +194,7 @@ export default new Router({
                     },
                 },
                 {
-                    path: '/customer-profiles/screening-customer',
+                    path: '/customer-profiles/name-screening',
                     name: 'screening-customer',
                     component: () =>
                         import(/* webpackChunkName: "screening-customer" */ './views/profile/profile-details/ScreeningCustomer.vue'),
