@@ -541,7 +541,6 @@ a {
 .customer-info {
     .customer-profile {
         width: 100%;
-        height: 150px;
         border-radius: 8px;
         background-size: cover;
     }
@@ -601,6 +600,7 @@ a {
 
     img {
         border-radius: 8px;
+        min-width: 90%;
     }
 
     .pending {
@@ -1699,5 +1699,16 @@ a {
 .profile-filter {
     .btn-link {
         padding: 7px 6px;
+    }
+}
+
+.customers-info-section {
+    .col-md-3 {
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+    .col-md-9 {
+        flex: 0 0 80%;
+        max-width: 80%;
     }
 }
