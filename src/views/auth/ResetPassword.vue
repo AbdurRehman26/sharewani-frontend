@@ -18,7 +18,6 @@
                             <b-form-input
                                 id="input-2"
                                 type="password"
-                                required
                                 placeholder="Enter new password"
                             ></b-form-input>
                         </b-form-group>
@@ -30,13 +29,16 @@
                             <b-form-input
                                 id="input-2"
                                 type="password"
-                                required
                                 placeholder="Re-enter your account password"
                             ></b-form-input>
                         </b-form-group>
-                        <b-button type="submit" variant="primary"
-                            >RESET</b-button
-                        >
+                        <base-button
+                            btnLabel="RESET"
+                            btnType="submit"
+                            btnVariant="primary"
+                            class=""
+                            @click="$router.push('/dashboard')"
+                        ></base-button>
                     </b-form>
                 </div>
             </div>
