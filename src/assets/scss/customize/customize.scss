@@ -614,7 +614,8 @@ a {
 
     .pending {
         margin: 24px auto;
-        position: static;
+        position: relative;
+        left: -12px;
         width: 110px;
     }
 }
