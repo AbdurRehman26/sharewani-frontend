@@ -618,7 +618,8 @@ a {
 
     .pending {
         margin: 24px auto;
-        position: static;
+        position: relative;
+        left: -12px;
         width: 110px;
     }
 }
@@ -1735,4 +1736,8 @@ a {
         flex: 0 0 80%;
         max-width: 80%;
     }
+}
+
+.secondary-add-btn {
+    text-transform: capitalize;
 }

@@ -278,6 +278,8 @@
         align-items: center;
         select {
             min-width: 170px;
+            height: 36px;
+            padding: 11px 15px !important;
         }
         p {
             padding-left: 15px;
@@ -287,6 +289,9 @@
         text-align: right;
         button {
             margin-left: 15px;
+            height: 36px;
+            font-size: 0.75rem;
+            font-family: $font_medium;
             color: $secondary;
             background-color: #fff;
             border-color: #fff;
