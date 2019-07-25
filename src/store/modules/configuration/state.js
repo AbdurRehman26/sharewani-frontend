@@ -350,6 +350,7 @@ export default {
                         key: 'worktypecode',
                         label: 'Work Type Code',
                         sortable: true,
+                        class: 'w-200px',
                     },
                     {
                         key: 'worktypetitle',

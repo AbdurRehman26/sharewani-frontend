@@ -505,7 +505,7 @@ a {
         top: 0;
         bottom: 0;
         margin: auto;
-        left: 0px;
+        left: -10px;
     }
 }
 
@@ -798,6 +798,10 @@ a {
 
 .w-230px {
     width: 230px;
+}
+
+.w-200px {
+    width: 200px;
 }
 
 .config-list {

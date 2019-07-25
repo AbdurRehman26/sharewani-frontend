@@ -41,6 +41,12 @@
                     padding-left: 8px;
                 }
             }
+            &:first-child {
+                padding-left: 25px;
+            }
+            &:last-child {
+                padding-right: 25px;
+            }
         }
         &.hidden_header {
             display: none;
@@ -92,6 +98,12 @@
                         color: $secondary;
                     }
                 }
+            }
+            &:first-child {
+                padding-left: 25px;
+            }
+            &:last-child {
+                padding-right: 15px;
             }
         }
         tr {
