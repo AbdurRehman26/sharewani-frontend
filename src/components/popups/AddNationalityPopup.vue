@@ -86,6 +86,7 @@ export default {
                 countryCode: '',
                 countryTitle: '',
                 rating: null,
+
                 sanction: [{ text: 'Yes', value: null }, 'No'],
             },
 

@@ -139,7 +139,9 @@
                     </div>
                     <div class="row">
                         <div class="col-xs-12 col-md-12">
-                            <div class="table-section system-logs-table">
+                            <div
+                                class="table-section table-min-width system-logs-table"
+                            >
                                 <b-table
                                     :fields="fields"
                                     :items="items"

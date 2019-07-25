@@ -20,7 +20,7 @@
         <div class="config-list" ref="listingArea">
             <ul v-show="listVal <= 1700">
                 <li
-                    v-for="(list, index) in menuListing.slice(0, 9)"
+                    v-for="(list, index) in menuListing.slice(0, 8)"
                     :key="index"
                 >
                     <router-link :to="list.anchorLink">
@@ -47,7 +47,7 @@
                         <ul>
                             <li
                                 v-for="(listo, index) in menuListing.slice(
-                                    9,
+                                    8,
                                     menuListing.length
                                 )"
                                 :key="index"
