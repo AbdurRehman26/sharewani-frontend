@@ -3,13 +3,18 @@
     overflow: hidden;
     border-radius: 8px 8px 0 0;
     overflow-x: auto;
+
+    &.table-min-width {
+        .table {
+            min-width: 1140px;
+        }
+    }
 }
 .table {
     border-radius: 8px 8px 0 0;
     border: 0px #d7d7e2 solid;
     overflow: hidden;
     margin-bottom: 0;
-    min-width: 1080px;
 
     thead {
         border: 0px #d7d7e2 solid;
@@ -35,6 +40,12 @@
                     font-family: 'icomoon';
                     padding-left: 8px;
                 }
+            }
+            &:first-child {
+                padding-left: 25px;
+            }
+            &:last-child {
+                padding-right: 25px;
             }
         }
         &.hidden_header {
@@ -87,6 +98,12 @@
                         color: $secondary;
                     }
                 }
+            }
+            &:first-child {
+                padding-left: 25px;
+            }
+            &:last-child {
+                padding-right: 15px;
             }
         }
         tr {

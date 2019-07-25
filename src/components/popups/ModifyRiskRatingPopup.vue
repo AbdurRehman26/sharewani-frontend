@@ -81,6 +81,8 @@
 export default {
     data() {
         return {
+            rejected: '',
+            generate: '',
             form: {
                 countryCode: '',
                 dialingCode: '',

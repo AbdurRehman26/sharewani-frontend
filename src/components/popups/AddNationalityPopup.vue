@@ -81,6 +81,7 @@
 export default {
     data() {
         return {
+            sanction: '',
             form: {
                 countryCode: '',
                 countryTitle: '',

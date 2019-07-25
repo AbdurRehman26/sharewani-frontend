@@ -14,7 +14,7 @@
                     <div class="card custom-card">
                         <div class="fields-area">
                             <div class="brand-color-area">
-                                <h5>
+                                <h5 class="m-b-30">
                                     OCR Switch
                                 </h5>
                                 <div class="row">

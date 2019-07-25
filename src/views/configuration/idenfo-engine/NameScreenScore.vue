@@ -77,7 +77,6 @@ export default {
     */
     methods: {
         initializeData() {
-            //system log table
             let screenScoreFactorFields = this.configurationData.idenfoEngine
                 .screenScoreFactor.fields //get user data from store
             this.fields = screenScoreFactorFields //push data into array
