@@ -195,14 +195,15 @@ header {
                     padding: 11px 11px;
                     display: block;
                     text-decoration: none;
-                    font-size: 15px;
+                    font-size: 0.8125rem;
                     color: $nav-color;
                     position: relative;
                     i {
                         margin-right: 10px;
-                        font-size: 19px;
+                        font-size: 1.125rem;
                         position: absolute;
                         left: 10px;
+                        bottom: 10px;
                     }
                     span {
                         padding-left: 27px;
