@@ -25,6 +25,7 @@
                                         btnType="submit"
                                         btnVariant="secondary"
                                         v-b-modal.add-application-popup
+                                        class="secondary-add-btn"
                                     ></base-button>
                                 </div>
                             </div>

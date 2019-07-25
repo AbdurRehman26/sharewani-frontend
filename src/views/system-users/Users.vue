@@ -64,6 +64,7 @@
                                         btnLabel="+ Add User"
                                         btnType="submit"
                                         btnVariant="secondary"
+                                        class="secondary-add-btn"
                                     ></base-button>
                                 </div>
                             </div>
@@ -211,7 +212,8 @@ export default {
             filterByBranch: null,
 
             filterByBranches: [
-                { text: 'Filter by branch', value: null },
+                { text: 'Filter by data segment', value: null },
+                'All',
                 'United Arab Emirates',
                 'Pakistan',
                 'United Kingdom',

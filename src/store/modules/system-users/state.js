@@ -21,6 +21,7 @@ export default {
                     key: 'date_segments',
                     label: 'Date Segments',
                     sortable: true,
+                    class: 'text-center',
                 },
                 {
                     key: 'join_date',
