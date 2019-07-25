@@ -31,6 +31,59 @@ span {
     }
 }
 
+.file-thumbnail {
+    width: 22px;
+}
+.radius-10px {
+    border-radius: 10px;
+}
+
+.download-template {
+    h5 {
+        font-size: 1rem;
+        padding-bottom: 8px;
+    }
+    p {
+        font-size: 0.75rem;
+        line-height: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+.link-action {
+    display: flex;
+    .btn-link {
+        padding-left: 10px;
+    }
+}
+
+.file-upload-info {
+    display: flex;
+    width: 100%;
+    position: relative;
+    border-top: 1px $grey-dark solid;
+    padding-top: 25px;
+    p {
+        margin-bottom: 0px;
+    }
+    .download-current-file {
+        button {
+            position: absolute;
+            right: 0;
+            bottom: -11px;
+        }
+    }
+}
+
+.btn-icon {
+    position: absolute;
+    left: 0;
+    i {
+        font-size: 1.125rem;
+        padding-right: 4px;
+    }
+}
+
 a {
     &.primary {
         color: $primary !important;
@@ -74,6 +127,11 @@ a {
         top: -4px;
         margin: auto;
     }
+}
+
+.file-upload {
+    border-top: 1px solid $grey-dark;
+    padding-top: 20px;
 }
 
 .step-form {

@@ -5,7 +5,11 @@
         :class="cssClass"
         @click="$emit('click')"
         @click.prevent="$emit('preventFunction')"
-        ><span class="btn-text">{{ btnLabel }}</span>
+    >
+        <span v-if="btnIcon != null" class="btn-icon"
+            ><i :class="btnIcon"></i
+        ></span>
+        <span class="btn-text">{{ btnLabel }}</span>
         <span class="loader"></span>
     </b-button>
 </template>
@@ -32,6 +36,10 @@ export default {
         },
         btnLabel: {
             type: String,
+        },
+        btnIcon: {
+            type: String,
+            default: null,
         },
         /**
          * Value to determine the current compose mode which
