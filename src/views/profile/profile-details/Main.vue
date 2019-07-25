@@ -14,7 +14,7 @@
                                     <div class="col-md-3 text-right">
                                         <router-link
                                             to="/customer-profiles"
-                                            class="btn btn-link"
+                                            class="btn btn-link go-back-btn"
                                         >
                                             <span>
                                                 <i class="icon-caret-left"></i>

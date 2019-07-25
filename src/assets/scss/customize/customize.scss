@@ -370,7 +370,7 @@ a {
 
     a {
         text-decoration: none;
-        color: $secondary;
+        color: $grey-lite !important;
 
         span {
             margin-top: 3px;
@@ -378,10 +378,11 @@ a {
         }
         i {
             margin-right: 8px;
-            color: $secondary;
+            color: $grey-lite !important;
             font-size: 10px;
         }
     }
+
     ul {
         list-style-type: none;
         padding-left: 0;
@@ -738,6 +739,7 @@ a {
         li {
             .document-detail {
                 width: 100%;
+                cursor: pointer;
                 border: 1px solid $border-color;
                 border-radius: $upload-border-radius;
                 overflow: hidden;
@@ -1447,17 +1449,25 @@ a {
 
 .document-preview-section {
     width: 100%;
-    height: 288px;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
     margin-bottom: 24px;
 
+    &.video-modal {
+        height: 290px;
+        overflow: hidden;
+    }
+
     .preview-video {
         width: 100%;
         min-height: 290px;
         background-size: cover;
+
+        .image-preview {
+            width: 100% !important;
+        }
     }
     .play-btn {
         position: absolute;
@@ -1740,4 +1750,31 @@ a {
 
 .secondary-add-btn {
     text-transform: capitalize;
+}
+
+.role-form-section {
+    h4 {
+        font-family: $font_regular !important;
+    }
+
+    .col-form-label {
+        label {
+            font-family: $font_bold;
+        }
+    }
+
+    .ml-4 {
+        .custom-control-label {
+            font-family: $font_regular;
+            color: $body-color !important;
+        }
+    }
+
+    .custom-radio {
+        label {
+            span {
+                color: $body-color !important;
+            }
+        }
+    }
 }

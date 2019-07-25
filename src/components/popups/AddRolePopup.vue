@@ -8,7 +8,7 @@
             cancelTitle="Cancel"
             cancelVariant="link"
         >
-            <b-form>
+            <b-form class="role-form-section">
                 <div class="scrollable" id="style-2">
                     <div class="row">
                         <div class="col-md-6">

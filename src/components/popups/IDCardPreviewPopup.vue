@@ -1,21 +1,18 @@
 <template>
     <div class="upload-picture-modal">
         <b-modal
-            id="picture-preview-popup"
+            id="id-card-preview-popup"
             title="Document Preview"
             size="md"
             ok-only
             okTitle="Close"
             okVariant="primary"
         >
-            <h5>Selfie From Video</h5>
+            <h5>ID Card</h5>
 
             <div class="document-preview-section">
                 <div class="preview-video">
-                    <img
-                        :src="require('@/assets/images/video-cover.png')"
-                        class="image-preview"
-                    />
+                    <img :src="require('@/assets/images/dummy/id-card.png')" />
                 </div>
             </div>
         </b-modal>

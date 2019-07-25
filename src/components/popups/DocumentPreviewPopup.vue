@@ -10,7 +10,7 @@
         >
             <h5>Recorded Video</h5>
 
-            <div class="document-preview-section">
+            <div class="document-preview-section video-modal">
                 <div class="preview-video">
                     <video
                         v-if="play == true"
