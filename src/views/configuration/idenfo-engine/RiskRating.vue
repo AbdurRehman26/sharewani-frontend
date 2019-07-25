@@ -87,7 +87,6 @@ export default {
     */
     methods: {
         initializeData() {
-            //system log table
             let configTableFields = this.configurationData.idenfoEngine
                 .riskRating.fields //get user data from store
             this.fields = configTableFields //push data into array

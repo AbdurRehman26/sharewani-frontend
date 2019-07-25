@@ -304,22 +304,22 @@ a {
                 margin-left: 0;
                 position: absolute;
                 top: 20px;
-                width: 25px;
-                height: 25px;
+                width: 17px;
+                height: auto;
                 background-size: 100% 100%;
                 border: 0px solid;
             }
             h4 {
                 display: inline-block !important;
                 text-align: left;
-                padding-left: 35px;
-                font-size: 1rem;
+                padding-left: 23px;
+                font-size: 0.79rem;
                 margin-bottom: 0;
             }
             p {
                 &.caption-description {
                     text-align: left;
-                    color: $body-color;
+                    color: $grey-lite;
                     padding-top: 11px;
                     margin-bottom: 0;
                     padding-left: 0px;
@@ -327,6 +327,15 @@ a {
             }
             &.active {
                 background-color: #fff;
+                p {
+                    &.caption-description {
+                        color: $body-color;
+                    }
+                }
+                h4 {
+                    font-family: $font_black;
+                    font-size: 0.79rem;
+                }
             }
         }
     }
@@ -801,6 +810,7 @@ a {
         li {
             // margin-right: 3px;
             margin-right: 0px;
+            margin-bottom: -2px;
             a {
                 // padding: 14px 16px 14px 16px;
                 padding: 17px 16px 14px 16px;
@@ -934,6 +944,9 @@ a {
     .card {
         &.custom-card {
             text-align: left;
+            border: 0px solid;
+            padding: 28px 24px;
+            box-shadow: 0px 0.5px 0px rgba(50, 50, 93, 0.2);
             h5 {
                 font-size: 0.9375rem;
                 margin-bottom: 20px;
@@ -1038,6 +1051,7 @@ a {
 .config-card-block {
     background-color: #fff;
     padding: 32px;
+    box-shadow: 0px 0.5px 0px rgba(50, 50, 93, 0.2);
 }
 .user-roles-action {
     width: 200px;

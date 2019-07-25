@@ -1374,7 +1374,7 @@ export default {
         importData: [
             {
                 logo: 'logo1.png',
-                name: 'Do Jones Data',
+                name: 'DOW JONES',
                 description: 'Manage Dow Jones Data',
                 active: true,
                 // lastUpdate: 'Last updated: June 10, 2019',
@@ -1382,14 +1382,14 @@ export default {
             },
             {
                 logo: 'logo2.png',
-                name: 'World Bank Data',
+                name: 'WORLD-CHECK',
                 description: 'Manage World Check Data',
                 // lastUpdate: 'Last updated: June 9, 2019',
                 // totalRecord: 'Total Records: 23,956',
             },
             {
                 logo: 'logo3.png',
-                name: 'Client Blacklist Data',
+                name: 'BLACK LIST',
                 description: "Manage Client's Blacklist Data",
                 // lastUpdate: 'Last updated: June 12, 2019',
                 // totalRecord: 'Total Records: 2,450',
