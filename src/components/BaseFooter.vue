@@ -2,8 +2,8 @@
     <footer class="footer">
         <ul>
             <li>© 2019, Idenfo Ltd. All rights reserved.</li>
-            <li><router-link to="home">Terms of Service</router-link></li>
-            <li><router-link to="home">Privacy Policy</router-link></li>
+            <li><router-link to="#">Terms of Service</router-link></li>
+            <li><router-link to="#">Privacy Policy</router-link></li>
         </ul>
     </footer>
 </template>

@@ -36,9 +36,13 @@
                                 placeholder="Please provide a detailed description of this issue"
                             ></b-form-textarea>
                         </b-form-group>
-                        <b-button type="submit" variant="primary"
-                            >SEND</b-button
-                        >
+                        <base-button
+                            btnLabel="SEND"
+                            btnType="submit"
+                            btnVariant="primary"
+                            class=""
+                            @click="$router.push('/dashboard')"
+                        ></base-button>
                     </b-form>
                 </div>
             </div>
