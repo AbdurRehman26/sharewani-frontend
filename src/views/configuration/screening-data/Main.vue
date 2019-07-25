@@ -6,72 +6,82 @@
                     class="col-lg-3 col-md-6"
                     v-for="(data, index) in listData"
                     :key="index"
+                    :class="index == tabData ? 'active' : ''"
+                    @click="tabFilter(index)"
                 >
                     <card-data
                         :logo="data.logo"
                         :name="data.name"
                         :description="data.description"
-                        :active="data.active"
                     ></card-data>
                 </div>
             </div>
         </div>
 
-        <div class="config-list" ref="listingArea">
-            <ul v-show="listVal <= 1700">
-                <li
-                    v-for="(list, index) in menuListing.slice(0, 8)"
-                    :key="index"
-                >
-                    <router-link :to="list.anchorLink">
-                        <span>{{ list.menuLabel }}</span>
-                    </router-link>
-                </li>
-                <li
-                    class="open-dropdown"
-                    :class="[
-                        $route.meta.responsiveMenuItem == true
-                            ? 'router-link-exact-active'
-                            : '',
-                    ]"
-                >
-                    <a @click="listDropdown ^= true" href="javascript:void(0);">
-                        <i class="icon-dropdown-icon"></i>
-                    </a>
-
-                    <div
-                        v-if="listDropdown"
-                        class="dropdown-open"
-                        v-on-click-outside="close"
+        <div v-if="tabData == 0">
+            <div class="config-list" ref="listingArea">
+                <ul v-show="listVal <= 1700">
+                    <li
+                        v-for="(list, index) in menuListing.slice(0, 8)"
+                        :key="index"
                     >
-                        <ul>
-                            <li
-                                v-for="(listo, index) in menuListing.slice(
-                                    8,
-                                    menuListing.length
-                                )"
-                                :key="index"
-                            >
-                                <router-link :to="listo.anchorLink">
-                                    <span>{{ listo.menuLabel }}</span>
-                                </router-link>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-            </ul>
-            <ul v-show="listVal >= 1699">
-                <li v-for="(list, index) in menuListing" :key="index">
-                    <router-link :to="list.anchorLink">
-                        <span>{{ list.menuLabel }}</span>
-                    </router-link>
-                </li>
-            </ul>
+                        <router-link :to="list.anchorLink">
+                            <span>{{ list.menuLabel }}</span>
+                        </router-link>
+                    </li>
+                    <li
+                        class="open-dropdown"
+                        :class="[
+                            $route.meta.responsiveMenuItem == true
+                                ? 'router-link-exact-active'
+                                : '',
+                        ]"
+                    >
+                        <a
+                            @click="listDropdown ^= true"
+                            href="javascript:void(0);"
+                        >
+                            <i class="icon-dropdown-icon"></i>
+                        </a>
+
+                        <div
+                            v-if="listDropdown"
+                            class="dropdown-open"
+                            v-on-click-outside="close"
+                        >
+                            <ul>
+                                <li
+                                    v-for="(listo, index) in menuListing.slice(
+                                        8,
+                                        menuListing.length
+                                    )"
+                                    :key="index"
+                                >
+                                    <router-link :to="listo.anchorLink">
+                                        <span>{{ listo.menuLabel }}</span>
+                                    </router-link>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <ul v-show="listVal >= 1699">
+                    <li v-for="(list, index) in menuListing" :key="index">
+                        <router-link :to="list.anchorLink">
+                            <span>{{ list.menuLabel }}</span>
+                        </router-link>
+                    </li>
+                </ul>
+            </div>
+            <div class="config-card-block">
+                <router-view @item-length="tableItemLength" />
+                <pagination v-if="tableItemData > 9"></pagination>
+            </div>
         </div>
-        <div class="config-card-block">
-            <router-view @item-length="tableItemLength" />
-            <pagination v-if="tableItemData > 9"></pagination>
-        </div>
+
+        <div v-if="tabData == 1"></div>
+
+        <div v-if="tabData == 2"></div>
     </div>
 </template>
 
@@ -112,6 +122,7 @@ export default {
     */
     data() {
         return {
+            tabData: 0,
             listData: null,
             tableItemData: null,
             listVal: null,
@@ -211,6 +222,9 @@ export default {
         },
         close() {
             this.listDropdown = false
+        },
+        tabFilter(index) {
+            this.tabData = index
         },
     }, // End of Component > methods
 
