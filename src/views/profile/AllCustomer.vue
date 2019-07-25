@@ -10,7 +10,6 @@
                         <div class="col-md-6">
                             <b-form-group>
                                 <b-form-radio-group
-                                    :id="index"
                                     v-model="filterSelected"
                                     :options="filterList"
                                     buttons
