@@ -1,5 +1,5 @@
 <template>
-    <div class="row-min-space customers-info-section">
+    <div class=" customers-info-section">
         <div class="row">
             <div class="col-md-3 text-center">
                 <div class="customer-profile">
