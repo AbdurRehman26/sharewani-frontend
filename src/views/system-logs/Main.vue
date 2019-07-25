@@ -221,7 +221,13 @@ export default {
 
             filterAction: [
                 { text: 'Filter by action', value: null },
-                'Alex Tonorio logged in',
+                'Create new customer',
+                'Initiate review',
+                'Login',
+                'Modify work type',
+                'Submited review',
+                'New alert',
+                'Create new industry',
             ],
 
             filterUser: [

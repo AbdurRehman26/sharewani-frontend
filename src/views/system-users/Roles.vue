@@ -25,6 +25,7 @@
                                         btnType="submit"
                                         btnVariant="secondary btn-block"
                                         v-b-modal.add-role-popup
+                                        class="secondary-add-btn"
                                     ></base-button>
                                 </div>
                             </div>
