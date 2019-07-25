@@ -1,55 +1,57 @@
 <template>
-    <div class="row">
-        <div class="col-md-2 text-center">
-            <div
-                class="customer-profile"
-                :style="{
-                    'background-image':
-                        'url(' +
-                        require('@/assets/images/dummy/' + profilePic + '') +
-                        ')',
-                }"
-            ></div>
+    <div class="row-min-space customers-info-section">
+        <div class="row">
+            <div class="col-md-3 text-center">
+                <div class="customer-profile">
+                    <img
+                        :src="
+                            require('@/assets/images/dummy/' + profilePic + '')
+                        "
+                    />
+                </div>
 
-            <div class="pending status-view">
-                <i class="icon-loading"></i>
-                <span>Pending</span>
+                <div class="pending status-view">
+                    <i class="icon-loading"></i>
+                    <span>Pending</span>
+                </div>
             </div>
-        </div>
-        <div class="col-md-10">
-            <ul v-for="(list, index) in customerDetails" :key="index">
-                <li>
-                    <div class="seprator-section">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <h3>{{ list.heading }}</h3>
-                            </div>
-                            <div
-                                class="col-md-6"
-                                v-for="(descriptions,
-                                index) in list.descriptions"
-                                :key="index"
-                            >
-                                <ul class="row">
-                                    <li class="col-md-6">
-                                        <label>{{ descriptions.title }}</label>
-                                    </li>
-                                    <li class="col-md-6">
-                                        <span
-                                            :class="
-                                                descriptions.alert == true
-                                                    ? 'danger'
-                                                    : ''
-                                            "
-                                            >{{ descriptions.detail }}</span
-                                        >
-                                    </li>
-                                </ul>
+            <div class="col-md-9">
+                <ul v-for="(list, index) in customerDetails" :key="index">
+                    <li>
+                        <div class="seprator-section">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h3>{{ list.heading }}</h3>
+                                </div>
+                                <div
+                                    class="col-md-6"
+                                    v-for="(descriptions,
+                                    index) in list.descriptions"
+                                    :key="index"
+                                >
+                                    <ul class="row">
+                                        <li class="col-md-6">
+                                            <label>{{
+                                                descriptions.title
+                                            }}</label>
+                                        </li>
+                                        <li class="col-md-6">
+                                            <span
+                                                :class="
+                                                    descriptions.alert == true
+                                                        ? 'danger'
+                                                        : ''
+                                                "
+                                                >{{ descriptions.detail }}</span
+                                            >
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </li>
-            </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </template>

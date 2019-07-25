@@ -52,7 +52,6 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
 export default {
     components: {},
 
@@ -88,29 +87,19 @@ export default {
     | Component > computed
     |--------------------------------------------------------------------------
     */
-    computed: {
-        ...mapGetters(['configuration']),
-    }, // End of Component > computed
+    computed: {}, // End of Component > computed
     /*
     |--------------------------------------------------------------------------
     | Component > methods
     |--------------------------------------------------------------------------
     */
-    methods: {
-        initializeData() {
-            //system log table
-            let configImportFields = this.configuration.importData //get user data from store
-            this.listData = configImportFields //push data into array
-        },
-    }, // End of Component > methods
+    methods: {}, // End of Component > methods
 
     /*
     |--------------------------------------------------------------------------
     | Component > mounted
     |--------------------------------------------------------------------------
     */
-    mounted() {
-        this.initializeData()
-    }, // End of Component > mounted
+    mounted() {}, // End of Component > mounted
 } // End of export default
 </script>

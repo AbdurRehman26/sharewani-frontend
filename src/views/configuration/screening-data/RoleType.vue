@@ -23,7 +23,6 @@
                 </div>
             </div>
         </div>
-
         <div class="table-section">
             <b-table :items="items" :fields="fields">
                 <template slot="status" slot-scope="data">

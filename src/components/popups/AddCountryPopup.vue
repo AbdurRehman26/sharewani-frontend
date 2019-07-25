@@ -99,6 +99,7 @@
 export default {
     data() {
         return {
+            sanction: '',
             form: {
                 countryCode: '',
                 dialingCode: '',

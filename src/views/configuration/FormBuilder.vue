@@ -49,7 +49,6 @@
                         class="dragArea list-group"
                         :list="formData"
                         group="people"
-                        @change="log"
                     >
                         <div
                             class="form-field-types draggable-fields"

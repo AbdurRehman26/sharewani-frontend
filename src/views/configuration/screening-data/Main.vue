@@ -112,6 +112,7 @@ export default {
     */
     data() {
         return {
+            listData: null,
             tableItemData: null,
             listVal: null,
             listDropdown: false,

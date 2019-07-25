@@ -8,7 +8,9 @@
                     require('@/assets/images/data-image/' + logo + '') +
                     ')',
             }"
-        ></div>
+        >
+            <img :src="require('@/assets/images/data-image/' + logo + '')" />
+        </div>
         <h4>{{ name }}</h4>
         <p v-if="lastUpdate">{{ lastUpdate }}</p>
         <p v-if="totalRecord">{{ totalRecord }}</p>

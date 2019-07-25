@@ -77,7 +77,6 @@ export default {
     */
     methods: {
         initializeData() {
-            //system log table
             let documentVerificationFields = this.configurationData.idenfoEngine
                 .documentVerification.fields //get user data from store
             this.fields = documentVerificationFields //push data into array

@@ -124,8 +124,6 @@ export default {
     */
     methods: {
         initializeData() {
-            //system log table
-            console.log(this.configurationData)
             let configTableFields = this.configurationData.idenfoEngine.country
                 .fields //get user data from store
             this.fields = configTableFields //push data into array
