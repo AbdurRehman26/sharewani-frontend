@@ -18,7 +18,7 @@
             </div>
         </div>
 
-        <div v-if="tabData == 0">
+        <div v-if="tabData == 0 || tabData == 1">
             <div class="config-list" ref="listingArea">
                 <ul v-show="listVal <= 1700">
                     <li
@@ -79,9 +79,18 @@
             </div>
         </div>
 
-        <div v-if="tabData == 1"></div>
+        <!-- <div v-if="tabData == 1"></div> -->
 
-        <div v-if="tabData == 2"></div>
+        <div v-if="tabData == 2">
+            <div class="row">
+                <div class="col-md-10">
+                    <div class="config-card-block radius-10px">
+                        <upload-file></upload-file>
+                    </div>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -89,11 +98,13 @@
 import { mapGetters } from 'vuex'
 import cardData from '@/components/CardData.vue'
 import pagination from '@/components/Pagination.vue'
+import uploadFile from '@/components/UploadFile.vue'
 import { directive as onClickOutside } from 'vue-on-click-outside'
 export default {
     components: {
         cardData,
         pagination,
+        uploadFile,
     },
 
     directives: {

@@ -81,7 +81,8 @@ export default {
                     name: 'customer-information',
                 },
                 {
-                    anchorLink: '/customer-profiles/screening-customer',
+                    anchorLink:
+                        '/customer-profiles/name-screening?q=%27Henk%20John%27%20corruption%20OR%20trafficking',
                     menuLabel: 'Name Screening',
                     name: 'screening-customer',
                 },

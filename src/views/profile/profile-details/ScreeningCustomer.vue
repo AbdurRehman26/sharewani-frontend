@@ -47,10 +47,10 @@
         </div>
         <div class="card iframe-section">
             <div class="scrollable" id="style-2">
-                <iframe
-                    scroll
-                    src="https://php72.cygnismedia.com/google-search.html"
-                ></iframe>
+                <div>
+                    <div class="gcse-searchbox"></div>
+                    <div class="gcse-searchresults"></div>
+                </div>
             </div>
         </div>
         <cancel-review-process-popup></cancel-review-process-popup>

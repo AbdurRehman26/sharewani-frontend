@@ -49,6 +49,12 @@
 		margin-top: 25px;
 		display: block;
 		position: relative;
+		a {
+			text-decoration: none;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
 		&:after {
 			content: '';
 			width: 32px;

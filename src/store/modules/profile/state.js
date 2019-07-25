@@ -425,7 +425,7 @@ export default {
         customerInformation: {
             customerDetails: [
                 {
-                    heading: 'Basic Information',
+                    heading: 'Customer Information',
                     descriptions: [
                         {
                             title: 'Idenfo ID:',

@@ -31,6 +31,59 @@ span {
     }
 }
 
+.file-thumbnail {
+    width: 22px;
+}
+.radius-10px {
+    border-radius: 10px;
+}
+
+.download-template {
+    h5 {
+        font-size: 1rem;
+        padding-bottom: 8px;
+    }
+    p {
+        font-size: 0.75rem;
+        line-height: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+.link-action {
+    display: flex;
+    .btn-link {
+        padding-left: 10px;
+    }
+}
+
+.file-upload-info {
+    display: flex;
+    width: 100%;
+    position: relative;
+    border-top: 1px $grey-dark solid;
+    padding-top: 25px;
+    p {
+        margin-bottom: 0px;
+    }
+    .download-current-file {
+        button {
+            position: absolute;
+            right: 0;
+            bottom: -11px;
+        }
+    }
+}
+
+.btn-icon {
+    position: absolute;
+    left: 0;
+    i {
+        font-size: 1.125rem;
+        padding-right: 4px;
+    }
+}
+
 a {
     &.primary {
         color: $primary !important;
@@ -74,6 +127,11 @@ a {
         top: -4px;
         margin: auto;
     }
+}
+
+.file-upload {
+    border-top: 1px solid $grey-dark;
+    padding-top: 20px;
 }
 
 .step-form {
@@ -325,11 +383,7 @@ a {
                     padding-left: 0px;
                 }
             }
-        }
-    }
-    .active {
-        .card {
-            &.custom-card {
+            &.active {
                 background-color: #fff;
                 p {
                     &.caption-description {
@@ -619,9 +673,11 @@ a {
 
     .pending {
         margin: 24px auto;
-        position: relative;
-        left: -12px;
+        position: static;
         width: 110px;
+        &.status-view {
+            margin-right: 11px;
+        }
     }
 }
 .system-logs-table {
@@ -833,6 +889,8 @@ a {
                 text-decoration: none;
                 border-color: transparent !important;
                 display: block;
+                position: relative;
+                top: 2px;
                 &.router-link-exact-active {
                     background-color: #fff;
                     color: $body-color;
@@ -1080,7 +1138,7 @@ a {
             color: $grey-xlite;
         }
         &.danger {
-            color: $danger;
+            color: $danger-dark;
         }
         &.circle-area {
             border-radius: 10px;

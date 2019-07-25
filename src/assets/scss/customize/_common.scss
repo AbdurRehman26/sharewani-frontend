@@ -399,20 +399,24 @@ $sides: (top, bottom, left, right); // Leave this variable alone
     border-radius: 16px;
     height: auto;
     text-align: center;
-    font-size: $font-size-base;
+    font-size: $font-size-base - 0.04;
     padding: 9px 10px;
     min-width: 120px;
     display: inline-block;
     position: absolute;
-    top: 5px;
+    top: 7px;
     left: 0;
     right: 0;
     margin: auto;
     max-width: 130px;
+    font-family: $font-light;
     i {
         font-size: 14px;
         vertical-align: bottom;
         position: relative;
+        &.icon-wrong {
+            font-size: 12px !important;
+        }
     }
 
     span {

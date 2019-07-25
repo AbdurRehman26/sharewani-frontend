@@ -16,7 +16,7 @@
                     >
                         <b-form-input
                             id="input-1"
-                            type="email"
+                            type="text"
                             required
                             placeholder="Enter username"
                         ></b-form-input>
@@ -24,7 +24,7 @@
                     <b-form-group
                         id="input-group-2"
                         label="Password"
-                        label-for="input-1"
+                        label-for="input-2"
                     >
                         <b-form-input
                             id="input-2"
