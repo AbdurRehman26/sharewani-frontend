@@ -6,12 +6,17 @@
             <span></span>
             <span></span>
         </div>
-        <div class="responsive-header-menu">
+        <div @click="mainMain ^= true" class="responsive-header-menu">
             <span></span>
             <span></span>
             <span></span>
         </div>
-        <header :class="stepStyle == true ? 'step-menu-header' : ''">
+        <header
+            :class="
+                (stepStyle == true ? 'step-menu-header' : '',
+                mainMain == true ? 'show-menu' : '')
+            "
+        >
             <div
                 class="header-menu navigation"
                 :class="stepStyle == true ? 'step-menu' : ''"
@@ -145,6 +150,7 @@ export default {
     data() {
         return {
             showPopover: false,
+            mainMain: false,
         }
     }, // End of Component > data
 

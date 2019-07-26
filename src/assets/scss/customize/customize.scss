@@ -23,6 +23,9 @@
 
 .right-panel {
     padding: 29px 40px;
+    @include mobile {
+        padding-top: 60px;
+    }
 }
 
 span {

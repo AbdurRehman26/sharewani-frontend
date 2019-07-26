@@ -21,6 +21,11 @@ body {
             transform: translate(0%);
         }
     }
+    @include mobile {
+        &.show-sidebar {
+            width: 100%;
+        }
+    }
 
     .sidebar-listing {
         display: flex;
@@ -158,6 +163,33 @@ body {
         background-color: $primary;
         z-index: 999;
         height: 52px;
+        display: flex;
+        align-self: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+    @include mobile {
+        height: 42px;
+    }
+    span {
+        height: 2px;
+        width: 24px;
+        display: block;
+        margin-bottom: 5px;
+        background-color: #fff;
+    }
+}
+
+.responsive-header-menu {
+    display: none;
+    @include mobile {
+        position: fixed;
+        top: 0px;
+        right: 0;
+        padding: 7px 10px;
+        background-color: $secondary;
+        z-index: 999;
+        height: 42px;
         display: flex;
         align-self: center;
         flex-direction: column;
