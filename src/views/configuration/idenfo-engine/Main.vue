@@ -34,6 +34,7 @@
                                     menuListing.length
                                 )"
                                 :key="index"
+                                @click="listDropdown ^= true"
                             >
                                 <router-link :to="listo.anchorLink">
                                     <span>{{ listo.menuLabel }}</span>

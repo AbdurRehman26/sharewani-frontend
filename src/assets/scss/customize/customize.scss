@@ -894,7 +894,8 @@ a {
                 border-color: transparent !important;
                 display: block;
                 position: relative;
-                top: 2px;
+                top: 0px;
+                height: 46px;
                 &.router-link-exact-active {
                     background-color: #fff;
                     color: $body-color;
@@ -948,6 +949,16 @@ a {
                     > a {
                         background-color: #fff;
                         color: $secondary;
+                    }
+                }
+            }
+            &.open-dropdown {
+                li {
+                    &:first-child {
+                        border-top: 0px solid #ccccd8;
+                    }
+                    a {
+                        height: auto;
                     }
                 }
             }
