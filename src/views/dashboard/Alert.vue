@@ -69,11 +69,13 @@
                             </div>
                         </div>
                         <div class="col-md-1">
-                            <base-button
-                                btnLabel="Apply"
-                                btnType="submit"
-                                btnVariant="primary"
-                            ></base-button>
+                            <div class="form-group">
+                                <base-button
+                                    btnLabel="Apply"
+                                    btnType="submit"
+                                    btnVariant="primary"
+                                ></base-button>
+                            </div>
                         </div>
                     </div>
                 </div>

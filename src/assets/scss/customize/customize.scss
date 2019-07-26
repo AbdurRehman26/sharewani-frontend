@@ -414,6 +414,11 @@ a {
 .filter-section {
     margin-bottom: 14px;
     position: relative;
+
+    @include mobile {
+        margin-bottom: 20px;
+    }
+
     &.full-area {
         .row {
             margin-left: -10px;
@@ -435,6 +440,14 @@ a {
         font-size: 1.625rem;
         margin-top: 0;
         margin-bottom: 20px;
+
+        @include tablet {
+            font-size: 20px;
+        }
+
+        @include mobile {
+            font-size: 18px;
+        }
     }
 
     a {
@@ -480,6 +493,26 @@ a {
     &.sub-filter {
         h2 {
             margin: 44px 0 34px 0;
+        }
+    }
+
+    .form-group {
+        @include mobile {
+            margin-bottom: 12px;
+        }
+    }
+
+    .col-md-9 {
+        @include tablet {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+
+        .btn-section {
+            @include mobile {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
         }
     }
 }
@@ -1824,6 +1857,11 @@ a {
             flex: 0 0 90%;
             max-width: 90%;
         }
+
+        @include mobile {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
     }
 
     .col-md-9 {
@@ -1831,12 +1869,24 @@ a {
             flex: 0 0 100%;
             max-width: 100%;
         }
+
+        .col-md-3 {
+            @include mobile {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+        }
     }
 
     .col-md-1 {
         @include tablet {
             flex: 0 0 10%;
             max-width: 10%;
+        }
+
+        @include mobile {
+            flex: 0 0 100%;
+            max-width: 100%;
         }
     }
 }
@@ -1897,5 +1947,45 @@ a {
         right: -74px;
         flex: 0 0 45%;
         max-width: 45%;
+    }
+
+    @include mobile {
+        position: static;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+.activity-dashboard-page,
+.customer-statistics-page {
+    .filter-section {
+        .title-detail,
+        .col-md-8 {
+            @include tablet {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+    }
+
+    .stastics-section {
+        .col-md-3 {
+            @include tablet {
+                flex: 0 0 33.33333%;
+                max-width: 33.33333%;
+            }
+
+            @include mobile {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+        }
+    }
+
+    .col-md-6 {
+        @include tablet {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
     }
 }

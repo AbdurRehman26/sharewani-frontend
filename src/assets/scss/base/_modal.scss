@@ -24,6 +24,10 @@
                 width: 100%;
                 border-bottom: 1px $border-opacity solid !important;
 
+                @include mobile {
+                    height: 54px;
+                }
+
                 .modal-title {
                     font-size: $modal-title-font-size;
                     font-family: $font_medium;
@@ -62,6 +66,10 @@
                 p {
                     line-height: 21px;
                     margin-bottom: 24px;
+
+                    @include mobile {
+                        font-size: 14px !important;
+                    }
                 }
             }
 

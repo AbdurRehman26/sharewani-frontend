@@ -1,8 +1,8 @@
 <template>
-    <div class="wrap-content">
+    <div class="wrap-content activity-dashboard-page">
         <div class="filter-section row-min-space">
             <div class="row">
-                <div class="col-md-4 filter-title-section">
+                <div class="col-md-4 title-detail filter-title-section">
                     <h2>Activity Dashboard</h2>
                 </div>
                 <div class="col-md-8">
@@ -32,19 +32,23 @@
                         <div class="col-md-4 col-xs-12">
                             <div class="row">
                                 <div class="col-xs-12 col-md-5">
-                                    <base-button
-                                        btnLabel="Apply"
-                                        btnType="submit"
-                                        btnVariant="primary"
-                                    ></base-button>
+                                    <div class="form-group">
+                                        <base-button
+                                            btnLabel="Apply"
+                                            btnType="submit"
+                                            btnVariant="primary"
+                                        ></base-button>
+                                    </div>
                                 </div>
                                 <div class="col-xs-12 col-md-7">
-                                    <base-button
-                                        v-b-modal.export-report-popup
-                                        btnLabel="Export"
-                                        btnType="submit"
-                                        btnVariant="secondary"
-                                    ></base-button>
+                                    <div class="form-group">
+                                        <base-button
+                                            v-b-modal.export-report-popup
+                                            btnLabel="Export"
+                                            btnType="submit"
+                                            btnVariant="secondary"
+                                        ></base-button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -54,7 +58,7 @@
         </div>
         <div class="row">
             <div class="col-md-12">
-                <div class="row">
+                <div class="row stastics-section">
                     <div
                         class="col-xs-12 col-md-3"
                         v-for="(list, index) in userListing"
