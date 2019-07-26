@@ -1,7 +1,11 @@
 <template>
     <div class="customer-profile">
         <div class="content-area">
-            <base-header :menuListing="menuListing" stepStyle></base-header>
+            <base-header
+                @sidemenu="$emit('responsiveSideBar')"
+                :menuListing="menuListing"
+                stepStyle
+            ></base-header>
             <div class="right-panel">
                 <div class="wrap-content customer-section">
                     <div class="filter-section">

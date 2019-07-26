@@ -4,8 +4,11 @@
             class="main-content"
             :class="$route.meta.noSidebar == true ? 'content-full-width' : ''"
         >
-            <base-sidebar v-if="!$route.meta.noSidebar"></base-sidebar>
-            <router-view />
+            <base-sidebar
+                :class="sidebarResponsive == true ? 'show-sidebar' : ''"
+                v-if="!$route.meta.noSidebar"
+            ></base-sidebar>
+            <router-view @responsiveSideBar="sidebarResponsive ^= true" />
         </div>
     </div>
 </template>
@@ -38,7 +41,9 @@ export default {
         |--------------------------------------------------------------------------
         */
     data() {
-        return {}
+        return {
+            sidebarResponsive: false,
+        }
     }, // End of Component > data
 
     /*
@@ -53,7 +58,11 @@ export default {
         | Component > methods
         |--------------------------------------------------------------------------
         */
-    methods: {}, // End of Component > methods
+    methods: {
+        updateStatus() {
+            alert(1)
+        },
+    }, // End of Component > methods
 
     /*
         |--------------------------------------------------------------------------

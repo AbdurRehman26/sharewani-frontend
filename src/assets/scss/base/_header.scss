@@ -179,6 +179,9 @@ header {
     .header-menu {
         &.navigation {
             width: calc(100% - 190px);
+            @include tabletL {
+                padding-left: 20px;
+            }
         }
     }
     .profile-popover {
