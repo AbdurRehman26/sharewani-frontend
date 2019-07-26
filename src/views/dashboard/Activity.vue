@@ -31,7 +31,7 @@
                         </div>
                         <div class="col-md-4 col-xs-12">
                             <div class="row">
-                                <div class="col-xs-12 col-md-5">
+                                <div class="col-xs-12 col-md-5 btn-section">
                                     <div class="form-group">
                                         <base-button
                                             btnLabel="Apply"
@@ -40,7 +40,7 @@
                                         ></base-button>
                                     </div>
                                 </div>
-                                <div class="col-xs-12 col-md-7">
+                                <div class="col-xs-12 col-md-7 btn-section">
                                     <div class="form-group">
                                         <base-button
                                             v-b-modal.export-report-popup

@@ -14,6 +14,11 @@
         box-shadow: none !important;
         background-color: $white;
         z-index: 9 !important;
+
+        @include mobile {
+            height: 40px;
+        }
+
         &:after {
             content: '';
             position: absolute;
@@ -33,6 +38,11 @@
             padding-top: 2px;
             font-family: $font_regular;
             font-size: $font-size-base;
+
+            @include mobile {
+                font-size: 12px;
+                padding-top: 1px;
+            }
         }
 
         &.active {

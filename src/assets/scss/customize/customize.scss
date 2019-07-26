@@ -507,12 +507,12 @@ a {
             flex: 0 0 100%;
             max-width: 100%;
         }
+    }
 
-        .btn-section {
-            @include mobile {
-                flex: 0 0 50%;
-                max-width: 50%;
-            }
+    .btn-section {
+        @include mobile {
+            flex: 0 0 50%;
+            max-width: 50%;
         }
     }
 }
