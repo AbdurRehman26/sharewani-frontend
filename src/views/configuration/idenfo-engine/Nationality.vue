@@ -27,6 +27,7 @@
                                         btnLabel="+ Add Nationality"
                                         btnType="button"
                                         btnVariant="secondary"
+                                        class="secondary-add-btn"
                                     ></base-button>
                                 </div>
                             </div>

@@ -27,6 +27,7 @@
                                         btnLabel="+ Add Work Type"
                                         btnType="button"
                                         btnVariant="secondary"
+                                        class="secondary-add-btn"
                                     ></base-button>
                                 </div>
                             </div>
