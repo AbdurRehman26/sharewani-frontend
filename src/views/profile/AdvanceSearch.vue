@@ -271,17 +271,17 @@ export default {
             },
 
             workType: [
-                { value: null, text: 'Select Work Type' },
+                { value: null, text: 'Select Work Type', disabled: true },
                 'Self Employed',
                 'Worker',
             ],
             industry: [
-                { value: null, text: 'Select Industry' },
+                { value: null, text: 'Select Industry', disabled: true },
                 'Automotive Industry',
                 'Textile Industry',
             ],
             nationality: [
-                { value: null, text: 'Select Nationality' },
+                { value: null, text: 'Select Nationality', disabled: true },
                 'Pakistani',
                 'Indian',
                 'British',
@@ -292,7 +292,11 @@ export default {
             ],
 
             residence: [
-                { value: null, text: 'Select Country of Residence' },
+                {
+                    value: null,
+                    text: 'Select Country of Residence',
+                    disabled: true,
+                },
                 'United Kingdom',
                 'Pakistan',
                 'Indian',

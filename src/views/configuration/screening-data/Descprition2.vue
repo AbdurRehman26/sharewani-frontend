@@ -24,7 +24,7 @@
             </div>
         </div>
 
-        <div class="table-section table-min-width">
+        <div class="table-section">
             <b-table :items="items" :fields="fields">
                 <template slot="status" slot-scope="data">
                     <base-status :statusType="data.value"></base-status>

@@ -54,7 +54,7 @@
                                         type="text"
                                         v-model="form.high"
                                         required
-                                        placeholder="Enter high scale"
+                                        placeholder="High scale"
                                     ></b-form-input>
                                 </b-form-group>
                             </div>
@@ -70,7 +70,7 @@
                                         type="text"
                                         v-model="form.medium"
                                         required
-                                        placeholder="Enter medium scale"
+                                        placeholder="Medium scale"
                                     ></b-form-input>
                                 </b-form-group>
                             </div>
@@ -85,7 +85,7 @@
                                         type="text"
                                         v-model="form.low"
                                         required
-                                        placeholder="Enter low scale"
+                                        placeholder="Low scale"
                                     ></b-form-input>
                                 </b-form-group>
                             </div>

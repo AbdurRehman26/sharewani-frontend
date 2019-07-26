@@ -7,7 +7,7 @@
                 </div>
             </div>
         </div>
-        <div class="table-section table-min-width">
+        <div class="table-section">
             <b-table :items="items" :fields="fields">
                 <template slot="scorescale" slot-scope="data">
                     <a href="javascript:void(0);" class="work-impact">
