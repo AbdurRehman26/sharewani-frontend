@@ -1,7 +1,7 @@
 <template>
     <div class="table-pagination">
         <div class="row">
-            <div class="col-lg-6">
+            <div class="col-md-7">
                 <div class="record-shown">
                     <b-form-group>
                         <b-form-select
@@ -15,7 +15,7 @@
                     <p>Showing 1 to 10 of 18 records</p>
                 </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-md-5">
                 <div class="next-previous-pagination">
                     <b-button type="submit" class="disable" variant="primary"
                         >PREVIOUS</b-button
