@@ -70,6 +70,7 @@ export default {
     },
     data() {
         return {
+            status: null,
             form: {
                 kycUpdate: '',
                 comments: '',

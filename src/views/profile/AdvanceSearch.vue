@@ -242,7 +242,8 @@ export default {
     data() {
         return {
             show: true,
-
+            channel: null,
+            gender: null,
             form: {
                 firstName: '',
                 middleName: '',
