@@ -26,6 +26,9 @@
     @include mobile {
         padding-top: 60px;
     }
+    @include tablet {
+        padding: 29px 20px;
+    }
 }
 
 span {
@@ -410,6 +413,7 @@ a {
 
 .filter-section {
     margin-bottom: 14px;
+    position: relative;
     &.full-area {
         .row {
             margin-left: -10px;
@@ -1814,6 +1818,27 @@ a {
         padding-left: 10px;
         padding-right: 10px;
     }
+
+    .col-md-11 {
+        @include tablet {
+            flex: 0 0 90%;
+            max-width: 90%;
+        }
+    }
+
+    .col-md-9 {
+        @include tablet {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+
+    .col-md-1 {
+        @include tablet {
+            flex: 0 0 10%;
+            max-width: 10%;
+        }
+    }
 }
 
 .profile-filter {
@@ -1861,5 +1886,16 @@ a {
                 color: $body-color !important;
             }
         }
+    }
+}
+
+.tabs-bar {
+    @include tablet {
+        position: absolute;
+        top: auto;
+        bottom: 60px;
+        right: -74px;
+        flex: 0 0 45%;
+        max-width: 45%;
     }
 }

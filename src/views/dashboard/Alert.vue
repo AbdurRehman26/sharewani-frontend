@@ -9,7 +9,7 @@
                     <div class="row">
                         <div class="col-md-11">
                             <div class="row">
-                                <div class="col-xs-12 col-md-3">
+                                <div class="col-xs-12 col-md-3 tabs-bar">
                                     <b-form-group>
                                         <b-form-radio-group
                                             v-model="selected"
