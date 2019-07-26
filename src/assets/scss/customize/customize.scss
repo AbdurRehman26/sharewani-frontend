@@ -383,7 +383,11 @@ a {
                     padding-left: 0px;
                 }
             }
-            &.active {
+        }
+    }
+    .active {
+        .card {
+            &.custom-card {
                 background-color: #fff;
                 p {
                     &.caption-description {
