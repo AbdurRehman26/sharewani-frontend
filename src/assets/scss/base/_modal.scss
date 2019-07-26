@@ -90,6 +90,12 @@
             padding-left: 15px;
         }
     }
+    @include mobile {
+        .modal-header {
+            position: relative;
+            transform: translate(0);
+        }
+    }
 }
 
 .modal-backdrop {
