@@ -89,10 +89,11 @@
         li {
             top: -7px;
             margin-right: 60px;
+
             position: relative;
             &:after {
                 content: '';
-                width: 100%;
+                width: 119px;
                 position: absolute;
                 margin: auto;
                 top: -9px;
@@ -102,14 +103,26 @@
                 left: 70%;
                 border-radius: 6px;
             }
+
+            &:nth-child(1) {
+                &:after {
+                    width: 128px;
+                }
+            }
+            &:nth-child(4) {
+                &:after {
+                    width: 100px;
+                }
+            }
             a {
                 padding: 10px 12px;
                 pointer-events: none;
                 span {
                     font-size: 0.625rem;
                     &.point {
-                        width: 21px;
-                        height: 21px;
+                        width: 24px;
+                        height: 24px;
+                        top: 4px;
                         display: block;
                         border-radius: 31px;
                         margin: auto;
@@ -120,7 +133,8 @@
                         }
                     }
                     &:not(.point) {
-                        top: 11px;
+                        top: 9px;
+                        text-transform: uppercase;
                     }
                 }
                 &.router-link-active {
@@ -383,6 +397,6 @@
 
 .step-menu-header {
     .profile-main {
-        top: -10px;
+        top: -14px;
     }
 }

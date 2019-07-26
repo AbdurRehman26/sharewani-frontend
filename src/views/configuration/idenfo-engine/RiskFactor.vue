@@ -10,7 +10,7 @@
         <div class="table-section table-min-width">
             <b-table :items="items" :fields="fields">
                 <template slot="scorescale" slot-scope="data">
-                    <div class="work-impact">
+                    <a href="javascript:void(0);" class="work-impact">
                         <span>{{ data.value }}</span>
                         <i class="icon-caret-right"></i>
                         <div class="custom-popover small">
@@ -29,7 +29,7 @@
                                 </li>
                             </ul>
                         </div>
-                    </div>
+                    </a>
                 </template>
                 <template slot="action" slot-scope="data">
                     <div class="action-review">

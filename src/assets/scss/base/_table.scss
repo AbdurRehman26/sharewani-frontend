@@ -75,7 +75,15 @@
                 i {
                     vertical-align: middle;
                 }
+
+                &.work-impact {
+                    color: $nav-color;
+                    &:hover {
+                        color: $secondary;
+                    }
+                }
             }
+
             &.two-list {
                 width: 200px;
             }
