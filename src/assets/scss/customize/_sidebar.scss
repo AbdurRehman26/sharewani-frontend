@@ -12,7 +12,7 @@ body {
     height: 100%;
     position: fixed;
 
-    @include tablet {
+    @include tabletL {
         display: none;
     }
 
@@ -137,4 +137,8 @@ body {
 .content-area {
     width: calc(100% - 252px);
     margin-left: auto;
+
+    @include tabletL {
+        width: 100%;
+    }
 }
