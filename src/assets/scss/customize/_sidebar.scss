@@ -13,7 +13,13 @@ body {
     position: fixed;
 
     @include tabletL {
-        display: none;
+        transition: 0.3s ease-in-out;
+        transform: translate(-100%);
+        z-index: 99;
+        padding-top: 53px;
+        &.show-sidebar {
+            transform: translate(0%);
+        }
     }
 
     .sidebar-listing {
@@ -140,5 +146,28 @@ body {
 
     @include tabletL {
         width: 100%;
+    }
+}
+
+.responsive-sidebar-menu {
+    display: none;
+    @include tabletL {
+        position: fixed;
+        top: 0px;
+        padding: 7px 10px;
+        background-color: $primary;
+        z-index: 999;
+        height: 52px;
+        display: flex;
+        align-self: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+    span {
+        height: 2px;
+        width: 24px;
+        display: block;
+        margin-bottom: 5px;
+        background-color: #fff;
     }
 }

@@ -1,6 +1,16 @@
 <template>
     <div>
         <div class="header-fix"></div>
+        <div @click="$emit('sidemenu')" class="responsive-sidebar-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="responsive-header-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
         <header :class="stepStyle == true ? 'step-menu-header' : ''">
             <div
                 class="header-menu navigation"
