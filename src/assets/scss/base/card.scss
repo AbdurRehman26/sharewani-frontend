@@ -19,4 +19,8 @@
         border-radius: 8px;
         padding: 22px;
     }
+
+    @include tablet {
+        padding: 30px 20px;
+    }
 }

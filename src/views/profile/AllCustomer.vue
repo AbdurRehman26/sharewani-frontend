@@ -23,20 +23,24 @@
                                 <div class="col-md-6">
                                     <base-search></base-search>
                                 </div>
-                                <div class="col-md-3 text-right">
-                                    <base-button
-                                        btnLabel="Apply"
-                                        btnType="submit"
-                                        btnVariant="primary"
-                                    ></base-button>
+                                <div class="col-md-3 btn-section text-right">
+                                    <b-form-group>
+                                        <base-button
+                                            btnLabel="Apply"
+                                            btnType="submit"
+                                            btnVariant="primary"
+                                        ></base-button>
+                                    </b-form-group>
                                 </div>
-                                <div class="col-md-3 text-right">
-                                    <base-button
-                                        v-b-modal.export-process-popup
-                                        btnLabel="Export"
-                                        btnType="button"
-                                        btnVariant="secondary"
-                                    ></base-button>
+                                <div class="col-md-3 btn-section text-right">
+                                    <b-form-group>
+                                        <base-button
+                                            v-b-modal.export-process-popup
+                                            btnLabel="Export"
+                                            btnType="button"
+                                            btnVariant="secondary"
+                                        ></base-button>
+                                    </b-form-group>
                                 </div>
                             </div>
                         </div>
