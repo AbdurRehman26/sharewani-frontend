@@ -50,7 +50,7 @@
                     </div>
                     <div class="profile-detail" @click="open">
                         <h4>Sammy Lawson</h4>
-                        <p>Admin</p>
+                        <p>Super Admin</p>
                         <i class="icon-caret-down"></i>
                     </div>
                     <div

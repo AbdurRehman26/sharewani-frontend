@@ -192,7 +192,7 @@ header {
                 border-bottom: 0.5px solid #cbcbd7;
                 transition: 0.3s ease-in-out;
                 a {
-                    padding: 11px 11px;
+                    padding: 11px 16px;
                     display: block;
                     text-decoration: none;
                     font-size: 0.8125rem;
@@ -202,11 +202,11 @@ header {
                         margin-right: 10px;
                         font-size: 1.125rem;
                         position: absolute;
-                        left: 10px;
+                        left: 16px;
                         bottom: 10px;
                     }
                     span {
-                        padding-left: 38px;
+                        padding-left: 33px;
                     }
                 }
                 &:hover,

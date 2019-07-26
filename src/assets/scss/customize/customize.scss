@@ -138,6 +138,7 @@ a {
     h3 {
         font-size: 1.125rem;
         margin-bottom: 20px;
+        font-family: $font_medium;
     }
     .fields-area {
         border-bottom: 1px solid $grey-dark;
@@ -681,7 +682,7 @@ a {
         position: static;
         width: 110px;
         &.status-view {
-            margin-right: 11px;
+            margin-right: 8px;
         }
     }
 }

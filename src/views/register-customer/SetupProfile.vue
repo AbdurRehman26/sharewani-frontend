@@ -196,7 +196,7 @@
                                 label-for="phonenumber"
                             >
                                 <div class="row">
-                                    <div class="col-md-4">
+                                    <div class="col-md-5">
                                         <b-form-input
                                             id="countrycode"
                                             type="number"
@@ -205,7 +205,7 @@
                                             placeholder="Country code"
                                         ></b-form-input>
                                     </div>
-                                    <div class="col-md-8">
+                                    <div class="col-md-7">
                                         <b-form-input
                                             id="phonenumber"
                                             type="number"

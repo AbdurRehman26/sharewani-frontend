@@ -239,7 +239,7 @@ export default {
                         },
                         {
                             title: 'Record Last Updated:',
-                            detail: 'United Kingdom',
+                            detail: 'June 19, 2019',
                         },
                     ],
                 },
@@ -628,7 +628,7 @@ export default {
                         },
                         {
                             headings: 'PEP Hit',
-                            icon: 'icon-pep',
+                            icon: 'icon-tomb',
                             actions: 'Rejected',
                         },
                     ],

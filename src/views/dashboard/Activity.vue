@@ -91,7 +91,7 @@
                         <div class="card dashboard-card  sm-radius">
                             <div class="dashboard-charts">
                                 <h2 class="heading">
-                                    KYC Alters by Screening Type
+                                    KYC Alerts by Screening Type
                                 </h2>
                                 <!-- dashboard alerts report -->
                                 <div
