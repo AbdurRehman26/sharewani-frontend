@@ -1474,6 +1474,12 @@ a {
             color: $grey-lite;
         }
     }
+
+    .add-more-section {
+        .form-group {
+            padding: 0 4px;
+        }
+    }
 }
 
 .row-min-space {

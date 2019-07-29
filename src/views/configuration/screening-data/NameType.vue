@@ -41,6 +41,7 @@
                 </template>
             </b-table>
         </div>
+
         <modify-status-popup
             modalTitle="Modify Name Type Status"
             modalLabel="Primary Name (Person)"
@@ -50,6 +51,7 @@
 
 <script>
 import { mapGetters } from 'vuex'
+
 import modifyStatusPopup from '@/components/popups/ModifyStatusPopup.vue'
 export default {
     components: {

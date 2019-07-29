@@ -1616,6 +1616,97 @@ export default {
                         ],
                         action: 'active',
                     },
+                    {
+                        descriptionid: 4,
+                        nametype: 'Maiden Name',
+                        recordtype: 'Person',
+                        status: [
+                            {
+                                cssClass: 'approved',
+                                icon: 'icon-check',
+                                label: 'Active',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        descriptionid: 5,
+                        nametype: 'Maiden Name',
+                        recordtype: 'Person',
+                        status: [
+                            {
+                                cssClass: 'approved',
+                                icon: 'icon-check',
+                                label: 'Active',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        descriptionid: 6,
+                        nametype: 'Maiden Name',
+                        recordtype: 'Person',
+                        status: [
+                            {
+                                cssClass: 'approved',
+                                icon: 'icon-check',
+                                label: 'Active',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        descriptionid: 7,
+                        nametype: 'Maiden Name',
+                        recordtype: 'Person',
+                        status: [
+                            {
+                                cssClass: 'approved',
+                                icon: 'icon-check',
+                                label: 'Active',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        descriptionid: 8,
+                        nametype: 'Maiden Name',
+                        recordtype: 'Person',
+                        status: [
+                            {
+                                cssClass: 'approved',
+                                icon: 'icon-check',
+                                label: 'Active',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        descriptionid: 9,
+                        nametype: 'Maiden Name',
+                        recordtype: 'Person',
+                        status: [
+                            {
+                                cssClass: 'approved',
+                                icon: 'icon-check',
+                                label: 'Active',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        descriptionid: 10,
+                        nametype: 'Maiden Name',
+                        recordtype: 'Person',
+                        status: [
+                            {
+                                cssClass: 'approved',
+                                icon: 'icon-check',
+                                label: 'Active',
+                            },
+                        ],
+                        action: 'active',
+                    },
                 ],
             },
 

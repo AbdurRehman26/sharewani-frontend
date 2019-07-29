@@ -41,6 +41,7 @@
                 </template>
             </b-table>
         </div>
+        <pagination></pagination>
         <modify-status-popup
             modalTitle="Modify Gender Status"
             modalLabel="Male"
@@ -51,9 +52,11 @@
 <script>
 import { mapGetters } from 'vuex'
 import modifyStatusPopup from '@/components/popups/ModifyStatusPopup.vue'
+import pagination from '@/components/Pagination.vue'
 export default {
     components: {
         modifyStatusPopup,
+        pagination,
     },
 
     /*

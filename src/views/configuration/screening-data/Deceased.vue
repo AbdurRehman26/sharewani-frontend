@@ -41,6 +41,7 @@
                 </template>
             </b-table>
         </div>
+        <pagination></pagination>
         <modify-status-popup
             modalTitle="Modify Deceased Status"
             modalLabel="No"
@@ -50,10 +51,12 @@
 
 <script>
 import { mapGetters } from 'vuex'
+import pagination from '@/components/Pagination.vue'
 import modifyStatusPopup from '@/components/popups/ModifyStatusPopup.vue'
 export default {
     components: {
         modifyStatusPopup,
+        pagination,
     },
 
     /*
