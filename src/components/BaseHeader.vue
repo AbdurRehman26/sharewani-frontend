@@ -1,6 +1,8 @@
 <template>
     <div>
-        <div class="header-fix"></div>
+        <div class="header-fix">
+            <base-logo></base-logo>
+        </div>
         <div @click="$emit('sidemenu')" class="responsive-sidebar-menu">
             <span></span>
             <span></span>
@@ -29,6 +31,7 @@
                 </div>
                 <ul class="menu-list">
                     <li
+                        @click="mainMain = false"
                         v-for="(list, index) in menuListing"
                         :key="index"
                         :class="[
@@ -75,7 +78,7 @@
                     >
                         <div class="nav-dropdown">
                             <ul>
-                                <li>
+                                <li @click="mainMain = false">
                                     <a
                                         href="javascript:void(0);"
                                         v-b-modal.update-profile-popup
@@ -84,7 +87,7 @@
                                         <span>Update Profile</span>
                                     </a>
                                 </li>
-                                <li>
+                                <li @click="mainMain = false">
                                     <a
                                         href="javascript:void(0);"
                                         v-b-modal.change-password-popup
@@ -93,7 +96,7 @@
                                         <span>Change Password</span>
                                     </a>
                                 </li>
-                                <li>
+                                <li @click="mainMain = false">
                                     <a href="/">
                                         <i class="icon-sign-out"></i>
                                         <span>Sign Out</span>

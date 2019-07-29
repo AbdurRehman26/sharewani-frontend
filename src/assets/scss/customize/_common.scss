@@ -477,4 +477,11 @@ $sides: (top, bottom, left, right); // Leave this variable alone
             left: 1px;
         }
     }
+    @include mobile {
+        height: 34px;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
 }

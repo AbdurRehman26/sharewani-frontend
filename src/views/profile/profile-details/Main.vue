@@ -14,7 +14,9 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="row">
-                                    <div class="col-md-3 text-right">
+                                    <div
+                                        class="col-md-3 text-right go-back-profile"
+                                    >
                                         <router-link
                                             to="/customer-profiles"
                                             class="btn btn-link go-back-btn"

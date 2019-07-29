@@ -3,7 +3,11 @@
         <div class="sidebar-listing">
             <div class="country-selection">
                 <ul>
-                    <li v-for="(list, index) in countryListing" :key="index">
+                    <li
+                        @click="$emit('onClick')"
+                        v-for="(list, index) in countryListing"
+                        :key="index"
+                    >
                         <router-link
                             :to="list.anchorLink"
                             :class="
@@ -25,6 +29,7 @@
                 <div class="navigation">
                     <ul>
                         <li
+                            @click="$emit('onClick')"
                             v-for="(list, index) in sidelinksListing"
                             :key="index"
                         >

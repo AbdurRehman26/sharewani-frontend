@@ -7,6 +7,7 @@
             <base-sidebar
                 :class="sidebarResponsive == true ? 'show-sidebar' : ''"
                 v-if="!$route.meta.noSidebar"
+                @onClick="sidebarResponsive = false"
             ></base-sidebar>
             <router-view @responsiveSideBar="sidebarResponsive ^= true" />
         </div>
@@ -58,11 +59,7 @@ export default {
         | Component > methods
         |--------------------------------------------------------------------------
         */
-    methods: {
-        updateStatus() {
-            alert(1)
-        },
-    }, // End of Component > methods
+    methods: {}, // End of Component > methods
 
     /*
         |--------------------------------------------------------------------------

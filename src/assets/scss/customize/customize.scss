@@ -54,6 +54,9 @@ span {
         line-height: 20px;
         margin-bottom: 20px;
     }
+    @include mobile {
+        text-align: center;
+    }
 }
 
 .link-action {
@@ -77,6 +80,23 @@ span {
             position: absolute;
             right: 0;
             bottom: -11px;
+        }
+    }
+    @include mobile {
+        padding-bottom: 25px;
+        flex-direction: column;
+        .download-current-file {
+            button {
+                position: relative;
+                right: 0;
+                bottom: 0;
+                text-align: center;
+                display: block;
+                margin: auto;
+            }
+        }
+        .file-last-update {
+            text-align: center;
         }
     }
 }
@@ -417,6 +437,9 @@ a {
 
     @include mobile {
         margin-bottom: 20px;
+        button {
+            margin-bottom: 10px;
+        }
     }
 
     &.full-area {
@@ -656,6 +679,11 @@ a {
         width: 100%;
         border-radius: 8px;
         background-size: cover;
+        @include mobile {
+            img {
+                margin: auto;
+            }
+        }
     }
     ul {
         list-style-type: none;
@@ -704,6 +732,9 @@ a {
                                     text-decoration: underline;
                                 }
                             }
+                        }
+                        @include mobile {
+                            flex: 0 0 50%;
                         }
                     }
                 }
@@ -816,6 +847,12 @@ a {
                     padding-right: 10px;
                 }
             }
+        }
+    }
+    @include mobile {
+        width: 850px;
+        th {
+            width: 300px;
         }
     }
 }
@@ -1304,6 +1341,9 @@ a {
             font-size: 0.875rem !important;
             margin-bottom: 0;
         }
+    }
+    @include mobile {
+        margin-bottom: 20px;
     }
 }
 
@@ -1895,6 +1935,24 @@ a {
     .btn-link {
         padding: 7px 6px;
     }
+    @include mobile {
+        position: relative;
+        .col-md-6 {
+            position: unset !important;
+        }
+        .go-back-profile {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        .col-md-4 {
+            .btn-link {
+                display: block;
+                margin: auto;
+                margin-bottom: 7px;
+            }
+        }
+    }
 }
 
 .customers-info-section {
@@ -1905,6 +1963,16 @@ a {
     .col-md-9 {
         flex: 0 0 80%;
         max-width: 80%;
+    }
+    @include mobile {
+        .col-md-3 {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+        .col-md-9 {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
     }
 }
 

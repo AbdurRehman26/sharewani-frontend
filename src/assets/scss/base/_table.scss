@@ -47,6 +47,11 @@
             &:last-child {
                 padding-right: 25px;
             }
+            &.single-list {
+                @include mobile {
+                    width: 100px;
+                }
+            }
         }
         &.hidden_header {
             display: none;
@@ -86,9 +91,15 @@
 
             &.two-list {
                 width: 200px;
+                @include mobile {
+                    width: 450px;
+                }
             }
             &.single-list {
                 width: 150px;
+                @include mobile {
+                    width: 100px;
+                }
             }
             .indecation {
                 position: absolute;
@@ -177,6 +188,11 @@
                         display: inline-block;
                         margin: 0;
                         vertical-align: middle;
+                    }
+                }
+                &:last-child {
+                    a {
+                        margin-right: 0px;
                     }
                 }
             }

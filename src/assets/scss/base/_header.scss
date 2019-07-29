@@ -399,11 +399,30 @@ header {
 
 .header-fix {
     height: 52px;
+    .logo {
+        display: none;
+    }
     @include mobile {
         position: fixed;
-        height: 43px;
+        height: 42px;
         width: 100%;
-        z-index: 99;
+        z-index: 999;
         background-color: #fff;
+        .logo {
+            display: block;
+            .inverse {
+                display: none;
+            }
+            .main {
+                display: block !important;
+                margin: auto;
+                max-width: 120px;
+                position: absolute;
+                right: 0;
+                left: 0;
+                top: 0;
+                bottom: 0;
+            }
+        }
     }
 }
