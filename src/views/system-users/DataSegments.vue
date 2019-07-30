@@ -74,6 +74,7 @@
                 </template>
             </b-table>
         </div>
+        <pagination totalRecords="Showing 1 to 4 of 4 records"></pagination>
         <add-data-segment-popup></add-data-segment-popup>
         <archive-popup
             title="Archive Data Segment"
@@ -84,12 +85,14 @@
 
 <script>
 import { mapGetters } from 'vuex'
+import pagination from '@/components/Pagination.vue'
 import addDataSegmentPopup from '@/components/popups/AddDataSegmentPopup.vue'
 import archivePopup from '@/components/popups/ArchivePopup.vue'
 export default {
     components: {
         addDataSegmentPopup,
         archivePopup,
+        pagination,
     },
 
     /*

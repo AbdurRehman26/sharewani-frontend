@@ -61,7 +61,9 @@
                 </template>
             </b-table>
         </div>
+        <pagination totalRecords="Showing 1 to 10 of 220 records"></pagination>
         <add-nationality-popup></add-nationality-popup>
+
         <archive-popup
             title="Archive Nationality Factor"
             description="Are you sure you want to archive this nationality factor? You can re-activate it later."
@@ -71,6 +73,7 @@
 
 <script>
 import { mapGetters } from 'vuex'
+import pagination from '@/components/Pagination.vue'
 import addNationalityPopup from '@/components/popups/AddNationalityPopup.vue'
 import archivePopup from '@/components/popups/ArchivePopup.vue'
 
@@ -78,6 +81,7 @@ export default {
     components: {
         addNationalityPopup,
         archivePopup,
+        pagination,
     },
 
     /*

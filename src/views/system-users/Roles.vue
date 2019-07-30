@@ -73,6 +73,7 @@
                 </template>
             </b-table>
         </div>
+        <pagination totalRecords="Showing 1 to 6 of 6 records"></pagination>
         <add-role-popup></add-role-popup>
         <archive-popup
             title="Archive Role"
@@ -84,12 +85,13 @@
 <script>
 import addRolePopup from '@/components/popups/AddRolePopup.vue'
 import archivePopup from '@/components/popups/ArchivePopup.vue'
-
+import pagination from '@/components/Pagination.vue'
 import { mapGetters } from 'vuex'
 export default {
     components: {
         addRolePopup,
         archivePopup,
+        pagination,
     },
 
     /*

@@ -146,7 +146,7 @@
                 </template>
             </b-table>
         </div>
-        <pagination></pagination>
+        <pagination totalRecords="Showing 1 to 10 of 32 records"></pagination>
         <add-system-user-popup></add-system-user-popup>
         <archive-popup
             title="Archive User"

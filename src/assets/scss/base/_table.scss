@@ -144,7 +144,7 @@
                     color: $grey-lite;
                     text-decoration: none;
                     &:last-child {
-                        margin-right: 15px;
+                        margin-right: 10px;
                     }
                     &:hover,
                     &:focus {
@@ -207,7 +207,7 @@
                         bottom: 28px !important;
                         &:before {
                             top: auto;
-                            bottom: -12px !important;
+                            bottom: -10px !important;
                             transform: rotate(180deg);
                         }
                     }
@@ -280,7 +280,7 @@
 }
 
 .table-pagination {
-    padding-top: 15px;
+    padding-top: 35px;
     .record-shown {
         display: flex;
         align-items: center;

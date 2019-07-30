@@ -180,6 +180,7 @@ export default {
                     {
                         key: 'dialingcode',
                         label: 'Dialing Code',
+                        class: 'text-center',
                         sortable: true,
                     },
                     {
@@ -522,30 +523,6 @@ export default {
                 items: [
                     {
                         productCode: 1501,
-                        productIndustry: 'Virtual Currency Wallet',
-                        rating: [
-                            {
-                                icon: 'icon-high-risk',
-                                label: 'High Risk',
-                                cssClass: 'high-risk',
-                            },
-                        ],
-                        action: 'active',
-                    },
-                    {
-                        productCode: 1502,
-                        productIndustry: 'Virtual Currency Exchange',
-                        rating: [
-                            {
-                                icon: 'icon-high-risk',
-                                label: 'High Risk',
-                                cssClass: 'high-risk',
-                            },
-                        ],
-                        action: 'active',
-                    },
-                    {
-                        productCode: 1503,
                         productIndustry: 'Current Account',
                         rating: [
                             {
@@ -557,7 +534,7 @@ export default {
                         action: 'active',
                     },
                     {
-                        productCode: 1504,
+                        productCode: 1502,
                         productIndustry: 'Saving Account',
                         rating: [
                             {
@@ -569,7 +546,7 @@ export default {
                         action: 'active',
                     },
                     {
-                        productCode: 1505,
+                        productCode: 1503,
                         productIndustry: 'Credit Card',
                         rating: [
                             {
@@ -581,7 +558,7 @@ export default {
                         action: 'active',
                     },
                     {
-                        productCode: 1506,
+                        productCode: 1504,
                         productIndustry: 'Short Term Loan',
                         rating: [
                             {
@@ -593,7 +570,7 @@ export default {
                         action: 'active',
                     },
                     {
-                        productCode: 1507,
+                        productCode: 1505,
                         productIndustry: 'Financial Investment',
                         rating: [
                             {
@@ -929,6 +906,27 @@ export default {
                         scorescale: 'View Score Scale',
                         action: 'active',
                     },
+                    {
+                        riskCode: 'Assets Under Management',
+                        weight: 0,
+                        overrideTo: 'Conditional',
+                        scorescale: 'View Score Scale',
+                        action: 'active',
+                    },
+                    {
+                        riskCode: 'Adverse Media',
+                        weight: 0,
+                        overrideTo: 'Conditional',
+                        scorescale: 'View Score Scale',
+                        action: 'active',
+                    },
+                    {
+                        riskCode: 'Suspicious Activity Reports',
+                        weight: 0,
+                        overrideTo: 'Conditional',
+                        scorescale: 'View Score Scale',
+                        action: 'active',
+                    },
                 ],
             },
 
@@ -1060,9 +1058,9 @@ export default {
                         pointscore: 'Document Verification Mismatch ',
                         rating: [
                             {
-                                icon: 'icon-high-risk',
-                                label: 'High Risk',
-                                cssClass: 'high-risk',
+                                icon: 'icon-trash',
+                                label: 'Inactive',
+                                cssClass: 'inapproved',
                             },
                         ],
                         reviewperiod: 'Rejected',
@@ -1103,6 +1101,19 @@ export default {
                                 icon: 'icon-sanction',
                                 label: 'Sanctioned',
                                 cssClass: 'sanctioned-risk',
+                            },
+                        ],
+                        reviewperiod: 'Rejected',
+                        alert: 'Yes',
+                        action: 'active',
+                    },
+                    {
+                        pointscore: 'Address in High Risk Country',
+                        rating: [
+                            {
+                                icon: 'icon-high-risk',
+                                label: 'High Risk',
+                                cssClass: 'high-risk',
                             },
                         ],
                         reviewperiod: 'Rejected',
@@ -1631,7 +1642,7 @@ export default {
                     },
                     {
                         descriptionid: 5,
-                        nametype: 'Maiden Name',
+                        nametype: 'Formerly Known As',
                         recordtype: 'Person',
                         status: [
                             {
@@ -1644,7 +1655,7 @@ export default {
                     },
                     {
                         descriptionid: 6,
-                        nametype: 'Maiden Name',
+                        nametype: 'Spelling Variation',
                         recordtype: 'Person',
                         status: [
                             {
@@ -1657,52 +1668,52 @@ export default {
                     },
                     {
                         descriptionid: 7,
-                        nametype: 'Maiden Name',
-                        recordtype: 'Person',
+                        nametype: 'Primary Name',
+                        recordtype: 'Entity',
                         status: [
                             {
-                                cssClass: 'approved',
-                                icon: 'icon-check',
-                                label: 'Active',
+                                cssClass: 'inapproved',
+                                icon: 'icon-wrong',
+                                label: 'Inactive',
                             },
                         ],
                         action: 'active',
                     },
                     {
                         descriptionid: 8,
-                        nametype: 'Maiden Name',
-                        recordtype: 'Person',
+                        nametype: 'Also Known As',
+                        recordtype: 'Entity',
                         status: [
                             {
-                                cssClass: 'approved',
-                                icon: 'icon-check',
-                                label: 'Active',
+                                cssClass: 'inapproved',
+                                icon: 'icon-wrong',
+                                label: 'Inactive',
                             },
                         ],
                         action: 'active',
                     },
                     {
                         descriptionid: 9,
-                        nametype: 'Maiden Name',
-                        recordtype: 'Person',
+                        nametype: 'Formerly Known As',
+                        recordtype: 'Entity',
                         status: [
                             {
-                                cssClass: 'approved',
-                                icon: 'icon-check',
-                                label: 'Active',
+                                cssClass: 'inapproved',
+                                icon: 'icon-wrong',
+                                label: 'Inactive',
                             },
                         ],
                         action: 'active',
                     },
                     {
                         descriptionid: 10,
-                        nametype: 'Maiden Name',
-                        recordtype: 'Person',
+                        nametype: 'Spelling Variation',
+                        recordtype: 'Entity',
                         status: [
                             {
-                                cssClass: 'approved',
-                                icon: 'icon-check',
-                                label: 'Active',
+                                cssClass: 'inapproved',
+                                icon: 'icon-wrong',
+                                label: 'Inactive',
                             },
                         ],
                         action: 'active',
@@ -1783,7 +1794,7 @@ export default {
                     {
                         descriptionid: 4,
                         description: 'Special Intrest Entity (SIE)',
-                        recordtype: 'Person',
+                        recordtype: 'Entity',
                         status: [
                             {
                                 cssClass: 'inapproved',
@@ -2182,9 +2193,9 @@ export default {
                         roleType: 'Previous Roles',
                         status: [
                             {
-                                cssClass: 'approved',
-                                icon: 'icon-check',
-                                label: 'Active',
+                                cssClass: 'inapproved',
+                                icon: 'icon-wrong',
+                                label: 'Inactive',
                             },
                         ],
                         action: 'active',

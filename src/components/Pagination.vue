@@ -1,7 +1,7 @@
 <template>
     <div class="table-pagination">
         <div class="row">
-            <div class="col-lg-6">
+            <div class="col-md-7">
                 <div class="record-shown">
                     <b-form-group>
                         <b-form-select
@@ -12,10 +12,10 @@
                             required
                         ></b-form-select>
                     </b-form-group>
-                    <p>Showing 1 to 10 of 18 records</p>
+                    <p>{{ totalRecords }}</p>
                 </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-md-5">
                 <div class="next-previous-pagination">
                     <b-button type="submit" class="disable" variant="primary"
                         >PREVIOUS</b-button
@@ -37,6 +37,10 @@ export default {
     |--------------------------------------------------------------------------
     */
     props: {
+        totalRecords: {
+            type: String,
+            default: null,
+        },
         /**
          * Value to determine the current compose mode which
          * varies between 'add' and 'edit'

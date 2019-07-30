@@ -23,7 +23,7 @@
                 </div>
             </div>
         </div>
-        <div class="table-section ">
+        <div class="table-section table-records">
             <b-table :items="items" :fields="fields">
                 <template slot="status" slot-scope="data">
                     <base-status :statusType="data.value"></base-status>
@@ -40,6 +40,7 @@
                 </template>
             </b-table>
         </div>
+        <pagination totalRecords="Showing 1 to 10 of 252 records"></pagination>
         <modify-status-popup
             modalTitle="Modify Country Status"
             modalLabel="Angola"
@@ -49,10 +50,12 @@
 
 <script>
 import { mapGetters } from 'vuex'
+import pagination from '@/components/Pagination.vue'
 import modifyStatusPopup from '@/components/popups/ModifyStatusPopup.vue'
 export default {
     components: {
         modifyStatusPopup,
+        pagination,
     },
 
     /*

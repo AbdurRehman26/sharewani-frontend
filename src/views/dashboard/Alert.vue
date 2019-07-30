@@ -191,7 +191,7 @@
                 </template>
             </b-table>
         </div>
-        <pagination></pagination>
+        <pagination totalRecords="Showing 1 to 10 of 18 records"></pagination>
         <initiate-review-popup></initiate-review-popup>
     </div>
 </template>
