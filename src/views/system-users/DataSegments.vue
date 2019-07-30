@@ -21,7 +21,7 @@
                                 </div>
                                 <div class="col-md-7 col-xs-12">
                                     <base-button
-                                        btnLabel="+ Add Branches"
+                                        btnLabel="+ Add Data Segment"
                                         btnType="submit"
                                         btnVariant="secondary btn-block"
                                         v-b-modal.add-data-segment-popup
