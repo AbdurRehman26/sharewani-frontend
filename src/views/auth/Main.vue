@@ -5,11 +5,17 @@
             <!-- router view -->
             <router-view></router-view>
             <!-- router view end-->
-            <div class="contact-link text-center">
+            <div
+                class="contact-link text-center"
+                v-if="!$route.meta.noFooterBar == true"
+            >
                 Can’t access your account?
                 <router-link to="/contact-us">Contact us</router-link>
             </div>
-            <div class="contact-link register-now text-center">
+            <div
+                class="contact-link register-now text-center"
+                v-if="!$route.meta.noFooterBar == true"
+            >
                 Are you a customer?
                 <router-link to="/public-registration"
                     >Register now</router-link

@@ -41,6 +41,7 @@ export default new Router({
                         import(/* webpackChunkName: "reset-password" */ '@/views/auth/ResetPassword.vue'),
                     meta: {
                         noSidebar: true,
+                        noFooterBar: true,
                         bodyClass: 'auth-body',
                     },
                 },

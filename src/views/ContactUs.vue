@@ -27,7 +27,7 @@
                         <b-form-group
                             id="input-group-2"
                             label="Description of the issue"
-                            label-for="input-1"
+                            label-for="input-2"
                         >
                             <b-form-textarea
                                 id="input-2"
@@ -41,7 +41,7 @@
                             btnType="submit"
                             btnVariant="primary"
                             class=""
-                            @click="$router.push('/dashboard')"
+                            @click="onClick"
                         ></base-button>
                     </b-form>
                 </div>
@@ -54,3 +54,62 @@
         <base-footer></base-footer>
     </div>
 </template>
+
+<script>
+export default {
+    components: {},
+    /*
+        |--------------------------------------------------------------------------
+        | Component > props
+        |--------------------------------------------------------------------------
+        */
+    props: {
+        /**
+         * Value to determine the current compose mode which
+         * varies between 'add' and 'edit'
+         */
+    }, // End of Component > props
+
+    /*
+        |--------------------------------------------------------------------------
+        | Component > data
+        |--------------------------------------------------------------------------
+        */
+    data() {
+        return {}
+    }, // End of Component > data
+
+    /*
+        |--------------------------------------------------------------------------
+        | Component > computed
+        |--------------------------------------------------------------------------
+        */
+    computed: {}, // End of Component > computed
+
+    /*
+        |--------------------------------------------------------------------------
+        | Component > methods
+        |--------------------------------------------------------------------------
+        */
+    methods: {
+        onClick() {
+            this.$toasted.show('hello billo')
+        },
+    }, // End of Component > methods
+
+    // you can pass a single action as below
+    action: {
+        text: 'Cancel',
+        onClick: (e, toastObject) => {
+            toastObject.goAway(0)
+        },
+    },
+
+    /*
+        |--------------------------------------------------------------------------
+        | Component > mounted
+        |--------------------------------------------------------------------------
+        */
+    mounted() {}, // End of Component > mounted
+} // End of export default
+</script>

@@ -5,9 +5,18 @@ import store from '@/store/index'
 import './registerServiceWorker'
 import BootstrapVue from 'bootstrap-vue'
 import vbclass from 'vue-body-class'
+import Toasted from 'vue-toasted'
 require('@/auto-import.js')
 
 Vue.use(BootstrapVue)
+// you can also pass options, check options reference below
+Vue.use(Toasted, {
+    position: 'bottom-right',
+    theme: 'bubble',
+    duration: 5000,
+    icon: 'check',
+})
+
 Vue.use(vbclass, router)
 
 Vue.config.productionTip = false
