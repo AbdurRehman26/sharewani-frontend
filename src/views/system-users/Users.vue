@@ -79,7 +79,9 @@
             <b-table :items="items" :fields="fields">
                 <template slot="profile" slot-scope="data">
                     <div class="profile-area">
-                        <router-link to="/customer-information">
+                        <router-link
+                            to="/customer-profiles/customer-information"
+                        >
                             <div
                                 class="profile-pic"
                                 :style="{

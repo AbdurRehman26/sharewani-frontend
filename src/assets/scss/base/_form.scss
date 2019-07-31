@@ -37,6 +37,10 @@ label {
             display: none;
         }
     }
+    &.is-valid,
+    &.is-invalid {
+        box-shadow: none !important;
+    }
 }
 
 input[type='number']::-webkit-inner-spin-button,
