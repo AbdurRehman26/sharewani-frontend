@@ -167,11 +167,13 @@
                                 label="City"
                                 label-for="city"
                             >
-                                <b-form-select
-                                    class="form-control"
+                                <b-form-input
+                                    id="city"
+                                    type="text"
                                     v-model="form.city"
-                                    :options="form.cityOptions"
-                                ></b-form-select>
+                                    required
+                                    placeholder="Enter city"
+                                ></b-form-input>
                             </b-form-group>
                         </div>
                         <div class="col-md-4">
@@ -402,7 +404,7 @@ export default {
                 country: null,
                 state: null,
                 relationship: null,
-                city: null,
+                city: '',
                 zipcode: null,
                 countrycode: null,
                 phonenumber: null,
@@ -441,14 +443,7 @@ export default {
                     'Arizona',
                     'Chicago',
                 ],
-                cityOptions: [
-                    { value: null, text: 'Select city' },
-                    'Arizona',
-                    'Chicago',
-                    'Aurora',
-                    'Naperville',
-                    'Joliet',
-                ],
+
                 worktypeOptions: [
                     { value: null, text: 'Select work type' },
                     'Engineer',
