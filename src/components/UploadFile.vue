@@ -1,6 +1,6 @@
 <template>
     <div class="row">
-        <div class="col-lg-12 m-b-20">
+        <div class="col-lg-12 m-b-20 client-blacklist-title">
             <h3>Client's Black List Data</h3>
         </div>
         <div class="col-lg-8">
@@ -18,7 +18,7 @@
                                 Click here or drag & drop data file here to
                                 upload
                             </h5>
-                            <p>Supported file formats are XLS, XLSX</p>
+                            <p>Supported file formats are XLS, XLSX and CSV</p>
                         </div>
                     </div>
                 </b-form-group>
@@ -38,7 +38,7 @@
                 </div>
                 <div class="file-upload-info">
                     <div class="file-last-update">
-                        <p>Last updated on June 24,2019</p>
+                        <p>Last updated on <span>June 24,2019</span></p>
                     </div>
                     <div class="download-current-file">
                         <base-button
@@ -57,8 +57,8 @@
                 <p>
                     To upload the black list people records into the system,
                     please download the template file. This will help you
-                    understand the fields required. You can fill up and upload
-                    it back into the system.
+                    understand the fields required. You can fill it up and
+                    upload it back into the system.
                 </p>
                 <div class="link-action">
                     <div class="file-thumbnail">

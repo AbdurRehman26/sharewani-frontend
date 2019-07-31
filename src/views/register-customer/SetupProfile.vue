@@ -164,8 +164,8 @@
                         <div class="col-md-4">
                             <b-form-group
                                 id="input-group-6"
-                                label="State"
-                                label-for="state"
+                                label="City"
+                                label-for="city"
                             >
                                 <b-form-select
                                     class="form-control"
@@ -189,14 +189,14 @@
                                 ></b-form-input>
                             </b-form-group>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-4 row-min-space">
                             <b-form-group
                                 id="input-group-1"
                                 label="Phone Number"
                                 label-for="phonenumber"
                             >
                                 <div class="row">
-                                    <div class="col-md-4">
+                                    <div class="col-md-5">
                                         <b-form-input
                                             id="countrycode"
                                             type="number"
@@ -205,7 +205,7 @@
                                             placeholder="Country code"
                                         ></b-form-input>
                                     </div>
-                                    <div class="col-md-8">
+                                    <div class="col-md-7">
                                         <b-form-input
                                             id="phonenumber"
                                             type="number"
@@ -442,9 +442,12 @@ export default {
                     'Chicago',
                 ],
                 cityOptions: [
-                    { value: null, text: 'Select state' },
+                    { value: null, text: 'Select city' },
                     'Arizona',
                     'Chicago',
+                    'Aurora',
+                    'Naperville',
+                    'Joliet',
                 ],
                 worktypeOptions: [
                     { value: null, text: 'Select work type' },

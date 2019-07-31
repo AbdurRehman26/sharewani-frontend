@@ -66,6 +66,7 @@
                 </template>
             </b-table>
         </div>
+        <pagination totalRecords="Showing 1 to 5 of 5 records"></pagination>
         <add-state-popup></add-state-popup>
         <archive-popup
             title="Archive State  Factor"
@@ -78,11 +79,13 @@
 import { mapGetters } from 'vuex'
 import addStatePopup from '@/components/popups/AddStatePopup.vue'
 import archivePopup from '@/components/popups/ArchivePopup.vue'
+import pagination from '@/components/Pagination.vue'
 
 export default {
     components: {
         addStatePopup,
         archivePopup,
+        pagination,
     },
 
     /*

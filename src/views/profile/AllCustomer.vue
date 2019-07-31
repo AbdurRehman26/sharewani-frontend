@@ -105,7 +105,9 @@
                 </template>
             </b-table>
         </div>
-        <pagination></pagination>
+        <pagination
+            totalRecords="Showing 1 to 10 of 1,890 records"
+        ></pagination>
         <export-process-popup
             title="Export Customer's Data"
             totalExport="Total Records Exported: 1,890"

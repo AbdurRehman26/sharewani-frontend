@@ -41,7 +41,7 @@
                 </template>
             </b-table>
         </div>
-        <pagination></pagination>
+        <pagination totalRecords="Showing 1 to 3 of 3 records"></pagination>
         <modify-status-popup
             modalTitle="Modify Gender Status"
             modalLabel="Male"

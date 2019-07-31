@@ -58,6 +58,7 @@
                 </template>
             </b-table>
         </div>
+        <pagination totalRecords="Showing 1 to 7 of 7 records"></pagination>
         <add-work-popup></add-work-popup>
         <archive-popup
             title="Archive Work Type Factor"
@@ -70,11 +71,13 @@
 import { mapGetters } from 'vuex'
 import addWorkPopup from '@/components/popups/AddWorkPopup.vue'
 import archivePopup from '@/components/popups/ArchivePopup.vue'
+import pagination from '@/components/Pagination.vue'
 
 export default {
     components: {
         archivePopup,
         addWorkPopup,
+        pagination,
     },
 
     /*

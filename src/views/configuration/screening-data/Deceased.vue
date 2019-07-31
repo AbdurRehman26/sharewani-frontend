@@ -41,7 +41,7 @@
                 </template>
             </b-table>
         </div>
-        <pagination></pagination>
+        <pagination totalRecords="Showing 1 to 2 of 2 records"></pagination>
         <modify-status-popup
             modalTitle="Modify Deceased Status"
             modalLabel="No"
