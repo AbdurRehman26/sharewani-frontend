@@ -83,14 +83,12 @@
                                 label="Is Required?"
                                 label-for="isrequired"
                             >
-                                <b-form-group>
-                                    <b-form-radio-group
-                                        id="isrequired"
-                                        v-model="form.isrequiredModel"
-                                        :options="form.isrequired"
-                                        name="isrequired"
-                                    ></b-form-radio-group>
-                                </b-form-group>
+                                <b-form-radio-group
+                                    id="isrequired"
+                                    v-model="form.isrequiredModel"
+                                    :options="form.isrequired"
+                                    name="isrequired"
+                                ></b-form-radio-group>
                             </b-form-group>
                         </div>
                     </div>
