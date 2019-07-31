@@ -24,7 +24,7 @@
                                         btnLabel="+ Add Role"
                                         btnType="submit"
                                         btnVariant="secondary btn-block"
-                                        v-b-modal.add-role-popup
+                                        @click="addModify('Add Role')"
                                         class="secondary-add-btn"
                                     ></base-button>
                                 </div>
@@ -53,7 +53,7 @@
                             "
                             icon="icon-edit"
                             label="Modify"
-                            v-b-modal.v-b-modal.add-role-popup
+                            @click="addModify('Modify Role')"
                         ></base-action>
                         <!-- if action archive -->
                         <base-action
@@ -77,7 +77,7 @@
             totalRecords="Showing 1 to 6 of 6 records"
             nextBtnDisable
         ></pagination>
-        <add-role-popup></add-role-popup>
+        <add-role-popup :title="title"></add-role-popup>
         <archive-popup
             title="Archive Role"
             description="Are you sure you want to archive this role? You can re-activate it later."
@@ -123,6 +123,7 @@ export default {
             selected: '1',
             fields: [],
             items: [],
+            title: '',
         }
     }, // End of Component > data
 
@@ -147,6 +148,11 @@ export default {
             this.fields = tableFields //push data into array
             let tableItems = this.systemUsersData.roles.items //get user data from store
             this.items = tableItems //push data into array
+        },
+
+        addModify(e) {
+            this.title = e
+            this.$bvModal.show('add-role-popup')
         },
     }, // End of Component > methods
 

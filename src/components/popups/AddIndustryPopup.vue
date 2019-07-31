@@ -2,7 +2,7 @@
     <div>
         <b-modal
             id="add-industry-popup"
-            title="Add Industry Factor"
+            :title="title"
             size="lg"
             okTitle="Create"
             cancelTitle="Cancel"
@@ -148,6 +148,27 @@
 
 <script>
 export default {
+    /*
+    |--------------------------------------------------------------------------
+    | Component > props
+    |--------------------------------------------------------------------------
+    */
+    props: {
+        /**
+         * Value to determine the current compose mode which
+         * varies between 'add' and 'edit'
+         */
+        title: {
+            type: String,
+            default: null,
+        },
+    }, // End of Component > props
+
+    /*
+    |--------------------------------------------------------------------------
+    | Component > data
+    |--------------------------------------------------------------------------
+    */
     data() {
         return {
             form: {

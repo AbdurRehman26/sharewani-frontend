@@ -2,7 +2,7 @@
     <div>
         <b-modal
             id="add-system-user-popup"
-            title="Add System User"
+            :title="title"
             size="sm"
             okTitle="Create"
             cancelTitle="Cancel"
@@ -123,6 +123,28 @@
 import VSelectize from '@isneezy/vue-selectize'
 export default {
     components: { VSelectize },
+
+    /*
+    |--------------------------------------------------------------------------
+    | Component > props
+    |--------------------------------------------------------------------------
+    */
+    props: {
+        /**
+         * Value to determine the current compose mode which
+         * varies between 'add' and 'edit'
+         */
+        title: {
+            type: String,
+            default: null,
+        },
+    }, // End of Component > props
+
+    /*
+    |--------------------------------------------------------------------------
+    | Component > data
+    |--------------------------------------------------------------------------
+    */
 
     data() {
         return {
