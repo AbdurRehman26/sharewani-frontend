@@ -14,7 +14,7 @@ Vue.use(Toasted, {
     position: 'bottom-right',
     theme: 'bubble',
     duration: 5000,
-    icon: 'check',
+    iconPack: 'material', // set your iconPack, defaults to material. material|fontawesome|custom-class
 })
 
 Vue.use(vbclass, router)

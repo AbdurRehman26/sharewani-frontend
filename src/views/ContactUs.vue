@@ -93,7 +93,12 @@ export default {
         */
     methods: {
         onClick() {
-            this.$toasted.show('hello billo')
+            this.$toasted.show('Thankyou We will get back to you very soon.', {
+                icon: {
+                    name: 'check',
+                    before: true,
+                },
+            })
         },
     }, // End of Component > methods
 
