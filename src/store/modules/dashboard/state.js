@@ -2200,7 +2200,349 @@ export default {
                     sortable: true,
                 },
             ],
-            items: [],
+            items: [
+                {
+                    alerts: [
+                        {
+                            riskRate: 'High',
+                            riskType: 'rating',
+                        },
+                    ],
+                    profile: 'member-1.png',
+                    customer: '1250976',
+                    full_name: 'Zeng Wen',
+                    nationality: 'British',
+                    aging: [
+                        {
+                            name: '16 D',
+                            riskRate: 'low',
+                        },
+                    ],
+                    name_screening: [
+                        {
+                            cssClass: 'icon-cross-with-circle danger',
+                        },
+                    ],
+                    documentation: [
+                        {
+                            cssClass: 'icon-tick-with-circle',
+                        },
+                    ],
+                    risk_rating: [
+                        {
+                            cssClass: 'icon-cross-with-circle pending',
+                        },
+                    ],
+                    action: 'in review',
+                },
+                {
+                    alerts: [
+                        {
+                            riskRate: 'High',
+                            riskType: 'rating',
+                        },
+                    ],
+                    profile: 'member-2.png',
+                    customer: '1250976',
+                    full_name: 'Edward Lindgren',
+                    nationality: 'British',
+
+                    aging: [
+                        {
+                            name: '85 D',
+                            riskRate: 'high',
+                        },
+                    ],
+                    name_screening: [
+                        {
+                            cssClass: 'icon-cross-with-circle pending',
+                        },
+                    ],
+                    documentation: [
+                        {
+                            cssClass: 'icon-tick-with-circle pending',
+                        },
+                    ],
+                    risk_rating: [
+                        {
+                            cssClass: 'icon-cross-with-circle pending',
+                        },
+                    ],
+                    action: 'review',
+                },
+                {
+                    alerts: [
+                        {
+                            riskRate: 'Medium',
+                            riskType: 'reload',
+                        },
+                    ],
+                    profile: 'member-3.png',
+                    customer: '3282345',
+                    full_name: 'Christian Russell',
+                    nationality: 'American',
+                    aging: [
+                        {
+                            name: '29 D',
+                            riskRate: 'low',
+                        },
+                    ],
+                    name_screening: [
+                        {
+                            cssClass: 'icon-cross-with-circle pending',
+                        },
+                    ],
+                    documentation: [
+                        {
+                            cssClass: 'icon-tick-with-circle ',
+                        },
+                    ],
+                    risk_rating: [
+                        {
+                            cssClass: 'icon-cross-with-circle pending',
+                        },
+                    ],
+                    action: 'in review',
+                },
+                {
+                    alerts: [
+                        {
+                            riskRate: 'High',
+                            riskType: 'rating',
+                        },
+                    ],
+                    profile: 'member-4.png',
+                    customer: '3312353',
+                    full_name: 'Fua Lamba',
+                    nationality: 'Singaporean',
+                    aging: [
+                        {
+                            name: '65 D',
+                            riskRate: 'high',
+                        },
+                    ],
+                    name_screening: [
+                        {
+                            cssClass: 'icon-cross-with-circle pending',
+                        },
+                    ],
+                    documentation: [
+                        {
+                            cssClass: 'icon-tick-with-circle pending',
+                        },
+                    ],
+                    risk_rating: [
+                        {
+                            cssClass: 'icon-cross-with-circle danger',
+                        },
+                    ],
+                    action: 'in review',
+                },
+                {
+                    alerts: [
+                        {
+                            riskRate: 'Medium',
+                            riskType: 'reload',
+                        },
+                    ],
+                    profile: 'member-5.png',
+                    customer: '1250976',
+                    full_name: 'Alexander Ljung',
+                    nationality: 'Greek',
+                    aging: [
+                        {
+                            name: '38 D',
+                            riskRate: 'medium',
+                        },
+                    ],
+                    name_screening: [
+                        {
+                            cssClass: 'icon-cross-with-circle danger',
+                        },
+                    ],
+                    documentation: [
+                        {
+                            cssClass: 'icon-tick-with-circle pending',
+                        },
+                    ],
+                    risk_rating: [
+                        {
+                            cssClass: 'icon-cross-with-circle pending',
+                        },
+                    ],
+                    action: 'in review',
+                },
+                {
+                    alerts: [
+                        {
+                            riskRate: 'High',
+                            riskType: 'flag',
+                        },
+                    ],
+                    profile: 'member-6.png',
+                    customer: '2489573',
+                    full_name: 'Chukwudi Udo',
+                    nationality: 'Mexican',
+                    aging: [
+                        {
+                            name: '72 D',
+                            riskRate: 'high',
+                        },
+                    ],
+                    name_screening: [
+                        {
+                            cssClass: 'icon-cross-with-circle pending',
+                        },
+                    ],
+                    documentation: [
+                        {
+                            cssClass: 'icon-tick-with-circle pending',
+                        },
+                    ],
+                    risk_rating: [
+                        {
+                            cssClass: 'icon-cross-with-circle danger',
+                        },
+                    ],
+                    action: 'review',
+                },
+                {
+                    alerts: [
+                        {
+                            riskRate: 'Medium',
+                            riskType: 'reload',
+                        },
+                    ],
+                    profile: 'member-7.png',
+                    customer: '3312353',
+                    full_name: 'Linzell Bowman',
+                    nationality: 'British',
+                    aging: [
+                        {
+                            name: '10 D',
+                            riskRate: 'low',
+                        },
+                    ],
+                    name_screening: [
+                        {
+                            cssClass: 'icon-cross-with-circle pending',
+                        },
+                    ],
+                    documentation: [
+                        {
+                            cssClass: 'icon-tick-with-circle pending',
+                        },
+                    ],
+                    risk_rating: [
+                        {
+                            cssClass: 'icon-cross-with-circle danger',
+                        },
+                    ],
+                    action: 'review',
+                },
+                {
+                    alerts: [
+                        {
+                            riskRate: 'Medium',
+                            riskType: 'rating',
+                        },
+                    ],
+                    profile: 'member-8.png',
+                    customer: '3282345',
+                    full_name: 'Vương Mộng Nhi',
+                    nationality: 'Chinese',
+                    aging: [
+                        {
+                            name: '41 D',
+                            riskRate: 'medium',
+                        },
+                    ],
+                    name_screening: [
+                        {
+                            cssClass: 'icon-cross-with-circle danger',
+                        },
+                    ],
+                    documentation: [
+                        {
+                            cssClass: 'icon-tick-with-circle ',
+                        },
+                    ],
+                    risk_rating: [
+                        {
+                            cssClass: 'icon-cross-with-circle ',
+                        },
+                    ],
+                    action: 'review',
+                },
+                {
+                    alerts: [
+                        {
+                            riskRate: 'High',
+                            riskType: 'flag',
+                        },
+                    ],
+                    profile: 'member-9.png',
+                    customer: '2321345',
+                    full_name: 'Lew Silverton',
+                    nationality: 'British',
+                    aging: [
+                        {
+                            name: '8 D',
+                            riskRate: 'low',
+                        },
+                    ],
+                    name_screening: [
+                        {
+                            cssClass: 'icon-cross-with-circle danger',
+                        },
+                    ],
+                    documentation: [
+                        {
+                            cssClass: 'icon-tick-with-circle pending',
+                        },
+                    ],
+                    risk_rating: [
+                        {
+                            cssClass: 'icon-cross-with-circle ',
+                        },
+                    ],
+                    action: 'review',
+                },
+                {
+                    alerts: [
+                        {
+                            riskRate: 'High',
+                            riskType: 'rating',
+                        },
+                    ],
+                    profile: 'member-10.png',
+                    customer: '2223535',
+                    full_name: 'Xun Guiying',
+                    nationality: 'Chinese',
+                    aging: [
+                        {
+                            name: '22 D',
+                            riskRate: 'low',
+                        },
+                    ],
+                    name_screening: [
+                        {
+                            cssClass: 'icon-cross-with-circle danger',
+                        },
+                    ],
+                    documentation: [
+                        {
+                            cssClass: 'icon-tick-with-circle pending',
+                        },
+                    ],
+                    risk_rating: [
+                        {
+                            cssClass: 'icon-cross-with-circle ',
+                        },
+                    ],
+                    action: 'review',
+                },
+            ],
         },
 
         // residence table
