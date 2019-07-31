@@ -74,6 +74,9 @@ header {
                         &:before {
                             background-color: $primary;
                         }
+                        &:after {
+                            background-color: $primary;
+                        }
                     }
 
                     a {
