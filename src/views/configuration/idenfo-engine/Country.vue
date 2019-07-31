@@ -36,7 +36,7 @@
                 </div>
             </div>
         </div>
-        <div class="table-section ">
+        <div class="table-section">
             <b-table :items="items" :fields="fields">
                 <template slot="rating" slot-scope="data">
                     <base-status :statusType="data.value"></base-status>
@@ -62,6 +62,7 @@
                 </template>
             </b-table>
         </div>
+        <pagination totalRecords="Showing 1 to 10 of 220 records"></pagination>
         <add-country-popup></add-country-popup>
         <archive-popup
             title="Archive Country Factor"
@@ -74,11 +75,13 @@
 import { mapGetters } from 'vuex'
 import addCountryPopup from '@/components/popups/AddCountryPopup.vue'
 import archivePopup from '@/components/popups/ArchivePopup.vue'
+import pagination from '@/components/Pagination.vue'
 
 export default {
     components: {
         addCountryPopup,
         archivePopup,
+        pagination,
     },
 
     /*

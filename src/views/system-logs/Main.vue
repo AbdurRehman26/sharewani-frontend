@@ -147,7 +147,9 @@
                                     :items="items"
                                 ></b-table>
                             </div>
-                            <pagination></pagination>
+                            <pagination
+                                totalRecords="Showing 1 to 10 of 3,120 records"
+                            ></pagination>
                         </div>
                     </div>
                 </div>

@@ -180,6 +180,7 @@ export default {
                     {
                         key: 'dialingcode',
                         label: 'Dialing Code',
+                        class: 'text-center',
                         sortable: true,
                     },
                     {
@@ -522,30 +523,6 @@ export default {
                 items: [
                     {
                         productCode: 1501,
-                        productIndustry: 'Virtual Currency Wallet',
-                        rating: [
-                            {
-                                icon: 'icon-high-risk',
-                                label: 'High Risk',
-                                cssClass: 'high-risk',
-                            },
-                        ],
-                        action: 'active',
-                    },
-                    {
-                        productCode: 1502,
-                        productIndustry: 'Virtual Currency Exchange',
-                        rating: [
-                            {
-                                icon: 'icon-high-risk',
-                                label: 'High Risk',
-                                cssClass: 'high-risk',
-                            },
-                        ],
-                        action: 'active',
-                    },
-                    {
-                        productCode: 1503,
                         productIndustry: 'Current Account',
                         rating: [
                             {
@@ -557,7 +534,7 @@ export default {
                         action: 'active',
                     },
                     {
-                        productCode: 1504,
+                        productCode: 1502,
                         productIndustry: 'Saving Account',
                         rating: [
                             {
@@ -569,7 +546,7 @@ export default {
                         action: 'active',
                     },
                     {
-                        productCode: 1505,
+                        productCode: 1503,
                         productIndustry: 'Credit Card',
                         rating: [
                             {
@@ -581,7 +558,7 @@ export default {
                         action: 'active',
                     },
                     {
-                        productCode: 1506,
+                        productCode: 1504,
                         productIndustry: 'Short Term Loan',
                         rating: [
                             {
@@ -593,7 +570,7 @@ export default {
                         action: 'active',
                     },
                     {
-                        productCode: 1507,
+                        productCode: 1505,
                         productIndustry: 'Financial Investment',
                         rating: [
                             {
@@ -929,6 +906,27 @@ export default {
                         scorescale: 'View Score Scale',
                         action: 'active',
                     },
+                    {
+                        riskCode: 'Assets Under Management',
+                        weight: 0,
+                        overrideTo: 'Conditional',
+                        scorescale: 'View Score Scale',
+                        action: 'active',
+                    },
+                    {
+                        riskCode: 'Adverse Media',
+                        weight: 0,
+                        overrideTo: 'Conditional',
+                        scorescale: 'View Score Scale',
+                        action: 'active',
+                    },
+                    {
+                        riskCode: 'Suspicious Activity Reports',
+                        weight: 0,
+                        overrideTo: 'Conditional',
+                        scorescale: 'View Score Scale',
+                        action: 'active',
+                    },
                 ],
             },
 
@@ -936,7 +934,7 @@ export default {
                 fields: [
                     {
                         key: 'pointscore',
-                        label: 'POINT SCORE / CASE',
+                        label: 'POINT SCORE',
                         class: 'w-320px',
                         sortable: true,
                     },
@@ -1005,46 +1003,7 @@ export default {
                         action: 'active',
                     },
                     {
-                        pointscore: 'PEP Hit',
-                        rating: [
-                            {
-                                icon: 'icon-high-risk',
-                                label: 'High Risk',
-                                cssClass: 'high-risk',
-                            },
-                        ],
-                        reviewperiod: 'Rejected',
-                        alert: 'Yes',
-                        action: 'active',
-                    },
-                    {
-                        pointscore: 'Enforcement Hit',
-                        rating: [
-                            {
-                                icon: 'icon-high-risk',
-                                label: 'High Risk',
-                                cssClass: 'high-risk',
-                            },
-                        ],
-                        reviewperiod: 'Rejected',
-                        alert: 'Yes',
-                        action: 'active',
-                    },
-                    {
-                        pointscore: 'Client Blacklist Hit',
-                        rating: [
-                            {
-                                icon: 'icon-high-risk',
-                                label: 'High Risk',
-                                cssClass: 'high-risk',
-                            },
-                        ],
-                        reviewperiod: 'Rejected',
-                        alert: 'Yes',
-                        action: 'active',
-                    },
-                    {
-                        pointscore: 'Sanction Hit',
+                        pointscore: 'Sanctioned Risk',
                         rating: [
                             {
                                 icon: 'icon-sanction',
@@ -1052,52 +1011,49 @@ export default {
                                 cssClass: 'sanctioned-risk',
                             },
                         ],
-                        reviewperiod: 'Rejected',
+                        reviewperiod: '1 Year',
                         alert: 'Yes',
                         action: 'active',
                     },
+                ],
+            },
+
+            riskRatingOverride: {
+                fields: [
                     {
-                        pointscore: 'Document Verification Mismatch ',
-                        rating: [
-                            {
-                                icon: 'icon-high-risk',
-                                label: 'High Risk',
-                                cssClass: 'high-risk',
-                            },
-                        ],
-                        reviewperiod: 'Rejected',
-                        alert: 'Yes',
-                        action: 'active',
+                        key: 'overrides',
+                        label: 'Overrides',
+                        class: 'w-320px',
+                        sortable: true,
                     },
                     {
-                        pointscore: 'If Residence Country is Sanctioned',
-                        rating: [
-                            {
-                                icon: 'icon-sanction',
-                                label: 'Sanctioned',
-                                cssClass: 'sanctioned-risk',
-                            },
-                        ],
-                        reviewperiod: 'Rejected',
-                        alert: 'Yes',
-                        action: 'active',
+                        key: 'rating',
+                        label: 'Override Rating',
+                        class: 'text-center status-absolute-pos',
+                        sortable: true,
                     },
 
                     {
-                        pointscore: 'If Nationality Country is Sanctioned',
+                        key: 'action',
+                        label: 'ACTION',
+                        class: 'single-list',
+                    },
+                ],
+                items: [
+                    {
+                        overrides: 'If Non-Resident',
                         rating: [
                             {
-                                icon: 'icon-sanction',
-                                label: 'Sanctioned',
-                                cssClass: 'sanctioned-risk',
+                                icon: 'icon-high-risk',
+                                label: 'High Risk',
+                                cssClass: 'high-risk',
                             },
                         ],
-                        reviewperiod: 'Rejected',
-                        alert: 'Yes',
+
                         action: 'active',
                     },
                     {
-                        pointscore: 'If Contact No. Code Country is Sanctioned',
+                        overrides: 'If Residence Country is Sanctioned',
                         rating: [
                             {
                                 icon: 'icon-sanction',
@@ -1105,8 +1061,91 @@ export default {
                                 cssClass: 'sanctioned-risk',
                             },
                         ],
-                        reviewperiod: 'Rejected',
-                        alert: 'Yes',
+
+                        action: 'active',
+                    },
+                    {
+                        overrides: 'If Nationality Country is Sanctioned',
+                        rating: [
+                            {
+                                icon: 'icon-sanction',
+                                label: 'Sanctioned',
+                                cssClass: 'sanctioned-risk',
+                            },
+                        ],
+
+                        action: 'active',
+                    },
+                    {
+                        overrides: 'If Contact No. Code Country is Sanctioned',
+                        rating: [
+                            {
+                                icon: 'icon-sanction',
+                                label: 'Sanctioned',
+                                cssClass: 'sanctioned-risk',
+                            },
+                        ],
+
+                        action: 'active',
+                    },
+                    {
+                        overrides: 'If Sanction Hit',
+                        rating: [
+                            {
+                                icon: 'icon-sanction',
+                                label: 'Sanctioned',
+                                cssClass: 'sanctioned-risk',
+                            },
+                        ],
+
+                        action: 'active',
+                    },
+                    {
+                        overrides: 'If PEP Hit',
+                        rating: [
+                            {
+                                icon: 'icon-high-risk',
+                                label: 'High Risk',
+                                cssClass: 'high-risk',
+                            },
+                        ],
+
+                        action: 'active',
+                    },
+                    {
+                        overrides: 'If Enforcement Hit',
+                        rating: [
+                            {
+                                icon: 'icon-high-risk',
+                                label: 'High Risk',
+                                cssClass: 'high-risk',
+                            },
+                        ],
+
+                        action: 'active',
+                    },
+                    {
+                        overrides: 'If Client Blacklist Hit',
+                        rating: [
+                            {
+                                icon: 'icon-high-risk',
+                                label: 'High Risk',
+                                cssClass: 'high-risk',
+                            },
+                        ],
+
+                        action: 'active',
+                    },
+                    {
+                        overrides: 'If Document Verification Mismatch',
+                        rating: [
+                            {
+                                icon: 'icon-high-risk',
+                                label: 'High Risk',
+                                cssClass: 'high-risk',
+                            },
+                        ],
+
                         action: 'active',
                     },
                 ],
@@ -1616,6 +1655,97 @@ export default {
                         ],
                         action: 'active',
                     },
+                    {
+                        descriptionid: 4,
+                        nametype: 'Maiden Name',
+                        recordtype: 'Person',
+                        status: [
+                            {
+                                cssClass: 'approved',
+                                icon: 'icon-check',
+                                label: 'Active',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        descriptionid: 5,
+                        nametype: 'Formerly Known As',
+                        recordtype: 'Person',
+                        status: [
+                            {
+                                cssClass: 'approved',
+                                icon: 'icon-check',
+                                label: 'Active',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        descriptionid: 6,
+                        nametype: 'Spelling Variation',
+                        recordtype: 'Person',
+                        status: [
+                            {
+                                cssClass: 'approved',
+                                icon: 'icon-check',
+                                label: 'Active',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        descriptionid: 7,
+                        nametype: 'Primary Name',
+                        recordtype: 'Entity',
+                        status: [
+                            {
+                                cssClass: 'inapproved',
+                                icon: 'icon-wrong',
+                                label: 'Inactive',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        descriptionid: 8,
+                        nametype: 'Also Known As',
+                        recordtype: 'Entity',
+                        status: [
+                            {
+                                cssClass: 'inapproved',
+                                icon: 'icon-wrong',
+                                label: 'Inactive',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        descriptionid: 9,
+                        nametype: 'Formerly Known As',
+                        recordtype: 'Entity',
+                        status: [
+                            {
+                                cssClass: 'inapproved',
+                                icon: 'icon-wrong',
+                                label: 'Inactive',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        descriptionid: 10,
+                        nametype: 'Spelling Variation',
+                        recordtype: 'Entity',
+                        status: [
+                            {
+                                cssClass: 'inapproved',
+                                icon: 'icon-wrong',
+                                label: 'Inactive',
+                            },
+                        ],
+                        action: 'active',
+                    },
                 ],
             },
 
@@ -1692,7 +1822,7 @@ export default {
                     {
                         descriptionid: 4,
                         description: 'Special Intrest Entity (SIE)',
-                        recordtype: 'Person',
+                        recordtype: 'Entity',
                         status: [
                             {
                                 cssClass: 'inapproved',
@@ -2091,9 +2221,9 @@ export default {
                         roleType: 'Previous Roles',
                         status: [
                             {
-                                cssClass: 'approved',
-                                icon: 'icon-check',
-                                label: 'Active',
+                                cssClass: 'inapproved',
+                                icon: 'icon-wrong',
+                                label: 'Inactive',
                             },
                         ],
                         action: 'active',

@@ -65,6 +65,7 @@
                 </template>
             </b-table>
         </div>
+        <pagination totalRecords="Showing 1 to 2 of 2 records"></pagination>
         <add-purpose-popup></add-purpose-popup>
         <archive-popup
             title="Archive Purpose of Action"
@@ -77,10 +78,12 @@
 import { mapGetters } from 'vuex'
 import addPurposePopup from '@/components/popups/AddPurposePopup.vue'
 import archivePopup from '@/components/popups/ArchivePopup.vue'
+import pagination from '@/components/Pagination.vue'
 export default {
     components: {
         addPurposePopup,
         archivePopup,
+        pagination,
     },
 
     /*

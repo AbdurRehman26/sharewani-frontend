@@ -68,6 +68,7 @@
                 </template>
             </b-table>
         </div>
+        <pagination totalRecords="Showing 1 to 7 of 7 records"></pagination>
         <add-product-popup></add-product-popup>
         <archive-popup
             title="Archive Product Factor"
@@ -80,10 +81,12 @@
 import { mapGetters } from 'vuex'
 import addProductPopup from '@/components/popups/AddProductPopup.vue'
 import archivePopup from '@/components/popups/ArchivePopup.vue'
+import pagination from '@/components/Pagination.vue'
 export default {
     components: {
         addProductPopup,
         archivePopup,
+        pagination,
     },
 
     /*

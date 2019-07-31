@@ -40,6 +40,7 @@
                 </template>
             </b-table>
         </div>
+        <pagination totalRecords="Showing 1 to 10 of 26 records"></pagination>
         <modify-status-popup
             modalTitle="Modify Occupation Status"
             modalLabel="National Government Ministers"
@@ -49,10 +50,12 @@
 
 <script>
 import { mapGetters } from 'vuex'
+import pagination from '@/components/Pagination.vue'
 import modifyStatusPopup from '@/components/popups/ModifyStatusPopup.vue'
 export default {
     components: {
         modifyStatusPopup,
+        pagination,
     },
 
     /*

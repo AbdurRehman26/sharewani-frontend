@@ -3,11 +3,15 @@ export default {
         screenCustomer: {
             customerDetails: [
                 {
-                    heading: 'Basic Information',
+                    heading: 'Customer Information',
                     descriptions: [
                         {
                             title: 'Idenfo ID:',
                             detail: '210345',
+                        },
+                        {
+                            title: 'Bank Customer ID:',
+                            detail: 'N/A',
                         },
                         {
                             title: 'First Name:',
@@ -30,20 +34,17 @@ export default {
                             detail: 'June 24, 1984',
                         },
                         {
-                            title: 'Nationality:',
-                            detail: 'American',
-                        },
-                        {
                             title: 'Country of Residence:',
                             detail: 'United Kingdom',
                         },
                         {
-                            title: 'Bank Customer ID:',
-                            detail: 'N/A',
+                            title: 'Nationality:',
+                            detail: 'American',
                         },
+
                         {
                             title: 'Record Last Updated:',
-                            detail: 'June 19, 2019',
+                            detail: 'June 19,2019',
                         },
                     ],
                 },
@@ -199,11 +200,15 @@ export default {
         kycData: {
             customerDetails: [
                 {
-                    heading: 'Basic Information',
+                    heading: 'Customer Information',
                     descriptions: [
                         {
                             title: 'Idenfo ID:',
                             detail: '210345',
+                        },
+                        {
+                            title: 'Bank Customer ID:',
+                            detail: 'N/A',
                         },
                         {
                             title: 'First Name:',
@@ -226,20 +231,16 @@ export default {
                             detail: 'June 24, 1984',
                         },
                         {
-                            title: 'Nationality:',
-                            detail: 'American',
-                        },
-                        {
                             title: 'Country of Residence:',
                             detail: 'United Kingdom',
                         },
                         {
-                            title: 'Bank Customer ID:',
-                            detail: 'N/A',
+                            title: 'Nationality:',
+                            detail: 'American',
                         },
                         {
                             title: 'Record Last Updated:',
-                            detail: 'June 19, 2019',
+                            detail: 'June 19,2019',
                         },
                     ],
                 },
@@ -432,6 +433,10 @@ export default {
                             detail: '210345',
                         },
                         {
+                            title: 'Bank Customer ID:',
+                            detail: 'N/A',
+                        },
+                        {
                             title: 'First Name:',
                             detail: 'Henk',
                         },
@@ -452,17 +457,14 @@ export default {
                             detail: 'June 24, 1984',
                         },
                         {
-                            title: 'Nationality:',
-                            detail: 'American',
-                        },
-                        {
                             title: 'Country of Residence:',
                             detail: 'United Kingdom',
                         },
                         {
-                            title: 'Bank Customer ID:',
-                            detail: 'N/A',
+                            title: 'Nationality:',
+                            detail: 'American',
                         },
+
                         {
                             title: 'Record Last Updated:',
                             detail: 'June 19,2019',
@@ -676,11 +678,15 @@ export default {
         documentVerification: {
             customerDetails: [
                 {
-                    heading: 'Basic Information',
+                    heading: 'Customer Information',
                     descriptions: [
                         {
                             title: 'Idenfo ID:',
                             detail: '210345',
+                        },
+                        {
+                            title: 'Bank Customer ID:',
+                            detail: 'N/A',
                         },
                         {
                             title: 'First Name:',
@@ -703,20 +709,17 @@ export default {
                             detail: 'June 24, 1984',
                         },
                         {
-                            title: 'Nationality:',
-                            detail: 'American',
-                        },
-                        {
                             title: 'Country of Residence:',
                             detail: 'United Kingdom',
                         },
                         {
-                            title: 'Bank Customer ID:',
-                            detail: 'N/A',
+                            title: 'Nationality:',
+                            detail: 'American',
                         },
+
                         {
                             title: 'Record Last Updated:',
-                            detail: 'June 19, 2019',
+                            detail: 'June 19,2019',
                         },
                     ],
                 },
@@ -811,11 +814,15 @@ export default {
         activityTimeline: {
             customerDetails: [
                 {
-                    heading: 'Basic Information',
+                    heading: 'Customer Information',
                     descriptions: [
                         {
                             title: 'Idenfo ID:',
                             detail: '210345',
+                        },
+                        {
+                            title: 'Bank Customer ID:',
+                            detail: 'N/A',
                         },
                         {
                             title: 'First Name:',
@@ -838,20 +845,17 @@ export default {
                             detail: 'June 24, 1984',
                         },
                         {
-                            title: 'Nationality:',
-                            detail: 'American',
-                        },
-                        {
                             title: 'Country of Residence:',
                             detail: 'United Kingdom',
                         },
                         {
-                            title: 'Bank Customer ID:',
-                            detail: 'N/A',
+                            title: 'Nationality:',
+                            detail: 'American',
                         },
+
                         {
                             title: 'Record Last Updated:',
-                            detail: 'June 19, 2019',
+                            detail: 'June 19,2019',
                         },
                     ],
                 },

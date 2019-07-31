@@ -76,7 +76,6 @@
             </div>
             <div class="config-card-block">
                 <router-view @item-length="tableItemLength" />
-                <pagination v-if="tableItemData > 9"></pagination>
             </div>
         </div>
 
@@ -89,7 +88,6 @@
                         <upload-file></upload-file>
                     </div>
                 </div>
-                <div class="col-md-2"></div>
             </div>
         </div>
     </div>
@@ -98,13 +96,11 @@
 <script>
 import { mapGetters } from 'vuex'
 import cardData from '@/components/CardData.vue'
-import pagination from '@/components/Pagination.vue'
 import uploadFile from '@/components/UploadFile.vue'
 import { directive as onClickOutside } from 'vue-on-click-outside'
 export default {
     components: {
         cardData,
-        pagination,
         uploadFile,
     },
 
@@ -194,8 +190,8 @@ export default {
                     menuLabel: 'Country Type',
                 },
                 {
-                    anchorLink: '/configuration/screening-data/indentification',
-                    menuLabel: 'Indentification ',
+                    anchorLink: '/configuration/screening-data/identification',
+                    menuLabel: 'Identification Type',
                 },
                 {
                     anchorLink:

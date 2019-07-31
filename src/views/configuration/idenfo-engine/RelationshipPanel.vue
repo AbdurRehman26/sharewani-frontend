@@ -68,6 +68,7 @@
                 </template>
             </b-table>
         </div>
+        <pagination totalRecords="Showing 1 to 3 of 3 records"></pagination>
         <add-relationship-popup></add-relationship-popup>
         <archive-popup
             title="Archive Relationship Length Factor"
@@ -78,12 +79,14 @@
 
 <script>
 import { mapGetters } from 'vuex'
+import pagination from '@/components/Pagination.vue'
 import addRelationshipPopup from '@/components/popups/AddRelationshipPopup.vue'
 import archivePopup from '@/components/popups/ArchivePopup.vue'
 export default {
     components: {
         addRelationshipPopup,
         archivePopup,
+        pagination,
     },
 
     /*

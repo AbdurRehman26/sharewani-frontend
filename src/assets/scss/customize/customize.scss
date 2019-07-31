@@ -40,7 +40,8 @@ span {
 
 .download-template {
     h5 {
-        font-size: 1rem;
+        font-size: 1.125rem;
+        font-family: $font_medium;
         padding-bottom: 8px;
     }
     p {
@@ -53,7 +54,8 @@ span {
 .link-action {
     display: flex;
     .btn-link {
-        padding-left: 10px;
+        padding: 0 0 0 10px;
+        margin-top: -3px;
     }
 }
 
@@ -65,12 +67,17 @@ span {
     padding-top: 25px;
     p {
         margin-bottom: 0px;
+
+        span {
+            font-family: $font_bold;
+        }
     }
     .download-current-file {
         button {
             position: absolute;
             right: 0;
             bottom: -11px;
+            padding-right: 0;
         }
     }
 }
@@ -296,8 +303,9 @@ a {
 }
 .card {
     &.custom-card {
-        border: 1px solid $border-color;
         padding: $card-padding;
+        border-radius: $upload-border-radius;
+        box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.07);
         margin-bottom: 0.625rem;
         .logo {
             width: 42px;
@@ -358,6 +366,7 @@ a {
             cursor: pointer;
             border-color: transparent;
             background-color: $grey-dark;
+            max-height: 90px;
             .logo {
                 display: inline-block !important;
                 margin-left: 0;
@@ -382,6 +391,7 @@ a {
                     padding-top: 11px;
                     margin-bottom: 0;
                     padding-left: 0px;
+                    font-family: $font_light;
                 }
             }
         }
@@ -393,6 +403,7 @@ a {
                 p {
                     &.caption-description {
                         color: $body-color;
+                        font-family: $font_medium;
                     }
                 }
                 h4 {
@@ -1132,9 +1143,9 @@ a {
     }
 }
 
-.work-impact {
-    color: $nav-color !important;
-}
+// .work-impact {
+//     color: $nav-color !important;
+// }
 
 .config-card-block {
     background-color: #fff;
@@ -1473,6 +1484,12 @@ a {
 
         p {
             color: $grey-lite;
+        }
+    }
+
+    .add-more-section {
+        .form-group {
+            padding: 0 4px;
         }
     }
 }
@@ -1864,4 +1881,35 @@ a {
 
 .toasted.default {
     background: $secondary !important;
+}
+
+.client-blacklist-title {
+    h3 {
+        font-family: $font_medium;
+    }
+}
+
+.table-records {
+    table {
+        tr {
+            th,
+            td {
+                &:first-child {
+                    text-align: left !important;
+                }
+
+                &:nth-child(2) {
+                    text-align: center !important;
+                }
+            }
+        }
+    }
+}
+
+.infoengine {
+    .sub-filter {
+        h2 {
+            margin: 30px 0 20px 0;
+        }
+    }
 }

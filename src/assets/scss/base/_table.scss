@@ -75,7 +75,15 @@
                 i {
                     vertical-align: middle;
                 }
+
+                &.work-impact {
+                    color: $nav-color;
+                    &:hover {
+                        color: $secondary;
+                    }
+                }
             }
+
             &.two-list {
                 width: 200px;
             }
@@ -136,7 +144,7 @@
                     color: $grey-lite;
                     text-decoration: none;
                     &:last-child {
-                        margin-right: 15px;
+                        margin-right: 10px;
                     }
                     &:hover,
                     &:focus {
@@ -199,7 +207,7 @@
                         bottom: 28px !important;
                         &:before {
                             top: auto;
-                            bottom: -12px !important;
+                            bottom: -10px !important;
                             transform: rotate(180deg);
                         }
                     }
@@ -272,7 +280,7 @@
 }
 
 .table-pagination {
-    padding-top: 15px;
+    padding-top: 35px;
     .record-shown {
         display: flex;
         align-items: center;
@@ -291,6 +299,7 @@
             margin-left: 15px;
             height: 36px;
             font-size: 0.75rem;
+            padding: 9px 28px 8px;
             font-family: $font_medium;
             color: $secondary;
             background-color: #fff;

@@ -65,14 +65,8 @@ export default {
             form: {
                 roleTitle: '',
                 insights: [
-                    {
-                        text: 'View Activity Dashboard',
-                        value: 'View Activity Dashboard',
-                    },
-                    {
-                        text: 'View Customer Statistics',
-                        value: 'View Customer Statistics',
-                    },
+                    'View Activity Dashboard',
+                    'View Customer Statistics',
                 ],
                 customerProfile: [
                     'View Customer Profile',

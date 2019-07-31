@@ -99,6 +99,7 @@
                 </template>
             </b-table>
         </div>
+        <pagination totalRecords="Showing 1 to 10 of 21 records"></pagination>
         <add-industry-popup></add-industry-popup>
         <archive-popup
             title="Archive Industry Factor"
@@ -111,10 +112,12 @@
 import { mapGetters } from 'vuex'
 import addIndustryPopup from '@/components/popups/AddIndustryPopup.vue'
 import archivePopup from '@/components/popups/ArchivePopup.vue'
+import pagination from '@/components/Pagination.vue'
 export default {
     components: {
         addIndustryPopup,
         archivePopup,
+        pagination,
     },
 
     /*

@@ -64,12 +64,12 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-md-12">
+                                <div class="col-md-12 add-more-section">
                                     <b-form-group>
                                         <base-button
                                             btnVariant="transparent"
                                             btnLabel="+ Add More"
-                                            cssClass="w-100"
+                                            cssClass="btn-block"
                                             @click="addOption()"
                                         ></base-button>
                                     </b-form-group>

@@ -74,6 +74,7 @@
                 </template>
             </b-table>
         </div>
+        <pagination totalRecords="Showing 1 to 4 of 4 records"></pagination>
         <add-application-popup></add-application-popup>
         <archive-popup
             title="Archive Application"
@@ -86,10 +87,12 @@
 import { mapGetters } from 'vuex'
 import addApplicationPopup from '@/components/popups/AddApplicationPopup.vue'
 import archivePopup from '@/components/popups/ArchivePopup.vue'
+import pagination from '@/components/Pagination.vue'
 export default {
     components: {
         addApplicationPopup,
         archivePopup,
+        pagination,
     },
 
     /*

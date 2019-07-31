@@ -41,6 +41,7 @@
                 </template>
             </b-table>
         </div>
+        <pagination totalRecords="Showing 1 to 10 of 13 records"></pagination>
         <modify-status-popup
             modalTitle="Modify Name Type Status"
             modalLabel="Primary Name (Person)"
@@ -50,10 +51,12 @@
 
 <script>
 import { mapGetters } from 'vuex'
+import pagination from '@/components/Pagination.vue'
 import modifyStatusPopup from '@/components/popups/ModifyStatusPopup.vue'
 export default {
     components: {
         modifyStatusPopup,
+        pagination,
     },
 
     /*

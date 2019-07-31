@@ -236,6 +236,7 @@ export default new Router({
         {
             path: '/configuration',
             name: 'configuration',
+
             component: () =>
                 import(/* webpackChunkName: "configuration" */ '@/views/configuration/Main.vue'),
             children: [
@@ -473,7 +474,7 @@ export default new Router({
                         },
                         {
                             path:
-                                '/configuration/screening-data/indentification',
+                                '/configuration/screening-data/identification',
                             name: 'screening-indentification',
                             component: () =>
                                 import(/* webpackChunkName: "nationality" */ './views/configuration/screening-data/Identification.vue'),
