@@ -65,7 +65,12 @@
                         >
                             <h2>{{ list.title }}</h2>
                             <p>{{ list.value }}</p>
-                            <i class="icon-error_outline" v-if="list.icon"></i>
+                            <i
+                                class="icon-error_outline"
+                                v-if="list.icon"
+                                v-b-tooltip.hover
+                                :title="' Onbaording Length '"
+                            ></i>
                         </div>
                     </div>
                 </div>
