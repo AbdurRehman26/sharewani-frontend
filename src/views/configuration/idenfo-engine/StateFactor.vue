@@ -23,7 +23,7 @@
                                 </div>
                                 <div class="col-md-8">
                                     <base-button
-                                        v-b-modal.add-state-popup
+                                        @click="modifyAdd('Add State')"
                                         btnLabel="+ Add State"
                                         btnType="button"
                                         btnVariant="secondary"
@@ -54,7 +54,7 @@
                             v-if="data.value == 'active'"
                             icon="icon-edit"
                             label="Modify"
-                            v-b-modal.add-state-popup
+                            @click="modifyAdd('Modify State Factor')"
                         ></base-action>
                         <!-- if action archive -->
                         <base-action
@@ -71,7 +71,7 @@
             totalRecords="Showing 1 to 5 of 5 records"
             nextBtnDisable
         ></pagination>
-        <add-state-popup></add-state-popup>
+        <add-state-popup :title="title"></add-state-popup>
         <archive-popup
             title="Archive State  Factor"
             description="Are you sure you want to archive this state factor? You can re-activate it later."
@@ -117,6 +117,7 @@ export default {
         return {
             fields: [],
             items: [],
+            title: 'Archive State Factor',
         }
     }, // End of Component > data
 
@@ -143,6 +144,10 @@ export default {
                 .stateFactor.items //get user data from store
             this.items = configTableItems //push data into array
             this.$emit('item-length', this.items.length)
+        },
+        modifyAdd(e) {
+            this.title = e
+            this.$bvModal.show('add-state-popup')
         },
     }, // End of Component > methods
 
