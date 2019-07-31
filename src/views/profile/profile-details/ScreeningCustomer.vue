@@ -47,10 +47,12 @@
         </div>
         <div class="card iframe-section">
             <div class="scrollable" id="style-2">
+                <!-- google search -->
                 <div>
                     <div class="gcse-searchbox"></div>
                     <div class="gcse-searchresults"></div>
                 </div>
+                <!-- google search end-->
             </div>
         </div>
         <cancel-review-process-popup></cancel-review-process-popup>

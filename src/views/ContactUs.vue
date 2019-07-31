@@ -41,16 +41,75 @@
                             btnType="submit"
                             btnVariant="primary"
                             class=""
-                            @click="$router.push('/dashboard')"
+                            @click="onClick"
                         ></base-button>
                     </b-form>
                 </div>
             </div>
             <div class="contact-link text-center">
                 Existing system user?
-                <router-link to="/">Sign In</router-link>
+                <router-link to="/"> Sign In</router-link>
             </div>
         </div>
         <base-footer></base-footer>
     </div>
 </template>
+
+<script>
+export default {
+    components: {},
+    /*
+        |--------------------------------------------------------------------------
+        | Component > props
+        |--------------------------------------------------------------------------
+        */
+    props: {
+        /**
+         * Value to determine the current compose mode which
+         * varies between 'add' and 'edit'
+         */
+    }, // End of Component > props
+
+    /*
+        |--------------------------------------------------------------------------
+        | Component > data
+        |--------------------------------------------------------------------------
+        */
+    data() {
+        return {}
+    }, // End of Component > data
+
+    /*
+        |--------------------------------------------------------------------------
+        | Component > computed
+        |--------------------------------------------------------------------------
+        */
+    computed: {}, // End of Component > computed
+
+    /*
+        |--------------------------------------------------------------------------
+        | Component > methods
+        |--------------------------------------------------------------------------
+        */
+    methods: {
+        onClick() {
+            this.$toasted.show('hello billo')
+        },
+    }, // End of Component > methods
+
+    // you can pass a single action as below
+    action: {
+        text: 'Cancel',
+        onClick: (e, toastObject) => {
+            toastObject.goAway(0)
+        },
+    },
+
+    /*
+        |--------------------------------------------------------------------------
+        | Component > mounted
+        |--------------------------------------------------------------------------
+        */
+    mounted() {}, // End of Component > mounted
+} // End of export default
+</script>

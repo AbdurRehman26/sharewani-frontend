@@ -4,8 +4,8 @@
             <div class="country-selection">
                 <ul>
                     <li v-for="(list, index) in countryListing" :key="index">
-                        <router-link
-                            :to="list.anchorLink"
+                        <a
+                            href="javascript:void(0)"
                             :class="
                                 index == 1
                                     ? 'router-link-exact-active router-link-active'
@@ -13,7 +13,7 @@
                             "
                         >
                             <span>{{ list.menuLabel }}</span>
-                        </router-link>
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -65,7 +65,7 @@ export default {
         return {
             countryListing: [
                 {
-                    anchorLink: '/',
+                    anchorLink: '#',
                     menuLabel: 'UAE',
                 },
                 {
@@ -73,11 +73,11 @@ export default {
                     menuLabel: 'PK',
                 },
                 {
-                    anchorLink: '/',
+                    anchorLink: '#',
                     menuLabel: 'UK',
                 },
                 {
-                    anchorLink: '/',
+                    anchorLink: '#',
                     menuLabel: 'USA',
                 },
             ],

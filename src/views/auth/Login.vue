@@ -18,7 +18,7 @@
                             id="input-1"
                             type="text"
                             required
-                            placeholder="Enter username"
+                            placeholder="Enter your account username"
                         ></b-form-input>
                     </b-form-group>
                     <b-form-group

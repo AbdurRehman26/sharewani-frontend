@@ -186,6 +186,9 @@
                         color: $secondary;
                     }
                 }
+                &:after {
+                    background-color: $secondary;
+                }
             }
             &:last-child {
                 &:after {

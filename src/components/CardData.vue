@@ -1,5 +1,8 @@
 <template>
-    <div class="card custom-card" :class="active == true ? 'active' : ''">
+    <div
+        class="card custom-card  card-builder"
+        :class="active == true ? 'active' : ''"
+    >
         <div
             class="logo"
             :style="{

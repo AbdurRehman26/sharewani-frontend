@@ -84,7 +84,7 @@
                                     type="text"
                                     v-model="form.initialBalance"
                                     required
-                                    placeholder="Enter Initial balance (expected with 30 days of account opening)"
+                                    placeholder="Enter Initial balance (expected within 30 days of account opening)"
                                 ></b-form-input>
                             </b-form-group>
                         </div>

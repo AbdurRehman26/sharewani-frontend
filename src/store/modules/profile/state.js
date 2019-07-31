@@ -238,7 +238,6 @@ export default {
                             title: 'Nationality:',
                             detail: 'American',
                         },
-
                         {
                             title: 'Record Last Updated:',
                             detail: 'June 19,2019',
@@ -631,7 +630,7 @@ export default {
                         },
                         {
                             headings: 'PEP Hit',
-                            icon: 'icon-pep',
+                            icon: 'icon-tomb',
                             actions: 'Rejected',
                         },
                     ],
