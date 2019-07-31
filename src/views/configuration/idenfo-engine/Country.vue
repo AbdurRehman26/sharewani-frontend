@@ -23,7 +23,11 @@
                                 </div>
                                 <div class="col-md-8">
                                     <base-button
-                                        v-b-modal.add-country-popup
+                                        @click="
+                                            addModify(
+                                                'Add Country of Residence Factor'
+                                            )
+                                        "
                                         btnLabel="+ Add Country"
                                         btnType="button"
                                         btnVariant="secondary"
@@ -49,7 +53,9 @@
                             v-if="data.value == 'active'"
                             icon="icon-edit"
                             label="Modify"
-                            v-b-modal.add-country-popup
+                            @click="
+                                addModify('Modify Country of Residence Factor')
+                            "
                         ></base-action>
                         <!-- if action archive -->
                         <base-action
@@ -63,7 +69,7 @@
             </b-table>
         </div>
         <pagination totalRecords="Showing 1 to 10 of 220 records"></pagination>
-        <add-country-popup></add-country-popup>
+        <add-country-popup :title="title"></add-country-popup>
         <archive-popup
             title="Archive Country Factor"
             description="Are you sure you want to archive this country factor? You can re-activate it later."
@@ -109,6 +115,7 @@ export default {
         return {
             fields: [],
             items: [],
+            title: '',
         }
     }, // End of Component > data
 
@@ -135,6 +142,11 @@ export default {
                 .items //get user data from store
             this.items = configTableItems //push data into array
             this.$emit('item-length', this.items.length)
+        },
+
+        addModify(e) {
+            this.title = e
+            this.$bvModal.show('add-country-popup')
         },
     }, // End of Component > methods
 

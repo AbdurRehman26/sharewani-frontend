@@ -23,7 +23,9 @@
                                 </div>
                                 <div class="col-md-8">
                                     <base-button
-                                        v-b-modal.add-industry-popup
+                                        @click="
+                                            addModify('Add Industry Factor')
+                                        "
                                         btnLabel="+ Add Industry"
                                         btnType="button"
                                         btnVariant="secondary"
@@ -86,7 +88,7 @@
                             v-if="data.value == 'active'"
                             icon="icon-edit"
                             label="Modify"
-                            v-b-modal.add-industry-popup
+                            @click="addModify('Modify Industry Factor')"
                         ></base-action>
                         <!-- if action archive -->
                         <base-action
@@ -100,7 +102,7 @@
             </b-table>
         </div>
         <pagination totalRecords="Showing 1 to 10 of 21 records"></pagination>
-        <add-industry-popup></add-industry-popup>
+        <add-industry-popup :title="title"></add-industry-popup>
         <archive-popup
             title="Archive Industry Factor"
             description="Are you sure you want to archive this industry factor? You can re-activate it later."
@@ -145,6 +147,7 @@ export default {
         return {
             fields: [],
             items: [],
+            title: '',
         }
     }, // End of Component > data
 
@@ -171,6 +174,11 @@ export default {
                 .items //get user data from store
             this.items = configTableItems //push data into array
             this.$emit('item-length', this.items.length)
+        },
+
+        addModify(e) {
+            this.title = e
+            this.$bvModal.show('add-industry-popup')
         },
     }, // End of Component > methods
 

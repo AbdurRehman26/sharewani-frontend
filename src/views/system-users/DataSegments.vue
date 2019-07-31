@@ -24,7 +24,7 @@
                                         btnLabel="+ Add Data Segment"
                                         btnType="submit"
                                         btnVariant="secondary btn-block"
-                                        v-b-modal.add-data-segment-popup
+                                        @click="addModify('Add Data Segment')"
                                         class="secondary-add-btn"
                                     ></base-button>
                                 </div>
@@ -54,7 +54,7 @@
                             "
                             icon="icon-edit"
                             label="Modify"
-                            v-b-modal.add-data-segment-popup
+                            @click="addModify('Modify Data Segment')"
                         ></base-action>
                         <!-- if action archive -->
                         <base-action
@@ -78,7 +78,7 @@
             totalRecords="Showing 1 to 4 of 4 records"
             nextBtnDisable
         ></pagination>
-        <add-data-segment-popup></add-data-segment-popup>
+        <add-data-segment-popup :title="title"></add-data-segment-popup>
         <archive-popup
             title="Archive Data Segment"
             description="Are you sure you want to archive this data segment? You can re-activate it later."
@@ -124,6 +124,7 @@ export default {
             selected: '1',
             fields: [],
             items: [],
+            title: '',
         }
     }, // End of Component > data
 
@@ -148,6 +149,11 @@ export default {
             this.fields = tableFields //push data into array
             let tableItems = this.systemUsersData.segments.items //get user data from store
             this.items = tableItems //push data into array
+        },
+
+        addModify(e) {
+            this.title = e
+            this.$bvModal.show('add-data-segment-popup')
         },
     }, // End of Component > methods
 
