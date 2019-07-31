@@ -80,7 +80,7 @@
             </div>
         </div>
         <div class="table-section table-min-width">
-            <b-table :items="items" :fields="fields">
+            <b-table v-if="items.length > 0" :items="items" :fields="fields">
                 <template slot="aging" slot-scope="data">
                     <span :class="data.value[0].riskRate">
                         {{ data.value[0].name }}
@@ -102,19 +102,19 @@
                                 v-if="data.value[0].riskType == 'flag'"
                                 class="icon-flag"
                                 v-b-tooltip.hover
-                                :title="' On Baording Alert'"
+                                :title="' Trigger alert'"
                             ></i>
                             <i
                                 v-if="data.value[0].riskType == 'reload'"
                                 class="icon-rotate-inverse"
                                 v-b-tooltip.hover
-                                :title="' Periodic'"
+                                :title="' Periodic alert'"
                             ></i>
                             <i
                                 v-if="data.value[0].riskType == 'rating'"
                                 class="icon-star"
                                 v-b-tooltip.hover
-                                :title="' Trigger Alert'"
+                                :title="' Onbaording alert '"
                             ></i>
                         </router-link>
                     </div>
@@ -190,6 +190,11 @@
                     </div>
                 </template>
             </b-table>
+            <table v-if="items.length == 0" class="table b-table">
+                <tbody>
+                    <base-no-record-found></base-no-record-found>
+                </tbody>
+            </table>
         </div>
         <pagination totalRecords="Showing 1 to 10 of 18 records"></pagination>
         <initiate-review-popup></initiate-review-popup>
@@ -243,9 +248,9 @@ export default {
             filterByAlert: null,
             filterAlertOptions: [
                 { text: 'Filter by alert type', value: null },
-                'On-boarding Alert',
-                'Trigger Alert',
-                'Periodic Alert',
+                'Onboarding alert',
+                'Periodic alert',
+                'Trigger alert',
             ],
             filterByRiskLevel: null,
             filterRiskLevelOptions: [

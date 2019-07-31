@@ -27,7 +27,7 @@
                         <b-form-group
                             id="input-group-2"
                             label="Description of the issue"
-                            label-for="input-1"
+                            label-for="input-2"
                         >
                             <b-form-textarea
                                 id="input-2"
