@@ -8,7 +8,7 @@
                 </span>
             </h2>
             <div class="auth-body">
-                <b-form>
+                <b-form @submit="onSubmit">
                     <b-form-group
                         id="input-group-1"
                         label="Username"
@@ -17,8 +17,8 @@
                         <b-form-input
                             id="input-1"
                             type="text"
-                            required
                             placeholder="Enter your account username"
+                            v-model="username"
                         ></b-form-input>
                     </b-form-group>
                     <b-form-group
@@ -29,8 +29,8 @@
                         <b-form-input
                             id="input-2"
                             type="password"
-                            required
                             placeholder="Enter your account password"
+                            v-model="password"
                         ></b-form-input>
                     </b-form-group>
                     <base-button
@@ -72,7 +72,10 @@ export default {
         |--------------------------------------------------------------------------
         */
     data() {
-        return {}
+        return {
+            username: '',
+            password: '',
+        }
     }, // End of Component > data
 
     /*
@@ -87,7 +90,31 @@ export default {
         | Component > methods
         |--------------------------------------------------------------------------
         */
-    methods: {}, // End of Component > methods
+    methods: {
+        // onSubmit(evt) {
+        //     if (this.username == 'admin' && this.password == 'admin123') {
+        //         this.$toasted.show('Login Sucessfully.', {
+        //             icon: {
+        //                 name: 'check',
+        //                 before: true,
+        //             },
+        //             className: 'success',
+        //         })
+        //         var route = this
+        //         setTimeout(function() {
+        //             route.$router.push('/dashboard')
+        //         }, 1000)
+        //     } else {
+        //         this.$toasted.show('Login Unsucessfully.', {
+        //             icon: {
+        //                 name: 'error',
+        //                 before: true,
+        //             },
+        //             className: 'danger',
+        //         })
+        //     }
+        // },
+    }, // End of Component > methods
 
     /*
         |--------------------------------------------------------------------------
