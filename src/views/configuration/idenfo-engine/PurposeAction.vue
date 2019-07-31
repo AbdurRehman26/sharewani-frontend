@@ -65,7 +65,10 @@
                 </template>
             </b-table>
         </div>
-        <pagination totalRecords="Showing 1 to 2 of 2 records"></pagination>
+        <pagination
+            totalRecords="Showing 1 to 2 of 2 records"
+            nextBtnDisable
+        ></pagination>
         <add-purpose-popup></add-purpose-popup>
         <archive-popup
             title="Archive Purpose of Action"
