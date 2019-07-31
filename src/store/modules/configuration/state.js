@@ -1032,6 +1032,12 @@ export default {
                         class: 'text-center status-absolute-pos',
                         sortable: true,
                     },
+                    {
+                        key: 'isrejected',
+                        label: 'Is Rejected?',
+                        class: 'text-center',
+                        sortable: true,
+                    },
 
                     {
                         key: 'action',
@@ -1042,6 +1048,7 @@ export default {
                 items: [
                     {
                         overrides: 'If Non-Resident',
+                        isrejected: 'No',
                         rating: [
                             {
                                 icon: 'icon-high-risk',
@@ -1054,6 +1061,7 @@ export default {
                     },
                     {
                         overrides: 'If Residence Country is Sanctioned',
+                        isrejected: 'Yes',
                         rating: [
                             {
                                 icon: 'icon-sanction',
@@ -1066,6 +1074,7 @@ export default {
                     },
                     {
                         overrides: 'If Nationality Country is Sanctioned',
+                        isrejected: 'Yes',
                         rating: [
                             {
                                 icon: 'icon-sanction',
@@ -1078,6 +1087,7 @@ export default {
                     },
                     {
                         overrides: 'If Contact No. Code Country is Sanctioned',
+                        isrejected: 'Yes',
                         rating: [
                             {
                                 icon: 'icon-sanction',
@@ -1090,6 +1100,7 @@ export default {
                     },
                     {
                         overrides: 'If Sanction Hit',
+                        isrejected: 'Yes',
                         rating: [
                             {
                                 icon: 'icon-sanction',
@@ -1102,6 +1113,7 @@ export default {
                     },
                     {
                         overrides: 'If PEP Hit',
+                        isrejected: 'No',
                         rating: [
                             {
                                 icon: 'icon-high-risk',
@@ -1114,6 +1126,7 @@ export default {
                     },
                     {
                         overrides: 'If Enforcement Hit',
+                        isrejected: 'No',
                         rating: [
                             {
                                 icon: 'icon-high-risk',
@@ -1126,6 +1139,7 @@ export default {
                     },
                     {
                         overrides: 'If Client Blacklist Hit',
+                        isrejected: 'No',
                         rating: [
                             {
                                 icon: 'icon-high-risk',
@@ -1138,6 +1152,7 @@ export default {
                     },
                     {
                         overrides: 'If Document Verification Mismatch',
+                        isrejected: 'No',
                         rating: [
                             {
                                 icon: 'icon-high-risk',

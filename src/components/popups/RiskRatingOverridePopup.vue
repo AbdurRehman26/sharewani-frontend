@@ -27,6 +27,22 @@
                             ></b-form-select>
                         </b-form-group>
                     </div>
+                    <div class="col-md-12">
+                        <b-form-group
+                            class="mb-0 kyc-status-radio overwrite-radio"
+                            id="input-group-4"
+                            label="Is Rejected?"
+                            label-for="rejected"
+                        >
+                            <b-form-group>
+                                <b-form-radio-group
+                                    v-model="rejected"
+                                    :options="form.rejected"
+                                    name="rejected"
+                                ></b-form-radio-group>
+                            </b-form-group>
+                        </b-form-group>
+                    </div>
                 </div>
             </b-form>
         </b-modal>
@@ -39,6 +55,7 @@ export default {
         return {
             form: {
                 rating: null,
+                rejected: [{ text: 'Yes', value: null }, 'No'],
             },
 
             rating: [
