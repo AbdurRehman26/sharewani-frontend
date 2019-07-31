@@ -1,5 +1,6 @@
 // Modal
 .modal {
+    pointer-events: none;
     .modal-dialog {
         margin: 4rem auto;
 
@@ -70,9 +71,28 @@
                 padding: 11px 24px;
                 border-top: 1px $border-opacity solid !important;
                 flex-direction: row-reverse;
+                position: relative;
 
                 .btn-primary {
                     min-width: 110px;
+                }
+
+                .client-footer-logo {
+                    position: absolute;
+                    right: 24px;
+                    width: 135px;
+                    top: 10px;
+
+                    h4 {
+                        color: $grey-lite;
+                        text-transform: uppercase;
+                        font-size: 0.75rem;
+                        font-family: $font_medium;
+                    }
+
+                    img {
+                        max-width: 130px;
+                    }
                 }
             }
         }

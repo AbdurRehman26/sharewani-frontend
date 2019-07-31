@@ -23,7 +23,11 @@
                                 </div>
                                 <div class="col-md-9">
                                     <base-button
-                                        v-b-modal.add-relationship-popup
+                                        @click="
+                                            addModify(
+                                                'Add Relationship Length Factor'
+                                            )
+                                        "
                                         btnLabel="+ Add Relationship Length"
                                         btnType="button"
                                         btnVariant="secondary"
@@ -55,7 +59,9 @@
                             v-if="data.value == 'active'"
                             icon="icon-edit"
                             label="Modify"
-                            v-b-modal.add-relationship-popup
+                            @click="
+                                addModify('Modify Relationship Length Factor')
+                            "
                         ></base-action>
                         <!-- if action archive -->
                         <base-action
@@ -72,7 +78,7 @@
             totalRecords="Showing 1 to 3 of 3 records"
             nextBtnDisable
         ></pagination>
-        <add-relationship-popup></add-relationship-popup>
+        <add-relationship-popup :title="title"></add-relationship-popup>
         <archive-popup
             title="Archive Relationship Length Factor"
             description="Are you sure you want to archive this relationship length factor? You can re-activate it later."
@@ -117,6 +123,7 @@ export default {
         return {
             fields: [],
             items: [],
+            title: '',
         }
     }, // End of Component > data
 
@@ -143,6 +150,11 @@ export default {
                 .relationshipData.items //get user data from store
             this.items = configTableItems //push data into array
             this.$emit('item-length', this.items.length)
+        },
+
+        addModify(e) {
+            this.title = e
+            this.$bvModal.show('add-relationship-popup')
         },
     }, // End of Component > methods
 

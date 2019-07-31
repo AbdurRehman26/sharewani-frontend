@@ -2,10 +2,9 @@
     <div>
         <b-modal
             id="screening-detail-popup"
+            ref="my-modal"
             title="Name Screening Hit Detail"
             size="md"
-            okTitle="Print"
-            cancelTitle="Cancel"
             cancelVariant="link"
         >
             <div class="scrollable screening-hit-section" id="style-2">
@@ -62,6 +61,32 @@
                     <div class="col-md-8">United Kingdom</div>
                 </div>
             </div>
+
+            <template slot="modal-footer" class="w-100">
+                <!-- Emulate built in modal footer ok and cancel button actions -->
+                <base-button
+                    btnLabel="Cancel"
+                    btnType="button"
+                    btnVariant="link"
+                    @click="hideModal"
+                ></base-button>
+
+                <base-button
+                    btnLabel="Print"
+                    btnType="button"
+                    btnVariant="primary"
+                ></base-button>
+
+                <div class="client-footer-logo">
+                    <h4>Source:</h4>
+
+                    <img
+                        :src="
+                            require('@/assets/images/dummy/' + clientLogo + '')
+                        "
+                    />
+                </div>
+            </template>
         </b-modal>
     </div>
 </template>
@@ -69,8 +94,27 @@
 <script>
 export default {
     components: {},
+    /*
+    |--------------------------------------------------------------------------
+    | Component > props
+    |--------------------------------------------------------------------------
+    */
+    props: {
+        /**
+         * Value to determine the current compose mode which
+         * varies between 'add' and 'edit'
+         */
+    }, // End of Component > props
+
+    /*
+    |--------------------------------------------------------------------------
+    | Component > data
+    |--------------------------------------------------------------------------
+    */
     data() {
-        return {}
+        return {
+            clientLogo: 'dow-logo.png',
+        }
     },
     methods: {
         /**
@@ -78,6 +122,10 @@ export default {
          *
          * @return {void}
          */
+
+        hideModal() {
+            this.$refs['my-modal'].hide()
+        },
     },
 }
 </script>

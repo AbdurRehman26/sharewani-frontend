@@ -23,7 +23,9 @@
                                 </div>
                                 <div class="col-md-8">
                                     <base-button
-                                        v-b-modal.add-work-popup
+                                        @click="
+                                            addModify('Add Work Type Factor')
+                                        "
                                         btnLabel="+ Add Work Type"
                                         btnType="button"
                                         btnVariant="secondary"
@@ -46,7 +48,7 @@
                             v-if="data.value == 'active'"
                             icon="icon-edit"
                             label="Modify"
-                            v-b-modal.add-work-popup
+                            @click="addModify('Modify Work Type Factor')"
                         ></base-action>
                         <!-- if action archive -->
                         <base-action
@@ -63,7 +65,7 @@
             totalRecords="Showing 1 to 7 of 7 records"
             nextBtnDisable
         ></pagination>
-        <add-work-popup></add-work-popup>
+        <add-work-popup :title="title"></add-work-popup>
         <archive-popup
             title="Archive Work Type Factor"
             description="Are you sure you want to archive this work type factor? You can re-activate it later."
@@ -109,6 +111,7 @@ export default {
         return {
             fields: [],
             items: [],
+            title: '',
         }
     }, // End of Component > data
 
@@ -135,6 +138,11 @@ export default {
                 .workfactor.items //get user data from store
             this.items = configTableItems //push data into array
             this.$emit('item-length', this.items.length)
+        },
+
+        addModify(e) {
+            this.title = e
+            this.$bvModal.show('add-work-popup')
         },
     }, // End of Component > methods
 

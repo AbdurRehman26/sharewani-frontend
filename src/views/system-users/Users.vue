@@ -60,7 +60,7 @@
                                 </div>
                                 <div class="col-xs-12 col-md-7">
                                     <base-button
-                                        v-b-modal.add-system-user-popup
+                                        @click="addModify('Add System User')"
                                         btnLabel="+ Add User"
                                         btnType="submit"
                                         btnVariant="secondary"
@@ -79,7 +79,9 @@
             <b-table :items="items" :fields="fields">
                 <template slot="profile" slot-scope="data">
                     <div class="profile-area">
-                        <router-link to="/customer-information">
+                        <router-link
+                            to="/customer-profiles/customer-information"
+                        >
                             <div
                                 class="profile-pic"
                                 :style="{
@@ -126,7 +128,7 @@
                             "
                             icon="icon-edit"
                             label="Modify"
-                            v-b-modal.add-system-user-popup
+                            @click="addModify('Modify System User')"
                         ></base-action>
                         <!-- if action archive -->
                         <base-action
@@ -147,7 +149,7 @@
             </b-table>
         </div>
         <pagination totalRecords="Showing 1 to 10 of 32 records"></pagination>
-        <add-system-user-popup></add-system-user-popup>
+        <add-system-user-popup :title="title"></add-system-user-popup>
         <archive-popup
             title="Archive User"
             description="Are you sure you want to archive this user? You can re-activate account later."
@@ -191,6 +193,7 @@ export default {
     data() {
         return {
             selected: '1',
+            title: '',
             fields: [],
             items: [],
             options: [
@@ -251,6 +254,11 @@ export default {
             this.fields = tableFields //push data into array
             let tableItems = this.systemUsersData.users.items //get user data from store
             this.items = tableItems //push data into array
+        },
+
+        addModify(e) {
+            this.title = e
+            this.$bvModal.show('add-system-user-popup')
         },
     }, // End of Component > methods
 

@@ -1,14 +1,19 @@
 <template>
     <div class="no-record-found">
         <div class="middle-align">
-            <img src="@/assets/images/no-record.svg" />
+            <div class="no-record-image">
+                <no-record-icon></no-record-icon>
+            </div>
             <p>No Record Found</p>
         </div>
     </div>
 </template>
-
 <script>
+import noRecordIcon from '@/components/icons/noRecordIcon.vue'
 export default {
+    components: {
+        noRecordIcon,
+    },
     /*
         |--------------------------------------------------------------------------
         | Component > props

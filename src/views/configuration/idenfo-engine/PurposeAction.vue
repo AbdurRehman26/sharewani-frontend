@@ -23,7 +23,9 @@
                                 </div>
                                 <div class="col-md-8">
                                     <base-button
-                                        v-b-modal.add-purpose-popup
+                                        @click="
+                                            addModify('Add Purpose of Action')
+                                        "
                                         btnLabel="+ Add Purpose"
                                         btnType="button"
                                         btnVariant="secondary"
@@ -52,7 +54,7 @@
                             v-if="data.value == 'active'"
                             icon="icon-edit"
                             label="Modify"
-                            v-b-modal.v-b-modal.add-purpose-popup
+                            @click="addModify('Modify Purpose of Action')"
                         ></base-action>
                         <!-- if action archive -->
                         <base-action
@@ -69,7 +71,7 @@
             totalRecords="Showing 1 to 2 of 2 records"
             nextBtnDisable
         ></pagination>
-        <add-purpose-popup></add-purpose-popup>
+        <add-purpose-popup :title="title"></add-purpose-popup>
         <archive-popup
             title="Archive Purpose of Action"
             description="Are you sure you want to archive this purpose of action? You can re-activate it later."
@@ -114,6 +116,7 @@ export default {
         return {
             fields: [],
             items: [],
+            title: '',
         }
     }, // End of Component > data
 
@@ -140,6 +143,11 @@ export default {
                 .purposeActionManagement.items //get user data from store
             this.items = configTableItems //push data into array
             this.$emit('item-length', this.items.length)
+        },
+
+        addModify(e) {
+            this.title = e
+            this.$bvModal.show('add-purpose-popup')
         },
     }, // End of Component > methods
 

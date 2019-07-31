@@ -2,7 +2,7 @@
     <div>
         <b-modal
             id="add-role-popup"
-            title="Add Role"
+            :title="title"
             size="lg"
             okTitle="Create"
             cancelTitle="Cancel"
@@ -60,6 +60,27 @@ export default {
         checkBoxListing,
         radioListing,
     },
+    /*
+    |--------------------------------------------------------------------------
+    | Component > props
+    |--------------------------------------------------------------------------
+    */
+    props: {
+        /**
+         * Value to determine the current compose mode which
+         * varies between 'add' and 'edit'
+         */
+        title: {
+            type: String,
+            default: null,
+        },
+    }, // End of Component > props
+
+    /*
+    |--------------------------------------------------------------------------
+    | Component > data
+    |--------------------------------------------------------------------------
+    */
     data() {
         return {
             form: {

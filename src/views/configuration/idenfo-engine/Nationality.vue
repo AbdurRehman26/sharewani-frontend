@@ -23,7 +23,9 @@
                                 </div>
                                 <div class="col-md-8">
                                     <base-button
-                                        v-b-modal.add-nationality-popup
+                                        @click="
+                                            addModify('Add Nationality Factor')
+                                        "
                                         btnLabel="+ Add Nationality"
                                         btnType="button"
                                         btnVariant="secondary"
@@ -49,7 +51,7 @@
                             v-if="data.value == 'active'"
                             icon="icon-edit"
                             label="Modify"
-                            v-b-modal.add-nationality-popup
+                            @click="addModify('Modify Nationality Factor')"
                         ></base-action>
                         <!-- if action archive -->
                         <base-action
@@ -63,7 +65,7 @@
             </b-table>
         </div>
         <pagination totalRecords="Showing 1 to 10 of 220 records"></pagination>
-        <add-nationality-popup></add-nationality-popup>
+        <add-nationality-popup :title="title"></add-nationality-popup>
 
         <archive-popup
             title="Archive Nationality Factor"
@@ -110,6 +112,7 @@ export default {
         return {
             fields: [],
             items: [],
+            title: 'Add Nationality Factor',
         }
     }, // End of Component > data
 
@@ -137,6 +140,11 @@ export default {
                 .nationality.items //get user data from store
             this.items = configTableItems //push data into array
             this.$emit('item-length', this.items.length)
+        },
+
+        addModify(e) {
+            this.title = e
+            this.$bvModal.show('add-nationality-popup')
         },
     }, // End of Component > methods
 
