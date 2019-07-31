@@ -120,8 +120,9 @@ export default {
 
             period: [
                 { value: null, text: 'Select review period' },
-                'Not Applicable',
-                'Rejected',
+                '1 Year',
+                '3 Years',
+                '6 Years',
             ],
         }
     },
