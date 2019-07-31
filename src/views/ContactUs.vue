@@ -40,8 +40,8 @@
                             btnLabel="SEND"
                             btnType="submit"
                             btnVariant="primary"
-                            class=""
                             @click="onClick"
+                            :class="disableClass == true ? 'disabled' : ''"
                         ></base-button>
                     </b-form>
                 </div>
@@ -76,7 +76,9 @@ export default {
         |--------------------------------------------------------------------------
         */
     data() {
-        return {}
+        return {
+            disableClass: false,
+        }
     }, // End of Component > data
 
     /*
@@ -98,7 +100,13 @@ export default {
                     name: 'check',
                     before: true,
                 },
+                className: 'success',
             })
+            this.disableClass = true
+            var select = this
+            setTimeout(function() {
+                select.disableClass = false
+            }, 5000)
         },
     }, // End of Component > methods
 
