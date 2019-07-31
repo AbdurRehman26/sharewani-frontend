@@ -20,7 +20,12 @@
                     <b-button type="submit" class="disable" variant="primary"
                         >PREVIOUS</b-button
                     >
-                    <b-button type="submit" variant="primary">NEXT</b-button>
+                    <b-button
+                        type="submit"
+                        variant="primary"
+                        :class="nextBtnDisable == true ? 'disable' : ''"
+                        >NEXT</b-button
+                    >
                 </div>
             </div>
         </div>
@@ -39,6 +44,10 @@ export default {
     props: {
         totalRecords: {
             type: String,
+            default: null,
+        },
+        nextBtnDisable: {
+            type: Boolean,
             default: null,
         },
         /**

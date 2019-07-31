@@ -41,7 +41,10 @@
                 </template>
             </b-table>
         </div>
-        <pagination totalRecords="Showing 1 to 6 of 6 records"></pagination>
+        <pagination
+            totalRecords="Showing 1 to 6 of 6 records"
+            nextBtnDisable
+        ></pagination>
         <modify-status-popup
             modalTitle="Modify Data Type Status"
             modalLabel="Date of Birth (Person)"

@@ -67,7 +67,10 @@
                 </template>
             </b-table>
         </div>
-        <pagination totalRecords="Showing 1 to 5 of 5 records"></pagination>
+        <pagination
+            totalRecords="Showing 1 to 5 of 5 records"
+            nextBtnDisable
+        ></pagination>
         <add-state-popup></add-state-popup>
         <archive-popup
             title="Archive State  Factor"

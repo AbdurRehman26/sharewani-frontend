@@ -68,7 +68,10 @@
                 </template>
             </b-table>
         </div>
-        <pagination totalRecords="Showing 1 to 3 of 3 records"></pagination>
+        <pagination
+            totalRecords="Showing 1 to 3 of 3 records"
+            nextBtnDisable
+        ></pagination>
         <add-relationship-popup></add-relationship-popup>
         <archive-popup
             title="Archive Relationship Length Factor"

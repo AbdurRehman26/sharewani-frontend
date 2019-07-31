@@ -73,7 +73,10 @@
                 </template>
             </b-table>
         </div>
-        <pagination totalRecords="Showing 1 to 6 of 6 records"></pagination>
+        <pagination
+            totalRecords="Showing 1 to 6 of 6 records"
+            nextBtnDisable
+        ></pagination>
         <add-role-popup></add-role-popup>
         <archive-popup
             title="Archive Role"

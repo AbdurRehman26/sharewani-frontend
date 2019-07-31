@@ -928,6 +928,9 @@ a {
                     padding: 14px 26px 14px 26px;
                     margin-right: 0;
                 }
+                i {
+                    font-size: 1.2rem;
+                }
                 .dropdown-open {
                     position: absolute;
                     z-index: 9;
@@ -1879,8 +1882,14 @@ a {
     }
 }
 
-.toasted.default {
+.toasted {
     background: $secondary !important;
+    &.success {
+        background: $success !important;
+    }
+    &.danger {
+        background: $danger !important;
+    }
 }
 
 .client-blacklist-title {

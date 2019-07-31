@@ -40,7 +40,10 @@
                 </template>
             </b-table>
         </div>
-        <pagination totalRecords="Showing 1 to 2 of 2 records"></pagination>
+        <pagination
+            totalRecords="Showing 1 to 2 of 2 records"
+            nextBtnDisable
+        ></pagination>
         <modify-status-popup
             modalTitle="Modify Record Status"
             modalLabel="Active"

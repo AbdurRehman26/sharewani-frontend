@@ -434,6 +434,9 @@ export default new Router({
                             name: 'occupation',
                             component: () =>
                                 import(/* webpackChunkName: "nationality" */ './views/configuration/screening-data/Occupation.vue'),
+                            meta: {
+                                responsiveMenuItem: true,
+                            },
                         },
                         {
                             path: '/configuration/screening-data/data-type',

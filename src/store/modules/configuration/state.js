@@ -1808,7 +1808,7 @@ export default {
                     },
                     {
                         descriptionid: 3,
-                        description: 'Special Intrest Person (SIP)',
+                        description: 'Special Interest Person (SIP)',
                         recordtype: 'Person',
                         status: [
                             {
@@ -1821,7 +1821,7 @@ export default {
                     },
                     {
                         descriptionid: 4,
-                        description: 'Special Intrest Entity (SIE)',
+                        description: 'Special Interest Entity (SIE)',
                         recordtype: 'Entity',
                         status: [
                             {
@@ -1868,7 +1868,7 @@ export default {
                 items: [
                     {
                         descriptionid: 1,
-                        description1: 'Special Intrest Person (SIP)',
+                        description1: 'Special Interest Person (SIP)',
                         description2: 'Section Lists',
                         status: [
                             {
@@ -1881,7 +1881,7 @@ export default {
                     },
                     {
                         descriptionid: 2,
-                        description1: 'Special Intrest Person (SIP)',
+                        description1: 'Special Interest Person (SIP)',
                         description2: 'Other Offical Lists',
                         status: [
                             {
@@ -1894,7 +1894,7 @@ export default {
                     },
                     {
                         descriptionid: 3,
-                        description1: 'Special Intrest Entity (SIE)',
+                        description1: 'Special Interest Entity (SIE)',
                         description2: 'Section Lists',
                         status: [
                             {
@@ -1907,7 +1907,7 @@ export default {
                     },
                     {
                         descriptionid: 4,
-                        description1: 'Special Intrest Entity (SIE)',
+                        description1: 'Special Interest Entity (SIE)',
                         description2: 'Other Offical Lists',
                         status: [
                             {
@@ -1920,7 +1920,7 @@ export default {
                     },
                     {
                         descriptionid: 5,
-                        description1: 'Special Intrest Person (SIP)',
+                        description1: 'Special Interest Person (SIP)',
                         description2: 'Terror',
                         status: [
                             {
@@ -1933,7 +1933,7 @@ export default {
                     },
                     {
                         descriptionid: 6,
-                        description1: 'Special Intrest Person (SIP)',
+                        description1: 'Special Interest Person (SIP)',
                         description2: 'Organised Crime',
                         status: [
                             {
@@ -1946,7 +1946,7 @@ export default {
                     },
                     {
                         descriptionid: 7,
-                        description1: 'Special Intrest Person (SIP)',
+                        description1: 'Special Interest Person (SIP)',
                         description2: 'Financial Crime',
                         status: [
                             {
@@ -1959,7 +1959,7 @@ export default {
                     },
                     {
                         descriptionid: 8,
-                        description1: 'Special Intrest Person (SIP)',
+                        description1: 'Special Interest Person (SIP)',
                         description2: 'Trafflicking',
                         status: [
                             {
@@ -1972,7 +1972,7 @@ export default {
                     },
                     {
                         descriptionid: 9,
-                        description1: 'Special Intrest Person (SIP)',
+                        description1: 'Special Interest Person (SIP)',
                         description2: 'Corruption',
                         status: [
                             {
@@ -1985,7 +1985,7 @@ export default {
                     },
                     {
                         descriptionid: 10,
-                        description1: 'Special Intrest Person (SIP)',
+                        description1: 'Special Interest Person (SIP)',
                         description2: 'War Crimes',
                         status: [
                             {
@@ -2630,6 +2630,53 @@ export default {
                                 cssClass: 'approved',
                                 icon: 'icon-check',
                                 label: 'Active',
+                            },
+                        ],
+                        action: 'active',
+                    },
+
+                    {
+                        person: 273,
+                        entity: 274,
+                        country: 'International',
+                        referenece_name: 'UN Angola Sanctions List',
+                        status: [
+                            {
+                                cssClass: 'inapproved',
+                                icon: 'icon-wrong',
+                                label: 'Inactive',
+                            },
+                        ],
+                        action: 'active',
+                    },
+
+                    {
+                        person: 1764,
+                        entity: 1765,
+                        country: 'International',
+                        referenece_name:
+                            "UN ISIL {Da'esh} and Al-Qaida Sanctions List",
+                        status: [
+                            {
+                                cssClass: 'approved',
+                                icon: 'icon-check',
+                                label: 'Active',
+                            },
+                        ],
+                        action: 'active',
+                    },
+
+                    {
+                        person: 265,
+                        entity: 266,
+                        country: 'International',
+                        referenece_name:
+                            'UN Panel of Experts DR Congo List - Annex l',
+                        status: [
+                            {
+                                cssClass: 'inapproved',
+                                icon: 'icon-wrong',
+                                label: 'Inactive',
                             },
                         ],
                         action: 'active',

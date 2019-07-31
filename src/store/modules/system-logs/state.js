@@ -106,6 +106,7 @@ export default {
             type: 'serial',
             categoryField: 'category',
             dataDateFormat: 'YYYY-MM-DD',
+            pathToImages: 'https://www.amcharts.com/lib/3/images/',
             fontSize: 14,
             colors: [
                 '#662D91',

@@ -41,7 +41,10 @@
                 </template>
             </b-table>
         </div>
-        <pagination></pagination>
+        <pagination
+            totalRecords="Showing 1 to 4 of 4 records"
+            nextBtnDisable
+        ></pagination>
         <modify-status-popup
             modalTitle="Modify Description 1 Status"
             modalLabel="Politically Exposed Person (PEP) (Person)"

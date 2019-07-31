@@ -68,7 +68,10 @@
                 </template>
             </b-table>
         </div>
-        <pagination totalRecords="Showing 1 to 7 of 7 records"></pagination>
+        <pagination
+            totalRecords="Showing 1 to 7 of 7 records"
+            nextBtnDisable
+        ></pagination>
         <add-product-popup></add-product-popup>
         <archive-popup
             title="Archive Product Factor"

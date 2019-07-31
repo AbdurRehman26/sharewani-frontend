@@ -40,7 +40,10 @@
                 </template>
             </b-table>
         </div>
-        <pagination totalRecords="Showing 1 to 10 of 10 records"></pagination>
+        <pagination
+            totalRecords="Showing 1 to 10 of 10 records"
+            nextBtnDisable
+        ></pagination>
         <modify-status-popup
             modalTitle="Modify Country Type Status"
             modalLabel="Citizenship"

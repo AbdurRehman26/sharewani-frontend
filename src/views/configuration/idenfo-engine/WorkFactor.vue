@@ -59,7 +59,10 @@
                 </template>
             </b-table>
         </div>
-        <pagination totalRecords="Showing 1 to 7 of 7 records"></pagination>
+        <pagination
+            totalRecords="Showing 1 to 7 of 7 records"
+            nextBtnDisable
+        ></pagination>
         <add-work-popup></add-work-popup>
         <archive-popup
             title="Archive Work Type Factor"
