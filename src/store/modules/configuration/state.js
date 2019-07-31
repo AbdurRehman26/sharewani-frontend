@@ -2634,6 +2634,53 @@ export default {
                         ],
                         action: 'active',
                     },
+
+                    {
+                        person: 273,
+                        entity: 274,
+                        country: 'International',
+                        referenece_name: 'UN Angola Sanctions List',
+                        status: [
+                            {
+                                cssClass: 'inapproved',
+                                icon: 'icon-wrong',
+                                label: 'Inactive',
+                            },
+                        ],
+                        action: 'active',
+                    },
+
+                    {
+                        person: 1764,
+                        entity: 1765,
+                        country: 'International',
+                        referenece_name:
+                            "UN ISIL {Da'esh} and Al-Qaida Sanctions List",
+                        status: [
+                            {
+                                cssClass: 'approved',
+                                icon: 'icon-check',
+                                label: 'Active',
+                            },
+                        ],
+                        action: 'active',
+                    },
+
+                    {
+                        person: 265,
+                        entity: 266,
+                        country: 'International',
+                        referenece_name:
+                            'UN Panel of Experts DR Congo List - Annex l',
+                        status: [
+                            {
+                                cssClass: 'inapproved',
+                                icon: 'icon-wrong',
+                                label: 'Inactive',
+                            },
+                        ],
+                        action: 'active',
+                    },
                 ],
             },
 

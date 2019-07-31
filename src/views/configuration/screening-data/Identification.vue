@@ -40,7 +40,10 @@
                 </template>
             </b-table>
         </div>
-        <pagination totalRecords="Showing 1 to 10 of 45 records"></pagination>
+        <pagination
+            totalRecords="Showing 1 to 10 of 45 records"
+            nextBtnDisable
+        ></pagination>
         <modify-status-popup
             modalTitle="Modify Identification Type Status"
             modalLabel="National ID"

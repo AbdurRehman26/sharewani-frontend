@@ -40,7 +40,10 @@
                 </template>
             </b-table>
         </div>
-        <pagination totalRecords="Showing 1 to 3 of 3 records"></pagination>
+        <pagination
+            totalRecords="Showing 1 to 3 of 3 records"
+            nextBtnDisable
+        ></pagination>
         <modify-status-popup
             modalTitle="Modify Role Type Status"
             modalLabel="Primary Occupation"

@@ -74,7 +74,10 @@
                 </template>
             </b-table>
         </div>
-        <pagination totalRecords="Showing 1 to 4 of 4 records"></pagination>
+        <pagination
+            totalRecords="Showing 1 to 4 of 4 records"
+            nextBtnDisable
+        ></pagination>
         <add-data-segment-popup></add-data-segment-popup>
         <archive-popup
             title="Archive Data Segment"
