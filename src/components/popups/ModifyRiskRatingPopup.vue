@@ -11,11 +11,45 @@
             <b-form>
                 <div class="row">
                     <div class="col-md-12">
-                        <h5 class="mb-20">PEP Hit Risk Rating Score</h5>
+                        <h5 class="mb-20">Point Scoring (Initial Range)</h5>
+                    </div>
+                    <div class="col-md-12 row-min-space">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <b-form-group
+                                    id="input-group-1"
+                                    label="Start"
+                                    label-for="start-score"
+                                >
+                                    <b-form-input
+                                        id="start-score"
+                                        type="text"
+                                        v-model="form.startScore"
+                                        required
+                                        placeholder="Enter start score"
+                                    ></b-form-input>
+                                </b-form-group>
+                            </div>
+                            <div class="col-md-6">
+                                <b-form-group
+                                    id="input-group-2"
+                                    label="End"
+                                    label-for="end-score"
+                                >
+                                    <b-form-input
+                                        id="end-score"
+                                        type="text"
+                                        v-model="form.endScore"
+                                        required
+                                        placeholder="Enter end score"
+                                    ></b-form-input>
+                                </b-form-group>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-md-12">
                         <b-form-group
-                            id="input-group-1"
+                            id="input-group-3"
                             label="Rating"
                             label-for="rating"
                         >
@@ -26,25 +60,10 @@
                             ></b-form-select>
                         </b-form-group>
                     </div>
+
                     <div class="col-md-12">
                         <b-form-group
-                            class="kyc-status-radio overwrite-radio"
-                            id="input-group-2"
-                            label="Is Rejected"
-                            label-for="rejected"
-                        >
-                            <b-form-group>
-                                <b-form-radio-group
-                                    v-model="rejected"
-                                    :options="form.rejected"
-                                    name="rejected"
-                                ></b-form-radio-group>
-                            </b-form-group>
-                        </b-form-group>
-                    </div>
-                    <div class="col-md-12">
-                        <b-form-group
-                            id="input-group-3"
+                            id="input-group-4"
                             label="Review Period"
                             label-for="period"
                         >
@@ -84,9 +103,8 @@ export default {
             rejected: '',
             generate: '',
             form: {
-                countryCode: '',
-                dialingCode: '',
-                countryTitle: '',
+                startScore: '',
+                endScore: '',
                 rating: null,
                 period: null,
                 rejected: [{ text: 'Yes', value: null }, 'No'],

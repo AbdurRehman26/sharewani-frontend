@@ -934,7 +934,7 @@ export default {
                 fields: [
                     {
                         key: 'pointscore',
-                        label: 'POINT SCORE / CASE',
+                        label: 'POINT SCORE',
                         class: 'w-320px',
                         sortable: true,
                     },
@@ -1003,46 +1003,7 @@ export default {
                         action: 'active',
                     },
                     {
-                        pointscore: 'PEP Hit',
-                        rating: [
-                            {
-                                icon: 'icon-high-risk',
-                                label: 'High Risk',
-                                cssClass: 'high-risk',
-                            },
-                        ],
-                        reviewperiod: 'Rejected',
-                        alert: 'Yes',
-                        action: 'active',
-                    },
-                    {
-                        pointscore: 'Enforcement Hit',
-                        rating: [
-                            {
-                                icon: 'icon-high-risk',
-                                label: 'High Risk',
-                                cssClass: 'high-risk',
-                            },
-                        ],
-                        reviewperiod: 'Rejected',
-                        alert: 'Yes',
-                        action: 'active',
-                    },
-                    {
-                        pointscore: 'Client Blacklist Hit',
-                        rating: [
-                            {
-                                icon: 'icon-high-risk',
-                                label: 'High Risk',
-                                cssClass: 'high-risk',
-                            },
-                        ],
-                        reviewperiod: 'Rejected',
-                        alert: 'Yes',
-                        action: 'active',
-                    },
-                    {
-                        pointscore: 'Sanction Hit',
+                        pointscore: 'Sanctioned Risk',
                         rating: [
                             {
                                 icon: 'icon-sanction',
@@ -1050,65 +1011,37 @@ export default {
                                 cssClass: 'sanctioned-risk',
                             },
                         ],
-                        reviewperiod: 'Rejected',
+                        reviewperiod: '1 Year',
                         alert: 'Yes',
                         action: 'active',
                     },
+                ],
+            },
+
+            riskRatingOverride: {
+                fields: [
                     {
-                        pointscore: 'Document Verification Mismatch ',
-                        rating: [
-                            {
-                                icon: 'icon-trash',
-                                label: 'Inactive',
-                                cssClass: 'inapproved',
-                            },
-                        ],
-                        reviewperiod: 'Rejected',
-                        alert: 'Yes',
-                        action: 'active',
+                        key: 'overrides',
+                        label: 'Overrides',
+                        class: 'w-320px',
+                        sortable: true,
                     },
                     {
-                        pointscore: 'If Residence Country is Sanctioned',
-                        rating: [
-                            {
-                                icon: 'icon-sanction',
-                                label: 'Sanctioned',
-                                cssClass: 'sanctioned-risk',
-                            },
-                        ],
-                        reviewperiod: 'Rejected',
-                        alert: 'Yes',
-                        action: 'active',
+                        key: 'rating',
+                        label: 'Override Rating',
+                        class: 'text-center status-absolute-pos',
+                        sortable: true,
                     },
 
                     {
-                        pointscore: 'If Nationality Country is Sanctioned',
-                        rating: [
-                            {
-                                icon: 'icon-sanction',
-                                label: 'Sanctioned',
-                                cssClass: 'sanctioned-risk',
-                            },
-                        ],
-                        reviewperiod: 'Rejected',
-                        alert: 'Yes',
-                        action: 'active',
+                        key: 'action',
+                        label: 'ACTION',
+                        class: 'single-list',
                     },
+                ],
+                items: [
                     {
-                        pointscore: 'If Contact No. Code Country is Sanctioned',
-                        rating: [
-                            {
-                                icon: 'icon-sanction',
-                                label: 'Sanctioned',
-                                cssClass: 'sanctioned-risk',
-                            },
-                        ],
-                        reviewperiod: 'Rejected',
-                        alert: 'Yes',
-                        action: 'active',
-                    },
-                    {
-                        pointscore: 'Address in High Risk Country',
+                        overrides: 'If Non-Resident',
                         rating: [
                             {
                                 icon: 'icon-high-risk',
@@ -1116,8 +1049,103 @@ export default {
                                 cssClass: 'high-risk',
                             },
                         ],
-                        reviewperiod: 'Rejected',
-                        alert: 'Yes',
+
+                        action: 'active',
+                    },
+                    {
+                        overrides: 'If Residence Country is Sanctioned',
+                        rating: [
+                            {
+                                icon: 'icon-sanction',
+                                label: 'Sanctioned',
+                                cssClass: 'sanctioned-risk',
+                            },
+                        ],
+
+                        action: 'active',
+                    },
+                    {
+                        overrides: 'If Nationality Country is Sanctioned',
+                        rating: [
+                            {
+                                icon: 'icon-sanction',
+                                label: 'Sanctioned',
+                                cssClass: 'sanctioned-risk',
+                            },
+                        ],
+
+                        action: 'active',
+                    },
+                    {
+                        overrides: 'If Contact No. Code Country is Sanctioned',
+                        rating: [
+                            {
+                                icon: 'icon-sanction',
+                                label: 'Sanctioned',
+                                cssClass: 'sanctioned-risk',
+                            },
+                        ],
+
+                        action: 'active',
+                    },
+                    {
+                        overrides: 'If Sanction Hit',
+                        rating: [
+                            {
+                                icon: 'icon-sanction',
+                                label: 'Sanctioned',
+                                cssClass: 'sanctioned-risk',
+                            },
+                        ],
+
+                        action: 'active',
+                    },
+                    {
+                        overrides: 'If PEP Hit',
+                        rating: [
+                            {
+                                icon: 'icon-high-risk',
+                                label: 'High Risk',
+                                cssClass: 'high-risk',
+                            },
+                        ],
+
+                        action: 'active',
+                    },
+                    {
+                        overrides: 'If Enforcement Hit',
+                        rating: [
+                            {
+                                icon: 'icon-high-risk',
+                                label: 'High Risk',
+                                cssClass: 'high-risk',
+                            },
+                        ],
+
+                        action: 'active',
+                    },
+                    {
+                        overrides: 'If Client Blacklist Hit',
+                        rating: [
+                            {
+                                icon: 'icon-high-risk',
+                                label: 'High Risk',
+                                cssClass: 'high-risk',
+                            },
+                        ],
+
+                        action: 'active',
+                    },
+                    {
+                        overrides: 'If Document Verification Mismatch',
+                        rating: [
+                            {
+                                icon: 'icon-high-risk',
+                                label: 'High Risk',
+                                cssClass: 'high-risk',
+                            },
+                        ],
+
                         action: 'active',
                     },
                 ],
