@@ -16,20 +16,20 @@
             display: block;
         }
     }
+
+    .custom-control-label {
+        &:after {
+            background: no-repeat 50% / 80% 60%;
+        }
+    }
 }
 
 .custom-checkbox .custom-control-input:checked ~ .custom-control-label::after,
 .custom-checkbox
     .custom-control-input:indeterminate
     ~ .custom-control-label::after {
-    background-image: none !important;
-    background-repeat: no-repeat;
-    content: '\e943';
-    font-family: 'icomoon';
-    font-size: 10px;
-    top: 9px;
-    left: -21px;
-    color: $secondary;
+    top: 4px;
+    left: -24px;
 }
 
 .custom-control-input:not(:disabled):active ~ .custom-control-label:before {
@@ -49,9 +49,28 @@
     box-shadow: none;
 }
 
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label::after {
+    background-image: url('./assets/images/check-icon.svg');
+}
+
 .custom-checkbox
     .custom-control-input:indeterminate
     ~ .custom-control-label::before {
     border-color: $border-color;
     background-color: transparent;
+}
+
+.custom-checkbox
+    .custom-control-input:indeterminate
+    ~ .custom-control-label::after {
+    background-image: url('./assets/images/minus-icon.svg');
+    top: 4px !important;
+}
+
+.col-form-label {
+    .custom-checkbox
+        .custom-control-input:checked
+        ~ .custom-control-label::after {
+        top: 4px !important;
+    }
 }
