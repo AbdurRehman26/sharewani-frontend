@@ -25,6 +25,7 @@
                                             label-for="documentScan"
                                         >
                                             <b-form-file
+                                                id="documentScan"
                                                 @change="uploadLogoOne"
                                                 accept="image/jpeg, image/png"
                                                 placeholder="Choose transparent logo image file (PNG)"
@@ -49,9 +50,10 @@
                                         <b-form-group
                                             id="input-group-6"
                                             label="LOGO FOR DARK BACKGROUND"
-                                            label-for="documentScan"
+                                            label-for="documentBg"
                                         >
                                             <b-form-file
+                                                id="documentBg"
                                                 @change="uploadLogoTwo"
                                                 accept="image/jpeg, image/png"
                                                 placeholder="Choose transparent logo image file (PNG)"
@@ -84,9 +86,11 @@
                                         <b-form-group
                                             id="input-group-6"
                                             label="PRIMARY COLOR CODE"
+                                            label-for="primary-code"
                                         >
                                             <div class="color-area">
                                                 <b-form-input
+                                                    id="primary-code"
                                                     type="text"
                                                     v-model="primaryColor"
                                                     placeholder="Primary Color"
@@ -116,9 +120,11 @@
                                         <b-form-group
                                             id="input-group-6"
                                             label="SECONDARY COLOR CODE"
+                                            label-for="secondary-code"
                                         >
                                             <div class="color-area">
                                                 <b-form-input
+                                                    id="secondary-code"
                                                     type="text"
                                                     v-model="secondaryColor"
                                                     placeholder="Secondary Color"
@@ -148,9 +154,11 @@
                                         <b-form-group
                                             id="input-group-6"
                                             label="INTERFACE DARK COLOR CODE"
+                                            label-for="interface-dark-code"
                                         >
                                             <div class="color-area">
                                                 <b-form-input
+                                                    id="interface-dark-code"
                                                     type="text"
                                                     v-model="darkColor"
                                                     placeholder="Secondary Color"
@@ -179,10 +187,12 @@
                                     <div class="col-lg-6">
                                         <b-form-group
                                             id="input-group-6"
-                                            label="INTERFACE DARK COLOR CODE"
+                                            label="INTERFACE DARK MEDIUM DARK COLOR CODE"
+                                            label-for="interface-medium-code"
                                         >
                                             <div class="color-area">
                                                 <b-form-input
+                                                    id="interface-medium-code"
                                                     type="text"
                                                     v-model="darkMediumColor"
                                                     placeholder="Secondary Color"
