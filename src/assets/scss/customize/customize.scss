@@ -82,12 +82,25 @@ span {
     }
 }
 
+.baseColor {
+    fill: $primary;
+}
+
 .btn-icon {
     position: absolute;
     left: 0;
     i {
         font-size: 1.125rem;
         padding-right: 4px;
+    }
+}
+
+.no-record-image {
+    svg {
+        max-width: 110px;
+        margin: auto;
+        margin-bottom: 10px;
+        display: block;
     }
 }
 
@@ -716,7 +729,7 @@ a {
             &.with-icon {
                 &:before {
                     margin-right: 10px;
-                    font-size: 0.9rem;
+                    font-size: 0.75rem;
                     vertical-align: baseline;
                     position: relative;
                     top: 2px;

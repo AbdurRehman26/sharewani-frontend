@@ -1,19 +1,16 @@
 <template>
-    <div class="no-record-found">
+    <div class="no-record-found table-spinner">
         <div class="middle-align">
-            <div class="no-record-image">
-                <no-record-icon></no-record-icon>
+            <div class="spinner-img">
+                <img src="@/assets/images/loader.svg" class="main" />
+                <p>Loading...</p>
             </div>
-            <p>No Record Found</p>
         </div>
     </div>
 </template>
+
 <script>
-import noRecordIcon from '@/components/icons/noRecordIcon.vue'
 export default {
-    components: {
-        noRecordIcon,
-    },
     /*
         |--------------------------------------------------------------------------
         | Component > props

@@ -43,6 +43,8 @@
         <pagination
             totalRecords="Showing 1 to 2 of 2 records"
             nextBtnDisable
+            selectPaginationDisable
+            :showRecords="recordShow"
         ></pagination>
         <modify-status-popup
             modalTitle="Modify Record Status"
@@ -86,6 +88,7 @@ export default {
         return {
             fields: [],
             items: [],
+            recordShow: [{ text: 'Show 10 records', value: null }],
         }
     }, // End of Component > data
 

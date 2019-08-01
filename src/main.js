@@ -6,6 +6,7 @@ import './registerServiceWorker'
 import BootstrapVue from 'bootstrap-vue'
 import vbclass from 'vue-body-class'
 import Toasted from 'vue-toasted'
+
 require('@/auto-import.js')
 
 Vue.use(BootstrapVue)
@@ -14,11 +15,10 @@ Vue.use(Toasted, {
     position: 'bottom-right',
     theme: 'bubble',
     duration: 5000,
-    iconPack: 'material', // set your iconPack, defaults to material. material|fontawesome|custom-class
+    iconPack: 'material',
 })
 
 Vue.use(vbclass, router)
-
 Vue.config.productionTip = false
 
 new Vue({

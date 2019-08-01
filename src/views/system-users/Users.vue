@@ -148,7 +148,10 @@
                 </template>
             </b-table>
         </div>
-        <pagination totalRecords="Showing 1 to 10 of 32 records"></pagination>
+        <pagination
+            totalRecords="Showing 1 to 10 of 32 records"
+            :showRecords="recordShow"
+        ></pagination>
         <add-system-user-popup :title="title"></add-system-user-popup>
         <archive-popup
             title="Archive User"
@@ -229,6 +232,11 @@ export default {
                 'Active',
                 'Pending',
                 'Archived',
+            ],
+            recordShow: [
+                { text: 'Show 10 records', value: null },
+                { text: 'Show 20 records', value: 20 },
+                { text: 'Show 50 records', value: 50 },
             ],
         }
     }, // End of Component > data

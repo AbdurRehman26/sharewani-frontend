@@ -80,7 +80,8 @@
             </div>
         </div>
         <div class="table-section table-min-width">
-            <b-table v-if="items.length > 0" :items="items" :fields="fields">
+            <!--main table -->
+            <b-table v-if="fields.length > 0" :items="items" :fields="fields">
                 <template slot="aging" slot-scope="data">
                     <span :class="data.value[0].riskRate">
                         {{ data.value[0].name }}
@@ -190,13 +191,18 @@
                     </div>
                 </template>
             </b-table>
-            <table v-if="items.length == 0" class="table b-table">
-                <tbody>
-                    <base-no-record-found></base-no-record-found>
-                </tbody>
-            </table>
+            <!-- When data is loading -->
+            <base-table-spinner v-if="items.length == 0"></base-table-spinner>
+            <!-- When record not found -->
+            <base-no-record-found
+                v-if="items.length == 0"
+            ></base-no-record-found>
         </div>
-        <pagination totalRecords="Showing 1 to 10 of 18 records"></pagination>
+        <pagination
+            totalRecords="Showing 1 to 10 of 18 records"
+            :showRecords="recordShow"
+            v-if="items.length > 0"
+        ></pagination>
         <initiate-review-popup></initiate-review-popup>
     </div>
 </template>
@@ -266,6 +272,10 @@ export default {
                 '31-60 days',
                 '61-90 days',
                 '91 days+',
+            ],
+            recordShow: [
+                { text: 'Show 10 records', value: null },
+                { text: 'Show 20 records', value: 20 },
             ],
         }
     }, // End of Component > data

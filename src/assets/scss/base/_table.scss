@@ -33,12 +33,11 @@
             border-top: none !important;
             outline: 0;
             &[aria-sort] {
-                position: relative;
-                cursor: pointer;
                 &:after {
                     content: '\E904';
                     font-family: 'icomoon';
                     padding-left: 8px;
+                    vertical-align: middle;
                 }
             }
             &:first-child {
@@ -291,6 +290,11 @@
         }
         p {
             padding-left: 15px;
+        }
+        .disable {
+            select {
+                color: $grey-medium !important;
+            }
         }
     }
     .next-previous-pagination {

@@ -149,6 +149,7 @@
                             </div>
                             <pagination
                                 totalRecords="Showing 1 to 10 of 3,120 records"
+                                :showRecords="recordShow"
                             ></pagination>
                         </div>
                     </div>
@@ -238,6 +239,11 @@ export default {
                 'Lucas Pacheco',
                 'Sofie Hubert',
                 'Ingo Schimpff',
+            ],
+            recordShow: [
+                { text: 'Show 10 records', value: null },
+                { text: 'Show 20 records', value: 20 },
+                { text: 'Show 50 records', value: 50 },
             ],
         }
     }, // End of Component > data
