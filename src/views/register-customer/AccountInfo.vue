@@ -23,12 +23,16 @@
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label for="data-segments">Product Type</label>
-                                <v-selectize
-                                    id="data-segments"
-                                    :options="form.productOption"
-                                    v-model="form.productSelected"
-                                    multiple
-                                />
+                                <multiselect
+                                    v-model="productType"
+                                    label="name"
+                                    placeholder="Select product type"
+                                    track-by="code"
+                                    :options="options"
+                                    :multiple="true"
+                                    :taggable="true"
+                                    @tag="addTag"
+                                ></multiselect>
                             </div>
                         </div>
                         <div class="col-md-4">
@@ -101,10 +105,10 @@
     </b-form>
 </template>
 <script>
-import VSelectize from '@isneezy/vue-selectize'
+import Multiselect from 'vue-multiselect'
 export default {
     components: {
-        VSelectize,
+        Multiselect,
     },
 
     /*
@@ -145,14 +149,22 @@ export default {
                     'For Business Purpose',
                     'For Saving Purpose',
                 ],
-                productOption: [
-                    'Saving Account',
-                    'Current Account',
-                    'Online Account',
-                ],
+
                 productSelected: ['Saving Account', 'Current Account'],
                 initialBalance: '',
             },
+
+            productType: [
+                { name: 'Saving Account', code: 'savingAccount' },
+                { name: 'Current Account', code: 'currentAccount' },
+            ],
+            options: [
+                { name: 'Saving Account', code: 'savingAccount' },
+                { name: 'Current Account', code: 'currentAccount' },
+                { name: 'Credit Card', code: 'creditCard' },
+                { name: 'Short Term Loan', code: 'shortLoan' },
+                { name: 'Financial Investment', code: 'financialInvestment' },
+            ],
         }
     }, // End of Component > data
 
@@ -175,6 +187,17 @@ export default {
             } else {
                 this.$router.push('/register-customer/finish')
             }
+        },
+
+        addTag(newTag) {
+            const tag = {
+                name: newTag,
+                code:
+                    newTag.substring(0, 2) +
+                    Math.floor(Math.random() * 10000000),
+            }
+            this.options.push(tag)
+            this.value.push(tag)
         },
     }, // End of Component > methods
 
