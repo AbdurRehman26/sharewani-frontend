@@ -675,7 +675,7 @@ export default new Router({
                         import(/* webpackChunkName: "upload-document" */ './views/register-customer/UploadDocuments.vue'),
                     meta: {
                         name: 'Register Customers',
-                        title: 'Register Customers',
+                        title: 'Upload Document',
                         sessionStep: '1',
                     },
                 },
@@ -686,7 +686,7 @@ export default new Router({
                         import(/* webpackChunkName: "record-video" */ './views/register-customer/RecordVideo.vue'),
                     meta: {
                         name: 'Register Customers',
-                        title: 'Register Customers',
+                        title: 'Record Video',
                         sessionStep: '2',
                     },
                 },
@@ -697,7 +697,7 @@ export default new Router({
                         import(/* webpackChunkName: "setup-profile" */ './views/register-customer/SetupProfile.vue'),
                     meta: {
                         name: 'Register Customers',
-                        title: 'Register Customers',
+                        title: 'Setup Profile',
                         sessionStep: '3',
                     },
                 },
@@ -708,7 +708,7 @@ export default new Router({
                         import(/* webpackChunkName: "account-info" */ './views/register-customer/AccountInfo.vue'),
                     meta: {
                         name: 'Register Customers',
-                        title: 'Register Customers',
+                        title: 'Account Info',
                         sessionStep: '4',
                     },
                 },
@@ -719,7 +719,7 @@ export default new Router({
                         import(/* webpackChunkName: "finish" */ './views/register-customer/Finish.vue'),
                     meta: {
                         name: 'Register Customers',
-                        title: 'Register Customers',
+                        title: 'Finish',
                         sessionStep: '5',
                     },
                 },
@@ -739,7 +739,7 @@ export default new Router({
                         import(/* webpackChunkName: "public-registration-upload-document" */ './views/register-customer/UploadDocuments.vue'),
                     meta: {
                         name: 'Online Account Opening Application',
-                        title: 'Online Account Opening Application',
+                        title: 'Public Registration Upload Document',
                         sessionStep: '1',
                         noSidebar: true,
                         publicRegistration: true,
@@ -752,7 +752,7 @@ export default new Router({
                         import(/* webpackChunkName: "public-registration-upload-document" */ './views/register-customer/UploadDocuments.vue'),
                     meta: {
                         name: 'Online Account Opening Application',
-                        title: 'Online Account Opening Application',
+                        title: 'Public Registration Upload Document',
                         sessionStep: '1',
                         noSidebar: true,
                         publicRegistration: true,
@@ -765,7 +765,7 @@ export default new Router({
                         import(/* webpackChunkName: "public-registration-record-video" */ './views/register-customer/RecordVideo.vue'),
                     meta: {
                         name: 'Online Account Opening Application',
-                        title: 'Online Account Opening Application',
+                        title: 'Public Registration Record Video',
                         sessionStep: '2',
                         noSidebar: true,
                         publicRegistration: true,
@@ -778,7 +778,7 @@ export default new Router({
                         import(/* webpackChunkName: "public-registration-setup-profile" */ './views/register-customer/SetupProfile.vue'),
                     meta: {
                         name: 'Online Account Opening Application',
-                        title: 'Online Account Opening Application',
+                        title: 'Public Registration Setup Profile',
                         sessionStep: '3',
                         noSidebar: true,
                         publicRegistration: true,
@@ -791,7 +791,7 @@ export default new Router({
                         import(/* webpackChunkName: "public-registration-account-info" */ './views/register-customer/AccountInfo.vue'),
                     meta: {
                         name: 'Online Account Opening Application',
-                        title: 'Online Account Opening Application',
+                        title: 'Public Registration Account Info',
                         sessionStep: '4',
                         noSidebar: true,
                         publicRegistration: true,
@@ -804,7 +804,7 @@ export default new Router({
                         import(/* webpackChunkName: "public-registration-finish" */ './views/register-customer/Finish.vue'),
                     meta: {
                         name: 'Online Account Opening Application',
-                        title: 'Online Account Opening Application',
+                        title: 'Public Registration Finish',
                         sessionStep: '5',
                         noSidebar: true,
                         publicRegistration: true,
