@@ -85,7 +85,7 @@ export default new Router({
                     component: () =>
                         import(/* webpackChunkName: "dashboard-alerts" */ '@/views/dashboard/Alert.vue'),
                     meta: {
-                        title: 'Alert',
+                        title: 'Alerts',
                     },
                 },
                 {
@@ -94,7 +94,7 @@ export default new Router({
                     component: () =>
                         import(/* webpackChunkName: "dashboard-alerts" */ '@/views/dashboard/Alert.vue'),
                     meta: {
-                        title: 'Alert',
+                        title: 'Alerts',
                     },
                 },
                 {

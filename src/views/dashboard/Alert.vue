@@ -199,7 +199,7 @@
             ></base-no-record-found>
         </div>
         <pagination
-            totalRecords="Showing 1 to 10 of 18 records"
+            totalRecords="Showing 1 to 10 of 42 records"
             :showRecords="recordShow"
             v-if="items.length > 0"
         ></pagination>
@@ -276,6 +276,9 @@ export default {
             recordShow: [
                 { text: 'Show 10 records', value: null },
                 { text: 'Show 20 records', value: 20 },
+                { text: 'Show 30 records', value: 20 },
+                { text: 'Show 40 records', value: 20 },
+                { text: 'Show 50 records', value: 20 },
             ],
         }
     }, // End of Component > data
