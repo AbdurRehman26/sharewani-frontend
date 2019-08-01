@@ -155,8 +155,6 @@ export default {
                 { text: 'Show 10 records', value: null },
                 { text: 'Show 20 records', value: 20 },
                 { text: 'Show 30 records', value: 30 },
-                { text: 'Show 40 records', value: 40 },
-                { text: 'Show 50 records', value: 50 },
             ],
         }
     }, // End of Component > data
