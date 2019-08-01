@@ -69,7 +69,9 @@
                                 class="icon-error_outline"
                                 v-if="list.icon"
                                 v-b-tooltip.hover
-                                :title="' Onbaording Length '"
+                                :title="
+                                    ' Average time from when customer details are submitted till when they are approved / rejected. '
+                                "
                             ></i>
                         </div>
                     </div>
