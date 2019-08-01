@@ -6,6 +6,7 @@ import './registerServiceWorker'
 import BootstrapVue from 'bootstrap-vue'
 import vbclass from 'vue-body-class'
 import Toasted from 'vue-toasted'
+/*import VueMeta from 'vue-meta'*/
 
 require('@/auto-import.js')
 

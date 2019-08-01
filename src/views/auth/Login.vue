@@ -8,7 +8,8 @@
                 </span>
             </h2>
             <div class="auth-body">
-                <b-form @submit="onSubmit">
+                <!--                 <b-form @submit="onSubmit"> -->
+                <b-form>
                     <b-form-group
                         id="input-group-1"
                         label="Username"

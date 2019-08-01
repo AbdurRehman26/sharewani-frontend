@@ -50,7 +50,7 @@
                 <!-- google search -->
                 <div>
                     <div class="gcse-searchbox"></div>
-                    <div class="gcse-searchresults"></div>
+                    <div class="gcse-searchresults-only"></div>
                 </div>
                 <!-- google search end-->
             </div>

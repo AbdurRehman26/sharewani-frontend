@@ -21,7 +21,7 @@ export default {
             {
                 title: 'AVG. ONBOARDING LENGTH',
                 value: '02:10:25:15',
-                icon: false,
+                icon: true,
             },
         ],
         //activity timeline chart

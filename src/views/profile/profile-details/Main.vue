@@ -49,6 +49,7 @@
     </div>
 </template>
 
+<script async src="https://cse.google.com/cse.js?cx=123:456"></script>
 <script>
 export default {
     /*
