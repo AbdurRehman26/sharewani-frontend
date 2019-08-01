@@ -80,19 +80,8 @@
             </div>
         </div>
         <div class="table-section table-min-width">
-            <!-- if records not found -->
-            <table v-if="items.length == 0" class="table b-table">
-                <tbody>
-                    <base-no-record-found></base-no-record-found>
-                </tbody>
-            </table>
-            <!-- When data is loading -->
-            <table class="table b-table" v-if="items.length == 0">
-                <tbody>
-                    <base-table-spinner></base-table-spinner>
-                </tbody>
-            </table>
-            <b-table v-if="items.length > 0" :items="items" :fields="fields">
+            <!--main table -->
+            <b-table v-if="fields.length > 0" :items="items" :fields="fields">
                 <template slot="aging" slot-scope="data">
                     <span :class="data.value[0].riskRate">
                         {{ data.value[0].name }}
@@ -202,6 +191,12 @@
                     </div>
                 </template>
             </b-table>
+            <!-- When data is loading -->
+            <base-table-spinner v-if="items.length == 0"></base-table-spinner>
+            <!-- When record not found -->
+            <base-no-record-found
+                v-if="items.length == 0"
+            ></base-no-record-found>
         </div>
         <pagination
             v-if="items.length > 0"

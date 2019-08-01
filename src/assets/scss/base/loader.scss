@@ -44,7 +44,21 @@
     }
 }
 
+.loading-table-component {
+    border-radius: 0px !important;
+    thead {
+        background: #fff !important;
+        tr {
+            &:nth-child(2) {
+                display: none;
+            }
+        }
+    }
+}
+
 .table-spinner {
+    &:after {
+    }
     .spinner-img {
         max-width: 65px;
         margin: 0 auto;
@@ -54,4 +68,8 @@
             margin: 0 auto !important;
         }
     }
+}
+
+.table-spinner-td {
+    padding: 0;
 }

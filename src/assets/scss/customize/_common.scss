@@ -105,6 +105,8 @@ hr {
     display: table;
     width: 100%;
     min-height: 320px;
+    background: #fff;
+    border-top: solid 1px $border-color;
     .middle-align {
         display: table-cell;
         vertical-align: middle;
