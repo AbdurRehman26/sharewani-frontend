@@ -41,7 +41,10 @@
                 </template>
             </b-table>
         </div>
-        <pagination totalRecords="Showing 1 to 10 of 13 records"></pagination>
+        <pagination
+            totalRecords="Showing 1 to 10 of 13 records"
+            :showRecords="recordShow"
+        ></pagination>
         <modify-status-popup
             modalTitle="Modify Name Type Status"
             modalLabel="Primary Name (Person)"
@@ -84,6 +87,10 @@ export default {
         return {
             fields: [],
             items: [],
+            recordShow: [
+                { text: 'Show 10 records', value: null },
+                { text: 'Show 20 records', value: 20 },
+            ],
         }
     }, // End of Component > data
 

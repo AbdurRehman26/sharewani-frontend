@@ -76,6 +76,8 @@
         <pagination
             totalRecords="Showing 1 to 6 of 6 records"
             nextBtnDisable
+            selectPaginationDisable
+            :showRecords="recordShow"
         ></pagination>
         <add-role-popup :title="title"></add-role-popup>
         <archive-popup
@@ -124,6 +126,7 @@ export default {
             fields: [],
             items: [],
             title: '',
+            recordShow: [{ text: 'Show 10 records', value: null }],
         }
     }, // End of Component > data
 

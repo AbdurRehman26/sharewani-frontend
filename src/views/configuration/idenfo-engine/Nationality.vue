@@ -64,7 +64,10 @@
                 </template>
             </b-table>
         </div>
-        <pagination totalRecords="Showing 1 to 10 of 220 records"></pagination>
+        <pagination
+            totalRecords="Showing 1 to 10 of 220 records"
+            :showRecords="recordShow"
+        ></pagination>
         <add-nationality-popup :title="title"></add-nationality-popup>
 
         <archive-popup
@@ -113,6 +116,11 @@ export default {
             fields: [],
             items: [],
             title: 'Add Nationality Factor',
+            recordShow: [
+                { text: 'Show 10 records', value: null },
+                { text: 'Show 20 records', value: 20 },
+                { text: 'Show 50 records', value: 50 },
+            ],
         }
     }, // End of Component > data
 

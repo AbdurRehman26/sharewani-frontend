@@ -292,6 +292,11 @@
         p {
             padding-left: 15px;
         }
+        .disable {
+            select {
+                color: $grey-medium !important;
+            }
+        }
     }
     .next-previous-pagination {
         text-align: right;

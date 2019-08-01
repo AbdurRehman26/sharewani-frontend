@@ -199,8 +199,9 @@
             ></base-no-record-found>
         </div>
         <pagination
-            v-if="items.length > 0"
             totalRecords="Showing 1 to 10 of 18 records"
+            :showRecords="recordShow"
+            v-if="items.length > 0"
         ></pagination>
         <initiate-review-popup></initiate-review-popup>
     </div>
@@ -271,6 +272,10 @@ export default {
                 '31-60 days',
                 '61-90 days',
                 '91 days+',
+            ],
+            recordShow: [
+                { text: 'Show 10 records', value: null },
+                { text: 'Show 20 records', value: 20 },
             ],
         }
     }, // End of Component > data
