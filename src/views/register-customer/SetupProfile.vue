@@ -88,7 +88,7 @@
                         </div>
                         <div class="col-md-4">
                             <b-form-group
-                                id="input-group-5"
+                                id="input-group-6"
                                 label="Nationality"
                                 label-for="nationality"
                             >
@@ -101,7 +101,7 @@
                         </div>
                         <div class="col-md-4">
                             <b-form-group
-                                id="input-group-6"
+                                id="input-group-7"
                                 label="Country of Residence"
                                 label-for="residence"
                             >
@@ -121,7 +121,7 @@
                         </div>
                         <div class="col-md-4">
                             <b-form-group
-                                id="input-group-1"
+                                id="input-group-8"
                                 label="Address"
                                 label-for="address"
                             >
@@ -137,7 +137,7 @@
 
                         <div class="col-md-4">
                             <b-form-group
-                                id="input-group-5"
+                                id="input-group-9"
                                 label="Country"
                                 label-for="country"
                             >
@@ -150,7 +150,7 @@
                         </div>
                         <div class="col-md-4">
                             <b-form-group
-                                id="input-group-6"
+                                id="input-group-10"
                                 label="State"
                                 label-for="state"
                             >
@@ -163,7 +163,7 @@
                         </div>
                         <div class="col-md-4">
                             <b-form-group
-                                id="input-group-6"
+                                id="input-group-11"
                                 label="City"
                                 label-for="city"
                             >
@@ -178,7 +178,7 @@
                         </div>
                         <div class="col-md-4">
                             <b-form-group
-                                id="input-group-1"
+                                id="input-group-12"
                                 label="Zip Code / Postal Code"
                                 label-for="zipcode"
                             >
@@ -193,7 +193,7 @@
                         </div>
                         <div class="col-md-4 row-min-space">
                             <b-form-group
-                                id="input-group-1"
+                                id="input-group-13"
                                 label="Phone Number"
                                 label-for="phonenumber"
                             >
@@ -221,12 +221,12 @@
                         </div>
                         <div class="col-md-4">
                             <b-form-group
-                                id="email"
+                                id="input-group-14"
                                 label="Email"
-                                label-for="zipcode"
+                                label-for="email"
                             >
                                 <b-form-input
-                                    id="zipcode"
+                                    id="email"
                                     type="email"
                                     v-model="form.email"
                                     required
@@ -243,7 +243,7 @@
                         </div>
                         <div class="col-md-4">
                             <b-form-group
-                                id="input-group-5"
+                                id="input-group-15"
                                 label="Work Type"
                                 label-for="worktype"
                             >
@@ -256,7 +256,7 @@
                         </div>
                         <div class="col-md-4">
                             <b-form-group
-                                id="input-group-6"
+                                id="input-group-16"
                                 label="Industry"
                                 label-for="industry"
                             >
@@ -269,12 +269,12 @@
                         </div>
                         <div class="col-md-4">
                             <b-form-group
-                                id="input-group-1"
+                                id="input-group-17"
                                 label="Length of Relationship"
-                                label-for="taxid"
+                                label-for="relationship"
                             >
                                 <b-form-input
-                                    id="address"
+                                    id="relationship"
                                     type="text"
                                     v-model="form.relationship"
                                     required
@@ -284,12 +284,12 @@
                         </div>
                         <div class="col-md-4">
                             <b-form-group
-                                id="input-group-1"
+                                id="input-group-18"
                                 label="Tax ID"
                                 label-for="taxid"
                             >
                                 <b-form-input
-                                    id="address"
+                                    id="taxid"
                                     type="text"
                                     v-model="form.taxid"
                                     required
@@ -307,7 +307,7 @@
                         </div>
                         <div class="col-md-4">
                             <b-form-group
-                                id="input-group-5"
+                                id="input-group-19"
                                 label="ID Document Type"
                                 label-for="doctype"
                             >
@@ -321,12 +321,12 @@
 
                         <div class="col-md-4">
                             <b-form-group
-                                id="input-group-1"
+                                id="input-group-20"
                                 label="ID Document Number"
                                 label-for="docnumber"
                             >
                                 <b-form-input
-                                    id="address"
+                                    id="docnumber"
                                     type="text"
                                     v-model="form.docnumber"
                                     required
@@ -336,7 +336,7 @@
                         </div>
                         <div class="col-md-4">
                             <b-form-group
-                                id="input-group-5"
+                                id="input-group-21"
                                 label="Expirty Date"
                                 label-for="expiredate"
                             >
