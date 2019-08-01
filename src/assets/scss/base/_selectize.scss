@@ -1,80 +1,92 @@
-.selectize-control {
-    position: relative;
-}
+.multiselect {
+    .multiselect__tags {
+        @extend .form-control;
+        overflow: auto;
+        padding: 0 15px 0;
+        border: none;
+    }
 
-.selectize-control.multi .selectize-input.has-items {
-    padding: 5px 8px 2px;
-}
+    .multiselect__tags-wrap {
+        height: 100%;
+        padding: 4px 0 4px 0;
+        width: 100%;
+        display: block;
+    }
 
-.selectize-control.multi .selectize-input [data-value] {
-    border-radius: $input-border-radius;
-    background-color: $grey-dark;
-}
-.selectize-control.multi .selectize-input > div {
-    cursor: pointer;
-    margin: 1px 8px 4px 4px;
-    padding: 5px 8px 4px 8px;
-    color: $body-color;
-    font-family: $font_regular;
-    font-size: 0.875rem;
-    border: 1px solid $grey-dark;
-}
-.selectize-input > * {
-    vertical-align: baseline;
-    display: -moz-inline-stack;
-    display: inline-block;
-    zoom: 1;
-    display: inline;
-}
+    .multiselect__tag {
+        background: $grey-dark;
+        color: $body-color;
+        font-size: 0.875rem;
+        font-family: $font_regular;
+        padding: 9px 24px 9px 13px;
+        margin-bottom: 0;
+        border-radius: $border-radius;
+    }
 
-.selectize-input > input {
-    display: inline-block !important;
-    padding: 0 !important;
-    min-height: 0 !important;
-    max-height: none !important;
-    max-width: 100% !important;
-    margin: 0 1px !important;
-    text-indent: 0 !important;
-    border: 0 none !important;
-    background: none !important;
-    line-height: inherit !important;
-    -webkit-user-select: auto !important;
-    -webkit-box-shadow: none !important;
-    box-shadow: none !important;
-}
-.selectize-dropdown,
-.selectize-input,
-.selectize-input input {
-    font-family: inherit;
-    line-height: 18px;
-    -webkit-font-smoothing: inherit;
-}
-.selectize-input > * {
-    vertical-align: baseline;
-    display: -moz-inline-stack;
-    display: inline-block;
-    zoom: 1;
-    *display: inline;
-}
-.selectize-input::after {
-    content: '';
-    display: block;
-    clear: left;
-}
-.selectize-dropdown-content {
-    overflow-y: auto;
-    overflow-x: hidden;
-    position: absolute;
-    background-color: $white;
-    width: 100%;
-    padding: 5px;
-    z-index: 99;
-    border: 1px solid $border-color;
-    border-top: none;
-    max-height: 200px;
-    -webkit-overflow-scrolling: touch;
-}
-.selectize-input {
-    @extend .form-control;
-    overflow-y: auto;
+    .multiselect__tag-icon,
+    .multiselect__tag-icon {
+        &:focus,
+        &:hover {
+            background: transparent;
+            color: $body-color;
+        }
+    }
+
+    .multiselect__tag-icon {
+        top: 6px;
+        right: 1px;
+
+        &:after {
+            font-size: 21px;
+            color: $body-color;
+        }
+    }
+
+    .multiselect__placeholder {
+        padding-top: 10px;
+        margin-bottom: 0;
+    }
+
+    .multiselect__select {
+        transition: none !important;
+        transform: none !important;
+        &:before {
+            background: url(assets/images/arrow.svg) no-repeat right 0.75rem
+                center/12px 10px;
+            position: absolute;
+            width: 33px;
+            height: 38px !important;
+            top: -1px !important;
+            padding: 4px 0;
+            right: -2px !important;
+            margin-top: 0;
+            border-color: transparent;
+            bottom: -2px;
+        }
+    }
+
+    .multiselect__option--selected.multiselect__option--highlight,
+    .multiselect__option--selected.multiselect__option--highlight:after {
+        background: $primary;
+        font-family: $font_regular;
+        font-weight: normal;
+        font-size: 0.875rem;
+    }
+
+    .multiselect__option--highlight,
+    .multiselect__option--highlight:after {
+        background: $secondary;
+        font-family: $font_regular;
+        font-weight: normal;
+        color: #fff !important;
+        font-size: 0.875rem;
+    }
+
+    .multiselect__option--selected {
+        background: $body-bg;
+        font-family: $font_regular;
+        font-weight: normal;
+        font-size: 0.875rem;
+        color: $body-color;
+    }
 }

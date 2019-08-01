@@ -94,12 +94,6 @@
                     <div class="col-md-12">
                         <div class="form-group">
                             <label for="data-segments">Data Segments</label>
-                            <v-selectize
-                                id="data-segments"
-                                :options="options"
-                                v-model="selected"
-                                multiple
-                            />
                         </div>
                     </div>
                     <div class="col-md-12">
@@ -120,9 +114,8 @@
 </template>
 
 <script>
-import VSelectize from '@isneezy/vue-selectize'
 export default {
-    components: { VSelectize },
+    components: {},
 
     /*
     |--------------------------------------------------------------------------

@@ -26,6 +26,8 @@
 @import 'customize/builder.scss';
 $material-icons-font-path: '~material-icons/iconfont/';
 @import '~material-icons/iconfont/material-icons.scss';
+@import '~vue-multiselect/dist/vue-multiselect.min.css';
+
 @import 'customize/customize';
 
 .amcharts-chart-div > a {
