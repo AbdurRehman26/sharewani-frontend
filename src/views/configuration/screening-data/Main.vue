@@ -34,6 +34,8 @@
                         :class="[
                             $route.meta.responsiveMenuItem == true
                                 ? 'router-link-exact-active'
+                                : '' || listDropdown == true
+                                ? 'router-link-exact-active'
                                 : '',
                         ]"
                     >
