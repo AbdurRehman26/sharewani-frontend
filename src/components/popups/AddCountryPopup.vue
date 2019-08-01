@@ -49,10 +49,10 @@
                         <b-form-group
                             id="input-group-3"
                             label="Country Title"
-                            label-for="input-3"
+                            label-for="country-title"
                         >
                             <b-form-input
-                                id="input-3"
+                                id="country-title"
                                 type="text"
                                 v-model="form.countryTitle"
                                 required
