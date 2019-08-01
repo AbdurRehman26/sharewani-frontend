@@ -107,6 +107,7 @@
         </div>
         <pagination
             totalRecords="Showing 1 to 10 of 1,890 records"
+            :showRecords="recordShow"
         ></pagination>
         <export-process-popup
             title="Export Customer's Data"
@@ -156,6 +157,11 @@ export default {
                 { text: 'Pending Review', value: '2' },
                 { text: 'Approved', value: '3' },
                 { text: 'Rejected', value: '4' },
+            ],
+            recordShow: [
+                { text: 'Show 10 records', value: null },
+                { text: 'Show 20 records', value: 20 },
+                { text: 'Show 50 records', value: 50 },
             ],
         }
     }, // End of Component > data

@@ -44,6 +44,8 @@
         <pagination
             totalRecords="Showing 1 to 3 of 3 records"
             nextBtnDisable
+            selectPaginationDisable
+            :showRecords="recordShow"
         ></pagination>
         <modify-status-popup
             modalTitle="Modify Gender Status"
@@ -87,6 +89,7 @@ export default {
         return {
             fields: [],
             items: [],
+            recordShow: [{ text: 'Show 10 records', value: null }],
         }
     }, // End of Component > data
 
