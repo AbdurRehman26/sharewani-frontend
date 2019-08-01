@@ -1,7 +1,8 @@
 .multiselect {
+    position: relative;
     .multiselect__tags {
         @extend .form-control;
-        overflow: auto;
+        overflow-y: auto;
         padding: 0 15px 0;
         border: none;
     }
@@ -18,7 +19,7 @@
         color: $body-color;
         font-size: 0.875rem;
         font-family: $font_regular;
-        padding: 9px 24px 9px 13px;
+        padding: 9px 21px 9px 11px;
         margin-bottom: 0;
         border-radius: $border-radius;
     }
@@ -50,6 +51,7 @@
     .multiselect__select {
         transition: none !important;
         transform: none !important;
+        display: none;
         &:before {
             background: url(assets/images/arrow.svg) no-repeat right 0.75rem
                 center/12px 10px;
@@ -65,27 +67,57 @@
         }
     }
 
+    .multiselect__option {
+        padding: 7px 12px 5px;
+        min-height: 30px;
+
+        &:after {
+            line-height: 30px;
+        }
+    }
+
     .multiselect__option--selected.multiselect__option--highlight,
-    .multiselect__option--selected.multiselect__option--highlight:after {
+    .multiselect__option--selected.multiselect__option--highlight:after,
+    .multiselect__option--highlight,
+    .multiselect__option--highlight:after {
         background: $primary;
         font-family: $font_regular;
         font-weight: normal;
         font-size: 0.875rem;
+        color: $white !important;
     }
 
-    .multiselect__option--highlight,
-    .multiselect__option--highlight:after {
-        background: $secondary;
-        font-family: $font_regular;
-        font-weight: normal;
-        color: #fff !important;
-        font-size: 0.875rem;
-    }
+    // .multiselect__option--highlight,
+    // .multiselect__option--highlight:after {
+    //     background: $secondary;
+    //     font-family: $font_regular;
+    //     font-weight: normal;
+    //     color: #fff !important;
+    //     font-size: 0.875rem;
+    // }
 
     .multiselect__option--selected {
         background: $body-bg;
         font-family: $font_regular;
         font-weight: normal;
+        font-size: 0.875rem;
+        color: $body-color;
+    }
+
+    .multiselect__input {
+        left: 0;
+        right: 0;
+        height: 43px;
+        position: absolute;
+        z-index: 99999;
+        padding: 14px 15px;
+        font-size: 0.875rem;
+        color: $body-color;
+        top: 0;
+        margin-bottom: 0 !important;
+    }
+
+    .multiselect__element {
         font-size: 0.875rem;
         color: $body-color;
     }

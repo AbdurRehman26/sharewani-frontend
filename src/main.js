@@ -23,7 +23,19 @@ Vue.use(vbclass, router)
 Vue.config.productionTip = false
 
 new Vue({
-    router,
+    router: router,
     store,
     render: (h) => h(App),
+    methods: {
+        checkMeta() {
+            // const title = document.title
+            // document.title = ''
+            document.title = 'Idenfo | ' + this.$route.meta.title
+        },
+    },
+    watch: {
+        $route: function() {
+            this.checkMeta()
+        },
+    },
 }).$mount('#app')
