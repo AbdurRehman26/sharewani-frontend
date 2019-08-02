@@ -89,6 +89,53 @@
                             </b-form-group>
                         </b-form-group>
                     </div>
+                    <div class="col-md-12">
+                        <b-form-group
+                            class="mb-0 kyc-status-radio overwrite-radio"
+                            id="input-group-6"
+                            label="Tax ID"
+                            label-for="tax-id"
+                        >
+                            <b-form-group>
+                                <b-form-radio-group
+                                    v-model="taxId"
+                                    :options="form.taxId"
+                                    name="taxId"
+                                ></b-form-radio-group>
+                            </b-form-group>
+                        </b-form-group>
+                    </div>
+                    <div class="col-md-12">
+                        <b-form-group
+                            class="mb-0 kyc-status-radio overwrite-radio"
+                            id="input-group-7"
+                            label="Is Tax ID Mandatory"
+                            label-for="id-mandatory"
+                        >
+                            <b-form-group>
+                                <b-form-radio-group
+                                    v-model="idMandatory"
+                                    :options="form.idMandatory"
+                                    name="idMandatory"
+                                ></b-form-radio-group>
+                            </b-form-group>
+                        </b-form-group>
+                    </div>
+                    <div class="col-md-12">
+                        <b-form-group
+                            id="input-group-8"
+                            label="Tax ID Note"
+                            label-for="tax-note"
+                        >
+                            <b-form-input
+                                id="tax-note"
+                                type="text"
+                                v-model="form.taxNote"
+                                required
+                                placeholder="Enter tax id note (optional)"
+                            ></b-form-input>
+                        </b-form-group>
+                    </div>
                 </div>
             </b-form>
         </b-modal>
@@ -121,12 +168,17 @@ export default {
     data() {
         return {
             sanction: '',
+            taxId: '',
+            idMandatory: '',
             form: {
                 countryCode: '',
                 dialingCode: '',
                 countryTitle: '',
+                taxNote: '',
                 rating: null,
                 sanction: [{ text: 'Yes', value: null }, 'No'],
+                taxId: [{ text: 'Required', value: null }, 'Not Required'],
+                idMandatory: [{ text: 'Yes', value: null }, 'No'],
             },
 
             rating: [

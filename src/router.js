@@ -452,6 +452,16 @@ export default new Router({
                                 responsiveMenuItem: true,
                             },
                         },
+                        {
+                            path: '/configuration/idenfo-engine/gender',
+                            name: 'idenfo-engine-gender',
+                            component: () =>
+                                import(/* webpackChunkName: "riskRating" */ './views/configuration/idenfo-engine/Gender.vue'),
+                            meta: {
+                                title: 'Configuration | Idenfo Engine | Gender',
+                                responsiveMenuItem: true,
+                            },
+                        },
                     ],
                 },
                 {

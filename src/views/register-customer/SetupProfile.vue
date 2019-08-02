@@ -137,19 +137,6 @@
 
                         <div class="col-md-4">
                             <b-form-group
-                                id="input-group-9"
-                                label="Country"
-                                label-for="country"
-                            >
-                                <b-form-select
-                                    class="form-control"
-                                    v-model="form.country"
-                                    :options="form.countryOptions"
-                                ></b-form-select>
-                            </b-form-group>
-                        </div>
-                        <div class="col-md-4">
-                            <b-form-group
                                 id="input-group-10"
                                 label="State"
                                 label-for="state"
@@ -295,6 +282,13 @@
                                     required
                                     placeholder="Enter tax id"
                                 ></b-form-input>
+                                <p class="tax-instruction">
+                                    <i class="icon-error_outline"></i>
+                                    <span
+                                        >Instructions related to tax id number
+                                        will be placed here.</span
+                                    >
+                                </p>
                             </b-form-group>
                         </div>
                     </div>

@@ -150,6 +150,10 @@ export default {
                         '/configuration/idenfo-engine/purpose-of-action',
                     menuLabel: 'Purpose of Action',
                 },
+                {
+                    anchorLink: '/configuration/idenfo-engine/gender',
+                    menuLabel: 'Gender',
+                },
             ],
         }
     }, // End of Component > data

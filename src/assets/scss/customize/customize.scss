@@ -1936,3 +1936,32 @@ a {
         }
     }
 }
+
+.star-required {
+    font-size: 18px;
+    top: 1px;
+    right: -3px;
+}
+
+.gender-page {
+    .disable-color {
+        pointer-events: none;
+    }
+}
+
+.tax-instruction {
+    color: #a4a6ab;
+    margin: 8px 0 0 0;
+    font-family: $font_light;
+
+    span {
+        font-size: 12px;
+        display: inline-block;
+        vertical-align: text-top;
+        margin-left: 3px;
+    }
+
+    i {
+        font-size: 15px;
+    }
+}

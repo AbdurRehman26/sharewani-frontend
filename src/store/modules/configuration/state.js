@@ -169,7 +169,7 @@ export default {
                 fields: [
                     {
                         key: 'countrycode',
-                        label: 'Country Code',
+                        label: 'Code',
                         sortable: true,
                     },
                     {
@@ -181,6 +181,11 @@ export default {
                         key: 'dialingcode',
                         label: 'Dialing Code',
                         class: 'text-center',
+                        sortable: true,
+                    },
+                    {
+                        key: 'taxid',
+                        label: 'Tax ID',
                         sortable: true,
                     },
                     {
@@ -206,6 +211,12 @@ export default {
                         countrycode: 'AF',
                         countrytitle: 'Afghanistan',
                         dialingcode: '+93',
+                        taxid: [
+                            {
+                                name: 'Required',
+                                require: false,
+                            },
+                        ],
                         rating: [
                             {
                                 icon: 'icon-high-risk',
@@ -220,6 +231,11 @@ export default {
                         countrycode: 'AX',
                         countrytitle: 'Aland Islands',
                         dialingcode: '+358',
+                        taxid: [
+                            {
+                                name: 'Not Required',
+                            },
+                        ],
                         rating: [
                             {
                                 icon: 'icon-high-risk',
@@ -234,6 +250,12 @@ export default {
                         countrycode: 'AL',
                         countrytitle: 'Albania',
                         dialingcode: '+355',
+                        taxid: [
+                            {
+                                name: 'Required',
+                                require: true,
+                            },
+                        ],
                         rating: [
                             {
                                 icon: 'icon-high-risk',
@@ -248,6 +270,12 @@ export default {
                         countrycode: 'DZ',
                         countrytitle: 'Algeria',
                         dialingcode: '+213',
+                        taxid: [
+                            {
+                                name: 'Required',
+                                require: false,
+                            },
+                        ],
                         rating: [
                             {
                                 icon: 'icon-high-risk',
@@ -262,6 +290,12 @@ export default {
                         countrycode: 'AS',
                         countrytitle: 'American Samoa',
                         dialingcode: '+1685',
+                        taxid: [
+                            {
+                                name: 'Required',
+                                require: false,
+                            },
+                        ],
                         rating: [
                             {
                                 icon: 'icon-high-risk',
@@ -276,6 +310,12 @@ export default {
                         countrycode: 'AD',
                         countrytitle: 'Andorra',
                         dialingcode: '+376',
+                        taxid: [
+                            {
+                                name: 'Required',
+                                require: true,
+                            },
+                        ],
                         rating: [
                             {
                                 icon: 'icon-high-risk',
@@ -290,6 +330,11 @@ export default {
                         countrycode: 'AO',
                         countrytitle: 'Angola',
                         dialingcode: '+244',
+                        taxid: [
+                            {
+                                name: 'Not Required',
+                            },
+                        ],
                         rating: [
                             {
                                 icon: 'icon-high-risk',
@@ -304,6 +349,12 @@ export default {
                         countrycode: 'AI',
                         countrytitle: 'Anguilla',
                         dialingcode: '+1264',
+                        taxid: [
+                            {
+                                name: 'Required',
+                                require: true,
+                            },
+                        ],
                         rating: [
                             {
                                 icon: 'icon-high-risk',
@@ -318,6 +369,12 @@ export default {
                         countrycode: 'AQ',
                         countrytitle: 'Antarctica',
                         dialingcode: '+672',
+                        taxid: [
+                            {
+                                name: 'Required',
+                                require: false,
+                            },
+                        ],
                         rating: [
                             {
                                 icon: 'icon-high-risk',
@@ -332,6 +389,11 @@ export default {
                         countrycode: 'AG',
                         countrytitle: 'Antigua and Barbuda',
                         dialingcode: '+1268',
+                        taxid: [
+                            {
+                                name: 'Not Required',
+                            },
+                        ],
                         rating: [
                             {
                                 icon: 'icon-high-risk',
@@ -1422,6 +1484,85 @@ export default {
                         screenfactor: 'Safe Score',
                         score: '< 75',
                         action: 'active',
+                    },
+                ],
+            },
+
+            gendersTable: {
+                fields: [
+                    {
+                        key: 'gendercode',
+                        label: 'Gender Code',
+                        sortable: true,
+                    },
+                    {
+                        key: 'gendertitle',
+                        label: 'Gender Title',
+                        sortable: true,
+                    },
+                    {
+                        key: 'status',
+                        label: 'Status',
+                        class: 'text-center w-230px',
+                        sortable: true,
+                    },
+                    {
+                        key: 'action',
+                        label: 'ACTION',
+                        class: 'single-list w-200px',
+                    },
+                ],
+                items: [
+                    {
+                        gendercode: 1,
+                        gendertitle: 'Male',
+                        status: [
+                            {
+                                cssClass: 'approved',
+                                icon: 'icon-change-password',
+                                label: 'Locked',
+                            },
+                        ],
+                        action: [
+                            {
+                                name: 'active',
+                                disable: true,
+                            },
+                        ],
+                    },
+                    {
+                        gendercode: 2,
+                        gendertitle: 'Female',
+                        status: [
+                            {
+                                cssClass: 'approved',
+                                icon: 'icon-change-password',
+                                label: 'Locked',
+                            },
+                        ],
+                        action: [
+                            {
+                                name: 'active',
+                                disable: true,
+                            },
+                        ],
+                    },
+                    {
+                        gendercode: 3,
+                        gendertitle: 'Not Applicable',
+                        status: [
+                            {
+                                cssClass: 'approved',
+                                icon: 'icon-check',
+                                label: 'Active',
+                            },
+                        ],
+                        action: [
+                            {
+                                name: 'active',
+                                disable: false,
+                            },
+                        ],
                     },
                 ],
             },
