@@ -343,7 +343,12 @@ export default {
                 'Blacklist hit',
                 'Sanction hit',
             ],
-            ratingLevel: [{ value: null, text: 'Select Risk Rating Level' }],
+            ratingLevel: [
+                { value: null, text: 'Select Risk Rating Level' },
+                'High Risk',
+                'Medium Risk',
+                'Low Risk',
+            ],
             type: [{ value: null, text: 'Select ID Type' }],
             productType: [
                 { value: null, text: 'Select Product Type' },
