@@ -21,6 +21,7 @@
                                 type="text"
                                 v-model="form.productCode"
                                 required
+                                autocomplete="no"
                                 placeholder="Enter product code"
                             ></b-form-input>
                         </b-form-group>
@@ -36,6 +37,7 @@
                                 type="text"
                                 v-model="form.dialingCode"
                                 required
+                                autocomplete="no"
                                 placeholder="Enter product title"
                             ></b-form-input>
                         </b-form-group>

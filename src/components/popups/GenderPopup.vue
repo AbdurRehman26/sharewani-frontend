@@ -21,6 +21,7 @@
                                 type="number"
                                 v-model="form.genderCode"
                                 required
+                                autocomplete="no"
                                 placeholder="Enter gender code"
                             ></b-form-input>
                         </b-form-group>
@@ -36,6 +37,7 @@
                                 type="text"
                                 v-model="form.genderTitle"
                                 required
+                                autocomplete="no"
                                 placeholder="Enter gender title"
                             ></b-form-input>
                         </b-form-group>

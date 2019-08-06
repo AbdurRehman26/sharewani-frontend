@@ -26,6 +26,7 @@
                                         type="text"
                                         v-model="form.startScore"
                                         required
+                                        autocomplete="no"
                                         placeholder="Enter start score"
                                     ></b-form-input>
                                 </b-form-group>
@@ -41,6 +42,7 @@
                                         type="text"
                                         v-model="form.endScore"
                                         required
+                                        autocomplete="no"
                                         placeholder="Enter end score"
                                     ></b-form-input>
                                 </b-form-group>
@@ -57,6 +59,7 @@
                                 class="form-control"
                                 v-model="form.rating"
                                 :options="rating"
+                                autocomplete="no"
                             ></b-form-select>
                         </b-form-group>
                     </div>
@@ -71,6 +74,7 @@
                                 class="form-control"
                                 v-model="form.period"
                                 :options="period"
+                                autocomplete="no"
                             ></b-form-select>
                         </b-form-group>
                     </div>

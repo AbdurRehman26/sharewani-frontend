@@ -17,6 +17,7 @@
                                 type="text"
                                 v-model="form.firstName"
                                 required
+                                autocomplete="no"
                                 placeholder="Search by first name"
                             ></b-form-input>
                         </b-form-group>
@@ -32,6 +33,7 @@
                                 type="text"
                                 v-model="form.middleName"
                                 required
+                                autocomplete="no"
                                 placeholder="Search by middle name"
                             ></b-form-input>
                         </b-form-group>
@@ -48,6 +50,7 @@
                                 type="text"
                                 v-model="form.lastName"
                                 required
+                                autocomplete="no"
                                 placeholder="Search by last name"
                             ></b-form-input>
                         </b-form-group>

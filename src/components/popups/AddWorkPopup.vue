@@ -21,6 +21,7 @@
                                 type="text"
                                 v-model="form.workCode"
                                 required
+                                autocomplete="no"
                                 placeholder="Enter work type code"
                             ></b-form-input>
                         </b-form-group>
@@ -37,6 +38,7 @@
                                 type="text"
                                 v-model="form.workTitle"
                                 required
+                                autocomplete="no"
                                 placeholder="Enter work type title"
                             ></b-form-input>
                         </b-form-group>

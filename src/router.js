@@ -31,7 +31,7 @@ export default new Router({
                     component: () =>
                         import(/* webpackChunkName: "forgot-password" */ '@/views/auth/ForgotPassword.vue'),
                     meta: {
-                        title: 'Forgot',
+                        title: 'Forgot Password',
                         noSidebar: true,
                         bodyClass: 'auth-body',
                     },
@@ -54,7 +54,7 @@ export default new Router({
                     component: () =>
                         import(/* webpackChunkName: "email-sent" */ '@/views/auth/EmailSent.vue'),
                     meta: {
-                        title: 'Email Send',
+                        title: 'Check Your Inbox',
                         noSidebar: true,
                         bodyClass: 'auth-body',
                     },
@@ -795,6 +795,7 @@ export default new Router({
                         sessionStep: '1',
                         noSidebar: true,
                         publicRegistration: true,
+                        bodyClass: 'auth-body',
                     },
                 },
                 {
@@ -808,6 +809,7 @@ export default new Router({
                         sessionStep: '1',
                         noSidebar: true,
                         publicRegistration: true,
+                        bodyClass: 'auth-body',
                     },
                 },
                 {
@@ -821,6 +823,7 @@ export default new Router({
                         sessionStep: '2',
                         noSidebar: true,
                         publicRegistration: true,
+                        bodyClass: 'auth-body',
                     },
                 },
                 {
@@ -834,6 +837,7 @@ export default new Router({
                         sessionStep: '3',
                         noSidebar: true,
                         publicRegistration: true,
+                        bodyClass: 'auth-body',
                     },
                 },
                 {
@@ -847,6 +851,7 @@ export default new Router({
                         sessionStep: '4',
                         noSidebar: true,
                         publicRegistration: true,
+                        bodyClass: 'auth-body',
                     },
                 },
                 {
@@ -860,6 +865,7 @@ export default new Router({
                         sessionStep: '5',
                         noSidebar: true,
                         publicRegistration: true,
+                        bodyClass: 'auth-body',
                     },
                 },
             ],

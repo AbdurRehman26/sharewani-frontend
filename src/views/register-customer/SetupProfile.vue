@@ -18,6 +18,7 @@
                                     type="text"
                                     v-model="form.firstName"
                                     required
+                                    autocomplete="no"
                                     placeholder="Enter first name"
                                 ></b-form-input>
                             </b-form-group>
@@ -33,6 +34,7 @@
                                     type="text"
                                     v-model="form.middleName"
                                     required
+                                    autocomplete="no"
                                     placeholder="Enter middle name"
                                 ></b-form-input>
                             </b-form-group>
@@ -49,6 +51,7 @@
                                     type="text"
                                     v-model="form.lastName"
                                     required
+                                    autocomplete="no"
                                     placeholder="Enter last name"
                                 ></b-form-input>
                             </b-form-group>
@@ -96,6 +99,7 @@
                                     class="form-control"
                                     v-model="form.nationality"
                                     :options="form.nationalityOptions"
+                                    autocomplete="no"
                                 ></b-form-select>
                             </b-form-group>
                         </div>
@@ -109,6 +113,7 @@
                                     class="form-control"
                                     v-model="form.residence"
                                     :options="form.residenceOptions"
+                                    autocomplete="no"
                                 ></b-form-select>
                             </b-form-group>
                         </div>
@@ -130,6 +135,7 @@
                                     type="text"
                                     v-model="form.address"
                                     required
+                                    autocomplete="no"
                                     placeholder="Enter address"
                                 ></b-form-input>
                             </b-form-group>
@@ -145,6 +151,7 @@
                                     class="form-control"
                                     v-model="form.state"
                                     :options="form.stateOptions"
+                                    autocomplete="no"
                                 ></b-form-select>
                             </b-form-group>
                         </div>
@@ -159,6 +166,7 @@
                                     type="text"
                                     v-model="form.city"
                                     required
+                                    autocomplete="no"
                                     placeholder="Enter city"
                                 ></b-form-input>
                             </b-form-group>
@@ -174,6 +182,7 @@
                                     type="number"
                                     v-model="form.zipcode"
                                     required
+                                    autocomplete="no"
                                     placeholder="Enter zip code / postal code"
                                 ></b-form-input>
                             </b-form-group>
@@ -191,6 +200,7 @@
                                             type="number"
                                             v-model="form.countrycode"
                                             required
+                                            autocomplete="no"
                                             placeholder="Country code"
                                         ></b-form-input>
                                     </div>
@@ -200,6 +210,7 @@
                                             type="number"
                                             v-model="form.phonenumber"
                                             required
+                                            autocomplete="no"
                                             placeholder="Select phone number"
                                         ></b-form-input>
                                     </div>
@@ -217,6 +228,7 @@
                                     type="email"
                                     v-model="form.email"
                                     required
+                                    autocomplete="no"
                                     placeholder="Enter email address"
                                 ></b-form-input>
                             </b-form-group>
@@ -238,6 +250,7 @@
                                     class="form-control"
                                     v-model="form.worktype"
                                     :options="form.worktypeOptions"
+                                    autocomplete="no"
                                 ></b-form-select>
                             </b-form-group>
                         </div>
@@ -251,6 +264,7 @@
                                     class="form-control"
                                     v-model="form.industry"
                                     :options="form.industryOptions"
+                                    autocomplete="no"
                                 ></b-form-select>
                             </b-form-group>
                         </div>
@@ -265,6 +279,7 @@
                                     type="text"
                                     v-model="form.relationship"
                                     required
+                                    autocomplete="no"
                                     placeholder="Enter Length of relationship (in months)"
                                 ></b-form-input>
                             </b-form-group>
@@ -280,6 +295,7 @@
                                     type="text"
                                     v-model="form.taxid"
                                     required
+                                    autocomplete="no"
                                     placeholder="Enter tax id"
                                 ></b-form-input>
                                 <p class="tax-instruction">
@@ -309,6 +325,7 @@
                                     class="form-control"
                                     v-model="form.doctype"
                                     :options="form.doctypeOptions"
+                                    autocomplete="no"
                                 ></b-form-select>
                             </b-form-group>
                         </div>
@@ -324,6 +341,7 @@
                                     type="text"
                                     v-model="form.docnumber"
                                     required
+                                    autocomplete="no"
                                     placeholder="52801-6782883-1"
                                 ></b-form-input>
                             </b-form-group>

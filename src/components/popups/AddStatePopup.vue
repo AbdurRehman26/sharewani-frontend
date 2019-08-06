@@ -21,6 +21,7 @@
                                 type="text"
                                 v-model="form.stateCode"
                                 required
+                                autocomplete="no"
                                 placeholder="Enter state code"
                             ></b-form-input>
                         </b-form-group>
@@ -36,6 +37,7 @@
                                 type="text"
                                 v-model="form.stateTitle"
                                 required
+                                autocomplete="no"
                                 placeholder="Enter state title"
                             ></b-form-input>
                         </b-form-group>
