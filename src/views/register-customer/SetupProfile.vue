@@ -201,7 +201,7 @@
                                             v-model="form.countrycode"
                                             required
                                             autocomplete="no"
-                                            placeholder="Country code"
+                                            placeholder="Dialling code"
                                         ></b-form-input>
                                     </div>
                                     <div class="col-md-7">
@@ -211,7 +211,7 @@
                                             v-model="form.phonenumber"
                                             required
                                             autocomplete="no"
-                                            placeholder="Select phone number"
+                                            placeholder="Enter phone number"
                                         ></b-form-input>
                                     </div>
                                 </div>

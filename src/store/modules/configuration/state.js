@@ -2103,7 +2103,7 @@ export default {
                         action: 'active',
                     },
                     {
-                        recordStatus: 'inactive',
+                        recordStatus: 'Inactive',
                         status: [
                             {
                                 cssClass: 'inapproved',
