@@ -21,6 +21,7 @@
                                 type="text"
                                 v-model="form.purposeCode"
                                 required
+                                autocomplete="no"
                                 placeholder="Enter purpose of action code"
                             ></b-form-input>
                         </b-form-group>
@@ -37,6 +38,7 @@
                                 type="text"
                                 v-model="form.purposeTitle"
                                 required
+                                autocomplete="no"
                                 placeholder="Enter purpose of action title"
                             ></b-form-input>
                         </b-form-group>

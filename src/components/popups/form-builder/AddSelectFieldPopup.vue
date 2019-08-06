@@ -22,6 +22,7 @@
                                     type="text"
                                     v-model="form.fieldLabel"
                                     required
+                                    autocomplete="no"
                                     placeholder="Enter field label"
                                 ></b-form-input>
                             </b-form-group>
@@ -51,6 +52,7 @@
                                             type="text"
                                             v-model="list.optionName"
                                             required
+                                            autocomplete="no"
                                             placeholder="Enter Options"
                                         ></b-form-input>
                                     </b-form-group>
@@ -62,6 +64,7 @@
                                             type="number"
                                             v-model="list.optionVal"
                                             required
+                                            autocomplete="no"
                                             placeholder="Enter value"
                                         ></b-form-input>
                                     </b-form-group>

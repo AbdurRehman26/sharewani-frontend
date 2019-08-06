@@ -22,6 +22,7 @@
                                     type="text"
                                     v-model="form.roleTitle"
                                     required
+                                    autocomplete="no"
                                     placeholder="Enter role title"
                                 ></b-form-input>
                             </b-form-group>

@@ -19,6 +19,7 @@
                             id="input-1"
                             type="text"
                             placeholder="Enter your account username"
+                            autocomplete="no"
                             v-model="username"
                         ></b-form-input>
                     </b-form-group>
@@ -31,6 +32,7 @@
                             id="input-2"
                             type="password"
                             placeholder="Enter your account password"
+                            autocomplete="no"
                             v-model="password"
                         ></b-form-input>
                     </b-form-group>

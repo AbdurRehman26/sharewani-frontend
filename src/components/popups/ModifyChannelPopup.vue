@@ -21,6 +21,7 @@
                                 class="form-control"
                                 v-model="form.rating"
                                 :options="rating"
+                                autocomplete="no"
                             ></b-form-select>
                         </b-form-group>
                     </div>

@@ -21,6 +21,7 @@
                                 type="text"
                                 v-model="form.segmentTitle"
                                 required
+                                autocomplete="no"
                                 placeholder="Enter data segment title"
                             ></b-form-input>
                         </b-form-group>
@@ -36,6 +37,7 @@
                                 type="text"
                                 v-model="form.segmentCode"
                                 required
+                                autocomplete="no"
                                 placeholder="Enter data segment code (max 3 characters)"
                             ></b-form-input>
                         </b-form-group>

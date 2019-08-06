@@ -21,6 +21,7 @@
                                 type="text"
                                 v-model="form.countryCode"
                                 required
+                                autocomplete="no"
                                 placeholder="Enter country code"
                             ></b-form-input>
                         </b-form-group>
@@ -36,6 +37,7 @@
                                 type="text"
                                 v-model="form.countryTitle"
                                 required
+                                autocomplete="no"
                                 placeholder="Enter country title"
                             ></b-form-input>
                         </b-form-group>

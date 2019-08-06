@@ -23,6 +23,7 @@
                                         type="text"
                                         v-model="form.countryCode"
                                         required
+                                        autocomplete="no"
                                         placeholder="Enter country code"
                                     ></b-form-input>
                                 </b-form-group>
@@ -38,6 +39,7 @@
                                         type="text"
                                         v-model="form.dialingCode"
                                         required
+                                        autocomplete="no"
                                         placeholder="Enter dialing code"
                                     ></b-form-input>
                                 </b-form-group>
@@ -56,6 +58,7 @@
                                 type="text"
                                 v-model="form.countryTitle"
                                 required
+                                autocomplete="no"
                                 placeholder="Enter country title"
                             ></b-form-input>
                         </b-form-group>
@@ -132,6 +135,7 @@
                                 type="text"
                                 v-model="form.taxNote"
                                 required
+                                autocomplete="no"
                                 placeholder="Enter tax id note (optional)"
                             ></b-form-input>
                         </b-form-group>

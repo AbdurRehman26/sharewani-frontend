@@ -21,6 +21,7 @@
                                 type="text"
                                 v-model="form.industryCode"
                                 required
+                                autocomplete="no"
                                 placeholder="Enter industry code"
                             ></b-form-input>
                         </b-form-group>
@@ -38,6 +39,7 @@
                                 type="text"
                                 v-model="form.industryTitle"
                                 required
+                                autocomplete="no"
                                 placeholder="Enter industry title"
                             ></b-form-input>
                         </b-form-group>

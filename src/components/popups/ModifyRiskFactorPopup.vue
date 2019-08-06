@@ -21,6 +21,7 @@
                                 type="text"
                                 v-model="form.weight"
                                 required
+                                autocomplete="no"
                                 placeholder="Enter weight"
                             ></b-form-input>
                         </b-form-group>
@@ -36,6 +37,7 @@
                                 class="form-control"
                                 v-model="form.override"
                                 :options="override"
+                                autocomplete="no"
                             ></b-form-select>
                         </b-form-group>
                     </div>
@@ -54,6 +56,7 @@
                                         type="text"
                                         v-model="form.high"
                                         required
+                                        autocomplete="no"
                                         placeholder="High scale"
                                     ></b-form-input>
                                 </b-form-group>
@@ -70,6 +73,7 @@
                                         type="text"
                                         v-model="form.medium"
                                         required
+                                        autocomplete="no"
                                         placeholder="Medium scale"
                                     ></b-form-input>
                                 </b-form-group>
@@ -85,6 +89,7 @@
                                         type="text"
                                         v-model="form.low"
                                         required
+                                        autocomplete="no"
                                         placeholder="Low scale"
                                     ></b-form-input>
                                 </b-form-group>

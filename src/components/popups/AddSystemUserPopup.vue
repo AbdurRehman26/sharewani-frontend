@@ -21,6 +21,7 @@
                                 type="text"
                                 v-model="form.userName"
                                 required
+                                autocomplete="no"
                                 placeholder="Enter user name"
                             ></b-form-input>
                         </b-form-group>
@@ -38,6 +39,7 @@
                                         type="text"
                                         v-model="form.firstName"
                                         required
+                                        autocomplete="no"
                                         placeholder="Enter first name"
                                     ></b-form-input>
                                 </b-form-group>
@@ -54,6 +56,7 @@
                                         type="password"
                                         v-model="form.lastName"
                                         required
+                                        autocomplete="no"
                                         placeholder="Enter last name"
                                     ></b-form-input>
                                 </b-form-group>
@@ -72,6 +75,7 @@
                                 type="email"
                                 v-model="form.email"
                                 required
+                                autocomplete="no"
                                 placeholder="Enter email address"
                             ></b-form-input>
                         </b-form-group>

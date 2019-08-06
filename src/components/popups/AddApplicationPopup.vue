@@ -21,6 +21,7 @@
                                 type="text"
                                 v-model="form.appTitle"
                                 required
+                                autocomplete="no"
                                 placeholder="Enter application title"
                             ></b-form-input>
                         </b-form-group>

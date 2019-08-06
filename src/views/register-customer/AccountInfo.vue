@@ -16,6 +16,7 @@
                                     id="purpose-action"
                                     class="form-control"
                                     v-model="form.purposeaction"
+                                    autocomplete="no"
                                     :options="form.purposeactionOptions"
                                 ></b-form-select>
                             </b-form-group>
@@ -45,6 +46,7 @@
                                     type="text"
                                     v-model="form.monthlyCredit"
                                     required
+                                    autocomplete="no"
                                     placeholder="Enter expected monthly credit turnover"
                                 ></b-form-input>
                             </b-form-group>
@@ -60,6 +62,7 @@
                                     type="text"
                                     v-model="form.monthlyExpectation"
                                     required
+                                    autocomplete="no"
                                     placeholder="Enter Maxiumum upper limit of single credit expected in a month"
                                 ></b-form-input>
                             </b-form-group>
@@ -74,6 +77,7 @@
                                     type="text"
                                     v-model="form.grossIncome"
                                     required
+                                    autocomplete="no"
                                     placeholder="Enter gross income of client"
                                 ></b-form-input>
                             </b-form-group>
@@ -88,6 +92,7 @@
                                     type="text"
                                     v-model="form.initialBalance"
                                     required
+                                    autocomplete="no"
                                     placeholder="Enter Initial balance (expected within 30 days of account opening)"
                                 ></b-form-input>
                             </b-form-group>

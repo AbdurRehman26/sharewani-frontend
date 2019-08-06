@@ -21,6 +21,7 @@
                                 type="text"
                                 v-model="form.liveness"
                                 required
+                                autocomplete="no"
                                 placeholder="Enter liveness detection"
                             ></b-form-input>
                         </b-form-group>

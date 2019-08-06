@@ -21,6 +21,7 @@
                                 type="text"
                                 v-model="form.fieldLabel"
                                 required
+                                autocomplete="no"
                                 placeholder="Enter field label"
                             ></b-form-input>
                         </b-form-group>
@@ -36,6 +37,7 @@
                                 type="text"
                                 v-model="form.placeholder"
                                 required
+                                autocomplete="no"
                                 placeholder="Enter placeholder text"
                             ></b-form-input>
                         </b-form-group>
