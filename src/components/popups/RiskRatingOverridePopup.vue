@@ -64,7 +64,7 @@ export default {
                 'High Risk',
                 'Medium Risk',
                 'Low Risk',
-                'sanctioned',
+                'Sanctioned',
             ],
         }
     },
