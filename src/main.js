@@ -30,7 +30,8 @@ new Vue({
         checkMeta() {
             // const title = document.title
             // document.title = ''
-            document.title = 'Idenfo | ' + this.$route.meta.title
+            document.title =
+                process.env.VUE_APP_TITLE + ' | ' + this.$route.meta.title
         },
     },
     watch: {

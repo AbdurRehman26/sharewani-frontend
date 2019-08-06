@@ -5,14 +5,14 @@
                 <div class="col-md-10 filter-title-section">
                     <h2>Customer Statistics</h2>
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-2 text-right">
                     <b-form-group>
                         <base-button
                             v-b-modal.export-report-popup
                             btnLabel="Export"
                             btnType="submit"
                             btnVariant="secondary"
-                            class="btn-block"
+                            class="btn-sm"
                         ></base-button>
                     </b-form-group>
                 </div>

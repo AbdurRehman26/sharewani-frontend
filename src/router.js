@@ -462,6 +462,18 @@ export default new Router({
                                 responsiveMenuItem: true,
                             },
                         },
+                        {
+                            path:
+                                '/configuration/idenfo-engine/risk-level-review',
+                            name: 'idenfo-engine-risk-level-review',
+                            component: () =>
+                                import(/* webpackChunkName: "riskRating" */ './views/configuration/idenfo-engine/RiskLevelReview.vue'),
+                            meta: {
+                                title:
+                                    'Configuration | Idenfo Engine | Risk Level Review',
+                                responsiveMenuItem: true,
+                            },
+                        },
                     ],
                 },
                 {

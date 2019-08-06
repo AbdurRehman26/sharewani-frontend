@@ -1207,6 +1207,10 @@ a {
         &.danger {
             color: $danger-dark;
         }
+        &.ok-level {
+            color: $secondary;
+            font-size: 27px;
+        }
         &.circle-area {
             border-radius: 10px;
             color: #fff;
@@ -1986,5 +1990,98 @@ a {
 
     i {
         font-size: 15px;
+    }
+}
+
+.review-config-form {
+    .custom-control-inline {
+        width: 28%;
+    }
+}
+
+.risk-level-page {
+    .pending {
+        font-size: 27px;
+    }
+}
+
+.customer-last-review {
+    .card-body {
+        padding: 0;
+        .status-view {
+            position: absolute;
+            right: 36px;
+            left: auto;
+            top: 36px;
+        }
+        .profile-pic {
+            width: 42px;
+            height: 42px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            float: left;
+            border-radius: 100%;
+        }
+
+        .details-section {
+            width: calc(100% - 42px);
+            float: right;
+            padding-left: 12px;
+            position: relative;
+
+            h5 {
+                font-family: $font-medium;
+                font-size: 1rem;
+                margin-top: 5px;
+                margin-bottom: 2px;
+            }
+
+            .date-content {
+                margin-bottom: 20px;
+            }
+
+            .file-section {
+                width: 21px;
+                height: 32px;
+                float: left;
+                margin-top: 3px;
+            }
+
+            .file-attach {
+                width: calc(100% - 21px);
+                float: left;
+
+                .btn {
+                    padding: 0 0 0 10px;
+                }
+            }
+
+            .status-types {
+                font-size: 0.75rem;
+                color: $grey-lite;
+                font-family: $font_light !important;
+                margin-right: 25px;
+                margin-bottom: 25px;
+                display: inline-block;
+                position: relative;
+
+                &:before {
+                    content: '';
+                    width: 3px;
+                    height: 3px;
+                    left: -14px;
+                    top: 4px;
+                    background-color: $grey-lite;
+                    position: absolute;
+                    border-radius: 100%;
+                }
+
+                &:first-of-type {
+                    &:before {
+                        display: none;
+                    }
+                }
+            }
+        }
     }
 }
