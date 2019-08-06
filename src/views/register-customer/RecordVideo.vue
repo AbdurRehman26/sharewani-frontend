@@ -10,14 +10,21 @@
                     record 10 seconds video.
                 </p>
                 <div class="video-record">
-                    <img src="@/assets/images/video-cover.png" />
-                    <div class="video-play">
+                    <img
+                        v-show="showVideo == false"
+                        src="@/assets/images/video-cover.png"
+                    />
+                    <div class="show-record-video" v-show="showVideo == true">
+                        <video-js-record></video-js-record>
+                    </div>
+                    <div @click="showVideo ^= true" class="video-play">
                         <i class="icon-record">
                             <i class="path1"></i>
                             <i class="path2"></i>
                             <i class="path3"></i>
                         </i>
-                        <p>Record</p>
+                        <p v-if="showVideo == false">Record</p>
+                        <p v-if="showVideo == true">Stop</p>
                     </div>
                 </div>
                 <base-button
@@ -31,8 +38,11 @@
     </b-form>
 </template>
 <script>
+import videoJsRecord from '@/components/VideoJSRecord.vue'
 export default {
-    components: {},
+    components: {
+        videoJsRecord,
+    },
 
     /*
     |--------------------------------------------------------------------------
@@ -56,7 +66,9 @@ export default {
     |--------------------------------------------------------------------------
     */
     data() {
-        return {}
+        return {
+            showVideo: false,
+        }
     }, // End of Component > data
 
     /*
