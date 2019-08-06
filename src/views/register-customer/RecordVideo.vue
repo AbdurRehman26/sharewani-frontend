@@ -10,11 +10,7 @@
                     record 10 seconds video.
                 </p>
                 <div class="video-record">
-                    <img
-                        v-show="showVideo == false"
-                        src="@/assets/images/video-cover.png"
-                    />
-                    <div class="show-record-video" v-show="showVideo == true">
+                    <div class="show-record-video">
                         <video-js-record></video-js-record>
                     </div>
                     <div @click="showVideo ^= true" class="video-play">
