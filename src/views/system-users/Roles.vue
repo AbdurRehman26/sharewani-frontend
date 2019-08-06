@@ -44,7 +44,14 @@
                 </template>
                 <!-- action slot -->
                 <template slot="action" slot-scope="data">
-                    <div class="action-review">
+                    <div
+                        :class="
+                            data.item.status[0].label == 'Locked'
+                                ? 'disabled'
+                                : ''
+                        "
+                        class="action-review"
+                    >
                         <!-- if action modify -->
                         <base-action
                             v-if="
