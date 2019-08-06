@@ -154,6 +154,11 @@ export default {
                     anchorLink: '/configuration/idenfo-engine/gender',
                     menuLabel: 'Gender',
                 },
+                {
+                    anchorLink:
+                        '/configuration/idenfo-engine/risk-level-review',
+                    menuLabel: 'Risk Level Review',
+                },
             ],
         }
     }, // End of Component > data

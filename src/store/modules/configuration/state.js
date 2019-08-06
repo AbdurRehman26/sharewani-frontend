@@ -1566,6 +1566,121 @@ export default {
                     },
                 ],
             },
+
+            riskLevelReviewTable: {
+                fields: [
+                    {
+                        key: 'risk_level',
+                        label: 'Risk Level',
+                        sortable: true,
+                    },
+
+                    {
+                        key: 'involvement',
+                        label: 'Maker Involvement',
+                        class: 'text-center',
+                    },
+                    {
+                        key: 'checker',
+                        label: 'Checker Involvement',
+                        class: 'text-center',
+                    },
+                    {
+                        key: 'approver',
+                        label: 'Approver Involvement',
+                        class: 'text-center',
+                    },
+                    {
+                        key: 'action',
+                        label: 'ACTION',
+                    },
+                ],
+                items: [
+                    {
+                        risk_level: 'Low',
+
+                        involvement: [
+                            {
+                                cssClass: 'icon-check-circle ok-level',
+                            },
+                        ],
+                        checker: [
+                            {
+                                cssClass: 'icon-check-circle pending',
+                            },
+                        ],
+                        approver: [
+                            {
+                                cssClass: 'icon-check-circle pending',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        risk_level: 'Medium',
+
+                        involvement: [
+                            {
+                                cssClass: 'icon-check-circle ok-level',
+                            },
+                        ],
+                        checker: [
+                            {
+                                cssClass: 'icon-check-circle ok-level',
+                            },
+                        ],
+                        approver: [
+                            {
+                                cssClass: 'icon-check-circle pending',
+                            },
+                        ],
+
+                        action: 'active',
+                    },
+                    {
+                        risk_level: 'High',
+
+                        involvement: [
+                            {
+                                cssClass: 'icon-check-circle ok-level',
+                            },
+                        ],
+                        checker: [
+                            {
+                                cssClass: 'icon-check-circle ok-level',
+                            },
+                        ],
+                        approver: [
+                            {
+                                cssClass: 'icon-check-circle ok-level',
+                            },
+                        ],
+
+                        action: 'active',
+                    },
+                    {
+                        risk_level: 'Sanctioned',
+
+                        involvement: [
+                            {
+                                cssClass: 'icon-check-circle ok-level',
+                            },
+                        ],
+                        checker: [
+                            {
+                                cssClass: 'icon-check-circle ok-level',
+                            },
+                        ],
+                        approver: [
+                            {
+                                cssClass: 'icon-check-circle ok-level',
+                            },
+                        ],
+
+                        action: 'active',
+                    },
+                ],
+            },
         },
         importData: [
             {
