@@ -1,13 +1,29 @@
 <template>
     <div class="wrap-content">
         <div class="config-list" ref="listingArea">
-            <ul v-show="listVal <= 1500">
+            <div v-show="listVal <= 1100" class="config-list-dropdown">
+                <b-form-group
+                    id="input-group-5"
+                    label="Idenfo Engine"
+                    label-for="idenfo-engine"
+                >
+                    <b-form-select
+                        id="idenfo-engine"
+                        class="form-control"
+                        v-model="menuListingChanges"
+                        :options="menuListing"
+                        v-on:change="onChange"
+                    >
+                    </b-form-select>
+                </b-form-group>
+            </div>
+            <ul v-show="listVal >= 1100 && listVal <= 1500">
                 <li
                     v-for="(list, index) in menuListing.slice(0, 8)"
                     :key="index"
                 >
-                    <router-link :to="list.anchorLink">
-                        <span>{{ list.menuLabel }}</span>
+                    <router-link :to="list.value">
+                        <span>{{ list.text }}</span>
                     </router-link>
                 </li>
                 <li
@@ -36,8 +52,8 @@
                                 :key="index"
                                 @click="listDropdown ^= true"
                             >
-                                <router-link :to="listo.anchorLink">
-                                    <span>{{ listo.menuLabel }}</span>
+                                <router-link :to="listo.value">
+                                    <span>{{ listo.text }}</span>
                                 </router-link>
                             </li>
                         </ul>
@@ -46,8 +62,8 @@
             </ul>
             <ul v-show="listVal >= 1499">
                 <li v-for="(list, index) in menuListing" :key="index">
-                    <router-link :to="list.anchorLink">
-                        <span>{{ list.menuLabel }}</span>
+                    <router-link :to="list.value">
+                        <span>{{ list.text }}</span>
                     </router-link>
                 </li>
             </ul>
@@ -96,61 +112,60 @@ export default {
             tableItemData: null,
             listVal: null,
             listDropdown: false,
+            menuListingChanges: '/configuration/',
             menuListing: [
                 {
-                    anchorLink: '/configuration/',
-                    menuLabel: 'Risk Factor',
+                    value: '/configuration/',
+                    text: 'Risk Factor',
                 },
                 {
-                    anchorLink: '/configuration/idenfo-engine/risk-rating',
-                    menuLabel: 'Risk Rating',
+                    value: '/configuration/idenfo-engine/risk-rating',
+                    text: 'Risk Rating',
                 },
                 {
-                    anchorLink:
+                    value:
                         '/configuration/idenfo-engine/document-verification-factor',
-                    menuLabel: 'Document Verification',
+                    text: 'Document Verification',
                 },
                 {
-                    anchorLink:
-                        '/configuration/idenfo-engine/name-screen-score',
-                    menuLabel: 'Name Screening',
+                    value: '/configuration/idenfo-engine/name-screen-score',
+                    text: 'Name Screening',
                 },
                 {
-                    anchorLink: '/configuration/idenfo-engine/nationality',
-                    menuLabel: 'Nationality',
+                    value: '/configuration/idenfo-engine/nationality',
+                    text: 'Nationality',
                 },
                 {
-                    anchorLink: '/configuration/idenfo-engine/country',
-                    menuLabel: 'Country',
+                    value: '/configuration/idenfo-engine/country',
+                    text: 'Country',
                 },
                 {
-                    anchorLink: '/configuration/idenfo-engine/state',
-                    menuLabel: 'State',
+                    value: '/configuration/idenfo-engine/state',
+                    text: 'State',
                 },
                 {
-                    anchorLink: '/configuration/idenfo-engine/work',
-                    menuLabel: 'Work Type',
+                    value: '/configuration/idenfo-engine/work',
+                    text: 'Work Type',
                 },
                 {
-                    anchorLink: '/configuration/idenfo-engine/industry',
-                    menuLabel: 'Industry',
+                    value: '/configuration/idenfo-engine/industry',
+                    text: 'Industry',
                 },
                 {
-                    anchorLink: '/configuration/idenfo-engine/product',
-                    menuLabel: 'Product Type',
+                    value: '/configuration/idenfo-engine/product',
+                    text: 'Product Type',
                 },
                 {
-                    anchorLink: '/configuration/idenfo-engine/relationship',
-                    menuLabel: 'Relationship',
+                    value: '/configuration/idenfo-engine/relationship',
+                    text: 'Relationship',
                 },
                 {
-                    anchorLink: '/configuration/idenfo-engine/channel',
-                    menuLabel: 'Channel Type',
+                    value: '/configuration/idenfo-engine/channel',
+                    text: 'Channel Type',
                 },
                 {
-                    anchorLink:
-                        '/configuration/idenfo-engine/purpose-of-action',
-                    menuLabel: 'Purpose of Action',
+                    value: '/configuration/idenfo-engine/purpose-of-action',
+                    text: 'Purpose of Action',
                 },
             ],
         }
@@ -177,6 +192,9 @@ export default {
         },
         close() {
             this.listDropdown = false
+        },
+        onChange() {
+            this.$router.push('' + this.menuListingChanges + '')
         },
     }, // End of Component > methods
 

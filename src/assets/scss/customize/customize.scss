@@ -56,6 +56,9 @@ span {
     }
     @include mobile {
         text-align: center;
+        .link-action {
+            justify-content: center;
+        }
     }
 }
 
@@ -760,6 +763,14 @@ a {
     margin-top: 40px;
 }
 
+.customers-info-section {
+    .customer-profile {
+        @include mobile {
+            margin-bottom: 30px;
+        }
+    }
+}
+
 .screen-section {
     .pending {
         display: none;
@@ -1151,6 +1162,9 @@ a {
             &.dark {
                 background-color: #1b1b1e;
             }
+            @include mobile {
+                height: 133px;
+            }
         }
     }
 }
@@ -1532,6 +1546,11 @@ a {
             font-family: $font_medium;
             font-size: 1.125rem;
             margin-bottom: 18px;
+        }
+        .col-md-4 {
+            @include mobile {
+                margin-bottom: 20px;
+            }
         }
     }
 
@@ -2054,6 +2073,14 @@ a {
         @include tablet {
             flex: 0 0 100%;
             max-width: 100%;
+        }
+    }
+}
+
+.profile-setup {
+    @include mobile {
+        .col-md-4 {
+            margin-bottom: 15px;
         }
     }
 }

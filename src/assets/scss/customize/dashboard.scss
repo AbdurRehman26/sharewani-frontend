@@ -74,6 +74,9 @@
 		.amcharts-div.pie-charts {
 			height: 300px;
 		}
+		@include mobileS {
+			height: 450px;
+		}
 	}
 }
 
@@ -91,6 +94,9 @@
 	}
 	p {
 		font-size: $font-size-base + 0.22;
+	}
+	@include mobileS {
+		top: 38%;
 	}
 }
 
@@ -152,6 +158,9 @@
 					font-size: 0.75rem;
 					margin-top: 3px;
 				}
+			}
+			@include mobileS {
+				width: 50%;
 			}
 		}
 	}

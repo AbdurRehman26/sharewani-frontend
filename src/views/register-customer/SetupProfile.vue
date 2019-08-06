@@ -195,7 +195,7 @@
                                 label="Phone Number"
                                 label-for="phonenumber"
                             >
-                                <div class="row">
+                                <div class="row profile-setup">
                                     <div class="col-md-4">
                                         <b-form-input
                                             id="countrycode"

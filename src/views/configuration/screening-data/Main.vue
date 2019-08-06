@@ -20,13 +20,29 @@
 
         <div v-if="tabData == 0 || tabData == 1">
             <div class="config-list" ref="listingArea">
-                <ul v-show="listVal <= 1700">
+                <div v-show="listVal <= 1100" class="config-list-dropdown">
+                    <b-form-group
+                        id="input-group-5"
+                        label="Screening Data"
+                        label-for="screening-data"
+                    >
+                        <b-form-select
+                            id="screening-data"
+                            class="form-control"
+                            v-model="menuListingChanges"
+                            :options="menuListing"
+                            v-on:change="onChange"
+                        >
+                        </b-form-select>
+                    </b-form-group>
+                </div>
+                <ul v-show="listVal >= 1100 && listVal <= 1700">
                     <li
                         v-for="(list, index) in menuListing.slice(0, 8)"
                         :key="index"
                     >
-                        <router-link :to="list.anchorLink">
-                            <span>{{ list.menuLabel }}</span>
+                        <router-link :to="list.value">
+                            <span>{{ list.text }}</span>
                         </router-link>
                     </li>
                     <li
@@ -58,8 +74,8 @@
                                     :key="index"
                                     @click="listDropdown ^= true"
                                 >
-                                    <router-link :to="listo.anchorLink">
-                                        <span>{{ listo.menuLabel }}</span>
+                                    <router-link :to="listo.value">
+                                        <span>{{ listo.text }}</span>
                                     </router-link>
                                 </li>
                             </ul>
@@ -68,8 +84,8 @@
                 </ul>
                 <ul v-show="listVal >= 1699">
                     <li v-for="(list, index) in menuListing" :key="index">
-                        <router-link :to="list.anchorLink">
-                            <span>{{ list.menuLabel }}</span>
+                        <router-link :to="list.value">
+                            <span>{{ list.text }}</span>
                         </router-link>
                     </li>
                 </ul>
@@ -139,68 +155,67 @@ export default {
             tableItemData: null,
             listVal: null,
             listDropdown: false,
+            menuListingChanges: '/configuration/screening-data/',
             menuListing: [
                 {
-                    anchorLink: '/configuration/screening-data/',
-                    menuLabel: 'Gender',
+                    value: '/configuration/screening-data/',
+                    text: 'Gender',
                 },
                 {
-                    anchorLink: '/configuration/screening-data/deceased',
-                    menuLabel: 'Deceased',
+                    value: '/configuration/screening-data/deceased',
+                    text: 'Deceased',
                 },
                 {
-                    anchorLink: '/configuration/screening-data/record-status',
-                    menuLabel: 'Record Status',
+                    value: '/configuration/screening-data/record-status',
+                    text: 'Record Status',
                 },
                 {
-                    anchorLink: '/configuration/screening-data/name-type',
-                    menuLabel: 'Name Type',
+                    value: '/configuration/screening-data/name-type',
+                    text: 'Name Type',
                 },
                 {
-                    anchorLink: '/configuration/screening-data/descprition-1',
-                    menuLabel: 'Description 1',
+                    value: '/configuration/screening-data/descprition-1',
+                    text: 'Description 1',
                 },
                 {
-                    anchorLink: '/configuration/screening-data/descprition-2',
-                    menuLabel: 'Description 2',
+                    value: '/configuration/screening-data/descprition-2',
+                    text: 'Description 2',
                 },
                 {
-                    anchorLink: '/configuration/screening-data/descprition-3',
-                    menuLabel: 'Description 3',
+                    value: '/configuration/screening-data/descprition-3',
+                    text: 'Description 3',
                 },
                 {
-                    anchorLink: '/configuration/screening-data/role-type',
-                    menuLabel: 'Role Type',
+                    value: '/configuration/screening-data/role-type',
+                    text: 'Role Type',
                 },
                 {
-                    anchorLink: '/configuration/screening-data/occupation',
-                    menuLabel: 'Occupation',
+                    value: '/configuration/screening-data/occupation',
+                    text: 'Occupation',
                 },
                 {
-                    anchorLink: '/configuration/screening-data/data-type',
-                    menuLabel: 'Data Type',
+                    value: '/configuration/screening-data/data-type',
+                    text: 'Data Type',
                 },
                 {
-                    anchorLink:
-                        '/configuration/screening-data/sanction-reference',
-                    menuLabel: 'Sanctions Reference',
+                    value: '/configuration/screening-data/sanction-reference',
+                    text: 'Sanctions Reference',
                 },
                 {
-                    anchorLink: '/configuration/screening-data/country',
-                    menuLabel: 'Country',
+                    value: '/configuration/screening-data/country',
+                    text: 'Country',
                 },
                 {
-                    anchorLink: '/configuration/screening-data/country-type',
-                    menuLabel: 'Country Type',
+                    value: '/configuration/screening-data/country-type',
+                    text: 'Country Type',
                 },
                 {
-                    anchorLink: '/configuration/screening-data/indentification',
-                    menuLabel: 'Indentification ',
+                    value: '/configuration/screening-data/indentification',
+                    text: 'Indentification ',
                 },
                 {
-                    anchorLink:
-                        '/configuration/screening-data/relationship-type',
-                    menuLabel: 'Relationship Type',
+                    value: '/configuration/screening-data/relationship-type',
+                    text: 'Relationship Type',
                 },
             ],
         }
@@ -237,6 +252,9 @@ export default {
         },
         tabFilter(index) {
             this.tabData = index
+        },
+        onChange() {
+            this.$router.push('' + this.menuListingChanges + '')
         },
     }, // End of Component > methods
 
