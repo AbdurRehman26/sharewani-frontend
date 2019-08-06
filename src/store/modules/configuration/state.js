@@ -1591,6 +1591,10 @@ export default {
                         class: 'text-center',
                     },
                     {
+                        key: 'alerttype',
+                        label: 'Alert Type',
+                    },
+                    {
                         key: 'action',
                         label: 'ACTION',
                     },
@@ -1614,6 +1618,7 @@ export default {
                                 cssClass: 'icon-check-circle pending',
                             },
                         ],
+                        alerttype: 'On-boarding Alert',
                         action: 'active',
                     },
                     {
@@ -1634,7 +1639,7 @@ export default {
                                 cssClass: 'icon-check-circle pending',
                             },
                         ],
-
+                        alerttype: 'On-boarding Alert',
                         action: 'active',
                     },
                     {
@@ -1655,7 +1660,7 @@ export default {
                                 cssClass: 'icon-check-circle ok-level',
                             },
                         ],
-
+                        alerttype: 'On-boarding Alert',
                         action: 'active',
                     },
                     {
@@ -1676,7 +1681,262 @@ export default {
                                 cssClass: 'icon-check-circle ok-level',
                             },
                         ],
+                        alerttype: 'On-boarding Alert',
+                        action: 'active',
+                    },
 
+                    {
+                        risk_level: 'Low',
+
+                        involvement: [
+                            {
+                                cssClass: 'icon-check-circle ok-level',
+                            },
+                        ],
+                        checker: [
+                            {
+                                cssClass: 'icon-check-circle pending',
+                            },
+                        ],
+                        approver: [
+                            {
+                                cssClass: 'icon-check-circle pending',
+                            },
+                        ],
+                        alerttype: 'Trigger Alert',
+                        action: 'active',
+                    },
+                    {
+                        risk_level: 'Medium',
+
+                        involvement: [
+                            {
+                                cssClass: 'icon-check-circle ok-level',
+                            },
+                        ],
+                        checker: [
+                            {
+                                cssClass: 'icon-check-circle ok-level',
+                            },
+                        ],
+                        approver: [
+                            {
+                                cssClass: 'icon-check-circle pending',
+                            },
+                        ],
+                        alerttype: 'Trigger Alert',
+                        action: 'active',
+                    },
+                    {
+                        risk_level: 'High',
+
+                        involvement: [
+                            {
+                                cssClass: 'icon-check-circle ok-level',
+                            },
+                        ],
+                        checker: [
+                            {
+                                cssClass: 'icon-check-circle ok-level',
+                            },
+                        ],
+                        approver: [
+                            {
+                                cssClass: 'icon-check-circle ok-level',
+                            },
+                        ],
+                        alerttype: 'Trigger Alert',
+                        action: 'active',
+                    },
+                    {
+                        risk_level: 'Sanctioned',
+
+                        involvement: [
+                            {
+                                cssClass: 'icon-check-circle ok-level',
+                            },
+                        ],
+                        checker: [
+                            {
+                                cssClass: 'icon-check-circle ok-level',
+                            },
+                        ],
+                        approver: [
+                            {
+                                cssClass: 'icon-check-circle ok-level',
+                            },
+                        ],
+                        alerttype: 'Trigger Alert',
+                        action: 'active',
+                    },
+
+                    {
+                        risk_level: 'Low',
+
+                        involvement: [
+                            {
+                                cssClass: 'icon-check-circle ok-level',
+                            },
+                        ],
+                        checker: [
+                            {
+                                cssClass: 'icon-check-circle pending',
+                            },
+                        ],
+                        approver: [
+                            {
+                                cssClass: 'icon-check-circle pending',
+                            },
+                        ],
+                        alerttype: 'Periodic Alert',
+                        action: 'active',
+                    },
+                    {
+                        risk_level: 'Medium',
+
+                        involvement: [
+                            {
+                                cssClass: 'icon-check-circle ok-level',
+                            },
+                        ],
+                        checker: [
+                            {
+                                cssClass: 'icon-check-circle ok-level',
+                            },
+                        ],
+                        approver: [
+                            {
+                                cssClass: 'icon-check-circle pending',
+                            },
+                        ],
+                        alerttype: 'Periodic Alert',
+                        action: 'active',
+                    },
+                    {
+                        risk_level: 'High',
+
+                        involvement: [
+                            {
+                                cssClass: 'icon-check-circle ok-level',
+                            },
+                        ],
+                        checker: [
+                            {
+                                cssClass: 'icon-check-circle ok-level',
+                            },
+                        ],
+                        approver: [
+                            {
+                                cssClass: 'icon-check-circle ok-level',
+                            },
+                        ],
+                        alerttype: 'Periodic Alert',
+                        action: 'active',
+                    },
+                    {
+                        risk_level: 'Sanctioned',
+
+                        involvement: [
+                            {
+                                cssClass: 'icon-check-circle ok-level',
+                            },
+                        ],
+                        checker: [
+                            {
+                                cssClass: 'icon-check-circle ok-level',
+                            },
+                        ],
+                        approver: [
+                            {
+                                cssClass: 'icon-check-circle ok-level',
+                            },
+                        ],
+                        alerttype: 'Periodic Alert',
+                        action: 'active',
+                    },
+
+                    {
+                        risk_level: 'Low',
+
+                        involvement: [
+                            {
+                                cssClass: 'icon-check-circle ok-level',
+                            },
+                        ],
+                        checker: [
+                            {
+                                cssClass: 'icon-check-circle pending',
+                            },
+                        ],
+                        approver: [
+                            {
+                                cssClass: 'icon-check-circle pending',
+                            },
+                        ],
+                        alerttype: 'Manual Alert',
+                        action: 'active',
+                    },
+                    {
+                        risk_level: 'Medium',
+
+                        involvement: [
+                            {
+                                cssClass: 'icon-check-circle ok-level',
+                            },
+                        ],
+                        checker: [
+                            {
+                                cssClass: 'icon-check-circle ok-level',
+                            },
+                        ],
+                        approver: [
+                            {
+                                cssClass: 'icon-check-circle pending',
+                            },
+                        ],
+                        alerttype: 'Manual Alert',
+                        action: 'active',
+                    },
+                    {
+                        risk_level: 'High',
+
+                        involvement: [
+                            {
+                                cssClass: 'icon-check-circle ok-level',
+                            },
+                        ],
+                        checker: [
+                            {
+                                cssClass: 'icon-check-circle ok-level',
+                            },
+                        ],
+                        approver: [
+                            {
+                                cssClass: 'icon-check-circle ok-level',
+                            },
+                        ],
+                        alerttype: 'Manual Alert',
+                        action: 'active',
+                    },
+                    {
+                        risk_level: 'Sanctioned',
+
+                        involvement: [
+                            {
+                                cssClass: 'icon-check-circle ok-level',
+                            },
+                        ],
+                        checker: [
+                            {
+                                cssClass: 'icon-check-circle ok-level',
+                            },
+                        ],
+                        approver: [
+                            {
+                                cssClass: 'icon-check-circle ok-level',
+                            },
+                        ],
+                        alerttype: 'Manual Alert',
                         action: 'active',
                     },
                 ],
