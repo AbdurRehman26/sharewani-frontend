@@ -179,7 +179,7 @@ export default {
                     },
                     {
                         key: 'dialingcode',
-                        label: 'Dialing Code',
+                        label: 'Dialling Code',
                         class: 'text-center',
                         sortable: true,
                     },

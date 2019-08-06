@@ -31,7 +31,7 @@
                             <div class="col-md-6">
                                 <b-form-group
                                     id="input-group-2"
-                                    label="Dialing Code"
+                                    label="Dialling Code"
                                     label-for="input-2"
                                 >
                                     <b-form-input
@@ -40,7 +40,7 @@
                                         v-model="form.dialingCode"
                                         required
                                         autocomplete="no"
-                                        placeholder="Enter dialing code"
+                                        placeholder="Enter dialling code"
                                     ></b-form-input>
                                 </b-form-group>
                             </div>
