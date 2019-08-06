@@ -11,7 +11,10 @@
                 </p>
                 <div class="video-record">
                     <div class="show-record-video">
-                        <video-js-record></video-js-record>
+                        <video-js-record
+                            @recordingStarted="showVideo = true"
+                            @recordingEnded="showVideo = false"
+                        ></video-js-record>
                     </div>
                     <div @click="showVideo ^= true" class="video-play">
                         <i class="icon-record">

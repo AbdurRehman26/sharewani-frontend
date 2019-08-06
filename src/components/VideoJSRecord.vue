@@ -61,7 +61,8 @@ export default {
 
         // user clicked the record button and started recording
         this.player.on('startRecord', () => {
-            console.log('started recording!')
+            // console.log('started recording!')
+            this.$emit('recordingStarted')
         })
 
         // user completed recording and stream is available
@@ -69,6 +70,7 @@ export default {
             // the blob object contains the recorded data that
             // can be downloaded by the user, stored on server etc.
             console.log('finished recording: ', this.player.recordedData)
+            this.$emit('recordingEnded')
         })
 
         // error handling

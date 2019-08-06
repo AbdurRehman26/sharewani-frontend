@@ -904,6 +904,20 @@ a {
     width: 200px;
 }
 
+.show-record-video {
+    button.vjs-record-button {
+        width: 75px;
+        height: 90px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        bottom: -168%;
+        z-index: 9;
+        outline: 0;
+        opacity: 0;
+    }
+}
 .config-list {
     ul {
         padding: 0;
