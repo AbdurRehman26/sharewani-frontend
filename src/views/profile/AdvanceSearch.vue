@@ -62,13 +62,12 @@
                             label="Gender"
                             label-for="gender"
                         >
-                            <b-form-group>
-                                <b-form-radio-group
-                                    v-model="gender"
-                                    :options="form.gender"
-                                    name="gender"
-                                ></b-form-radio-group>
-                            </b-form-group>
+                            <b-form-select
+                                class="form-control"
+                                v-model="form.gender"
+                                :options="form.genderOptions"
+                                autocomplete="no"
+                            ></b-form-select>
                         </b-form-group>
                     </div>
                     <div class="col-md-4">
@@ -251,6 +250,7 @@ export default {
                 firstName: '',
                 middleName: '',
                 lastName: '',
+                gender: null,
                 nationality: null,
                 residence: null,
                 workType: null,
@@ -261,10 +261,11 @@ export default {
                 type: null,
                 productType: null,
 
-                gender: [
-                    { text: 'All Customers', value: null },
+                genderOptions: [
+                    { text: 'Select gender', value: null },
                     'Male',
                     'Female',
+                    'Not Applicable',
                 ],
 
                 channel: [
