@@ -104,6 +104,7 @@
         </div>
         <cancel-review-process-popup></cancel-review-process-popup>
         <kyc-status-review-popup></kyc-status-review-popup>
+        <manual-alert-popup></manual-alert-popup>
     </div>
 </template>
 <script>
@@ -112,6 +113,7 @@ import customerInformation from '@/components/CustomerInfo.vue'
 import pdfIcon from '@/components/icons/PdfIcon.vue'
 import kycStatusReviewPopup from '@/components/popups/KYCStatusReviewPopup.vue'
 import cancelReviewProcessPopup from '@/components/popups/CancelReviewProcessPopup.vue'
+import manualAlertPopup from '@/components/popups/ManualAlertPopup.vue'
 import tags from '@/components/Tags.vue'
 export default {
     components: {
@@ -120,6 +122,7 @@ export default {
         cancelReviewProcessPopup,
         kycStatusReviewPopup,
         pdfIcon,
+        manualAlertPopup,
     },
 
     /*
@@ -148,7 +151,7 @@ export default {
             customerDetails: [],
             tags: [],
             tagsList: [],
-            image: 'member-4.png',
+            image: 'member-1.png',
             name: 'Jacqueline Asong',
             subHeading: 'Approver',
             date: 'july 4, 2019 10:45 a.m.',

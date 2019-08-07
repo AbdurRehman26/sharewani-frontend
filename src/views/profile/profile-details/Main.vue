@@ -6,12 +6,12 @@
                 <div class="wrap-content">
                     <div class="filter-section row-min-space profile-filter">
                         <div class="row">
-                            <div class="col-md-6 filter-title-section">
+                            <div class="col-md-4 filter-title-section">
                                 <h2>{{ $route.meta.name }}</h2>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-8">
                                 <div class="row">
-                                    <div class="col-md-3 text-right">
+                                    <div class="col-md-2 text-right">
                                         <router-link
                                             to="/customer-profiles"
                                             class="btn btn-link go-back-btn"
@@ -22,7 +22,7 @@
                                             <span>Go back</span>
                                         </router-link>
                                     </div>
-                                    <div class="col-md-4">
+                                    <div class="col-md-3">
                                         <base-button
                                             v-b-modal.cancel-review-process-popup
                                             btnLabel="Cancel Review Process"
@@ -30,12 +30,20 @@
                                             btnVariant="link font-semibold"
                                         ></base-button>
                                     </div>
-                                    <div class="col-md-5">
+                                    <div class="col-md-3">
                                         <base-button
                                             v-b-modal.kyc-status-review-popup
                                             btnLabel="KYC STATUS REVIEW"
                                             btnType="button"
                                             btnVariant="primary"
+                                        ></base-button>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <base-button
+                                            v-b-modal.manual-alert-popup
+                                            btnLabel="Create Manual Alert"
+                                            btnType="button"
+                                            btnVariant="secondary"
                                         ></base-button>
                                     </div>
                                 </div>

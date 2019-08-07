@@ -24,7 +24,7 @@
                 </template>
             </b-table>
         </div>
-
+        <manual-alert-popup></manual-alert-popup>
         <cancel-review-process-popup></cancel-review-process-popup>
         <kyc-status-review-popup></kyc-status-review-popup>
     </div>
@@ -33,12 +33,14 @@
 import { mapGetters } from 'vuex'
 import customerInformation from '@/components/CustomerInfo.vue'
 import kycStatusReviewPopup from '@/components/popups/KYCStatusReviewPopup.vue'
+import manualAlertPopup from '@/components/popups/ManualAlertPopup.vue'
 import cancelReviewProcessPopup from '@/components/popups/CancelReviewProcessPopup.vue'
 export default {
     components: {
         customerInformation,
         kycStatusReviewPopup,
         cancelReviewProcessPopup,
+        manualAlertPopup,
     },
 
     /*

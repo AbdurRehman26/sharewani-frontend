@@ -83,6 +83,7 @@
         <cancel-review-process-popup></cancel-review-process-popup>
         <kyc-status-review-popup></kyc-status-review-popup>
         <overwrite-result-popup></overwrite-result-popup>
+        <manual-alert-popup></manual-alert-popup>
         <document-preview-popup></document-preview-popup>
         <picture-preview-popup></picture-preview-popup>
         <id-card-preview-popup></id-card-preview-popup>
@@ -100,6 +101,8 @@ import documentPreviewPopup from '@/components/popups/DocumentPreviewPopup.vue'
 import picturePreviewPopup from '@/components/popups/PicturePreviewPopup.vue'
 import idCardPreviewPopup from '@/components/popups/IDCardPreviewPopup.vue'
 import billPreviewPopup from '@/components/popups/BillPreviewPopup.vue'
+import manualAlertPopup from '@/components/popups/ManualAlertPopup.vue'
+
 export default {
     components: {
         customerInformation,
@@ -111,6 +114,7 @@ export default {
         picturePreviewPopup,
         idCardPreviewPopup,
         billPreviewPopup,
+        manualAlertPopup,
     },
 
     /*
