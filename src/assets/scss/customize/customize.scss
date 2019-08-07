@@ -597,6 +597,8 @@ a {
         width: 34px;
         height: 34px;
         background-size: cover;
+        background-position: top center;
+        border-radius: 100%;
         position: absolute;
         top: 0;
         bottom: 0;
@@ -847,6 +849,7 @@ a {
                     height: 205px;
                     text-align: center;
                     img {
+                        max-height: 165px;
                     }
                 }
 
@@ -2042,6 +2045,7 @@ a {
             background-size: cover;
             background-repeat: no-repeat;
             float: left;
+            background-position: top center;
             border-radius: 100%;
         }
 
@@ -2105,5 +2109,12 @@ a {
                 }
             }
         }
+    }
+}
+
+.identification-section {
+    img {
+        max-width: 78%;
+        display: inline-block;
     }
 }

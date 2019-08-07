@@ -17,6 +17,7 @@
         </div>
 
         <time-line :yearDetails="yearDetails"></time-line>
+        <manual-alert-popup></manual-alert-popup>
         <cancel-review-process-popup></cancel-review-process-popup>
         <kyc-status-review-popup></kyc-status-review-popup>
         <export-process-popup
@@ -28,6 +29,7 @@
 <script>
 import { mapGetters } from 'vuex'
 import timeLine from '@/components/TimeLine.vue'
+import manualAlertPopup from '@/components/popups/ManualAlertPopup.vue'
 import customerInformation from '@/components/CustomerInfo.vue'
 import kycStatusReviewPopup from '@/components/popups/KYCStatusReviewPopup.vue'
 import exportProcessPopup from '@/components/popups/ExportProcessPopup.vue'
@@ -39,6 +41,7 @@ export default {
         cancelReviewProcessPopup,
         timeLine,
         exportProcessPopup,
+        manualAlertPopup,
     },
 
     /*

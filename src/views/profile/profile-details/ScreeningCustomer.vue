@@ -58,6 +58,7 @@
         <cancel-review-process-popup></cancel-review-process-popup>
         <kyc-status-review-popup></kyc-status-review-popup>
         <screening-detail-popup></screening-detail-popup>
+        <manual-alert-popup></manual-alert-popup>
     </div>
 </template>
 <script>
@@ -67,6 +68,7 @@ import kycStatusReviewPopup from '@/components/popups/KYCStatusReviewPopup.vue'
 import cancelReviewProcessPopup from '@/components/popups/CancelReviewProcessPopup.vue'
 import screeningDetailPopup from '@/components/popups/ScreeningDetailPopup.vue'
 import statusTypeIcon from '@/components/AlertType.vue'
+import manualAlertPopup from '@/components/popups/ManualAlertPopup.vue'
 
 export default {
     components: {
@@ -75,6 +77,7 @@ export default {
         cancelReviewProcessPopup,
         screeningDetailPopup,
         statusTypeIcon,
+        manualAlertPopup,
     },
 
     /*

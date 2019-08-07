@@ -788,7 +788,7 @@ export default {
                     uploadDate: 'Uploaded June 1, 2019',
                 },
                 {
-                    image: 'nic.png',
+                    image: 'id-card.png',
                     thumbnail: 'jpg.svg',
                     title: 'ID Card',
                     type: 'card',
@@ -866,7 +866,7 @@ export default {
                     days: 'Today',
                     describe: [
                         {
-                            image: 'member-4.png',
+                            image: 'member-1.png',
                             name: 'Jacqueline Asong',
                             subHeading: 'Approver',
                             date: 'July 4, 2019 10:45 a.m.',
@@ -874,7 +874,7 @@ export default {
                                 'Submitted KYC Review Status and changed KYC Status to Approved with the following comment, \n \nSubmitted KYC Review Status and changed KYC Status to Approved with the following comment,',
                         },
                         {
-                            image: 'member-4.png',
+                            image: 'member-1.png',
                             name: 'Jacqueline Asong',
                             subHeading: 'Approver',
                             date: 'July 4, 2019 10:15 a.m.',

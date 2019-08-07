@@ -12,9 +12,7 @@
 
             <div class="document-preview-section">
                 <div class="preview-video">
-                    <img
-                        :src="require('@/assets/images/dummy/bill-screen.png')"
-                    />
+                    <img :src="require('@/assets/images/dummy/bill.png')" />
                 </div>
             </div>
         </b-modal>
