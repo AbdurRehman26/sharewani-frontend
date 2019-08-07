@@ -849,6 +849,7 @@ a {
                     height: 205px;
                     text-align: center;
                     img {
+                        max-height: 165px;
                     }
                 }
 
@@ -2108,5 +2109,12 @@ a {
                 }
             }
         }
+    }
+}
+
+.identification-section {
+    img {
+        max-width: 78%;
+        display: inline-block;
     }
 }
