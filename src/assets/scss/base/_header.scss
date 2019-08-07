@@ -140,7 +140,9 @@ header {
                 width: 42px;
                 margin: auto;
                 top: 5px;
+                border-radius: 100px;
                 animation: 0;
+                overflow: hidden;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -148,7 +150,6 @@ header {
                 background-size: cover;
                 background-position: top center;
                 background-repeat: no-repeat;
-                border-radius: 100%;
             }
             .profile-detail {
                 padding-left: 55px;
