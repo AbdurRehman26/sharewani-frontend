@@ -54,5 +54,20 @@ export default {
             this.selected = checked ? this.checkBoxListing.slice() : []
         },
     },
+    watch: {
+        selected(newVal) {
+            // Handle changes in individual flavour checkboxes
+            if (newVal.length === 0) {
+                this.indeterminate = false
+                this.allSelected = false
+            } else if (newVal.length === this.checkBoxListing.length) {
+                this.indeterminate = false
+                this.allSelected = true
+            } else {
+                this.indeterminate = true
+                this.allSelected = false
+            }
+        },
+    },
 }
 </script>

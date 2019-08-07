@@ -95,9 +95,9 @@ export default {
                 utilityScanCopy: null,
                 docTypeOption: [
                     { value: null, text: 'Select document type' },
-                    'Doc',
-                    'Docx',
-                    'Png',
+                    'National ID Card',
+                    'Driving Licence',
+                    'Passport',
                 ],
             },
         }

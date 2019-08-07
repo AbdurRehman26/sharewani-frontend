@@ -53,7 +53,7 @@ body {
                         color: $white;
                         text-decoration: none;
                         &.router-link-exact-active {
-                            background-color: rgba(255, 255, 255, 0.8);
+                            background-color: rgba(255, 255, 255, 0.9);
                             color: $primary;
                             position: relative;
                             &:after {
@@ -70,10 +70,10 @@ body {
                     &:hover,
                     &:focus {
                         a {
-                            background-color: $sidebar-btn-hover;
+                            background-color: rgba(255, 255, 255, 0.9);
                             color: $primary;
                             position: relative;
-                            &:after {
+                            /*                             &:after {
                                 content: '';
                                 background-color: $secondary;
                                 height: 100%;
@@ -81,7 +81,7 @@ body {
                                 left: -10px;
                                 position: absolute;
                                 border-radius: 0px 3px 3px 0px;
-                            }
+                            } */
                         }
                     }
                 }

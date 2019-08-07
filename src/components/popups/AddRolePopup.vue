@@ -2,7 +2,7 @@
     <div>
         <b-modal
             id="add-role-popup"
-            title="Add Role"
+            :title="title"
             size="lg"
             okTitle="Create"
             cancelTitle="Cancel"
@@ -22,6 +22,7 @@
                                     type="text"
                                     v-model="form.roleTitle"
                                     required
+                                    autocomplete="no"
                                     placeholder="Enter role title"
                                 ></b-form-input>
                             </b-form-group>
@@ -40,6 +41,24 @@
                                 checkboxName="customerprofile"
                                 parentName="Customer Profiles"
                             ></check-box-listing>
+                            <check-box-listing
+                                :checkBoxListing="form.configurations"
+                                checkboxName="configurations"
+                                parentName="Configurations"
+                            ></check-box-listing>
+
+                            <check-box-listing
+                                :checkBoxListing="form.systemUser"
+                                checkboxName="systemUser"
+                                parentName="System User"
+                            ></check-box-listing>
+
+                            <check-box-listing
+                                :checkBoxListing="form.systemLogs"
+                                checkboxName="systemLogs"
+                                parentName="System Logs"
+                            ></check-box-listing>
+
                             <radio-listing
                                 :radioListing="form.statusReview"
                                 parentName="KYC Status Review Role"
@@ -60,25 +79,61 @@ export default {
         checkBoxListing,
         radioListing,
     },
+    /*
+    |--------------------------------------------------------------------------
+    | Component > props
+    |--------------------------------------------------------------------------
+    */
+    props: {
+        /**
+         * Value to determine the current compose mode which
+         * varies between 'add' and 'edit'
+         */
+        title: {
+            type: String,
+            default: null,
+        },
+    }, // End of Component > props
+
+    /*
+    |--------------------------------------------------------------------------
+    | Component > data
+    |--------------------------------------------------------------------------
+    */
     data() {
         return {
             form: {
                 roleTitle: '',
                 insights: [
-                    {
-                        text: 'View Activity Dashboard',
-                        value: 'View Activity Dashboard',
-                    },
-                    {
-                        text: 'View Customer Statistics',
-                        value: 'View Customer Statistics',
-                    },
+                    'View Alerts',
+                    'View Activity Dashboard',
+                    'View Customer Statistics',
                 ],
+
                 customerProfile: [
                     'View Customer Profile',
                     'Register Customer',
                     'KYC Status Investigation & Review',
+                    'Manually Overwrite Verification Status',
                 ],
+
+                configurations: [
+                    'Manage Idenfo Engine',
+                    'Manage View Screening Data',
+                    'Manage Form Builder',
+                    'Manual Review',
+                    'Manage Branding',
+                    'Manage OCR',
+                ],
+
+                systemUser: [
+                    'Manage System Users',
+                    'Manage Roles & Permission',
+                    'Manage Data Segments',
+                    'Manage Application Access',
+                ],
+
+                systemLogs: [' View System Logs'],
 
                 statusReview: [
                     { text: 'Maker', value: 'maker' },

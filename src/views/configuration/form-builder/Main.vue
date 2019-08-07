@@ -1,0 +1,131 @@
+<template>
+    <div class="wrap-content">
+        <div class="filter-section row-min-space">
+            <div class="row">
+                <div class="col-md-7 filter-title-section">
+                    <h2>Registration Form Builder</h2>
+                </div>
+                <div class="col-md-5 text-right">
+                    <div class="row">
+                        <div class="col-md-8 text-right">
+                            <base-button
+                                v-b-modal.export-process-popup
+                                btnLabel="Preview Registration Form"
+                                btnType="button"
+                                btnVariant="link"
+                            ></base-button>
+                        </div>
+                        <div class="col-md-4 text-right">
+                            <base-button
+                                btnLabel="Update Form"
+                                btnType="submit"
+                                btnVariant="primary"
+                            ></base-button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="config-list" ref="listingArea">
+            <ul>
+                <li v-for="(list, index) in menuListing" :key="index">
+                    <router-link :to="list.anchorLink">
+                        <span>{{ list.menuLabel }}</span>
+                    </router-link>
+                </li>
+            </ul>
+        </div>
+
+        <div class="form-builder-area">
+            <router-view />
+        </div>
+    </div>
+</template>
+
+<script>
+import { mapGetters } from 'vuex'
+export default {
+    components: {},
+
+    /*
+    |--------------------------------------------------------------------------
+    | Component > props
+    |--------------------------------------------------------------------------
+    */
+    props: {
+        /**
+         * Value to determine the current compose mode which
+         * varies between 'add' and 'edit'
+         */
+        mode: {
+            type: String,
+            default: 'add',
+        },
+    }, // End of Component > props
+
+    /*
+    |--------------------------------------------------------------------------
+    | Component > data
+    |--------------------------------------------------------------------------
+    */
+    data() {
+        return {
+            menuListing: [
+                {
+                    anchorLink: '/configuration/form-builder',
+                    menuLabel: 'Setup Profile',
+                },
+                {
+                    anchorLink: '/configuration/form-builder/account-info',
+                    menuLabel: 'Account Info',
+                },
+            ],
+        }
+    }, // End of Component > data
+
+    /*
+    |--------------------------------------------------------------------------
+    | Component > computed
+    |--------------------------------------------------------------------------
+    */
+    computed: {
+        ...mapGetters(['configurationData']),
+    }, // End of Component > computed
+
+    /*
+    |--------------------------------------------------------------------------
+    | Component > methods
+    |--------------------------------------------------------------------------
+    */
+    methods: {
+        listWidthVal() {
+            this.listVal = this.$refs.listingArea.offsetWidth
+        },
+        tableItemLength(val) {
+            this.tableItemData = val
+        },
+        initializeData() {
+            //system log table
+            let configImportFields = this.configurationData.importData //get user data from store
+            this.listData = configImportFields //push data into array
+        },
+        close() {
+            this.listDropdown = false
+        },
+        tabFilter(index) {
+            this.tabData = index
+        },
+    }, // End of Component > methods
+
+    /*
+    |--------------------------------------------------------------------------
+    | Component > mounted
+    |--------------------------------------------------------------------------
+    */
+    mounted() {
+        this.listWidthVal()
+        this.initializeData()
+    }, // End of Component > mounted
+} // End of export default
+</script>

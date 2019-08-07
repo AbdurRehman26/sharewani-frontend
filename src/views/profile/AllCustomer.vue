@@ -109,7 +109,10 @@
                 </template>
             </b-table>
         </div>
-        <pagination></pagination>
+        <pagination
+            totalRecords="Showing 1 to 10 of 1,890 records"
+            :showRecords="recordShow"
+        ></pagination>
         <export-process-popup
             title="Export Customer's Data"
             totalExport="Total Records Exported: 1,890"
@@ -158,6 +161,13 @@ export default {
                 { text: 'Pending Review', value: '2' },
                 { text: 'Approved', value: '3' },
                 { text: 'Rejected', value: '4' },
+            ],
+            recordShow: [
+                { text: 'Show 10 records', value: null },
+                { text: 'Show 20 records', value: 20 },
+                { text: 'Show 30 records', value: 30 },
+                { text: 'Show 40 records', value: 40 },
+                { text: 'Show 50 records', value: 50 },
             ],
         }
     }, // End of Component > data

@@ -2,7 +2,7 @@
     <div>
         <b-modal
             id="add-country-popup"
-            title="Add Country of Residence Factor"
+            :title="title"
             size="sm"
             okTitle="Create"
             cancelTitle="Cancel"
@@ -23,6 +23,7 @@
                                         type="text"
                                         v-model="form.countryCode"
                                         required
+                                        autocomplete="no"
                                         placeholder="Enter country code"
                                     ></b-form-input>
                                 </b-form-group>
@@ -30,7 +31,7 @@
                             <div class="col-md-6">
                                 <b-form-group
                                     id="input-group-2"
-                                    label="Dialing Code"
+                                    label="Dialling Code"
                                     label-for="input-2"
                                 >
                                     <b-form-input
@@ -38,7 +39,8 @@
                                         type="text"
                                         v-model="form.dialingCode"
                                         required
-                                        placeholder="Enter dialing code"
+                                        autocomplete="no"
+                                        placeholder="Enter dialling code"
                                     ></b-form-input>
                                 </b-form-group>
                             </div>
@@ -49,13 +51,14 @@
                         <b-form-group
                             id="input-group-3"
                             label="Country Title"
-                            label-for="input-3"
+                            label-for="country-title"
                         >
                             <b-form-input
-                                id="input-3"
+                                id="country-title"
                                 type="text"
                                 v-model="form.countryTitle"
                                 required
+                                autocomplete="no"
                                 placeholder="Enter country title"
                             ></b-form-input>
                         </b-form-group>
@@ -89,6 +92,54 @@
                             </b-form-group>
                         </b-form-group>
                     </div>
+                    <div class="col-md-12">
+                        <b-form-group
+                            class="mb-0 kyc-status-radio overwrite-radio"
+                            id="input-group-6"
+                            label="Tax ID"
+                            label-for="tax-id"
+                        >
+                            <b-form-group>
+                                <b-form-radio-group
+                                    v-model="taxId"
+                                    :options="form.taxId"
+                                    name="taxId"
+                                ></b-form-radio-group>
+                            </b-form-group>
+                        </b-form-group>
+                    </div>
+                    <div class="col-md-12">
+                        <b-form-group
+                            class="mb-0 kyc-status-radio overwrite-radio"
+                            id="input-group-7"
+                            label="Is Tax ID Mandatory"
+                            label-for="id-mandatory"
+                        >
+                            <b-form-group>
+                                <b-form-radio-group
+                                    v-model="idMandatory"
+                                    :options="form.idMandatory"
+                                    name="idMandatory"
+                                ></b-form-radio-group>
+                            </b-form-group>
+                        </b-form-group>
+                    </div>
+                    <div class="col-md-12">
+                        <b-form-group
+                            id="input-group-8"
+                            label="Tax ID Note"
+                            label-for="tax-note"
+                        >
+                            <b-form-input
+                                id="tax-note"
+                                type="text"
+                                v-model="form.taxNote"
+                                required
+                                autocomplete="no"
+                                placeholder="Enter tax id note (optional)"
+                            ></b-form-input>
+                        </b-form-group>
+                    </div>
                 </div>
             </b-form>
         </b-modal>
@@ -97,15 +148,41 @@
 
 <script>
 export default {
+    /*
+    |--------------------------------------------------------------------------
+    | Component > props
+    |--------------------------------------------------------------------------
+    */
+    props: {
+        /**
+         * Value to determine the current compose mode which
+         * varies between 'add' and 'edit'
+         */
+        title: {
+            type: String,
+            default: null,
+        },
+    }, // End of Component > props
+
+    /*
+    |--------------------------------------------------------------------------
+    | Component > data
+    |--------------------------------------------------------------------------
+    */
     data() {
         return {
             sanction: '',
+            taxId: '',
+            idMandatory: '',
             form: {
                 countryCode: '',
                 dialingCode: '',
                 countryTitle: '',
+                taxNote: '',
                 rating: null,
                 sanction: [{ text: 'Yes', value: null }, 'No'],
+                taxId: [{ text: 'Required', value: null }, 'Not Required'],
+                idMandatory: [{ text: 'Yes', value: null }, 'No'],
             },
 
             rating: [

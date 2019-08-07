@@ -23,10 +23,11 @@
                                 </div>
                                 <div class="col-md-8">
                                     <base-button
-                                        v-b-modal.add-product-popup
+                                        @click="addModify('Add Product Factor')"
                                         btnLabel="+ Add Product"
                                         btnType="button"
                                         btnVariant="secondary"
+                                        class="secondary-add-btn"
                                     ></base-button>
                                 </div>
                             </div>
@@ -54,7 +55,7 @@
                             v-if="data.value == 'active'"
                             icon="icon-edit"
                             label="Modify"
-                            v-b-modal.add-product-popup
+                            @click="addModify('Modify Product Factor')"
                         ></base-action>
                         <!-- if action archive -->
                         <base-action
@@ -67,7 +68,13 @@
                 </template>
             </b-table>
         </div>
-        <add-product-popup></add-product-popup>
+        <pagination
+            totalRecords="Showing 1 to 7 of 7 records"
+            nextBtnDisable
+            selectPaginationDisable
+            :showRecords="recordShow"
+        ></pagination>
+        <add-product-popup :title="title"></add-product-popup>
         <archive-popup
             title="Archive Product Factor"
             description="Are you sure you want to archive this product factor? You can re-activate it later."
@@ -79,10 +86,12 @@
 import { mapGetters } from 'vuex'
 import addProductPopup from '@/components/popups/AddProductPopup.vue'
 import archivePopup from '@/components/popups/ArchivePopup.vue'
+import pagination from '@/components/Pagination.vue'
 export default {
     components: {
         addProductPopup,
         archivePopup,
+        pagination,
     },
 
     /*
@@ -110,6 +119,8 @@ export default {
         return {
             fields: [],
             items: [],
+            title: '',
+            recordShow: [{ text: 'Show 10 records', value: null }],
         }
     }, // End of Component > data
 
@@ -136,6 +147,11 @@ export default {
                 .productFactor.items //get user data from store
             this.items = configTableItems //push data into array
             this.$emit('item-length', this.items.length)
+        },
+
+        addModify(e) {
+            this.title = e
+            this.$bvModal.show('add-product-popup')
         },
     }, // End of Component > methods
 

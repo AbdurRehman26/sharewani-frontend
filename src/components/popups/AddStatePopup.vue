@@ -2,7 +2,7 @@
     <div>
         <b-modal
             id="add-state-popup"
-            title="Add State Factor"
+            :title="title"
             size="sm"
             okTitle="Create"
             cancelTitle="Cancel"
@@ -21,6 +21,7 @@
                                 type="text"
                                 v-model="form.stateCode"
                                 required
+                                autocomplete="no"
                                 placeholder="Enter state code"
                             ></b-form-input>
                         </b-form-group>
@@ -36,6 +37,7 @@
                                 type="text"
                                 v-model="form.stateTitle"
                                 required
+                                autocomplete="no"
                                 placeholder="Enter state title"
                             ></b-form-input>
                         </b-form-group>
@@ -62,6 +64,27 @@
 
 <script>
 export default {
+    /*
+    |--------------------------------------------------------------------------
+    | Component > props
+    |--------------------------------------------------------------------------
+    */
+    props: {
+        /**
+         * Value to determine the current compose mode which
+         * varies between 'add' and 'edit'
+         */
+        title: {
+            type: String,
+            default: null,
+        },
+    }, // End of Component > props
+
+    /*
+    |--------------------------------------------------------------------------
+    | Component > data
+    |--------------------------------------------------------------------------
+    */
     data() {
         return {
             form: {

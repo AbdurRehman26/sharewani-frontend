@@ -27,7 +27,7 @@
                         <b-form-group
                             id="input-group-2"
                             label="Description of the issue"
-                            label-for="input-1"
+                            label-for="input-2"
                         >
                             <b-form-textarea
                                 id="input-2"
@@ -40,17 +40,89 @@
                             btnLabel="SEND"
                             btnType="submit"
                             btnVariant="primary"
-                            class=""
-                            @click="$router.push('/dashboard')"
+                            @click="onClick"
+                            :class="disableClass == true ? 'disabled' : ''"
                         ></base-button>
                     </b-form>
                 </div>
             </div>
             <div class="contact-link text-center">
                 Existing system user?
-                <router-link to="/">Sign In</router-link>
+                <router-link to="/"> Sign In</router-link>
             </div>
         </div>
         <base-footer></base-footer>
     </div>
 </template>
+
+<script>
+export default {
+    components: {},
+    /*
+        |--------------------------------------------------------------------------
+        | Component > props
+        |--------------------------------------------------------------------------
+        */
+    props: {
+        /**
+         * Value to determine the current compose mode which
+         * varies between 'add' and 'edit'
+         */
+    }, // End of Component > props
+
+    /*
+        |--------------------------------------------------------------------------
+        | Component > data
+        |--------------------------------------------------------------------------
+        */
+    data() {
+        return {
+            disableClass: false,
+        }
+    }, // End of Component > data
+
+    /*
+        |--------------------------------------------------------------------------
+        | Component > computed
+        |--------------------------------------------------------------------------
+        */
+    computed: {}, // End of Component > computed
+
+    /*
+        |--------------------------------------------------------------------------
+        | Component > methods
+        |--------------------------------------------------------------------------
+        */
+    methods: {
+        onClick() {
+            this.$toasted.show('Thankyou We will get back to you very soon.', {
+                icon: {
+                    name: 'check',
+                    before: true,
+                },
+                className: 'success',
+            })
+            this.disableClass = true
+            var select = this
+            setTimeout(function() {
+                select.disableClass = false
+            }, 5000)
+        },
+    }, // End of Component > methods
+
+    // you can pass a single action as below
+    action: {
+        text: 'Cancel',
+        onClick: (e, toastObject) => {
+            toastObject.goAway(0)
+        },
+    },
+
+    /*
+        |--------------------------------------------------------------------------
+        | Component > mounted
+        |--------------------------------------------------------------------------
+        */
+    mounted() {}, // End of Component > mounted
+} // End of export default
+</script>

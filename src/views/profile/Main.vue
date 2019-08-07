@@ -40,7 +40,7 @@ export default {
             menuListing: [
                 {
                     anchorLink: '/customer-profiles/all-customer',
-                    menuLabel: 'All Customer',
+                    menuLabel: 'All Customers',
                     name: 'all-customer',
                 },
                 {

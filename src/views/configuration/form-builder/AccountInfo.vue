@@ -1,44 +1,5 @@
 <template>
-    <div class="wrap-content">
-        <div class="filter-section row-min-space">
-            <div class="row">
-                <div class="col-md-7 filter-title-section">
-                    <h2>Registration Form Builder</h2>
-                </div>
-                <div class="col-md-5 text-right">
-                    <div class="row">
-                        <div class="col-md-8 text-right">
-                            <base-button
-                                v-b-modal.export-process-popup
-                                btnLabel="Preview Registration Form"
-                                btnType="button"
-                                btnVariant="link"
-                            ></base-button>
-                        </div>
-                        <div class="col-md-4 text-right">
-                            <base-button
-                                btnLabel="Update Form"
-                                btnType="submit"
-                                btnVariant="primary"
-                            ></base-button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="config-list" ref="listingArea">
-            <ul>
-                <li
-                    v-for="(list, index) in menuListing.slice(0, 8)"
-                    :key="index"
-                >
-                    <router-link :to="list.anchorLink">
-                        <span>{{ list.menuLabel }}</span>
-                    </router-link>
-                </li>
-            </ul>
-        </div>
+    <div>
         <div class="row">
             <div class="col-xs-12 col-md-8">
                 <div
@@ -156,11 +117,11 @@ export default {
             listDropdown: false,
             menuListing: [
                 {
-                    anchorLink: '/configuration/form-builder/',
+                    anchorLink: '/configuration/form-builder/setup-profile',
                     menuLabel: 'Setup Profile',
                 },
                 {
-                    anchorLink: '/configuration/idenfo-engine/work',
+                    anchorLink: '/configuration/form-builder/account',
                     menuLabel: 'Account Info',
                 },
             ],
@@ -214,7 +175,7 @@ export default {
                     icon: 'icon-heading',
                     label: 'Basic Information',
                     popup: '',
-                    status: 'disabled',
+                    status: 'editable',
                 },
                 {
                     id: 2,
@@ -270,7 +231,7 @@ export default {
                     icon: 'icon-checkbox',
                     label: 'Checkbox Group',
                     popup: '',
-                    status: 'disabled',
+                    status: 'editable',
                 },
             ],
         }

@@ -24,7 +24,7 @@
                                         btnLabel="+ Add Application"
                                         btnType="submit"
                                         btnVariant="secondary"
-                                        v-b-modal.add-application-popup
+                                        @click="addModify('Add Application')"
                                         class="secondary-add-btn"
                                     ></base-button>
                                 </div>
@@ -54,7 +54,7 @@
                             "
                             icon="icon-edit"
                             label="Modify"
-                            v-b-modal.add-application-popup
+                            @click="addModify('Modify Application')"
                         ></base-action>
                         <!-- if action archive -->
                         <base-action
@@ -74,7 +74,13 @@
                 </template>
             </b-table>
         </div>
-        <add-application-popup></add-application-popup>
+        <pagination
+            totalRecords="Showing 1 to 4 of 4 records"
+            nextBtnDisable
+            selectPaginationDisable
+            :showRecords="recordShow"
+        ></pagination>
+        <add-application-popup :title="title"></add-application-popup>
         <archive-popup
             title="Archive Application"
             description="Are you sure you want to archive this application ? You can activate it later."
@@ -86,10 +92,12 @@
 import { mapGetters } from 'vuex'
 import addApplicationPopup from '@/components/popups/AddApplicationPopup.vue'
 import archivePopup from '@/components/popups/ArchivePopup.vue'
+import pagination from '@/components/Pagination.vue'
 export default {
     components: {
         addApplicationPopup,
         archivePopup,
+        pagination,
     },
 
     /*
@@ -118,6 +126,8 @@ export default {
             selected: '1',
             fields: [],
             items: [],
+            title: '',
+            recordShow: [{ text: 'Show 10 records', value: null }],
         }
     }, // End of Component > data
 
@@ -142,6 +152,10 @@ export default {
             this.fields = tableFields //push data into array
             let tableItems = this.systemUsersData.applications.items //get user data from store
             this.items = tableItems //push data into array
+        },
+        addModify(e) {
+            this.title = e
+            this.$bvModal.show('add-application-popup')
         },
     }, // End of Component > methods
 

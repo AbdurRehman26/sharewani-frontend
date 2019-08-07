@@ -23,10 +23,13 @@
                                 </div>
                                 <div class="col-md-8">
                                     <base-button
-                                        v-b-modal.add-industry-popup
+                                        @click="
+                                            addModify('Add Industry Factor')
+                                        "
                                         btnLabel="+ Add Industry"
                                         btnType="button"
                                         btnVariant="secondary"
+                                        class="secondary-add-btn"
                                     ></base-button>
                                 </div>
                             </div>
@@ -85,7 +88,7 @@
                             v-if="data.value == 'active'"
                             icon="icon-edit"
                             label="Modify"
-                            v-b-modal.add-industry-popup
+                            @click="addModify('Modify Industry Factor')"
                         ></base-action>
                         <!-- if action archive -->
                         <base-action
@@ -98,7 +101,11 @@
                 </template>
             </b-table>
         </div>
-        <add-industry-popup></add-industry-popup>
+        <pagination
+            totalRecords="Showing 1 to 10 of 21 records"
+            :showRecords="recordShow"
+        ></pagination>
+        <add-industry-popup :title="title"></add-industry-popup>
         <archive-popup
             title="Archive Industry Factor"
             description="Are you sure you want to archive this industry factor? You can re-activate it later."
@@ -110,10 +117,12 @@
 import { mapGetters } from 'vuex'
 import addIndustryPopup from '@/components/popups/AddIndustryPopup.vue'
 import archivePopup from '@/components/popups/ArchivePopup.vue'
+import pagination from '@/components/Pagination.vue'
 export default {
     components: {
         addIndustryPopup,
         archivePopup,
+        pagination,
     },
 
     /*
@@ -141,6 +150,12 @@ export default {
         return {
             fields: [],
             items: [],
+            title: '',
+            recordShow: [
+                { text: 'Show 10 records', value: null },
+                { text: 'Show 20 records', value: 20 },
+                { text: 'Show 30 records', value: 30 },
+            ],
         }
     }, // End of Component > data
 
@@ -167,6 +182,11 @@ export default {
                 .items //get user data from store
             this.items = configTableItems //push data into array
             this.$emit('item-length', this.items.length)
+        },
+
+        addModify(e) {
+            this.title = e
+            this.$bvModal.show('add-industry-popup')
         },
     }, // End of Component > methods
 

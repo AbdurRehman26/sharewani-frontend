@@ -2,7 +2,7 @@
     <div>
         <b-modal
             id="add-nationality-popup"
-            title="Add Nationality Factor"
+            :title="title"
             size="sm"
             okTitle="Create"
             cancelTitle="Cancel"
@@ -21,6 +21,7 @@
                                 type="text"
                                 v-model="form.countryCode"
                                 required
+                                autocomplete="no"
                                 placeholder="Enter country code"
                             ></b-form-input>
                         </b-form-group>
@@ -36,6 +37,7 @@
                                 type="text"
                                 v-model="form.countryTitle"
                                 required
+                                autocomplete="no"
                                 placeholder="Enter country title"
                             ></b-form-input>
                         </b-form-group>
@@ -79,6 +81,27 @@
 
 <script>
 export default {
+    /*
+    |--------------------------------------------------------------------------
+    | Component > props
+    |--------------------------------------------------------------------------
+    */
+    props: {
+        /**
+         * Value to determine the current compose mode which
+         * varies between 'add' and 'edit'
+         */
+        title: {
+            type: String,
+            default: null,
+        },
+    }, // End of Component > props
+
+    /*
+    |--------------------------------------------------------------------------
+    | Component > data
+    |--------------------------------------------------------------------------
+    */
     data() {
         return {
             sanction: '',

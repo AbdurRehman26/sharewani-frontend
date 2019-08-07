@@ -3,7 +3,8 @@
     border-radius: 16px;
     padding: 32px;
     margin: 0 auto;
-    &.sm-radius {
+    &.sm-radius,
+    &.sm {
         border-radius: 8px;
     }
     &.with-shadow {

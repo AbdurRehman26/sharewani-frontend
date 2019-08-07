@@ -20,6 +20,7 @@
                                 id="input-1"
                                 type="email"
                                 required
+                                autocomplete="no"
                                 placeholder="Enter username"
                             ></b-form-input>
                         </b-form-group>

@@ -22,6 +22,7 @@
                                     type="text"
                                     v-model="form.fieldLabel"
                                     required
+                                    autocomplete="no"
                                     placeholder="Enter field label"
                                 ></b-form-input>
                             </b-form-group>
@@ -29,10 +30,14 @@
                         <div class="col-md-12 row-min-space">
                             <div class="row">
                                 <div class="col-md-6">
-                                    <label class="m-b-15">OPTIONS</label>
+                                    <label class="m-b-15" for="options"
+                                        >OPTIONS</label
+                                    >
                                 </div>
                                 <div class="col-md-6">
-                                    <label class="m-b-15">VALUE</label>
+                                    <label class="m-b-15" for="values"
+                                        >VALUE</label
+                                    >
                                 </div>
                             </div>
                             <div
@@ -43,10 +48,11 @@
                                 <div class="col-md-6">
                                     <b-form-group class="m-b-15">
                                         <b-form-input
-                                            id="field-label"
+                                            id="options"
                                             type="text"
                                             v-model="list.optionName"
                                             required
+                                            autocomplete="no"
                                             placeholder="Enter Options"
                                         ></b-form-input>
                                     </b-form-group>
@@ -54,22 +60,23 @@
                                 <div class="col-md-6">
                                     <b-form-group class="m-b-15">
                                         <b-form-input
-                                            id="field-label"
+                                            id="values"
                                             type="number"
                                             v-model="list.optionVal"
                                             required
+                                            autocomplete="no"
                                             placeholder="Enter value"
                                         ></b-form-input>
                                     </b-form-group>
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-md-12">
+                                <div class="col-md-12 add-more-section">
                                     <b-form-group>
                                         <base-button
                                             btnVariant="transparent"
                                             btnLabel="+ Add More"
-                                            cssClass="w-100"
+                                            cssClass="btn-block"
                                             @click="addOption()"
                                         ></base-button>
                                     </b-form-group>
@@ -83,14 +90,12 @@
                                 label="Is Required?"
                                 label-for="isrequired"
                             >
-                                <b-form-group>
-                                    <b-form-radio-group
-                                        id="isrequired"
-                                        v-model="form.isrequiredModel"
-                                        :options="form.isrequired"
-                                        name="isrequired"
-                                    ></b-form-radio-group>
-                                </b-form-group>
+                                <b-form-radio-group
+                                    id="isrequired"
+                                    v-model="form.isrequiredModel"
+                                    :options="form.isrequired"
+                                    name="isrequired"
+                                ></b-form-radio-group>
                             </b-form-group>
                         </div>
                     </div>

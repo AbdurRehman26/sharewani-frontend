@@ -21,6 +21,7 @@
                                 type="text"
                                 v-model="form.fieldLabel"
                                 required
+                                autocomplete="no"
                                 placeholder="Enter field label"
                             ></b-form-input>
                         </b-form-group>
@@ -36,6 +37,7 @@
                                 type="text"
                                 v-model="form.placeholder"
                                 required
+                                autocomplete="no"
                                 placeholder="Enter placeholder text"
                             ></b-form-input>
                         </b-form-group>
@@ -47,14 +49,12 @@
                             label="Is Required?"
                             label-for="isrequired"
                         >
-                            <b-form-group>
-                                <b-form-radio-group
-                                    id="isrequired"
-                                    v-model="form.isrequiredModel"
-                                    :options="form.isrequired"
-                                    name="isrequired"
-                                ></b-form-radio-group>
-                            </b-form-group>
+                            <b-form-radio-group
+                                id="isrequired"
+                                v-model="form.isrequiredModel"
+                                :options="form.isrequired"
+                                name="isrequired"
+                            ></b-form-radio-group>
                         </b-form-group>
                     </div>
                 </div>

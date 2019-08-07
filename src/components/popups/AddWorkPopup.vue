@@ -2,7 +2,7 @@
     <div>
         <b-modal
             id="add-work-popup"
-            title="Add Work Type Factor"
+            :title="title"
             size="sm"
             okTitle="Create"
             cancelTitle="Cancel"
@@ -21,6 +21,7 @@
                                 type="text"
                                 v-model="form.workCode"
                                 required
+                                autocomplete="no"
                                 placeholder="Enter work type code"
                             ></b-form-input>
                         </b-form-group>
@@ -37,6 +38,7 @@
                                 type="text"
                                 v-model="form.workTitle"
                                 required
+                                autocomplete="no"
                                 placeholder="Enter work type title"
                             ></b-form-input>
                         </b-form-group>
@@ -49,6 +51,27 @@
 
 <script>
 export default {
+    /*
+    |--------------------------------------------------------------------------
+    | Component > props
+    |--------------------------------------------------------------------------
+    */
+    props: {
+        /**
+         * Value to determine the current compose mode which
+         * varies between 'add' and 'edit'
+         */
+        title: {
+            type: String,
+            default: null,
+        },
+    }, // End of Component > props
+
+    /*
+    |--------------------------------------------------------------------------
+    | Component > data
+    |--------------------------------------------------------------------------
+    */
     data() {
         return {
             form: {

@@ -3,7 +3,11 @@
         <div class="row">
             <div class="col-md-7">
                 <div class="record-shown">
-                    <b-form-group>
+                    <b-form-group
+                        :class="
+                            selectPaginationDisable == true ? 'disable' : ''
+                        "
+                    >
                         <b-form-select
                             id="input-3"
                             class="form-control"
@@ -12,7 +16,7 @@
                             required
                         ></b-form-select>
                     </b-form-group>
-                    <p>Showing 1 to 10 of 18 records</p>
+                    <p>{{ totalRecords }}</p>
                 </div>
             </div>
             <div class="col-md-5">
@@ -20,7 +24,12 @@
                     <b-button type="submit" class="disable" variant="primary"
                         >PREVIOUS</b-button
                     >
-                    <b-button type="submit" variant="primary">NEXT</b-button>
+                    <b-button
+                        type="submit"
+                        variant="primary"
+                        :class="nextBtnDisable == true ? 'disable' : ''"
+                        >NEXT</b-button
+                    >
                 </div>
             </div>
         </div>
@@ -37,6 +46,23 @@ export default {
     |--------------------------------------------------------------------------
     */
     props: {
+        totalRecords: {
+            type: String,
+            default: null,
+        },
+        nextBtnDisable: {
+            type: Boolean,
+            default: null,
+        },
+        selectPaginationDisable: {
+            type: Boolean,
+            default: null,
+        },
+        showRecords: {
+            type: Array,
+            default: null,
+        },
+
         /**
          * Value to determine the current compose mode which
          * varies between 'add' and 'edit'
@@ -50,11 +76,10 @@ export default {
     */
     data() {
         return {
-            showRecords: [
+            defaultsShowRecords: [
                 { text: 'Show 10 records', value: null },
                 { text: 'Show 20 records', value: 20 },
                 { text: 'Show 50 records', value: 50 },
-                { text: 'Show 100 records', value: 100 },
             ],
             record: null,
         }

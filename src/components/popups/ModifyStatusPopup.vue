@@ -31,6 +31,7 @@
                                 class="form-control"
                                 v-model="form.status"
                                 :options="status"
+                                autocomplete="no"
                             ></b-form-select>
                         </div>
                     </div>

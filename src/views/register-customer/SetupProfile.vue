@@ -18,6 +18,7 @@
                                     type="text"
                                     v-model="form.firstName"
                                     required
+                                    autocomplete="no"
                                     placeholder="Enter first name"
                                 ></b-form-input>
                             </b-form-group>
@@ -33,6 +34,7 @@
                                     type="text"
                                     v-model="form.middleName"
                                     required
+                                    autocomplete="no"
                                     placeholder="Enter middle name"
                                 ></b-form-input>
                             </b-form-group>
@@ -49,6 +51,7 @@
                                     type="text"
                                     v-model="form.lastName"
                                     required
+                                    autocomplete="no"
                                     placeholder="Enter last name"
                                 ></b-form-input>
                             </b-form-group>
@@ -88,7 +91,7 @@
                         </div>
                         <div class="col-md-4">
                             <b-form-group
-                                id="input-group-5"
+                                id="input-group-6"
                                 label="Nationality"
                                 label-for="nationality"
                             >
@@ -96,12 +99,13 @@
                                     class="form-control"
                                     v-model="form.nationality"
                                     :options="form.nationalityOptions"
+                                    autocomplete="no"
                                 ></b-form-select>
                             </b-form-group>
                         </div>
                         <div class="col-md-4">
                             <b-form-group
-                                id="input-group-6"
+                                id="input-group-7"
                                 label="Country of Residence"
                                 label-for="residence"
                             >
@@ -109,6 +113,7 @@
                                     class="form-control"
                                     v-model="form.residence"
                                     :options="form.residenceOptions"
+                                    autocomplete="no"
                                 ></b-form-select>
                             </b-form-group>
                         </div>
@@ -121,7 +126,7 @@
                         </div>
                         <div class="col-md-4">
                             <b-form-group
-                                id="input-group-1"
+                                id="input-group-8"
                                 label="Address"
                                 label-for="address"
                             >
@@ -130,6 +135,7 @@
                                     type="text"
                                     v-model="form.address"
                                     required
+                                    autocomplete="no"
                                     placeholder="Enter address"
                                 ></b-form-input>
                             </b-form-group>
@@ -137,20 +143,7 @@
 
                         <div class="col-md-4">
                             <b-form-group
-                                id="input-group-5"
-                                label="Country"
-                                label-for="country"
-                            >
-                                <b-form-select
-                                    class="form-control"
-                                    v-model="form.country"
-                                    :options="form.countryOptions"
-                                ></b-form-select>
-                            </b-form-group>
-                        </div>
-                        <div class="col-md-4">
-                            <b-form-group
-                                id="input-group-6"
+                                id="input-group-10"
                                 label="State"
                                 label-for="state"
                             >
@@ -158,25 +151,29 @@
                                     class="form-control"
                                     v-model="form.state"
                                     :options="form.stateOptions"
+                                    autocomplete="no"
                                 ></b-form-select>
                             </b-form-group>
                         </div>
                         <div class="col-md-4">
                             <b-form-group
-                                id="input-group-6"
-                                label="State"
-                                label-for="state"
+                                id="input-group-11"
+                                label="City"
+                                label-for="city"
                             >
-                                <b-form-select
-                                    class="form-control"
+                                <b-form-input
+                                    id="city"
+                                    type="text"
                                     v-model="form.city"
-                                    :options="form.cityOptions"
-                                ></b-form-select>
+                                    required
+                                    autocomplete="no"
+                                    placeholder="Enter city"
+                                ></b-form-input>
                             </b-form-group>
                         </div>
                         <div class="col-md-4">
                             <b-form-group
-                                id="input-group-1"
+                                id="input-group-12"
                                 label="Zip Code / Postal Code"
                                 label-for="zipcode"
                             >
@@ -185,13 +182,14 @@
                                     type="number"
                                     v-model="form.zipcode"
                                     required
+                                    autocomplete="no"
                                     placeholder="Enter zip code / postal code"
                                 ></b-form-input>
                             </b-form-group>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-4 row-min-space">
                             <b-form-group
-                                id="input-group-1"
+                                id="input-group-13"
                                 label="Phone Number"
                                 label-for="phonenumber"
                             >
@@ -202,16 +200,18 @@
                                             type="number"
                                             v-model="form.countrycode"
                                             required
-                                            placeholder="Country code"
+                                            autocomplete="no"
+                                            placeholder="Dialling code"
                                         ></b-form-input>
                                     </div>
-                                    <div class="col-md-8">
+                                    <div class="col-md-7">
                                         <b-form-input
                                             id="phonenumber"
                                             type="number"
                                             v-model="form.phonenumber"
                                             required
-                                            placeholder="Select phone number"
+                                            autocomplete="no"
+                                            placeholder="Enter phone number"
                                         ></b-form-input>
                                     </div>
                                 </div>
@@ -219,15 +219,16 @@
                         </div>
                         <div class="col-md-4">
                             <b-form-group
-                                id="email"
+                                id="input-group-14"
                                 label="Email"
-                                label-for="zipcode"
+                                label-for="email"
                             >
                                 <b-form-input
-                                    id="zipcode"
+                                    id="email"
                                     type="email"
                                     v-model="form.email"
                                     required
+                                    autocomplete="no"
                                     placeholder="Enter email address"
                                 ></b-form-input>
                             </b-form-group>
@@ -241,7 +242,7 @@
                         </div>
                         <div class="col-md-4">
                             <b-form-group
-                                id="input-group-5"
+                                id="input-group-15"
                                 label="Work Type"
                                 label-for="worktype"
                             >
@@ -249,12 +250,13 @@
                                     class="form-control"
                                     v-model="form.worktype"
                                     :options="form.worktypeOptions"
+                                    autocomplete="no"
                                 ></b-form-select>
                             </b-form-group>
                         </div>
                         <div class="col-md-4">
                             <b-form-group
-                                id="input-group-6"
+                                id="input-group-16"
                                 label="Industry"
                                 label-for="industry"
                             >
@@ -262,37 +264,47 @@
                                     class="form-control"
                                     v-model="form.industry"
                                     :options="form.industryOptions"
+                                    autocomplete="no"
                                 ></b-form-select>
                             </b-form-group>
                         </div>
                         <div class="col-md-4">
                             <b-form-group
-                                id="input-group-1"
+                                id="input-group-17"
                                 label="Length of Relationship"
-                                label-for="taxid"
+                                label-for="relationship"
                             >
                                 <b-form-input
-                                    id="address"
+                                    id="relationship"
                                     type="text"
                                     v-model="form.relationship"
                                     required
+                                    autocomplete="no"
                                     placeholder="Enter Length of relationship (in months)"
                                 ></b-form-input>
                             </b-form-group>
                         </div>
                         <div class="col-md-4">
                             <b-form-group
-                                id="input-group-1"
+                                id="input-group-18"
                                 label="Tax ID"
                                 label-for="taxid"
                             >
                                 <b-form-input
-                                    id="address"
+                                    id="taxid"
                                     type="text"
                                     v-model="form.taxid"
                                     required
+                                    autocomplete="no"
                                     placeholder="Enter tax id"
                                 ></b-form-input>
+                                <p class="tax-instruction">
+                                    <i class="icon-error_outline"></i>
+                                    <span
+                                        >Instructions related to tax id number
+                                        will be placed here.</span
+                                    >
+                                </p>
                             </b-form-group>
                         </div>
                     </div>
@@ -305,7 +317,7 @@
                         </div>
                         <div class="col-md-4">
                             <b-form-group
-                                id="input-group-5"
+                                id="input-group-19"
                                 label="ID Document Type"
                                 label-for="doctype"
                             >
@@ -313,28 +325,30 @@
                                     class="form-control"
                                     v-model="form.doctype"
                                     :options="form.doctypeOptions"
+                                    autocomplete="no"
                                 ></b-form-select>
                             </b-form-group>
                         </div>
 
                         <div class="col-md-4">
                             <b-form-group
-                                id="input-group-1"
+                                id="input-group-20"
                                 label="ID Document Number"
                                 label-for="docnumber"
                             >
                                 <b-form-input
-                                    id="address"
+                                    id="docnumber"
                                     type="text"
                                     v-model="form.docnumber"
                                     required
+                                    autocomplete="no"
                                     placeholder="52801-6782883-1"
                                 ></b-form-input>
                             </b-form-group>
                         </div>
                         <div class="col-md-4">
                             <b-form-group
-                                id="input-group-5"
+                                id="input-group-21"
                                 label="Expirty Date"
                                 label-for="expiredate"
                             >
@@ -402,7 +416,7 @@ export default {
                 country: null,
                 state: null,
                 relationship: null,
-                city: null,
+                city: '',
                 zipcode: null,
                 countrycode: null,
                 phonenumber: null,
@@ -441,11 +455,7 @@ export default {
                     'Arizona',
                     'Chicago',
                 ],
-                cityOptions: [
-                    { value: null, text: 'Select state' },
-                    'Arizona',
-                    'Chicago',
-                ],
+
                 worktypeOptions: [
                     { value: null, text: 'Select work type' },
                     'Engineer',

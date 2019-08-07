@@ -1572,27 +1572,27 @@ export default {
                 {
                     category: 'Australia',
                     column: '300',
-                    percents: '1%',
+                    percents: '1.0%',
                 },
                 {
                     category: 'Bangladesh',
                     column: '240',
-                    percents: '2%',
+                    percents: '2.0%',
                 },
                 {
                     category: 'Belgium',
                     column: '450',
-                    percents: '1%',
+                    percents: '1.0%',
                 },
                 {
                     category: 'UK',
                     column: '570',
-                    percents: '3%',
+                    percents: '3.0%',
                 },
                 {
                     category: 'USA',
                     column: '640',
-                    percents: '2%',
+                    percents: '2.0%',
                 },
                 {
                     category: 'India',
@@ -1607,42 +1607,42 @@ export default {
                 {
                     category: 'China',
                     column: '740',
-                    percents: '1%',
+                    percents: '1.0%',
                 },
                 {
                     category: 'Netherlands',
                     column: '480',
-                    percents: '1%',
+                    percents: '1.0%',
                 },
                 {
                     category: 'Greece',
                     column: '380',
-                    percents: '1%',
+                    percents: '1.0%',
                 },
                 {
                     category: 'Japan',
                     column: '290',
-                    percents: '1%',
+                    percents: '1.0%',
                 },
                 {
                     category: 'Mexico',
                     column: '180',
-                    percents: '4%',
+                    percents: '4.0%',
                 },
                 {
                     category: 'Pakistan',
                     column: '150',
-                    percents: '6%',
+                    percents: '6.0%',
                 },
                 {
                     category: 'Russia',
                     column: '541',
-                    percents: '1%',
+                    percents: '1.0%',
                 },
                 {
                     category: 'Turkey',
                     column: '321',
-                    percents: '1%',
+                    percents: '1.0%',
                 },
                 {
                     category: 'Malaysia',
@@ -1662,22 +1662,22 @@ export default {
                 {
                     category: 'Sweden',
                     column: '420',
-                    percents: '5%',
+                    percents: '5.0%',
                 },
                 {
                     category: 'Germany',
                     column: '370',
-                    percents: '1%',
+                    percents: '1.0%',
                 },
                 {
                     category: 'Australia',
                     column: '300',
-                    percents: '1%',
+                    percents: '1.0%',
                 },
                 {
                     category: 'Bangladesh',
                     column: '240',
-                    percents: '8%',
+                    percents: '8.0%',
                 },
                 {
                     category: 'Belgium',
@@ -1687,17 +1687,17 @@ export default {
                 {
                     category: 'UK',
                     column: '570',
-                    percents: '1%',
+                    percents: '1.0%',
                 },
                 {
                     category: 'USA',
                     column: '640',
-                    percents: '8%',
+                    percents: '8.0%',
                 },
                 {
                     category: 'India',
                     column: '720',
-                    percents: '4%',
+                    percents: '4.0%',
                 },
                 {
                     category: 'Canada',
@@ -1712,62 +1712,62 @@ export default {
                 {
                     category: 'Netherlands',
                     column: '480',
-                    percents: '1%',
+                    percents: '1.0%',
                 },
                 {
                     category: 'Greece',
                     column: '380',
-                    percents: '1%',
+                    percents: '1.0%',
                 },
                 {
                     category: 'Japan',
                     column: '290',
-                    percents: '1%',
+                    percents: '1.0%',
                 },
                 {
                     category: 'Mexico',
                     column: '180',
-                    percents: '1%',
+                    percents: '1.0%',
                 },
                 {
                     category: 'Pakistan',
                     column: '150',
-                    percents: '1%',
+                    percents: '1.0%',
                 },
                 {
                     category: 'Russia',
                     column: '541',
-                    percents: '1%',
+                    percents: '1.0%',
                 },
                 {
                     category: 'Turkey',
                     column: '321',
-                    percents: '1%',
+                    percents: '1.0%',
                 },
                 {
                     category: 'Malaysia',
                     column: '487',
-                    percents: '1%',
+                    percents: '1.0%',
                 },
                 {
                     category: 'Lebnan',
                     column: '380',
-                    percents: '1%',
+                    percents: '1.0%',
                 },
                 {
                     category: 'Japan',
                     column: '630',
-                    percents: '1%',
+                    percents: '1.0%',
                 },
                 {
                     category: 'Sweden',
                     column: '420',
-                    percents: '1%',
+                    percents: '1.0%',
                 },
                 {
                     category: 'Germany',
                     column: '370',
-                    percents: '1%',
+                    percents: '1.0%',
                 },
             ],
             listeners: [
@@ -1891,17 +1891,17 @@ export default {
                 {
                     category: 'Australia',
                     column: '300',
-                    percents: '3%',
+                    percents: '3.0%',
                 },
                 {
                     category: 'Bangladesh',
                     column: '240',
-                    percents: '4%',
+                    percents: '4.0%',
                 },
                 {
                     category: 'Belgium',
                     column: '450',
-                    percents: '5%',
+                    percents: '5.0%',
                 },
                 {
                     category: 'UK',
@@ -1911,17 +1911,17 @@ export default {
                 {
                     category: 'USA',
                     column: '640',
-                    percents: '8%',
+                    percents: '8.0%',
                 },
                 {
                     category: 'India',
                     column: '720',
-                    percents: '4%',
+                    percents: '4.0%',
                 },
                 {
                     category: 'Canada',
                     column: '655',
-                    percents: '8%',
+                    percents: '8.0%',
                 },
                 {
                     category: 'China',
@@ -1956,47 +1956,47 @@ export default {
                 {
                     category: 'Russia',
                     column: '541',
-                    percents: '6%',
+                    percents: '6.0%',
                 },
                 {
                     category: 'Turkey',
                     column: '321',
-                    percents: '1%',
+                    percents: '1.0%',
                 },
                 {
                     category: 'Malaysia',
                     column: '487',
-                    percents: '1%',
+                    percents: '1.0%',
                 },
                 {
                     category: 'Lebnan',
                     column: '380',
-                    percents: '4%',
+                    percents: '4.0%',
                 },
                 {
                     category: 'Japan',
                     column: '630',
-                    percents: '4%',
+                    percents: '4.0%',
                 },
                 {
                     category: 'Sweden',
                     column: '420',
-                    percents: '5%',
+                    percents: '5.0%',
                 },
                 {
                     category: 'Germany',
                     column: '370',
-                    percents: '4%',
+                    percents: '4.0%',
                 },
                 {
                     category: 'Australia',
                     column: '300',
-                    percents: '4%',
+                    percents: '4.0%',
                 },
                 {
                     category: 'Bangladesh',
                     column: '240',
-                    percents: '3%',
+                    percents: '3.0%',
                 },
                 {
                     category: 'Belgium',
@@ -2016,47 +2016,47 @@ export default {
                 {
                     category: 'India',
                     column: '720',
-                    percents: '6%',
+                    percents: '6.0%',
                 },
                 {
                     category: 'Canada',
                     column: '655',
-                    percents: '4%',
+                    percents: '4.0%',
                 },
                 {
                     category: 'China',
                     column: '740',
-                    percents: '4%',
+                    percents: '4.0%',
                 },
                 {
                     category: 'Netherlands',
                     column: '480',
-                    percents: '5%',
+                    percents: '5.0%',
                 },
                 {
                     category: 'Greece',
                     column: '380',
-                    percents: '8%',
+                    percents: '8.0%',
                 },
                 {
                     category: 'Japan',
                     column: '290',
-                    percents: '4%',
+                    percents: '4.0%',
                 },
                 {
                     category: 'Mexico',
                     column: '180',
-                    percents: '5%',
+                    percents: '5.0%',
                 },
                 {
                     category: 'Pakistan',
                     column: '150',
-                    percents: '4%',
+                    percents: '4.0%',
                 },
                 {
                     category: 'Russia',
                     column: '541',
-                    percents: '3%',
+                    percents: '3.0%',
                 },
                 {
                     category: 'Turkey',
@@ -2066,17 +2066,17 @@ export default {
                 {
                     category: 'Malaysia',
                     column: '487',
-                    percents: '1%',
+                    percents: '1.0%',
                 },
                 {
                     category: 'Lebnan',
                     column: '380',
-                    percents: '2%',
+                    percents: '2.0%',
                 },
                 {
                     category: 'Japan',
                     column: '630',
-                    percents: '3%',
+                    percents: '3.0%',
                 },
                 {
                     category: 'Sweden',
@@ -2086,7 +2086,7 @@ export default {
                 {
                     category: 'Germany',
                     column: '370',
-                    percents: '1%',
+                    percents: '1.0%',
                 },
             ],
             listeners: [

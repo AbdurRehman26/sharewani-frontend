@@ -77,6 +77,9 @@ header {
                         &:before {
                             background-color: $primary;
                         }
+                        &:after {
+                            background-color: $primary;
+                        }
                     }
 
                     a {
@@ -136,14 +139,20 @@ header {
             .profile-image {
                 position: absolute;
                 left: 0px;
-                height: 52px;
+                height: 42px;
+                width: 42px;
                 margin: auto;
-                top: auto;
+                top: 5px;
+                border-radius: 100px;
                 animation: 0;
+                overflow: hidden;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 align-content: center;
+                background-size: cover;
+                background-position: top center;
+                background-repeat: no-repeat;
             }
             .profile-detail {
                 padding-left: 55px;
@@ -237,7 +246,7 @@ header {
                 border-bottom: 0.5px solid #cbcbd7;
                 transition: 0.3s ease-in-out;
                 a {
-                    padding: 11px 11px;
+                    padding: 11px 16px;
                     display: block;
                     text-decoration: none;
                     font-size: 0.8125rem;
@@ -247,11 +256,11 @@ header {
                         margin-right: 10px;
                         font-size: 1.125rem;
                         position: absolute;
-                        left: 10px;
+                        left: 16px;
                         bottom: 10px;
                     }
                     span {
-                        padding-left: 38px;
+                        padding-left: 33px;
                     }
                 }
                 &:hover,

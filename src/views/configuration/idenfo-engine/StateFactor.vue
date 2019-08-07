@@ -23,10 +23,11 @@
                                 </div>
                                 <div class="col-md-8">
                                     <base-button
-                                        v-b-modal.add-state-popup
+                                        @click="addModify('Add State Factor')"
                                         btnLabel="+ Add State"
                                         btnType="button"
                                         btnVariant="secondary"
+                                        class="secondary-add-btn"
                                     ></base-button>
                                 </div>
                             </div>
@@ -53,7 +54,7 @@
                             v-if="data.value == 'active'"
                             icon="icon-edit"
                             label="Modify"
-                            v-b-modal.add-state-popup
+                            @click="addModify('Modify State Factor')"
                         ></base-action>
                         <!-- if action archive -->
                         <base-action
@@ -66,9 +67,15 @@
                 </template>
             </b-table>
         </div>
-        <add-state-popup></add-state-popup>
+        <pagination
+            totalRecords="Showing 1 to 5 of 5 records"
+            nextBtnDisable
+            selectPaginationDisable
+            :showRecords="recordShow"
+        ></pagination>
+        <add-state-popup :title="title"></add-state-popup>
         <archive-popup
-            title="Archive State  Factor"
+            title="Archive State Factor"
             description="Are you sure you want to archive this state factor? You can re-activate it later."
         ></archive-popup>
     </div>
@@ -78,11 +85,13 @@
 import { mapGetters } from 'vuex'
 import addStatePopup from '@/components/popups/AddStatePopup.vue'
 import archivePopup from '@/components/popups/ArchivePopup.vue'
+import pagination from '@/components/Pagination.vue'
 
 export default {
     components: {
         addStatePopup,
         archivePopup,
+        pagination,
     },
 
     /*
@@ -110,6 +119,8 @@ export default {
         return {
             fields: [],
             items: [],
+            title: '',
+            recordShow: [{ text: 'Show 10 records', value: null }],
         }
     }, // End of Component > data
 
@@ -136,6 +147,10 @@ export default {
                 .stateFactor.items //get user data from store
             this.items = configTableItems //push data into array
             this.$emit('item-length', this.items.length)
+        },
+        addModify(e) {
+            this.title = e
+            this.$bvModal.show('add-state-popup')
         },
     }, // End of Component > methods
 

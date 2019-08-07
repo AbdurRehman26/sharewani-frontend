@@ -2,7 +2,7 @@
     <div>
         <b-modal
             id="add-industry-popup"
-            title="Add Industry Factor"
+            :title="title"
             size="lg"
             okTitle="Create"
             cancelTitle="Cancel"
@@ -21,6 +21,7 @@
                                 type="text"
                                 v-model="form.industryCode"
                                 required
+                                autocomplete="no"
                                 placeholder="Enter industry code"
                             ></b-form-input>
                         </b-form-group>
@@ -38,6 +39,7 @@
                                 type="text"
                                 v-model="form.industryTitle"
                                 required
+                                autocomplete="no"
                                 placeholder="Enter industry title"
                             ></b-form-input>
                         </b-form-group>
@@ -148,6 +150,27 @@
 
 <script>
 export default {
+    /*
+    |--------------------------------------------------------------------------
+    | Component > props
+    |--------------------------------------------------------------------------
+    */
+    props: {
+        /**
+         * Value to determine the current compose mode which
+         * varies between 'add' and 'edit'
+         */
+        title: {
+            type: String,
+            default: null,
+        },
+    }, // End of Component > props
+
+    /*
+    |--------------------------------------------------------------------------
+    | Component > data
+    |--------------------------------------------------------------------------
+    */
     data() {
         return {
             form: {
@@ -167,42 +190,49 @@ export default {
                 'High',
                 'Medium',
                 'Low',
+                'Sanctioned',
             ],
             unEmployed: [
                 { value: null, text: 'Select Ranking' },
                 'High',
                 'Medium',
                 'Low',
+                'Sanctioned',
             ],
             student: [
                 { value: null, text: 'Select Ranking' },
                 'High',
                 'Medium',
                 'Low',
+                'Sanctioned',
             ],
             homeMaker: [
                 { value: null, text: 'Select Ranking' },
                 'High',
                 'Medium',
                 'Low',
+                'Sanctioned',
             ],
             salaryGeneral: [
                 { value: null, text: 'Select Ranking' },
                 'High',
                 'Medium',
                 'Low',
+                'Sanctioned',
             ],
             salaryLevel: [
                 { value: null, text: 'Select Ranking' },
                 'High',
                 'Medium',
                 'Low',
+                'Sanctioned',
             ],
             selfEmployee: [
                 { value: null, text: 'Select Ranking' },
                 'High',
                 'Medium',
                 'Low',
+                'Sanctioned',
             ],
         }
     },

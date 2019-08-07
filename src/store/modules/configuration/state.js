@@ -169,7 +169,7 @@ export default {
                 fields: [
                     {
                         key: 'countrycode',
-                        label: 'Country Code',
+                        label: 'Code',
                         sortable: true,
                     },
                     {
@@ -179,7 +179,13 @@ export default {
                     },
                     {
                         key: 'dialingcode',
-                        label: 'Dialing Code',
+                        label: 'Dialling Code',
+                        class: 'text-center',
+                        sortable: true,
+                    },
+                    {
+                        key: 'taxid',
+                        label: 'Tax ID',
                         sortable: true,
                     },
                     {
@@ -205,6 +211,12 @@ export default {
                         countrycode: 'AF',
                         countrytitle: 'Afghanistan',
                         dialingcode: '+93',
+                        taxid: [
+                            {
+                                name: 'Required',
+                                require: false,
+                            },
+                        ],
                         rating: [
                             {
                                 icon: 'icon-high-risk',
@@ -219,6 +231,11 @@ export default {
                         countrycode: 'AX',
                         countrytitle: 'Aland Islands',
                         dialingcode: '+358',
+                        taxid: [
+                            {
+                                name: 'Not Required',
+                            },
+                        ],
                         rating: [
                             {
                                 icon: 'icon-high-risk',
@@ -233,6 +250,12 @@ export default {
                         countrycode: 'AL',
                         countrytitle: 'Albania',
                         dialingcode: '+355',
+                        taxid: [
+                            {
+                                name: 'Required',
+                                require: true,
+                            },
+                        ],
                         rating: [
                             {
                                 icon: 'icon-high-risk',
@@ -247,6 +270,12 @@ export default {
                         countrycode: 'DZ',
                         countrytitle: 'Algeria',
                         dialingcode: '+213',
+                        taxid: [
+                            {
+                                name: 'Required',
+                                require: false,
+                            },
+                        ],
                         rating: [
                             {
                                 icon: 'icon-high-risk',
@@ -261,6 +290,12 @@ export default {
                         countrycode: 'AS',
                         countrytitle: 'American Samoa',
                         dialingcode: '+1685',
+                        taxid: [
+                            {
+                                name: 'Required',
+                                require: false,
+                            },
+                        ],
                         rating: [
                             {
                                 icon: 'icon-high-risk',
@@ -275,6 +310,12 @@ export default {
                         countrycode: 'AD',
                         countrytitle: 'Andorra',
                         dialingcode: '+376',
+                        taxid: [
+                            {
+                                name: 'Required',
+                                require: true,
+                            },
+                        ],
                         rating: [
                             {
                                 icon: 'icon-high-risk',
@@ -289,6 +330,11 @@ export default {
                         countrycode: 'AO',
                         countrytitle: 'Angola',
                         dialingcode: '+244',
+                        taxid: [
+                            {
+                                name: 'Not Required',
+                            },
+                        ],
                         rating: [
                             {
                                 icon: 'icon-high-risk',
@@ -303,6 +349,12 @@ export default {
                         countrycode: 'AI',
                         countrytitle: 'Anguilla',
                         dialingcode: '+1264',
+                        taxid: [
+                            {
+                                name: 'Required',
+                                require: true,
+                            },
+                        ],
                         rating: [
                             {
                                 icon: 'icon-high-risk',
@@ -317,6 +369,12 @@ export default {
                         countrycode: 'AQ',
                         countrytitle: 'Antarctica',
                         dialingcode: '+672',
+                        taxid: [
+                            {
+                                name: 'Required',
+                                require: false,
+                            },
+                        ],
                         rating: [
                             {
                                 icon: 'icon-high-risk',
@@ -331,6 +389,11 @@ export default {
                         countrycode: 'AG',
                         countrytitle: 'Antigua and Barbuda',
                         dialingcode: '+1268',
+                        taxid: [
+                            {
+                                name: 'Not Required',
+                            },
+                        ],
                         rating: [
                             {
                                 icon: 'icon-high-risk',
@@ -522,30 +585,6 @@ export default {
                 items: [
                     {
                         productCode: 1501,
-                        productIndustry: 'Virtual Currency Wallet',
-                        rating: [
-                            {
-                                icon: 'icon-high-risk',
-                                label: 'High Risk',
-                                cssClass: 'high-risk',
-                            },
-                        ],
-                        action: 'active',
-                    },
-                    {
-                        productCode: 1502,
-                        productIndustry: 'Virtual Currency Exchange',
-                        rating: [
-                            {
-                                icon: 'icon-high-risk',
-                                label: 'High Risk',
-                                cssClass: 'high-risk',
-                            },
-                        ],
-                        action: 'active',
-                    },
-                    {
-                        productCode: 1503,
                         productIndustry: 'Current Account',
                         rating: [
                             {
@@ -557,7 +596,7 @@ export default {
                         action: 'active',
                     },
                     {
-                        productCode: 1504,
+                        productCode: 1502,
                         productIndustry: 'Saving Account',
                         rating: [
                             {
@@ -569,7 +608,7 @@ export default {
                         action: 'active',
                     },
                     {
-                        productCode: 1505,
+                        productCode: 1503,
                         productIndustry: 'Credit Card',
                         rating: [
                             {
@@ -581,7 +620,7 @@ export default {
                         action: 'active',
                     },
                     {
-                        productCode: 1506,
+                        productCode: 1504,
                         productIndustry: 'Short Term Loan',
                         rating: [
                             {
@@ -593,7 +632,7 @@ export default {
                         action: 'active',
                     },
                     {
-                        productCode: 1507,
+                        productCode: 1505,
                         productIndustry: 'Financial Investment',
                         rating: [
                             {
@@ -929,6 +968,27 @@ export default {
                         scorescale: 'View Score Scale',
                         action: 'active',
                     },
+                    {
+                        riskCode: 'Assets Under Management',
+                        weight: 0,
+                        overrideTo: 'Conditional',
+                        scorescale: 'View Score Scale',
+                        action: 'active',
+                    },
+                    {
+                        riskCode: 'Adverse Media',
+                        weight: 0,
+                        overrideTo: 'Conditional',
+                        scorescale: 'View Score Scale',
+                        action: 'active',
+                    },
+                    {
+                        riskCode: 'Suspicious Activity Reports',
+                        weight: 0,
+                        overrideTo: 'Conditional',
+                        scorescale: 'View Score Scale',
+                        action: 'active',
+                    },
                 ],
             },
 
@@ -936,7 +996,7 @@ export default {
                 fields: [
                     {
                         key: 'pointscore',
-                        label: 'POINT SCORE / CASE',
+                        label: 'POINT SCORE',
                         class: 'w-320px',
                         sortable: true,
                     },
@@ -1005,46 +1065,7 @@ export default {
                         action: 'active',
                     },
                     {
-                        pointscore: 'PEP Hit',
-                        rating: [
-                            {
-                                icon: 'icon-high-risk',
-                                label: 'High Risk',
-                                cssClass: 'high-risk',
-                            },
-                        ],
-                        reviewperiod: 'Rejected',
-                        alert: 'Yes',
-                        action: 'active',
-                    },
-                    {
-                        pointscore: 'Enforcement Hit',
-                        rating: [
-                            {
-                                icon: 'icon-high-risk',
-                                label: 'High Risk',
-                                cssClass: 'high-risk',
-                            },
-                        ],
-                        reviewperiod: 'Rejected',
-                        alert: 'Yes',
-                        action: 'active',
-                    },
-                    {
-                        pointscore: 'Client Blacklist Hit',
-                        rating: [
-                            {
-                                icon: 'icon-high-risk',
-                                label: 'High Risk',
-                                cssClass: 'high-risk',
-                            },
-                        ],
-                        reviewperiod: 'Rejected',
-                        alert: 'Yes',
-                        action: 'active',
-                    },
-                    {
-                        pointscore: 'Sanction Hit',
+                        pointscore: 'Sanctioned Risk',
                         rating: [
                             {
                                 icon: 'icon-sanction',
@@ -1052,52 +1073,57 @@ export default {
                                 cssClass: 'sanctioned-risk',
                             },
                         ],
-                        reviewperiod: 'Rejected',
+                        reviewperiod: '1 Year',
                         alert: 'Yes',
                         action: 'active',
                     },
+                ],
+            },
+
+            riskRatingOverride: {
+                fields: [
                     {
-                        pointscore: 'Document Verification Mismatch ',
-                        rating: [
-                            {
-                                icon: 'icon-high-risk',
-                                label: 'High Risk',
-                                cssClass: 'high-risk',
-                            },
-                        ],
-                        reviewperiod: 'Rejected',
-                        alert: 'Yes',
-                        action: 'active',
+                        key: 'overrides',
+                        label: 'Overrides',
+                        class: 'w-320px',
+                        sortable: true,
                     },
                     {
-                        pointscore: 'If Residence Country is Sanctioned',
-                        rating: [
-                            {
-                                icon: 'icon-sanction',
-                                label: 'Sanctioned',
-                                cssClass: 'sanctioned-risk',
-                            },
-                        ],
-                        reviewperiod: 'Rejected',
-                        alert: 'Yes',
-                        action: 'active',
+                        key: 'rating',
+                        label: 'Override Rating',
+                        class: 'text-center status-absolute-pos',
+                        sortable: true,
+                    },
+                    {
+                        key: 'isrejected',
+                        label: 'Is Rejected?',
+                        class: 'text-center',
+                        sortable: true,
                     },
 
                     {
-                        pointscore: 'If Nationality Country is Sanctioned',
+                        key: 'action',
+                        label: 'ACTION',
+                        class: 'single-list',
+                    },
+                ],
+                items: [
+                    {
+                        overrides: 'If Non-Resident',
+                        isrejected: 'No',
                         rating: [
                             {
-                                icon: 'icon-sanction',
-                                label: 'Sanctioned',
-                                cssClass: 'sanctioned-risk',
+                                icon: 'icon-high-risk',
+                                label: 'High Risk',
+                                cssClass: 'high-risk',
                             },
                         ],
-                        reviewperiod: 'Rejected',
-                        alert: 'Yes',
+
                         action: 'active',
                     },
                     {
-                        pointscore: 'If Contact No. Code Country is Sanctioned',
+                        overrides: 'If Residence Country is Sanctioned',
+                        isrejected: 'Yes',
                         rating: [
                             {
                                 icon: 'icon-sanction',
@@ -1105,8 +1131,98 @@ export default {
                                 cssClass: 'sanctioned-risk',
                             },
                         ],
-                        reviewperiod: 'Rejected',
-                        alert: 'Yes',
+
+                        action: 'active',
+                    },
+                    {
+                        overrides: 'If Nationality Country is Sanctioned',
+                        isrejected: 'Yes',
+                        rating: [
+                            {
+                                icon: 'icon-sanction',
+                                label: 'Sanctioned',
+                                cssClass: 'sanctioned-risk',
+                            },
+                        ],
+
+                        action: 'active',
+                    },
+                    {
+                        overrides: 'If Contact No. Code Country is Sanctioned',
+                        isrejected: 'Yes',
+                        rating: [
+                            {
+                                icon: 'icon-sanction',
+                                label: 'Sanctioned',
+                                cssClass: 'sanctioned-risk',
+                            },
+                        ],
+
+                        action: 'active',
+                    },
+                    {
+                        overrides: 'If Sanction Hit',
+                        isrejected: 'Yes',
+                        rating: [
+                            {
+                                icon: 'icon-sanction',
+                                label: 'Sanctioned',
+                                cssClass: 'sanctioned-risk',
+                            },
+                        ],
+
+                        action: 'active',
+                    },
+                    {
+                        overrides: 'If PEP Hit',
+                        isrejected: 'No',
+                        rating: [
+                            {
+                                icon: 'icon-high-risk',
+                                label: 'High Risk',
+                                cssClass: 'high-risk',
+                            },
+                        ],
+
+                        action: 'active',
+                    },
+                    {
+                        overrides: 'If Enforcement Hit',
+                        isrejected: 'No',
+                        rating: [
+                            {
+                                icon: 'icon-high-risk',
+                                label: 'High Risk',
+                                cssClass: 'high-risk',
+                            },
+                        ],
+
+                        action: 'active',
+                    },
+                    {
+                        overrides: 'If Client Blacklist Hit',
+                        isrejected: 'No',
+                        rating: [
+                            {
+                                icon: 'icon-high-risk',
+                                label: 'High Risk',
+                                cssClass: 'high-risk',
+                            },
+                        ],
+
+                        action: 'active',
+                    },
+                    {
+                        overrides: 'If Document Verification Mismatch',
+                        isrejected: 'No',
+                        rating: [
+                            {
+                                icon: 'icon-high-risk',
+                                label: 'High Risk',
+                                cssClass: 'high-risk',
+                            },
+                        ],
+
                         action: 'active',
                     },
                 ],
@@ -1371,6 +1487,460 @@ export default {
                     },
                 ],
             },
+
+            gendersTable: {
+                fields: [
+                    {
+                        key: 'gendercode',
+                        label: 'Gender Code',
+                        sortable: true,
+                    },
+                    {
+                        key: 'gendertitle',
+                        label: 'Gender Title',
+                        sortable: true,
+                    },
+                    {
+                        key: 'status',
+                        label: 'Status',
+                        class: 'text-center w-230px',
+                        sortable: true,
+                    },
+                    {
+                        key: 'action',
+                        label: 'ACTION',
+                        class: 'single-list w-200px',
+                    },
+                ],
+                items: [
+                    {
+                        gendercode: 1,
+                        gendertitle: 'Male',
+                        status: [
+                            {
+                                cssClass: 'approved',
+                                icon: 'icon-change-password',
+                                label: 'Locked',
+                            },
+                        ],
+                        action: [
+                            {
+                                name: 'active',
+                                disable: true,
+                            },
+                        ],
+                    },
+                    {
+                        gendercode: 2,
+                        gendertitle: 'Female',
+                        status: [
+                            {
+                                cssClass: 'approved',
+                                icon: 'icon-change-password',
+                                label: 'Locked',
+                            },
+                        ],
+                        action: [
+                            {
+                                name: 'active',
+                                disable: true,
+                            },
+                        ],
+                    },
+                    {
+                        gendercode: 3,
+                        gendertitle: 'Not Applicable',
+                        status: [
+                            {
+                                cssClass: 'approved',
+                                icon: 'icon-check',
+                                label: 'Active',
+                            },
+                        ],
+                        action: [
+                            {
+                                name: 'active',
+                                disable: false,
+                            },
+                        ],
+                    },
+                ],
+            },
+
+            riskLevelReviewTable: {
+                fields: [
+                    {
+                        key: 'risk_level',
+                        label: 'Risk Level',
+                        sortable: true,
+                    },
+
+                    {
+                        key: 'involvement',
+                        label: 'Maker Involvement',
+                        class: 'text-center',
+                    },
+                    {
+                        key: 'checker',
+                        label: 'Checker Involvement',
+                        class: 'text-center',
+                    },
+                    {
+                        key: 'approver',
+                        label: 'Approver Involvement',
+                        class: 'text-center',
+                    },
+                    {
+                        key: 'alerttype',
+                        label: 'Alert Type',
+                    },
+                    {
+                        key: 'action',
+                        label: 'ACTION',
+                    },
+                ],
+                items: [
+                    {
+                        risk_level: 'Low',
+
+                        involvement: [
+                            {
+                                cssClass: 'icon-check-circle ok-level',
+                            },
+                        ],
+                        checker: [
+                            {
+                                cssClass: 'icon-check-circle pending',
+                            },
+                        ],
+                        approver: [
+                            {
+                                cssClass: 'icon-check-circle pending',
+                            },
+                        ],
+                        alerttype: 'On-boarding Alert',
+                        action: 'active',
+                    },
+                    {
+                        risk_level: 'Medium',
+
+                        involvement: [
+                            {
+                                cssClass: 'icon-check-circle ok-level',
+                            },
+                        ],
+                        checker: [
+                            {
+                                cssClass: 'icon-check-circle ok-level',
+                            },
+                        ],
+                        approver: [
+                            {
+                                cssClass: 'icon-check-circle pending',
+                            },
+                        ],
+                        alerttype: 'On-boarding Alert',
+                        action: 'active',
+                    },
+                    {
+                        risk_level: 'High',
+
+                        involvement: [
+                            {
+                                cssClass: 'icon-check-circle ok-level',
+                            },
+                        ],
+                        checker: [
+                            {
+                                cssClass: 'icon-check-circle ok-level',
+                            },
+                        ],
+                        approver: [
+                            {
+                                cssClass: 'icon-check-circle ok-level',
+                            },
+                        ],
+                        alerttype: 'On-boarding Alert',
+                        action: 'active',
+                    },
+                    {
+                        risk_level: 'Sanctioned',
+
+                        involvement: [
+                            {
+                                cssClass: 'icon-check-circle ok-level',
+                            },
+                        ],
+                        checker: [
+                            {
+                                cssClass: 'icon-check-circle ok-level',
+                            },
+                        ],
+                        approver: [
+                            {
+                                cssClass: 'icon-check-circle ok-level',
+                            },
+                        ],
+                        alerttype: 'On-boarding Alert',
+                        action: 'active',
+                    },
+
+                    {
+                        risk_level: 'Low',
+
+                        involvement: [
+                            {
+                                cssClass: 'icon-check-circle ok-level',
+                            },
+                        ],
+                        checker: [
+                            {
+                                cssClass: 'icon-check-circle pending',
+                            },
+                        ],
+                        approver: [
+                            {
+                                cssClass: 'icon-check-circle pending',
+                            },
+                        ],
+                        alerttype: 'Trigger Alert',
+                        action: 'active',
+                    },
+                    {
+                        risk_level: 'Medium',
+
+                        involvement: [
+                            {
+                                cssClass: 'icon-check-circle ok-level',
+                            },
+                        ],
+                        checker: [
+                            {
+                                cssClass: 'icon-check-circle ok-level',
+                            },
+                        ],
+                        approver: [
+                            {
+                                cssClass: 'icon-check-circle pending',
+                            },
+                        ],
+                        alerttype: 'Trigger Alert',
+                        action: 'active',
+                    },
+                    {
+                        risk_level: 'High',
+
+                        involvement: [
+                            {
+                                cssClass: 'icon-check-circle ok-level',
+                            },
+                        ],
+                        checker: [
+                            {
+                                cssClass: 'icon-check-circle ok-level',
+                            },
+                        ],
+                        approver: [
+                            {
+                                cssClass: 'icon-check-circle ok-level',
+                            },
+                        ],
+                        alerttype: 'Trigger Alert',
+                        action: 'active',
+                    },
+                    {
+                        risk_level: 'Sanctioned',
+
+                        involvement: [
+                            {
+                                cssClass: 'icon-check-circle ok-level',
+                            },
+                        ],
+                        checker: [
+                            {
+                                cssClass: 'icon-check-circle ok-level',
+                            },
+                        ],
+                        approver: [
+                            {
+                                cssClass: 'icon-check-circle ok-level',
+                            },
+                        ],
+                        alerttype: 'Trigger Alert',
+                        action: 'active',
+                    },
+
+                    {
+                        risk_level: 'Low',
+
+                        involvement: [
+                            {
+                                cssClass: 'icon-check-circle ok-level',
+                            },
+                        ],
+                        checker: [
+                            {
+                                cssClass: 'icon-check-circle pending',
+                            },
+                        ],
+                        approver: [
+                            {
+                                cssClass: 'icon-check-circle pending',
+                            },
+                        ],
+                        alerttype: 'Periodic Alert',
+                        action: 'active',
+                    },
+                    {
+                        risk_level: 'Medium',
+
+                        involvement: [
+                            {
+                                cssClass: 'icon-check-circle ok-level',
+                            },
+                        ],
+                        checker: [
+                            {
+                                cssClass: 'icon-check-circle ok-level',
+                            },
+                        ],
+                        approver: [
+                            {
+                                cssClass: 'icon-check-circle pending',
+                            },
+                        ],
+                        alerttype: 'Periodic Alert',
+                        action: 'active',
+                    },
+                    {
+                        risk_level: 'High',
+
+                        involvement: [
+                            {
+                                cssClass: 'icon-check-circle ok-level',
+                            },
+                        ],
+                        checker: [
+                            {
+                                cssClass: 'icon-check-circle ok-level',
+                            },
+                        ],
+                        approver: [
+                            {
+                                cssClass: 'icon-check-circle ok-level',
+                            },
+                        ],
+                        alerttype: 'Periodic Alert',
+                        action: 'active',
+                    },
+                    {
+                        risk_level: 'Sanctioned',
+
+                        involvement: [
+                            {
+                                cssClass: 'icon-check-circle ok-level',
+                            },
+                        ],
+                        checker: [
+                            {
+                                cssClass: 'icon-check-circle ok-level',
+                            },
+                        ],
+                        approver: [
+                            {
+                                cssClass: 'icon-check-circle ok-level',
+                            },
+                        ],
+                        alerttype: 'Periodic Alert',
+                        action: 'active',
+                    },
+
+                    {
+                        risk_level: 'Low',
+
+                        involvement: [
+                            {
+                                cssClass: 'icon-check-circle ok-level',
+                            },
+                        ],
+                        checker: [
+                            {
+                                cssClass: 'icon-check-circle pending',
+                            },
+                        ],
+                        approver: [
+                            {
+                                cssClass: 'icon-check-circle pending',
+                            },
+                        ],
+                        alerttype: 'Manual Alert',
+                        action: 'active',
+                    },
+                    {
+                        risk_level: 'Medium',
+
+                        involvement: [
+                            {
+                                cssClass: 'icon-check-circle ok-level',
+                            },
+                        ],
+                        checker: [
+                            {
+                                cssClass: 'icon-check-circle ok-level',
+                            },
+                        ],
+                        approver: [
+                            {
+                                cssClass: 'icon-check-circle pending',
+                            },
+                        ],
+                        alerttype: 'Manual Alert',
+                        action: 'active',
+                    },
+                    {
+                        risk_level: 'High',
+
+                        involvement: [
+                            {
+                                cssClass: 'icon-check-circle ok-level',
+                            },
+                        ],
+                        checker: [
+                            {
+                                cssClass: 'icon-check-circle ok-level',
+                            },
+                        ],
+                        approver: [
+                            {
+                                cssClass: 'icon-check-circle ok-level',
+                            },
+                        ],
+                        alerttype: 'Manual Alert',
+                        action: 'active',
+                    },
+                    {
+                        risk_level: 'Sanctioned',
+
+                        involvement: [
+                            {
+                                cssClass: 'icon-check-circle ok-level',
+                            },
+                        ],
+                        checker: [
+                            {
+                                cssClass: 'icon-check-circle ok-level',
+                            },
+                        ],
+                        approver: [
+                            {
+                                cssClass: 'icon-check-circle ok-level',
+                            },
+                        ],
+                        alerttype: 'Manual Alert',
+                        action: 'active',
+                    },
+                ],
+            },
         },
         importData: [
             {
@@ -1533,7 +2103,7 @@ export default {
                         action: 'active',
                     },
                     {
-                        recordStatus: 'inactive',
+                        recordStatus: 'Inactive',
                         status: [
                             {
                                 cssClass: 'inapproved',
@@ -1616,6 +2186,97 @@ export default {
                         ],
                         action: 'active',
                     },
+                    {
+                        descriptionid: 4,
+                        nametype: 'Maiden Name',
+                        recordtype: 'Person',
+                        status: [
+                            {
+                                cssClass: 'approved',
+                                icon: 'icon-check',
+                                label: 'Active',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        descriptionid: 5,
+                        nametype: 'Formerly Known As',
+                        recordtype: 'Person',
+                        status: [
+                            {
+                                cssClass: 'approved',
+                                icon: 'icon-check',
+                                label: 'Active',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        descriptionid: 6,
+                        nametype: 'Spelling Variation',
+                        recordtype: 'Person',
+                        status: [
+                            {
+                                cssClass: 'approved',
+                                icon: 'icon-check',
+                                label: 'Active',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        descriptionid: 7,
+                        nametype: 'Primary Name',
+                        recordtype: 'Entity',
+                        status: [
+                            {
+                                cssClass: 'inapproved',
+                                icon: 'icon-wrong',
+                                label: 'Inactive',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        descriptionid: 8,
+                        nametype: 'Also Known As',
+                        recordtype: 'Entity',
+                        status: [
+                            {
+                                cssClass: 'inapproved',
+                                icon: 'icon-wrong',
+                                label: 'Inactive',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        descriptionid: 9,
+                        nametype: 'Formerly Known As',
+                        recordtype: 'Entity',
+                        status: [
+                            {
+                                cssClass: 'inapproved',
+                                icon: 'icon-wrong',
+                                label: 'Inactive',
+                            },
+                        ],
+                        action: 'active',
+                    },
+                    {
+                        descriptionid: 10,
+                        nametype: 'Spelling Variation',
+                        recordtype: 'Entity',
+                        status: [
+                            {
+                                cssClass: 'inapproved',
+                                icon: 'icon-wrong',
+                                label: 'Inactive',
+                            },
+                        ],
+                        action: 'active',
+                    },
                 ],
             },
 
@@ -1678,7 +2339,7 @@ export default {
                     },
                     {
                         descriptionid: 3,
-                        description: 'Special Intrest Person (SIP)',
+                        description: 'Special Interest Person (SIP)',
                         recordtype: 'Person',
                         status: [
                             {
@@ -1691,8 +2352,8 @@ export default {
                     },
                     {
                         descriptionid: 4,
-                        description: 'Special Intrest Entity (SIE)',
-                        recordtype: 'Person',
+                        description: 'Special Interest Entity (SIE)',
+                        recordtype: 'Entity',
                         status: [
                             {
                                 cssClass: 'inapproved',
@@ -1738,7 +2399,7 @@ export default {
                 items: [
                     {
                         descriptionid: 1,
-                        description1: 'Special Intrest Person (SIP)',
+                        description1: 'Special Interest Person (SIP)',
                         description2: 'Section Lists',
                         status: [
                             {
@@ -1751,7 +2412,7 @@ export default {
                     },
                     {
                         descriptionid: 2,
-                        description1: 'Special Intrest Person (SIP)',
+                        description1: 'Special Interest Person (SIP)',
                         description2: 'Other Offical Lists',
                         status: [
                             {
@@ -1764,7 +2425,7 @@ export default {
                     },
                     {
                         descriptionid: 3,
-                        description1: 'Special Intrest Entity (SIE)',
+                        description1: 'Special Interest Entity (SIE)',
                         description2: 'Section Lists',
                         status: [
                             {
@@ -1777,7 +2438,7 @@ export default {
                     },
                     {
                         descriptionid: 4,
-                        description1: 'Special Intrest Entity (SIE)',
+                        description1: 'Special Interest Entity (SIE)',
                         description2: 'Other Offical Lists',
                         status: [
                             {
@@ -1790,7 +2451,7 @@ export default {
                     },
                     {
                         descriptionid: 5,
-                        description1: 'Special Intrest Person (SIP)',
+                        description1: 'Special Interest Person (SIP)',
                         description2: 'Terror',
                         status: [
                             {
@@ -1803,7 +2464,7 @@ export default {
                     },
                     {
                         descriptionid: 6,
-                        description1: 'Special Intrest Person (SIP)',
+                        description1: 'Special Interest Person (SIP)',
                         description2: 'Organised Crime',
                         status: [
                             {
@@ -1816,7 +2477,7 @@ export default {
                     },
                     {
                         descriptionid: 7,
-                        description1: 'Special Intrest Person (SIP)',
+                        description1: 'Special Interest Person (SIP)',
                         description2: 'Financial Crime',
                         status: [
                             {
@@ -1829,7 +2490,7 @@ export default {
                     },
                     {
                         descriptionid: 8,
-                        description1: 'Special Intrest Person (SIP)',
+                        description1: 'Special Interest Person (SIP)',
                         description2: 'Trafflicking',
                         status: [
                             {
@@ -1842,7 +2503,7 @@ export default {
                     },
                     {
                         descriptionid: 9,
-                        description1: 'Special Intrest Person (SIP)',
+                        description1: 'Special Interest Person (SIP)',
                         description2: 'Corruption',
                         status: [
                             {
@@ -1855,7 +2516,7 @@ export default {
                     },
                     {
                         descriptionid: 10,
-                        description1: 'Special Intrest Person (SIP)',
+                        description1: 'Special Interest Person (SIP)',
                         description2: 'War Crimes',
                         status: [
                             {
@@ -2091,9 +2752,9 @@ export default {
                         roleType: 'Previous Roles',
                         status: [
                             {
-                                cssClass: 'approved',
-                                icon: 'icon-check',
-                                label: 'Active',
+                                cssClass: 'inapproved',
+                                icon: 'icon-wrong',
+                                label: 'Inactive',
                             },
                         ],
                         action: 'active',
@@ -2500,6 +3161,53 @@ export default {
                                 cssClass: 'approved',
                                 icon: 'icon-check',
                                 label: 'Active',
+                            },
+                        ],
+                        action: 'active',
+                    },
+
+                    {
+                        person: 273,
+                        entity: 274,
+                        country: 'International',
+                        referenece_name: 'UN Angola Sanctions List',
+                        status: [
+                            {
+                                cssClass: 'inapproved',
+                                icon: 'icon-wrong',
+                                label: 'Inactive',
+                            },
+                        ],
+                        action: 'active',
+                    },
+
+                    {
+                        person: 1764,
+                        entity: 1765,
+                        country: 'International',
+                        referenece_name:
+                            "UN ISIL {Da'esh} and Al-Qaida Sanctions List",
+                        status: [
+                            {
+                                cssClass: 'approved',
+                                icon: 'icon-check',
+                                label: 'Active',
+                            },
+                        ],
+                        action: 'active',
+                    },
+
+                    {
+                        person: 265,
+                        entity: 266,
+                        country: 'International',
+                        referenece_name:
+                            'UN Panel of Experts DR Congo List - Annex l',
+                        status: [
+                            {
+                                cssClass: 'inapproved',
+                                icon: 'icon-wrong',
+                                label: 'Inactive',
                             },
                         ],
                         action: 'active',

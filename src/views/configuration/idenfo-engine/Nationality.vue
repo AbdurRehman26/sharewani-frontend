@@ -23,10 +23,13 @@
                                 </div>
                                 <div class="col-md-8">
                                     <base-button
-                                        v-b-modal.add-nationality-popup
+                                        @click="
+                                            addModify('Add Nationality Factor')
+                                        "
                                         btnLabel="+ Add Nationality"
                                         btnType="button"
                                         btnVariant="secondary"
+                                        class="secondary-add-btn"
                                     ></base-button>
                                 </div>
                             </div>
@@ -48,7 +51,7 @@
                             v-if="data.value == 'active'"
                             icon="icon-edit"
                             label="Modify"
-                            v-b-modal.add-nationality-popup
+                            @click="addModify('Modify Nationality Factor')"
                         ></base-action>
                         <!-- if action archive -->
                         <base-action
@@ -61,7 +64,12 @@
                 </template>
             </b-table>
         </div>
-        <add-nationality-popup></add-nationality-popup>
+        <pagination
+            totalRecords="Showing 1 to 10 of 220 records"
+            :showRecords="recordShow"
+        ></pagination>
+        <add-nationality-popup :title="title"></add-nationality-popup>
+
         <archive-popup
             title="Archive Nationality Factor"
             description="Are you sure you want to archive this nationality factor? You can re-activate it later."
@@ -71,6 +79,7 @@
 
 <script>
 import { mapGetters } from 'vuex'
+import pagination from '@/components/Pagination.vue'
 import addNationalityPopup from '@/components/popups/AddNationalityPopup.vue'
 import archivePopup from '@/components/popups/ArchivePopup.vue'
 
@@ -78,6 +87,7 @@ export default {
     components: {
         addNationalityPopup,
         archivePopup,
+        pagination,
     },
 
     /*
@@ -105,6 +115,14 @@ export default {
         return {
             fields: [],
             items: [],
+            title: 'Add Nationality Factor',
+            recordShow: [
+                { text: 'Show 10 records', value: null },
+                { text: 'Show 20 records', value: 20 },
+                { text: 'Show 30 records', value: 30 },
+                { text: 'Show 40 records', value: 40 },
+                { text: 'Show 50 records', value: 50 },
+            ],
         }
     }, // End of Component > data
 
@@ -132,6 +150,11 @@ export default {
                 .nationality.items //get user data from store
             this.items = configTableItems //push data into array
             this.$emit('item-length', this.items.length)
+        },
+
+        addModify(e) {
+            this.title = e
+            this.$bvModal.show('add-nationality-popup')
         },
     }, // End of Component > methods
 

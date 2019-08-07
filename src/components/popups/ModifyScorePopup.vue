@@ -21,7 +21,8 @@
                                 type="text"
                                 v-model="form.birth"
                                 required
-                                placeholder="Enter year of birth"
+                                autocomplete="no"
+                                placeholder="Enter score"
                             ></b-form-input>
                         </b-form-group>
                     </div>

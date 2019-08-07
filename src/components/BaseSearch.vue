@@ -1,7 +1,10 @@
 <template>
     <div class="form-group search-input">
         <i class="icon-search"></i>
-        <b-form-input :placeholder="placeholder"></b-form-input>
+        <b-form-input
+            :placeholder="placeholder"
+            autocomplete="no"
+        ></b-form-input>
     </div>
 </template>
 <script>

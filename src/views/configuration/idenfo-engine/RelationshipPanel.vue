@@ -23,10 +23,15 @@
                                 </div>
                                 <div class="col-md-9">
                                     <base-button
-                                        v-b-modal.add-relationship-popup
+                                        @click="
+                                            addModify(
+                                                'Add Relationship Length Factor'
+                                            )
+                                        "
                                         btnLabel="+ Add Relationship Length"
                                         btnType="button"
                                         btnVariant="secondary"
+                                        class="secondary-add-btn"
                                     ></base-button>
                                 </div>
                             </div>
@@ -54,7 +59,9 @@
                             v-if="data.value == 'active'"
                             icon="icon-edit"
                             label="Modify"
-                            v-b-modal.add-relationship-popup
+                            @click="
+                                addModify('Modify Relationship Length Factor')
+                            "
                         ></base-action>
                         <!-- if action archive -->
                         <base-action
@@ -67,7 +74,13 @@
                 </template>
             </b-table>
         </div>
-        <add-relationship-popup></add-relationship-popup>
+        <pagination
+            totalRecords="Showing 1 to 3 of 3 records"
+            nextBtnDisable
+            selectPaginationDisable
+            :showRecords="recordShow"
+        ></pagination>
+        <add-relationship-popup :title="title"></add-relationship-popup>
         <archive-popup
             title="Archive Relationship Length Factor"
             description="Are you sure you want to archive this relationship length factor? You can re-activate it later."
@@ -77,12 +90,14 @@
 
 <script>
 import { mapGetters } from 'vuex'
+import pagination from '@/components/Pagination.vue'
 import addRelationshipPopup from '@/components/popups/AddRelationshipPopup.vue'
 import archivePopup from '@/components/popups/ArchivePopup.vue'
 export default {
     components: {
         addRelationshipPopup,
         archivePopup,
+        pagination,
     },
 
     /*
@@ -110,6 +125,8 @@ export default {
         return {
             fields: [],
             items: [],
+            title: '',
+            recordShow: [{ text: 'Show 10 records', value: null }],
         }
     }, // End of Component > data
 
@@ -136,6 +153,11 @@ export default {
                 .relationshipData.items //get user data from store
             this.items = configTableItems //push data into array
             this.$emit('item-length', this.items.length)
+        },
+
+        addModify(e) {
+            this.title = e
+            this.$bvModal.show('add-relationship-popup')
         },
     }, // End of Component > methods
 

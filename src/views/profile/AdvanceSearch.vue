@@ -17,6 +17,7 @@
                                 type="text"
                                 v-model="form.firstName"
                                 required
+                                autocomplete="no"
                                 placeholder="Search by first name"
                             ></b-form-input>
                         </b-form-group>
@@ -32,6 +33,7 @@
                                 type="text"
                                 v-model="form.middleName"
                                 required
+                                autocomplete="no"
                                 placeholder="Search by middle name"
                             ></b-form-input>
                         </b-form-group>
@@ -48,6 +50,7 @@
                                 type="text"
                                 v-model="form.lastName"
                                 required
+                                autocomplete="no"
                                 placeholder="Search by last name"
                             ></b-form-input>
                         </b-form-group>
@@ -273,13 +276,39 @@ export default {
 
             workType: [
                 { value: null, text: 'Select Work Type', disabled: true },
-                'Self Employed',
-                'Worker',
+                'Self-Employed / Business Owner',
+                'Salaried-Executive Level',
+                'Salaried-General',
+                'Homemaker',
+                'Student',
+                'Unemployed',
+                'Retired',
             ],
             industry: [
                 { value: null, text: 'Select Industry', disabled: true },
                 'Automotive Industry',
                 'Textile Industry',
+                'Agriculture, forestry and fishing',
+                'Mining and quarrying',
+                'Manufacturing',
+                'Electricity, gas, steam and air conditioning supply',
+                'Water supply, sewerage, waste management',
+                'Construction',
+                'Wholesale and retail trade, repair of motor vehicles',
+                'Transportation and storage',
+                'Accommodation and food service activities',
+                'Information and communication',
+                'Financial and insurance activities',
+                'Real estate activities',
+                'Professional, scientific and technical activities',
+                'Administrative and support service activities',
+                'Public administration and defence, compulsory social security',
+                'Education',
+                'Human health and social work activities',
+                'Arts, entertainment and recreation',
+                'Other service activities',
+                'Activities of households as employers',
+                'Activities of extraterritorial organizations and bodies',
             ],
             nationality: [
                 { value: null, text: 'Select Nationality', disabled: true },
@@ -303,11 +332,35 @@ export default {
                 'Indian',
             ],
 
-            status: [{ value: null, text: 'Select KYC Status' }],
-            hitType: [{ value: null, text: 'Select Name Screening Hit Type' }],
-            ratingLevel: [{ value: null, text: 'Select Risk Rating Level' }],
+            status: [
+                { value: null, text: 'Select KYC Status' },
+                'Approved',
+                'Pending',
+                'Reject',
+            ],
+
+            hitType: [
+                { value: null, text: 'Select Name Screening Hit Type' },
+                'PEP hit',
+                'Enforcement hit',
+                'Blacklist hit',
+                'Sanction hit',
+            ],
+            ratingLevel: [
+                { value: null, text: 'Select Risk Rating Level' },
+                'High Risk',
+                'Medium Risk',
+                'Low Risk',
+            ],
             type: [{ value: null, text: 'Select ID Type' }],
-            productType: [{ value: null, text: 'Select Product Type' }],
+            productType: [
+                { value: null, text: 'Select Product Type' },
+                'Current Account',
+                'Saving Account',
+                'Credit Card',
+                'Short Term Loan',
+                'Financial Investment',
+            ],
         }
     }, // End of Component > data
 

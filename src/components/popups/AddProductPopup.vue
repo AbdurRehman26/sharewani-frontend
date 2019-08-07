@@ -2,7 +2,7 @@
     <div>
         <b-modal
             id="add-product-popup"
-            title="Add Product Factor"
+            :title="title"
             size="sm"
             okTitle="Create"
             cancelTitle="Cancel"
@@ -21,6 +21,7 @@
                                 type="text"
                                 v-model="form.productCode"
                                 required
+                                autocomplete="no"
                                 placeholder="Enter product code"
                             ></b-form-input>
                         </b-form-group>
@@ -36,6 +37,7 @@
                                 type="text"
                                 v-model="form.dialingCode"
                                 required
+                                autocomplete="no"
                                 placeholder="Enter product title"
                             ></b-form-input>
                         </b-form-group>
@@ -62,6 +64,27 @@
 
 <script>
 export default {
+    /*
+    |--------------------------------------------------------------------------
+    | Component > props
+    |--------------------------------------------------------------------------
+    */
+    props: {
+        /**
+         * Value to determine the current compose mode which
+         * varies between 'add' and 'edit'
+         */
+        title: {
+            type: String,
+            default: null,
+        },
+    }, // End of Component > props
+
+    /*
+    |--------------------------------------------------------------------------
+    | Component > data
+    |--------------------------------------------------------------------------
+    */
     data() {
         return {
             form: {

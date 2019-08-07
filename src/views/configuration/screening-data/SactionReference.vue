@@ -40,6 +40,10 @@
                 </template>
             </b-table>
         </div>
+        <pagination
+            totalRecords="Showing 1 to 10 of 57 records"
+            :showRecords="recordShow"
+        ></pagination>
         <modify-status-popup
             modalTitle="Modify Sanctions Reference Status"
             modalLabel="Interpol Red Notices"
@@ -49,10 +53,12 @@
 
 <script>
 import { mapGetters } from 'vuex'
+import pagination from '@/components/Pagination.vue'
 import modifyStatusPopup from '@/components/popups/ModifyStatusPopup.vue'
 export default {
     components: {
         modifyStatusPopup,
+        pagination,
     },
 
     /*
@@ -80,6 +86,13 @@ export default {
         return {
             fields: [],
             items: [],
+            recordShow: [
+                { text: 'Show 10 records', value: null },
+                { text: 'Show 20 records', value: 20 },
+                { text: 'Show 30 records', value: 30 },
+                { text: 'Show 40 records', value: 40 },
+                { text: 'Show 50 records', value: 50 },
+            ],
         }
     }, // End of Component > data
 

@@ -59,15 +59,61 @@
                 </div>
             </div>
         </div>
+
+        <div class="filter-section sub-filter">
+            <h2>Last Review</h2>
+            <div class="card customer-last-review">
+                <div class="card-body">
+                    <base-status :statusType="status"></base-status>
+                    <div
+                        class="profile-pic"
+                        :style="{
+                            'background-image':
+                                'url(' +
+                                require('@/assets/images/members/' +
+                                    image +
+                                    '') +
+                                ')',
+                        }"
+                    ></div>
+                    <div class="details-section">
+                        <h5>
+                            {{ name }}
+                        </h5>
+                        <span class="status-types"> {{ subHeading }}</span>
+                        <span class="status-types">{{ date }}</span>
+                        <p class="date-content">
+                            {{ content }}
+                        </p>
+                        <p>
+                            {{ details }}
+                        </p>
+
+                        <div class="file-section">
+                            <pdf-icon></pdf-icon>
+                        </div>
+                        <div class="file-attach">
+                            <base-button
+                                btnVariant="link"
+                                btnLabel="Download Attachement"
+                            ></base-button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <cancel-review-process-popup></cancel-review-process-popup>
         <kyc-status-review-popup></kyc-status-review-popup>
+        <manual-alert-popup></manual-alert-popup>
     </div>
 </template>
 <script>
 import { mapGetters } from 'vuex'
 import customerInformation from '@/components/CustomerInfo.vue'
+import pdfIcon from '@/components/icons/PdfIcon.vue'
 import kycStatusReviewPopup from '@/components/popups/KYCStatusReviewPopup.vue'
 import cancelReviewProcessPopup from '@/components/popups/CancelReviewProcessPopup.vue'
+import manualAlertPopup from '@/components/popups/ManualAlertPopup.vue'
 import tags from '@/components/Tags.vue'
 export default {
     components: {
@@ -75,6 +121,8 @@ export default {
         tags,
         cancelReviewProcessPopup,
         kycStatusReviewPopup,
+        pdfIcon,
+        manualAlertPopup,
     },
 
     /*
@@ -101,10 +149,24 @@ export default {
     data() {
         return {
             customerDetails: [],
-
             tags: [],
-
             tagsList: [],
+            image: 'member-1.png',
+            name: 'Jacqueline Asong',
+            subHeading: 'Approver',
+            date: 'july 4, 2019 10:45 a.m.',
+            content:
+                'Submitted KYC Review Status and changed KYC Status to Approved with the following comment,',
+            details:
+                '"I didn\'t found anything unusual with the profile. All records are clear and up to date."',
+
+            status: [
+                {
+                    icon: 'icon-check',
+                    label: 'Approved',
+                    cssClass: 'approved',
+                },
+            ],
         }
     }, // End of Component > data
 

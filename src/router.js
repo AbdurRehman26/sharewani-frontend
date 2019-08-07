@@ -20,6 +20,7 @@ export default new Router({
                     component: () =>
                         import(/* webpackChunkName: "forgot-password" */ '@/views/auth/Login.vue'),
                     meta: {
+                        title: 'Login',
                         noSidebar: true,
                         bodyClass: 'auth-body',
                     },
@@ -30,6 +31,7 @@ export default new Router({
                     component: () =>
                         import(/* webpackChunkName: "forgot-password" */ '@/views/auth/ForgotPassword.vue'),
                     meta: {
+                        title: 'Forgot Password',
                         noSidebar: true,
                         bodyClass: 'auth-body',
                     },
@@ -40,7 +42,9 @@ export default new Router({
                     component: () =>
                         import(/* webpackChunkName: "reset-password" */ '@/views/auth/ResetPassword.vue'),
                     meta: {
+                        title: 'Reset Password',
                         noSidebar: true,
+                        noFooterBar: true,
                         bodyClass: 'auth-body',
                     },
                 },
@@ -50,6 +54,7 @@ export default new Router({
                     component: () =>
                         import(/* webpackChunkName: "email-sent" */ '@/views/auth/EmailSent.vue'),
                     meta: {
+                        title: 'Check Your Inbox',
                         noSidebar: true,
                         bodyClass: 'auth-body',
                     },
@@ -63,6 +68,7 @@ export default new Router({
             component: () =>
                 import(/* webpackChunkName: "contact-us" */ '@/views/ContactUs.vue'),
             meta: {
+                title: 'Contact Us',
                 noSidebar: true,
                 bodyClass: 'auth-body',
             },
@@ -78,24 +84,36 @@ export default new Router({
                     name: 'dashboard-alerts',
                     component: () =>
                         import(/* webpackChunkName: "dashboard-alerts" */ '@/views/dashboard/Alert.vue'),
+                    meta: {
+                        title: 'Insights | Alert',
+                    },
                 },
                 {
                     path: 'alerts',
                     name: 'dashboard-alerts',
                     component: () =>
                         import(/* webpackChunkName: "dashboard-alerts" */ '@/views/dashboard/Alert.vue'),
+                    meta: {
+                        title: 'Insights | Alert',
+                    },
                 },
                 {
                     path: 'activity',
                     name: 'dashboard-activity-page',
                     component: () =>
                         import(/* webpackChunkName: "dashboard-activity" */ '@/views/dashboard/Activity.vue'),
+                    meta: {
+                        title: 'Insights | Activity',
+                    },
                 },
                 {
                     path: 'customer-statistics',
                     name: 'dashboard-reporting-page',
                     component: () =>
                         import(/* webpackChunkName: "dashboard-reporting" */ '@/views/dashboard/Statistics.vue'),
+                    meta: {
+                        title: 'Insights | Customer Statistics',
+                    },
                 },
             ],
         },
@@ -110,30 +128,45 @@ export default new Router({
                     name: 'system-users',
                     component: () =>
                         import(/* webpackChunkName: "system-users" */ '@/views/system-users/Users.vue'),
+                    meta: {
+                        title: 'System Users',
+                    },
                 },
                 {
                     path: 'users',
                     name: 'system-users',
                     component: () =>
                         import(/* webpackChunkName: "system-users" */ '@/views/system-users/Users.vue'),
+                    meta: {
+                        title: 'System Users | ',
+                    },
                 },
                 {
                     path: 'roles',
                     name: 'roles-and-permission',
                     component: () =>
                         import(/* webpackChunkName: "roles" */ '@/views/system-users/Roles.vue'),
+                    meta: {
+                        title: 'System Users | Roles & Permission',
+                    },
                 },
                 {
                     path: 'data-segments',
                     name: 'branches-page',
                     component: () =>
                         import(/* webpackChunkName: "branches" */ '@/views/system-users/DataSegments.vue'),
+                    meta: {
+                        title: 'System Users | Data Segments',
+                    },
                 },
                 {
                     path: 'application-access',
                     name: 'application-access-page',
                     component: () =>
                         import(/* webpackChunkName: "branches" */ '@/views/system-users/Access.vue'),
+                    meta: {
+                        title: 'System Users | Application Access',
+                    },
                 },
             ],
         },
@@ -142,6 +175,9 @@ export default new Router({
             name: 'systems-logs',
             component: () =>
                 import(/* webpackChunkName: "system-logs" */ '@/views/system-logs/Main.vue'),
+            meta: {
+                title: 'Systems Logs',
+            },
         },
         {
             path: '/customer-profiles',
@@ -158,12 +194,18 @@ export default new Router({
                     name: 'all-customer',
                     component: () =>
                         import(/* webpackChunkName: "customer" */ './views/profile/AllCustomer.vue'),
+                    meta: {
+                        title: 'Customer Profile | All Customer',
+                    },
                 },
                 {
                     path: '/customer-profiles/all-customer',
                     name: 'all-customer',
                     component: () =>
                         import(/* webpackChunkName: "customer" */ './views/profile/AllCustomer.vue'),
+                    meta: {
+                        title: 'Customer Profile | All Customer',
+                    },
                 },
 
                 {
@@ -174,6 +216,9 @@ export default new Router({
                     // which is lazy-loaded when the route is visited.
                     component: () =>
                         import(/* webpackChunkName: "advance-search" */ './views/profile/AdvanceSearch.vue'),
+                    meta: {
+                        title: 'Customer Profile | Advance Search',
+                    },
                 },
             ],
         },
@@ -190,6 +235,7 @@ export default new Router({
                     component: () =>
                         import(/* webpackChunkName: "customer-information" */ './views/profile/profile-details/CustomerInformation.vue'),
                     meta: {
+                        title: 'Customer Information | Customer Profile',
                         name: 'Customer Profile',
                     },
                 },
@@ -199,6 +245,7 @@ export default new Router({
                     component: () =>
                         import(/* webpackChunkName: "screening-customer" */ './views/profile/profile-details/ScreeningCustomer.vue'),
                     meta: {
+                        title: 'Customer Information | Name Screening',
                         name: 'Name Screening',
                     },
                 },
@@ -209,6 +256,7 @@ export default new Router({
                     component: () =>
                         import(/* webpackChunkName: "document-verification" */ './views/profile/profile-details/DocumentVerification.vue'),
                     meta: {
+                        title: 'Customer Information | Document Verification',
                         name: 'Document Verification',
                     },
                 },
@@ -218,6 +266,7 @@ export default new Router({
                     component: () =>
                         import(/* webpackChunkName: "kyc-risk-rating" */ './views/profile/profile-details/KYCRiskRating.vue'),
                     meta: {
+                        title: 'Customer Information | KYC Risk Rating',
                         name: 'KYC Risk Rating',
                     },
                 },
@@ -227,6 +276,7 @@ export default new Router({
                     component: () =>
                         import(/* webpackChunkName: "activity-timeline" */ './views/profile/profile-details/ActivityTimeline.vue'),
                     meta: {
+                        title: 'Customer Information | Activity Timeline',
                         name: 'Activity Timeline',
                     },
                 },
@@ -235,6 +285,7 @@ export default new Router({
         {
             path: '/configuration',
             name: 'configuration',
+
             component: () =>
                 import(/* webpackChunkName: "configuration" */ '@/views/configuration/Main.vue'),
             children: [
@@ -249,24 +300,40 @@ export default new Router({
                             name: 'idenfo-engine',
                             component: () =>
                                 import(/* webpackChunkName: "nationality" */ './views/configuration/idenfo-engine/RiskFactor.vue'),
+                            meta: {
+                                title:
+                                    'Configuration | Idenfo Engine | Risk Factor',
+                            },
                         },
                         {
                             path: '/configuration/idenfo-engine/risk',
                             name: 'conf-risk',
                             component: () =>
                                 import(/* webpackChunkName: "riskFactor" */ './views/configuration/idenfo-engine/RiskFactor.vue'),
+                            meta: {
+                                title:
+                                    'Configuration | Idenfo Engine | Risk Factor',
+                            },
                         },
                         {
                             path: '/configuration/idenfo-engine/',
                             name: 'idenfo-engine',
                             component: () =>
                                 import(/* webpackChunkName: "nationality" */ './views/configuration/idenfo-engine/RiskFactor.vue'),
+                            meta: {
+                                title:
+                                    'Configuration | Idenfo Engine | Risk Factor',
+                            },
                         },
                         {
                             path: '/configuration/idenfo-engine/risk-rating',
                             name: 'risk-rating',
                             component: () =>
                                 import(/* webpackChunkName: "riskRating" */ './views/configuration/idenfo-engine/RiskRating.vue'),
+                            meta: {
+                                title:
+                                    'Configuration | Idenfo Engine | Risk Rating',
+                            },
                         },
                         {
                             path:
@@ -274,6 +341,10 @@ export default new Router({
                             name: 'document-verification-factor',
                             component: () =>
                                 import(/* webpackChunkName: "riskRating" */ './views/configuration/idenfo-engine/DocumentVerificationFactors.vue'),
+                            meta: {
+                                title:
+                                    'Configuration | Idenfo Engine | Document Verification Factor',
+                            },
                         },
 
                         {
@@ -282,30 +353,48 @@ export default new Router({
                             name: 'name-screen-score',
                             component: () =>
                                 import(/* webpackChunkName: "riskRating" */ './views/configuration/idenfo-engine/NameScreenScore.vue'),
+                            meta: {
+                                title:
+                                    'Configuration | Idenfo Engine | Name Screen Score',
+                            },
                         },
                         {
                             path: '/configuration/idenfo-engine/nationality',
                             name: 'conf-nationality',
                             component: () =>
                                 import(/* webpackChunkName: "riskRating" */ './views/configuration/idenfo-engine/Nationality.vue'),
+                            meta: {
+                                title:
+                                    'Configuration | Idenfo Engine | Nationality',
+                            },
                         },
                         {
                             path: '/configuration/idenfo-engine/country',
                             name: 'conf-country',
                             component: () =>
                                 import(/* webpackChunkName: "nationality" */ './views/configuration/idenfo-engine/Country.vue'),
+                            meta: {
+                                title:
+                                    'Configuration | Idenfo Engine | Country',
+                            },
                         },
                         {
                             path: '/configuration/idenfo-engine/state',
                             name: 'state-factor',
                             component: () =>
                                 import(/* webpackChunkName: "stateFactor" */ './views/configuration/idenfo-engine/StateFactor.vue'),
+                            meta: {
+                                title: 'Configuration | Idenfo Engine | State',
+                            },
                         },
                         {
                             path: '/configuration/idenfo-engine/work',
                             name: 'work-factor',
                             component: () =>
                                 import(/* webpackChunkName: "workFactor" */ './views/configuration/idenfo-engine/WorkFactor.vue'),
+                            meta: {
+                                title: 'Configuration | Idenfo Engine | Work',
+                            },
                         },
                         {
                             path: '/configuration/idenfo-engine/industry',
@@ -313,6 +402,8 @@ export default new Router({
                             component: () =>
                                 import(/* webpackChunkName: "industryFactor" */ './views/configuration/idenfo-engine/IndustryFactor.vue'),
                             meta: {
+                                title:
+                                    'Configuration | Idenfo Engine | Industry',
                                 responsiveMenuItem: true,
                             },
                         },
@@ -322,6 +413,8 @@ export default new Router({
                             component: () =>
                                 import(/* webpackChunkName: "productFactor" */ './views/configuration/idenfo-engine/ProductFactor.vue'),
                             meta: {
+                                title:
+                                    'Configuration | Idenfo Engine | Product',
                                 responsiveMenuItem: true,
                             },
                         },
@@ -331,6 +424,8 @@ export default new Router({
                             component: () =>
                                 import(/* webpackChunkName: "relationshipFactor" */ './views/configuration/idenfo-engine/RelationshipPanel.vue'),
                             meta: {
+                                title:
+                                    'Configuration | Idenfo Engine | Relationship',
                                 responsiveMenuItem: true,
                             },
                         },
@@ -340,6 +435,8 @@ export default new Router({
                             component: () =>
                                 import(/* webpackChunkName: "channelFactor" */ './views/configuration/idenfo-engine/ChannelFactor.vue'),
                             meta: {
+                                title:
+                                    'Configuration | Idenfo Engine | Channel',
                                 responsiveMenuItem: true,
                             },
                         },
@@ -350,6 +447,30 @@ export default new Router({
                             component: () =>
                                 import(/* webpackChunkName: "riskRating" */ './views/configuration/idenfo-engine/PurposeAction.vue'),
                             meta: {
+                                title:
+                                    'Configuration | Idenfo Engine | Purpose of Action',
+                                responsiveMenuItem: true,
+                            },
+                        },
+                        {
+                            path: '/configuration/idenfo-engine/gender',
+                            name: 'idenfo-engine-gender',
+                            component: () =>
+                                import(/* webpackChunkName: "riskRating" */ './views/configuration/idenfo-engine/Gender.vue'),
+                            meta: {
+                                title: 'Configuration | Idenfo Engine | Gender',
+                                responsiveMenuItem: true,
+                            },
+                        },
+                        {
+                            path:
+                                '/configuration/idenfo-engine/risk-level-review',
+                            name: 'idenfo-engine-risk-level-review',
+                            component: () =>
+                                import(/* webpackChunkName: "riskRating" */ './views/configuration/idenfo-engine/RiskLevelReview.vue'),
+                            meta: {
+                                title:
+                                    'Configuration | Idenfo Engine | Risk Level Review',
                                 responsiveMenuItem: true,
                             },
                         },
@@ -365,80 +486,121 @@ export default new Router({
                             path: '/configuration/screening-data/gender',
                             name: 'gender',
                             component: () =>
-                                import(/* webpackChunkName: "riskFactor" */ './views/configuration/screening-data/Gender.vue'),
+                                import(/* webpackChunkName: "gender" */ './views/configuration/screening-data/Gender.vue'),
+                            meta: {
+                                title:
+                                    'Configuration | Screening Data | Gender',
+                            },
                         },
                         {
                             path: '/',
                             name: 'gender',
                             component: () =>
-                                import(/* webpackChunkName: "nationality" */ './views/configuration/screening-data/Gender.vue'),
+                                import(/* webpackChunkName: "gender" */ './views/configuration/screening-data/Gender.vue'),
+                            meta: {
+                                title:
+                                    'Configuration | Screening Data | Gender',
+                            },
                         },
                         {
                             path: '/configuration/screening-data/',
                             name: 'gender',
                             component: () =>
-                                import(/* webpackChunkName: "nationality" */ './views/configuration/screening-data/Gender.vue'),
+                                import(/* webpackChunkName: "gender" */ './views/configuration/screening-data/Gender.vue'),
+                            meta: {
+                                title:
+                                    'Configuration | Screening Data | Screening Data',
+                            },
                         },
                         {
                             path: '/configuration/screening-data/deceased',
                             name: 'deceased',
                             component: () =>
-                                import(/* webpackChunkName: "nationality" */ './views/configuration/screening-data/Deceased.vue'),
+                                import(/* webpackChunkName: "deceased" */ './views/configuration/screening-data/Deceased.vue'),
+                            meta: {
+                                title:
+                                    'Configuration | Screening Data | Deceased',
+                            },
                         },
                         {
                             path: '/configuration/screening-data/record-status',
                             name: 'record-status',
                             component: () =>
-                                import(/* webpackChunkName: "nationality" */ './views/configuration/screening-data/RecordStatus.vue'),
+                                import(/* webpackChunkName: "record-status" */ './views/configuration/screening-data/RecordStatus.vue'),
+                            meta: {
+                                title:
+                                    'Configuration | Screening Data | Record Status',
+                            },
                         },
                         {
                             path: '/configuration/screening-data/name-type',
                             name: 'name-type',
                             component: () =>
-                                import(/* webpackChunkName: "nationality" */ './views/configuration/screening-data/NameType.vue'),
-                        },
-                        {
-                            path: '/configuration/screening-data/name-type',
-                            name: 'name-type',
-                            component: () =>
-                                import(/* webpackChunkName: "nationality" */ './views/configuration/screening-data/NameType.vue'),
+                                import(/* webpackChunkName: "name-type" */ './views/configuration/screening-data/NameType.vue'),
+                            meta: {
+                                title:
+                                    'Configuration | Screening Data | Name Type',
+                            },
                         },
                         {
                             path: '/configuration/screening-data/descprition-1',
                             name: 'descprition-1',
                             component: () =>
-                                import(/* webpackChunkName: "nationality" */ './views/configuration/screening-data/Descprition1.vue'),
+                                import(/* webpackChunkName: "descprition-1" */ './views/configuration/screening-data/Descprition1.vue'),
+                            meta: {
+                                title:
+                                    'Configuration | Screening Data | Descprition 1',
+                            },
                         },
                         {
                             path: '/configuration/screening-data/descprition-2',
                             name: 'descprition-2',
                             component: () =>
-                                import(/* webpackChunkName: "nationality" */ './views/configuration/screening-data/Descprition2.vue'),
+                                import(/* webpackChunkName: "descprition-2" */ './views/configuration/screening-data/Descprition2.vue'),
+                            meta: {
+                                title:
+                                    'Configuration | Screening Data | Descprition 2',
+                            },
                         },
                         {
                             path: '/configuration/screening-data/descprition-3',
                             name: 'descprition-3',
                             component: () =>
-                                import(/* webpackChunkName: "nationality" */ './views/configuration/screening-data/Descprition3.vue'),
+                                import(/* webpackChunkName: "descprition-3" */ './views/configuration/screening-data/Descprition3.vue'),
+                            meta: {
+                                title:
+                                    'Configuration | Screening Data | Descprition 3',
+                            },
                         },
                         {
                             path: '/configuration/screening-data/role-type',
                             name: 'role-type',
                             component: () =>
-                                import(/* webpackChunkName: "nationality" */ './views/configuration/screening-data/RoleType.vue'),
+                                import(/* webpackChunkName: "role-type" */ './views/configuration/screening-data/RoleType.vue'),
+                            meta: {
+                                title:
+                                    'Configuration | Screening Data | Role Type',
+                            },
                         },
                         {
                             path: '/configuration/screening-data/occupation',
                             name: 'occupation',
                             component: () =>
-                                import(/* webpackChunkName: "nationality" */ './views/configuration/screening-data/Occupation.vue'),
+                                import(/* webpackChunkName: "occupation" */ './views/configuration/screening-data/Occupation.vue'),
+                            meta: {
+                                title:
+                                    'Configuration | Screening Data | Occupation',
+                                responsiveMenuItem: true,
+                            },
                         },
                         {
                             path: '/configuration/screening-data/data-type',
                             name: 'data-type',
                             component: () =>
-                                import(/* webpackChunkName: "nationality" */ './views/configuration/screening-data/DataType.vue'),
+                                import(/* webpackChunkName: "data-type" */ './views/configuration/screening-data/DataType.vue'),
                             meta: {
+                                title:
+                                    'Configuration | Screening Data | Data Type',
                                 responsiveMenuItem: true,
                             },
                         },
@@ -447,8 +609,10 @@ export default new Router({
                                 '/configuration/screening-data/sanction-reference',
                             name: 'sanction-reference',
                             component: () =>
-                                import(/* webpackChunkName: "nationality" */ './views/configuration/screening-data/SactionReference.vue'),
+                                import(/* webpackChunkName: "sanction-reference" */ './views/configuration/screening-data/SactionReference.vue'),
                             meta: {
+                                title:
+                                    'Configuration | Screening Data | Sanction Reference',
                                 responsiveMenuItem: true,
                             },
                         },
@@ -456,8 +620,10 @@ export default new Router({
                             path: '/configuration/screening-data/country',
                             name: 'screening-country',
                             component: () =>
-                                import(/* webpackChunkName: "nationality" */ './views/configuration/screening-data/Countries.vue'),
+                                import(/* webpackChunkName: "country" */ './views/configuration/screening-data/Countries.vue'),
                             meta: {
+                                title:
+                                    'Configuration | Screening Data | Country',
                                 responsiveMenuItem: true,
                             },
                         },
@@ -465,18 +631,22 @@ export default new Router({
                             path: '/configuration/screening-data/country-type',
                             name: 'screening-country-type',
                             component: () =>
-                                import(/* webpackChunkName: "nationality" */ './views/configuration/screening-data/CountryType.vue'),
+                                import(/* webpackChunkName: "country-type" */ './views/configuration/screening-data/CountryType.vue'),
                             meta: {
+                                title:
+                                    'Configuration | Screening Data | Country Type',
                                 responsiveMenuItem: true,
                             },
                         },
                         {
                             path:
-                                '/configuration/screening-data/indentification',
+                                '/configuration/screening-data/identification',
                             name: 'screening-indentification',
                             component: () =>
-                                import(/* webpackChunkName: "nationality" */ './views/configuration/screening-data/Identification.vue'),
+                                import(/* webpackChunkName: "identification" */ './views/configuration/screening-data/Identification.vue'),
                             meta: {
+                                title:
+                                    'Configuration | Screening Data | Identification',
                                 responsiveMenuItem: true,
                             },
                         },
@@ -485,8 +655,10 @@ export default new Router({
                                 '/configuration/screening-data/relationship-type',
                             name: 'screening-relationship',
                             component: () =>
-                                import(/* webpackChunkName: "nationality" */ './views/configuration/screening-data/Relationship.vue'),
+                                import(/* webpackChunkName: "relationship-type" */ './views/configuration/screening-data/Relationship.vue'),
                             meta: {
+                                title:
+                                    'Configuration | Screening Data | Relationship Type',
                                 responsiveMenuItem: true,
                             },
                         },
@@ -497,24 +669,67 @@ export default new Router({
                     name: 'manual-review',
                     component: () =>
                         import(/* webpackChunkName: "customer" */ './views/configuration/ManualReviewSwitch.vue'),
+                    meta: {
+                        title: 'Configuration | Manual Review',
+                    },
                 },
+
                 {
                     path: '/configuration/form-builder/',
-                    name: 'branding',
+                    name: 'screening-data',
                     component: () =>
-                        import(/* webpackChunkName: "builder" */ './views/configuration/FormBuilder.vue'),
+                        import(/* webpackChunkName: "customer" */ './views/configuration/form-builder/Main.vue'),
+                    children: [
+                        {
+                            path: '/',
+                            name: 'gender',
+                            component: () =>
+                                import(/* webpackChunkName: "gender" */ './views/configuration/form-builder/SetupProfile.vue'),
+                            meta: {
+                                title:
+                                    'Configuration | Form Builder | Setup Profile',
+                            },
+                        },
+                        {
+                            path: '/configuration/form-builder/setup-profile',
+                            name: 'gender',
+                            component: () =>
+                                import(/* webpackChunkName: "gender" */ './views/configuration/form-builder/SetupProfile.vue'),
+                            meta: {
+                                title:
+                                    'Configuration | Form Builder | Setup Profile',
+                            },
+                        },
+                        {
+                            path: '/configuration/form-builder/account-info',
+                            name: 'gender',
+                            component: () =>
+                                import(/* webpackChunkName: "gender" */ './views/configuration/form-builder/AccountInfo.vue'),
+                            meta: {
+                                title:
+                                    'Configuration | Form Builder | Account Information',
+                            },
+                        },
+                    ],
                 },
+
                 {
                     path: '/configuration/branding/',
                     name: 'branding',
                     component: () =>
                         import(/* webpackChunkName: "customer" */ './views/configuration/Branding.vue'),
+                    meta: {
+                        title: 'Configuration | Branding',
+                    },
                 },
                 {
                     path: '/configuration/ocr-configuration/',
                     name: 'ocr-configuration',
                     component: () =>
                         import(/* webpackChunkName: "builder" */ './views/configuration/OcrConfiguration.vue'),
+                    meta: {
+                        title: 'Configuration | OCR',
+                    },
                 },
             ],
         },
@@ -532,6 +747,7 @@ export default new Router({
                         import(/* webpackChunkName: "upload-document" */ './views/register-customer/UploadDocuments.vue'),
                     meta: {
                         name: 'Register Customers',
+                        title: 'Register Customer | Upload Document',
                         sessionStep: '1',
                     },
                 },
@@ -542,6 +758,7 @@ export default new Router({
                         import(/* webpackChunkName: "upload-document" */ './views/register-customer/UploadDocuments.vue'),
                     meta: {
                         name: 'Register Customers',
+                        title: 'Register Customer | Upload Document',
                         sessionStep: '1',
                     },
                 },
@@ -552,6 +769,7 @@ export default new Router({
                         import(/* webpackChunkName: "record-video" */ './views/register-customer/RecordVideo.vue'),
                     meta: {
                         name: 'Register Customers',
+                        title: 'Register Customer | Record Video',
                         sessionStep: '2',
                     },
                 },
@@ -562,6 +780,7 @@ export default new Router({
                         import(/* webpackChunkName: "setup-profile" */ './views/register-customer/SetupProfile.vue'),
                     meta: {
                         name: 'Register Customers',
+                        title: 'Register Customer | Setup Profile',
                         sessionStep: '3',
                     },
                 },
@@ -572,6 +791,7 @@ export default new Router({
                         import(/* webpackChunkName: "account-info" */ './views/register-customer/AccountInfo.vue'),
                     meta: {
                         name: 'Register Customers',
+                        title: 'Register Customer | Account Info',
                         sessionStep: '4',
                     },
                 },
@@ -582,6 +802,7 @@ export default new Router({
                         import(/* webpackChunkName: "finish" */ './views/register-customer/Finish.vue'),
                     meta: {
                         name: 'Register Customers',
+                        title: 'Register Customer | Finish',
                         sessionStep: '5',
                     },
                 },
@@ -601,9 +822,11 @@ export default new Router({
                         import(/* webpackChunkName: "public-registration-upload-document" */ './views/register-customer/UploadDocuments.vue'),
                     meta: {
                         name: 'Online Account Opening Application',
+                        title: 'Public Registration | Upload Document',
                         sessionStep: '1',
                         noSidebar: true,
                         publicRegistration: true,
+                        bodyClass: 'auth-body',
                     },
                 },
                 {
@@ -613,9 +836,11 @@ export default new Router({
                         import(/* webpackChunkName: "public-registration-upload-document" */ './views/register-customer/UploadDocuments.vue'),
                     meta: {
                         name: 'Online Account Opening Application',
+                        title: 'Public Registration | Upload Document',
                         sessionStep: '1',
                         noSidebar: true,
                         publicRegistration: true,
+                        bodyClass: 'auth-body',
                     },
                 },
                 {
@@ -625,9 +850,11 @@ export default new Router({
                         import(/* webpackChunkName: "public-registration-record-video" */ './views/register-customer/RecordVideo.vue'),
                     meta: {
                         name: 'Online Account Opening Application',
+                        title: 'Public Registration | Record Video',
                         sessionStep: '2',
                         noSidebar: true,
                         publicRegistration: true,
+                        bodyClass: 'auth-body',
                     },
                 },
                 {
@@ -637,9 +864,11 @@ export default new Router({
                         import(/* webpackChunkName: "public-registration-setup-profile" */ './views/register-customer/SetupProfile.vue'),
                     meta: {
                         name: 'Online Account Opening Application',
+                        title: 'Public Registration | Setup Profile',
                         sessionStep: '3',
                         noSidebar: true,
                         publicRegistration: true,
+                        bodyClass: 'auth-body',
                     },
                 },
                 {
@@ -649,9 +878,11 @@ export default new Router({
                         import(/* webpackChunkName: "public-registration-account-info" */ './views/register-customer/AccountInfo.vue'),
                     meta: {
                         name: 'Online Account Opening Application',
+                        title: 'Public Registration | Account Info',
                         sessionStep: '4',
                         noSidebar: true,
                         publicRegistration: true,
+                        bodyClass: 'auth-body',
                     },
                 },
                 {
@@ -661,9 +892,11 @@ export default new Router({
                         import(/* webpackChunkName: "public-registration-finish" */ './views/register-customer/Finish.vue'),
                     meta: {
                         name: 'Online Account Opening Application',
+                        title: 'Public Registration | Finish',
                         sessionStep: '5',
                         noSidebar: true,
                         publicRegistration: true,
+                        bodyClass: 'auth-body',
                     },
                 },
             ],

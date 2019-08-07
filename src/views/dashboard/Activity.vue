@@ -69,7 +69,14 @@
                         >
                             <h2>{{ list.title }}</h2>
                             <p>{{ list.value }}</p>
-                            <i class="icon-error_outline" v-if="list.icon"></i>
+                            <i
+                                class="icon-error_outline"
+                                v-if="list.icon"
+                                v-b-tooltip.hover
+                                :title="
+                                    ' Average time from when customer details are submitted till when they are approved / rejected. '
+                                "
+                            ></i>
                         </div>
                     </div>
                 </div>
@@ -95,7 +102,7 @@
                         <div class="card dashboard-card  sm-radius">
                             <div class="dashboard-charts">
                                 <h2 class="heading">
-                                    KYC Alters by Screening Type
+                                    KYC Alerts by Screening Type
                                 </h2>
                                 <!-- dashboard alerts report -->
                                 <div

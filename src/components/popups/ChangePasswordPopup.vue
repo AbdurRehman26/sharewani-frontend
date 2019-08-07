@@ -21,6 +21,7 @@
                                 type="password"
                                 v-model="form.oldPassword"
                                 required
+                                autocomplete="no"
                                 placeholder="Enter old password"
                             ></b-form-input>
                         </b-form-group>
@@ -36,6 +37,7 @@
                                 type="password"
                                 v-model="form.newPassword"
                                 required
+                                autocomplete="no"
                                 placeholder="Create new password"
                             ></b-form-input>
                         </b-form-group>
@@ -52,6 +54,7 @@
                                 type="password"
                                 v-model="form.confirmPassword"
                                 required
+                                autocomplete="no"
                                 placeholder="Re-enter new password"
                             ></b-form-input>
                         </b-form-group>

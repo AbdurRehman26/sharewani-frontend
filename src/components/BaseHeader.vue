@@ -61,14 +61,18 @@
             </div>
             <div class="profile-block" v-if="$route.meta.noSidebar != true">
                 <div class="profile-main">
-                    <div class="profile-image">
-                        <img
-                            :src="require('@/assets/images/profile-pic.png')"
-                        />
-                    </div>
+                    <div
+                        class="profile-image"
+                        :style="{
+                            'background-image':
+                                'url(' +
+                                require('@/assets/images/' + image + '') +
+                                ')',
+                        }"
+                    ></div>
                     <div class="profile-detail" @click="open">
                         <h4>Sammy Lawson</h4>
-                        <p>Admin</p>
+                        <p>Super Admin</p>
                         <i class="icon-caret-down"></i>
                     </div>
                     <div
@@ -154,6 +158,7 @@ export default {
         return {
             showPopover: false,
             mainMain: false,
+            image: 'profile-pic.png',
         }
     }, // End of Component > data
 

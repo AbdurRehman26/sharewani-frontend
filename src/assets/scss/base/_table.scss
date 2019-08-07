@@ -33,12 +33,11 @@
             border-top: none !important;
             outline: 0;
             &[aria-sort] {
-                position: relative;
-                cursor: pointer;
                 &:after {
                     content: '\E904';
                     font-family: 'icomoon';
                     padding-left: 8px;
+                    vertical-align: middle;
                 }
             }
             &:first-child {
@@ -149,6 +148,11 @@
             &.disabled {
                 opacity: 0.5;
                 pointer-events: none;
+                span {
+                    a {
+                        color: $grey-lite !important;
+                    }
+                }
             }
             span {
                 vertical-align: middle;
@@ -158,7 +162,7 @@
                     color: $grey-lite;
                     text-decoration: none;
                     &:last-child {
-                        margin-right: 15px;
+                        margin-right: 10px;
                     }
                     &:hover,
                     &:focus {
@@ -226,7 +230,7 @@
                         bottom: 28px !important;
                         &:before {
                             top: auto;
-                            bottom: -12px !important;
+                            bottom: -10px !important;
                             transform: rotate(180deg);
                         }
                     }
@@ -299,7 +303,7 @@
 }
 
 .table-pagination {
-    padding-top: 15px;
+    padding-top: 35px;
     .record-shown {
         display: flex;
         align-items: center;
@@ -312,6 +316,11 @@
             padding-left: 15px;
             position: relative;
             top: -4px;
+        }
+        .disable {
+            select {
+                color: $grey-medium !important;
+            }
         }
     }
     .next-previous-pagination {
@@ -327,6 +336,7 @@
             border-color: #fff;
             box-shadow: 0px 2px 3px rgba(50, 50, 93, 0.11),
                 0px 1px 3px rgba(0, 0, 0, 0.08);
+            padding: 10px 11px;
         }
         @include mobile {
             text-align: center;

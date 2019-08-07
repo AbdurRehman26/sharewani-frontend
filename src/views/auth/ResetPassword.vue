@@ -18,6 +18,7 @@
                             <b-form-input
                                 id="input-2"
                                 type="password"
+                                autocomplete="no"
                                 placeholder="Enter new password"
                             ></b-form-input>
                         </b-form-group>
@@ -29,7 +30,8 @@
                             <b-form-input
                                 id="input-2"
                                 type="password"
-                                placeholder="Re-enter your account password"
+                                autocomplete="no"
+                                placeholder="Enter confirm password"
                             ></b-form-input>
                         </b-form-group>
                         <base-button

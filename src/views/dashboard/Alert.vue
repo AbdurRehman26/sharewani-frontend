@@ -3,7 +3,7 @@
         <div class="filter-section alert-filter row-min-space">
             <div class="row">
                 <div class="col-md-12">
-                    <h2>Alert</h2>
+                    <h2>Alerts</h2>
                 </div>
                 <div class="col-md-12">
                     <div class="row">
@@ -82,7 +82,8 @@
             </div>
         </div>
         <div class="table-section table-min-width">
-            <b-table :items="items" :fields="fields">
+            <!--main table -->
+            <b-table v-if="fields.length > 0" :items="items" :fields="fields">
                 <template slot="aging" slot-scope="data">
                     <span :class="data.value[0].riskRate">
                         {{ data.value[0].name }}
@@ -104,19 +105,19 @@
                                 v-if="data.value[0].riskType == 'flag'"
                                 class="icon-flag"
                                 v-b-tooltip.hover
-                                :title="' On Baording Alert'"
+                                :title="' Trigger alert'"
                             ></i>
                             <i
                                 v-if="data.value[0].riskType == 'reload'"
                                 class="icon-rotate-inverse"
                                 v-b-tooltip.hover
-                                :title="' Periodic'"
+                                :title="' Periodic alert'"
                             ></i>
                             <i
                                 v-if="data.value[0].riskType == 'rating'"
                                 class="icon-star"
                                 v-b-tooltip.hover
-                                :title="' Trigger Alert'"
+                                :title="' Onbaording alert '"
                             ></i>
                         </router-link>
                     </div>
@@ -192,8 +193,18 @@
                     </div>
                 </template>
             </b-table>
+            <!-- When data is loading -->
+            <base-table-spinner v-if="items.length == 0"></base-table-spinner>
+            <!-- When record not found -->
+            <base-no-record-found
+                v-if="items.length == 0"
+            ></base-no-record-found>
         </div>
-        <pagination></pagination>
+        <pagination
+            totalRecords="Showing 1 to 10 of 42 records"
+            :showRecords="recordShow"
+            v-if="items.length > 0"
+        ></pagination>
         <initiate-review-popup></initiate-review-popup>
     </div>
 </template>
@@ -245,9 +256,9 @@ export default {
             filterByAlert: null,
             filterAlertOptions: [
                 { text: 'Filter by alert type', value: null },
-                'On-boarding Alert',
-                'Trigger Alert',
-                'Periodic Alert',
+                'Onboarding alert',
+                'Periodic alert',
+                'Trigger alert',
             ],
             filterByRiskLevel: null,
             filterRiskLevelOptions: [
@@ -255,6 +266,7 @@ export default {
                 'High Risk',
                 'Medium Risk',
                 'Low Risk',
+                'Sanctioned Risk',
             ],
             filterByAging: null,
             filterAgingOptions: [
@@ -263,6 +275,13 @@ export default {
                 '31-60 days',
                 '61-90 days',
                 '91 days+',
+            ],
+            recordShow: [
+                { text: 'Show 10 records', value: null },
+                { text: 'Show 20 records', value: 20 },
+                { text: 'Show 30 records', value: 20 },
+                { text: 'Show 40 records', value: 20 },
+                { text: 'Show 50 records', value: 20 },
             ],
         }
     }, // End of Component > data

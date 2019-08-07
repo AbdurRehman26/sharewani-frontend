@@ -50,6 +50,8 @@
                         :class="[
                             $route.meta.responsiveMenuItem == true
                                 ? 'router-link-exact-active'
+                                : '' || listDropdown == true
+                                ? 'router-link-exact-active'
                                 : '',
                         ]"
                     >
@@ -92,7 +94,6 @@
             </div>
             <div class="config-card-block">
                 <router-view @item-length="tableItemLength" />
-                <pagination v-if="tableItemData > 9"></pagination>
             </div>
         </div>
 
@@ -100,12 +101,11 @@
 
         <div v-if="tabData == 2">
             <div class="row">
-                <div class="col-md-10">
-                    <div class="config-card-block radius-10px">
+                <div class="col-md-12">
+                    <div class="config-card-block card sm-radius">
                         <upload-file></upload-file>
                     </div>
                 </div>
-                <div class="col-md-2"></div>
             </div>
         </div>
     </div>
@@ -114,13 +114,11 @@
 <script>
 import { mapGetters } from 'vuex'
 import cardData from '@/components/CardData.vue'
-import pagination from '@/components/Pagination.vue'
 import uploadFile from '@/components/UploadFile.vue'
 import { directive as onClickOutside } from 'vue-on-click-outside'
 export default {
     components: {
         cardData,
-        pagination,
         uploadFile,
     },
 
@@ -210,8 +208,8 @@ export default {
                     text: 'Country Type',
                 },
                 {
-                    value: '/configuration/screening-data/indentification',
-                    text: 'Indentification ',
+                    value: '/configuration/screening-data/identification',
+                    text: 'Identification Type',
                 },
                 {
                     value: '/configuration/screening-data/relationship-type',

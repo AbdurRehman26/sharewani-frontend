@@ -31,6 +31,8 @@
                     :class="[
                         $route.meta.responsiveMenuItem == true
                             ? 'router-link-exact-active'
+                            : '' || listDropdown == true
+                            ? 'router-link-exact-active'
                             : '',
                     ]"
                 >
@@ -70,18 +72,14 @@
         </div>
         <div class="config-card-block">
             <router-view @item-length="tableItemLength" />
-            <pagination v-if="tableItemData > 9"></pagination>
         </div>
     </div>
 </template>
 
 <script>
-import pagination from '@/components/Pagination.vue'
 import { directive as onClickOutside } from 'vue-on-click-outside'
 export default {
-    components: {
-        pagination,
-    },
+    components: {},
 
     directives: {
         onClickOutside: onClickOutside,
@@ -166,6 +164,15 @@ export default {
                 {
                     value: '/configuration/idenfo-engine/purpose-of-action',
                     text: 'Purpose of Action',
+                },
+                {
+                    anchorLink: '/configuration/idenfo-engine/gender',
+                    menuLabel: 'Gender',
+                },
+                {
+                    anchorLink:
+                        '/configuration/idenfo-engine/risk-level-review',
+                    menuLabel: 'Risk Level Review',
                 },
             ],
         }
