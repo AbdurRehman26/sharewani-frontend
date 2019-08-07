@@ -19,7 +19,7 @@ export default {
             player: '',
             options: {
                 controls: true,
-                autoplay: true,
+                autoplay: false,
                 fluid: true,
                 loop: false,
                 width: 500,
