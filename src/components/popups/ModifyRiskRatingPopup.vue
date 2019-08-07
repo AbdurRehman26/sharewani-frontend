@@ -120,6 +120,7 @@ export default {
                 'High Risk',
                 'Medium Risk',
                 'Low Risk',
+                'Sanctioned',
             ],
 
             period: [

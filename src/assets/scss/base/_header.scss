@@ -137,9 +137,12 @@ header {
                 position: absolute;
                 left: 0px;
                 height: 52px;
+                width: 52px;
                 margin: auto;
                 top: auto;
+                border-radius: 100px;
                 animation: 0;
+                overflow: hidden;
                 display: flex;
                 align-items: center;
                 justify-content: center;
