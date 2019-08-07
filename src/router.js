@@ -673,15 +673,46 @@ export default new Router({
                         title: 'Configuration | Manual Review',
                     },
                 },
+
                 {
                     path: '/configuration/form-builder/',
-                    name: 'branding',
+                    name: 'screening-data',
                     component: () =>
-                        import(/* webpackChunkName: "builder" */ './views/configuration/FormBuilder.vue'),
-                    meta: {
-                        title: 'Configuration | Form Builder',
-                    },
+                        import(/* webpackChunkName: "customer" */ './views/configuration/form-builder/Main.vue'),
+                    children: [
+                        {
+                            path: '/',
+                            name: 'gender',
+                            component: () =>
+                                import(/* webpackChunkName: "gender" */ './views/configuration/form-builder/SetupProfile.vue'),
+                            meta: {
+                                title:
+                                    'Configuration | Form Builder | Setup Profile',
+                            },
+                        },
+                        {
+                            path: '/configuration/form-builder/setup-profile',
+                            name: 'gender',
+                            component: () =>
+                                import(/* webpackChunkName: "gender" */ './views/configuration/form-builder/SetupProfile.vue'),
+                            meta: {
+                                title:
+                                    'Configuration | Form Builder | Setup Profile',
+                            },
+                        },
+                        {
+                            path: '/configuration/form-builder/account-info',
+                            name: 'gender',
+                            component: () =>
+                                import(/* webpackChunkName: "gender" */ './views/configuration/form-builder/AccountInfo.vue'),
+                            meta: {
+                                title:
+                                    'Configuration | Form Builder | Account Information',
+                            },
+                        },
+                    ],
                 },
+
                 {
                     path: '/configuration/branding/',
                     name: 'branding',
