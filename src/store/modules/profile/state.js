@@ -788,7 +788,7 @@ export default {
                     uploadDate: 'Uploaded June 1, 2019',
                 },
                 {
-                    image: 'nic.png',
+                    image: 'id-card.png',
                     thumbnail: 'jpg.svg',
                     title: 'ID Card',
                     type: 'card',
