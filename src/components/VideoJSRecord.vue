@@ -21,7 +21,7 @@ export default {
                 controls: true,
                 autoplay: true,
                 fluid: true,
-                loop: true,
+                loop: false,
                 width: 500,
                 height: 281,
                 controlBar: {
@@ -33,6 +33,7 @@ export default {
                         audio: false,
                         video: true,
                         debug: true,
+                        maxLength: 10,
                     },
                 },
             },

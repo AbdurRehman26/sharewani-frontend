@@ -115,6 +115,7 @@ export default {
                     'Register Customer',
                     'KYC Status Investigation & Review',
                     'Manually Overwrite Verification Status',
+                    'Open Alert Against Customers',
                 ],
 
                 configurations: [

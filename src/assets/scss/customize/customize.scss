@@ -2030,6 +2030,48 @@ a {
     }
 }
 
+.video-play {
+    &.video-recorded {
+        i {
+            &.icon-record {
+                &:after {
+                    content: '\E943';
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                    color: #fff;
+                    font-family: icomoon;
+                    font-size: 20px;
+                    top: -36px;
+                    bottom: 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+            &.path3 {
+                &:before {
+                    display: none;
+                }
+            }
+            &.path2 {
+                &:before {
+                    color: transparent;
+                }
+            }
+            &.path2 {
+                &:before {
+                    color: $success;
+                }
+            }
+        }
+        p {
+            color: $success;
+        }
+    }
+}
+
 .customer-last-review {
     .card-body {
         padding: 0;
@@ -2116,5 +2158,26 @@ a {
     img {
         max-width: 78%;
         display: inline-block;
+    }
+}
+
+.timer-countdown {
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 27px;
+    font-family: $font_medium;
+    font-size: 1rem;
+    color: $danger;
+}
+
+.vjs-control-bar {
+    background-color: transparent !important;
+
+    .vjs-current-time-display,
+    .vjs-icon-placeholder,
+    .vjs-time-control,
+    .vjs-duration-display {
+        display: none !important;
     }
 }
