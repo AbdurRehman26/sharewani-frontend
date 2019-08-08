@@ -348,7 +348,7 @@
                         <div class="col-md-4">
                             <b-form-group
                                 id="input-group-21"
-                                label="Expirty Date"
+                                label="Expiry Date"
                                 label-for="expiredate"
                             >
                                 <div class="form-group ">
