@@ -173,39 +173,32 @@ export default {
                 {
                     id: 1,
                     icon: 'icon-heading',
-                    label: 'Basic Information',
+                    label: 'Account Information',
+                    popup: '',
+                    status: 'disabled',
+                },
+                {
+                    id: 5,
+                    icon: 'icon-select-field',
+                    label: 'Purpose of Action',
+                    popup: '',
+                    status: 'editable',
+                },
+                {
+                    id: 5,
+                    icon: 'icon-select-field',
+                    label: 'Product Type',
                     popup: '',
                     status: 'editable',
                 },
                 {
                     id: 2,
                     icon: 'icon-text-field',
-                    label: 'First Name',
-                    popup: '',
-                    status: 'disabled',
-                },
-                {
-                    id: 2,
-                    icon: 'icon-text-field',
-                    label: 'Middle Name',
-                    popup: '',
-                    status: 'disabled',
-                },
-                {
-                    id: 2,
-                    icon: 'icon-text-field',
-                    label: 'Last Name',
-                    popup: '',
-                    status: 'disabled',
-                },
-                {
-                    id: 2,
-                    icon: 'icon-text-field',
-                    label: 'Father Name',
+                    label: 'Initial Balance',
                     popup: '',
                     status: 'editable',
                 },
-                {
+                /*                {
                     id: 2,
                     icon: 'icon-text-field',
                     label: 'Next of Kin',
@@ -232,7 +225,7 @@ export default {
                     label: 'Checkbox Group',
                     popup: '',
                     status: 'editable',
-                },
+                },*/
             ],
         }
     }, // End of Component > data
