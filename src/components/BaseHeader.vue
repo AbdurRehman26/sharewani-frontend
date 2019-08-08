@@ -8,7 +8,11 @@
             <span></span>
             <span></span>
         </div>
-        <div @click="mainMain ^= true" class="responsive-header-menu">
+        <div
+            @click="mainMain ^= true"
+            v-if="menuListing.length > 0"
+            class="responsive-header-menu"
+        >
             <span></span>
             <span></span>
             <span></span>

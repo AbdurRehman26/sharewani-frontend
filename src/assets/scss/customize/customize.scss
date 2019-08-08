@@ -223,6 +223,12 @@ a {
 
 .brand-logo-area {
     max-width: 570px;
+    .brand-logo {
+        @include mobile {
+            margin-top: 0px !important;
+            margin-bottom: 1.5rem;
+        }
+    }
 }
 
 .brand-color-area {
@@ -791,6 +797,9 @@ a {
         &.status-view {
             margin-right: 8px;
         }
+        @include mobile {
+            margin-top: 0px;
+        }
     }
 }
 .system-logs-table {
@@ -895,9 +904,12 @@ a {
         }
     }
     @include mobile {
-        width: 850px;
+        min-width: 1380px;
         th {
             width: 300px;
+            &.profile-absolute {
+                width: 80px;
+            }
         }
     }
 }
@@ -969,6 +981,16 @@ a {
                         }
                     }
                 }
+                @include mobile {
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+    @include mobile {
+        .photo-section {
+            img {
+                height: 100%;
             }
         }
     }
@@ -992,6 +1014,16 @@ a {
 
 .w-200px {
     width: 200px;
+}
+
+#add-select-field-popup {
+    .row-min-space {
+        .col-md-6 {
+            @include mobile {
+                width: 50%;
+            }
+        }
+    }
 }
 
 .show-record-video {
@@ -2259,6 +2291,14 @@ a {
             right: 36px;
             left: auto;
             top: 36px;
+            @include mobile {
+                position: absolute;
+                right: 0;
+                left: 0;
+                top: 20px;
+                bottom: auto;
+                margin-bottom: 20px;
+            }
         }
         .profile-pic {
             width: 42px;
@@ -2330,6 +2370,9 @@ a {
                 }
             }
         }
+    }
+    @include mobile {
+        padding-top: 80px;
     }
 }
 

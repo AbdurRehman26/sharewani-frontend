@@ -322,6 +322,12 @@
                 color: $grey-medium !important;
             }
         }
+        @include mobile {
+            flex-direction: column;
+            fieldset {
+                width: 100%;
+            }
+        }
     }
     .next-previous-pagination {
         text-align: right;

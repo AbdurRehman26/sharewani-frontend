@@ -155,7 +155,7 @@
 			.legend-value {
 				padding-right: 5px;
 				@include windowS {
-					font-size: 0.75rem;
+					font-size: 0.6rem;
 					margin-top: 3px;
 				}
 			}
@@ -202,6 +202,10 @@
 	display: inline-block;
 	vertical-align: middle;
 	margin-right: 10px;
+	@include mobileS {
+		width: 15px;
+		height: 15px;
+	}
 }
 
 .legend-title {
@@ -210,6 +214,11 @@
 	margin-right: 10px;
 	@include windowS {
 		font-size: 0.75rem;
+	}
+	@include mobileS {
+		font-size: 0.6rem;
+		margin-right: 4px;
+		width: 59px;
 	}
 }
 
@@ -222,6 +231,24 @@
 	@include windowS {
 		font-size: 0.75rem;
 		margin-top: 3px;
+	}
+	@include mobileS {
+		font-size: 0.55rem;
+	}
+}
+
+.config-card-block {
+	.table {
+		@include mobileS {
+			min-width: 660px;
+			tbody {
+				td {
+					&.two-list {
+						width: 180px;
+					}
+				}
+			}
+		}
 	}
 }
 
