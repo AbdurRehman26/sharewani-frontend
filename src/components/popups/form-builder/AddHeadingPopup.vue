@@ -2,7 +2,7 @@
     <div>
         <b-modal
             id="add-heading-popup"
-            title="Add Heading"
+            :title="title"
             size="sm"
             okTitle="Add"
             cancelTitle="Cancel"
@@ -34,6 +34,28 @@
 
 <script>
 export default {
+    /*
+    |--------------------------------------------------------------------------
+    | Component > props
+    |--------------------------------------------------------------------------
+    */
+    props: {
+        /**
+         * Value to determine the current compose mode which
+         * varies between 'add' and 'edit'
+         */
+        title: {
+            type: String,
+            default: 'Add Heading',
+        },
+    }, // End of Component > props
+
+    /*
+    |--------------------------------------------------------------------------
+    | Component > data
+    |--------------------------------------------------------------------------
+    */
+
     data() {
         return {
             form: {

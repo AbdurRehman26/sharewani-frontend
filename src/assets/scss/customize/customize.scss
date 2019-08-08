@@ -2182,26 +2182,6 @@ a {
     }
 }
 
-.icon-manual-alert {
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    &:before {
-        content: '';
-        background-image: url('./assets/images/manual-alert.svg');
-        background-repeat: no-repeat;
-        background-size: 20px auto;
-        display: block;
-        width: 20px;
-        height: 20px;
-    }
-}
-
 .manual-alert-color {
     fill: red !important;
 }

@@ -2,7 +2,7 @@
     <div>
         <b-modal
             id="add-select-field-popup"
-            title="Add Text Field"
+            :title="title"
             size="sm"
             okTitle="Create"
             cancelTitle="Cancel"
@@ -107,6 +107,28 @@
 
 <script>
 export default {
+    /*
+    |--------------------------------------------------------------------------
+    | Component > props
+    |--------------------------------------------------------------------------
+    */
+    props: {
+        /**
+         * Value to determine the current compose mode which
+         * varies between 'add' and 'edit'
+         */
+        title: {
+            type: String,
+            default: 'Add Text Field',
+        },
+    }, // End of Component > props
+
+    /*
+    |--------------------------------------------------------------------------
+    | Component > data
+    |--------------------------------------------------------------------------
+    */
+
     data() {
         return {
             form: {

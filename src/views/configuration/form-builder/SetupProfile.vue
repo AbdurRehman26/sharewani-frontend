@@ -28,7 +28,7 @@
                                 <!-- settings icon -->
                                 <i
                                     class="action-icons icon-settings"
-                                    @click="openPopup(field.id)"
+                                    @click="openPopup(field.id, 'modify')"
                                 ></i>
                                 <!-- field locked icon -->
                                 <i
@@ -58,7 +58,7 @@
                             v-for="(field, index) in fieldType"
                             :key="index"
                         >
-                            <div @click="openPopup(field.id)">
+                            <div @click="openPopup(field.id, 'add')">
                                 <span><i :class="field.icon"></i></span>
                                 <p>{{ field.label }}</p>
                             </div>
@@ -67,9 +67,9 @@
                 </div>
             </div>
         </div>
-        <add-heading-popup></add-heading-popup>
-        <add-text-field-popup></add-text-field-popup>
-        <add-select-field-popup></add-select-field-popup>
+        <add-heading-popup :title="titleChange"></add-heading-popup>
+        <add-text-field-popup :title="titleChange"></add-text-field-popup>
+        <add-select-field-popup :title="titleChange"></add-select-field-popup>
         <remove-field-popup></remove-field-popup>
     </div>
 </template>
@@ -112,6 +112,7 @@ export default {
     */
     data() {
         return {
+            titleChange: null,
             navWidth: true,
             listVal: null,
             listDropdown: false,
@@ -250,14 +251,32 @@ export default {
     |--------------------------------------------------------------------------
     */
     methods: {
-        openPopup(val) {
+        openPopup(val, val2) {
             if (val == 1) {
+                if (val2 == 'add') {
+                    this.titleChange = 'Add Heading'
+                }
+                if (val2 == 'modify') {
+                    this.titleChange = 'Modify Heading'
+                }
                 this.$bvModal.show('add-heading-popup')
             }
             if (val == 2 || val == 3 || val == 4) {
+                if (val2 == 'add') {
+                    this.titleChange = 'Add Text Field'
+                }
+                if (val2 == 'modify') {
+                    this.titleChange = 'Modify Text Field'
+                }
                 this.$bvModal.show('add-text-field-popup')
             }
             if (val == 5 || val == 6 || val == 7) {
+                if (val2 == 'add') {
+                    this.titleChange = 'Add Text Field'
+                }
+                if (val2 == 'modify') {
+                    this.titleChange = 'Modify Text Field'
+                }
                 this.$bvModal.show('add-select-field-popup')
             }
         },
