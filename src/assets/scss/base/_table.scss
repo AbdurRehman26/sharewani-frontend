@@ -104,6 +104,11 @@
                     &:focus {
                         color: $secondary;
                     }
+                    i {
+                        &.icon-manual-alert {
+                            font-size: 1.1rem;
+                        }
+                    }
                 }
             }
             &:first-child {
