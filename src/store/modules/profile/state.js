@@ -399,7 +399,52 @@ export default {
 
             overrideList: [
                 {
-                    risk_factor_override: 'Sanction Hit',
+                    risk_factor_override: 'Non-Resident',
+                    override_to: 'High Risk',
+                    risk_level: [
+                        {
+                            icon: 'icon-high-risk',
+                            label: 'High Risk',
+                            cssClass: 'high-risk',
+                        },
+                    ],
+                },
+                {
+                    risk_factor_override: 'Residence Country is Sanctioned',
+                    override_to: 'High Risk',
+                    risk_level: [
+                        {
+                            icon: 'icon-low-risk',
+                            label: 'Low Risk',
+                            cssClass: 'low-risk',
+                        },
+                    ],
+                },
+                {
+                    risk_factor_override: 'Nationality Country is Sanctioned',
+                    override_to: 'High Risk',
+                    risk_level: [
+                        {
+                            icon: 'icon-low-risk',
+                            label: 'Low Risk',
+                            cssClass: 'low-risk',
+                        },
+                    ],
+                },
+                {
+                    risk_factor_override:
+                        'Contact No. Code Country is Sanctioned',
+                    override_to: 'High Risk',
+                    risk_level: [
+                        {
+                            icon: 'icon-low-risk',
+                            label: 'Low Risk',
+                            cssClass: 'low-risk',
+                        },
+                    ],
+                },
+                {
+                    risk_factor_override: 'Sanctioned Hit',
                     override_to: 'Sanctioned',
                     risk_level: [
                         {
@@ -411,12 +456,23 @@ export default {
                 },
                 {
                     risk_factor_override: 'Document Verification',
-                    override_to: 'High',
+                    override_to: 'High Risk',
                     risk_level: [
                         {
                             icon: 'icon-low-risk',
                             label: 'Low Risk',
                             cssClass: 'low-risk',
+                        },
+                    ],
+                },
+                {
+                    risk_factor_override: 'Manual Override',
+                    override_to: 'N/A',
+                    risk_level: [
+                        {
+                            icon: 'icon-high-risk',
+                            label: 'High Risk',
+                            cssClass: 'high-risk',
                         },
                     ],
                 },
