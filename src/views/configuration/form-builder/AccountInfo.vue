@@ -176,7 +176,7 @@ export default {
                     icon: 'icon-heading',
                     label: 'Account Information',
                     popup: '',
-                    status: 'disabled',
+                    status: 'editable',
                 },
                 {
                     id: 5,
@@ -195,7 +195,29 @@ export default {
                 {
                     id: 2,
                     icon: 'icon-text-field',
+                    label:
+                        'Maximum Upper Limit of Single Credit Expected  In a Month ',
+                    popup: '',
+                    status: 'editable',
+                },
+                {
+                    id: 2,
+                    icon: 'icon-text-field',
                     label: 'Initial Balance',
+                    popup: '',
+                    status: 'editable',
+                },
+                {
+                    id: 2,
+                    icon: 'icon-text-field',
+                    label: 'Expected Monthly Credit Turnover',
+                    popup: '',
+                    status: 'editable',
+                },
+                {
+                    id: 2,
+                    icon: 'icon-text-field',
+                    label: 'Gross Income Of Client',
                     popup: '',
                     status: 'editable',
                 },

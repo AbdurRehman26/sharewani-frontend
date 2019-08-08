@@ -339,7 +339,7 @@ export default {
                     icon: 'icon-calendar',
                     label: 'Expiry Date',
                     popup: '',
-                    status: 'disabled',
+                    status: 'editable',
                 },
             ],
         }
