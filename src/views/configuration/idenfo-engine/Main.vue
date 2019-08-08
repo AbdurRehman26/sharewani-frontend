@@ -1,7 +1,7 @@
 <template>
     <div class="wrap-content">
         <div class="config-list" ref="listingArea">
-            <div v-show="listVal <= 1100" class="config-list-dropdown">
+            <div v-show="listVal <= 850" class="config-list-dropdown">
                 <b-form-group
                     id="input-group-5"
                     label="Idenfo Engine"
@@ -17,7 +17,7 @@
                     </b-form-select>
                 </b-form-group>
             </div>
-            <ul v-show="listVal >= 1100 && listVal <= 1500">
+            <ul v-show="listVal >= 850 && listVal <= 1500">
                 <li
                     v-for="(list, index) in menuListing.slice(0, 8)"
                     :key="index"
@@ -166,13 +166,12 @@ export default {
                     text: 'Purpose of Action',
                 },
                 {
-                    anchorLink: '/configuration/idenfo-engine/gender',
-                    menuLabel: 'Gender',
+                    value: '/configuration/idenfo-engine/gender',
+                    text: 'Gender',
                 },
                 {
-                    anchorLink:
-                        '/configuration/idenfo-engine/risk-level-review',
-                    menuLabel: 'Risk Level Review',
+                    value: '/configuration/idenfo-engine/risk-level-review',
+                    text: 'Risk Level Review',
                 },
             ],
         }

@@ -1,5 +1,5 @@
 <template>
-    <div class="customer-profile">
+    <div class="customer-profile registration-customer-form">
         <div class="content-area">
             <base-header
                 @sidemenu="$emit('responsiveSideBar')"

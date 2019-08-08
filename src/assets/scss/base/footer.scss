@@ -37,5 +37,16 @@
                 }
             }
         }
+        @include mobile {
+            padding-left: 0px;
+            li {
+                &:first-child {
+                    margin-bottom: 10px;
+                    &:after {
+                        display: none;
+                    }
+                }
+            }
+        }
     }
 }

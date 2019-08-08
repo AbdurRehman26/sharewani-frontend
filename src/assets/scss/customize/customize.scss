@@ -2332,3 +2332,35 @@ a {
         }
     }
 }
+
+.registration-customer-form {
+    .filter-section {
+        h2 {
+            @include mobile {
+                margin-bottom: 0;
+                font-size: 1.3rem;
+            }
+        }
+    }
+}
+
+.registration-customer-form {
+    .profile-block {
+        position: relative;
+        top: -13px;
+        @include mobile {
+            top: initial;
+            position: absolute;
+        }
+    }
+}
+
+.form-registration {
+    .filter-section {
+        .col-md-8 {
+            @include mobile {
+                text-align: center !important;
+            }
+        }
+    }
+}
