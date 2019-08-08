@@ -74,16 +74,16 @@ export default new Router({
             },
         },
         {
-            path: '/dashboard',
+            path: '/insights',
             name: 'dashboard',
             component: () =>
-                import(/* webpackChunkName: "dashboard-alerts" */ '@/views/dashboard/Main.vue'),
+                import(/* webpackChunkName: "dashboard-alerts" */ '@/views/insights/Main.vue'),
             children: [
                 {
                     path: '/',
                     name: 'dashboard-alerts',
                     component: () =>
-                        import(/* webpackChunkName: "dashboard-alerts" */ '@/views/dashboard/Alert.vue'),
+                        import(/* webpackChunkName: "dashboard-alerts" */ '@/views/insights/Alert.vue'),
                     meta: {
                         title: 'Insights | Alert',
                     },
@@ -92,16 +92,16 @@ export default new Router({
                     path: 'alerts',
                     name: 'dashboard-alerts',
                     component: () =>
-                        import(/* webpackChunkName: "dashboard-alerts" */ '@/views/dashboard/Alert.vue'),
+                        import(/* webpackChunkName: "dashboard-alerts" */ '@/views/insights/Alert.vue'),
                     meta: {
                         title: 'Insights | Alert',
                     },
                 },
                 {
-                    path: 'activity',
+                    path: 'activity-dashboard',
                     name: 'dashboard-activity-page',
                     component: () =>
-                        import(/* webpackChunkName: "dashboard-activity" */ '@/views/dashboard/Activity.vue'),
+                        import(/* webpackChunkName: "dashboard-activity" */ '@/views/insights/Activity.vue'),
                     meta: {
                         title: 'Insights | Activity',
                     },
@@ -110,7 +110,7 @@ export default new Router({
                     path: 'customer-statistics',
                     name: 'dashboard-reporting-page',
                     component: () =>
-                        import(/* webpackChunkName: "dashboard-reporting" */ '@/views/dashboard/Statistics.vue'),
+                        import(/* webpackChunkName: "dashboard-reporting" */ '@/views/insights/Statistics.vue'),
                     meta: {
                         title: 'Insights | Customer Statistics',
                     },

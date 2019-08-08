@@ -69,7 +69,7 @@
             </b-table>
         </div>
         <pagination
-            totalRecords="Showing 1 to 7 of 7 records"
+            totalRecords="Showing 1 to 5 of 5 records"
             nextBtnDisable
             selectPaginationDisable
             :showRecords="recordShow"

@@ -41,7 +41,7 @@
                         btnType="submit"
                         btnVariant="primary"
                         class=""
-                        @click="$router.push('/dashboard')"
+                        @click="$router.push('/insights')"
                     ></base-button>
                     <router-link
                         to="auth/forgot-password"
