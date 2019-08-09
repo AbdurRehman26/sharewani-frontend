@@ -511,6 +511,9 @@ a {
         margin-top: 0;
         margin-bottom: 20px;
 
+        @include windowS {
+            font-size: 22px;
+        }
         @include tablet {
             font-size: 20px;
         }
@@ -780,6 +783,14 @@ a {
                                 &:hover {
                                     text-decoration: underline;
                                 }
+                            }
+                            @include windowS {
+                                font-size: 0.78rem !important;
+                            }
+                        }
+                        span {
+                            @include windowS {
+                                font-size: 0.78rem !important;
                             }
                         }
                         @include mobile {
@@ -1471,6 +1482,9 @@ a {
             font-family: $font_medium;
             font-size: 0.875rem !important;
             margin-bottom: 0;
+            @include windowS {
+                font-size: 0.8rem !important;
+            }
         }
     }
     @include mobile {
@@ -1488,6 +1502,14 @@ a {
     hr {
         margin: 30px 0 25px;
         border-color: $border-color;
+    }
+}
+
+.win-small-full {
+    @include windowS {
+        max-width: 100%;
+        flex: 0 0 100%;
+        margin-bottom: 20px;
     }
 }
 
@@ -2112,14 +2134,62 @@ a {
         flex: 0 0 80%;
         max-width: 80%;
     }
-    @include mobile {
+    @include tabletF {
         .col-md-3 {
             flex: 0 0 100%;
             max-width: 100%;
         }
         .col-md-9 {
-            flex: 0 0 100%;
-            max-width: 100%;
+            flex: 0 0 100% !important;
+            max-width: 100% !important;
+        }
+        .customer-profile {
+            img {
+                max-width: 550px;
+                min-width: 0px;
+                margin: auto;
+            }
+        }
+    }
+}
+
+.customer-profile {
+    .wrap-content {
+        .col-md-3 {
+            @include tabletF {
+                flex: 50%;
+                max-width: 50%;
+                h2 {
+                    // font-size: 1rem;
+                }
+                &.profile-image-section {
+                    flex: 100%;
+                    max-width: 100%;
+                }
+            }
+        }
+        .col-md-9 {
+            @include tabletF {
+                flex: 0 0 100%;
+                max-width: 100%;
+                position: unset;
+                .col-md-3 {
+                    text-align: center !important;
+                    flex: 33%;
+                    max-width: 33%;
+                    &.go-back-profile {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        flex: 50%;
+                        max-width: 50%;
+                        text-align: right !important;
+                    }
+                }
+                .btn-text {
+                    // font-size: 0.6rem;
+                }
+            }
         }
     }
 }
@@ -2156,12 +2226,21 @@ a {
     }
 }
 
+.alert-filter {
+    .col-md-9 {
+        @include windowS {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+}
+
 .tabs-bar {
-    @include tablet {
+    @include windowS {
         position: absolute;
         top: auto;
-        bottom: 60px;
-        right: -74px;
+        bottom: 55px;
+        right: -77px;
         flex: 0 0 45%;
         max-width: 45%;
     }
