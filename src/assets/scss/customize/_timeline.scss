@@ -124,7 +124,8 @@
                 display: flex;
                 padding: 32px;
                 position: relative;
-
+                -webkit-box-shadow: 0px 0.5px 0px rgba(50, 50, 93, 0.2);
+                box-shadow: 0px 0.5px 0px rgba(50, 50, 93, 0.2);
                 .tags-section {
                     margin-top: 12px;
                     display: inline-block;

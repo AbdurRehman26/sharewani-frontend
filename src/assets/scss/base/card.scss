@@ -3,6 +3,8 @@
     border-radius: 16px;
     padding: 32px;
     margin: 0 auto;
+    -webkit-box-shadow: 0px 0.5px 0px rgba(50, 50, 93, 0.2);
+    box-shadow: 0px 0.5px 0px rgba(50, 50, 93, 0.2);
     &.sm-radius,
     &.sm {
         border-radius: 8px;
