@@ -27,7 +27,7 @@
                                             <span>Go back</span>
                                         </router-link>
                                     </div>
-                                    <div class="col-md-3">
+                                    <div class="col-md-3 text-center">
                                         <base-button
                                             v-b-modal.cancel-review-process-popup
                                             btnLabel="Cancel Review Process"
