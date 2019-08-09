@@ -2205,12 +2205,43 @@ a {
     }
 }
 
+.form-builder-area {
+    @include tablet {
+        .col-md-8 {
+            flex: 0 0 60%;
+            max-width: 60%;
+        }
+        .col-md-4 {
+            flex: 0 0 40%;
+            max-width: 40%;
+        }
+        .form-field-types {
+            p {
+                max-width: 170px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+        }
+    }
+    @include mobile {
+        .col-md-8 {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+        .col-md-4 {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+}
+
 .customer-profile {
     .wrap-content {
         .col-md-3 {
             @include tabletF {
-                flex: 50% !important;
-                max-width: 50% !important;
+                // flex: 50% !important;
+                // max-width: 50% !important;
                 h2 {
                     // font-size: 1rem;
                 }
@@ -2218,6 +2249,10 @@ a {
                     flex: 100%;
                     max-width: 100%;
                 }
+            }
+            @include mobile {
+                flex: 100% !important;
+                max-width: 100% !important;
             }
         }
         .col-md-9 {
