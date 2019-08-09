@@ -12,11 +12,18 @@
                 <div class="video-record">
                     <div class="show-record-video">
                         <video-js-record
-                            @recordingStarted="showVideo = true"
-                            @recordingEnded="showVideo = false"
+                            @recordingStarted="onVideoRecording"
+                            @recordingEnded="onRecordingEnded"
                         ></video-js-record>
                     </div>
-                    <div @click="showVideo ^= true" class="video-play">
+                    <div
+                        :class="showVideo == true ? 'video-recorded' : ''"
+                        @click="showVideo ^= true"
+                        class="video-play"
+                    >
+                        <span v-if="timeShow" class="timer-countdown">{{
+                            countDown
+                        }}</span>
                         <i class="icon-record">
                             <i class="path1"></i>
                             <i class="path2"></i>
@@ -30,6 +37,7 @@
                     btnType="submit"
                     btnVariant="primary"
                     btnLabel="CONTINUE"
+                    :class="showVideo == false ? 'disable' : ''"
                     @preventFunction="linking()"
                 ></base-button>
             </div>
@@ -66,7 +74,9 @@ export default {
     */
     data() {
         return {
+            countDown: 10,
             showVideo: false,
+            timeShow: false,
         }
     }, // End of Component > data
 
@@ -88,6 +98,24 @@ export default {
                 this.$router.push('/public-registration/setup-profile')
             } else {
                 this.$router.push('/register-customer/setup-profile')
+            }
+        },
+        onVideoRecording() {
+            this.timeShow = true
+            this.showVideo = false
+            this.countDownTimer()
+        },
+        onRecordingEnded() {
+            this.showVideo = true
+            this.timeShow = false
+        },
+
+        countDownTimer() {
+            if (this.countDown > 0) {
+                setTimeout(() => {
+                    this.countDown -= 1
+                    this.countDownTimer()
+                }, 1000)
             }
         },
     }, // End of Component > methods

@@ -28,7 +28,7 @@
                                 <!-- settings icon -->
                                 <i
                                     class="action-icons icon-settings"
-                                    @click="openPopup(field.id)"
+                                    @click="openPopup(field.id, 'modify')"
                                 ></i>
                                 <!-- field locked icon -->
                                 <i
@@ -58,7 +58,7 @@
                             v-for="(field, index) in fieldType"
                             :key="index"
                         >
-                            <div @click="openPopup(field.id)">
+                            <div @click="openPopup(field.id, 'add')">
                                 <span><i :class="field.icon"></i></span>
                                 <p>{{ field.label }}</p>
                             </div>
@@ -67,9 +67,9 @@
                 </div>
             </div>
         </div>
-        <add-heading-popup></add-heading-popup>
-        <add-text-field-popup></add-text-field-popup>
-        <add-select-field-popup></add-select-field-popup>
+        <add-heading-popup :title="titleChange"></add-heading-popup>
+        <add-text-field-popup :title="titleChange"></add-text-field-popup>
+        <add-select-field-popup :title="titleChange"></add-select-field-popup>
         <remove-field-popup></remove-field-popup>
     </div>
 </template>
@@ -112,6 +112,7 @@ export default {
     */
     data() {
         return {
+            titleChange: null,
             navWidth: true,
             listVal: null,
             listDropdown: false,
@@ -199,20 +200,6 @@ export default {
                     status: 'disabled',
                 },
                 {
-                    id: 2,
-                    icon: 'icon-text-field',
-                    label: 'Father Name',
-                    popup: '',
-                    status: 'editable',
-                },
-                {
-                    id: 2,
-                    icon: 'icon-text-field',
-                    label: 'Next of Kin',
-                    popup: '',
-                    status: 'editable',
-                },
-                {
                     id: 6,
                     icon: 'icon-radio',
                     label: 'Gender',
@@ -227,11 +214,132 @@ export default {
                     status: 'disabled',
                 },
                 {
+                    id: 5,
+                    icon: 'icon-select-field',
+                    label: 'Nationality',
+                    popup: '',
+                    status: 'editable',
+                },
+                {
+                    id: 5,
+                    icon: 'icon-select-field',
+                    label: 'Country Of Residence',
+                    popup: '',
+                    status: 'editable',
+                },
+                /*                {
                     id: 7,
                     icon: 'icon-checkbox',
                     label: 'Checkbox Group',
                     popup: '',
                     status: 'disabled',
+                },*/
+                {
+                    id: 1,
+                    icon: 'icon-heading',
+                    label: 'Contact Information',
+                    popup: '',
+                    status: 'editable',
+                },
+                {
+                    id: 2,
+                    icon: 'icon-text-field',
+                    label: 'Address',
+                    popup: '',
+                    status: 'editable',
+                },
+                {
+                    id: 5,
+                    icon: 'icon-select-field',
+                    label: 'State',
+                    popup: '',
+                    status: 'editable',
+                },
+                {
+                    id: 2,
+                    icon: 'icon-text-field',
+                    label: 'City',
+                    popup: '',
+                    status: 'editable',
+                },
+                {
+                    id: 2,
+                    icon: 'icon-text-field',
+                    label: 'Zip Code / Postal Code',
+                    popup: '',
+                    status: 'editable',
+                },
+                {
+                    id: 2,
+                    icon: 'icon-text-field',
+                    label: 'Email',
+                    popup: '',
+                    status: 'editable',
+                },
+                //Occupation
+                {
+                    id: 1,
+                    icon: 'icon-heading',
+                    label: 'Occupation Information',
+                    popup: '',
+                    status: 'editable',
+                },
+                {
+                    id: 5,
+                    icon: 'icon-select-field',
+                    label: 'Work Type',
+                    popup: '',
+                    status: 'editable',
+                },
+                {
+                    id: 5,
+                    icon: 'icon-select-field',
+                    label: 'Industry',
+                    popup: '',
+                    status: 'editable',
+                },
+                {
+                    id: 1,
+                    icon: 'icon-text-field',
+                    label: 'Length Of Relationship',
+                    popup: '',
+                    status: 'editable',
+                },
+                {
+                    id: 1,
+                    icon: 'icon-text-field',
+                    label: 'Tax ID',
+                    popup: '',
+                    status: 'editable',
+                },
+                //Occupation
+                {
+                    id: 1,
+                    icon: 'icon-heading',
+                    label: 'ID Document Information',
+                    popup: '',
+                    status: 'editable',
+                },
+                {
+                    id: 5,
+                    icon: 'icon-select-field',
+                    label: 'ID Document Type',
+                    popup: '',
+                    status: 'editable',
+                },
+                {
+                    id: 1,
+                    icon: 'icon-text-field',
+                    label: 'ID Document Number',
+                    popup: '',
+                    status: 'editable',
+                },
+                {
+                    id: 4,
+                    icon: 'icon-calendar',
+                    label: 'Expiry Date',
+                    popup: '',
+                    status: 'editable',
                 },
             ],
         }
@@ -250,14 +358,32 @@ export default {
     |--------------------------------------------------------------------------
     */
     methods: {
-        openPopup(val) {
+        openPopup(val, val2) {
             if (val == 1) {
+                if (val2 == 'add') {
+                    this.titleChange = 'Add Heading'
+                }
+                if (val2 == 'modify') {
+                    this.titleChange = 'Modify Heading'
+                }
                 this.$bvModal.show('add-heading-popup')
             }
             if (val == 2 || val == 3 || val == 4) {
+                if (val2 == 'add') {
+                    this.titleChange = 'Add Text Field'
+                }
+                if (val2 == 'modify') {
+                    this.titleChange = 'Modify Text Field'
+                }
                 this.$bvModal.show('add-text-field-popup')
             }
             if (val == 5 || val == 6 || val == 7) {
+                if (val2 == 'add') {
+                    this.titleChange = 'Add Text Field'
+                }
+                if (val2 == 'modify') {
+                    this.titleChange = 'Modify Text Field'
+                }
                 this.$bvModal.show('add-select-field-popup')
             }
         },

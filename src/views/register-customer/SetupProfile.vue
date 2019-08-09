@@ -63,13 +63,12 @@
                                 label="Gender"
                                 label-for="gender"
                             >
-                                <b-form-group>
-                                    <b-form-radio-group
-                                        v-model="form.gender"
-                                        :options="form.genderOptions"
-                                        name="gender"
-                                    ></b-form-radio-group>
-                                </b-form-group>
+                                <b-form-select
+                                    class="form-control"
+                                    v-model="form.gender"
+                                    :options="form.genderOptions"
+                                    autocomplete="no"
+                                ></b-form-select>
                             </b-form-group>
                         </div>
                         <div class="col-md-4">
@@ -349,7 +348,7 @@
                         <div class="col-md-4">
                             <b-form-group
                                 id="input-group-21"
-                                label="Expirty Date"
+                                label="Expiry Date"
                                 label-for="expiredate"
                             >
                                 <div class="form-group ">
@@ -426,7 +425,7 @@ export default {
                 taxid: null,
                 doctype: null,
                 docnumber: null,
-                genderOptions: [{ text: 'Male', value: null }, 'Female'],
+
                 nationalityOptions: [
                     { value: null, text: 'Select Nationality' },
                     'Pakistani',
@@ -436,6 +435,13 @@ export default {
                     'Algerian',
                     'Belgian',
                     'Colombian',
+                ],
+
+                genderOptions: [
+                    { text: 'Select gender', value: null },
+                    'Male',
+                    'Female',
+                    'Not Applicable',
                 ],
 
                 residenceOptions: [

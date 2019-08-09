@@ -88,7 +88,7 @@ export default {
             ],
             sidelinksListing: [
                 {
-                    anchorLink: '/dashboard',
+                    anchorLink: '/insights',
                     icon: 'icon-insights',
                     menuLabel: 'Insights',
                 },

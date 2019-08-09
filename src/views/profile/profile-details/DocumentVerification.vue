@@ -37,7 +37,12 @@
                                             <a
                                                 href="javascript:void(0)"
                                                 class="secondary"
-                                                v-b-modal.overwrite-result-popup
+                                                @click="
+                                                    addModify(
+                                                        vacation.heading +
+                                                            ' Result'
+                                                    )
+                                                "
                                                 v-if="
                                                     descriptions.title ==
                                                         'Manually Overwrite Result'
@@ -82,7 +87,7 @@
         </div>
         <cancel-review-process-popup></cancel-review-process-popup>
         <kyc-status-review-popup></kyc-status-review-popup>
-        <overwrite-result-popup></overwrite-result-popup>
+        <overwrite-result-popup :label="label"></overwrite-result-popup>
         <manual-alert-popup></manual-alert-popup>
         <document-preview-popup></document-preview-popup>
         <picture-preview-popup></picture-preview-popup>
@@ -145,6 +150,8 @@ export default {
             vacationDetails: [],
 
             uploadDetails: [],
+
+            label: '',
         }
     }, // End of Component > data
 
@@ -188,6 +195,11 @@ export default {
             } else if (newVar == 'bill') {
                 this.$bvModal.show('bill-preview-popup')
             }
+        },
+
+        addModify(e) {
+            this.label = e
+            this.$bvModal.show('overwrite-result-popup')
         },
     }, // End of Component > methods
 

@@ -70,12 +70,14 @@
                             label="Review Period"
                             label-for="period"
                         >
-                            <b-form-select
-                                class="form-control"
+                            <b-form-input
+                                id="period"
+                                type="text"
                                 v-model="form.period"
-                                :options="period"
+                                required
                                 autocomplete="no"
-                            ></b-form-select>
+                                placeholder="Enter review period"
+                            ></b-form-input>
                         </b-form-group>
                     </div>
                     <div class="col-md-12">

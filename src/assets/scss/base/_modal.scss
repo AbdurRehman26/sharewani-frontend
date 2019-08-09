@@ -52,13 +52,13 @@
                     overflow: hidden;
 
                     &:after {
-                        content: '\e95c';
+                        content: '\e90d';
                         font-family: 'icomoon';
                         position: absolute;
                         color: $white;
-                        font-size: 7px;
-                        top: 3px;
-                        right: 5px;
+                        font-size: 11px;
+                        top: 2px;
+                        right: 2.5px;
                     }
                 }
             }

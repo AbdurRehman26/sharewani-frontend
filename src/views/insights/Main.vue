@@ -41,17 +41,17 @@ export default {
         return {
             menuListing: [
                 {
-                    anchorLink: '/dashboard/alerts',
+                    anchorLink: '/insights/alerts',
                     menuLabel: 'Alerts',
                     name: 'dashboard-alerts',
                 },
                 {
-                    anchorLink: '/dashboard/activity',
+                    anchorLink: '/insights/activity-dashboard',
                     name: 'dashboard-activity-page',
                     menuLabel: 'Activity Dashboard',
                 },
                 {
-                    anchorLink: '/dashboard/customer-statistics',
+                    anchorLink: '/insights/customer-statistics',
                     name: 'dashboard-reporting-page',
                     menuLabel: 'Customer Statistics',
                 },

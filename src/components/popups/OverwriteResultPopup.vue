@@ -16,8 +16,8 @@
                 <b-form-group
                     id="input-group-1"
                     class="kyc-status-radio overwrite-radio"
-                    label="Liveness Detection Result"
-                    label-for="detection-result"
+                    :label="label"
+                    label-for="results"
                 >
                     <b-form-group>
                         <b-form-radio-group
@@ -34,6 +34,22 @@
 
 <script>
 export default {
+    /*
+    |--------------------------------------------------------------------------
+    | Component > props
+    |--------------------------------------------------------------------------
+    */
+    props: {
+        /**
+         * Value to determine the current compose mode which
+         * varies between 'add' and 'edit'
+         */
+        label: {
+            type: String,
+            default: null,
+        },
+    }, // End of Component > props
+
     data() {
         return {
             form: {

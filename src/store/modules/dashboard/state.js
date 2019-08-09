@@ -2308,7 +2308,7 @@ export default {
                     alerts: [
                         {
                             riskRate: 'High',
-                            riskType: 'rating',
+                            riskType: 'manual',
                         },
                     ],
                     profile: 'member-4.png',

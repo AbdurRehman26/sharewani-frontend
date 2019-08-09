@@ -119,6 +119,12 @@
                                 v-b-tooltip.hover
                                 :title="' Onbaording alert '"
                             ></i>
+                            <i
+                                v-if="data.value[0].riskType == 'manual'"
+                                class="icon-manual-alert"
+                                v-b-tooltip.hover
+                                :title="' Manual alert '"
+                            ></i>
                         </router-link>
                     </div>
                 </template>
@@ -259,6 +265,7 @@ export default {
                 'Onboarding alert',
                 'Periodic alert',
                 'Trigger alert',
+                'Manual alert',
             ],
             filterByRiskLevel: null,
             filterRiskLevelOptions: [
