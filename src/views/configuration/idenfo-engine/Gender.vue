@@ -2,10 +2,10 @@
     <div class="infoengine gender-page">
         <div class="filter-section row-min-space">
             <div class="row">
-                <div class="col-md-6 filter-title-section">
+                <div class="col-md-5 filter-title-section">
                     <h2>Gender</h2>
                 </div>
-                <div class="col-md-6 text-right">
+                <div class="col-md-7 text-right">
                     <div class="row">
                         <div class="col-md-6">
                             <base-search

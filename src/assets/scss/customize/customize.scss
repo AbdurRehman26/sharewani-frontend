@@ -200,6 +200,11 @@ a {
         border-bottom: 1px solid $grey-dark;
         margin-bottom: 44px;
         padding-bottom: 20px;
+
+        @include tablet {
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+        }
     }
     .rangeto {
         span {
@@ -223,6 +228,11 @@ a {
 
 .brand-logo-area {
     max-width: 570px;
+
+    @include tablet {
+        max-width: 100%;
+    }
+
     .brand-logo {
         @include tabletF {
             height: 73px;
@@ -1363,6 +1373,15 @@ a {
     width: 200px;
 }
 
+.filter-section {
+    .col-md-9 {
+        @include tablet {
+            flex: 0 0 75%;
+            max-width: 75%;
+        }
+    }
+}
+
 .status-type-icon {
     i {
         font-size: 1.3rem;
@@ -2354,6 +2373,10 @@ a {
         display: inline-block;
         vertical-align: text-top;
         margin-left: 3px;
+
+        @include tablet {
+            display: contents;
+        }
     }
 
     i {
@@ -2565,5 +2588,82 @@ a {
     .vjs-time-control,
     .vjs-duration-display {
         display: none !important;
+    }
+}
+
+.data-import {
+    .col-md-3 {
+        @include tablet {
+            flex: 0 0 33.33333%;
+            max-width: 33.33333%;
+        }
+    }
+}
+
+.relationship-section,
+.purpose-section {
+    .filter-title-section {
+        @include tablet {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+
+    .filter-fields {
+        @include tablet {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+
+        .col-md-5,
+        .col-md-7 {
+            @include tablet {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+        }
+    }
+}
+
+.system-users-section {
+    .filter-section {
+        .col-md-9 {
+            @include tablet {
+                flex: 0 0 85%;
+                max-width: 85%;
+            }
+
+            .col-md-3 {
+                @include tablet {
+                    flex: 0 0 25%;
+                    max-width: 25%;
+                }
+            }
+        }
+
+        .col-md-3 {
+            @include tablet {
+                flex: 0 0 15%;
+                max-width: 15%;
+            }
+        }
+
+        .col-md-5 {
+            @include tablet {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+
+        .col-md-7 {
+            @include tablet {
+                position: absolute;
+                top: auto;
+                bottom: 76px;
+                right: 0;
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
     }
 }

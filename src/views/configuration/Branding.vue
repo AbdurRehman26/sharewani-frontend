@@ -10,7 +10,7 @@
 
         <div class="config-card-switch">
             <div class="row">
-                <div class="col-lg-12">
+                <div class="col-md-12">
                     <div class="card custom-card">
                         <div class="fields-area">
                             <div class="brand-logo-area">
@@ -18,7 +18,7 @@
                                     Brand Logo
                                 </h5>
                                 <div class="row">
-                                    <div class="col-lg-9">
+                                    <div class="col-md-9">
                                         <b-form-group
                                             id="input-group-6"
                                             label="LOGO FOR LIGHT BACKGROUND"
@@ -33,7 +33,7 @@
                                             ></b-form-file>
                                         </b-form-group>
                                     </div>
-                                    <div class="col-lg-3">
+                                    <div class="col-md-3">
                                         <div class="brand-logo light">
                                             <div
                                                 class="logo-area-preview"
@@ -46,7 +46,7 @@
                                             ></div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-9">
+                                    <div class="col-md-9">
                                         <b-form-group
                                             id="input-group-6"
                                             label="LOGO FOR DARK BACKGROUND"
@@ -61,7 +61,7 @@
                                             ></b-form-file>
                                         </b-form-group>
                                     </div>
-                                    <div class="col-lg-3">
+                                    <div class="col-md-3">
                                         <div class="brand-logo dark">
                                             <div
                                                 class="logo-area-preview"
@@ -82,7 +82,7 @@
                                     Brand Colors
                                 </h5>
                                 <div class="row">
-                                    <div class="col-lg-6">
+                                    <div class="col-md-6">
                                         <b-form-group
                                             id="input-group-6"
                                             label="PRIMARY COLOR CODE"
@@ -116,7 +116,7 @@
                                             </div>
                                         </b-form-group>
                                     </div>
-                                    <div class="col-lg-6">
+                                    <div class="col-md-6">
                                         <b-form-group
                                             id="input-group-6"
                                             label="SECONDARY COLOR CODE"
@@ -150,7 +150,7 @@
                                             </div>
                                         </b-form-group>
                                     </div>
-                                    <div class="col-lg-6">
+                                    <div class="col-md-6">
                                         <b-form-group
                                             id="input-group-6"
                                             label="INTERFACE DARK COLOR CODE"
@@ -184,7 +184,7 @@
                                             </div>
                                         </b-form-group>
                                     </div>
-                                    <div class="col-lg-6">
+                                    <div class="col-md-6">
                                         <b-form-group
                                             id="input-group-6"
                                             label="INTERFACE DARK MEDIUM DARK COLOR CODE"
@@ -223,7 +223,7 @@
                         </div>
 
                         <div class="row">
-                            <div class="col-lg-12">
+                            <div class="col-md-12">
                                 <base-button
                                     btnVariant="primary"
                                     btnLabel="UPDATE"

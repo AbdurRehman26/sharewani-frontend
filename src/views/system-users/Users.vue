@@ -1,5 +1,5 @@
 <template>
-    <div class="wrap-content">
+    <div class="wrap-content system-users-section">
         <div class="filter-section row-min-space">
             <div class="row">
                 <div class="col-md-12">
