@@ -31,7 +31,7 @@
                             @click="$router.push('email-sent')"
                         ></base-button>
                         <router-link
-                            to="/"
+                            :to="{ name: 'login-page' }"
                             class="btn forgot-link btn-link float-right"
                             >Back to login</router-link
                         >

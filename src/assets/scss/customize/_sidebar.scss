@@ -13,12 +13,33 @@ body {
     position: fixed;
 
     @include tabletL {
+        background: none;
+        width: 100%;
         transition: 0.3s ease-in-out;
         transform: translate(-100%);
-        z-index: 99;
-        padding-top: 53px;
+        z-index: 9999;
+        padding-top: 0px;
+        &:after {
+            content: '';
+            position: fixed;
+            width: calc(100% - 290px);
+            right: 0;
+            top: 0;
+            background: rgba(0, 0, 0, 0.4);
+            height: 100%;
+            opacity: 0;
+            transition: all 0.5s linear;
+            transition-delay: 0s;
+            @include mobile {
+                display: none;
+            }
+        }
         &.show-sidebar {
             transform: translate(0%);
+            &:after {
+                transition-delay: 0.3s;
+                opacity: 1;
+            }
         }
     }
     @include mobile {
@@ -30,6 +51,14 @@ body {
     .sidebar-listing {
         display: flex;
         overflow: hidden;
+        position: relative;
+        @include tabletL {
+            width: 290px;
+            background-color: #3c1559;
+        }
+        @include mobile {
+            width: 100%;
+        }
         .country-selection {
             background-color: $interface-dark;
             height: 100vh;
@@ -147,8 +176,14 @@ body {
             padding: 14px 0px 14px 17px;
             box-shadow: 0px 0.5px 0px $interface-dark;
             margin-bottom: 10px;
+
+            .logo {
+                @include tabletL {
+                    width: 110px;
+                }
+            }
         }
-        @include mobile {
+        /*         @include mobile {
             .logo-container {
                 display: none;
             }
@@ -177,7 +212,7 @@ body {
                     }
                 }
             }
-        }
+        } */
     }
 }
 
@@ -227,5 +262,19 @@ body {
         right: 16px;
     }
     span {
+    }
+}
+
+.close-side-bar {
+    display: none;
+    position: absolute;
+    right: 6px;
+    top: 10px;
+    @include tabletL {
+        display: block;
+    }
+    i {
+        font-size: 30px;
+        color: #fff;
     }
 }

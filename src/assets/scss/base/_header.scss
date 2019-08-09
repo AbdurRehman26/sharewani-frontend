@@ -141,7 +141,10 @@ header {
         .profile-main {
             position: relative;
             @include tabletL {
-                right: 28px;
+                position: fixed;
+                right: 76px;
+                top: 0;
+                padding-right: 20px;
             }
             .profile-image {
                 position: absolute;
@@ -188,6 +191,10 @@ header {
                     align-items: center;
                     font-size: 7px;
                     color: #979797;
+                    @include tabletL {
+                        right: -25px;
+                        top: 7px;
+                    }
                 }
             }
         }
@@ -196,8 +203,8 @@ header {
             .profile-main {
                 .profile-detail {
                     h4 {
-                        font-size: 0.7rem;
-                        margin-bottom: 8px;
+                        font-size: 0.8rem;
+                        margin-bottom: 3px;
                     }
                     p {
                         font-size: 0.6rem;

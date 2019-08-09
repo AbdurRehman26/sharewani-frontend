@@ -8,6 +8,7 @@
                 :class="sidebarResponsive == true ? 'show-sidebar' : ''"
                 v-if="!$route.meta.noSidebar"
                 @onClick="sidebarResponsive = false"
+                @closeSidemenu="closeSidebar"
             ></base-sidebar>
             <router-view @responsiveSideBar="sidebarResponsive ^= true" />
         </div>
@@ -59,7 +60,11 @@ export default {
         | Component > methods
         |--------------------------------------------------------------------------
         */
-    methods: {}, // End of Component > methods
+    methods: {
+        closeSidebar() {
+            this.sidebarResponsive = false
+        },
+    }, // End of Component > methods
 
     /*
         |--------------------------------------------------------------------------

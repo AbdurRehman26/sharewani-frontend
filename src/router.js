@@ -18,7 +18,7 @@ export default new Router({
                     path: '/',
                     name: 'login-page',
                     component: () =>
-                        import(/* webpackChunkName: "forgot-password" */ '@/views/auth/Login.vue'),
+                        import(/* webpackChunkName: "login" */ '@/views/auth/Login.vue'),
                     meta: {
                         title: 'Login',
                         noSidebar: true,
