@@ -2175,8 +2175,8 @@ a {
     .wrap-content {
         .col-md-3 {
             @include tabletF {
-                flex: 50%;
-                max-width: 50%;
+                flex: 50% !important;
+                max-width: 50% !important;
                 h2 {
                     // font-size: 1rem;
                 }
@@ -2663,6 +2663,49 @@ a {
                 right: 0;
                 flex: 0 0 100%;
                 max-width: 100%;
+            }
+        }
+    }
+}
+
+.system-logs-page {
+    .filter-section {
+        .col-md-9 {
+            @include tablet {
+                flex: 0 0 85%;
+                max-width: 85%;
+            }
+        }
+
+        .col-md-3 {
+            @include tablet {
+                flex: 0 0 15%;
+                max-width: 15%;
+            }
+
+            .col-md-6 {
+                @include tablet {
+                    flex: 0 0 100%;
+                    max-width: 100%;
+                }
+
+                &.export-btn-section {
+                    @include tablet {
+                        position: absolute;
+                        top: -54px;
+                        right: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.customer-statistics-page {
+    .filter-section {
+        .btn-sm {
+            @include mobile {
+                min-width: 100% !important;
             }
         }
     }
