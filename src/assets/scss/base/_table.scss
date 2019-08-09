@@ -7,6 +7,9 @@
     &.table-min-width {
         .table {
             min-width: 1080px;
+            @include mobile {
+                min-width: 1300px;
+            }
         }
     }
     &.tablet-table-min-width {
@@ -90,6 +93,9 @@
                 }
                 .id-center {
                     width: 362px;
+                }
+                .user-roles-action {
+                    width: 320px;
                 }
                 tbody {
                     td {
