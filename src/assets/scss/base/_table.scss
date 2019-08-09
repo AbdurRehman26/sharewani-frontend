@@ -9,6 +9,141 @@
             min-width: 1080px;
         }
     }
+    &.tablet-table-min-width {
+        .table {
+            @include tabletF {
+                min-width: 1090px;
+            }
+        }
+    }
+    &.tablet-table-small-min-width {
+        .table {
+            @include tabletF {
+                min-width: 1080px;
+                .w-320px {
+                    width: 180px;
+                }
+                .w-150px {
+                    width: 150px;
+                }
+                tbody {
+                    td {
+                        &.two-list {
+                            width: 170px;
+                        }
+                    }
+                }
+            }
+            @include mobile {
+                min-width: 940px;
+                .w-320px {
+                    width: 250px;
+                }
+                .w-150px {
+                    width: 180px;
+                }
+                tbody {
+                    td {
+                        &.two-list {
+                            width: 370px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.tablet-table-xs-min-width {
+        .table {
+            @include tabletF {
+                min-width: 900px;
+                .w-320px {
+                    width: 100px;
+                }
+                .w-150px {
+                    width: 80px;
+                }
+                th {
+                    &.single-list {
+                        width: 140px;
+                        text-align: right;
+                    }
+                }
+                tbody {
+                    td {
+                        &.two-list {
+                            width: 100px;
+                        }
+                        &.single-list {
+                            width: 140px;
+                            text-align: right;
+                        }
+                    }
+                }
+            }
+            @include mobile {
+                min-width: 640px;
+                .w-320px {
+                    width: 250px;
+                }
+                .w-150px {
+                    width: 250px;
+                }
+                tbody {
+                    td {
+                        &.two-list {
+                            width: 230px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.tablet-table-xxs-min-width {
+        .table {
+            @include tabletF {
+                min-width: 800px;
+                .w-320px {
+                    width: 180px;
+                }
+                .w-150px {
+                    width: 150px;
+                }
+                .id-center {
+                    width: 70px;
+                }
+                tbody {
+                    td {
+                        width: 170px;
+                        &.two-list {
+                            width: 170px;
+                        }
+                        &.single-list {
+                            width: 70px;
+                        }
+                        &.id-center {
+                            width: 70px;
+                        }
+                    }
+                }
+            }
+            @include mobile {
+                min-width: 810px;
+                .w-320px {
+                    width: 250px;
+                }
+                .w-150px {
+                    width: 250px;
+                }
+                tbody {
+                    td {
+                        &.two-list {
+                            width: 230px;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 .table {
     border-radius: 8px 8px 0 0;

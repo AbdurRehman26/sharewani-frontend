@@ -38,7 +38,7 @@
                 </div>
             </div>
         </div>
-        <div class="table-section">
+        <div class="table-section  tablet-table-small-min-width">
             <b-table :items="items" :fields="fields">
                 <template slot="rating" slot-scope="data">
                     <base-status :statusType="data.value"></base-status>

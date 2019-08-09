@@ -37,7 +37,7 @@
             </div>
         </div>
 
-        <div class="table-section">
+        <div class="table-section tablet-table-xs-min-width ">
             <b-table :items="items" :fields="fields">
                 <template slot="worktypeimpact" slot-scope="data">
                     <div class="work-impact">

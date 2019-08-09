@@ -10,7 +10,7 @@
         <div class="filter-section sub-filter">
             <h2>Name Screening Hit Details</h2>
         </div>
-        <div class="table-section">
+        <div class="table-section table-min-width">
             <b-table :items="items" :fields="fields">
                 <template slot="sanction" slot-scope="data">
                     <status-type-icon
