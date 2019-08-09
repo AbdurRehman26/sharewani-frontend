@@ -11,9 +11,10 @@
     box-shadow: $button-box-shadow;
     border-radius: 5px;
     @include windowS {
-        font-size: 0.75rem;
     }
     @include tablet {
+        padding: $button-padding-m;
+        min-width: 0;
         font-size: 0.875rem;
     }
     &:focus {

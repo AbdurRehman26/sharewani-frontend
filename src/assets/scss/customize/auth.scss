@@ -7,6 +7,11 @@
 		width: 160px;
 		height: auto;
 		margin: 3% auto 30px;
+		@include mobile {
+			width: 110px;
+			height: auto;
+			margin: 15px auto 20px;
+		}
 	}
 	.auth-heading {
 		font-size: 1.375rem;
@@ -63,12 +68,18 @@
 			background: #fff;
 			border-radius: 2px;
 			display: block;
+			@include mobileXs {
+				display: none;
+			}
 		}
 		&.register-now {
 			margin-top: 0px;
 			&:after {
 				display: none;
 			}
+		}
+		@include mobile {
+			margin-bottom: 10px;
 		}
 	}
 }
