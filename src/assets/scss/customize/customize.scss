@@ -224,9 +224,15 @@ a {
 .brand-logo-area {
     max-width: 570px;
     .brand-logo {
+        @include tabletF {
+            height: 73px;
+            width: 150px;
+        }
         @include mobile {
+            height: 72px !important;
+            width: 150px;
             margin-top: 0px !important;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.1rem;
         }
     }
 }
@@ -2478,5 +2484,3 @@ a {
         display: none !important;
     }
 }
-
-
