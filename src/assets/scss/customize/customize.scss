@@ -771,7 +771,7 @@ a {
                 text-align: center;
 
                 &:before {
-                    content: '\e954';
+                    content: '\e956';
                     font-size: 15px;
                     font-family: 'icomoon';
                     padding-right: 10px;
@@ -786,6 +786,7 @@ a {
                     font-size: 15px;
                     font-family: 'icomoon';
                     padding-right: 10px;
+                    font-weight: 100;
                 }
             }
 
@@ -793,10 +794,11 @@ a {
                 text-align: center;
 
                 &:before {
-                    content: '\e94a';
+                    content: '\e94c';
                     font-size: 14px;
                     font-family: 'icomoon';
                     padding-right: 10px;
+                    font-weight: 100;
                 }
             }
 
@@ -804,7 +806,7 @@ a {
                 text-align: center;
 
                 &:before {
-                    content: '\e93e';
+                    content: '\e940';
                     font-size: 14px;
                     font-family: 'icomoon';
                     padding-right: 10px;
@@ -2181,5 +2183,3 @@ a {
         display: none !important;
     }
 }
-
-
