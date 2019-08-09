@@ -90,8 +90,7 @@ export default {
                     name: 'customer-information',
                 },
                 {
-                    anchorLink:
-                        '/customer-profiles/name-screening?q=%27Henk%20John%27%20corruption%20OR%20trafficking',
+                    anchorLink: '/customer-profiles/name-screening',
                     menuLabel: 'Name Screening',
                     name: 'screening-customer',
                 },

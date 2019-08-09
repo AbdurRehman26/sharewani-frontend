@@ -49,8 +49,8 @@
             <div class="scrollable" id="style-2">
                 <!-- google search -->
                 <div>
-                    <div class="gcse-searchbox"></div>
-                    <div class="gcse-searchresults-only"></div>
+                    <div class="gcse-search"></div>
+                    <!--                     <div class="gcse-searchresults-only"></div> -->
                 </div>
                 <!-- google search end-->
             </div>
