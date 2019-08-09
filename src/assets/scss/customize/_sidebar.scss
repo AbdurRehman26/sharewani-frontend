@@ -190,16 +190,17 @@ body {
     }
 }
 
-.responsive-sidebar-menu {
+.responsive-sidebar-menu,
+.responsive-header-menu {
     display: none;
     @include tabletL {
         position: fixed;
-        top: 11px;
+        top: 10px;
         left: 16px;
-        padding: 4px 0 0 0;
+        padding: 3px 0 0 0;
         background-color: $primary;
         z-index: 999;
-        height: 30px;
+        height: 31px;
         width: 35px;
         display: flex;
         align-self: center;
@@ -211,34 +212,20 @@ body {
     }
     span {
         height: 3px;
-        width: 27px;
+        width: 23px;
         display: block;
         margin: 0 auto;
-        margin-bottom: 5px;
+        margin-bottom: 4px;
         background-color: #fff;
     }
 }
 
 .responsive-header-menu {
-    display: none;
-    @include mobile {
-        position: fixed;
-        top: 0px;
-        right: 0;
-        padding: 7px 10px;
-        background-color: $secondary;
-        z-index: 999;
-        height: 42px;
-        display: flex;
-        align-self: center;
-        flex-direction: column;
-        justify-content: center;
+    @include tabletL {
+        background: $secondary;
+        left: auto;
+        right: 16px;
     }
     span {
-        height: 2px;
-        width: 24px;
-        display: block;
-        margin-bottom: 5px;
-        background-color: #fff;
     }
 }

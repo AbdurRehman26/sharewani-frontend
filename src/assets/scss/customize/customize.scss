@@ -23,8 +23,8 @@
 
 .right-panel {
     padding: 29px 40px;
-    @include tablet {
-        padding: 29px 20px;
+    @include tabletL {
+        padding: 88px 40px 29px;
     }
     @include mobile {
         padding-top: 60px;
