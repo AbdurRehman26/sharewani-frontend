@@ -505,8 +505,8 @@ a {
         margin-top: 0;
         margin-bottom: 20px;
 
-        @include tablet {
-            font-size: 20px;
+        @include windowS {
+            font-size: 22px;
         }
 
         @include mobile {
@@ -2145,12 +2145,21 @@ a {
     }
 }
 
+.alert-filter {
+    .col-md-9 {
+        @include windowS {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+}
+
 .tabs-bar {
-    @include tablet {
+    @include windowS {
         position: absolute;
         top: auto;
-        bottom: 60px;
-        right: -74px;
+        bottom: 55px;
+        right: -77px;
         flex: 0 0 45%;
         max-width: 45%;
     }
@@ -2478,5 +2487,3 @@ a {
         display: none !important;
     }
 }
-
-
