@@ -1509,7 +1509,7 @@ export default {
                     {
                         key: 'action',
                         label: 'ACTION',
-                        class: 'single-list w-200px',
+                        class: 'two-list',
                     },
                 ],
                 items: [

@@ -34,6 +34,22 @@
                     }
                 }
             }
+            @include mobile {
+                min-width: 940px;
+                .w-320px {
+                    width: 250px;
+                }
+                .w-150px {
+                    width: 180px;
+                }
+                tbody {
+                    td {
+                        &.two-list {
+                            width: 370px;
+                        }
+                    }
+                }
+            }
         }
     }
     &.tablet-table-xs-min-width {
@@ -64,6 +80,22 @@
                     }
                 }
             }
+            @include mobile {
+                min-width: 640px;
+                .w-320px {
+                    width: 250px;
+                }
+                .w-150px {
+                    width: 250px;
+                }
+                tbody {
+                    td {
+                        &.two-list {
+                            width: 230px;
+                        }
+                    }
+                }
+            }
         }
     }
     &.tablet-table-xxs-min-width {
@@ -90,6 +122,22 @@
                         }
                         &.id-center {
                             width: 70px;
+                        }
+                    }
+                }
+            }
+            @include mobile {
+                min-width: 810px;
+                .w-320px {
+                    width: 250px;
+                }
+                .w-150px {
+                    width: 250px;
+                }
+                tbody {
+                    td {
+                        &.two-list {
+                            width: 230px;
                         }
                     }
                 }
