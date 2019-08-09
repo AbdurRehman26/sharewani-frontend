@@ -5,7 +5,7 @@
                 @sidemenu="$emit('responsiveSideBar')"
                 :menuListing="menuListing"
             ></base-header>
-            <div class="right-panel">
+            <div class="right-panel system-logs-page">
                 <div class="wrap-content">
                     <div class="filter-section row-min-space">
                         <div class="row">
@@ -117,7 +117,9 @@
                                                     class="btn-block"
                                                 ></base-button>
                                             </div>
-                                            <div class="col-xs-12 col-md-6">
+                                            <div
+                                                class="col-xs-12 col-md-6 export-btn-section"
+                                            >
                                                 <base-button
                                                     v-b-modal.export-process-popup
                                                     btnLabel="Export"
