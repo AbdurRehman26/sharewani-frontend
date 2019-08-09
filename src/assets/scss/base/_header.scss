@@ -450,4 +450,12 @@ header {
             }
         }
     }
+    @include mobile {
+        background: #fff;
+        width: 100%;
+        top: 0;
+        height: 52px;
+        left: 0;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    }
 }
