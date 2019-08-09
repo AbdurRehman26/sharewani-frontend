@@ -2128,14 +2128,62 @@ a {
         flex: 0 0 80%;
         max-width: 80%;
     }
-    @include mobile {
+    @include tabletF {
         .col-md-3 {
             flex: 0 0 100%;
             max-width: 100%;
         }
         .col-md-9 {
-            flex: 0 0 100%;
-            max-width: 100%;
+            flex: 0 0 100% !important;
+            max-width: 100% !important;
+        }
+        .customer-profile {
+            img {
+                max-width: 550px;
+                min-width: 0px;
+                margin: auto;
+            }
+        }
+    }
+}
+
+.customer-profile {
+    .wrap-content {
+        .col-md-3 {
+            @include tabletF {
+                flex: 50%;
+                max-width: 50%;
+                h2 {
+                    // font-size: 1rem;
+                }
+                &.profile-image-section {
+                    flex: 100%;
+                    max-width: 100%;
+                }
+            }
+        }
+        .col-md-9 {
+            @include tabletF {
+                flex: 0 0 100%;
+                max-width: 100%;
+                position: unset;
+                .col-md-3 {
+                    text-align: center !important;
+                    flex: 33%;
+                    max-width: 33%;
+                    &.go-back-profile {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        flex: 50%;
+                        max-width: 50%;
+                        text-align: right !important;
+                    }
+                }
+                .btn-text {
+                    // font-size: 0.6rem;
+                }
+            }
         }
     }
 }
