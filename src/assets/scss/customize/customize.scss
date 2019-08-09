@@ -1368,6 +1368,40 @@ a {
     background-color: #fff;
     padding: 32px;
     box-shadow: 0px 0.5px 0px rgba(50, 50, 93, 0.2);
+
+    .col-md-4,
+    .col-md-8 {
+        @include mobile {
+            width: 50%;
+        }
+    }
+
+    .col-md-7 {
+        @include mobile {
+            flex: 0 0 100% !important;
+            max-width: 100% !important;
+        }
+        .col-md-3 {
+            @include mobile {
+                flex: 0 0 40% !important;
+                max-width: 40% !important;
+            }
+        }
+
+        .col-md-9 {
+            @include mobile {
+                flex: 0 0 60% !important;
+                max-width: 60% !important;
+            }
+        }
+    }
+
+    .col-md-5 {
+        @include mobile {
+            flex: 0 0 100% !important;
+            max-width: 100% !important;
+        }
+    }
 }
 .user-roles-action {
     width: 200px;
@@ -2596,6 +2630,11 @@ a {
         @include tablet {
             flex: 0 0 33.33333%;
             max-width: 33.33333%;
+        }
+
+        @include mobile {
+            flex: 0 0 100%;
+            max-width: 100%;
         }
     }
 }
