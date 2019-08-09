@@ -20,7 +20,7 @@
 
         <div v-if="tabData == 0 || tabData == 1">
             <div class="config-list" ref="listingArea">
-                <div v-show="listVal <= 1100" class="config-list-dropdown">
+                <div v-show="listVal <= 850" class="config-list-dropdown">
                     <b-form-group
                         id="input-group-5"
                         label="Screening Data"
@@ -36,7 +36,7 @@
                         </b-form-select>
                     </b-form-group>
                 </div>
-                <ul v-show="listVal >= 1100 && listVal <= 1700">
+                <ul v-show="listVal >= 850 && listVal <= 1500">
                     <li
                         v-for="(list, index) in menuListing.slice(0, 8)"
                         :key="index"
@@ -84,7 +84,7 @@
                         </div>
                     </li>
                 </ul>
-                <ul v-show="listVal >= 1699">
+                <ul v-show="listVal >= 1499">
                     <li v-for="(list, index) in menuListing" :key="index">
                         <router-link :to="list.value">
                             <span>{{ list.text }}</span>

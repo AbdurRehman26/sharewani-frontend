@@ -43,7 +43,7 @@
                                             btnVariant="primary"
                                         ></base-button>
                                     </div>
-                                    <div class="col-md-4">
+                                    <div class="col-md-3">
                                         <base-button
                                             v-b-modal.manual-alert-popup
                                             btnLabel="Create Manual Alert"

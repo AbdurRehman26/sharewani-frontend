@@ -15,7 +15,7 @@
                     <h3>Name Screening</h3>
                 </div>
                 <div
-                    class="col-md-6"
+                    class="col-md-6 win-small-full"
                     v-for="(list, index) in tags"
                     :key="index"
                 >
@@ -45,7 +45,7 @@
                     <h3>{{ list.statusHeading }}</h3>
                     <div class="row">
                         <div
-                            class="col-md-6"
+                            class="col-md-6 win-small-full"
                             v-for="(description, index) in list.description"
                             :key="index"
                         >
