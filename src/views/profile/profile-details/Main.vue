@@ -15,7 +15,7 @@
                             <div class="col-md-9">
                                 <div class="row">
                                     <div
-                                        class="col-md-2 text-right go-back-profile"
+                                        class="col-md-3 text-right go-back-profile"
                                     >
                                         <router-link
                                             to="/customer-profiles"
