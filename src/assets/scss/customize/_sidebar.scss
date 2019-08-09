@@ -194,11 +194,13 @@ body {
     display: none;
     @include tabletL {
         position: fixed;
-        top: 0px;
-        padding: 7px 10px;
+        top: 11px;
+        left: 16px;
+        padding: 4px 0 0 0;
         background-color: $primary;
         z-index: 999;
-        height: 52px;
+        height: 30px;
+        width: 35px;
         display: flex;
         align-self: center;
         flex-direction: column;
@@ -208,9 +210,10 @@ body {
         height: 42px;
     }
     span {
-        height: 2px;
-        width: 24px;
+        height: 3px;
+        width: 27px;
         display: block;
+        margin: 0 auto;
         margin-bottom: 5px;
         background-color: #fff;
     }

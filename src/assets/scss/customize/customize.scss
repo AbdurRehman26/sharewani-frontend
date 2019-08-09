@@ -1789,6 +1789,11 @@ a {
             width: 100%;
             .logo-container {
                 display: inline-block;
+                @include tablet {
+                    margin-left: 10px;
+                    position: relative;
+                    top: -2px;
+                }
             }
             .navigation {
                 max-width: $block-width;
