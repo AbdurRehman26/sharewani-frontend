@@ -118,6 +118,10 @@
             &:nth-child(4) {
                 &:after {
                     width: 100px;
+
+                    @include tablet {
+                        width: 70px;
+                    }
                 }
             }
             a {
