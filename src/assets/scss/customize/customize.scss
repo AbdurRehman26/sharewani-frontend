@@ -879,8 +879,9 @@ a {
                 text-align: center;
 
                 &:before {
-                    content: '\e954';
+                    content: '\e956';
                     font-size: 15px;
+                    font-weight: 100;
                     font-family: 'icomoon';
                     padding-right: 10px;
                 }
@@ -892,6 +893,7 @@ a {
                 &:before {
                     content: '\e92a';
                     font-size: 15px;
+                    font-weight: 100;
                     font-family: 'icomoon';
                     padding-right: 10px;
                 }
@@ -901,8 +903,9 @@ a {
                 text-align: center;
 
                 &:before {
-                    content: '\e94a';
+                    content: '\e94c';
                     font-size: 14px;
+                    font-weight: 100;
                     font-family: 'icomoon';
                     padding-right: 10px;
                 }
@@ -912,9 +915,10 @@ a {
                 text-align: center;
 
                 &:before {
-                    content: '\e93e';
+                    content: '\e940';
                     font-size: 14px;
                     font-family: 'icomoon';
+                    font-weight: 100;
                     padding-right: 10px;
                 }
             }

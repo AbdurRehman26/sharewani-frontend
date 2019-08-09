@@ -8,7 +8,7 @@
             </div>
         </div>
 
-        <div class="table-section">
+        <div class="table-section tablet-table-small-min-width">
             <b-table :items="items" :fields="fields">
                 <template slot="involvement" slot-scope="data">
                     <status-type-icon

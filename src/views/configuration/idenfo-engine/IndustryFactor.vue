@@ -39,7 +39,7 @@
             </div>
         </div>
 
-        <div class="table-section">
+        <div class="table-section tablet-table-small-min-width">
             <b-table :items="items" :fields="fields">
                 <template slot="worktypeimpact" slot-scope="data">
                     <a href="#" class="work-impact">

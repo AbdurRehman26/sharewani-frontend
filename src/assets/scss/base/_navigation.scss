@@ -102,6 +102,9 @@
                 bottom: 0;
                 left: 70%;
                 border-radius: 6px;
+                @include tabletL {
+                    width: 88px;
+                }
                 @include mobile {
                     display: none;
                 }
@@ -110,6 +113,9 @@
             &:nth-child(1) {
                 &:after {
                     width: 128px;
+                    @include tabletL {
+                        width: 88px;
+                    }
                     @include mobile {
                         display: none;
                     }
