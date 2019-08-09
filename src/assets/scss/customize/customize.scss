@@ -200,6 +200,11 @@ a {
         border-bottom: 1px solid $grey-dark;
         margin-bottom: 44px;
         padding-bottom: 20px;
+
+        @include tablet {
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+        }
     }
     .rangeto {
         span {
@@ -223,6 +228,11 @@ a {
 
 .brand-logo-area {
     max-width: 570px;
+
+    @include tablet {
+        max-width: 100%;
+    }
+
     .brand-logo {
         @include tabletF {
             height: 73px;
@@ -879,8 +889,9 @@ a {
                 text-align: center;
 
                 &:before {
-                    content: '\e954';
+                    content: '\e956';
                     font-size: 15px;
+                    font-weight: 100;
                     font-family: 'icomoon';
                     padding-right: 10px;
                 }
@@ -892,6 +903,7 @@ a {
                 &:before {
                     content: '\e92a';
                     font-size: 15px;
+                    font-weight: 100;
                     font-family: 'icomoon';
                     padding-right: 10px;
                 }
@@ -901,8 +913,9 @@ a {
                 text-align: center;
 
                 &:before {
-                    content: '\e94a';
+                    content: '\e94c';
                     font-size: 14px;
+                    font-weight: 100;
                     font-family: 'icomoon';
                     padding-right: 10px;
                 }
@@ -912,9 +925,10 @@ a {
                 text-align: center;
 
                 &:before {
-                    content: '\e93e';
+                    content: '\e940';
                     font-size: 14px;
                     font-family: 'icomoon';
+                    font-weight: 100;
                     padding-right: 10px;
                 }
             }
@@ -1354,9 +1368,52 @@ a {
     background-color: #fff;
     padding: 32px;
     box-shadow: 0px 0.5px 0px rgba(50, 50, 93, 0.2);
+
+    .col-md-4,
+    .col-md-8 {
+        @include mobile {
+            width: 50%;
+        }
+    }
+
+    .col-md-7 {
+        @include mobile {
+            flex: 0 0 100% !important;
+            max-width: 100% !important;
+        }
+        .col-md-3 {
+            @include mobile {
+                flex: 0 0 40% !important;
+                max-width: 40% !important;
+            }
+        }
+
+        .col-md-9 {
+            @include mobile {
+                flex: 0 0 60% !important;
+                max-width: 60% !important;
+            }
+        }
+    }
+
+    .col-md-5 {
+        @include mobile {
+            flex: 0 0 100% !important;
+            max-width: 100% !important;
+        }
+    }
 }
 .user-roles-action {
     width: 200px;
+}
+
+.filter-section {
+    .col-md-9 {
+        @include tablet {
+            flex: 0 0 75%;
+            max-width: 75%;
+        }
+    }
 }
 
 .status-type-icon {
@@ -2153,12 +2210,43 @@ a {
     }
 }
 
+.form-builder-area {
+    @include tablet {
+        .col-md-8 {
+            flex: 0 0 60%;
+            max-width: 60%;
+        }
+        .col-md-4 {
+            flex: 0 0 40%;
+            max-width: 40%;
+        }
+        .form-field-types {
+            p {
+                max-width: 170px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+        }
+    }
+    @include mobile {
+        .col-md-8 {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+        .col-md-4 {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+}
+
 .customer-profile {
     .wrap-content {
         .col-md-3 {
             @include tabletF {
-                flex: 50%;
-                max-width: 50%;
+                // flex: 50% !important;
+                // max-width: 50% !important;
                 h2 {
                     // font-size: 1rem;
                 }
@@ -2166,6 +2254,10 @@ a {
                     flex: 100%;
                     max-width: 100%;
                 }
+            }
+            @include mobile {
+                flex: 100% !important;
+                max-width: 100% !important;
             }
         }
         .col-md-9 {
@@ -2355,6 +2447,10 @@ a {
         display: inline-block;
         vertical-align: text-top;
         margin-left: 3px;
+
+        @include tablet {
+            display: contents;
+        }
     }
 
     i {
@@ -2566,5 +2662,130 @@ a {
     .vjs-time-control,
     .vjs-duration-display {
         display: none !important;
+    }
+}
+
+.data-import {
+    .col-md-3 {
+        @include tablet {
+            flex: 0 0 33.33333%;
+            max-width: 33.33333%;
+        }
+
+        @include mobile {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+}
+
+.relationship-section,
+.purpose-section {
+    .filter-title-section {
+        @include tablet {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+
+    .filter-fields {
+        @include tablet {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+
+        .col-md-5,
+        .col-md-7 {
+            @include tablet {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+        }
+    }
+}
+
+.system-users-section {
+    .filter-section {
+        .col-md-9 {
+            @include tablet {
+                flex: 0 0 85%;
+                max-width: 85%;
+            }
+
+            .col-md-3 {
+                @include tablet {
+                    flex: 0 0 25%;
+                    max-width: 25%;
+                }
+            }
+        }
+
+        .col-md-3 {
+            @include tablet {
+                flex: 0 0 15%;
+                max-width: 15%;
+            }
+        }
+
+        .col-md-5 {
+            @include tablet {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+
+        .col-md-7 {
+            @include tablet {
+                position: absolute;
+                top: auto;
+                bottom: 76px;
+                right: 0;
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+.system-logs-page {
+    .filter-section {
+        .col-md-9 {
+            @include tablet {
+                flex: 0 0 85%;
+                max-width: 85%;
+            }
+        }
+
+        .col-md-3 {
+            @include tablet {
+                flex: 0 0 15%;
+                max-width: 15%;
+            }
+
+            .col-md-6 {
+                @include tablet {
+                    flex: 0 0 100%;
+                    max-width: 100%;
+                }
+
+                &.export-btn-section {
+                    @include tablet {
+                        position: absolute;
+                        top: -54px;
+                        right: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.customer-statistics-page {
+    .filter-section {
+        .btn-sm {
+            @include mobile {
+                min-width: 100% !important;
+            }
+        }
     }
 }

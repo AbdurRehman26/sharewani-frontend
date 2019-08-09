@@ -2,10 +2,10 @@
     <div class="wrap-content form-registration">
         <div class="filter-section row-min-space">
             <div class="row">
-                <div class="col-md-7 filter-title-section">
+                <div class="col-md-6 filter-title-section">
                     <h2>Registration Form Builder</h2>
                 </div>
-                <div class="col-md-5 text-right">
+                <div class="col-md-6 text-right">
                     <div class="row">
                         <div class="col-md-8 text-right">
                             <base-button

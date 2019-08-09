@@ -2,24 +2,24 @@
     <div class="wrap-content">
         <div class="filter-section row-min-space">
             <div class="row">
-                <div class="col-md-6 filter-title-section">
+                <div class="col-md-5 filter-title-section">
                     <h2>Application Access</h2>
                 </div>
-                <div class="col-md-6 text-right">
+                <div class="col-md-7 text-right">
                     <div class="row">
                         <div class="col-md-6 col-xs-12">
                             <base-search></base-search>
                         </div>
                         <div class="col-md-6 col-xs-12">
                             <div class="row">
-                                <div class="col-md-5">
+                                <div class="col-md-4">
                                     <base-button
                                         btnLabel="Apply"
                                         btnType="submit"
                                         btnVariant="primary"
                                     ></base-button>
                                 </div>
-                                <div class="col-md-7">
+                                <div class="col-md-8">
                                     <base-button
                                         btnLabel="+ Add Application"
                                         btnType="submit"
@@ -36,7 +36,7 @@
         </div>
 
         <!-- user management table -->
-        <div class="table-section">
+        <div class="table-section tablet-table-xs-min-width">
             <b-table :items="items" :fields="fields" class="user-roles-table">
                 <!-- status slot -->
                 <template slot="status" slot-scope="data">

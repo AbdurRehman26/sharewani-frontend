@@ -1,11 +1,11 @@
 <template>
-    <div class="infoengine">
+    <div class="infoengine relationship-section">
         <div class="filter-section row-min-space">
             <div class="row">
                 <div class="col-md-5 filter-title-section">
                     <h2>Relationship Length Factor</h2>
                 </div>
-                <div class="col-md-7 text-right">
+                <div class="col-md-7 text-right filter-fields">
                     <div class="row">
                         <div class="col-md-5">
                             <base-search
@@ -41,7 +41,7 @@
             </div>
         </div>
 
-        <div class="table-section">
+        <div class="table-section tablet-table-xxs-min-width">
             <b-table :items="items" :fields="fields">
                 <template slot="worktypeimpact" slot-scope="data">
                     <div class="work-impact">

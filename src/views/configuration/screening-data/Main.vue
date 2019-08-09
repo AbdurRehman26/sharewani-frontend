@@ -3,7 +3,7 @@
         <div class="data-import small-card">
             <div class="row">
                 <div
-                    class="col-lg-3 col-md-6"
+                    class="col-md-3"
                     v-for="(data, index) in listData"
                     :key="index"
                     :class="index == tabData ? 'active' : ''"

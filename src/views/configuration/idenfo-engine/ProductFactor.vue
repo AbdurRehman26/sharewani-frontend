@@ -2,10 +2,10 @@
     <div class="infoengine">
         <div class="filter-section row-min-space">
             <div class="row">
-                <div class="col-md-6 filter-title-section">
+                <div class="col-md-5 filter-title-section">
                     <h2>Product Factor</h2>
                 </div>
-                <div class="col-md-6 text-right">
+                <div class="col-md-7 text-right">
                     <div class="row">
                         <div class="col-md-6">
                             <base-search
@@ -37,7 +37,7 @@
             </div>
         </div>
 
-        <div class="table-section">
+        <div class="table-section tablet-table-xs-min-width ">
             <b-table :items="items" :fields="fields">
                 <template slot="worktypeimpact" slot-scope="data">
                     <div class="work-impact">
