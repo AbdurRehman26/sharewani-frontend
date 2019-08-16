@@ -51,7 +51,9 @@
 		height: 430px;
 		padding-bottom: 30px;
 		position: relative;
-
+		@include mobile {
+			padding-bottom: 0px;
+		}
 		.amcharts-div {
 			height: 100%;
 
@@ -108,7 +110,7 @@
 		text-align: center;
 		width: 100%;
 		@include mobile {
-			top: 45% !important;
+			top: 50% !important;
 		}
 	}
 }
@@ -137,7 +139,7 @@
 		padding: 0 10px;
 		margin-bottom: 15px;
 		@include mobile {
-			width: 100% !important;
+			width: 100%;
 		}
 	}
 	&.cols-1 {
@@ -170,6 +172,26 @@
 				.legend-value {
 					margin-top: -1px;
 					font-size: 0.75rem;
+				}
+			}
+			@include mobile {
+				.legend-title {
+					width: 90px;
+				}
+			}
+		}
+	}
+	&.mob-cols-2 {
+		> div {
+			@include mobileS {
+				width: 50%;
+				.legend-value {
+					margin-top: -1px;
+					font-size: 0.75rem;
+				}
+
+				.legend-title {
+					width: 69px;
 				}
 			}
 		}
@@ -208,7 +230,7 @@
 		float: left;
 		width: 100%;
 		display: block;
-		height: 90px;
+		height: auto;
 		overflow-x: auto;
 		&.table-style {
 			.legend-title {
@@ -227,6 +249,15 @@
 	}
 }
 
+.pie-chart-inner-table {
+	@include mobile {
+		position: relative;
+		.chart-highest-record {
+			top: 43% !important;
+		}
+	}
+}
+
 .card {
 	&.dashboard-card {
 		@include mobile {
@@ -238,6 +269,11 @@
 			.custom-legend-wrapper {
 				&.table-style {
 					height: auto;
+					max-height: none;
+					> div {
+						padding-left: 0px;
+						padding-right: 0px;
+					}
 				}
 			}
 		}
