@@ -2797,3 +2797,17 @@ a {
         }
     }
 }
+
+.register-customer-body {
+    @include tabletL {
+        .menu-list {
+            display: block !important;
+        }
+        .responsive-header-menu {
+            display: none;
+        }
+        .profile-main {
+            right: 20px !important;
+        }
+    }
+}
