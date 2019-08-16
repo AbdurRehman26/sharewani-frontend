@@ -37,6 +37,7 @@ export default {
                 {
                     key: 'action',
                     label: 'ACTION',
+                    class: 'two-list',
                 },
             ],
             items: [

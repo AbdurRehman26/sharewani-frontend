@@ -50,4 +50,14 @@
             }
         }
     }
+    @include mobileSHeight {
+        position: relative;
+        display: flex;
+        bottom: 0;
+        margin-top: 30px;
+        text-align: center;
+        ul {
+            width: 100%;
+        }
+    }
 }

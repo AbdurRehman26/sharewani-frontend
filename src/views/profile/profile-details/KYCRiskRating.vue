@@ -17,7 +17,7 @@
             </b-table>
         </div>
 
-        <div class="table-section">
+        <div class="table-section risk-factor-table">
             <b-table :items="overrideList" :fields="overrideFields">
                 <template slot="risk_level" slot-scope="data">
                     <base-status :statusType="data.value"></base-status>

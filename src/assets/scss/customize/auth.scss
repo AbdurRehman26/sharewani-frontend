@@ -82,4 +82,7 @@
 			margin-bottom: 10px;
 		}
 	}
+	@include mobileSHeight {
+		flex-direction: column;
+	}
 }

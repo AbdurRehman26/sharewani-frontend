@@ -24,7 +24,7 @@
             </div>
         </div>
 
-        <div class="table-section">
+        <div class="table-section mobile-table-responsive-sm">
             <b-table :items="items" :fields="fields">
                 <template slot="status" slot-scope="data">
                     <base-status :statusType="data.value"></base-status>
