@@ -193,6 +193,22 @@
 			}
 		}
 	}
+	@include mobile {
+		&.table-style {
+			.legend-title {
+				font-size: 0.75rem;
+				width: 69px;
+			}
+			.legend-country-users {
+				top: 2px !important;
+				font-size: 0.75rem;
+			}
+			.legend-value {
+				margin-top: 0px !important;
+				top: 3px !important;
+			}
+		}
+	}
 }
 
 .legend-marker {
@@ -216,9 +232,9 @@
 		font-size: 0.75rem;
 	}
 	@include mobileS {
-		font-size: 0.8rem;
+		font-size: 0.6rem;
 		margin-right: 4px;
-		width: 69px;
+		width: 59px;
 	}
 }
 
