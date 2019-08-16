@@ -3,6 +3,10 @@ label {
     font-family: $font-medium;
     color: $grey-lite;
     text-transform: uppercase;
+
+    @include mobile {
+        font-size: 11px !important;
+    }
 }
 
 .form-control {
@@ -40,6 +44,10 @@ label {
     &.is-valid,
     &.is-invalid {
         box-shadow: none !important;
+    }
+
+    @include mobile {
+        font-size: 13px;
     }
 }
 
