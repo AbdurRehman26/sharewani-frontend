@@ -31,6 +31,10 @@ header {
     .logo {
         margin-top: 11px;
         width: 132px;
+        @include tablet {
+            margin-top: 16px;
+            width: 100px;
+        }
         @include mobile {
             margin-top: 8px;
             width: 115px;
@@ -136,6 +140,12 @@ header {
         width: 190px;
         .profile-main {
             position: relative;
+            @include tabletL {
+                position: fixed;
+                right: 76px;
+                top: 0;
+                padding-right: 20px;
+            }
             .profile-image {
                 position: absolute;
                 left: 0px;
@@ -174,13 +184,17 @@ header {
                 i {
                     position: absolute;
                     right: 0;
-                    top: -10px;
+                    top: 0px;
                     bottom: 0;
                     margin: auto;
                     display: flex;
                     align-items: center;
                     font-size: 7px;
                     color: #979797;
+                    @include tabletL {
+                        right: -25px;
+                        top: 7px;
+                    }
                 }
             }
         }
@@ -189,8 +203,8 @@ header {
             .profile-main {
                 .profile-detail {
                     h4 {
-                        font-size: 0.7rem;
-                        margin-bottom: 8px;
+                        font-size: 0.8rem;
+                        margin-bottom: 3px;
                     }
                     p {
                         font-size: 0.6rem;
@@ -411,10 +425,12 @@ header {
     .logo {
         display: none;
     }
-    @include mobile {
+    @include tabletL {
         position: fixed;
         height: 42px;
-        width: 100%;
+        width: auto;
+        left: 65px;
+        top: 6px;
         z-index: 999;
         background-color: #fff;
         .logo {
@@ -425,7 +441,7 @@ header {
             .main {
                 display: block !important;
                 margin: auto;
-                max-width: 120px;
+                max-width: 102px;
                 position: absolute;
                 right: 0;
                 left: 0;
@@ -433,5 +449,13 @@ header {
                 bottom: 0;
             }
         }
+    }
+    @include mobile {
+        background: #fff;
+        width: 100%;
+        top: 0;
+        height: 52px;
+        left: 0;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
     }
 }

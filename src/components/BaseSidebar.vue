@@ -1,6 +1,9 @@
 <template>
     <div class="sidebar">
         <div class="sidebar-listing">
+            <span class="close-side-bar" @click="$emit('closeSidemenu')">
+                <i class="icon-delete"></i>
+            </span>
             <div class="country-selection">
                 <ul>
                     <li
