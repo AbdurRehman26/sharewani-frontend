@@ -40,7 +40,9 @@
                 </div>
             </div>
         </div>
-        <div class="table-section  tablet-table-small-min-width">
+        <div
+            class="table-section  tablet-table-small-min-width mobile-table-responsive-md"
+        >
             <b-table :items="items" :fields="fields">
                 <template slot="rating" slot-scope="data">
                     <base-status :statusType="data.value"></base-status>

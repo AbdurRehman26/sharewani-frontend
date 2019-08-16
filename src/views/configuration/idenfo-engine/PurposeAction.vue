@@ -39,7 +39,7 @@
             </div>
         </div>
 
-        <div class="table-section">
+        <div class="table-section mobile-table-responsive">
             <b-table :items="items" :fields="fields">
                 <template slot="scorescale" slot-scope="data">
                     <div class="work-impact">

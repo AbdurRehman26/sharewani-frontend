@@ -64,56 +64,7 @@
                 </ul>
             </div>
             <div class="profile-block" v-if="$route.meta.noSidebar != true">
-                <div class="profile-main">
-                    <div
-                        class="profile-image"
-                        :style="{
-                            'background-image':
-                                'url(' +
-                                require('@/assets/images/' + image + '') +
-                                ')',
-                        }"
-                    ></div>
-                    <div class="profile-detail" @click="open">
-                        <h4>Sammy Lawson</h4>
-                        <p>Super Admin</p>
-                        <i class="icon-caret-down"></i>
-                    </div>
-                    <div
-                        class="profile-popover"
-                        v-if="showPopover"
-                        v-on-click-outside="close"
-                    >
-                        <div class="nav-dropdown">
-                            <ul>
-                                <li @click="mainMain = false">
-                                    <a
-                                        href="javascript:void(0);"
-                                        v-b-modal.update-profile-popup
-                                    >
-                                        <i class="icon-person"></i>
-                                        <span>Update Profile</span>
-                                    </a>
-                                </li>
-                                <li @click="mainMain = false">
-                                    <a
-                                        href="javascript:void(0);"
-                                        v-b-modal.change-password-popup
-                                    >
-                                        <i class="icon-change-password"></i>
-                                        <span>Change Password</span>
-                                    </a>
-                                </li>
-                                <li @click="mainMain = false">
-                                    <a href="/">
-                                        <i class="icon-sign-out"></i>
-                                        <span>Sign Out</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                <login-detail> </login-detail>
                 <update-profile-popup></update-profile-popup>
                 <change-password-popup></change-password-popup>
             </div>
@@ -122,11 +73,13 @@
 </template>
 
 <script>
+import loginDetail from '@/components/LoginDetail.vue'
 import updateProfilePopup from '@/components/popups/UpdateProfilePopup.vue'
 import changePasswordPopup from '@/components/popups/ChangePasswordPopup.vue'
 import { directive as onClickOutside } from 'vue-on-click-outside'
 export default {
     components: {
+        loginDetail,
         changePasswordPopup,
         updateProfilePopup,
     },
@@ -160,7 +113,6 @@ export default {
     */
     data() {
         return {
-            showPopover: false,
             mainMain: false,
             image: 'profile-pic.png',
         }
@@ -178,14 +130,7 @@ export default {
     | Component > methods
     |--------------------------------------------------------------------------
     */
-    methods: {
-        open() {
-            this.showPopover = true
-        },
-        close() {
-            this.showPopover = false
-        },
-    }, // End of Component > methods
+    methods: {}, // End of Component > methods
 
     /*
     |--------------------------------------------------------------------------
