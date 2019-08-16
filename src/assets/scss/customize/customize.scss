@@ -1299,6 +1299,9 @@ a {
         height: 1px;
         background: $border-color;
     } */
+    @include mobile {
+        max-height: 387px;
+    }
     .inner {
         border: solid 1px $border-color;
     }
