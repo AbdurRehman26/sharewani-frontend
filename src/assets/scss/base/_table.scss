@@ -198,6 +198,19 @@
             }
         }
     }
+    &.mobile-table-responsive-xlg {
+        .table {
+            min-width: 1100px;
+            @include mobile {
+                .two-list {
+                    width: 280px !important;
+                }
+                .user-roles-action {
+                    width: 300px;
+                }
+            }
+        }
+    }
     &.mobile-table-responsive-md {
         .table {
             @include mobile {
