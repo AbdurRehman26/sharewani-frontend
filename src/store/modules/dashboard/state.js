@@ -2197,6 +2197,7 @@ export default {
                 {
                     key: 'action',
                     label: 'STATUS',
+                    class: 'action',
                     sortable: true,
                 },
             ],

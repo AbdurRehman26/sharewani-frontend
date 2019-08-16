@@ -39,7 +39,7 @@
             </div>
         </div>
 
-        <div class="table-section">
+        <div class="table-section mobile-table-responsive-md">
             <b-table :items="items" :fields="fields">
                 <template slot="action" slot-scope="data">
                     <div class="action-review">

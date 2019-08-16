@@ -3,7 +3,7 @@
         <div class="filter-section">
             <div class="row">
                 <div class="col-md-6">
-                    <h2>Name Screening Score Factors</h2>
+                    <h2 class="filter-heading">Name Screening Score Factors</h2>
                 </div>
             </div>
         </div>

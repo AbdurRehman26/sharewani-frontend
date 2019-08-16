@@ -161,6 +161,9 @@
 			}
 			@include mobileS {
 				width: 50%;
+				.legend-value {
+					margin-top: 1px;
+				}
 			}
 		}
 	}
@@ -234,7 +237,7 @@
 	@include mobileS {
 		font-size: 0.6rem;
 		margin-right: 4px;
-		width: 59px;
+		width: 70px;
 	}
 }
 

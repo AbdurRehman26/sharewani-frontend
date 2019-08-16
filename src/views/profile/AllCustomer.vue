@@ -5,7 +5,7 @@
                 <div class="col-md-3 filter-title-section">
                     <h2>All Customers</h2>
                 </div>
-                <div class="col-md-9 ">
+                <div class="col-md-9 filter-all-customers">
                     <div class="row">
                         <div class="col-md-6">
                             <b-form-group>
@@ -23,7 +23,7 @@
                                 <div class="col-md-6">
                                     <base-search></base-search>
                                 </div>
-                                <div class="col-md-3 btn-section text-right">
+                                <div class="col-md-3 text-right">
                                     <b-form-group>
                                         <base-button
                                             btnLabel="Apply"
@@ -32,7 +32,9 @@
                                         ></base-button>
                                     </b-form-group>
                                 </div>
-                                <div class="col-md-3 btn-section text-right">
+                                <div
+                                    class="col-md-3 text-right export-file-btn"
+                                >
                                     <b-form-group>
                                         <base-button
                                             v-b-modal.export-process-popup

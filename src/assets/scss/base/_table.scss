@@ -9,6 +9,9 @@
             min-width: 1080px;
             @include mobile {
                 min-width: 1300px;
+                .action {
+                    width: 120px;
+                }
             }
         }
     }
@@ -18,7 +21,7 @@
                 min-width: 1090px;
             }
             @include mobile {
-                min-width: 810px;
+                min-width: 860px;
             }
         }
     }
@@ -176,6 +179,35 @@
                 .two-list {
                     width: 210px;
                 }
+                .w-150px {
+                    width: 150px;
+                }
+            }
+        }
+    }
+    &.mobile-table-responsive-lg {
+        .table {
+            min-width: 740px;
+            @include mobile {
+                .two-list {
+                    width: 200px !important;
+                }
+                .user-roles-action {
+                    width: 300px;
+                }
+            }
+        }
+    }
+    &.mobile-table-responsive-xlg {
+        .table {
+            min-width: 1100px;
+            @include mobile {
+                .two-list {
+                    width: 280px !important;
+                }
+                .user-roles-action {
+                    width: 300px;
+                }
             }
         }
     }
@@ -183,7 +215,8 @@
         .table {
             @include mobile {
                 .two-list {
-                    width: 350px !important;
+                    // width: 350px !important;
+                    width: 200px !important;
                 }
             }
         }
@@ -194,6 +227,19 @@
                 min-width: 450px;
                 .two-list {
                     width: 350px !important;
+                }
+            }
+        }
+    }
+    &.mobile-descp-width {
+        .table {
+            @include mobile {
+                min-width: 900px;
+                .two-list {
+                    width: 350px !important;
+                }
+                .id-center {
+                    width: 192px !important;
                 }
             }
         }
@@ -550,11 +596,11 @@
     }
 }
 
-.infoengine {
-    .record-shown {
-        .form-group,
-        p {
-            margin-bottom: 0px;
-        }
-    }
-}
+// .infoengine {
+//     .record-shown {
+//         .form-group,
+//         p {
+//             margin-bottom: 0px;
+//         }
+//     }
+// }

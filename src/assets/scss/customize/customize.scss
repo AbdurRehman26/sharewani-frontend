@@ -103,6 +103,9 @@ span {
         padding-bottom: 25px;
         flex-direction: column;
         .download-current-file {
+            .btn-icon {
+                left: -10px;
+            }
             button {
                 position: relative;
                 right: 0;
@@ -1370,6 +1373,10 @@ a {
     padding: 32px;
     box-shadow: 0px 0.5px 0px rgba(50, 50, 93, 0.2);
 
+    @include mobile {
+        padding: 14px 16px 32px;
+    }
+
     .col-md-4,
     .col-md-8 {
         @include mobile {
@@ -1401,6 +1408,39 @@ a {
         @include mobile {
             flex: 0 0 100% !important;
             max-width: 100% !important;
+        }
+    }
+
+    .filter-section {
+        .filter-title-section {
+            @include tablet {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+
+        .col-md-7 {
+            @include tablet {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+    }
+
+    .infoengine {
+        .filter-section {
+            .filter-heading {
+                @include mobile {
+                    margin-bottom: 0;
+                    margin-top: 7px;
+                }
+            }
+
+            h2 {
+                @include mobile {
+                    margin-bottom: 12px;
+                }
+            }
         }
     }
 }
@@ -1472,7 +1512,17 @@ a {
             }
         }
         @include mobile {
-            min-width: 800px;
+            min-width: 540px;
+            .risk-factor {
+                width: 380px;
+            }
+            .risk-score {
+                width: 210px;
+                text-align: center;
+            }
+            .risk-level {
+                text-align: center;
+            }
         }
     }
     margin-bottom: 32px;
@@ -1690,6 +1740,11 @@ a {
         overflow-x: hidden;
         max-height: 420px;
         margin-bottom: 24px;
+        @include mobile {
+            overflow-x: hidden;
+            max-height: calc(100% - 190px);
+            margin-bottom: 0px;
+        }
     }
 
     #style-2::-webkit-scrollbar {
@@ -1774,10 +1829,21 @@ a {
         }
     }
 
+    textarea,
+    input,
+    .field-input {
+        font-size: 0.875rem !important;
+    }
+
     .add-more-section {
         .form-group {
             padding: 0 4px;
         }
+    }
+    @include mobile {
+        overflow-x: hidden;
+        max-height: calc(100% - 120px);
+        margin-bottom: 0px;
     }
 }
 
@@ -1817,6 +1883,9 @@ a {
         &:nth-child(4) {
             margin-bottom: 0;
         }
+        @include mobile {
+            margin-bottom: 3px !important;
+        }
     }
 
     &.overwrite-radio {
@@ -1851,9 +1920,11 @@ a {
         width: 100%;
         min-height: 290px;
         background-size: cover;
-
         .image-preview {
             width: 100% !important;
+        }
+        @include mobile {
+            min-height: initial;
         }
     }
     .play-btn {
@@ -2080,14 +2151,28 @@ a {
 }
 
 .permissions-section {
+    .form-group {
+        @include mobile {
+            margin-bottom: 16px;
+        }
+    }
+
     .custom-checkbox {
         width: 33.3%;
         float: left;
+
+        @include mobile {
+            width: 100%;
+        }
     }
 
     .custom-radio {
         width: 31%;
         float: left;
+
+        @include mobile {
+            width: 100%;
+        }
     }
 
     .col-form-label {
@@ -2103,6 +2188,10 @@ a {
         label {
             font-family: $font_medium;
             margin-bottom: 15px;
+
+            @include mobile {
+                margin-bottom: 5px;
+            }
             span {
                 margin-left: 5px;
                 margin-top: 3px;
@@ -2243,7 +2332,7 @@ a {
         }
         .form-field-types {
             p {
-                max-width: 135px;
+                max-width: 125px;
             }
         }
     }
@@ -2264,8 +2353,8 @@ a {
                 }
             }
             @include mobile {
-                flex: 100% !important;
-                max-width: 100% !important;
+                flex: 50% !important;
+                max-width: 50% !important;
             }
         }
         .col-md-9 {
@@ -2314,6 +2403,10 @@ a {
             font-family: $font_regular;
             color: $body-color !important;
             margin-bottom: 19px;
+
+            @include mobile {
+                margin-bottom: 12px;
+            }
         }
     }
 
@@ -2720,10 +2813,20 @@ a {
                 max-width: 85%;
             }
 
+            @include mobile {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+
             .col-md-3 {
                 @include tablet {
                     flex: 0 0 25%;
                     max-width: 25%;
+                }
+
+                @include mobile {
+                    flex: 0 0 100%;
+                    max-width: 100%;
                 }
             }
         }
@@ -2733,12 +2836,23 @@ a {
                 flex: 0 0 15%;
                 max-width: 15%;
             }
+
+            @include mobile {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
         }
 
         .col-md-5 {
             @include tablet {
                 flex: 0 0 100%;
                 max-width: 100%;
+            }
+
+            @include mobile {
+                position: static;
+                flex: 0 0 40%;
+                max-width: 40%;
             }
         }
 
@@ -2751,6 +2865,12 @@ a {
                 flex: 0 0 100%;
                 max-width: 100%;
             }
+
+            @include mobile {
+                position: static;
+                flex: 0 0 60%;
+                max-width: 60%;
+            }
         }
     }
 }
@@ -2762,6 +2882,11 @@ a {
                 flex: 0 0 85%;
                 max-width: 85%;
             }
+
+            @include mobile {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
         }
 
         .col-md-3 {
@@ -2770,10 +2895,20 @@ a {
                 max-width: 15%;
             }
 
+            @include mobile {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+
             .col-md-6 {
                 @include tablet {
                     flex: 0 0 100%;
                     max-width: 100%;
+                }
+
+                @include mobile {
+                    flex: 0 0 50%;
+                    max-width: 50%;
                 }
 
                 &.export-btn-section {
@@ -2781,6 +2916,10 @@ a {
                         position: absolute;
                         top: -54px;
                         right: 0;
+                    }
+
+                    @include mobile {
+                        position: static;
                     }
                 }
             }
@@ -2808,6 +2947,134 @@ a {
         }
         .profile-main {
             right: 20px !important;
+        }
+    }
+}
+.mobile-text-center {
+    @include mobile {
+        text-align: center;
+    }
+}
+
+.screening-data-section {
+    .filter-section {
+        .filter-title-section {
+            @include tablet {
+                flex: 0 0 40%;
+                max-width: 40%;
+            }
+
+            @include mobile {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+
+        .col-md-4 {
+            @include tablet {
+                flex: 0 0 60%;
+                max-width: 60%;
+            }
+
+            @include mobile {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+
+            .col-md-3 {
+                @include mobile {
+                    flex: 0 0 25%;
+                    max-width: 25%;
+                }
+            }
+        }
+    }
+}
+
+.filter-btn-section {
+    .col-md-5,
+    .col-md-7,
+    .col-md-8,
+    .col-md-4 {
+        @include mobile {
+            width: 50%;
+        }
+    }
+}
+
+.customer-profile {
+    .wrap-content {
+        .col-md-3 {
+            &.btn-profile-section {
+                @include mobile {
+                    flex: 0 0 100% !important;
+                    max-width: 100% !important;
+                }
+            }
+        }
+    }
+}
+
+.filter-all-customers {
+    .col-md-6 {
+        .col-md-6 {
+            @include tablet {
+                flex: 0 0 75%;
+                max-width: 75%;
+            }
+
+            @include mobile {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+
+        .col-md-3 {
+            @include tablet {
+                flex: 0 0 25% !important;
+                max-width: 25% !important;
+            }
+
+            @include mobile {
+                flex: 0 0 50% !important;
+                max-width: 50% !important;
+            }
+
+            &.export-file-btn {
+                @include tablet {
+                    position: absolute;
+                    right: 0;
+                    top: auto;
+                    bottom: 55px;
+                    flex: 0 0 40% !important;
+                    max-width: 40% !important;
+                }
+
+                @include mobile {
+                    position: static;
+                    flex: 0 0 50% !important;
+                    max-width: 50% !important;
+                }
+            }
+        }
+    }
+}
+
+.data-segment-page,
+.app-access-page {
+    .filter-section {
+        .filter-title-section {
+            @include tablet {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+
+        .col-md-7 {
+            @include tablet {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
         }
     }
 }
