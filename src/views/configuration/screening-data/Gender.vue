@@ -1,11 +1,11 @@
 <template>
-    <div class="infoengine">
+    <div class="screening-data-section">
         <div class="filter-section row-min-space">
             <div class="row">
-                <div class="col-md-7 filter-title-section">
+                <div class="col-md-8 filter-title-section">
                     <h2>Gender</h2>
                 </div>
-                <div class="col-md-5 text-right">
+                <div class="col-md-4 text-right">
                     <div class="row">
                         <div class="col-md-9">
                             <base-search

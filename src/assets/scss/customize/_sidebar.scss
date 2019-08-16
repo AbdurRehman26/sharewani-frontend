@@ -11,7 +11,10 @@ body {
     width: $sidebar-width;
     height: 100%;
     position: fixed;
-
+    .profile-main,
+    .profile-popover {
+        display: none;
+    }
     @include tabletL {
         background: none;
         width: 100%;
@@ -43,8 +46,16 @@ body {
         }
     }
     @include mobile {
+        z-index: 1001;
         &.show-sidebar {
             width: 100%;
+        }
+        .profile-main {
+            display: block;
+            position: fixed;
+            left: 73px;
+            bottom: 27px;
+            top: auto;
         }
     }
 
@@ -135,6 +146,9 @@ body {
                     width: 100%;
                     margin-bottom: 14px;
                     transition: 0.3s ease-in-out;
+                    @include mobile {
+                        margin-bottom: 8px;
+                    }
                     a {
                         color: $sidebar-menu-color;
                         padding: 8px 8px;
@@ -281,5 +295,46 @@ body {
     i {
         font-size: 30px;
         color: #fff;
+    }
+}
+
+.profile-popover {
+    @include mobile {
+        display: block !important;
+        position: relative;
+        top: 0;
+        background: none;
+        box-shadow: none;
+        padding: 12px 8px 0;
+        &:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            left: 0;
+            right: 0;
+            top: 2px;
+            margin: 0 auto;
+            height: 1px;
+            border-top: solid 0.3px $interface-dark;
+        }
+        .nav-dropdown {
+            ul {
+                li {
+                    border-color: transparent;
+                    a {
+                        padding-left: 8px;
+                        padding-right: 8px;
+                        color: #fff;
+                        i {
+                            left: 9px;
+                        }
+                        span {
+                            font-weight: normal;
+                            font-family: $font-light;
+                        }
+                    }
+                }
+            }
+        }
     }
 }

@@ -43,14 +43,18 @@
                         </li>
                     </ul>
                 </div>
+                <login-popover></login-popover>
             </div>
         </div>
+        <login-detail> </login-detail>
     </div>
 </template>
 
 <script>
+import loginDetail from '@/components/LoginDetail.vue'
+import loginPopover from '@/components/LoginPopover.vue'
 export default {
-    components: {},
+    components: { loginDetail, loginPopover },
 
     /*
     |--------------------------------------------------------------------------
@@ -71,6 +75,7 @@ export default {
     */
     data() {
         return {
+            image: 'profile-pic.png',
             countryListing: [
                 {
                     anchorLink: '#',

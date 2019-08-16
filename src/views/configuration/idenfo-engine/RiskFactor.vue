@@ -3,7 +3,7 @@
         <div class="filter-section">
             <div class="row">
                 <div class="col-md-6">
-                    <h2>Risk Factor & Weightage</h2>
+                    <h2 class="filter-heading">Risk Factor & Weightage</h2>
                 </div>
             </div>
         </div>

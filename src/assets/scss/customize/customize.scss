@@ -1370,6 +1370,10 @@ a {
     padding: 32px;
     box-shadow: 0px 0.5px 0px rgba(50, 50, 93, 0.2);
 
+    @include mobile {
+        padding: 14px 16px 32px;
+    }
+
     .col-md-4,
     .col-md-8 {
         @include mobile {
@@ -1401,6 +1405,39 @@ a {
         @include mobile {
             flex: 0 0 100% !important;
             max-width: 100% !important;
+        }
+    }
+
+    .filter-section {
+        .filter-title-section {
+            @include tablet {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+
+        .col-md-7 {
+            @include tablet {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+    }
+
+    .infoengine {
+        .filter-section {
+            .filter-heading {
+                @include mobile {
+                    margin-bottom: 0;
+                    margin-top: 7px;
+                }
+            }
+
+            h2 {
+                @include mobile {
+                    margin-bottom: 12px;
+                }
+            }
         }
     }
 }
@@ -2751,10 +2788,20 @@ a {
                 max-width: 85%;
             }
 
+            @include mobile {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+
             .col-md-3 {
                 @include tablet {
                     flex: 0 0 25%;
                     max-width: 25%;
+                }
+
+                @include mobile {
+                    flex: 0 0 100%;
+                    max-width: 100%;
                 }
             }
         }
@@ -2764,12 +2811,23 @@ a {
                 flex: 0 0 15%;
                 max-width: 15%;
             }
+
+            @include mobile {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
         }
 
         .col-md-5 {
             @include tablet {
                 flex: 0 0 100%;
                 max-width: 100%;
+            }
+
+            @include mobile {
+                position: static;
+                flex: 0 0 40%;
+                max-width: 40%;
             }
         }
 
@@ -2782,6 +2840,12 @@ a {
                 flex: 0 0 100%;
                 max-width: 100%;
             }
+
+            @include mobile {
+                position: static;
+                flex: 0 0 60%;
+                max-width: 60%;
+            }
         }
     }
 }
@@ -2793,6 +2857,11 @@ a {
                 flex: 0 0 85%;
                 max-width: 85%;
             }
+
+            @include mobile {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
         }
 
         .col-md-3 {
@@ -2801,10 +2870,20 @@ a {
                 max-width: 15%;
             }
 
+            @include mobile {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+
             .col-md-6 {
                 @include tablet {
                     flex: 0 0 100%;
                     max-width: 100%;
+                }
+
+                @include mobile {
+                    flex: 0 0 50%;
+                    max-width: 50%;
                 }
 
                 &.export-btn-section {
@@ -2812,6 +2891,10 @@ a {
                         position: absolute;
                         top: -54px;
                         right: 0;
+                    }
+
+                    @include mobile {
+                        position: static;
                     }
                 }
             }
@@ -2828,8 +2911,44 @@ a {
         }
     }
 }
+
 .mobile-text-center {
     @include mobile {
         text-align: center;
+    }
+}
+
+.screening-data-section {
+    .filter-section {
+        .filter-title-section {
+            @include tablet {
+                flex: 0 0 40%;
+                max-width: 40%;
+            }
+
+            @include mobile {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+
+        .col-md-4 {
+            @include tablet {
+                flex: 0 0 60%;
+                max-width: 60%;
+            }
+
+            @include mobile {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+
+            .col-md-3 {
+                @include mobile {
+                    flex: 0 0 25%;
+                    max-width: 25%;
+                }
+            }
+        }
     }
 }
