@@ -158,14 +158,20 @@ header {
                     margin-right: 6px;
                     a {
                         span {
-                            font-size: 0.6rem;
+                            /*                             font-size: 0.6rem; */
                         }
                     }
                 }
             }
         }
     }
-
+    @include tabletL {
+        &.show-menu {
+            .menu-list {
+                display: block;
+            }
+        }
+    }
     @include mobile {
         position: fixed;
         transition: 0.3s ease-in-out;
@@ -176,18 +182,29 @@ header {
         transform: translateX(100%);
         &.show-menu {
             transform: translateX(0%);
+            z-index: 999;
         }
         .header-menu {
             &.navigation {
                 width: 100%;
                 padding-left: 0px;
                 height: 100%;
+                .close-side-bar {
+                    display: block;
+                    z-index: 99;
+                    i {
+                        color: $primary;
+                    }
+                }
                 ul {
                     display: flex;
                     height: 100%;
                     flex-direction: column;
                     justify-content: center;
                     text-align: center;
+                    @include mobile {
+                        top: 0;
+                    }
                     li {
                         margin-right: 0px;
                         margin-bottom: 10px;

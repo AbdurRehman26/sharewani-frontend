@@ -41,7 +41,7 @@
             </div>
         </div>
         <div
-            class="table-section  tablet-table-small-min-width mobile-table-responsive-md"
+            class="table-section  tablet-table-small-min-width mobile-table-responsive-xlg"
         >
             <b-table :items="items" :fields="fields">
                 <template slot="rating" slot-scope="data">

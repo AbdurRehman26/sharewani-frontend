@@ -141,6 +141,18 @@ body {
             ul {
                 padding: 0;
                 margin-right: 0;
+                @include tabletL {
+                    position: relative;
+                    background: none;
+                    border: none;
+                    text-align: left;
+                    padding: 0;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    box-shadow: none;
+                    display: block;
+                }
                 li {
                     margin-right: 0px;
                     width: 100%;
@@ -255,6 +267,13 @@ body {
         align-self: center;
         flex-direction: column;
         justify-content: center;
+        border-radius: 5px;
+        img {
+            width: 25px;
+            margin: 0 auto;
+            top: -2px;
+            position: relative;
+        }
     }
     @include mobile {
         height: 31px;

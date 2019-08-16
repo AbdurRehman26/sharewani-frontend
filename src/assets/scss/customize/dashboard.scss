@@ -96,7 +96,7 @@
 		font-size: $font-size-base + 0.22;
 	}
 	@include mobileS {
-		top: 38%;
+		top: 35% !important;
 	}
 }
 
@@ -107,6 +107,9 @@
 		left: 0;
 		text-align: center;
 		width: 100%;
+		@include mobile {
+			top: 45% !important;
+		}
 	}
 }
 
@@ -133,6 +136,9 @@
 		width: 50%;
 		padding: 0 10px;
 		margin-bottom: 15px;
+		@include mobile {
+			width: 100% !important;
+		}
 	}
 	&.cols-1 {
 		> div {
@@ -162,7 +168,8 @@
 			@include mobileS {
 				width: 50%;
 				.legend-value {
-					margin-top: 1px;
+					margin-top: -1px;
+					font-size: 0.75rem;
 				}
 			}
 		}
@@ -197,6 +204,12 @@
 		}
 	}
 	@include mobile {
+		margin-top: 20px;
+		float: left;
+		width: 100%;
+		display: block;
+		height: 90px;
+		overflow-x: auto;
 		&.table-style {
 			.legend-title {
 				font-size: 0.75rem;
@@ -211,6 +224,29 @@
 				top: 3px !important;
 			}
 		}
+	}
+}
+
+.card {
+	&.dashboard-card {
+		@include mobile {
+			.table-scroll {
+				.inner {
+					border: solid 0px;
+				}
+			}
+			.custom-legend-wrapper {
+				&.table-style {
+					height: auto;
+				}
+			}
+		}
+	}
+}
+
+.amcharts-chart-div {
+	@include mobile {
+		height: 300px;
 	}
 }
 
@@ -235,9 +271,9 @@
 		font-size: 0.75rem;
 	}
 	@include mobileS {
-		font-size: 0.6rem;
+		font-size: 0.8rem;
 		margin-right: 4px;
-		width: 70px;
+		width: 160px;
 	}
 }
 
@@ -252,7 +288,8 @@
 		margin-top: 3px;
 	}
 	@include mobileS {
-		font-size: 0.55rem;
+		font-size: 0.75rem;
+		margin-top: -1px;
 	}
 }
 
