@@ -13,9 +13,7 @@
             v-if="menuListing.length > 0"
             class="responsive-header-menu"
         >
-            <span></span>
-            <span></span>
-            <span></span>
+            <img src="@/assets/images/sub-menu.svg" />
         </div>
         <header
             :class="
@@ -27,6 +25,9 @@
                 class="header-menu navigation"
                 :class="stepStyle == true ? 'step-menu' : ''"
             >
+                <span class="close-side-bar" @click="mainMain = false"
+                    ><i class="icon-delete"></i
+                ></span>
                 <div
                     v-if="$route.meta.noSidebar == true"
                     class="logo-container"

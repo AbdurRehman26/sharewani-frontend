@@ -749,6 +749,7 @@ export default new Router({
                         name: 'Register Customers',
                         title: 'Register Customer | Upload Document',
                         sessionStep: '1',
+                        bodyClass: 'register-customer-body',
                     },
                 },
                 {
