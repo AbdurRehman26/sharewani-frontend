@@ -36,7 +36,9 @@
         </div>
 
         <!-- user management table -->
-        <div class="table-section tablet-table-xs-min-width">
+        <div
+            class="table-section tablet-table-xs-min-width mobile-table-responsive-lg"
+        >
             <b-table :items="items" :fields="fields" class="user-roles-table">
                 <!-- status slot -->
                 <template slot="status" slot-scope="data">

@@ -177,10 +177,23 @@
             }
             @include mobile {
                 .two-list {
-                    width: 170px;
+                    width: 210px;
                 }
                 .w-150px {
                     width: 150px;
+                }
+            }
+        }
+    }
+    &.mobile-table-responsive-lg {
+        .table {
+            min-width: 740px;
+            @include mobile {
+                .two-list {
+                    width: 200px !important;
+                }
+                .user-roles-action {
+                    width: 300px;
                 }
             }
         }
