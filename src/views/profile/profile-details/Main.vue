@@ -27,7 +27,9 @@
                                             <span>Go back</span>
                                         </router-link>
                                     </div>
-                                    <div class="col-md-3 text-center">
+                                    <div
+                                        class="col-md-3 text-center btn-profile-section"
+                                    >
                                         <base-button
                                             v-b-modal.cancel-review-process-popup
                                             btnLabel="Cancel Review Process"
@@ -35,7 +37,7 @@
                                             btnVariant="link font-semibold"
                                         ></base-button>
                                     </div>
-                                    <div class="col-md-3">
+                                    <div class="col-md-3 btn-profile-section">
                                         <base-button
                                             v-b-modal.kyc-status-review-popup
                                             btnLabel="KYC STATUS REVIEW"
@@ -43,7 +45,7 @@
                                             btnVariant="primary"
                                         ></base-button>
                                     </div>
-                                    <div class="col-md-3">
+                                    <div class="col-md-3 btn-profile-section">
                                         <base-button
                                             v-b-modal.manual-alert-popup
                                             btnLabel="Create Manual Alert"

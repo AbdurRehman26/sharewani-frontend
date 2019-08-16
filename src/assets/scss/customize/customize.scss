@@ -2985,3 +2985,80 @@ a {
         }
     }
 }
+
+.customer-profile {
+    .wrap-content {
+        .col-md-3 {
+            &.btn-profile-section {
+                @include mobile {
+                    flex: 0 0 100% !important;
+                    max-width: 100% !important;
+                }
+            }
+        }
+    }
+}
+
+.filter-all-customers {
+    .col-md-6 {
+        .col-md-6 {
+            @include tablet {
+                flex: 0 0 75%;
+                max-width: 75%;
+            }
+
+            @include mobile {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+
+        .col-md-3 {
+            @include tablet {
+                flex: 0 0 25% !important;
+                max-width: 25% !important;
+            }
+
+            @include mobile {
+                flex: 0 0 50% !important;
+                max-width: 50% !important;
+            }
+
+            &.export-file-btn {
+                @include tablet {
+                    position: absolute;
+                    right: 0;
+                    top: auto;
+                    bottom: 55px;
+                    flex: 0 0 40% !important;
+                    max-width: 40% !important;
+                }
+
+                @include mobile {
+                    position: static;
+                    flex: 0 0 50% !important;
+                    max-width: 50% !important;
+                }
+            }
+        }
+    }
+}
+
+.data-segment-page,
+.app-access-page {
+    .filter-section {
+        .filter-title-section {
+            @include tablet {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+
+        .col-md-7 {
+            @include tablet {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+    }
+}
