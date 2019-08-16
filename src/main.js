@@ -33,10 +33,14 @@ new Vue({
             document.title =
                 process.env.VUE_APP_TITLE + ' | ' + this.$route.meta.title
         },
+        pageTop() {
+            window.scrollTo(0, 0)
+        },
     },
     watch: {
         $route: function() {
             this.checkMeta()
+            this.pageTop()
         },
     },
 }).$mount('#app')

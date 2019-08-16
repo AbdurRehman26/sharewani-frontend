@@ -103,6 +103,9 @@ span {
         padding-bottom: 25px;
         flex-direction: column;
         .download-current-file {
+            .btn-icon {
+                left: -10px;
+            }
             button {
                 position: relative;
                 right: 0;
@@ -1829,7 +1832,7 @@ a {
     textarea,
     input,
     .field-input {
-        font-size: 0.73rem !important;
+        font-size: 0.875rem !important;
     }
 
     .add-more-section {
@@ -2329,7 +2332,7 @@ a {
         }
         .form-field-types {
             p {
-                max-width: 135px;
+                max-width: 125px;
             }
         }
     }
