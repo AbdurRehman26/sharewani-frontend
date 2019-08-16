@@ -18,7 +18,7 @@
                                 ></b-form-radio-group>
                             </b-form-group>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-6 filter-btn-section">
                             <div class="row">
                                 <div class="col-md-6">
                                     <base-search></base-search>

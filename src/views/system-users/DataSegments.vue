@@ -10,7 +10,7 @@
                         <div class="col-md-6 col-xs-12">
                             <base-search></base-search>
                         </div>
-                        <div class="col-md-6 col-xs-12">
+                        <div class="col-md-6 col-xs-12 filter-btn-section">
                             <div class="row">
                                 <div class="col-md-4 col-xs-12">
                                     <base-button
