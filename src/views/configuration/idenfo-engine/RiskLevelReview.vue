@@ -3,7 +3,9 @@
         <div class="filter-section row-min-space">
             <div class="row">
                 <div class="col-md-12 filter-title-section">
-                    <h2>Risk Level Review Configuration</h2>
+                    <h2 class="filter-heading">
+                        Risk Level Review Configuration
+                    </h2>
                 </div>
             </div>
         </div>
