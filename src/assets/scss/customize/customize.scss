@@ -1339,6 +1339,7 @@ a {
             position: absolute;
             right: 3px;
             font-size: 1.3rem;
+            color: $grey-lite;
         }
     }
     input[type='text'] {
@@ -1470,8 +1471,10 @@ a {
                 }
             }
         }
+        @include mobile {
+            min-width: 800px;
+        }
     }
-
     margin-bottom: 32px;
 }
 
@@ -2237,6 +2240,11 @@ a {
         .col-md-4 {
             flex: 0 0 100%;
             max-width: 100%;
+        }
+        .form-field-types {
+            p {
+                max-width: 135px;
+            }
         }
     }
 }

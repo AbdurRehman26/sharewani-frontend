@@ -75,7 +75,7 @@
         </div>
 
         <!-- user management table -->
-        <div class="table-section table-min-width">
+        <div class="table-section table-min-width mobile-table-responsive ">
             <b-table :items="items" :fields="fields">
                 <template slot="profile" slot-scope="data">
                     <div class="profile-area">
