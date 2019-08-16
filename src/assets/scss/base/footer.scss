@@ -13,9 +13,17 @@
             display: inline-block;
             position: relative;
             padding: 0 16px;
+
+            @include mobile {
+                font-size: 13px;
+            }
             a {
                 color: #7f8fa4;
                 text-decoration: none;
+
+                @include mobile {
+                    font-size: 13px;
+                }
                 &:hover {
                     text-decoration: underline;
                 }
