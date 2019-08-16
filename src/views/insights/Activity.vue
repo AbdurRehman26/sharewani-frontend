@@ -88,10 +88,12 @@
                             <div class="dashboard-charts">
                                 <h2 class="heading">Activity Timeline</h2>
                                 <!-- activity timeline dashboard chart -->
-                                <div
-                                    id="activity-timeline-report"
-                                    class="amcharts-div activity-timeline-report"
-                                ></div>
+                                <div class="chart-container">
+                                    <div
+                                        id="activity-timeline-report"
+                                        class="amcharts-div activity-timeline-report"
+                                    ></div>
+                                </div>
                                 <!-- activity timeline dashboard chart end-->
                             </div>
                         </div>
@@ -105,10 +107,12 @@
                                     KYC Alerts by Screening Type
                                 </h2>
                                 <!-- dashboard alerts report -->
-                                <div
-                                    id="alerts-by-type"
-                                    class="amcharts-div alerts-by-type"
-                                ></div>
+                                <div class="chart-container">
+                                    <div
+                                        id="alerts-by-type"
+                                        class="amcharts-div alerts-by-type"
+                                    ></div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -202,10 +206,12 @@
                                     Aging by Alert Type
                                 </h2>
                                 <!-- dashboard alerts report -->
-                                <div
-                                    id="aging-by-alert-type"
-                                    class="amcharts-div alerts-by-type"
-                                ></div>
+                                <div class="chart-container">
+                                    <div
+                                        id="aging-by-alert-type"
+                                        class="amcharts-div alerts-by-type"
+                                    ></div>
+                                </div>
                             </div>
                         </div>
                     </div>

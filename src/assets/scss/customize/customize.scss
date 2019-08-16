@@ -125,12 +125,72 @@ span {
     fill: $primary;
 }
 
+.stastics-section {
+    @include mobile {
+        .dashboard-card {
+            &.dashbaord-stastics {
+                padding: 20px 0px;
+                margin-bottom: 15px;
+                h2 {
+                    font-size: 12px;
+                }
+                p {
+                    font-size: 13px;
+                }
+            }
+        }
+        .col-md-3 {
+            &:nth-child(odd) {
+                padding-right: 5px;
+            }
+            &:nth-child(even) {
+                padding-left: 5px;
+            }
+        }
+    }
+}
+
 .btn-icon {
     position: absolute;
     left: 0;
     i {
         font-size: 1.125rem;
         padding-right: 4px;
+    }
+}
+
+.dashboard-card {
+    .dashboard-charts {
+        .chart-container {
+            height: 430px;
+            padding-bottom: 30px;
+            position: relative;
+        }
+        @include mobile {
+            height: auto;
+            overflow: visible;
+            .chart-container {
+                overflow-x: auto;
+                overflow-y: hidden;
+                height: 420px;
+            }
+            #activity-timeline-report,
+            #alerts-by-type,
+            #aging-by-alert-type,
+            #customers-by-work-type,
+            #customers-account-by-month,
+            #customers-by-industry {
+                width: 550px;
+                overflow: auto;
+            }
+        }
+    }
+}
+
+#activity-timeline-report {
+    @include mobile {
+        width: 550px;
+        overflow: auto;
     }
 }
 

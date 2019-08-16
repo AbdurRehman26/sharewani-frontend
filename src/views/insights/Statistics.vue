@@ -71,10 +71,12 @@
                             <div class="dashboard-charts">
                                 <h2 class="heading">Customers by Work Type</h2>
                                 <!-- Customers by Work Type -->
-                                <div
-                                    id="customers-by-work-type"
-                                    class="amcharts-div customers-by-work-type"
-                                ></div>
+                                <div class="chart-container">
+                                    <div
+                                        id="customers-by-work-type"
+                                        class="amcharts-div customers-by-work-type"
+                                    ></div>
+                                </div>
                                 <!-- Customers by Work Type end-->
                             </div>
                         </div>
@@ -86,10 +88,12 @@
                                     Customers Account Opening by Month
                                 </h2>
                                 <!-- Customers Account Opening by Month -->
-                                <div
-                                    id="customers-account-by-month"
-                                    class="amcharts-div customers-account-by-month"
-                                ></div>
+                                <div class="chart-container">
+                                    <div
+                                        id="customers-account-by-month"
+                                        class="amcharts-div customers-account-by-month"
+                                    ></div>
+                                </div>
                                 <!-- Customers Account Opening by Month -->
                             </div>
                         </div>
@@ -103,10 +107,12 @@
                                     Customers by Industry
                                 </h2>
                                 <!-- Customers by Industry -->
-                                <div
-                                    id="customers-by-industry"
-                                    class="amcharts-div customers-by-industry"
-                                ></div>
+                                <div class="chart-container">
+                                    <div
+                                        id="customers-by-industry"
+                                        class="amcharts-div customers-by-industry"
+                                    ></div>
+                                </div>
                                 <!-- Customers by Industry end -->
                             </div>
                         </div>
