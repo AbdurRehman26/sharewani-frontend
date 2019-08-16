@@ -9,6 +9,9 @@
             min-width: 1080px;
             @include mobile {
                 min-width: 1300px;
+                .action {
+                    width: 120px;
+                }
             }
         }
     }

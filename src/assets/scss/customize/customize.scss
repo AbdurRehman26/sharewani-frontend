@@ -103,6 +103,9 @@ span {
         padding-bottom: 25px;
         flex-direction: column;
         .download-current-file {
+            .btn-icon {
+                left: -10px;
+            }
             button {
                 position: relative;
                 right: 0;
