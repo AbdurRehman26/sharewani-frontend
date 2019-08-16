@@ -18,7 +18,7 @@
                 min-width: 1090px;
             }
             @include mobile {
-                min-width: 810px;
+                min-width: 860px;
             }
         }
     }
@@ -174,7 +174,10 @@
             }
             @include mobile {
                 .two-list {
-                    width: 210px;
+                    width: 170px;
+                }
+                .w-150px {
+                    width: 150px;
                 }
             }
         }
@@ -183,7 +186,8 @@
         .table {
             @include mobile {
                 .two-list {
-                    width: 350px !important;
+                    // width: 350px !important;
+                    width: 200px !important;
                 }
             }
         }
@@ -194,6 +198,19 @@
                 min-width: 450px;
                 .two-list {
                     width: 350px !important;
+                }
+            }
+        }
+    }
+    &.mobile-descp-width {
+        .table {
+            @include mobile {
+                min-width: 900px;
+                .two-list {
+                    width: 350px !important;
+                }
+                .id-center {
+                    width: 192px !important;
                 }
             }
         }
