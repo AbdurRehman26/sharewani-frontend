@@ -1472,7 +1472,17 @@ a {
             }
         }
         @include mobile {
-            min-width: 800px;
+            min-width: 540px;
+            .risk-factor {
+                width: 380px;
+            }
+            .risk-score {
+                width: 210px;
+                text-align: center;
+            }
+            .risk-level {
+                text-align: center;
+            }
         }
     }
     margin-bottom: 32px;
@@ -1690,6 +1700,11 @@ a {
         overflow-x: hidden;
         max-height: 420px;
         margin-bottom: 24px;
+        @include mobile {
+            overflow-x: hidden;
+            max-height: calc(100% - 190px);
+            margin-bottom: 0px;
+        }
     }
 
     #style-2::-webkit-scrollbar {
@@ -1774,10 +1789,21 @@ a {
         }
     }
 
+    textarea,
+    input,
+    .field-input {
+        font-size: 0.73rem !important;
+    }
+
     .add-more-section {
         .form-group {
             padding: 0 4px;
         }
+    }
+    @include mobile {
+        overflow-x: hidden;
+        max-height: calc(100% - 120px);
+        margin-bottom: 0px;
     }
 }
 
@@ -1817,6 +1843,9 @@ a {
         &:nth-child(4) {
             margin-bottom: 0;
         }
+        @include mobile {
+            margin-bottom: 3px !important;
+        }
     }
 
     &.overwrite-radio {
@@ -1851,9 +1880,11 @@ a {
         width: 100%;
         min-height: 290px;
         background-size: cover;
-
         .image-preview {
             width: 100% !important;
+        }
+        @include mobile {
+            min-height: initial;
         }
     }
     .play-btn {
@@ -2795,5 +2826,10 @@ a {
                 min-width: 100% !important;
             }
         }
+    }
+}
+.mobile-text-center {
+    @include mobile {
+        text-align: center;
     }
 }

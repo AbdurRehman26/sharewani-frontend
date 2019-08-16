@@ -70,6 +70,9 @@
 
                     @include mobile {
                         font-size: 14px !important;
+                        &.placeholder {
+                            font-size: 0.73rem !important;
+                        }
                     }
                 }
             }
@@ -96,6 +99,15 @@
                         text-transform: uppercase;
                         font-size: 0.75rem;
                         font-family: $font_medium;
+                    }
+                    @include mobile {
+                        width: 100px;
+                        top: 10px;
+                        right: 13px;
+                        h4 {
+                            margin-bottom: 3px;
+                            font-size: 0.6rem;
+                        }
                     }
                 }
             }
