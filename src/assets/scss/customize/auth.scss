@@ -71,4 +71,7 @@
 			}
 		}
 	}
+	@include mobileSHeight {
+		flex-direction: column;
+	}
 }
