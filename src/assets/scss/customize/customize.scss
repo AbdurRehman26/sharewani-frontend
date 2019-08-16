@@ -2148,14 +2148,28 @@ a {
 }
 
 .permissions-section {
+    .form-group {
+        @include mobile {
+            margin-bottom: 16px;
+        }
+    }
+
     .custom-checkbox {
         width: 33.3%;
         float: left;
+
+        @include mobile {
+            width: 100%;
+        }
     }
 
     .custom-radio {
         width: 31%;
         float: left;
+
+        @include mobile {
+            width: 100%;
+        }
     }
 
     .col-form-label {
@@ -2171,6 +2185,10 @@ a {
         label {
             font-family: $font_medium;
             margin-bottom: 15px;
+
+            @include mobile {
+                margin-bottom: 5px;
+            }
             span {
                 margin-left: 5px;
                 margin-top: 3px;
@@ -2332,8 +2350,8 @@ a {
                 }
             }
             @include mobile {
-                flex: 100% !important;
-                max-width: 100% !important;
+                flex: 50% !important;
+                max-width: 50% !important;
             }
         }
         .col-md-9 {
@@ -2382,6 +2400,10 @@ a {
             font-family: $font_regular;
             color: $body-color !important;
             margin-bottom: 19px;
+
+            @include mobile {
+                margin-bottom: 12px;
+            }
         }
     }
 
@@ -2949,6 +2971,17 @@ a {
                     max-width: 25%;
                 }
             }
+        }
+    }
+}
+
+.filter-btn-section {
+    .col-md-5,
+    .col-md-7,
+    .col-md-8,
+    .col-md-4 {
+        @include mobile {
+            width: 50%;
         }
     }
 }
