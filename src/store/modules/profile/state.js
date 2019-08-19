@@ -74,7 +74,7 @@ export default {
                 },
                 {
                     key: 'rep',
-                    label: 'REP',
+                    label: 'PEP',
                     thClass: 'rep-icon',
                     class: 'text-center',
                 },
@@ -576,6 +576,10 @@ export default {
                             detail: 'Automotive Industry',
                         },
                         {
+                            title: 'Length of Relationship:',
+                            detail: '32 months',
+                        },
+                        {
                             title: 'Tax ID:',
                             detail: '234-92934993-9',
                         },
@@ -616,7 +620,7 @@ export default {
                         },
                         {
                             title: 'Max Upper Credit Limit:',
-                            detail: '$2.000 (Expected in month)',
+                            detail: '$2,000 (Expected in month)',
                         },
                         {
                             title: 'Channel Mode:',
@@ -829,7 +833,7 @@ export default {
                         {
                             title: 'Is Manually Overwrited:',
                             detail:
-                                'Yes, overwrited by Greg Eliss on June 2, 2019',
+                                'Yes, overwritten by Greg Eliss on June 2, 2019',
                         },
                         {
                             title: 'Manually Overwrite Result',
@@ -931,7 +935,8 @@ export default {
                             subHeading: 'Approver',
                             date: 'July 4, 2019 10:45 a.m.',
                             details:
-                                'Submitted KYC Review Status and changed KYC Status to Approved with the following comment, \n \nSubmitted KYC Review Status and changed KYC Status to Approved with the following comment,',
+                                'Submitted KYC Review Status and changed KYC Status to <b> Approved</b> with the following comment, <span>"I didn\'t found anything unusual with the profile. All records are clear and up to date." </span>',
+                            fileName: true,
                         },
                         {
                             image: 'member-1.png',

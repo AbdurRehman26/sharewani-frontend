@@ -32,7 +32,7 @@ export default {
             dataDateFormat: 'YYYY-MM-DD',
             colors: ['#C1C1C1', '#00C535', '#C91F37'],
             color: '#1B1B1E',
-            fontFamily: 'Proxima Nova',
+            fontFamily: 'arial',
             fontSize: 14,
             categoryAxis: {
                 parseDates: true,
@@ -306,7 +306,7 @@ export default {
             ],
             startDuration: 1,
             color: '#1B1B1E',
-            fontFamily: 'Proxima Nova',
+            fontFamily: 'arial',
             fontSize: 14,
             categoryAxis: {
                 autoWrap: true,
@@ -395,7 +395,7 @@ export default {
             titleField: 'category',
             valueField: 'column-1',
             color: '#1B1B1E',
-            fontFamily: 'Proxima Nova',
+            fontFamily: 'arial',
             fontSize: 14,
             allLabels: [],
             balloon: {
@@ -459,7 +459,7 @@ export default {
             titleField: 'category',
             valueField: 'catValue',
             color: '#1B1B1E',
-            fontFamily: 'Proxima Nova',
+            fontFamily: 'arial',
             fontSize: 14,
             allLabels: [],
             customLabels: '<b>[[value]]</b> [[percents]]%',
@@ -566,7 +566,7 @@ export default {
             titleField: 'category',
             valueField: 'column-1',
             color: '#1B1B1E',
-            fontFamily: 'Proxima Nova',
+            fontFamily: 'arial',
             fontSize: 14,
             allLabels: [],
             balloon: {
@@ -678,7 +678,7 @@ export default {
             titleField: 'category',
             valueField: 'column-1',
             color: '#1B1B1E',
-            fontFamily: 'Proxima Nova',
+            fontFamily: 'arial',
             fontSize: 14,
             allLabels: [],
             balloon: {
@@ -806,7 +806,7 @@ export default {
             valueField: 'column-1',
             accessible: false,
             color: '#1B1B1E',
-            fontFamily: 'Proxima Nova',
+            fontFamily: 'arial',
             fontSize: 14,
             allLabels: [],
             balloon: {
@@ -907,7 +907,7 @@ export default {
             ],
             startDuration: 1,
             color: '#1B1B1E',
-            fontFamily: 'Proxima Nova',
+            fontFamily: 'arial',
             fontSize: 14,
             categoryAxis: {
                 gridPosition: 'start',
@@ -1016,7 +1016,7 @@ export default {
             valueField: 'column-1',
             accessible: false,
             color: '#1B1B1E',
-            fontFamily: 'Proxima Nova',
+            fontFamily: 'arial',
             fontSize: 14,
             allLabels: [],
             balloon: {
@@ -1110,7 +1110,7 @@ export default {
             rotate: true,
             startDuration: 1,
             color: '#1B1B1E',
-            fontFamily: 'Proxima Nova',
+            fontFamily: 'arial',
             fontSize: 14,
             categoryAxis: {
                 gridPosition: 'start',
@@ -1209,7 +1209,7 @@ export default {
             rotate: true,
             startDuration: 1,
             color: '#1B1B1E',
-            fontFamily: 'Proxima Nova',
+            fontFamily: 'arial',
             fontSize: 14,
             categoryAxis: {
                 gridPosition: 'start',
@@ -1333,7 +1333,7 @@ export default {
             rotate: false,
             startDuration: 1,
             color: '#1B1B1E',
-            fontFamily: 'Proxima Nova',
+            fontFamily: 'arial',
             fontSize: 14,
             categoryAxis: {
                 gridPosition: 'start',
@@ -1560,7 +1560,7 @@ export default {
             titleField: 'category',
             valueField: 'column',
             color: '#1B1B1E',
-            fontFamily: 'Proxima Nova',
+            fontFamily: 'arial',
             fontSize: 14,
             allLabels: [],
             balloon: {
@@ -1879,7 +1879,7 @@ export default {
             titleField: 'category',
             valueField: 'column',
             color: '#1B1B1E',
-            fontFamily: 'Proxima Nova',
+            fontFamily: 'arial',
             fontSize: 14,
             allLabels: [],
             balloon: {

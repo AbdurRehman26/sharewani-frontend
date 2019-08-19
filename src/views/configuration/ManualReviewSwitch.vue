@@ -20,7 +20,7 @@
                                 </h5>
                                 <p>
                                     If you have made any major changes in the
-                                    configuration which might change the name
+                                    configurations which might change the name
                                     screening or risk rating outcome of customer
                                     profiles, you can manually initate the
                                     review process.

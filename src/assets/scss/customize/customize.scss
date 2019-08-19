@@ -862,7 +862,7 @@ a {
                         margin-bottom: 12px;
 
                         label {
-                            text-transform: capitalize;
+                            text-transform: none;
                             margin-bottom: 7px;
                             font-size: 0.875rem;
                             font-family: $font_light;
@@ -2786,12 +2786,10 @@ a {
             left: auto;
             top: 36px;
             @include mobile {
-                position: absolute;
-                right: 32px;
-                left: auto;
-                top: 32px;
-                bottom: auto;
-                margin-bottom: 20px;
+                position: static;
+                margin-top: 19px;
+                float: right;
+                margin-bottom: 0;
             }
         }
         .profile-pic {
@@ -2870,7 +2868,7 @@ a {
         }
     }
     @include mobile {
-        padding-top: 80px;
+        padding-top: 28px;
     }
 }
 
@@ -3275,8 +3273,10 @@ a {
     }
 
     .btn-secondary {
-        margin: 0 !important;
-        width: 100%;
+        @include mobile {
+            margin: 0 !important;
+            width: 100%;
+        }
     }
 }
 
@@ -3295,5 +3295,17 @@ a {
                 font-family: $font-medium;
             }
         }
+    }
+}
+
+.kyc-checkbox-section {
+    .custom-checkbox .custom-control-label:before,
+    .custom-checkbox .custom-control-label:after,
+    input[type='checkbox'] {
+        display: none;
+    }
+
+    .custom-checkbox {
+        padding-left: 0;
     }
 }

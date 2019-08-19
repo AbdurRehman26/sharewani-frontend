@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="kyc-checkbox-section">
         <b-form-group class="mb-0">
             <template slot="label">
                 <b-form-checkbox
