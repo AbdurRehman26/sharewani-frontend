@@ -1,5 +1,5 @@
 <template>
-    <div class=" customers-info-section">
+    <div class="customers-info-section">
         <div class="row">
             <div class="col-md-3 col-sm-12 text-center profile-image-section">
                 <div class="customer-profile">
