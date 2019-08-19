@@ -3,7 +3,11 @@
         <div class="header-fix">
             <base-logo></base-logo>
         </div>
-        <div @click="$emit('sidemenu')" class="responsive-sidebar-menu">
+        <div
+            v-if="!$route.meta.noSidebar"
+            @click="$emit('sidemenu')"
+            class="responsive-sidebar-menu"
+        >
             <span></span>
             <span></span>
             <span></span>
