@@ -125,21 +125,23 @@
                                     KYC Alerts by Alert Type
                                 </h2>
                                 <!-- screening hit by type report -->
-                                <div
-                                    id="screening-by-type"
-                                    class="amcharts-div pie-charts screening-by-type"
-                                ></div>
+                                <div class="pie-chart-inner-table">
+                                    <div
+                                        id="screening-by-type"
+                                        class="amcharts-div pie-charts screening-by-type"
+                                    ></div>
+                                    <div class="chart-highest-record">
+                                        <h2>HIGHEST</h2>
+                                        <p>
+                                            Periodic Alerts:
+                                            <strong>420</strong> (44.9%)
+                                        </p>
+                                    </div>
+                                </div>
                                 <div
                                     id="alertTypesLegend"
                                     class="custom-legend-wrapper"
                                 ></div>
-                                <div class="chart-highest-record">
-                                    <h2>HIGHEST</h2>
-                                    <p>
-                                        Periodic Alerts:
-                                        <strong>420</strong> (44.9%)
-                                    </p>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -154,18 +156,23 @@
                                     Name Screening Hit by Type
                                 </h2>
                                 <!-- dashboard alerts report -->
-                                <div
-                                    id="screen-hit-by-type"
-                                    class="amcharts-div pie-charts alerts-by-type"
-                                ></div>
+                                <div class="pie-chart-inner-table">
+                                    <div
+                                        id="screen-hit-by-type"
+                                        class="amcharts-div pie-charts alerts-by-type"
+                                    ></div>
+                                    <div class="chart-highest-record">
+                                        <h2>HIGHEST</h2>
+                                        <p>
+                                            PEP Hit:
+                                            <strong>320</strong> (44.9%)
+                                        </p>
+                                    </div>
+                                </div>
                                 <div
                                     id="screenHitByTypeLegend"
                                     class="custom-legend-wrapper"
                                 ></div>
-                                <div class="chart-highest-record">
-                                    <h2>HIGHEST</h2>
-                                    <p>PEP Hit: <strong>320</strong> (44.9%)</p>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -178,21 +185,24 @@
                                     Customer Onboarding With / Without Alert
                                 </h2>
                                 <!-- dashboard alerts report -->
-                                <div
-                                    id="on-board-issue"
-                                    class="amcharts-div pie-charts alerts-by-type"
-                                ></div>
+                                <div class="pie-chart-inner-table">
+                                    <div
+                                        id="on-board-issue"
+                                        class="amcharts-div pie-charts alerts-by-type"
+                                    ></div>
+                                    <div class="chart-highest-record">
+                                        <h2>HIGHEST</h2>
+                                        <p>
+                                            Without Alert:
+                                            <strong>2173</strong> (68.9%)
+                                        </p>
+                                    </div>
+                                </div>
+
                                 <div
                                     id="onBoardIssueLegend"
                                     class="custom-legend-wrapper"
                                 ></div>
-                                <div class="chart-highest-record">
-                                    <h2>HIGHEST</h2>
-                                    <p>
-                                        Without Alert:
-                                        <strong>2173</strong> (68.9%)
-                                    </p>
-                                </div>
                             </div>
                         </div>
                     </div>
