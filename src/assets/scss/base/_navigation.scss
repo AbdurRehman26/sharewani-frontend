@@ -165,6 +165,11 @@
                         margin: auto;
                         border: 5px solid #fff;
                         background-color: $border-color;
+
+                        @include mobile {
+                            top: -3px;
+                        }
+
                         i {
                             display: none;
                         }
@@ -172,6 +177,10 @@
                     &:not(.point) {
                         top: 9px;
                         text-transform: uppercase;
+
+                        @include mobile {
+                            top: 0;
+                        }
                     }
                 }
                 &.router-link-active {
