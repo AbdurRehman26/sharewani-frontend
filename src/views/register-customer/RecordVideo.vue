@@ -6,7 +6,7 @@
                 <p class="info">
                     <i class="icon-error_outline"></i>Please point video camera
                     on customer face and make sure their straight face is
-                    completly visible in the video. Click on Record button to
+                    completely visible in the video. Click on Record button to
                     record 10 seconds video.
                 </p>
                 <div class="video-record">
@@ -30,7 +30,7 @@
                             <i class="path3"></i>
                         </i>
                         <p v-if="showVideo == false">Record</p>
-                        <p v-if="showVideo == true">Stop</p>
+                        <p v-if="showVideo == true">Finish</p>
                     </div>
                 </div>
                 <base-button
@@ -108,6 +108,7 @@ export default {
         onRecordingEnded() {
             this.showVideo = true
             this.timeShow = false
+            this.countDown = 10
         },
 
         countDownTimer() {

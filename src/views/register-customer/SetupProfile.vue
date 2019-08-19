@@ -80,7 +80,7 @@
                                 <div class="form-group">
                                     <date-time-picker
                                         dateFormat="ll"
-                                        placeholder="DD / MM/ YYYY"
+                                        placeholder="DD / MM / YYYY"
                                         date
                                         close
                                         noFooter
@@ -279,7 +279,7 @@
                                     v-model="form.relationship"
                                     required
                                     autocomplete="no"
-                                    placeholder="Enter Length of relationship (in months)"
+                                    placeholder="Enter length of relationship (in months)"
                                 ></b-form-input>
                             </b-form-group>
                         </div>
@@ -354,7 +354,7 @@
                                 <div class="form-group ">
                                     <date-time-picker
                                         dateFormat="ll"
-                                        placeholder="DD / MM/ YYYY"
+                                        placeholder="DD / MM / YYYY"
                                         date
                                         close
                                         noFooter
@@ -427,7 +427,7 @@ export default {
                 docnumber: null,
 
                 nationalityOptions: [
-                    { value: null, text: 'Select Nationality' },
+                    { value: null, text: 'Select nationality' },
                     'Pakistani',
                     'Indian',
                     'British',
@@ -445,7 +445,7 @@ export default {
                 ],
 
                 residenceOptions: [
-                    { value: null, text: 'Select Country of Residence' },
+                    { value: null, text: 'Select country of residence' },
                     'Afghanistan',
                     'Albania',
                     'Algeria',

@@ -21,7 +21,7 @@
                                 id="input-1"
                                 type="email"
                                 required
-                                placeholder="Enter email address"
+                                placeholder="Enter your email address"
                             ></b-form-input>
                         </b-form-group>
                         <b-form-group

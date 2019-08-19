@@ -63,6 +63,30 @@ span {
     }
 }
 
+.btn-min-width {
+    min-width: 260px;
+}
+
+.multiselect {
+    .multiselect__tags {
+        &::-webkit-scrollbar-track {
+            background-color: #fff;
+            border-radius: 51px;
+        }
+        &::-webkit-scrollbar {
+            width: 6px;
+            height: 3px;
+            background-color: #fff;
+            border-radius: 51px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: #cfd4d9;
+            border-radius: 51px;
+        }
+    }
+}
+
 .show-record-video {
     #myVideo {
         width: 100%;
