@@ -8,6 +8,7 @@
             color="indigo"
             no-button-now="false"
             :formatted="dateFormat"
+            :format="formatVal"
             :only-date="date"
             :only-time="time"
             :auto-close="close"
@@ -40,6 +41,10 @@ export default {
             default: null,
         },
         placeholder: {
+            type: String,
+            default: null,
+        },
+        formatVal: {
             type: String,
             default: null,
         },
