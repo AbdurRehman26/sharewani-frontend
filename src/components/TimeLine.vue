@@ -47,9 +47,12 @@
                                                         </p>
                                                     </div>
 
-                                                    <p>
-                                                        {{ describe.details }}
-                                                    </p>
+                                                    <p
+                                                        v-html="
+                                                            describe.details
+                                                        "
+                                                        class="timeline-talks"
+                                                    ></p>
 
                                                     <tags
                                                         v-if="
@@ -68,6 +71,25 @@
                                                                 .headings
                                                         "
                                                     ></tags>
+
+                                                    <div
+                                                        v-if="describe.fileName"
+                                                        class="timeline-upload-file"
+                                                    >
+                                                        <div
+                                                            class="file-section"
+                                                        >
+                                                            <pdf-icon></pdf-icon>
+                                                        </div>
+                                                        <div
+                                                            class="file-attach"
+                                                        >
+                                                            <base-button
+                                                                btnVariant="link"
+                                                                btnLabel="Download Attachement"
+                                                            ></base-button>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -83,9 +105,11 @@
 </template>
 <script>
 import tags from '@/components/Tags.vue'
+import pdfIcon from '@/components/icons/PdfIcon.vue'
 export default {
     components: {
         tags,
+        pdfIcon,
     },
 
     /*

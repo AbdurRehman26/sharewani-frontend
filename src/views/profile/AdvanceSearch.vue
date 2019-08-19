@@ -262,7 +262,7 @@ export default {
                 productType: null,
 
                 genderOptions: [
-                    { text: 'Select gender', value: null },
+                    { text: 'Select Gender', value: null },
                     'Male',
                     'Female',
                     'Not Applicable',

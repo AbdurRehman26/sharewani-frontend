@@ -8,7 +8,9 @@
                 <div class="col-md-7 text-right">
                     <div class="row">
                         <div class="col-md-6 col-xs-12">
-                            <base-search></base-search>
+                            <base-search
+                                placeholder="Search application"
+                            ></base-search>
                         </div>
                         <div class="col-md-6 col-xs-12 filter-btn-section">
                             <div class="row">

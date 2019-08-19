@@ -15,7 +15,7 @@
                             <div class="col-md-9">
                                 <div class="row">
                                     <div
-                                        class="col-md-3 text-right go-back-profile"
+                                        class="col-md-2 text-right go-back-profile"
                                     >
                                         <router-link
                                             to="/customer-profiles"
@@ -45,7 +45,7 @@
                                             btnVariant="primary"
                                         ></base-button>
                                     </div>
-                                    <div class="col-md-3 btn-profile-section">
+                                    <div class="col-md-4 btn-profile-section">
                                         <base-button
                                             v-b-modal.manual-alert-popup
                                             btnLabel="Create Manual Alert"

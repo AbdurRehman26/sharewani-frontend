@@ -3,12 +3,14 @@
         <div class="filter-section row-min-space">
             <div class="row">
                 <div class="col-md-5 filter-title-section">
-                    <h2>Data Segment</h2>
+                    <h2>Data Segments</h2>
                 </div>
                 <div class="col-md-7 text-right">
                     <div class="row">
                         <div class="col-md-6 col-xs-12">
-                            <base-search></base-search>
+                            <base-search
+                                placeholder="Search data segment"
+                            ></base-search>
                         </div>
                         <div class="col-md-6 col-xs-12 filter-btn-section">
                             <div class="row">

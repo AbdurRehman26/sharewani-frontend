@@ -30,7 +30,7 @@
                     <div class="col-md-12">
                         <b-form-group
                             id="input-group-2"
-                            label="Rating"
+                            label="Override Risk Rating To"
                             label-for="rating"
                         >
                             <b-form-select
@@ -95,7 +95,7 @@ export default {
             },
 
             rating: [
-                { value: null, text: 'Select Rating' },
+                { value: null, text: 'Select Risk Rating' },
                 'High Risk',
                 'Medium Risk',
                 'Low Risk',

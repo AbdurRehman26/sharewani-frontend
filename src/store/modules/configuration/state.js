@@ -2563,7 +2563,7 @@ export default {
                 items: [
                     {
                         descriptionid: 1,
-                        description2: 'Secntions List',
+                        description2: 'Sanctions Lists',
                         description3: 'Ship',
                         status: [
                             {
@@ -2576,7 +2576,7 @@ export default {
                     },
                     {
                         descriptionid: 2,
-                        description2: 'Secntions List',
+                        description2: 'Sanctions Lists',
                         description3: 'Company',
                         status: [
                             {
@@ -2589,7 +2589,7 @@ export default {
                     },
                     {
                         descriptionid: 3,
-                        description2: 'Secntions List',
+                        description2: 'Sanctions Lists',
                         description3: 'Bank',
                         status: [
                             {
@@ -2602,7 +2602,7 @@ export default {
                     },
                     {
                         descriptionid: 4,
-                        description2: 'Secntions List',
+                        description2: 'Sanctions Lists',
                         description3: 'Government Entity',
                         status: [
                             {
@@ -2615,7 +2615,7 @@ export default {
                     },
                     {
                         descriptionid: 5,
-                        description2: 'Secntions List',
+                        description2: 'Sanctions Lists',
                         description3: 'State Owned Company',
                         status: [
                             {
@@ -2628,7 +2628,7 @@ export default {
                     },
                     {
                         descriptionid: 6,
-                        description2: 'Secntions List',
+                        description2: 'Sanctions Lists',
                         description3: 'Charity',
                         status: [
                             {
@@ -2641,7 +2641,7 @@ export default {
                     },
                     {
                         descriptionid: 7,
-                        description2: 'Secntions List',
+                        description2: 'Sanctions Lists',
                         description3: 'Criminal/Terroist',
                         status: [
                             {
@@ -2655,7 +2655,7 @@ export default {
 
                     {
                         descriptionid: 8,
-                        description2: 'Secntions List',
+                        description2: 'Sanctions Lists',
                         description3: 'Religious Sect',
                         status: [
                             {
@@ -2669,7 +2669,7 @@ export default {
 
                     {
                         descriptionid: 9,
-                        description2: 'Secntions List',
+                        description2: 'Sanctions Lists',
                         description3: 'Country',
                         status: [
                             {
@@ -2683,7 +2683,7 @@ export default {
 
                     {
                         descriptionid: 10,
-                        description2: 'Secntions List',
+                        description2: 'Other Official Lists',
                         description3: 'Ship',
                         status: [
                             {

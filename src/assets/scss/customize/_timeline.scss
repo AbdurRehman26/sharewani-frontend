@@ -156,14 +156,6 @@
                         font-size: 0.875rem;
                         color: $body-color;
                         margin-bottom: 2px;
-                        width: 150px;
-                        text-overflow: ellipsis;
-                        white-space: nowrap;
-                        overflow: hidden;
-
-                        @include mobile {
-                            width: 120px;
-                        }
                     }
 
                     span {
@@ -183,6 +175,12 @@
                         margin: 0;
                         font-size: 0.75rem;
                     }
+
+                    .float-right {
+                        @include mobile {
+                            float: left !important;
+                        }
+                    }
                 }
             }
         }
@@ -200,6 +198,37 @@
             display: block;
             margin: auto;
             margin-bottom: 30px;
+        }
+    }
+}
+
+.timeline-talks {
+    span {
+        display: block;
+        margin-top: 12px;
+        font-size: 0.875rem !important;
+        color: $body-color !important;
+        margin-bottom: 16px;
+    }
+}
+
+.timeline-upload-file {
+    width: 100%;
+
+    .file-section {
+        width: 22px;
+        float: left;
+    }
+
+    .file-attach {
+        width: calc(100% - 22px);
+        float: left;
+
+        .btn {
+            font-size: 0.875rem;
+            color: $secondary;
+            padding: 5px 12px 6px;
+            height: auto;
         }
     }
 }

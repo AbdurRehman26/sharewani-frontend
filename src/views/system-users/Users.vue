@@ -11,7 +11,9 @@
                         <div class="col-xs-12 col-md-9">
                             <div class="row">
                                 <div class="col-xs-12 col-md-3">
-                                    <base-search></base-search>
+                                    <base-search
+                                        placeholder="Search user"
+                                    ></base-search>
                                 </div>
                                 <div class="col-xs-12 col-md-3">
                                     <b-form-group>

@@ -64,7 +64,6 @@
             <h2>Last Review</h2>
             <div class="card customer-last-review">
                 <div class="card-body">
-                    <base-status :statusType="status"></base-status>
                     <div
                         class="profile-pic"
                         :style="{
@@ -82,9 +81,7 @@
                         </h5>
                         <span class="status-types"> {{ subHeading }}</span>
                         <span class="status-types">{{ date }}</span>
-                        <p class="date-content">
-                            {{ content }}
-                        </p>
+                        <p class="date-content" v-html="content"></p>
                         <p>
                             {{ details }}
                         </p>
@@ -99,6 +96,7 @@
                             ></base-button>
                         </div>
                     </div>
+                    <base-status :statusType="status"></base-status>
                 </div>
             </div>
         </div>
@@ -154,9 +152,9 @@ export default {
             image: 'member-1.png',
             name: 'Jacqueline Asong',
             subHeading: 'Approver',
-            date: 'july 4, 2019 10:45 a.m.',
+            date: 'July 4, 2019 10:45 a.m.',
             content:
-                'Submitted KYC Review Status and changed KYC Status to Approved with the following comment,',
+                'Submitted KYC Review Status and changed KYC Status to <b>Approved</b> with the following comment,',
             details:
                 '"I didn\'t found anything unusual with the profile. All records are clear and up to date."',
 

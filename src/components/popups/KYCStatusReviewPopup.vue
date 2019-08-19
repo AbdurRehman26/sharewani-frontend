@@ -54,6 +54,19 @@
                         rows="3"
                     ></textarea>
                 </div>
+
+                <b-form-group
+                    id="input-group-6"
+                    label="Attach Document"
+                    label-for="documentAttach"
+                >
+                    <b-form-file
+                        v-model="documentAttach"
+                        accept="image/jpeg, image/png"
+                        placeholder="Choose a file to attach with review"
+                        drop-placeholder="Drop file here..."
+                    ></b-form-file>
+                </b-form-group>
             </b-form>
         </b-modal>
     </div>
@@ -74,7 +87,7 @@ export default {
             form: {
                 kycUpdate: '',
                 comments: '',
-
+                documentAttach: null,
                 status: [
                     { text: 'Pending Review', value: null },
                     'Accepted',

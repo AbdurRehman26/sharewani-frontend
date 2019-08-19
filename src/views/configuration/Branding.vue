@@ -79,13 +79,13 @@
                         <div class="fields-area">
                             <div class="brand-color-area">
                                 <h5>
-                                    Brand Colors
+                                    Brand Colours
                                 </h5>
                                 <div class="row">
                                     <div class="col-md-6">
                                         <b-form-group
                                             id="input-group-6"
-                                            label="PRIMARY COLOR CODE"
+                                            label="PRIMARY COLOUR CODE"
                                             label-for="primary-code"
                                         >
                                             <div class="color-area">
@@ -93,7 +93,7 @@
                                                     id="primary-code"
                                                     type="text"
                                                     v-model="primaryColor"
-                                                    placeholder="Primary Color"
+                                                    placeholder="Primary Colour"
                                                 ></b-form-input>
                                                 <b-form-input
                                                     type="color"
@@ -119,7 +119,7 @@
                                     <div class="col-md-6">
                                         <b-form-group
                                             id="input-group-6"
-                                            label="SECONDARY COLOR CODE"
+                                            label="SECONDARY COLOUR CODE"
                                             label-for="secondary-code"
                                         >
                                             <div class="color-area">
@@ -127,7 +127,7 @@
                                                     id="secondary-code"
                                                     type="text"
                                                     v-model="secondaryColor"
-                                                    placeholder="Secondary Color"
+                                                    placeholder="Secondary Colour"
                                                 ></b-form-input>
                                                 <b-form-input
                                                     type="color"
@@ -153,7 +153,7 @@
                                     <div class="col-md-6">
                                         <b-form-group
                                             id="input-group-6"
-                                            label="INTERFACE DARK COLOR CODE"
+                                            label="INTERFACE DARK COLOUR CODE"
                                             label-for="interface-dark-code"
                                         >
                                             <div class="color-area">
@@ -161,7 +161,7 @@
                                                     id="interface-dark-code"
                                                     type="text"
                                                     v-model="darkColor"
-                                                    placeholder="Secondary Color"
+                                                    placeholder="Secondary Colour"
                                                 ></b-form-input>
                                                 <b-form-input
                                                     type="color"
@@ -187,7 +187,7 @@
                                     <div class="col-md-6">
                                         <b-form-group
                                             id="input-group-6"
-                                            label="INTERFACE DARK MEDIUM DARK COLOR CODE"
+                                            label="INTERFACE DARK MEDIUM DARK COLOUR CODE"
                                             label-for="interface-medium-code"
                                         >
                                             <div class="color-area">
@@ -195,7 +195,7 @@
                                                     id="interface-medium-code"
                                                     type="text"
                                                     v-model="darkMediumColor"
-                                                    placeholder="Secondary Color"
+                                                    placeholder="Secondary Colour"
                                                 ></b-form-input>
                                                 <b-form-input
                                                     type="color"

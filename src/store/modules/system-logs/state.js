@@ -124,7 +124,7 @@ export default {
                 '#990000',
             ],
             color: '#1B1B1E',
-            fontFamily: 'Proxima Nova',
+            fontFamily: 'Arial',
             theme: 'default',
             autoMargins: true,
             startDuration: 1,
