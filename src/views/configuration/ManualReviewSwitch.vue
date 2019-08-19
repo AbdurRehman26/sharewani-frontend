@@ -1,5 +1,5 @@
 <template>
-    <div class="wrap-content">
+    <div class="wrap-content manual-review-page">
         <div class="filter-section">
             <div class="row">
                 <div class="col-md-4">

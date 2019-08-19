@@ -1091,6 +1091,22 @@ a {
     }
 }
 
+.customer-profile {
+    .wrap-content {
+        .document-section {
+            @include mobileS {
+                padding: 30px 20px 0;
+            }
+            .col-md-3 {
+                @include mobileS {
+                    flex: 100% !important;
+                    max-width: 100% !important;
+                }
+            }
+        }
+    }
+}
+
 .w-100px {
     width: 100px !important;
 }
@@ -1675,6 +1691,10 @@ a {
     hr {
         margin: 30px 0 25px;
         border-color: $border-color;
+
+        @include mobile {
+            margin: 7px 0 17px;
+        }
     }
 }
 
@@ -1683,6 +1703,10 @@ a {
         max-width: 100%;
         flex: 0 0 100%;
         margin-bottom: 20px;
+    }
+
+    @include mobile {
+        margin-bottom: 0;
     }
 }
 
@@ -1721,6 +1745,32 @@ a {
                 .col-md-4 {
                     padding-left: 7px;
                     padding-right: 7px;
+                }
+            }
+        }
+
+        .screening-hit-section {
+            @include mobile {
+                height: 100%;
+                max-height: 570px;
+            }
+
+            label {
+                @include mobile {
+                    margin-bottom: 5px;
+                }
+            }
+
+            .col-md-8 {
+                @include mobile {
+                    margin-bottom: 10px;
+                }
+            }
+
+            h4 {
+                @include mobile {
+                    margin-top: 11px;
+                    margin-bottom: 14px;
                 }
             }
         }
@@ -1950,7 +2000,7 @@ a {
             margin-bottom: 0;
         }
         @include mobile {
-            margin-bottom: 3px !important;
+            margin-bottom: 11px !important;
         }
     }
 
@@ -2093,17 +2143,29 @@ a {
         overflow: hidden;
         pointer-events: none;
 
+        @include mobile {
+            padding: 0 17px;
+        }
+
         .file-title {
             h5 {
                 font-size: 0.875rem;
                 font-family: $font_medium;
                 margin-bottom: 7px;
+
+                @include mobile {
+                    line-height: 19px;
+                }
             }
 
             p {
                 color: $nav-color;
                 font-size: 0.875rem;
                 margin-bottom: 0 !important;
+
+                @include mobile {
+                    line-height: 19px;
+                }
             }
         }
     }
@@ -2420,6 +2482,11 @@ a {
                 &.profile-image-section {
                     flex: 100%;
                     max-width: 100%;
+
+                    @include mobile {
+                        flex: 100% !important;
+                        max-width: 100% !important;
+                    }
                 }
             }
             @include mobile {
@@ -2554,12 +2621,6 @@ a {
         }
         &.danger {
             background: $danger !important;
-        }
-    }
-
-    .client-blacklist-title {
-        h3 {
-            font-family: $font_medium;
         }
     }
 
@@ -2705,9 +2766,9 @@ a {
             top: 36px;
             @include mobile {
                 position: absolute;
-                right: 0;
-                left: 0;
-                top: 20px;
+                right: 32px;
+                left: auto;
+                top: 32px;
                 bottom: auto;
                 margin-bottom: 20px;
             }
@@ -2752,6 +2813,10 @@ a {
 
                 .btn {
                     padding: 0 0 0 10px;
+
+                    @include mobile {
+                        margin-bottom: 0;
+                    }
                 }
             }
 
@@ -2823,6 +2888,10 @@ a {
     img {
         max-width: 78%;
         display: inline-block;
+
+        @include mobile {
+            max-width: 100%;
+        }
     }
 }
 
@@ -3157,5 +3226,35 @@ a {
                 max-width: 100%;
             }
         }
+    }
+}
+
+.client-blacklist-title {
+    h3 {
+        font-family: $font_medium !important;
+
+        @include mobile {
+            margin-bottom: 0;
+            font-size: 1.125rem;
+        }
+    }
+}
+
+.manual-review-page {
+    .filter-section {
+        @include mobile {
+            margin-bottom: 0;
+        }
+    }
+    .btn-primary {
+        @include mobile {
+            margin: 0 0 10px 0 !important;
+            width: 100%;
+        }
+    }
+
+    .btn-secondary {
+        margin: 0 !important;
+        width: 100%;
     }
 }
