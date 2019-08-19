@@ -93,9 +93,15 @@
 		font-size: $font-size-sm;
 		text-transform: uppercase;
 		font-family: $font-medium;
+		@include mobile {
+			font-size: $font-size-sm + 0.05;
+		}
 	}
 	p {
 		font-size: $font-size-base + 0.22;
+		@include mobile {
+			font-size: $font-size-sm + 0.1;
+		}
 	}
 	@include mobileS {
 		top: 35% !important;
@@ -176,7 +182,8 @@
 			}
 			@include mobile {
 				.legend-title {
-					width: 90px;
+					// width: 80px;
+					width: 56px;
 				}
 			}
 		}
@@ -191,7 +198,7 @@
 				}
 
 				.legend-title {
-					width: 69px;
+					width: 60px;
 				}
 			}
 		}

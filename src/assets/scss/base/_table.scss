@@ -10,7 +10,7 @@
             @include mobile {
                 min-width: 1300px;
                 .action {
-                    width: 120px;
+                    width: 150px;
                 }
             }
         }
@@ -57,7 +57,7 @@
                 tbody {
                     td {
                         &.two-list {
-                            width: 210px;
+                            width: 220px;
                         }
                     }
                 }
@@ -104,12 +104,12 @@
                     width: 362px;
                 }
                 .user-roles-action {
-                    width: 320px;
+                    width: 350px;
                 }
                 tbody {
                     td {
                         &.two-list {
-                            width: 230px;
+                            width: 210px;
                         }
                     }
                 }
@@ -156,12 +156,12 @@
                     width: 162px;
                 }
                 .two-list {
-                    width: 200px;
+                    width: 210px;
                 }
                 tbody {
                     td {
                         &.two-list {
-                            width: 200px;
+                            width: 210px;
                         }
                     }
                 }
@@ -177,10 +177,10 @@
             }
             @include mobile {
                 .two-list {
-                    width: 210px;
+                    width: 230px;
                 }
                 .w-150px {
-                    width: 150px;
+                    width: 160px;
                 }
             }
         }
@@ -190,7 +190,7 @@
             min-width: 740px;
             @include mobile {
                 .two-list {
-                    width: 200px !important;
+                    width: 210px !important;
                 }
                 .user-roles-action {
                     width: 300px;
@@ -203,7 +203,7 @@
             min-width: 1100px;
             @include mobile {
                 .two-list {
-                    width: 280px !important;
+                    width: 290px !important;
                 }
                 .user-roles-action {
                     width: 300px;
@@ -216,7 +216,7 @@
             @include mobile {
                 .two-list {
                     // width: 350px !important;
-                    width: 200px !important;
+                    width: 210px !important;
                 }
             }
         }
@@ -226,7 +226,7 @@
             @include mobile {
                 min-width: 450px;
                 .two-list {
-                    width: 350px !important;
+                    width: 360px !important;
                 }
             }
         }
@@ -236,10 +236,41 @@
             @include mobile {
                 min-width: 900px;
                 .two-list {
-                    width: 350px !important;
+                    width: 360px !important;
                 }
                 .id-center {
                     width: 192px !important;
+                }
+            }
+        }
+    }
+    &::-webkit-scrollbar-track {
+        background-color: #fff;
+        border-radius: 51px;
+    }
+
+    &::-webkit-scrollbar {
+        width: 3px;
+        height: 3px;
+        background-color: #fff;
+        border-radius: 51px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #cfd4d9;
+        border-radius: 51px;
+    }
+    @include mobile {
+        .table {
+            &.two-list {
+                font-size: 0.875rem;
+            }
+            &.single-list {
+                font-size: 0.875rem;
+            }
+            .action-review {
+                p {
+                    font-size: 0.875rem;
                 }
             }
         }

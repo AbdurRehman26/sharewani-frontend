@@ -1805,8 +1805,11 @@ a {
         margin-bottom: 24px;
         @include mobile {
             overflow-x: hidden;
-            max-height: calc(100% - 190px);
+            // max-height: calc(100% - 190px);
+            // margin-bottom: 0px;
+            max-height: none;
             margin-bottom: 0px;
+            height: 100%;
         }
     }
 
@@ -2609,7 +2612,6 @@ a {
     color: #a4a6ab;
     margin: 8px 0 0 0;
     font-family: $font_light;
-
     span {
         font-size: 0.75rem;
         display: inline-block;
@@ -2623,6 +2625,19 @@ a {
 
     i {
         font-size: 15px;
+    }
+    @include mobile {
+        margin: 12px 0 0 0;
+        position: relative;
+        span {
+            padding-left: 18px;
+            display: inline-block;
+        }
+        i {
+            margin-right: 0;
+            position: absolute;
+            top: 0;
+        }
     }
 }
 

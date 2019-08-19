@@ -32,6 +32,71 @@
         &.field-type-panel {
             position: sticky;
             top: 80px;
+            @include mobile {
+                display: none;
+                position: fixed;
+                width: 100%;
+                left: 0;
+                top: auto;
+                height: calc(100% - 50px);
+                align-items: center;
+                align-content: center;
+                justify-content: center;
+                flex-direction: column;
+                padding-left: 0;
+                padding-right: 0;
+                bottom: 0;
+                border-radius: 0;
+                z-index: 9;
+                &.show-Component {
+                    display: flex;
+                    > div {
+                        width: 100%;
+                        padding-left: 30px;
+                        padding-right: 30px;
+                    }
+                    h4 {
+                        margin-bottom: 20px;
+                    }
+                }
+            }
         }
+    }
+}
+
+.component-panel-close {
+    position: absolute;
+    z-index: 9;
+    top: 10px;
+    right: -10px;
+    font-size: 30px;
+    display: none;
+    i {
+        color: $secondary;
+    }
+    @include mobile {
+        display: block;
+        text-align: right;
+    }
+}
+
+.component-panel-open {
+    position: fixed;
+    z-index: 9;
+    bottom: 10px;
+    right: 20px;
+    background-color: $secondary;
+    border-radius: 5px;
+    display: none;
+    width: 35px;
+    height: 35px;
+    i {
+        color: #fff;
+        font-size: 1rem;
+    }
+    @include mobile {
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
