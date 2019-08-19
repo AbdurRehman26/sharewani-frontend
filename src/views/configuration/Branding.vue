@@ -1,5 +1,5 @@
 <template>
-    <div class="wrap-content">
+    <div class="wrap-content branding-page">
         <div class="filter-section">
             <div class="row">
                 <div class="col-md-4">

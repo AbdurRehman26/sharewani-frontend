@@ -3280,7 +3280,8 @@ a {
     }
 }
 
-.ocr-config-page {
+.ocr-config-page,
+.branding-page {
     .filter-section {
         @include mobile {
             margin-bottom: 0;
