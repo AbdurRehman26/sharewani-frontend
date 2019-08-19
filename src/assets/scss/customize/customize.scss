@@ -2069,6 +2069,10 @@ a {
                 ul {
                     display: inline-block;
                     float: right;
+                    @include mobile {
+                        display: flex;
+                        float: none;
+                    }
                 }
             }
         }
