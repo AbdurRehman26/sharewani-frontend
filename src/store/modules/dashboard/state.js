@@ -348,24 +348,21 @@ export default {
             dataProvider: [
                 {
                     category: 'Document Verification Hit ',
-                    'category-type-1':
-                        ' ID Document going to expire in the next 60 days',
-                    'category-type-2': 'Documents  Mis-matched',
+                    'category-type-1': ' Documents nearing expiry',
+                    'category-type-2': 'Documents mismatched.',
                     'column-1': '80',
                     'column-2': '50',
                 },
                 {
                     category: 'Name Screening Hit',
                     'category-type-1': 'Sanction hit',
-                    'category-type-2':
-                        'PEP, Enforcement or Client Black list hit',
+                    'category-type-2': 'PEP, Enforcement or Black list hit',
                     'column-1': '60',
                     'column-2': '70',
                 },
                 {
                     category: 'Risk rating hit',
-                    'category-type-1':
-                        "Customer's periodic review due in the next 60 days",
+                    'category-type-1': 'Periodic Review due',
                     'category-type-2': 'High Risk or Sanctioned',
                     'column-1': '20',
                     'column-2': '30',

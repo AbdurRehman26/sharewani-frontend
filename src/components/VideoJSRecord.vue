@@ -62,8 +62,12 @@ export default {
 
         // user clicked the record button and started recording
         this.player.on('startRecord', () => {
-            // console.log('started recording!')
             this.$emit('recordingStarted')
+        })
+
+        this.player.on('stopRecord', () => {
+            this.$emit('recordingStarted')
+            console.log('stop')
         })
 
         // user completed recording and stream is available

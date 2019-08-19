@@ -7,8 +7,9 @@
                         <div class="col-lg-12">
                             <h3>Thank you</h3>
                             <p>
-                                Customer account has been created successfully.
+                                {{ registrationText }}
                             </p>
+
                             <div class="generated-customer-id">
                                 <h4>1281375</h4>
                                 <p>UNIQUE CUSTOMER ID</p>
@@ -19,7 +20,8 @@
                 <base-button
                     btnType="submit"
                     btnVariant="primary"
-                    btnLabel="REGISTER ANOTHER CUSTOMER"
+                    class="btn-min-width"
+                    :btnLabel="registrationBtnText"
                     @preventFunction="linking()"
                 ></base-button>
             </div>
@@ -52,7 +54,10 @@ export default {
     |--------------------------------------------------------------------------
     */
     data() {
-        return {}
+        return {
+            registrationText: null,
+            registrationBtnText: null,
+        }
     }, // End of Component > data
 
     /*
@@ -75,6 +80,17 @@ export default {
                 this.$router.push('/register-customer/upload-document')
             }
         },
+        onLoad() {
+            if (this.$route.meta.publicRegistration === true) {
+                this.registrationText =
+                    'You account has been created successfully'
+                this.registrationBtnText = 'GO TO MAIN WEBSITE'
+            } else {
+                this.registrationText =
+                    ' Customer account has been created successfully.'
+                this.registrationBtnText = 'REGISTER ANOTHER CUSTOMER'
+            }
+        },
     }, // End of Component > methods
 
     /*
@@ -82,6 +98,8 @@ export default {
     | Component > mounted
     |--------------------------------------------------------------------------
     */
-    mounted() {}, // End of Component > mounted
+    mounted() {
+        this.onLoad()
+    }, // End of Component > mounted
 } // End of export default
 </script>

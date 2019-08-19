@@ -21,7 +21,7 @@
                                 type="email"
                                 required
                                 autocomplete="no"
-                                placeholder="Enter username"
+                                placeholder="Enter your account username"
                             ></b-form-input>
                         </b-form-group>
                         <base-button

@@ -28,7 +28,7 @@
                             <b-form-file
                                 v-model="documentScanCopy"
                                 accept="image/jpeg, image/png"
-                                placeholder="Select scan copy (JPG or PNG file)"
+                                placeholder="Select scan copy (JPG, PNG or TIFF file)"
                                 drop-placeholder="Drop file here..."
                             ></b-form-file>
                         </b-form-group>
@@ -42,7 +42,7 @@
                             <b-form-file
                                 v-model="utilityScanCopy"
                                 accept="image/jpeg, image/png"
-                                placeholder="Select scan copy (JPG, PNG)"
+                                placeholder="Select scan copy (JPG, PNG or TIFF file)"
                                 drop-placeholder="Drop file here..."
                             ></b-form-file>
                         </b-form-group>
