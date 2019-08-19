@@ -1,5 +1,5 @@
 <template>
-    <div class="wrap-content">
+    <div class="wrap-content ocr-config-page">
         <div class="filter-section">
             <div class="row">
                 <div class="col-md-4">
@@ -24,15 +24,13 @@
                                             label="Use OCR to populate Data in Registration Form"
                                             label-for="populatedata"
                                         >
-                                            <b-form-group>
-                                                <b-form-radio-group
-                                                    v-model="form.populateData"
-                                                    :options="
-                                                        form.populateDataOption
-                                                    "
-                                                    name="populatedata"
-                                                ></b-form-radio-group>
-                                            </b-form-group>
+                                            <b-form-radio-group
+                                                v-model="form.populateData"
+                                                :options="
+                                                    form.populateDataOption
+                                                "
+                                                name="populatedata"
+                                            ></b-form-radio-group>
                                         </b-form-group>
                                     </div>
                                 </div>

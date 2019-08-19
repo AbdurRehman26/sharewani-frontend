@@ -333,6 +333,11 @@ a {
         border-bottom: 1px solid $grey-dark;
         margin-bottom: 34px;
         padding-bottom: 9px;
+
+        @include mobile {
+            margin-bottom: 17px;
+            padding-bottom: 0;
+        }
     }
 }
 
@@ -3272,5 +3277,22 @@ a {
     .btn-secondary {
         margin: 0 !important;
         width: 100%;
+    }
+}
+
+.ocr-config-page {
+    .filter-section {
+        @include mobile {
+            margin-bottom: 0;
+        }
+    }
+
+    .brand-color-area {
+        h5 {
+            @include mobile {
+                margin-bottom: 15px !important;
+                font-family: $font-medium;
+            }
+        }
     }
 }
