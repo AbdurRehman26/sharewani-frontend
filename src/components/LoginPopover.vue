@@ -1,21 +1,43 @@
 <template>
-    <div class="dashboard">
-        <div class="content-area">
-            <base-header
-                @sidemenu="$emit('responsiveSideBar')"
-                :menuListing="menuListing"
-            ></base-header>
-            <div class="right-panel">
-                <router-view></router-view>
-            </div>
+    <div class="profile-popover">
+        <div class="nav-dropdown">
+            <ul>
+                <li @click="mainMain = false">
+                    <a
+                        href="javascript:void(0);"
+                        v-b-modal.update-profile-popup
+                    >
+                        <i class="icon-person"></i>
+                        <span>Update Profile</span>
+                    </a>
+                </li>
+                <li @click="mainMain = false">
+                    <a
+                        href="javascript:void(0);"
+                        v-b-modal.change-password-popup
+                    >
+                        <i class="icon-change-password"></i>
+                        <span>Change Password</span>
+                    </a>
+                </li>
+                <li @click="mainMain = false">
+                    <a href="/">
+                        <i class="icon-sign-out"></i>
+                        <span>Sign Out</span>
+                    </a>
+                </li>
+            </ul>
         </div>
     </div>
 </template>
 
 <script>
+import { directive as onClickOutside } from 'vue-on-click-outside'
 export default {
     components: {},
-
+    directives: {
+        onClickOutside: onClickOutside,
+    },
     /*
     |--------------------------------------------------------------------------
     | Component > props
@@ -26,10 +48,6 @@ export default {
          * Value to determine the current compose mode which
          * varies between 'add' and 'edit'
          */
-        mode: {
-            type: String,
-            default: 'add',
-        },
     }, // End of Component > props
 
     /*
@@ -39,23 +57,9 @@ export default {
     */
     data() {
         return {
-            menuListing: [
-                {
-                    anchorLink: '/insights/alerts',
-                    menuLabel: 'Alerts',
-                    name: 'dashboard-alerts',
-                },
-                {
-                    anchorLink: '/insights/activity-dashboard',
-                    name: 'dashboard-activity-page',
-                    menuLabel: 'Activity Dashboard',
-                },
-                {
-                    anchorLink: '/insights/customer-statistics',
-                    name: 'dashboard-reporting-page',
-                    menuLabel: 'Customer Statistics',
-                },
-            ],
+            showPopover: false,
+            mainMain: false,
+            image: 'profile-pic.png',
         }
     }, // End of Component > data
 
@@ -71,7 +75,14 @@ export default {
     | Component > methods
     |--------------------------------------------------------------------------
     */
-    methods: {}, // End of Component > methods
+    methods: {
+        open() {
+            this.showPopover = true
+        },
+        close() {
+            this.showPopover = false
+        },
+    }, // End of Component > methods
 
     /*
     |--------------------------------------------------------------------------

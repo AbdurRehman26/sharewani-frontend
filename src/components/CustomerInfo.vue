@@ -1,7 +1,7 @@
 <template>
-    <div class=" customers-info-section">
+    <div class="customers-info-section">
         <div class="row">
-            <div class="col-md-3 text-center">
+            <div class="col-md-3 col-sm-12 text-center profile-image-section">
                 <div class="customer-profile">
                     <img
                         :src="
@@ -15,7 +15,7 @@
                     <span>Pending</span>
                 </div>
             </div>
-            <div class="col-md-9">
+            <div class="col-md-9 col-sm-12">
                 <ul v-for="(list, index) in customerDetails" :key="index">
                     <li>
                         <div class="seprator-section">

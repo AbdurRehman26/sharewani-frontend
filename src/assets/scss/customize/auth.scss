@@ -7,11 +7,21 @@
 		width: 160px;
 		height: auto;
 		margin: 3% auto 30px;
+		@include mobile {
+			width: 110px;
+			height: auto;
+			margin: 15px auto 20px;
+		}
 	}
 	.auth-heading {
 		font-size: 1.375rem;
 		font-family: $font_medium;
 		text-align: center;
+
+		@include mobile {
+			font-size: 18px;
+		}
+
 		span {
 			margin-top: 10px;
 			display: block;
@@ -19,6 +29,11 @@
 			font-family: $font_light;
 			color: $grey-medium;
 			line-height: 20px;
+
+			@include mobile {
+				font-size: 13px;
+			}
+
 			i {
 				color: $secondary;
 				font-style: normal;
@@ -49,6 +64,11 @@
 		margin-top: 25px;
 		display: block;
 		position: relative;
+
+		@include mobile {
+			font-size: 13px;
+		}
+
 		a {
 			text-decoration: none;
 			&:hover {
@@ -63,6 +83,9 @@
 			background: #fff;
 			border-radius: 2px;
 			display: block;
+			@include mobileXs {
+				display: none;
+			}
 		}
 		&.register-now {
 			margin-top: 0px;
@@ -70,5 +93,11 @@
 				display: none;
 			}
 		}
+		@include mobile {
+			margin-bottom: 10px;
+		}
+	}
+	@include mobileSHeight {
+		flex-direction: column;
 	}
 }

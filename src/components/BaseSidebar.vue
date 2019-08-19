@@ -1,9 +1,16 @@
 <template>
     <div class="sidebar">
         <div class="sidebar-listing">
+            <span class="close-side-bar" @click="$emit('closeSidemenu')">
+                <i class="icon-delete"></i>
+            </span>
             <div class="country-selection">
                 <ul>
-                    <li v-for="(list, index) in countryListing" :key="index">
+                    <li
+                        @click="$emit('onClick')"
+                        v-for="(list, index) in countryListing"
+                        :key="index"
+                    >
                         <a
                             href="javascript:void(0)"
                             :class="
@@ -25,6 +32,7 @@
                 <div class="navigation">
                     <ul>
                         <li
+                            @click="$emit('onClick')"
                             v-for="(list, index) in sidelinksListing"
                             :key="index"
                         >
@@ -35,14 +43,18 @@
                         </li>
                     </ul>
                 </div>
+                <login-popover></login-popover>
             </div>
         </div>
+        <login-detail> </login-detail>
     </div>
 </template>
 
 <script>
+import loginDetail from '@/components/LoginDetail.vue'
+import loginPopover from '@/components/LoginPopover.vue'
 export default {
-    components: {},
+    components: { loginDetail, loginPopover },
 
     /*
     |--------------------------------------------------------------------------
@@ -63,6 +75,7 @@ export default {
     */
     data() {
         return {
+            image: 'profile-pic.png',
             countryListing: [
                 {
                     anchorLink: '#',

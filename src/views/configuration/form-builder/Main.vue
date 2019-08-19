@@ -1,11 +1,11 @@
 <template>
-    <div class="wrap-content">
+    <div class="wrap-content form-registration">
         <div class="filter-section row-min-space">
             <div class="row">
-                <div class="col-md-7 filter-title-section">
+                <div class="col-md-6 filter-title-section">
                     <h2>Registration Form Builder</h2>
                 </div>
-                <div class="col-md-5 text-right">
+                <div class="col-md-6 text-right">
                     <div class="row">
                         <div class="col-md-8 text-right">
                             <base-button
@@ -28,10 +28,26 @@
         </div>
 
         <div class="config-list" ref="listingArea">
-            <ul>
+            <div v-show="listVal <= 850" class="config-list-dropdown">
+                <b-form-group
+                    id="input-group-5"
+                    label="Form Builder"
+                    label-for="form-builder"
+                >
+                    <b-form-select
+                        id="form-builder"
+                        class="form-control"
+                        v-model="menuListingChanges"
+                        :options="menuListing"
+                        v-on:change="onChange"
+                    >
+                    </b-form-select>
+                </b-form-group>
+            </div>
+            <ul v-show="listVal >= 850">
                 <li v-for="(list, index) in menuListing" :key="index">
-                    <router-link :to="list.anchorLink">
-                        <span>{{ list.menuLabel }}</span>
+                    <router-link :to="list.value">
+                        <span>{{ list.text }}</span>
                     </router-link>
                 </li>
             </ul>
@@ -71,14 +87,16 @@ export default {
     */
     data() {
         return {
+            menuListingChanges: '/configuration/form-builder',
+            listVal: null,
             menuListing: [
                 {
-                    anchorLink: '/configuration/form-builder',
-                    menuLabel: 'Setup Profile',
+                    value: '/configuration/form-builder',
+                    text: 'Setup Profile',
                 },
                 {
-                    anchorLink: '/configuration/form-builder/account-info',
-                    menuLabel: 'Account Info',
+                    value: '/configuration/form-builder/account-info',
+                    text: 'Account Info',
                 },
             ],
         }
@@ -115,6 +133,9 @@ export default {
         },
         tabFilter(index) {
             this.tabData = index
+        },
+        onChange() {
+            this.$router.push('' + this.menuListingChanges + '')
         },
     }, // End of Component > methods
 

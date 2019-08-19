@@ -1,5 +1,5 @@
 <template>
-    <div class="wrap-content">
+    <div class="wrap-content system-users-section">
         <div class="filter-section row-min-space">
             <div class="row">
                 <div class="col-md-12">
@@ -75,7 +75,7 @@
         </div>
 
         <!-- user management table -->
-        <div class="table-section table-min-width">
+        <div class="table-section table-min-width mobile-table-responsive ">
             <b-table :items="items" :fields="fields">
                 <template slot="profile" slot-scope="data">
                     <div class="profile-area">

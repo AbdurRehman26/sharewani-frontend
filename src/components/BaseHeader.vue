@@ -1,11 +1,37 @@
 <template>
     <div>
-        <div class="header-fix"></div>
-        <header :class="stepStyle == true ? 'step-menu-header' : ''">
+        <div class="header-fix">
+            <base-logo></base-logo>
+        </div>
+        <div
+            v-if="!$route.meta.noSidebar"
+            @click="$emit('sidemenu')"
+            class="responsive-sidebar-menu"
+        >
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div
+            @click="mainMain ^= true"
+            v-if="menuListing.length > 0"
+            class="responsive-header-menu"
+        >
+            <img src="@/assets/images/sub-menu.svg" />
+        </div>
+        <header
+            :class="
+                (stepStyle == true ? 'step-menu-header' : '',
+                mainMain == true ? 'show-menu' : '')
+            "
+        >
             <div
                 class="header-menu navigation"
                 :class="stepStyle == true ? 'step-menu' : ''"
             >
+                <span class="close-side-bar" @click="mainMain = false"
+                    ><i class="icon-delete"></i
+                ></span>
                 <div
                     v-if="$route.meta.noSidebar == true"
                     class="logo-container"
@@ -14,6 +40,7 @@
                 </div>
                 <ul class="menu-list">
                     <li
+                        @click="mainMain = false"
                         v-for="(list, index) in menuListing"
                         :key="index"
                         :class="[
@@ -42,56 +69,7 @@
                 </ul>
             </div>
             <div class="profile-block" v-if="$route.meta.noSidebar != true">
-                <div class="profile-main">
-                    <div
-                        class="profile-image"
-                        :style="{
-                            'background-image':
-                                'url(' +
-                                require('@/assets/images/' + image + '') +
-                                ')',
-                        }"
-                    ></div>
-                    <div class="profile-detail" @click="open">
-                        <h4>Sammy Lawson</h4>
-                        <p>Super Admin</p>
-                        <i class="icon-caret-down"></i>
-                    </div>
-                    <div
-                        class="profile-popover"
-                        v-if="showPopover"
-                        v-on-click-outside="close"
-                    >
-                        <div class="nav-dropdown">
-                            <ul>
-                                <li>
-                                    <a
-                                        href="javascript:void(0);"
-                                        v-b-modal.update-profile-popup
-                                    >
-                                        <i class="icon-person"></i>
-                                        <span>Update Profile</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="javascript:void(0);"
-                                        v-b-modal.change-password-popup
-                                    >
-                                        <i class="icon-change-password"></i>
-                                        <span>Change Password</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="/">
-                                        <i class="icon-sign-out"></i>
-                                        <span>Sign Out</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                <login-detail> </login-detail>
                 <update-profile-popup></update-profile-popup>
                 <change-password-popup></change-password-popup>
             </div>
@@ -100,11 +78,13 @@
 </template>
 
 <script>
+import loginDetail from '@/components/LoginDetail.vue'
 import updateProfilePopup from '@/components/popups/UpdateProfilePopup.vue'
 import changePasswordPopup from '@/components/popups/ChangePasswordPopup.vue'
 import { directive as onClickOutside } from 'vue-on-click-outside'
 export default {
     components: {
+        loginDetail,
         changePasswordPopup,
         updateProfilePopup,
     },
@@ -138,7 +118,7 @@ export default {
     */
     data() {
         return {
-            showPopover: false,
+            mainMain: false,
             image: 'profile-pic.png',
         }
     }, // End of Component > data
@@ -155,14 +135,7 @@ export default {
     | Component > methods
     |--------------------------------------------------------------------------
     */
-    methods: {
-        open() {
-            this.showPopover = true
-        },
-        close() {
-            this.showPopover = false
-        },
-    }, // End of Component > methods
+    methods: {}, // End of Component > methods
 
     /*
     |--------------------------------------------------------------------------

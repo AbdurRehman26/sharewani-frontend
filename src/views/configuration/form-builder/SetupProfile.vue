@@ -49,9 +49,22 @@
             <!-- Fields Type-->
             <div class="col-xs-12 col-md-4">
                 <div
+                    class="component-panel-open"
+                    @click="openComponent ^= true"
+                >
+                    <i class="icon-plus"></i>
+                </div>
+                <div
                     class="card card-builder field-type-panel with-shadow config-card-block"
+                    :class="openComponent == true ? 'show-Component' : ''"
                 >
                     <h4>Components</h4>
+                    <div
+                        class="component-panel-close"
+                        @click="openComponent ^= true"
+                    >
+                        <i class="icon-delete"></i>
+                    </div>
                     <div>
                         <div
                             class="form-field-types"
@@ -116,6 +129,7 @@ export default {
             navWidth: true,
             listVal: null,
             listDropdown: false,
+            openComponent: false,
             menuListing: [
                 {
                     anchorLink: '/configuration/form-builder/setup-profile',

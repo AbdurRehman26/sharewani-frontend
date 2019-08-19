@@ -1,5 +1,5 @@
 <template>
-    <div class="wrap-content">
+    <div class="wrap-content customer-statistics-page">
         <div class="filter-section">
             <div class="row">
                 <div class="col-md-10 filter-title-section">
@@ -27,18 +27,24 @@
                             <div class="dashboard-charts">
                                 <h2 class="heading">Customers by Age Group</h2>
                                 <!-- customers by age group -->
-                                <div
-                                    id="customer-by-age"
-                                    class="amcharts-div pie-charts customer-by-age"
-                                ></div>
+                                <div class="pie-chart-inner-table">
+                                    <div
+                                        id="customer-by-age"
+                                        class="amcharts-div pie-charts customer-by-age"
+                                    ></div>
+                                    <div class="chart-highest-record">
+                                        <h2>HIGHEST</h2>
+                                        <p>
+                                            55 - 64:
+                                            <strong>950</strong> (30.1%)
+                                        </p>
+                                    </div>
+                                </div>
                                 <div
                                     id="customerByAgeLegend"
                                     class="custom-legend-wrapper cols-3"
                                 ></div>
-                                <div class="chart-highest-record">
-                                    <h2>HIGHEST</h2>
-                                    <p>55 - 64: <strong>950</strong> (30.1%)</p>
-                                </div>
+
                                 <!-- customers by age group end-->
                             </div>
                         </div>
@@ -48,18 +54,23 @@
                             <div class="dashboard-charts">
                                 <h2 class="heading">Customers by Gender</h2>
                                 <!-- customers by gender -->
-                                <div
-                                    id="customers-by-gender"
-                                    class="amcharts-div pie-charts customer-by-gender"
-                                ></div>
+                                <div class="pie-chart-inner-table">
+                                    <div
+                                        id="customers-by-gender"
+                                        class="amcharts-div pie-charts customer-by-gender"
+                                    ></div>
+                                    <div class="chart-highest-record">
+                                        <h2>HIGHEST</h2>
+                                        <p>
+                                            Male: <strong>2173</strong> (68.9%)
+                                        </p>
+                                    </div>
+                                </div>
                                 <div
                                     id="customersByGenderLegend"
-                                    class="custom-legend-wrapper"
+                                    class="custom-legend-wrapper mob-cols-2"
                                 ></div>
-                                <div class="chart-highest-record">
-                                    <h2>HIGHEST</h2>
-                                    <p>Male: <strong>2173</strong> (68.9%)</p>
-                                </div>
+
                                 <!-- customers by gender end-->
                             </div>
                         </div>
@@ -71,10 +82,12 @@
                             <div class="dashboard-charts">
                                 <h2 class="heading">Customers by Work Type</h2>
                                 <!-- Customers by Work Type -->
-                                <div
-                                    id="customers-by-work-type"
-                                    class="amcharts-div customers-by-work-type"
-                                ></div>
+                                <div class="chart-container">
+                                    <div
+                                        id="customers-by-work-type"
+                                        class="amcharts-div customers-by-work-type"
+                                    ></div>
+                                </div>
                                 <!-- Customers by Work Type end-->
                             </div>
                         </div>
@@ -86,10 +99,12 @@
                                     Customers Account Opening by Month
                                 </h2>
                                 <!-- Customers Account Opening by Month -->
-                                <div
-                                    id="customers-account-by-month"
-                                    class="amcharts-div customers-account-by-month"
-                                ></div>
+                                <div class="chart-container">
+                                    <div
+                                        id="customers-account-by-month"
+                                        class="amcharts-div customers-account-by-month"
+                                    ></div>
+                                </div>
                                 <!-- Customers Account Opening by Month -->
                             </div>
                         </div>
@@ -103,10 +118,12 @@
                                     Customers by Industry
                                 </h2>
                                 <!-- Customers by Industry -->
-                                <div
-                                    id="customers-by-industry"
-                                    class="amcharts-div customers-by-industry"
-                                ></div>
+                                <div class="chart-container">
+                                    <div
+                                        id="customers-by-industry"
+                                        class="amcharts-div customers-by-industry"
+                                    ></div>
+                                </div>
                                 <!-- Customers by Industry end -->
                             </div>
                         </div>

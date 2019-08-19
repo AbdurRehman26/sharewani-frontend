@@ -3,11 +3,11 @@
         <div class="filter-section">
             <div class="row">
                 <div class="col-md-6">
-                    <h2>Risk Factor & Weightage</h2>
+                    <h2 class="filter-heading">Risk Factor & Weightage</h2>
                 </div>
             </div>
         </div>
-        <div class="table-section">
+        <div class="table-section tablet-table-min-width">
             <b-table :items="items" :fields="fields">
                 <template slot="scorescale" slot-scope="data">
                     <a href="javascript:void(0);" class="work-impact">

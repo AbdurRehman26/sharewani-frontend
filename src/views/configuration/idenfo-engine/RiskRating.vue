@@ -3,11 +3,11 @@
         <div class="filter-section">
             <div class="row">
                 <div class="col-md-6">
-                    <h2>Risk Rating Score</h2>
+                    <h2 class="filter-heading">Risk Rating Score</h2>
                 </div>
             </div>
         </div>
-        <div class="table-section">
+        <div class="table-section tablet-table-min-width">
             <b-table :items="items" :fields="fields">
                 <template slot="worktypeimpact" slot-scope="data">
                     <div class="work-impact">
@@ -37,7 +37,7 @@
                 </div>
             </div>
         </div>
-        <div class="table-section">
+        <div class="table-section tablet-table-min-width">
             <b-table :items="itemSecond" :fields="fieldSecond">
                 <template slot="rating" slot-scope="data">
                     <base-status :statusType="data.value"></base-status>

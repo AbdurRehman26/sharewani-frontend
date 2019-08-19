@@ -3,12 +3,14 @@
         <div class="filter-section row-min-space">
             <div class="row">
                 <div class="col-md-12 filter-title-section">
-                    <h2>Risk Level Review Configuration</h2>
+                    <h2 class="filter-heading">
+                        Risk Level Review Configuration
+                    </h2>
                 </div>
             </div>
         </div>
 
-        <div class="table-section">
+        <div class="table-section tablet-table-small-min-width">
             <b-table :items="items" :fields="fields">
                 <template slot="involvement" slot-scope="data">
                     <status-type-icon

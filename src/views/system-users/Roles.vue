@@ -10,7 +10,7 @@
                         <div class="col-md-6 col-xs-12">
                             <base-search></base-search>
                         </div>
-                        <div class="col-md-6 col-xs-12">
+                        <div class="col-md-6 col-xs-12 filter-btn-section">
                             <div class="row">
                                 <div class="col-md-5">
                                     <base-button
@@ -36,7 +36,7 @@
         </div>
 
         <!-- user management table -->
-        <div class="table-section">
+        <div class="table-section tablet-table-xs-min-width">
             <b-table :items="items" :fields="fields" class="user-roles-table">
                 <!-- status slot -->
                 <template slot="status" slot-scope="data">

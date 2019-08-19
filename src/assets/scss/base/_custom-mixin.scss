@@ -1,4 +1,6 @@
+$mobile-xsm-width: 360px;
 $mobile-sm-width: 414px;
+$mobile-sm-height: 650px;
 $mobile-width: 767px;
 $tablet-width: 768px;
 $tablet-landscape-width: 1140px;
@@ -6,6 +8,12 @@ $tablet-full-width: 1024px;
 $window-small-width: 1300px;
 $Desktop1380: 1400px;
 $Desktop1440: 1500px;
+
+@mixin mobileXs {
+    @media (max-width: #{$mobile-xsm-width}) {
+        @content;
+    }
+}
 
 @mixin mobileS {
     @media (max-width: #{$mobile-sm-width}) {
@@ -51,6 +59,12 @@ $Desktop1440: 1500px;
 
 @mixin Desktop1440 {
     @media (max-width: #{$Desktop1440}) {
+        @content;
+    }
+}
+
+@mixin mobileSHeight {
+    @media (max-height: #{$mobile-sm-height}) {
         @content;
     }
 }

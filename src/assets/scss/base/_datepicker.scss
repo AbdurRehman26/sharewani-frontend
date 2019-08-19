@@ -121,3 +121,35 @@
         height: auto !important;
     }
 }
+
+body {
+    .custom-datepicker {
+        @include mobile {
+            .datetimepicker {
+                .datepicker {
+                    position: absolute !important;
+                    z-index: 5 !important;
+                    height: 340px !important;
+                    top: 100% !important;
+                    &:not(.inline) {
+                        top: 100% !important;
+                    }
+                    .datepicker-container {
+                        width: 100% !important;
+                        .datepicker-controls {
+                            .align-center {
+                                margin-bottom: 0px;
+                            }
+                        }
+                    }
+                    .month-container {
+                        height: 340px !important;
+                    }
+                }
+            }
+            .placeholder {
+                top: 15px;
+            }
+        }
+    }
+}

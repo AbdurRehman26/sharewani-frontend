@@ -3,6 +3,10 @@ label {
     font-family: $font-medium;
     color: $grey-lite;
     text-transform: uppercase;
+
+    @include mobile {
+        font-size: 11px !important;
+    }
 }
 
 .form-control {
@@ -41,6 +45,10 @@ label {
     &.is-invalid {
         box-shadow: none !important;
     }
+
+    @include mobile {
+        font-size: 13px;
+    }
 }
 
 input[type='number']::-webkit-inner-spin-button,
@@ -62,6 +70,7 @@ input[type='number']::-webkit-outer-spin-button {
         font-size: 0.875rem !important;
         text-transform: none;
         font-family: $font_regular;
+
         &:after {
             background-color: transparent !important;
             color: $secondary;
@@ -70,6 +79,11 @@ input[type='number']::-webkit-outer-spin-button {
             border: none !important;
             text-transform: uppercase;
             font-family: $font_medium;
+
+            @include mobile {
+                font-size: 12px !important;
+                top: 7px;
+            }
         }
     }
 }

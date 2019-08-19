@@ -1,11 +1,11 @@
 <template>
-    <div class="infoengine">
+    <div class="infoengine purpose-section">
         <div class="filter-section row-min-space">
             <div class="row">
                 <div class="col-md-6 filter-title-section">
                     <h2>Purpose of Action Management</h2>
                 </div>
-                <div class="col-md-6 text-right">
+                <div class="col-md-6 text-right filter-fields">
                     <div class="row">
                         <div class="col-md-6">
                             <base-search
@@ -39,7 +39,7 @@
             </div>
         </div>
 
-        <div class="table-section">
+        <div class="table-section mobile-table-responsive">
             <b-table :items="items" :fields="fields">
                 <template slot="scorescale" slot-scope="data">
                     <div class="work-impact">

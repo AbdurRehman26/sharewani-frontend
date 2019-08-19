@@ -1,5 +1,5 @@
 <template>
-    <div class="infoengine">
+    <div class="screening-data-section">
         <div class="filter-section row-min-space">
             <div class="row">
                 <div class="col-md-8 filter-title-section">
@@ -23,7 +23,7 @@
                 </div>
             </div>
         </div>
-        <div class="table-section">
+        <div class="table-section tablet-table-xxs-min-width">
             <b-table :items="items" :fields="fields">
                 <template slot="status" slot-scope="data">
                     <base-status :statusType="data.value"></base-status>

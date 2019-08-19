@@ -1,21 +1,34 @@
 <template>
-    <div class="dashboard">
-        <div class="content-area">
-            <base-header
-                @sidemenu="$emit('responsiveSideBar')"
-                :menuListing="menuListing"
-            ></base-header>
-            <div class="right-panel">
-                <router-view></router-view>
-            </div>
+    <div class="profile-main">
+        <div
+            class="profile-image"
+            :style="{
+                'background-image':
+                    'url(' + require('@/assets/images/' + image + '') + ')',
+            }"
+        ></div>
+        <div class="profile-detail" @click="open">
+            <h4>Sammy Lawson</h4>
+            <p>Super Admin</p>
+            <i class="icon-caret-down"></i>
         </div>
+        <login-popover
+            v-if="showPopover"
+            v-on-click-outside="close"
+        ></login-popover>
     </div>
 </template>
 
 <script>
+import loginPopover from '@/components/LoginPopover.vue'
+import { directive as onClickOutside } from 'vue-on-click-outside'
 export default {
-    components: {},
-
+    components: {
+        loginPopover,
+    },
+    directives: {
+        onClickOutside: onClickOutside,
+    },
     /*
     |--------------------------------------------------------------------------
     | Component > props
@@ -26,10 +39,6 @@ export default {
          * Value to determine the current compose mode which
          * varies between 'add' and 'edit'
          */
-        mode: {
-            type: String,
-            default: 'add',
-        },
     }, // End of Component > props
 
     /*
@@ -39,23 +48,9 @@ export default {
     */
     data() {
         return {
-            menuListing: [
-                {
-                    anchorLink: '/insights/alerts',
-                    menuLabel: 'Alerts',
-                    name: 'dashboard-alerts',
-                },
-                {
-                    anchorLink: '/insights/activity-dashboard',
-                    name: 'dashboard-activity-page',
-                    menuLabel: 'Activity Dashboard',
-                },
-                {
-                    anchorLink: '/insights/customer-statistics',
-                    name: 'dashboard-reporting-page',
-                    menuLabel: 'Customer Statistics',
-                },
-            ],
+            showPopover: false,
+            mainMain: false,
+            image: 'profile-pic.png',
         }
     }, // End of Component > data
 
@@ -71,7 +66,14 @@ export default {
     | Component > methods
     |--------------------------------------------------------------------------
     */
-    methods: {}, // End of Component > methods
+    methods: {
+        open() {
+            this.showPopover = true
+        },
+        close() {
+            this.showPopover = false
+        },
+    }, // End of Component > methods
 
     /*
     |--------------------------------------------------------------------------

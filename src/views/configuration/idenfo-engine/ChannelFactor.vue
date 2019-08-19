@@ -2,31 +2,12 @@
     <div class="infoengine">
         <div class="filter-section">
             <div class="row">
-                <div class="col-md-4">
-                    <h2>Channel Type Factor</h2>
-                </div>
-                <div class="col-md-8 text-right">
-                    <!--  <ul>
-                        <li>
-                            <base-search
-                                :placeholder="'Search Channel Type'"
-                            ></base-search>
-                        </li>
-                        <li>
-                            <b-button type="button" variant="primary"
-                                >Apply</b-button
-                            >
-                        </li>
-                        <li>
-                            <b-button type="button" variant="secondary"
-                                >+ Add Channel Type</b-button
-                            >
-                        </li>
-                    </ul> -->
+                <div class="col-md-12">
+                    <h2 class="filter-heading">Channel Type Factor</h2>
                 </div>
             </div>
         </div>
-        <div class="table-section">
+        <div class="table-section tablet-table-xxs-min-width">
             <b-table :items="items" :fields="fields">
                 <template slot="worktypeimpact" slot-scope="data">
                     <div class="work-impact">

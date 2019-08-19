@@ -18,7 +18,7 @@ export default new Router({
                     path: '/',
                     name: 'login-page',
                     component: () =>
-                        import(/* webpackChunkName: "forgot-password" */ '@/views/auth/Login.vue'),
+                        import(/* webpackChunkName: "login" */ '@/views/auth/Login.vue'),
                     meta: {
                         title: 'Login',
                         noSidebar: true,
@@ -749,6 +749,7 @@ export default new Router({
                         name: 'Register Customers',
                         title: 'Register Customer | Upload Document',
                         sessionStep: '1',
+                        bodyClass: 'register-customer-body',
                     },
                 },
                 {

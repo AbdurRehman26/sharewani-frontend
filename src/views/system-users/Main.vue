@@ -1,7 +1,10 @@
 <template>
     <div class="dashboard">
         <div class="content-area">
-            <base-header :menuListing="menuListing"></base-header>
+            <base-header
+                @sidemenu="$emit('responsiveSideBar')"
+                :menuListing="menuListing"
+            ></base-header>
             <div class="right-panel">
                 <router-view></router-view>
             </div>

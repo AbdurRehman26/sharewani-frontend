@@ -5,7 +5,7 @@
                 <div class="col-md-3 filter-title-section">
                     <h2>All Customers</h2>
                 </div>
-                <div class="col-md-9 ">
+                <div class="col-md-9 filter-all-customers">
                     <div class="row">
                         <div class="col-md-6">
                             <b-form-group>
@@ -24,19 +24,25 @@
                                     <base-search></base-search>
                                 </div>
                                 <div class="col-md-3 text-right">
-                                    <base-button
-                                        btnLabel="Apply"
-                                        btnType="submit"
-                                        btnVariant="primary"
-                                    ></base-button>
+                                    <b-form-group>
+                                        <base-button
+                                            btnLabel="Apply"
+                                            btnType="submit"
+                                            btnVariant="primary"
+                                        ></base-button>
+                                    </b-form-group>
                                 </div>
-                                <div class="col-md-3 text-right">
-                                    <base-button
-                                        v-b-modal.export-process-popup
-                                        btnLabel="Export"
-                                        btnType="button"
-                                        btnVariant="secondary"
-                                    ></base-button>
+                                <div
+                                    class="col-md-3 text-right export-file-btn"
+                                >
+                                    <b-form-group>
+                                        <base-button
+                                            v-b-modal.export-process-popup
+                                            btnLabel="Export"
+                                            btnType="button"
+                                            btnVariant="secondary"
+                                        ></base-button>
+                                    </b-form-group>
                                 </div>
                             </div>
                         </div>

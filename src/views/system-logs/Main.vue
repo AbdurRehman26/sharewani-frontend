@@ -1,8 +1,11 @@
 <template>
     <div class="dashboard">
         <div class="content-area">
-            <base-header :menuListing="menuListing"></base-header>
-            <div class="right-panel">
+            <base-header
+                @sidemenu="$emit('responsiveSideBar')"
+                :menuListing="menuListing"
+            ></base-header>
+            <div class="right-panel system-logs-page">
                 <div class="wrap-content">
                     <div class="filter-section row-min-space">
                         <div class="row">
@@ -114,7 +117,9 @@
                                                     class="btn-block"
                                                 ></base-button>
                                             </div>
-                                            <div class="col-xs-12 col-md-6">
+                                            <div
+                                                class="col-xs-12 col-md-6 export-btn-section"
+                                            >
                                                 <base-button
                                                     v-b-modal.export-process-popup
                                                     btnLabel="Export"
@@ -131,10 +136,12 @@
                     <div class="row">
                         <div class="col-xs-12 col-md-12">
                             <!-- system logs total actions -->
-                            <div
-                                id="logs-total-actions"
-                                class="amcharts-div logs-total-actions"
-                            ></div>
+                            <div class="chart-container">
+                                <div
+                                    id="logs-total-actions"
+                                    class="amcharts-div logs-total-actions"
+                                ></div>
+                            </div>
                         </div>
                     </div>
                     <div class="row">

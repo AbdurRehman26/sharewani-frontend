@@ -1,8 +1,8 @@
 <template>
-    <div class="wrap-content">
+    <div class="wrap-content activity-dashboard-page">
         <div class="filter-section row-min-space">
             <div class="row">
-                <div class="col-md-4 filter-title-section">
+                <div class="col-md-4 title-detail filter-title-section">
                     <h2>Activity Dashboard</h2>
                 </div>
                 <div class="col-md-8">
@@ -31,20 +31,24 @@
                         </div>
                         <div class="col-md-4 col-xs-12">
                             <div class="row">
-                                <div class="col-xs-12 col-md-5">
-                                    <base-button
-                                        btnLabel="Apply"
-                                        btnType="submit"
-                                        btnVariant="primary"
-                                    ></base-button>
+                                <div class="col-xs-12 col-md-5 btn-section">
+                                    <div class="form-group">
+                                        <base-button
+                                            btnLabel="Apply"
+                                            btnType="submit"
+                                            btnVariant="primary"
+                                        ></base-button>
+                                    </div>
                                 </div>
-                                <div class="col-xs-12 col-md-7">
-                                    <base-button
-                                        v-b-modal.export-report-popup
-                                        btnLabel="Export"
-                                        btnType="submit"
-                                        btnVariant="secondary"
-                                    ></base-button>
+                                <div class="col-xs-12 col-md-7 btn-section">
+                                    <div class="form-group">
+                                        <base-button
+                                            v-b-modal.export-report-popup
+                                            btnLabel="Export"
+                                            btnType="submit"
+                                            btnVariant="secondary"
+                                        ></base-button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -54,7 +58,7 @@
         </div>
         <div class="row">
             <div class="col-md-12">
-                <div class="row">
+                <div class="row stastics-section">
                     <div
                         class="col-xs-12 col-md-3"
                         v-for="(list, index) in userListing"
@@ -84,10 +88,12 @@
                             <div class="dashboard-charts">
                                 <h2 class="heading">Activity Timeline</h2>
                                 <!-- activity timeline dashboard chart -->
-                                <div
-                                    id="activity-timeline-report"
-                                    class="amcharts-div activity-timeline-report"
-                                ></div>
+                                <div class="chart-container">
+                                    <div
+                                        id="activity-timeline-report"
+                                        class="amcharts-div activity-timeline-report"
+                                    ></div>
+                                </div>
                                 <!-- activity timeline dashboard chart end-->
                             </div>
                         </div>
@@ -101,10 +107,12 @@
                                     KYC Alerts by Screening Type
                                 </h2>
                                 <!-- dashboard alerts report -->
-                                <div
-                                    id="alerts-by-type"
-                                    class="amcharts-div alerts-by-type"
-                                ></div>
+                                <div class="chart-container">
+                                    <div
+                                        id="alerts-by-type"
+                                        class="amcharts-div alerts-by-type"
+                                    ></div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -117,21 +125,23 @@
                                     KYC Alerts by Alert Type
                                 </h2>
                                 <!-- screening hit by type report -->
-                                <div
-                                    id="screening-by-type"
-                                    class="amcharts-div pie-charts screening-by-type"
-                                ></div>
+                                <div class="pie-chart-inner-table">
+                                    <div
+                                        id="screening-by-type"
+                                        class="amcharts-div pie-charts screening-by-type"
+                                    ></div>
+                                    <div class="chart-highest-record">
+                                        <h2>HIGHEST</h2>
+                                        <p>
+                                            Periodic Alerts:
+                                            <strong>420</strong> (44.9%)
+                                        </p>
+                                    </div>
+                                </div>
                                 <div
                                     id="alertTypesLegend"
                                     class="custom-legend-wrapper"
                                 ></div>
-                                <div class="chart-highest-record">
-                                    <h2>HIGHEST</h2>
-                                    <p>
-                                        Periodic Alerts:
-                                        <strong>420</strong> (44.9%)
-                                    </p>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -146,18 +156,23 @@
                                     Name Screening Hit by Type
                                 </h2>
                                 <!-- dashboard alerts report -->
-                                <div
-                                    id="screen-hit-by-type"
-                                    class="amcharts-div pie-charts alerts-by-type"
-                                ></div>
+                                <div class="pie-chart-inner-table">
+                                    <div
+                                        id="screen-hit-by-type"
+                                        class="amcharts-div pie-charts alerts-by-type"
+                                    ></div>
+                                    <div class="chart-highest-record">
+                                        <h2>HIGHEST</h2>
+                                        <p>
+                                            PEP Hit:
+                                            <strong>320</strong> (44.9%)
+                                        </p>
+                                    </div>
+                                </div>
                                 <div
                                     id="screenHitByTypeLegend"
                                     class="custom-legend-wrapper"
                                 ></div>
-                                <div class="chart-highest-record">
-                                    <h2>HIGHEST</h2>
-                                    <p>PEP Hit: <strong>320</strong> (44.9%)</p>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -170,21 +185,24 @@
                                     Customer Onboarding With / Without Alert
                                 </h2>
                                 <!-- dashboard alerts report -->
-                                <div
-                                    id="on-board-issue"
-                                    class="amcharts-div pie-charts alerts-by-type"
-                                ></div>
+                                <div class="pie-chart-inner-table">
+                                    <div
+                                        id="on-board-issue"
+                                        class="amcharts-div pie-charts alerts-by-type"
+                                    ></div>
+                                    <div class="chart-highest-record">
+                                        <h2>HIGHEST</h2>
+                                        <p>
+                                            Without Alert:
+                                            <strong>2173</strong> (68.9%)
+                                        </p>
+                                    </div>
+                                </div>
+
                                 <div
                                     id="onBoardIssueLegend"
                                     class="custom-legend-wrapper"
                                 ></div>
-                                <div class="chart-highest-record">
-                                    <h2>HIGHEST</h2>
-                                    <p>
-                                        Without Alert:
-                                        <strong>2173</strong> (68.9%)
-                                    </p>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -198,10 +216,12 @@
                                     Aging by Alert Type
                                 </h2>
                                 <!-- dashboard alerts report -->
-                                <div
-                                    id="aging-by-alert-type"
-                                    class="amcharts-div alerts-by-type"
-                                ></div>
+                                <div class="chart-container">
+                                    <div
+                                        id="aging-by-alert-type"
+                                        class="amcharts-div alerts-by-type"
+                                    ></div>
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -11,10 +11,65 @@ body {
     width: $sidebar-width;
     height: 100%;
     position: fixed;
+    .profile-main,
+    .profile-popover {
+        display: none;
+    }
+    @include tabletL {
+        background: none;
+        width: 100%;
+        transition: 0.3s ease-in-out;
+        transform: translate(-100%);
+        z-index: 9999;
+        padding-top: 0px;
+        &:after {
+            content: '';
+            position: fixed;
+            width: calc(100% - 290px);
+            right: 0;
+            top: 0;
+            background: rgba(0, 0, 0, 0.4);
+            height: 100%;
+            opacity: 0;
+            transition: all 0.5s linear;
+            transition-delay: 0s;
+            @include mobile {
+                display: none;
+            }
+        }
+        &.show-sidebar {
+            transform: translate(0%);
+            &:after {
+                transition-delay: 0.3s;
+                opacity: 1;
+            }
+        }
+    }
+    @include mobile {
+        z-index: 1001;
+        &.show-sidebar {
+            width: 100%;
+        }
+        .profile-main {
+            display: block;
+            position: fixed;
+            left: 73px;
+            bottom: 27px;
+            top: auto;
+        }
+    }
 
     .sidebar-listing {
         display: flex;
         overflow: hidden;
+        position: relative;
+        @include tabletL {
+            width: 290px;
+            background-color: #3c1559;
+        }
+        @include mobile {
+            width: 100%;
+        }
         .country-selection {
             background-color: $interface-dark;
             height: 100vh;
@@ -72,6 +127,12 @@ body {
                 }
             }
         }
+        @include mobile {
+            height: 100%;
+            .country-selection {
+                // display: none;
+            }
+        }
     }
     .sidebar-nav {
         overflow: hidden;
@@ -80,11 +141,26 @@ body {
             ul {
                 padding: 0;
                 margin-right: 0;
+                @include tabletL {
+                    position: relative;
+                    background: none;
+                    border: none;
+                    text-align: left;
+                    padding: 0;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    box-shadow: none;
+                    display: block;
+                }
                 li {
                     margin-right: 0px;
                     width: 100%;
                     margin-bottom: 14px;
                     transition: 0.3s ease-in-out;
+                    @include mobile {
+                        margin-bottom: 8px;
+                    }
                     a {
                         color: $sidebar-menu-color;
                         padding: 8px 8px;
@@ -126,11 +202,158 @@ body {
             padding: 14px 0px 14px 17px;
             box-shadow: 0px 0.5px 0px $interface-dark;
             margin-bottom: 10px;
+
+            .logo {
+                @include tabletL {
+                    width: 110px;
+                }
+            }
         }
+        /*         @include mobile {
+            .logo-container {
+                display: none;
+            }
+            .navigation {
+                height: 100%;
+                display: flex;
+                align-items: center;
+                padding-left: 15px;
+                padding-right: 15px;
+                li {
+                    text-align: center;
+                    a {
+                        // background-color: transparent !important;
+                        &.router-link-exact-active {
+                            &.router-link-active {
+                                // border-bottom: 2px solid $interface-dark;
+                                // border-radius: 0;
+                            }
+                        }
+                        i {
+                            display: block;
+                            margin: auto;
+                            padding-bottom: 15px;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        } */
     }
 }
 
 .content-area {
     width: calc(100% - 252px);
     margin-left: auto;
+
+    @include tabletL {
+        width: 100%;
+    }
+}
+
+.responsive-sidebar-menu,
+.responsive-header-menu {
+    display: none;
+    @include tabletL {
+        position: fixed;
+        top: 10px;
+        left: 16px;
+        padding: 3px 0 0 0;
+        background-color: $primary;
+        z-index: 999;
+        height: 31px;
+        width: 35px;
+        display: flex;
+        align-self: center;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 5px;
+        img {
+            width: 25px;
+            margin: 0 auto;
+            top: -2px;
+            position: relative;
+        }
+    }
+    @include mobile {
+        height: 31px;
+        top: 10px;
+        left: 10px;
+    }
+    span {
+        height: 3px;
+        width: 23px;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 4px;
+        background-color: #fff;
+    }
+}
+
+.responsive-header-menu {
+    @include tabletL {
+        background: $secondary;
+        left: auto;
+        right: 16px;
+    }
+    @include mobile {
+        right: 10px;
+    }
+    span {
+    }
+}
+
+.close-side-bar {
+    display: none;
+    position: absolute;
+    right: 6px;
+    top: 10px;
+    @include tabletL {
+        display: block;
+    }
+    i {
+        font-size: 30px;
+        color: #fff;
+    }
+}
+
+.profile-popover {
+    @include mobile {
+        display: block !important;
+        position: relative;
+        top: 0;
+        background: none;
+        box-shadow: none;
+        padding: 12px 8px 0;
+        &:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            left: 0;
+            right: 0;
+            top: 2px;
+            margin: 0 auto;
+            height: 1px;
+            border-top: solid 0.3px $interface-dark;
+        }
+        .nav-dropdown {
+            ul {
+                li {
+                    border-color: transparent;
+                    a {
+                        padding-left: 8px;
+                        padding-right: 8px;
+                        color: #fff;
+                        i {
+                            left: 9px;
+                        }
+                        span {
+                            font-weight: normal;
+                            font-family: $font-light;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

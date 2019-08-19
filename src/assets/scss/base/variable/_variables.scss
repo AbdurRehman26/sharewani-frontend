@@ -26,12 +26,12 @@ $pink: #aa2f78;
 $yellow: #ffb54c;
 $radio-check: #9d9f8f;
 $theme-colors: (
-    'primary': $primary,
-    'secondary': $secondary,
-    'success': $success,
-    'light': $light,
-    'dark': $dark,
-    'danger': $danger
+	'primary': $primary,
+	'secondary': $secondary,
+	'success': $success,
+	'light': $light,
+	'dark': $dark,
+	'danger': $danger
 );
 // header height
 $header-height: 52px !default;
@@ -97,7 +97,7 @@ $low: #00c535;
 $block-width: 1170px;
 
 $button-box-shadow: 0px 4px 6px rgba(50, 50, 93, 0.11),
-    0px 1px 3px rgba(0, 0, 0, 0.08);
+	0px 1px 3px rgba(0, 0, 0, 0.08);
 
 // modal
 
@@ -130,6 +130,7 @@ $nav-color: $grey-lite;
 $button-size: $font-size-base;
 $button-family: $font-bold;
 $button-padding: 7px 28px;
+$button-padding-m: 7px 18px;
 $toggle-button-padding: 7px 10px;
 $second-button-color: #706a77;
 $default-button-color: #706a77;
