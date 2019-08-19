@@ -136,10 +136,12 @@
                     <div class="row">
                         <div class="col-xs-12 col-md-12">
                             <!-- system logs total actions -->
-                            <div
-                                id="logs-total-actions"
-                                class="amcharts-div logs-total-actions"
-                            ></div>
+                            <div class="chart-container">
+                                <div
+                                    id="logs-total-actions"
+                                    class="amcharts-div logs-total-actions"
+                                ></div>
+                            </div>
                         </div>
                     </div>
                     <div class="row">

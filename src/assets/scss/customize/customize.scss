@@ -186,6 +186,20 @@ span {
         }
     }
 }
+.chart-container {
+    height: 270px;
+    #logs-total-actions {
+        height: 100%;
+    }
+    @include mobile {
+        overflow-x: auto;
+        overflow-y: hidden;
+        height: 420px;
+        #logs-total-actions {
+            width: 550px;
+        }
+    }
+}
 
 #activity-timeline-report {
     @include mobile {
