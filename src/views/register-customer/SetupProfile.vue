@@ -79,7 +79,8 @@
                             >
                                 <div class="form-group">
                                     <date-time-picker
-                                        dateFormat="ll"
+                                        dateFormat="l"
+                                        :formatVal="'DD-MM-YYYY'"
                                         placeholder="DD / MM / YYYY"
                                         date
                                         close
