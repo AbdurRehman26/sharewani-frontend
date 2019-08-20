@@ -3399,7 +3399,7 @@ export default {
                     {
                         key: 'countrytype',
                         label: 'Country Type',
-                        class: 'text-center w-230px',
+                        class: 'w-230px',
                         sortable: true,
                     },
                     {
