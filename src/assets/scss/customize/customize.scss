@@ -2221,6 +2221,9 @@ a {
     .custom-file {
         height: 92px;
         cursor: pointer;
+        @include mobile {
+            height: 120px;
+        }
     }
 
     .file-detail {

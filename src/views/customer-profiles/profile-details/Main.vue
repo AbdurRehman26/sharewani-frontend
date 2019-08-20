@@ -9,7 +9,7 @@
                 <div class="wrap-content">
                     <div class="filter-section row-min-space profile-filter">
                         <div class="row">
-                            <div class="col-md-3 filter-title-section">
+                            <div class="col-xs-6 col-md-3 filter-title-section">
                                 <h2>{{ $route.meta.name }}</h2>
                             </div>
                             <div class="col-md-9">
