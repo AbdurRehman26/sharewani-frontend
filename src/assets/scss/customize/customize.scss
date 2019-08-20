@@ -3458,3 +3458,11 @@ a {
         }
     }
 }
+
+.scrollable {
+    &.more-fields-popup {
+        max-height: 300px;
+        height: auto;
+        margin-bottom: 10px;
+    }
+}
