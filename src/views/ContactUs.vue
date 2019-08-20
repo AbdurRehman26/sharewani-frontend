@@ -95,7 +95,7 @@ export default {
         */
     methods: {
         onClick() {
-            this.$toasted.show('Thankyou We will get back to you very soon.', {
+            this.$toasted.show('Thankyou. We will get back to you very soon.', {
                 icon: {
                     name: 'check',
                     before: true,
