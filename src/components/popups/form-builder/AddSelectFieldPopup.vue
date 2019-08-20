@@ -8,7 +8,7 @@
             cancelTitle="Cancel"
             cancelVariant="link"
         >
-            <div id="style-2" class="scrollable">
+            <div id="style-2">
                 <b-form>
                     <div class="row">
                         <div class="col-md-12">
@@ -28,46 +28,58 @@
                             </b-form-group>
                         </div>
                         <div class="col-md-12 row-min-space">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <label class="m-b-15" for="options"
-                                        >OPTIONS</label
+                            <div class="scrollable more-fields-popup">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label class="m-b-15" for="options"
+                                            >OPTIONS</label
+                                        >
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="m-b-15" for="values"
+                                            >VALUE</label
+                                        >
+                                    </div>
+                                </div>
+                                <div
+                                    class="row"
+                                    v-for="(list, index) in form.options"
+                                    :key="index"
+                                >
+                                    <div class="col-md-6">
+                                        <b-form-group class="m-b-15">
+                                            <b-form-input
+                                                id="options"
+                                                type="text"
+                                                v-model="list.optionName"
+                                                required
+                                                autocomplete="no"
+                                                placeholder="Enter Options"
+                                            ></b-form-input>
+                                        </b-form-group>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <b-form-group class="m-b-15">
+                                            <b-form-input
+                                                id="values"
+                                                type="number"
+                                                v-model="list.optionVal"
+                                                required
+                                                autocomplete="no"
+                                                placeholder="Enter value"
+                                            ></b-form-input>
+                                        </b-form-group>
+                                    </div>
+                                    <div
+                                        class="col-xs-12 col-md-12"
+                                        v-if="index != 0"
                                     >
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="m-b-15" for="values"
-                                        >VALUE</label
-                                    >
-                                </div>
-                            </div>
-                            <div
-                                class="row"
-                                v-for="(list, index) in form.options"
-                                :key="index"
-                            >
-                                <div class="col-md-6">
-                                    <b-form-group class="m-b-15">
-                                        <b-form-input
-                                            id="options"
-                                            type="text"
-                                            v-model="list.optionName"
-                                            required
-                                            autocomplete="no"
-                                            placeholder="Enter Options"
-                                        ></b-form-input>
-                                    </b-form-group>
-                                </div>
-                                <div class="col-md-6">
-                                    <b-form-group class="m-b-15">
-                                        <b-form-input
-                                            id="values"
-                                            type="number"
-                                            v-model="list.optionVal"
-                                            required
-                                            autocomplete="no"
-                                            placeholder="Enter value"
-                                        ></b-form-input>
-                                    </b-form-group>
+                                        <span
+                                            class="removed-row-class"
+                                            @click="deleteRow(index)"
+                                            ><i class="icon-delete"></i
+                                        ></span>
+                                    </div>
                                 </div>
                             </div>
                             <div class="row">
@@ -98,6 +110,7 @@
                                 ></b-form-radio-group>
                             </b-form-group>
                         </div>
+                        <div class="col-md-12"><br /></div>
                     </div>
                 </b-form>
             </div>
@@ -156,6 +169,9 @@ export default {
          */
         addOption() {
             this.form.options.push({ optionName: '', optionVal: null })
+        },
+        deleteRow(index) {
+            this.form.options.splice(index, 1)
         },
     },
 }

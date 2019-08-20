@@ -1304,6 +1304,14 @@ a {
         }
     }
 }
+
+.aging-alert-chart {
+    @include windowS {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
 .video-record {
     position: relative;
     max-width: 500px;
@@ -2551,7 +2559,18 @@ a {
         }
         .form-field-types {
             p {
-                max-width: 125px;
+                max-width: 200px;
+            }
+            .action-icons,
+            .change-password {
+                margin-right: 10px !important;
+            }
+        }
+    }
+    @include mobileXs {
+        .form-field-types {
+            p {
+                max-width: 150px;
             }
         }
     }
@@ -3438,4 +3457,25 @@ a {
             }
         }
     }
+}
+
+.scrollable {
+    &.more-fields-popup {
+        max-height: 300px;
+        height: auto;
+        margin-bottom: 10px;
+        width: 104%;
+        padding-right: 3%;
+    }
+}
+.removed-row-class {
+    text-align: center;
+    float: right;
+    color: $danger;
+    cursor: pointer;
+    position: absolute;
+    right: -3px;
+    top: -49px;
+    z-index: 9;
+    font-size: 23px;
 }

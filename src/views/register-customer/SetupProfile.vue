@@ -81,7 +81,7 @@
                                     <date-time-picker
                                         dateFormat="l"
                                         :formatVal="'DD-MM-YYYY'"
-                                        placeholder="DD / MM / YYYY"
+                                        placeholder="MM / DD / YYYY"
                                         date
                                         close
                                         noFooter
@@ -356,7 +356,7 @@
                                     <date-time-picker
                                         dateFormat="l"
                                         :formatVal="'DD-MM-YYYY'"
-                                        placeholder="DD / MM / YYYY"
+                                        placeholder="MM / DD / YYYY"
                                         date
                                         close
                                         noFooter
