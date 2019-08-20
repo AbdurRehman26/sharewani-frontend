@@ -1006,7 +1006,7 @@ a {
                 text-align: center;
 
                 &:before {
-                    content: '\e956';
+                    content: '\e957';
                     font-size: 15px;
                     font-weight: 100;
                     font-family: 'icomoon';
@@ -1031,7 +1031,7 @@ a {
                 text-align: center;
 
                 &:before {
-                    content: '\e94c';
+                    content: '\e94d';
                     font-size: 14px;
                     font-weight: 100;
                     font-family: 'icomoon';
@@ -1044,7 +1044,7 @@ a {
                 text-align: center;
 
                 &:before {
-                    content: '\e940';
+                    content: '\e942';
                     font-size: 14px;
                     font-family: 'icomoon';
                     font-weight: 100;
@@ -2809,7 +2809,7 @@ a {
         i {
             &.icon-record {
                 &:after {
-                    content: '\E945';
+                    content: '\e947';
                     position: absolute;
                     left: 0;
                     right: 0;
@@ -3106,8 +3106,8 @@ a {
 
             @include mobile {
                 position: static;
-                flex: 0 0 40%;
-                max-width: 40%;
+                flex: 0 0 50%;
+                max-width: 50%;
             }
         }
 
@@ -3123,8 +3123,8 @@ a {
 
             @include mobile {
                 position: static;
-                flex: 0 0 60%;
-                max-width: 60%;
+                flex: 0 0 50%;
+                max-width: 50%;
             }
         }
     }

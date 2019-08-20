@@ -194,7 +194,7 @@
                                 label-for="phonenumber"
                             >
                                 <div class="row profile-setup">
-                                    <div class="col-md-4">
+                                    <div class="col-md-5">
                                         <b-form-input
                                             id="countrycode"
                                             type="number"
@@ -429,7 +429,7 @@ export default {
                 docnumber: null,
 
                 nationalityOptions: [
-                    { value: null, text: 'Select nationality' },
+                    { value: null, text: 'Select Nationality' },
                     'Pakistani',
                     'Indian',
                     'British',
@@ -440,14 +440,14 @@ export default {
                 ],
 
                 genderOptions: [
-                    { text: 'Select gender', value: null },
+                    { text: 'Select Gender', value: null },
                     'Male',
                     'Female',
                     'Not Applicable',
                 ],
 
                 residenceOptions: [
-                    { value: null, text: 'Select country of residence' },
+                    { value: null, text: 'Select Country of Residence' },
                     'Afghanistan',
                     'Albania',
                     'Algeria',
@@ -646,7 +646,7 @@ export default {
                     'Zimbabwe',
                 ],
                 countryOptions: [
-                    { value: null, text: 'Select country' },
+                    { value: null, text: 'Select Country' },
                     'Afghanistan',
                     'Albania',
                     'Algeria',
@@ -845,19 +845,19 @@ export default {
                     'Zimbabwe',
                 ],
                 stateOptions: [
-                    { value: null, text: 'Select state' },
+                    { value: null, text: 'Select State' },
                     'Arizona',
                     'Chicago',
                 ],
 
                 worktypeOptions: [
-                    { value: null, text: 'Select work type' },
+                    { value: null, text: 'Select Work Type' },
                     'Engineer',
                     'Doctor',
                     'Scholar',
                 ],
                 industryOptions: [
-                    { value: null, text: 'Select industry' },
+                    { value: null, text: 'Select Industry' },
                     'Amazon',
                     'Ebay',
                     'AliBaba',
