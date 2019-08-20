@@ -1,0 +1,46 @@
+// 404
+.not-found {
+    position: relative;
+    height: calc(100% - 54px);
+    width: 100%;
+    min-height: calc(100vh - 138px);
+
+    .not-found-panel {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        height: 370px;
+        text-align: center;
+        h1 {
+            font-size: 9.4rem;
+            line-height: normal;
+            margin-bottom: 0;
+            color: $secondary;
+            font-weight: bold;
+            @include mobile {
+                font-size: 6rem;
+            }
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            @include mobile {
+                font-size: 1.2rem;
+            }
+        }
+
+        h3 {
+            padding-bottom: 22px;
+            font-size: 1rem;
+            padding-top: 9px;
+            @include mobile {
+                padding-top: 0px;
+                font-size: 0.9rem;
+            }
+        }
+    }
+}

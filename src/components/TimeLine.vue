@@ -86,7 +86,7 @@
                                                         >
                                                             <base-button
                                                                 btnVariant="link"
-                                                                btnLabel="Download Attachement"
+                                                                btnLabel="Download Attachment"
                                                             ></base-button>
                                                         </div>
                                                     </div>

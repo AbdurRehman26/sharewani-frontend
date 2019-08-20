@@ -7,6 +7,20 @@ export default new Router({
     mode: 'history',
     base: process.env.BASE_URL,
     routes: [
+        /*404 Page*/
+        {
+            name: '/404',
+            path: '*',
+            components: {
+                default: () =>
+                    import(/* webpackChunkName: "404" */ '@/views/404/Main.vue'),
+            },
+
+            meta: {
+                title: '404 Not Found',
+                bodyClass: 'not-found-page',
+            },
+        },
         {
             path: '/',
             name: 'login-page',

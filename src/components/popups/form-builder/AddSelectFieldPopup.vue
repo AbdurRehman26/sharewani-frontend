@@ -70,6 +70,16 @@
                                             ></b-form-input>
                                         </b-form-group>
                                     </div>
+                                    <div
+                                        class="col-xs-12 col-md-12"
+                                        v-if="index != 0"
+                                    >
+                                        <span
+                                            class="removed-row-class"
+                                            @click="deleteRow(index)"
+                                            ><i class="icon-delete"></i
+                                        ></span>
+                                    </div>
                                 </div>
                             </div>
                             <div class="row">
@@ -163,6 +173,9 @@ export default {
          */
         addOption() {
             this.form.options.push({ optionName: '', optionVal: null })
+        },
+        deleteRow(index) {
+            this.form.options.splice(index, 1)
         },
     },
 }
