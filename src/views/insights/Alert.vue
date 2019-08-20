@@ -281,7 +281,7 @@ export default {
                 '0-30 days',
                 '31-60 days',
                 '61-90 days',
-                '91 days+',
+                '91+ days',
             ],
             recordShow: [
                 { text: 'Show 10 records', value: null },
