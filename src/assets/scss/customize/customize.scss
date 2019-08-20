@@ -3316,6 +3316,23 @@ a {
             width: 100%;
         }
     }
+
+    .col-lg-7 {
+        @include Desktop1380 {
+            flex: 0 0 68.33333%;
+            max-width: 68.33333%;
+        }
+
+        @include tablet {
+            flex: 0 0 78.33333%;
+            max-width: 78.33333%;
+        }
+
+        @include mobile {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
 }
 
 .ocr-config-page,
