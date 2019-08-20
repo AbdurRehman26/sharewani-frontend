@@ -9,11 +9,13 @@
         color: $body-color;
         text-transform: capitalize;
         font-size: 0.875rem !important;
-
         span {
             margin-left: 5px;
             margin-top: 5px;
             display: block;
+            @include mobile {
+                font-size: 13px;
+            }
         }
     }
 
