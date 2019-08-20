@@ -24,7 +24,10 @@
                                 <div class="col-md-8">
                                     <base-button
                                         @click="
-                                            addModify('Add Industry Factor')
+                                            addModify(
+                                                'Add Industry Factor',
+                                                'Create'
+                                            )
                                         "
                                         btnLabel="+ Add Industry"
                                         btnType="button"
@@ -88,7 +91,9 @@
                             v-if="data.value == 'active'"
                             icon="icon-edit"
                             label="Modify"
-                            @click="addModify('Modify Industry Factor')"
+                            @click="
+                                addModify('Modify Industry Factor', 'Modify')
+                            "
                         ></base-action>
                         <!-- if action archive -->
                         <base-action
@@ -105,7 +110,10 @@
             totalRecords="Showing 1 to 10 of 21 records"
             :showRecords="recordShow"
         ></pagination>
-        <add-industry-popup :title="title"></add-industry-popup>
+        <add-industry-popup
+            :title="title"
+            :buttonText="buttonText"
+        ></add-industry-popup>
         <archive-popup
             title="Archive Industry Factor"
             description="Are you sure you want to archive this industry factor? You can re-activate it later."
@@ -151,6 +159,7 @@ export default {
             fields: [],
             items: [],
             title: '',
+            buttonText: '',
             recordShow: [
                 { text: 'Show 10 records', value: null },
                 { text: 'Show 20 records', value: 20 },
@@ -184,8 +193,9 @@ export default {
             this.$emit('item-length', this.items.length)
         },
 
-        addModify(e) {
+        addModify(e, f) {
             this.title = e
+            this.buttonText = f
             this.$bvModal.show('add-industry-popup')
         },
     }, // End of Component > methods

@@ -23,7 +23,12 @@
                                 </div>
                                 <div class="col-md-8">
                                     <base-button
-                                        @click="addModify('Add State Factor')"
+                                        @click="
+                                            addModify(
+                                                'Add State Factor',
+                                                'Create'
+                                            )
+                                        "
                                         btnLabel="+ Add State"
                                         btnType="button"
                                         btnVariant="secondary"
@@ -54,7 +59,7 @@
                             v-if="data.value == 'active'"
                             icon="icon-edit"
                             label="Modify"
-                            @click="addModify('Modify State Factor')"
+                            @click="addModify('Modify State Factor', 'Modify')"
                         ></base-action>
                         <!-- if action archive -->
                         <base-action
@@ -73,7 +78,10 @@
             selectPaginationDisable
             :showRecords="recordShow"
         ></pagination>
-        <add-state-popup :title="title"></add-state-popup>
+        <add-state-popup
+            :title="title"
+            :buttonText="buttonText"
+        ></add-state-popup>
         <archive-popup
             title="Archive State Factor"
             description="Are you sure you want to archive this state factor? You can re-activate it later."
@@ -120,6 +128,7 @@ export default {
             fields: [],
             items: [],
             title: '',
+            buttonText: '',
             recordShow: [{ text: 'Show 10 records', value: null }],
         }
     }, // End of Component > data
@@ -148,8 +157,9 @@ export default {
             this.items = configTableItems //push data into array
             this.$emit('item-length', this.items.length)
         },
-        addModify(e) {
+        addModify(e, f) {
             this.title = e
+            this.buttonText = f
             this.$bvModal.show('add-state-popup')
         },
     }, // End of Component > methods

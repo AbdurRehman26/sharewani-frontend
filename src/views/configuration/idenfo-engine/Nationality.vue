@@ -24,7 +24,10 @@
                                 <div class="col-md-8">
                                     <base-button
                                         @click="
-                                            addModify('Add Nationality Factor')
+                                            addModify(
+                                                'Add Nationality Factor',
+                                                'Create'
+                                            )
                                         "
                                         btnLabel="+ Add Nationality"
                                         btnType="button"
@@ -51,7 +54,9 @@
                             v-if="data.value == 'active'"
                             icon="icon-edit"
                             label="Modify"
-                            @click="addModify('Modify Nationality Factor')"
+                            @click="
+                                addModify('Modify Nationality Factor', 'Modify')
+                            "
                         ></base-action>
                         <!-- if action archive -->
                         <base-action
@@ -68,7 +73,10 @@
             totalRecords="Showing 1 to 10 of 220 records"
             :showRecords="recordShow"
         ></pagination>
-        <add-nationality-popup :title="title"></add-nationality-popup>
+        <add-nationality-popup
+            :title="title"
+            :buttonText="buttonText"
+        ></add-nationality-popup>
 
         <archive-popup
             title="Archive Nationality Factor"
@@ -152,8 +160,9 @@ export default {
             this.$emit('item-length', this.items.length)
         },
 
-        addModify(e) {
+        addModify(e, f) {
             this.title = e
+            this.buttonText = f
             this.$bvModal.show('add-nationality-popup')
         },
     }, // End of Component > methods

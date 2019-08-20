@@ -4,7 +4,7 @@
             id="add-risk-level-review-popup"
             :title="title"
             size="sm"
-            okTitle="Update"
+            :okTitle="buttonText"
             cancelTitle="Cancel"
             cancelVariant="link"
         >
@@ -42,6 +42,10 @@ export default {
         title: {
             type: String,
             default: null,
+        },
+        buttonText: {
+            type: String,
+            default: 'Update',
         },
     }, // End of Component > props
 

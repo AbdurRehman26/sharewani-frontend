@@ -4,7 +4,7 @@
             id="add-heading-popup"
             :title="title"
             size="sm"
-            okTitle="Add"
+            :okTitle="buttonText"
             cancelTitle="Cancel"
             cancelVariant="link"
         >
@@ -47,6 +47,10 @@ export default {
         title: {
             type: String,
             default: 'Add Heading',
+        },
+        buttonText: {
+            type: String,
+            default: 'Add',
         },
     }, // End of Component > props
 

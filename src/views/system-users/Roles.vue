@@ -26,7 +26,7 @@
                                         btnLabel="+ Add Role"
                                         btnType="submit"
                                         btnVariant="secondary btn-block"
-                                        @click="addModify('Add Role')"
+                                        @click="addModify('Add Role', 'Create')"
                                         class="secondary-add-btn"
                                     ></base-button>
                                 </div>
@@ -62,7 +62,7 @@
                             "
                             icon="icon-edit"
                             label="Modify"
-                            @click="addModify('Modify Role')"
+                            @click="addModify('Modify Role', 'Modify')"
                         ></base-action>
                         <!-- if action archive -->
                         <base-action
@@ -88,7 +88,10 @@
             selectPaginationDisable
             :showRecords="recordShow"
         ></pagination>
-        <add-role-popup :title="title"></add-role-popup>
+        <add-role-popup
+            :title="title"
+            :buttonText="buttonText"
+        ></add-role-popup>
         <archive-popup
             title="Archive Role"
             description="Are you sure you want to archive this role? You can re-activate it later."
@@ -135,6 +138,7 @@ export default {
             fields: [],
             items: [],
             title: '',
+            buttonText: '',
             recordShow: [{ text: 'Show 10 records', value: null }],
         }
     }, // End of Component > data
@@ -162,8 +166,9 @@ export default {
             this.items = tableItems //push data into array
         },
 
-        addModify(e) {
+        addModify(e, f) {
             this.title = e
+            this.buttonText = f
             this.$bvModal.show('add-role-popup')
         },
     }, // End of Component > methods

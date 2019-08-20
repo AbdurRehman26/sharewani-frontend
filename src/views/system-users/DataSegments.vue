@@ -26,7 +26,12 @@
                                         btnLabel="+ Add Data Segment"
                                         btnType="submit"
                                         btnVariant="secondary btn-block"
-                                        @click="addModify('Add Data Segment')"
+                                        @click="
+                                            addModify(
+                                                'Add Data Segment',
+                                                'Submit'
+                                            )
+                                        "
                                         class="secondary-add-btn"
                                     ></base-button>
                                 </div>
@@ -58,7 +63,7 @@
                             "
                             icon="icon-edit"
                             label="Modify"
-                            @click="addModify('Modify Data Segment')"
+                            @click="addModify('Modify Data Segment', 'Modify')"
                         ></base-action>
                         <!-- if action archive -->
                         <base-action
@@ -84,7 +89,10 @@
             selectPaginationDisable
             :showRecords="recordShow"
         ></pagination>
-        <add-data-segment-popup :title="title"></add-data-segment-popup>
+        <add-data-segment-popup
+            :title="title"
+            :buttonText="buttonText"
+        ></add-data-segment-popup>
         <archive-popup
             title="Archive Data Segment"
             description="Are you sure you want to archive this data segment? You can re-activate it later."
@@ -131,6 +139,7 @@ export default {
             fields: [],
             items: [],
             title: '',
+            buttonText: '',
             recordShow: [{ text: 'Show 10 records', value: null }],
         }
     }, // End of Component > data
@@ -158,8 +167,9 @@ export default {
             this.items = tableItems //push data into array
         },
 
-        addModify(e) {
+        addModify(e, f) {
             this.title = e
+            this.buttonText = f
             this.$bvModal.show('add-data-segment-popup')
         },
     }, // End of Component > methods

@@ -4,7 +4,7 @@
             id="add-select-field-popup"
             :title="title"
             size="sm"
-            okTitle="Create"
+            :okTitle="buttonText"
             cancelTitle="Cancel"
             cancelVariant="link"
         >
@@ -123,6 +123,10 @@ export default {
         title: {
             type: String,
             default: 'Add Text Field',
+        },
+        buttonText: {
+            type: String,
+            default: 'Create',
         },
     }, // End of Component > props
 

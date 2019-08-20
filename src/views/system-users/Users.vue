@@ -62,7 +62,12 @@
                                 </div>
                                 <div class="col-xs-12 col-md-7">
                                     <base-button
-                                        @click="addModify('Add System User')"
+                                        @click="
+                                            addModify(
+                                                'Add System User',
+                                                'Create'
+                                            )
+                                        "
                                         btnLabel="+ Add User"
                                         btnType="submit"
                                         btnVariant="secondary"
@@ -130,7 +135,7 @@
                             "
                             icon="icon-edit"
                             label="Modify"
-                            @click="addModify('Modify System User')"
+                            @click="addModify('Modify System User', 'Modify')"
                         ></base-action>
                         <!-- if action archive -->
                         <base-action
@@ -154,7 +159,10 @@
             totalRecords="Showing 1 to 10 of 32 records"
             :showRecords="recordShow"
         ></pagination>
-        <add-system-user-popup :title="title"></add-system-user-popup>
+        <add-system-user-popup
+            :title="title"
+            :buttonText="buttonText"
+        ></add-system-user-popup>
         <archive-popup
             title="Archive User"
             description="Are you sure you want to archive this user? You can re-activate account later."
@@ -199,6 +207,7 @@ export default {
         return {
             selected: '1',
             title: '',
+            buttonText: '',
             fields: [],
             items: [],
             options: [
@@ -267,8 +276,9 @@ export default {
             this.items = tableItems //push data into array
         },
 
-        addModify(e) {
+        addModify(e, f) {
             this.title = e
+            this.buttonText = f
             this.$bvModal.show('add-system-user-popup')
         },
     }, // End of Component > methods

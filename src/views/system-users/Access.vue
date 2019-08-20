@@ -26,7 +26,12 @@
                                         btnLabel="+ Add Application"
                                         btnType="submit"
                                         btnVariant="secondary"
-                                        @click="addModify('Add Application')"
+                                        @click="
+                                            addModify(
+                                                'Add Application',
+                                                'Create'
+                                            )
+                                        "
                                         class="secondary-add-btn"
                                     ></base-button>
                                 </div>
@@ -58,7 +63,7 @@
                             "
                             icon="icon-edit"
                             label="Modify"
-                            @click="addModify('Modify Application')"
+                            @click="addModify('Modify Application', 'Modify')"
                         ></base-action>
                         <!-- if action archive -->
                         <base-action
@@ -84,7 +89,10 @@
             selectPaginationDisable
             :showRecords="recordShow"
         ></pagination>
-        <add-application-popup :title="title"></add-application-popup>
+        <add-application-popup
+            :title="title"
+            :buttonText="buttonText"
+        ></add-application-popup>
         <archive-popup
             title="Archive Application"
             description="Are you sure you want to archive this application ? You can activate it later."
@@ -131,6 +139,7 @@ export default {
             fields: [],
             items: [],
             title: '',
+            buttonText: '',
             recordShow: [{ text: 'Show 10 records', value: null }],
         }
     }, // End of Component > data
@@ -157,8 +166,9 @@ export default {
             let tableItems = this.systemUsersData.applications.items //get user data from store
             this.items = tableItems //push data into array
         },
-        addModify(e) {
+        addModify(e, f) {
             this.title = e
+            this.buttonText = f
             this.$bvModal.show('add-application-popup')
         },
     }, // End of Component > methods
