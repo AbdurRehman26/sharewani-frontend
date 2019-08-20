@@ -3453,5 +3453,18 @@ a {
         max-height: 300px;
         height: auto;
         margin-bottom: 10px;
+        width: 104%;
+        padding-right: 3%;
     }
+}
+.removed-row-class {
+    text-align: center;
+    float: right;
+    color: $danger;
+    cursor: pointer;
+    position: absolute;
+    right: -3px;
+    top: -49px;
+    z-index: 9;
+    font-size: 23px;
 }
