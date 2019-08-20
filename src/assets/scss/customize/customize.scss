@@ -2965,8 +2965,25 @@ a {
 .form-registration {
     .filter-section {
         .col-md-8 {
+            @include tablet {
+                flex: 0 0 60%;
+                max-width: 60%;
+            }
             @include mobile {
                 text-align: center !important;
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+
+        .col-md-4 {
+            @include tablet {
+                flex: 0 0 40%;
+                max-width: 40%;
+            }
+            @include mobile {
+                flex: 0 0 100%;
+                max-width: 100%;
             }
         }
     }
@@ -3399,7 +3416,7 @@ a {
 .tablet-table-xs-min-width {
     .w-320px {
         @include Desktop1380 {
-            width: 260px !important;
+            width: 180px !important;
         }
     }
 }

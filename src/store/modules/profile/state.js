@@ -806,7 +806,7 @@ export default {
                             detail: 'Matched',
                         },
                         {
-                            title: 'Is Manually Overwrited:',
+                            title: 'Is Manually Overwritten:',
                             detail: 'No',
                         },
                         {
@@ -831,7 +831,7 @@ export default {
                             detail: 'Not Matched',
                         },
                         {
-                            title: 'Is Manually Overwrited:',
+                            title: 'Is Manually Overwritten:',
                             detail:
                                 'Yes, overwritten by Greg Eliss on June 2, 2019',
                         },
