@@ -2559,7 +2559,18 @@ a {
         }
         .form-field-types {
             p {
-                max-width: 125px;
+                max-width: 200px;
+            }
+            .action-icons,
+            .change-password {
+                margin-right: 10px !important;
+            }
+        }
+    }
+    @include mobileXs {
+        .form-field-types {
+            p {
+                max-width: 150px;
             }
         }
     }
