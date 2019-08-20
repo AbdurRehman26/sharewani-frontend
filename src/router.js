@@ -163,7 +163,7 @@ export default new Router({
                     path: 'application-access',
                     name: 'application-access-page',
                     component: () =>
-                        import(/* webpackChunkName: "branches" */ '@/views/system-users/Access.vue'),
+                        import(/* webpackChunkName: "access" */ '@/views/system-users/Access.vue'),
                     meta: {
                         title: 'System Users | Application Access',
                     },
@@ -176,7 +176,7 @@ export default new Router({
             component: () =>
                 import(/* webpackChunkName: "system-logs" */ '@/views/system-logs/Main.vue'),
             meta: {
-                title: 'Systems Logs',
+                title: 'System Logs',
             },
         },
         {
@@ -195,7 +195,7 @@ export default new Router({
                     component: () =>
                         import(/* webpackChunkName: "customer" */ './views/profile/AllCustomer.vue'),
                     meta: {
-                        title: 'Customer Profile | All Customer',
+                        title: 'Customer Profile | All Customers',
                     },
                 },
                 {
@@ -204,7 +204,7 @@ export default new Router({
                     component: () =>
                         import(/* webpackChunkName: "customer" */ './views/profile/AllCustomer.vue'),
                     meta: {
-                        title: 'Customer Profile | All Customer',
+                        title: 'Customer Profile | All Customers',
                     },
                 },
 
@@ -309,7 +309,7 @@ export default new Router({
                             path: '/configuration/idenfo-engine/risk',
                             name: 'conf-risk',
                             component: () =>
-                                import(/* webpackChunkName: "riskFactor" */ './views/configuration/idenfo-engine/RiskFactor.vue'),
+                                import(/* webpackChunkName: "risk-factor" */ './views/configuration/idenfo-engine/RiskFactor.vue'),
                             meta: {
                                 title:
                                     'Configuration | Idenfo Engine | Risk Factor',
@@ -329,7 +329,7 @@ export default new Router({
                             path: '/configuration/idenfo-engine/risk-rating',
                             name: 'risk-rating',
                             component: () =>
-                                import(/* webpackChunkName: "riskRating" */ './views/configuration/idenfo-engine/RiskRating.vue'),
+                                import(/* webpackChunkName: "risk-rating" */ './views/configuration/idenfo-engine/RiskRating.vue'),
                             meta: {
                                 title:
                                     'Configuration | Idenfo Engine | Risk Rating',
@@ -340,7 +340,7 @@ export default new Router({
                                 '/configuration/idenfo-engine/document-verification-factor',
                             name: 'document-verification-factor',
                             component: () =>
-                                import(/* webpackChunkName: "riskRating" */ './views/configuration/idenfo-engine/DocumentVerificationFactors.vue'),
+                                import(/* webpackChunkName: "document-verification-factor" */ './views/configuration/idenfo-engine/DocumentVerificationFactors.vue'),
                             meta: {
                                 title:
                                     'Configuration | Idenfo Engine | Document Verification Factor',
@@ -352,7 +352,7 @@ export default new Router({
                                 '/configuration/idenfo-engine/name-screen-score',
                             name: 'name-screen-score',
                             component: () =>
-                                import(/* webpackChunkName: "riskRating" */ './views/configuration/idenfo-engine/NameScreenScore.vue'),
+                                import(/* webpackChunkName: "name-screen-score" */ './views/configuration/idenfo-engine/NameScreenScore.vue'),
                             meta: {
                                 title:
                                     'Configuration | Idenfo Engine | Name Screen Score',
@@ -362,14 +362,14 @@ export default new Router({
                             path: '/configuration/idenfo-engine/nationality',
                             name: 'conf-nationality',
                             component: () =>
-                                import(/* webpackChunkName: "riskRating" */ './views/configuration/idenfo-engine/Nationality.vue'),
+                                import(/* webpackChunkName: "nationality" */ './views/configuration/idenfo-engine/Nationality.vue'),
                             meta: {
                                 title:
                                     'Configuration | Idenfo Engine | Nationality',
                             },
                         },
                         {
-                            path: '/configuration/idenfo-engine/country',
+                            path: '/configuration/idenfo-engine/nationality',
                             name: 'conf-country',
                             component: () =>
                                 import(/* webpackChunkName: "nationality" */ './views/configuration/idenfo-engine/Country.vue'),
@@ -382,7 +382,7 @@ export default new Router({
                             path: '/configuration/idenfo-engine/state',
                             name: 'state-factor',
                             component: () =>
-                                import(/* webpackChunkName: "stateFactor" */ './views/configuration/idenfo-engine/StateFactor.vue'),
+                                import(/* webpackChunkName: "state" */ './views/configuration/idenfo-engine/StateFactor.vue'),
                             meta: {
                                 title: 'Configuration | Idenfo Engine | State',
                             },
@@ -391,7 +391,7 @@ export default new Router({
                             path: '/configuration/idenfo-engine/work',
                             name: 'work-factor',
                             component: () =>
-                                import(/* webpackChunkName: "workFactor" */ './views/configuration/idenfo-engine/WorkFactor.vue'),
+                                import(/* webpackChunkName: "work" */ './views/configuration/idenfo-engine/WorkFactor.vue'),
                             meta: {
                                 title: 'Configuration | Idenfo Engine | Work',
                             },
@@ -400,7 +400,7 @@ export default new Router({
                             path: '/configuration/idenfo-engine/industry',
                             name: 'industry-factor',
                             component: () =>
-                                import(/* webpackChunkName: "industryFactor" */ './views/configuration/idenfo-engine/IndustryFactor.vue'),
+                                import(/* webpackChunkName: "industry" */ './views/configuration/idenfo-engine/IndustryFactor.vue'),
                             meta: {
                                 title:
                                     'Configuration | Idenfo Engine | Industry',
@@ -422,7 +422,7 @@ export default new Router({
                             path: '/configuration/idenfo-engine/relationship',
                             name: 'relationship-factor',
                             component: () =>
-                                import(/* webpackChunkName: "relationshipFactor" */ './views/configuration/idenfo-engine/RelationshipPanel.vue'),
+                                import(/* webpackChunkName: "relationship-factor" */ './views/configuration/idenfo-engine/RelationshipPanel.vue'),
                             meta: {
                                 title:
                                     'Configuration | Idenfo Engine | Relationship',
@@ -433,7 +433,7 @@ export default new Router({
                             path: '/configuration/idenfo-engine/channel',
                             name: 'channel-factor',
                             component: () =>
-                                import(/* webpackChunkName: "channelFactor" */ './views/configuration/idenfo-engine/ChannelFactor.vue'),
+                                import(/* webpackChunkName: "channel-factor" */ './views/configuration/idenfo-engine/ChannelFactor.vue'),
                             meta: {
                                 title:
                                     'Configuration | Idenfo Engine | Channel',
@@ -445,7 +445,7 @@ export default new Router({
                                 '/configuration/idenfo-engine/purpose-of-action',
                             name: 'purpose-action',
                             component: () =>
-                                import(/* webpackChunkName: "riskRating" */ './views/configuration/idenfo-engine/PurposeAction.vue'),
+                                import(/* webpackChunkName: "purpose-of-action" */ './views/configuration/idenfo-engine/PurposeAction.vue'),
                             meta: {
                                 title:
                                     'Configuration | Idenfo Engine | Purpose of Action',
@@ -456,7 +456,7 @@ export default new Router({
                             path: '/configuration/idenfo-engine/gender',
                             name: 'idenfo-engine-gender',
                             component: () =>
-                                import(/* webpackChunkName: "riskRating" */ './views/configuration/idenfo-engine/Gender.vue'),
+                                import(/* webpackChunkName: "gender" */ './views/configuration/idenfo-engine/Gender.vue'),
                             meta: {
                                 title: 'Configuration | Idenfo Engine | Gender',
                                 responsiveMenuItem: true,
@@ -467,7 +467,7 @@ export default new Router({
                                 '/configuration/idenfo-engine/risk-level-review',
                             name: 'idenfo-engine-risk-level-review',
                             component: () =>
-                                import(/* webpackChunkName: "riskRating" */ './views/configuration/idenfo-engine/RiskLevelReview.vue'),
+                                import(/* webpackChunkName: "risk-level-review" */ './views/configuration/idenfo-engine/RiskLevelReview.vue'),
                             meta: {
                                 title:
                                     'Configuration | Idenfo Engine | Risk Level Review',
@@ -486,7 +486,7 @@ export default new Router({
                             path: '/configuration/screening-data/gender',
                             name: 'gender',
                             component: () =>
-                                import(/* webpackChunkName: "gender" */ './views/configuration/screening-data/Gender.vue'),
+                                import(/* webpackChunkName: "screening-data" */ './views/configuration/screening-data/Gender.vue'),
                             meta: {
                                 title:
                                     'Configuration | Screening Data | Gender',
@@ -668,7 +668,7 @@ export default new Router({
                     path: '/configuration/manual-review/',
                     name: 'manual-review',
                     component: () =>
-                        import(/* webpackChunkName: "customer" */ './views/configuration/ManualReviewSwitch.vue'),
+                        import(/* webpackChunkName: "manual-review" */ './views/configuration/ManualReviewSwitch.vue'),
                     meta: {
                         title: 'Configuration | Manual Review',
                     },
@@ -678,13 +678,13 @@ export default new Router({
                     path: '/configuration/form-builder/',
                     name: 'screening-data',
                     component: () =>
-                        import(/* webpackChunkName: "customer" */ './views/configuration/form-builder/Main.vue'),
+                        import(/* webpackChunkName: "form-builder" */ './views/configuration/form-builder/Main.vue'),
                     children: [
                         {
                             path: '/',
                             name: 'gender',
                             component: () =>
-                                import(/* webpackChunkName: "gender" */ './views/configuration/form-builder/SetupProfile.vue'),
+                                import(/* webpackChunkName: "setup-profile" */ './views/configuration/form-builder/SetupProfile.vue'),
                             meta: {
                                 title:
                                     'Configuration | Form Builder | Setup Profile',
@@ -694,7 +694,7 @@ export default new Router({
                             path: '/configuration/form-builder/setup-profile',
                             name: 'gender',
                             component: () =>
-                                import(/* webpackChunkName: "gender" */ './views/configuration/form-builder/SetupProfile.vue'),
+                                import(/* webpackChunkName: "setup-profile" */ './views/configuration/form-builder/SetupProfile.vue'),
                             meta: {
                                 title:
                                     'Configuration | Form Builder | Setup Profile',
@@ -704,7 +704,7 @@ export default new Router({
                             path: '/configuration/form-builder/account-info',
                             name: 'gender',
                             component: () =>
-                                import(/* webpackChunkName: "gender" */ './views/configuration/form-builder/AccountInfo.vue'),
+                                import(/* webpackChunkName: "account-info" */ './views/configuration/form-builder/AccountInfo.vue'),
                             meta: {
                                 title:
                                     'Configuration | Form Builder | Account Information',
@@ -717,7 +717,7 @@ export default new Router({
                     path: '/configuration/branding/',
                     name: 'branding',
                     component: () =>
-                        import(/* webpackChunkName: "customer" */ './views/configuration/Branding.vue'),
+                        import(/* webpackChunkName: "branding" */ './views/configuration/Branding.vue'),
                     meta: {
                         title: 'Configuration | Branding',
                     },
@@ -726,7 +726,7 @@ export default new Router({
                     path: '/configuration/ocr-configuration/',
                     name: 'ocr-configuration',
                     component: () =>
-                        import(/* webpackChunkName: "builder" */ './views/configuration/OcrConfiguration.vue'),
+                        import(/* webpackChunkName: "ocr-configuration" */ './views/configuration/OcrConfiguration.vue'),
                     meta: {
                         title: 'Configuration | OCR',
                     },
@@ -890,7 +890,7 @@ export default new Router({
                     path: '/public-registration/finish',
                     name: 'public-registration-finish',
                     component: () =>
-                        import(/* webpackChunkName: "public-registration-finish" */ './views/register-customer/Finish.vue'),
+                        import(/* webpackChunkName: "finish" */ './views/register-customer/Finish.vue'),
                     meta: {
                         name: 'Online Account Opening Application',
                         title: 'Public Registration | Finish',

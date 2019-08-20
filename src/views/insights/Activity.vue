@@ -209,8 +209,8 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-xs-12 col-md-6">
-                        <div class="card dashboard-card  sm-radius">
+                    <div class="col-xs-12 col-md-6 aging-alert-chart">
+                        <div class="card dashboard-card sm-radius">
                             <div class="dashboard-charts">
                                 <h2 class="heading">
                                     Aging by Alert Type

@@ -1304,6 +1304,14 @@ a {
         }
     }
 }
+
+.aging-alert-chart {
+    @include windowS {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
 .video-record {
     position: relative;
     max-width: 500px;

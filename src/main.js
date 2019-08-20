@@ -6,7 +6,6 @@ import './registerServiceWorker'
 import BootstrapVue from 'bootstrap-vue'
 import vbclass from 'vue-body-class'
 import Toasted from 'vue-toasted'
-/*import VueMeta from 'vue-meta'*/
 
 require('@/auto-import.js')
 
@@ -28,8 +27,6 @@ new Vue({
     render: (h) => h(App),
     methods: {
         checkMeta() {
-            // const title = document.title
-            // document.title = ''
             document.title =
                 process.env.VUE_APP_TITLE + ' | ' + this.$route.meta.title
         },
