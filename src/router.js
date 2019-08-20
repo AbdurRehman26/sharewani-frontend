@@ -186,14 +186,14 @@ export default new Router({
             // this generates a separate chunk (about.[hash].js) for this route
             // which is lazy-loaded when the route is visited.
             component: () =>
-                import(/* webpackChunkName: "profile" */ './views/profile/Main.vue'),
+                import(/* webpackChunkName: "profile" */ './views/customer-profiles/Main.vue'),
 
             children: [
                 {
                     path: '/',
                     name: 'all-customer',
                     component: () =>
-                        import(/* webpackChunkName: "customer" */ './views/profile/AllCustomer.vue'),
+                        import(/* webpackChunkName: "customer" */ './views/customer-profiles/AllCustomer.vue'),
                     meta: {
                         title: 'Customer Profile | All Customers',
                     },
@@ -202,7 +202,7 @@ export default new Router({
                     path: '/customer-profiles/all-customer',
                     name: 'all-customer',
                     component: () =>
-                        import(/* webpackChunkName: "customer" */ './views/profile/AllCustomer.vue'),
+                        import(/* webpackChunkName: "customer" */ './views/customer-profiles/AllCustomer.vue'),
                     meta: {
                         title: 'Customer Profile | All Customers',
                     },
@@ -215,7 +215,7 @@ export default new Router({
                     // this generates a separate chunk (about.[hash].js) for this route
                     // which is lazy-loaded when the route is visited.
                     component: () =>
-                        import(/* webpackChunkName: "advance-search" */ './views/profile/AdvanceSearch.vue'),
+                        import(/* webpackChunkName: "advance-search" */ './views/customer-profiles/AdvanceSearch.vue'),
                     meta: {
                         title: 'Customer Profile | Advance Search',
                     },
@@ -227,13 +227,13 @@ export default new Router({
             path: '/customer-profiles/customer-information',
             name: 'customer-details',
             component: () =>
-                import(/* webpackChunkName: "customer-details" */ './views/profile/profile-details/Main.vue'),
+                import(/* webpackChunkName: "customer-details" */ './views/customer-profiles/profile-details/Main.vue'),
             children: [
                 {
                     path: '/',
                     name: 'customer-information',
                     component: () =>
-                        import(/* webpackChunkName: "customer-information" */ './views/profile/profile-details/CustomerInformation.vue'),
+                        import(/* webpackChunkName: "customer-information" */ './views/customer-profiles/profile-details/CustomerInformation.vue'),
                     meta: {
                         title: 'Customer Information | Customer Profile',
                         name: 'Customer Profile',
@@ -243,7 +243,7 @@ export default new Router({
                     path: '/customer-profiles/name-screening',
                     name: 'screening-customer',
                     component: () =>
-                        import(/* webpackChunkName: "screening-customer" */ './views/profile/profile-details/ScreeningCustomer.vue'),
+                        import(/* webpackChunkName: "screening-customer" */ './views/customer-profiles/profile-details/ScreeningCustomer.vue'),
                     meta: {
                         title: 'Customer Information | Name Screening',
                         name: 'Name Screening',
@@ -254,7 +254,7 @@ export default new Router({
                     path: '/customer-profiles/document-verification',
                     name: 'document-verification',
                     component: () =>
-                        import(/* webpackChunkName: "document-verification" */ './views/profile/profile-details/DocumentVerification.vue'),
+                        import(/* webpackChunkName: "document-verification" */ './views/customer-profiles/profile-details/DocumentVerification.vue'),
                     meta: {
                         title: 'Customer Information | Document Verification',
                         name: 'Document Verification',
@@ -264,7 +264,7 @@ export default new Router({
                     path: '/customer-profiles/kyc-risk-rating',
                     name: 'kyc-risk-rating',
                     component: () =>
-                        import(/* webpackChunkName: "kyc-risk-rating" */ './views/profile/profile-details/KYCRiskRating.vue'),
+                        import(/* webpackChunkName: "kyc-risk-rating" */ './views/customer-profiles/profile-details/KYCRiskRating.vue'),
                     meta: {
                         title: 'Customer Information | KYC Risk Rating',
                         name: 'KYC Risk Rating',
@@ -274,7 +274,7 @@ export default new Router({
                     path: '/customer-profiles/activity-timeline',
                     name: 'activity-timeline',
                     component: () =>
-                        import(/* webpackChunkName: "activity-timeline" */ './views/profile/profile-details/ActivityTimeline.vue'),
+                        import(/* webpackChunkName: "activity-timeline" */ './views/customer-profiles/profile-details/ActivityTimeline.vue'),
                     meta: {
                         title: 'Customer Information | Activity Timeline',
                         name: 'Activity Timeline',
@@ -369,7 +369,7 @@ export default new Router({
                             },
                         },
                         {
-                            path: '/configuration/idenfo-engine/nationality',
+                            path: '/configuration/idenfo-engine/country',
                             name: 'conf-country',
                             component: () =>
                                 import(/* webpackChunkName: "nationality" */ './views/configuration/idenfo-engine/Country.vue'),
