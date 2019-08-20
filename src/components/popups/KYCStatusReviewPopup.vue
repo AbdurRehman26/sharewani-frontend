@@ -17,6 +17,7 @@
                     <date-time-picker
                         dateFormat="lll"
                         placeholder="Select date time"
+                        formatVal="'MM-DD-YYYY'"
                     ></date-time-picker>
                 </b-form-group>
 
