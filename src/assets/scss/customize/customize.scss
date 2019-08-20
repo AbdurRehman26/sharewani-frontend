@@ -3479,3 +3479,26 @@ a {
     z-index: 9;
     font-size: 23px;
 }
+
+.customer-details-page {
+    &.customer-profile {
+        .wrap-content {
+            .col-md-3 {
+                @include mobile {
+                    flex: 0 0 100% !important;
+                    max-width: 100% !important;
+                }
+            }
+
+            .filter-section {
+                a {
+                    span {
+                        @include mobile {
+                            margin-top: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
