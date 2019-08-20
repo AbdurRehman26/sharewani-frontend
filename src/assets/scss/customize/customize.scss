@@ -402,7 +402,7 @@ a {
         width: 310px;
         top: 27px;
         left: -10px;
-        z-index: 9;
+        z-index: 999;
         padding: 28px 26px 20px;
         -webkit-transition: 0.3s ease-in-out;
         transition: 0.3s ease-in-out;
@@ -2973,8 +2973,25 @@ a {
 .form-registration {
     .filter-section {
         .col-md-8 {
+            @include tablet {
+                flex: 0 0 60%;
+                max-width: 60%;
+            }
             @include mobile {
                 text-align: center !important;
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+
+        .col-md-4 {
+            @include tablet {
+                flex: 0 0 40%;
+                max-width: 40%;
+            }
+            @include mobile {
+                flex: 0 0 100%;
+                max-width: 100%;
             }
         }
     }
@@ -3355,6 +3372,23 @@ a {
             width: 100%;
         }
     }
+
+    .col-lg-7 {
+        @include Desktop1380 {
+            flex: 0 0 68.33333%;
+            max-width: 68.33333%;
+        }
+
+        @include tablet {
+            flex: 0 0 78.33333%;
+            max-width: 78.33333%;
+        }
+
+        @include mobile {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
 }
 
 .ocr-config-page,
@@ -3384,5 +3418,32 @@ a {
 
     .custom-checkbox {
         padding-left: 0;
+    }
+}
+
+.tablet-table-xs-min-width {
+    .w-320px {
+        @include Desktop1380 {
+            width: 180px !important;
+        }
+    }
+}
+
+.industry-factor-page,
+.risk-factor-page {
+    .table-section {
+        overflow: inherit;
+        overflow-x: inherit;
+        @include tablet {
+            overflow: hidden;
+            overflow-x: auto;
+        }
+        .table {
+            overflow: inherit;
+
+            @include tablet {
+                overflow: hidden;
+            }
+        }
     }
 }

@@ -1,5 +1,5 @@
 <template>
-    <div class="infoengine">
+    <div class="infoengine risk-factor-page">
         <div class="filter-section">
             <div class="row">
                 <div class="col-md-6">

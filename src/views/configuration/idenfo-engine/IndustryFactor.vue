@@ -1,5 +1,5 @@
 <template>
-    <div class="infoengine">
+    <div class="infoengine industry-factor-page">
         <div class="filter-section row-min-space">
             <div class="row">
                 <div class="col-md-5 filter-title-section">
