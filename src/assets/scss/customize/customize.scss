@@ -402,7 +402,7 @@ a {
         width: 310px;
         top: 27px;
         left: -10px;
-        z-index: 9;
+        z-index: 999;
         padding: 28px 26px 20px;
         -webkit-transition: 0.3s ease-in-out;
         transition: 0.3s ease-in-out;
@@ -3345,5 +3345,32 @@ a {
 
     .custom-checkbox {
         padding-left: 0;
+    }
+}
+
+.tablet-table-xs-min-width {
+    .w-320px {
+        @include Desktop1380 {
+            width: 260px !important;
+        }
+    }
+}
+
+.industry-factor-page,
+.risk-factor-page {
+    .table-section {
+        overflow: inherit;
+        overflow-x: inherit;
+        @include tablet {
+            overflow: hidden;
+            overflow-x: auto;
+        }
+        .table {
+            overflow: inherit;
+
+            @include tablet {
+                overflow: hidden;
+            }
+        }
     }
 }
