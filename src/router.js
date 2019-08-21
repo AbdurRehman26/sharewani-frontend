@@ -774,7 +774,7 @@ export default new Router({
                     component: () =>
                         import(/* webpackChunkName: "upload-document" */ './views/register-customer/UploadDocuments.vue'),
                     meta: {
-                        name: 'Register Customers',
+                        name: 'Register Customer',
                         title: 'Register Customer | Upload Document',
                         sessionStep: '1',
                         bodyClass: 'register-customer-body',
