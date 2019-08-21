@@ -9,7 +9,13 @@
                     completely visible in the video. Click on Record button to
                     record 10 seconds video.
                 </p>
-                <div class="video-record">
+                <div
+                    class="video-record"
+                    :class="
+                        (showVideo == true ? 'videoRecored' : '',
+                        timeShow == true ? 'videoRecored' : '')
+                    "
+                >
                     <div class="show-record-video">
                         <video-js-record
                             @recordingStarted="onVideoRecording"
@@ -18,7 +24,6 @@
                     </div>
                     <div
                         :class="showVideo == true ? 'video-recorded' : ''"
-                        @click="showVideo ^= true"
                         class="video-play"
                     >
                         <span v-if="timeShow" class="timer-countdown">{{

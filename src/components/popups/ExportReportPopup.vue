@@ -48,6 +48,7 @@ export default {
     },
     data() {
         return {
+            exportType: null,
             form: {
                 exportType: [
                     {

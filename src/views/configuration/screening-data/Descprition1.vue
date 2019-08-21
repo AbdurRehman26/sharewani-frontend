@@ -3,7 +3,7 @@
         <div class="filter-section row-min-space">
             <div class="row">
                 <div class="col-md-8 filter-title-section">
-                    <h2>Description 1 Status</h2>
+                    <h2>Description 1</h2>
                 </div>
                 <div class="col-md-4 text-right">
                     <div class="row">

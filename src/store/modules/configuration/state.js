@@ -3219,7 +3219,7 @@ export default {
                 fields: [
                     {
                         key: 'person',
-                        label: 'RID (PERSON)',
+                        label: 'Code',
                         class: 'id-center',
                         sortable: true,
                     },

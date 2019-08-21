@@ -62,7 +62,7 @@
                     label-for="documentAttach"
                 >
                     <b-form-file
-                        v-model="documentAttach"
+                        v-model="form.documentAttach"
                         accept="image/jpeg, image/png"
                         placeholder="Choose a file to attach with review"
                         drop-placeholder="Drop file here..."
