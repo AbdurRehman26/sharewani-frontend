@@ -63,6 +63,18 @@ export default new Router({
                     },
                 },
                 {
+                    path: 'auth/create-password',
+                    name: 'create-password-page',
+                    component: () =>
+                        import(/* webpackChunkName: "reset-password" */ '@/views/auth/CreatePassword.vue'),
+                    meta: {
+                        title: 'Create Password',
+                        noSidebar: true,
+                        noFooterBar: true,
+                        bodyClass: 'auth-body',
+                    },
+                },
+                {
                     path: 'auth/email-sent',
                     name: 'email-sent-page',
                     component: () =>
