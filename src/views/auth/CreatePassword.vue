@@ -3,9 +3,9 @@
         <div class="inner">
             <div class="card card-auth  with-shadow">
                 <h2 class="auth-heading">
-                    Reset password
+                    Create password
                     <span>
-                        Please reset your account password.
+                        Please create your new account password.
                     </span>
                 </h2>
                 <div class="auth-body">
@@ -19,7 +19,7 @@
                                 id="input-2"
                                 type="password"
                                 autocomplete="no"
-                                placeholder="Enter your new password"
+                                placeholder="Enter your account password"
                             ></b-form-input>
                         </b-form-group>
                         <b-form-group
@@ -31,11 +31,11 @@
                                 id="input-2"
                                 type="password"
                                 autocomplete="no"
-                                placeholder="Re-enter your new password"
+                                placeholder="Re-enter your account password"
                             ></b-form-input>
                         </b-form-group>
                         <base-button
-                            btnLabel="RESET"
+                            btnLabel="CREATE"
                             btnType="submit"
                             btnVariant="primary"
                             class=""
