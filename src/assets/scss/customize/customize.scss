@@ -3032,6 +3032,10 @@ a {
     font-family: $font_medium;
     font-size: 1rem;
     color: $body-color;
+    @include mobile {
+        left: 0px;
+        top: 27px;
+    }
 }
 
 .vjs-control-bar {
