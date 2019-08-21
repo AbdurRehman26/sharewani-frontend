@@ -19,7 +19,7 @@
                                 id="input-2"
                                 type="password"
                                 autocomplete="no"
-                                placeholder="Enter new password"
+                                placeholder="Enter your new password"
                             ></b-form-input>
                         </b-form-group>
                         <b-form-group
@@ -31,7 +31,7 @@
                                 id="input-2"
                                 type="password"
                                 autocomplete="no"
-                                placeholder="Enter confirm password"
+                                placeholder="Re-enter your new password"
                             ></b-form-input>
                         </b-form-group>
                         <base-button

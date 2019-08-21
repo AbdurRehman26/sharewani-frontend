@@ -17,6 +17,9 @@
             color: $grey-lite;
             vertical-align: sub;
             margin-right: 6px;
+            @include mobile {
+                font-size: 13px;
+            }
         }
     }
 }
@@ -53,4 +56,3 @@
     background-color: transparent;
     border-color: $modal-header-border-color;
 }
-

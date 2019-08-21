@@ -81,7 +81,6 @@ $other_font_bold: 'ProximanovaBold';
 }
 .icon-star:before {
     content: '\e966';
-    color: #fac917;
 }
 .icon-copy:before {
     content: '\e962';
@@ -91,17 +90,12 @@ $other_font_bold: 'ProximanovaBold';
 }
 .icon-record .path1:before {
     content: '\e95f';
-    color: rgb(255, 255, 255);
 }
 .icon-record .path2:before {
     content: '\e960';
-    margin-left: -1em;
-    color: rgb(201, 31, 55);
 }
 .icon-record .path3:before {
     content: '\e961';
-    margin-left: -1em;
-    color: rgb(255, 255, 255);
 }
 .icon-dropdown-icon:before {
     content: '\e95e';
@@ -114,7 +108,6 @@ $other_font_bold: 'ProximanovaBold';
 }
 .icon-select-field:before {
     content: '\e906';
-    color: #7f8fa4;
 }
 .icon-settings:before {
     content: '\e907';
@@ -130,11 +123,9 @@ $other_font_bold: 'ProximanovaBold';
 }
 .icon-color-picker:before {
     content: '\e90b';
-    color: #7f8fa4;
 }
 .icon-checkbox:before {
     content: '\e90c';
-    color: #7f8fa4;
 }
 .icon-cross-with-circle:before {
     content: '\e92b';

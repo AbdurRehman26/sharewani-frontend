@@ -106,6 +106,7 @@ export default {
             var select = this
             setTimeout(function() {
                 select.disableClass = false
+                select.$router.push('/insights')
             }, 5000)
         },
     }, // End of Component > methods
