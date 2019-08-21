@@ -487,12 +487,12 @@ export default {
                 {
                     category: 'Periodic Alerts',
                     catValue: '420',
-                    percents: '58%',
+                    percents: '58.3%',
                 },
                 {
                     category: 'Trigger Alerts',
                     catValue: '120',
-                    percents: '16%',
+                    percents: '16.6%',
                 },
             ],
             listeners: [
@@ -588,22 +588,22 @@ export default {
                 {
                     category: 'Sanction Hit',
                     'column-1': '180',
-                    percents: '25%',
+                    percents: '25.2%',
                 },
                 {
                     category: 'PEP Hit',
                     'column-1': '320',
-                    percents: '50%',
+                    percents: '44.9%',
                 },
                 {
                     category: 'Enforcement Hit',
                     'column-1': '120',
-                    percents: '15%',
+                    percents: '16.8%',
                 },
                 {
                     category: 'Client Black List Hit',
                     'column-1': '92',
-                    percents: '10%',
+                    percents: '12.9%',
                 },
             ],
             listeners: [
@@ -699,32 +699,32 @@ export default {
                 {
                     category: '18 - 24',
                     'column-1': '800',
-                    percents: '10%',
+                    percents: '25%',
                 },
                 {
                     category: '25 - 34',
                     'column-1': '600',
-                    percents: '15%',
+                    percents: '19%',
                 },
                 {
                     category: '45 - 54',
                     'column-1': '200',
-                    percents: '20%',
+                    percents: '6.3%',
                 },
                 {
                     category: '55 - 64',
                     'column-1': '950',
-                    percents: '30%',
+                    percents: '30.1%',
                 },
                 {
                     category: '65 - 74',
                     'column-1': '400',
-                    percents: '10%',
+                    percents: '12.7%',
                 },
                 {
                     category: '75+',
                     'column-1': '200',
-                    percents: '10%',
+                    percents: '6.3%',
                 },
             ],
             listeners: [
@@ -828,12 +828,12 @@ export default {
                 {
                     category: 'Onboarding Without Issue',
                     'column-1': '2173',
-                    percents: '80%',
+                    percents: '68.9%',
                 },
                 {
                     category: 'Onboarding With Issue',
                     'column-1': '980',
-                    percents: '20%',
+                    percents: '31%',
                 },
             ],
             listeners: [
