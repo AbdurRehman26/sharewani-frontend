@@ -3,10 +3,10 @@
         <i class="icon-calendar"></i>
         <VueCtkDateTimePicker
             v-model="yourValue"
-            noHeader="false"
-            noLabel="false"
+            :noHeader="true"
+            :noLabel="true"
             color="indigo"
-            no-button-now="false"
+            :no-button-now="true"
             :formatted="dateFormat"
             :format="formatVal"
             :only-date="date"
@@ -51,21 +51,21 @@ export default {
 
         date: {
             type: Boolean,
-            default: null,
+            default: false,
         },
 
         time: {
             type: Boolean,
-            default: null,
+            default: false,
         },
         close: {
             type: Boolean,
-            default: null,
+            default: false,
         },
 
         noFooter: {
             type: Boolean,
-            default: null,
+            default: false,
         },
     }, // End of Component > props
 

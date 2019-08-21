@@ -52,6 +52,7 @@ export default {
 
     data() {
         return {
+            result: null,
             form: {
                 result: [{ text: 'Matched', value: null }, 'Not Matched'],
             },

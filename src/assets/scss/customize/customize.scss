@@ -1193,6 +1193,14 @@ a {
     }
 }
 
+.videoRecored {
+    .show-record-video {
+        button.vjs-record-button {
+            z-index: -1;
+        }
+    }
+}
+
 .show-record-video {
     button.vjs-record-button {
         width: 75px;
@@ -3019,8 +3027,8 @@ a {
 .timer-countdown {
     position: absolute;
     right: 0;
-    left: 0;
-    top: 27px;
+    left: 1px;
+    top: 26px;
     font-family: $font_medium;
     font-size: 1rem;
     color: $body-color;
