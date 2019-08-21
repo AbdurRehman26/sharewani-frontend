@@ -59,7 +59,7 @@
                             v-if="data.value == 'active'"
                             icon="icon-edit"
                             label="Modify"
-                            @click="addModify('Modify State Factor', 'Modify')"
+                            @click="addModify('Modify State Factor', 'Update')"
                         ></base-action>
                         <!-- if action archive -->
                         <base-action

@@ -58,7 +58,7 @@
                             icon="icon-edit"
                             label="Modify"
                             @click="
-                                addModify('Modify Purpose of Action', 'Modify')
+                                addModify('Modify Purpose of Action', 'Update')
                             "
                         ></base-action>
                         <!-- if action archive -->

@@ -92,7 +92,7 @@
                             icon="icon-edit"
                             label="Modify"
                             @click="
-                                addModify('Modify Industry Factor', 'Modify')
+                                addModify('Modify Industry Factor', 'Update')
                             "
                         ></base-action>
                         <!-- if action archive -->

@@ -52,7 +52,7 @@
                             icon="icon-edit"
                             label="Modify"
                             @click="
-                                addModify('Modify Work Type Factor', 'Modify')
+                                addModify('Modify Work Type Factor', 'Update')
                             "
                         ></base-action>
                         <!-- if action archive -->

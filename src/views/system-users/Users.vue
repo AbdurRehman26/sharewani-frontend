@@ -135,7 +135,7 @@
                             "
                             icon="icon-edit"
                             label="Modify"
-                            @click="addModify('Modify System User', 'Modify')"
+                            @click="addModify('Modify System User', 'Update')"
                         ></base-action>
                         <!-- if action archive -->
                         <base-action

@@ -56,7 +56,7 @@
                                     ? 'disable-color'
                                     : ''
                             "
-                            @click="addModify('Modify Gender', 'Modify')"
+                            @click="addModify('Modify Gender', 'Update')"
                         ></base-action>
                         <!-- if action archive -->
                         <base-action
