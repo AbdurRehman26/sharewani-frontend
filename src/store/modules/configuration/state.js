@@ -3219,13 +3219,13 @@ export default {
                 fields: [
                     {
                         key: 'person',
-                        label: 'RID (PERSON)',
-                        class: 'id-center',
+                        label: 'Code',
                         sortable: true,
                     },
                     {
                         key: 'territory',
                         label: 'IS TERRITORY',
+                        class: 'id-center',
                         sortable: true,
                     },
                     {

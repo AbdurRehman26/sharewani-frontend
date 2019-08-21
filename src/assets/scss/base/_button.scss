@@ -17,6 +17,12 @@
         min-width: 0;
         font-size: 0.875rem;
     }
+
+    @include mobile {
+        font-size: 13px;
+        padding: 12px 18px;
+    }
+
     &:focus {
         box-shadow: none !important;
     }

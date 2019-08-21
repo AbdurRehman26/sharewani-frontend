@@ -153,3 +153,34 @@ body {
         }
     }
 }
+
+.datepicker-prev {
+    position: relative;
+
+    &:after {
+        content: '\e945';
+        font-family: 'icomoon';
+        position: absolute;
+        left: 15px;
+        color: $white;
+        top: 14px;
+    }
+    svg {
+        display: none;
+    }
+}
+
+.datepicker-next {
+    position: relative;
+    &:after {
+        content: '\e93d';
+        font-family: 'icomoon';
+        position: absolute;
+        left: 15px;
+        color: $white;
+        top: 14px;
+    }
+    svg {
+        display: none;
+    }
+}

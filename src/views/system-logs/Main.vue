@@ -10,7 +10,7 @@
                     <div class="filter-section row-min-space">
                         <div class="row">
                             <div class="col-xs-12 col-md-12">
-                                <h2>System Log</h2>
+                                <h2>System Logs</h2>
                             </div>
                             <div class="col-xs-12 col-md-12">
                                 <div class="row">

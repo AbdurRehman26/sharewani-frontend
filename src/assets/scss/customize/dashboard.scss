@@ -362,6 +362,12 @@
 		width: auto;
 		float: none;
 		display: inline-block;
+		@include windowS {
+			width: 50%;
+			.legend-title {
+				width: 60%;
+			}
+		}
 		@include mobile {
 			width: 100%;
 		}

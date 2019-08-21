@@ -192,8 +192,8 @@ export default {
                     text: 'Occupation',
                 },
                 {
-                    value: '/configuration/screening-data/data-type',
-                    text: 'Data Type',
+                    value: '/configuration/screening-data/date-type',
+                    text: 'Date Type',
                 },
                 {
                     value: '/configuration/screening-data/sanction-reference',
