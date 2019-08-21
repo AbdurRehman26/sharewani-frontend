@@ -45,7 +45,6 @@
                     btnType="submit"
                     btnVariant="primary"
                     btnLabel="CONTINUE"
-                    :class="showVideo == false ? 'disable' : ''"
                     @preventFunction="linking()"
                 ></base-button>
             </div>
