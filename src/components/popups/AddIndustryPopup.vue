@@ -32,7 +32,6 @@
                             id="input-group-2"
                             label="Industry Title"
                             label-for="input-2"
-                            class="mb-0"
                         >
                             <b-form-input
                                 id="input-2"
