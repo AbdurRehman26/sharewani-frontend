@@ -63,7 +63,7 @@
                             "
                             icon="icon-edit"
                             label="Modify"
-                            @click="addModify('Modify Application', 'Modify')"
+                            @click="addModify('Modify Application', 'Update')"
                         ></base-action>
                         <!-- if action archive -->
                         <base-action

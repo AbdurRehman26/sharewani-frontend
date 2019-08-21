@@ -63,7 +63,7 @@
                             "
                             icon="icon-edit"
                             label="Modify"
-                            @click="addModify('Modify Data Segment', 'Modify')"
+                            @click="addModify('Modify Data Segment', 'Update')"
                         ></base-action>
                         <!-- if action archive -->
                         <base-action

@@ -80,9 +80,18 @@
                 </div>
             </div>
         </div>
-        <add-heading-popup :title="titleChange"></add-heading-popup>
-        <add-text-field-popup :title="titleChange"></add-text-field-popup>
-        <add-select-field-popup :title="titleChange"></add-select-field-popup>
+        <add-heading-popup
+            :title="titleChange"
+            :buttonText="buttonText"
+        ></add-heading-popup>
+        <add-text-field-popup
+            :title="titleChange"
+            :buttonText="buttonText"
+        ></add-text-field-popup>
+        <add-select-field-popup
+            :title="titleChange"
+            :buttonText="buttonText"
+        ></add-select-field-popup>
         <remove-field-popup></remove-field-popup>
     </div>
 </template>
@@ -126,6 +135,7 @@ export default {
     data() {
         return {
             titleChange: null,
+            buttonText: null,
             navWidth: true,
             listVal: null,
             listDropdown: false,
@@ -376,27 +386,33 @@ export default {
             if (val == 1) {
                 if (val2 == 'add') {
                     this.titleChange = 'Add Heading'
+                    this.buttonText = 'Add'
                 }
                 if (val2 == 'modify') {
                     this.titleChange = 'Modify Heading'
+                    this.buttonText = 'Update'
                 }
                 this.$bvModal.show('add-heading-popup')
             }
             if (val == 2 || val == 3 || val == 4) {
                 if (val2 == 'add') {
                     this.titleChange = 'Add Text Field'
+                    this.buttonText = 'Create'
                 }
                 if (val2 == 'modify') {
                     this.titleChange = 'Modify Text Field'
+                    this.buttonText = 'Update'
                 }
                 this.$bvModal.show('add-text-field-popup')
             }
             if (val == 5 || val == 6 || val == 7) {
                 if (val2 == 'add') {
                     this.titleChange = 'Add Text Field'
+                    this.buttonText = 'Create'
                 }
                 if (val2 == 'modify') {
                     this.titleChange = 'Modify Text Field'
+                    this.buttonText = 'Update'
                 }
                 this.$bvModal.show('add-select-field-popup')
             }

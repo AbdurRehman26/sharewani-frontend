@@ -55,7 +55,7 @@
                             icon="icon-edit"
                             label="Modify"
                             @click="
-                                addModify('Modify Nationality Factor', 'Modify')
+                                addModify('Modify Nationality Factor', 'Update')
                             "
                         ></base-action>
                         <!-- if action archive -->

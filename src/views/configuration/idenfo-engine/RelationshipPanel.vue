@@ -63,7 +63,7 @@
                             @click="
                                 addModify(
                                     'Modify Relationship Length Factor',
-                                    'Modify'
+                                    'Update'
                                 )
                             "
                         ></base-action>

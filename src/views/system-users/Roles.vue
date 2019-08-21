@@ -62,7 +62,7 @@
                             "
                             icon="icon-edit"
                             label="Modify"
-                            @click="addModify('Modify Role', 'Modify')"
+                            @click="addModify('Modify Role', 'Update')"
                         ></base-action>
                         <!-- if action archive -->
                         <base-action

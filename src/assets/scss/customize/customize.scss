@@ -1319,7 +1319,7 @@ a {
 }
 
 .aging-alert-chart {
-    @include windowS {
+    @include Desktop1380 {
         flex: 0 0 100%;
         max-width: 100%;
     }

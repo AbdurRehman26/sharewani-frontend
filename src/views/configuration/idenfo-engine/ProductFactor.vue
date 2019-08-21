@@ -61,7 +61,7 @@
                             icon="icon-edit"
                             label="Modify"
                             @click="
-                                addModify('Modify Product Factor', 'Modify')
+                                addModify('Modify Product Factor', 'Update')
                             "
                         ></base-action>
                         <!-- if action archive -->
