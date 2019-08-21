@@ -23,7 +23,9 @@
                                 </div>
                                 <div class="col-md-8">
                                     <base-button
-                                        @click="addModify('Add Gender')"
+                                        @click="
+                                            addModify('Add Gender', 'Create')
+                                        "
                                         btnLabel="+ Add Gender"
                                         btnType="button"
                                         btnVariant="secondary"
@@ -54,7 +56,7 @@
                                     ? 'disable-color'
                                     : ''
                             "
-                            @click="addModify('Modify Gender')"
+                            @click="addModify('Modify Gender', 'Modify')"
                         ></base-action>
                         <!-- if action archive -->
                         <base-action
@@ -78,7 +80,10 @@
             selectPaginationDisable
             :showRecords="recordShow"
         ></pagination>
-        <add-gender-popup :title="title"></add-gender-popup>
+        <add-gender-popup
+            :title="title"
+            :buttonText="buttonText"
+        ></add-gender-popup>
         <archive-popup
             title="Archive Gender"
             description="Are you sure you want to archive this gender? You can re-activate it later."
@@ -125,6 +130,7 @@ export default {
             items: [],
             recordShow: [{ text: 'Show 10 records', value: null }],
             title: '',
+            buttonText: '',
         }
     }, // End of Component > data
 
@@ -154,8 +160,9 @@ export default {
             this.$emit('item-length', this.items.length)
         },
 
-        addModify(e) {
+        addModify(e, f) {
             this.title = e
+            this.buttonText = f
             this.$bvModal.show('add-gender-popup')
         },
     }, // End of Component > methods

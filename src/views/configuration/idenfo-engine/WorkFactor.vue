@@ -24,7 +24,10 @@
                                 <div class="col-md-8">
                                     <base-button
                                         @click="
-                                            addModify('Add Work Type Factor')
+                                            addModify(
+                                                'Add Work Type Factor',
+                                                'Create'
+                                            )
                                         "
                                         btnLabel="+ Add Work Type"
                                         btnType="button"
@@ -48,7 +51,9 @@
                             v-if="data.value == 'active'"
                             icon="icon-edit"
                             label="Modify"
-                            @click="addModify('Modify Work Type Factor')"
+                            @click="
+                                addModify('Modify Work Type Factor', 'Modify')
+                            "
                         ></base-action>
                         <!-- if action archive -->
                         <base-action
@@ -67,7 +72,10 @@
             selectPaginationDisable
             :showRecords="recordShow"
         ></pagination>
-        <add-work-popup :title="title"></add-work-popup>
+        <add-work-popup
+            :title="title"
+            :buttonText="buttonText"
+        ></add-work-popup>
         <archive-popup
             title="Archive Work Type Factor"
             description="Are you sure you want to archive this work type factor? You can re-activate it later."
@@ -114,6 +122,7 @@ export default {
             fields: [],
             items: [],
             title: '',
+            buttonText: '',
             recordShow: [{ text: 'Show 10 records', value: null }],
         }
     }, // End of Component > data
@@ -143,8 +152,9 @@ export default {
             this.$emit('item-length', this.items.length)
         },
 
-        addModify(e) {
+        addModify(e, f) {
             this.title = e
+            this.buttonText = f
             this.$bvModal.show('add-work-popup')
         },
     }, // End of Component > methods

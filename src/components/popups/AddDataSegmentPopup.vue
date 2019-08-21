@@ -4,7 +4,7 @@
             id="add-data-segment-popup"
             :title="title"
             size="sm"
-            okTitle="Submit"
+            :okTitle="buttonText"
             cancelTitle="Cancel"
             cancelVariant="link"
         >
@@ -63,6 +63,10 @@ export default {
         title: {
             type: String,
             default: null,
+        },
+        buttonText: {
+            type: String,
+            default: 'Submit',
         },
     }, // End of Component > props
 

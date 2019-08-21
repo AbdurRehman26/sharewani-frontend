@@ -5,56 +5,6 @@
                 <i :class="list.icon"></i> <span>{{ list.label }}</span>
             </span>
         </div>
-        <!-- 
-        <span
-            class="locked status-view"
-            v-if="statusType == 'locked' || statusType == 'Locked'"
-        >
-            <i class="icon-change-password"></i> <span>Locked</span>
-        </span>
-        <span
-            class="rejected status-view"
-            v-if="statusType == 'archived' || statusType == 'Archived'"
-        >
-            <i class="icon-wrong"></i> <span>Archived</span>
-        </span>
-        <span
-            class="pending status-view"
-            v-if="statusType == 'pending' || statusType == 'Pending'"
-        >
-            <i class="icon-loading"></i>
-            <span>Pending</span>
-        </span>
-        <span
-            class="approved status-view"
-            v-if="statusType == 'approved' || statusType == 'Approved'"
-        >
-            <i class="icon-check"></i> <span>Approved</span>
-        </span>
-        <span
-            class="rejected status-view"
-            v-if="statusType == 'rejected' || statusType == 'Rejected'"
-        >
-            <i class="icon-wrong"></i> <span>Rejected</span>
-        </span>
-        <span
-            class="rejected status-view"
-            v-if="statusType == 'high risk' || statusType == 'High Risk'"
-        >
-            <i class="icon-high-risk"></i> <span>High Risk</span>
-        </span>
-        <span
-            class="pending status-view"
-            v-if="statusType == 'medium risk' || statusType == 'Medium Risk'"
-        >
-            <i class="icon-medium-risk"></i> <span>Medium Risk</span>
-        </span>
-        <span
-            class="approved status-view"
-            v-if="statusType == 'low risk' || statusType == 'Low Risk'"
-        >
-            <i class="icon-low-risk"></i> <span>Low Risk</span>
-        </span> -->
     </div>
 </template>
 
@@ -68,14 +18,6 @@ export default {
     |--------------------------------------------------------------------------
     */
     props: {
-        /**
-         * Value to determine the current compose mode which
-         * varies between 'add' and 'edit'
-         */
-        mode: {
-            type: String,
-            default: 'add',
-        },
         statusType: {
             type: Array,
             default: null,

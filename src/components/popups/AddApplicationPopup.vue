@@ -4,7 +4,7 @@
             id="add-application-popup"
             :title="title"
             size="sm"
-            okTitle="Create"
+            :okTitle="buttonText"
             cancelTitle="Cancel"
             cancelVariant="link"
         >
@@ -87,6 +87,10 @@ export default {
         title: {
             type: String,
             default: null,
+        },
+        buttonText: {
+            type: String,
+            default: 'Create',
         },
     }, // End of Component > props
 

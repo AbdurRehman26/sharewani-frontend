@@ -24,7 +24,10 @@
                                 <div class="col-md-8">
                                     <base-button
                                         @click="
-                                            addModify('Add Purpose of Action')
+                                            addModify(
+                                                'Add Purpose of Action',
+                                                'Create'
+                                            )
                                         "
                                         btnLabel="+ Add Purpose"
                                         btnType="button"
@@ -54,7 +57,9 @@
                             v-if="data.value == 'active'"
                             icon="icon-edit"
                             label="Modify"
-                            @click="addModify('Modify Purpose of Action')"
+                            @click="
+                                addModify('Modify Purpose of Action', 'Modify')
+                            "
                         ></base-action>
                         <!-- if action archive -->
                         <base-action
@@ -73,7 +78,10 @@
             selectPaginationDisable
             :showRecords="recordShow"
         ></pagination>
-        <add-purpose-popup :title="title"></add-purpose-popup>
+        <add-purpose-popup
+            :title="title"
+            :buttonText="buttonText"
+        ></add-purpose-popup>
         <archive-popup
             title="Archive Purpose of Action"
             description="Are you sure you want to archive this purpose of action? You can re-activate it later."
@@ -119,6 +127,7 @@ export default {
             fields: [],
             items: [],
             title: '',
+            buttonText: '',
             recordShow: [{ text: 'Show 10 records', value: null }],
         }
     }, // End of Component > data
@@ -148,8 +157,9 @@ export default {
             this.$emit('item-length', this.items.length)
         },
 
-        addModify(e) {
+        addModify(e, f) {
             this.title = e
+            this.buttonText = f
             this.$bvModal.show('add-purpose-popup')
         },
     }, // End of Component > methods

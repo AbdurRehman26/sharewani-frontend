@@ -4,7 +4,7 @@
             id="add-industry-popup"
             :title="title"
             size="lg"
-            okTitle="Create"
+            :okTitle="buttonText"
             cancelTitle="Cancel"
             cancelVariant="link"
         >
@@ -163,6 +163,10 @@ export default {
         title: {
             type: String,
             default: null,
+        },
+        buttonText: {
+            type: String,
+            default: 'Create',
         },
     }, // End of Component > props
 

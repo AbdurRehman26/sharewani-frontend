@@ -19,7 +19,7 @@
                     btnType="submit"
                     btnVariant="primary"
                     class="back-to-login-btn"
-                    @click="$router.push('/')"
+                    @click="$router.push({ name: 'login-page' })"
                 ></base-button>
             </div>
         </div>
