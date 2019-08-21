@@ -12,8 +12,11 @@
                 <div
                     class="video-record"
                     :class="
-                        (showVideo == true ? 'videoRecored' : '',
-                        timeShow == true ? 'videoRecored' : '')
+                        showVideo == true
+                            ? 'videoRecored'
+                            : '' || timeShow == true
+                            ? 'videoRecored'
+                            : ''
                     "
                 >
                     <div class="show-record-video">
