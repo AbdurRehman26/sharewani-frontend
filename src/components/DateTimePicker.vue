@@ -6,7 +6,7 @@
             :noHeader="true"
             :noLabel="true"
             color="indigo"
-            :no-button-now="true"
+            :no-button-now="noButton"
             :formatted="dateFormat"
             :format="formatVal"
             :only-date="date"
@@ -61,6 +61,11 @@ export default {
         close: {
             type: Boolean,
             default: false,
+        },
+
+        noButton: {
+            type: Boolean,
+            default: true,
         },
 
         noFooter: {
