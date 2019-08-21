@@ -9,6 +9,9 @@ body {
     margin: 0;
     font-size: 0.875rem;
     overflow-x: hidden;
+    @include mobile {
+        font-size: 13px;
+    }
 }
 h1,
 h2,
