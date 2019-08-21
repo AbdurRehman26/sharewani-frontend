@@ -3220,12 +3220,12 @@ export default {
                     {
                         key: 'person',
                         label: 'Code',
-                        class: 'id-center',
                         sortable: true,
                     },
                     {
                         key: 'territory',
                         label: 'IS TERRITORY',
+                        class: 'id-center',
                         sortable: true,
                     },
                     {
