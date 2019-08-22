@@ -24,7 +24,7 @@ export default {
                 loop: false,
                 width: 500,
                 height: 281,
-                videoRecorderType: 'WhammyRecorder',
+                debug: true,
                 controlBar: {
                     volumePanel: true,
                 },
@@ -35,6 +35,8 @@ export default {
                         video: true,
                         debug: true,
                         maxLength: 10,
+                        videoRecorderType: 'WhammyRecorder',
+                        videoMimeType: 'video/webm;codecs=H264',
                     },
                 },
             },
@@ -64,6 +66,7 @@ export default {
         // user clicked the record button and started recording
         this.player.on('startRecord', () => {
             this.$emit('recordingStarted')
+            console.log('recordingStarted')
         })
 
         this.player.on('stopRecord', () => {
