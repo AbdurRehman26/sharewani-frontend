@@ -896,6 +896,11 @@ a {
                     margin-bottom: 24px;
                     font-size: 1.125rem;
                     font-family: $font_medium;
+
+                    @include tablet {
+                        margin-bottom: 20px;
+                        font-size: 16px;
+                    }
                 }
                 label {
                     font-size: 0.875rem !important;
@@ -905,6 +910,10 @@ a {
                     margin-bottom: 0;
                     li {
                         margin-bottom: 12px;
+
+                        @include tablet {
+                            margin-bottom: 6px;
+                        }
 
                         label {
                             text-transform: none;
@@ -940,13 +949,18 @@ a {
                             }
                         }
                         @include mobile {
-                            flex: 0 0 40%;
+                            flex: 0 0 50%;
                             &:last-child {
-                                flex: 0 0 60%;
+                                flex: 0 0 50%;
                                 flex-flow: column;
                             }
                         }
                     }
+                }
+
+                @include tablet {
+                    padding-bottom: 8px;
+                    margin-bottom: 15px;
                 }
             }
         }
@@ -963,6 +977,15 @@ a {
         width: 110px;
         &.status-view {
             margin-right: 8px;
+
+            @include tablet {
+                min-width: 100%;
+                margin-right: 0;
+            }
+
+            @include tablet {
+                min-width: 150px;
+            }
         }
         @include mobile {
             margin-top: 0px;
@@ -984,9 +1007,6 @@ a {
 .screen-section {
     .pending {
         display: none;
-    }
-
-    .seprator-section {
     }
 }
 
@@ -1107,6 +1127,20 @@ a {
         list-style-type: none;
         margin-bottom: 0;
         li {
+            &.col-md-3 {
+                @include tablet {
+                    flex: 0 0 50%;
+                    max-width: 50%;
+                    margin-bottom: 10px;
+                    margin-top: 10px;
+                }
+
+                @include mobile {
+                    margin-bottom: 0;
+                    margin-top: 0;
+                }
+            }
+
             .document-detail {
                 width: 100%;
                 cursor: pointer;
@@ -1123,6 +1157,11 @@ a {
                     text-align: center;
                     img {
                         max-height: 165px;
+                        @include mobile {
+                            width: 100% !important;
+                            max-width: 100% !important;
+                            max-height: auto;
+                        }
                     }
                 }
 
@@ -1164,7 +1203,7 @@ a {
     @include mobile {
         .photo-section {
             img {
-                height: 100%;
+                height: auto;
             }
         }
     }
@@ -2529,22 +2568,11 @@ a {
     .btn-link {
         padding: 7px 6px;
     }
-    @include mobile {
-        position: relative;
-        .col-md-6 {
-            position: unset !important;
-        }
-        .go-back-profile {
+    .go-back-profile {
+        @include tablet {
             position: absolute;
-            top: 0;
             right: 0;
-        }
-        .col-md-4 {
-            .btn-link {
-                display: block;
-                margin: auto;
-                margin-bottom: 7px;
-            }
+            top: 0;
         }
     }
 }
@@ -2573,6 +2601,20 @@ a {
                 min-width: 0px;
                 margin: auto;
             }
+        }
+    }
+
+    @include tablet {
+        .col-md-9 {
+            flex: 0 0 80% !important;
+            max-width: 80% !important;
+        }
+    }
+
+    @include mobile {
+        .col-md-9 {
+            flex: 0 0 100% !important;
+            max-width: 100% !important;
         }
     }
 }
@@ -2643,6 +2685,14 @@ a {
                     }
                 }
             }
+
+            &.profile-image-section {
+                @include tablet {
+                    flex: 20%;
+                    max-width: 20%;
+                }
+            }
+
             @include mobile {
                 flex: 50% !important;
                 max-width: 50% !important;
@@ -2670,6 +2720,16 @@ a {
                     // font-size: 0.6rem;
                 }
             }
+        }
+    }
+
+    img {
+        @include tablet {
+            max-width: 100% !important;
+        }
+
+        @include mobile {
+            max-width: 180px !important;
         }
     }
 }
@@ -3536,8 +3596,8 @@ a {
 .customer-details-page {
     &.customer-profile {
         .wrap-content {
-            .col-md-3 {
-                @include mobile {
+            .filter-title-section {
+                @include tablet {
                     flex: 0 0 100% !important;
                     max-width: 100% !important;
                 }
