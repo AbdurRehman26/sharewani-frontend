@@ -13,10 +13,10 @@
                         <b-form-group
                             id="input-group-2"
                             label="NEW PASSWORD"
-                            label-for="input-1"
+                            label-for="new-password"
                         >
                             <b-form-input
-                                id="input-2"
+                                id="new-password"
                                 type="password"
                                 autocomplete="no"
                                 placeholder="Enter your new password"
@@ -25,10 +25,10 @@
                         <b-form-group
                             id="input-group-2"
                             label="CONFIRM PASSWORD"
-                            label-for="input-1"
+                            label-for="confirm-password"
                         >
                             <b-form-input
-                                id="input-2"
+                                id="confirm-password"
                                 type="password"
                                 autocomplete="no"
                                 placeholder="Re-enter your new password"
