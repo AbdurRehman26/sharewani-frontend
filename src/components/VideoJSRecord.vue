@@ -24,6 +24,7 @@ export default {
                 loop: false,
                 width: 500,
                 height: 281,
+                videoRecorderType: 'WhammyRecorder',
                 controlBar: {
                     volumePanel: true,
                 },
