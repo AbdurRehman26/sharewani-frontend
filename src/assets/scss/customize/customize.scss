@@ -26,6 +26,13 @@
     }
 }
 
+.multiselect {
+    .multiselect__tag {
+        float: left;
+        margin-bottom: 8px;
+    }
+}
+
 select {
     &.form-control {
         cursor: pointer;
