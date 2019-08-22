@@ -191,10 +191,6 @@ export default {
     |--------------------------------------------------------------------------
     */
     props: {
-        /**
-         * Value to determine the current compose mode which
-         * varies between 'add' and 'edit'
-         */
         mode: {
             type: String,
             default: 'add',
@@ -208,12 +204,7 @@ export default {
     */
     data() {
         return {
-            menuListing: [
-                // {
-                //     anchorLink: '/system-logs',
-                //     menuLabel: 'System Log',
-                // },
-            ],
+            menuListing: [],
             fields: [],
             items: [],
             filterByModule: null,
