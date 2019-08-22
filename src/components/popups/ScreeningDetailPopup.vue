@@ -6,6 +6,7 @@
             title="Name Screening Hit Detail"
             size="md"
             cancelVariant="link"
+            no-close-on-backdrop
         >
             <div class="scrollable screening-hit-section" id="style-2">
                 <div class="row">

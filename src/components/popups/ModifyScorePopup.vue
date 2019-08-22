@@ -7,6 +7,7 @@
             okTitle="Update"
             cancelTitle="Cancel"
             cancelVariant="link"
+            no-close-on-backdrop
         >
             <b-form>
                 <div class="row">

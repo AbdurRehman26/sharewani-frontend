@@ -7,6 +7,7 @@
             :okTitle="buttonText"
             cancelTitle="Cancel"
             cancelVariant="link"
+            no-close-on-backdrop
         >
             <b-form class="modal-form-format">
                 <div class="row">

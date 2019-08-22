@@ -77,7 +77,7 @@
                             v-if="data.value == 'archive'"
                             icon="icon-done"
                             label="Activate"
-                            v-b-modal.initiate-review
+                            v-b-modal.activate-popup
                         ></base-action>
                     </div>
                 </template>
@@ -97,6 +97,7 @@
             title="Archive Application"
             description="Are you sure you want to archive this application ? You can activate it later."
         ></archive-popup>
+        <activate-popup></activate-popup>
     </div>
 </template>
 
@@ -105,11 +106,13 @@ import { mapGetters } from 'vuex'
 import addApplicationPopup from '@/components/popups/AddApplicationPopup.vue'
 import archivePopup from '@/components/popups/ArchivePopup.vue'
 import pagination from '@/components/Pagination.vue'
+import activatePopup from '@/components/popups/ActivatePopup.vue'
 export default {
     components: {
         addApplicationPopup,
         archivePopup,
         pagination,
+        activatePopup,
     },
 
     /*

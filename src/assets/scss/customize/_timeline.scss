@@ -3,19 +3,30 @@
 .timeline {
     list-style: none;
     position: relative;
-    margin: 50px auto;
+    margin: 70px auto;
     width: 100%;
     padding-left: 0;
     list-style-type: none;
-
+    @include mobile {
+        margin-top: 40px;
+    }
     li {
+        position: relative;
+        @include mobile {
+            margin: 25px auto;
+        }
+
         ul {
             padding-left: 0;
             list-style-type: none;
+            margin-top: -14px;
             li {
                 &:nth-child(even) {
                     margin-top: -55px;
                     margin-bottom: -20px;
+                    @include mobile {
+                        margin: 0;
+                    }
                     .timeline-movement {
                     }
                     .timeline-item {
@@ -29,11 +40,15 @@
 
                 &:last-child {
                     padding-bottom: 35px;
+                    @include mobile {
+                        padding-bottom: 0;
+                    }
                 }
+
                 .timeline-item {
                     @include mobile {
                         margin-left: 0px !important;
-                        margin-top: 60px;
+                        margin-top: 0px;
                     }
                 }
             }
@@ -67,6 +82,10 @@
         right: auto;
         margin-left: -27px;
         bottom: -30px;
+
+        @include mobile {
+            bottom: -80px;
+        }
     }
 
     .clearFix {
@@ -88,17 +107,26 @@
 
         &.timeline-future-movement {
             background-color: $body-bg;
-            height: 50px;
-            width: 100%;
-            top: -16px;
-            margin-left: 0px;
-            left: 0;
-            padding-top: 15px;
+            height: auto;
+            width: auto;
+            top: 0;
             border: none;
-
+            position: relative;
+            border-radius: 0;
+            display: table;
+            margin: 0 auto;
+            left: 0;
+            padding: 10px 0;
+            @include mobile {
+                top: -6px;
+            }
             h4 {
                 font-size: 1.125rem;
                 font-family: $font_medium;
+                @include mobile {
+                    margin-bottom: 0;
+                    font-size: 1rem;
+                }
             }
 
             p {
@@ -113,7 +141,9 @@
     .timeline-movement {
         position: relative;
         margin-bottom: 33px;
-
+        @include mobile {
+            margin-bottom: 0;
+        }
         .timeline-item {
             &:before {
                 content: '';
@@ -123,6 +153,9 @@
                 background-color: $border-color;
                 right: 2px;
                 top: 50%;
+                @include mobile {
+                    display: none;
+                }
             }
             .timeline-panel {
                 border-radius: $card-border-radius;
@@ -132,6 +165,12 @@
                 position: relative;
                 -webkit-box-shadow: 0px 0.5px 0px rgba(50, 50, 93, 0.2);
                 box-shadow: 0px 0.5px 0px rgba(50, 50, 93, 0.2);
+                @include tablet {
+                    clear: both;
+                    display: block;
+                    overflow: hidden;
+                    padding: 15px;
+                }
                 .tags-section {
                     margin-top: 12px;
                     display: inline-block;
@@ -145,13 +184,36 @@
                     background-size: cover;
                     background-position: top center;
                     border-radius: 100%;
+                    @include tablet {
+                        float: left;
+                        margin: 0 auto 12px;
+                    }
                 }
 
                 .timeline-details {
                     width: calc(100% - 42px);
                     float: right;
                     padding-left: 12px;
-
+                    @include tablet {
+                        width: 100%;
+                        float: none;
+                        padding: 0;
+                        text-align: left;
+                        position: relative;
+                        padding-top: 55px;
+                        .timeline-details-username,
+                        .timeline-details-date {
+                            position: absolute;
+                            left: 0;
+                            right: 0;
+                            margin: 0 auto;
+                            top: 0;
+                            padding-left: 55px;
+                        }
+                        .timeline-details-date {
+                            top: 37px;
+                        }
+                    }
                     h5 {
                         font-size: 0.875rem;
                         color: $body-color;
@@ -187,7 +249,11 @@
     }
 
     .timeline-movement-top {
-        height: 0px;
+        height: auto;
+        margin-bottom: 25px;
+        @include mobile {
+            margin-bottom: 0;
+        }
     }
 }
 
@@ -214,7 +280,9 @@
 
 .timeline-upload-file {
     width: 100%;
-
+    @include tablet {
+        text-align: left;
+    }
     .file-section {
         width: 22px;
         float: left;

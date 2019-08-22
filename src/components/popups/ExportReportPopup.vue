@@ -7,6 +7,7 @@
             okTitle="Download"
             cancelTitle="Cancel"
             cancelVariant="link"
+            no-close-on-backdrop
         >
             <p>
                 Would you like to download report data in Excel format or

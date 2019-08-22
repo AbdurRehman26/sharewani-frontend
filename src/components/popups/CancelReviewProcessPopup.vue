@@ -7,6 +7,7 @@
             okTitle="Cancel"
             cancelTitle="Cancel"
             cancelVariant="link"
+            no-close-on-backdrop
         >
             <p>
                 Are you sure you want to cancel review process? Once you cancel
