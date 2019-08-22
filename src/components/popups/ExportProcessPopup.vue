@@ -69,11 +69,6 @@ export default {
         hideModal() {
             this.$refs['my-modal'].hide()
         },
-        /**
-         * Handle when the modal is canceled
-         *
-         * @return {void}
-         */
     },
 }
 </script>
