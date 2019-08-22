@@ -88,10 +88,6 @@ export default {
     |--------------------------------------------------------------------------
     */
     props: {
-        /**
-         * Value to determine the current compose mode which
-         * varies between 'add' and 'edit'
-         */
         title: {
             type: String,
             default: null,

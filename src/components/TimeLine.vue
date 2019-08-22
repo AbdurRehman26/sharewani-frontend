@@ -126,10 +126,6 @@ export default {
             type: Array,
             default: null,
         },
-        /**
-         * Value to determine the current compose mode which
-         * varies between 'add' and 'edit'
-         */
     }, // End of Component > props
 
     /*

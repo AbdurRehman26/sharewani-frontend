@@ -93,31 +93,7 @@ export default {
         | Component > methods
         |--------------------------------------------------------------------------
         */
-    methods: {
-        // onSubmit(evt) {
-        //     if (this.username == 'admin' && this.password == 'admin123') {
-        //         this.$toasted.show('Login Sucessfully.', {
-        //             icon: {
-        //                 name: 'check',
-        //                 before: true,
-        //             },
-        //             className: 'success',
-        //         })
-        //         var route = this
-        //         setTimeout(function() {
-        //             route.$router.push('/dashboard')
-        //         }, 1000)
-        //     } else {
-        //         this.$toasted.show('Login Unsucessfully.', {
-        //             icon: {
-        //                 name: 'error',
-        //                 before: true,
-        //             },
-        //             className: 'danger',
-        //         })
-        //     }
-        // },
-    }, // End of Component > methods
+    methods: {}, // End of Component > methods
 
     /*
         |--------------------------------------------------------------------------

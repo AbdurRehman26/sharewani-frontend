@@ -71,10 +71,6 @@ export default {
     |--------------------------------------------------------------------------
     */
     props: {
-        /**
-         * Value to determine the current compose mode which
-         * varies between 'add' and 'edit'
-         */
         title: {
             type: String,
             default: null,
@@ -106,12 +102,6 @@ export default {
             ],
         }
     },
-    methods: {
-        /**
-         * Handle when the modal is canceled
-         *
-         * @return {void}
-         */
-    },
+    methods: {},
 }
 </script>

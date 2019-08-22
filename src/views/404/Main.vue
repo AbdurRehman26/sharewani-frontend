@@ -29,12 +29,6 @@ export default {
     |--------------------------------------------------------------------------
     */
     computed: {}, // End of Component > computed
-    methods: {
-        /**
-         * Handle when the modal is closed
-         *
-         * @return {void}
-         */
-    }, // End of Component > methods
+    methods: {}, // End of Component > methods
 }
 </script>
