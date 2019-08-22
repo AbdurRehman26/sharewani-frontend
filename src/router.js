@@ -208,9 +208,7 @@ export default new Router({
         {
             path: '/customer-profiles',
             name: 'profile',
-            // route level code-splitting
-            // this generates a separate chunk (about.[hash].js) for this route
-            // which is lazy-loaded when the route is visited.
+
             component: () =>
                 import(/* webpackChunkName: "profile" */ './views/customer-profiles/Main.vue'),
 
@@ -237,9 +235,7 @@ export default new Router({
                 {
                     path: '/customer-profiles/advance-search',
                     name: 'advance-search',
-                    // route level code-splitting
-                    // this generates a separate chunk (about.[hash].js) for this route
-                    // which is lazy-loaded when the route is visited.
+
                     component: () =>
                         import(/* webpackChunkName: "advance-search" */ './views/customer-profiles/AdvanceSearch.vue'),
                     meta: {

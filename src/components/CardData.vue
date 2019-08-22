@@ -18,12 +18,6 @@
         <p v-if="lastUpdate">{{ lastUpdate }}</p>
         <p v-if="totalRecord">{{ totalRecord }}</p>
         <p v-if="description" class="caption-description">{{ description }}</p>
-        <!-- <b-button @click="$emit('updateData')" variant="primary"
-            >Update Data Set</b-button
-        >
-        <b-button @click="$emit('currentData')" variant="link"
-            ><i class="icon-cloud"></i> Download Current Data Set</b-button
-        > -->
     </div>
 </template>
 <script>

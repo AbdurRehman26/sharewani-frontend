@@ -116,16 +116,7 @@ export default {
     | Component > props
     |--------------------------------------------------------------------------
     */
-    props: {
-        /**
-         * Value to determine the current compose mode which
-         * varies between 'add' and 'edit'
-         */
-        mode: {
-            type: String,
-            default: 'add',
-        },
-    }, // End of Component > props
+    props: {}, // End of Component > props
 
     /*
     |--------------------------------------------------------------------------
@@ -251,13 +242,7 @@ export default {
                     popup: '',
                     status: 'editable',
                 },
-                /*                {
-                    id: 7,
-                    icon: 'icon-checkbox',
-                    label: 'Checkbox Group',
-                    popup: '',
-                    status: 'disabled',
-                },*/
+
                 {
                     id: 1,
                     icon: 'icon-heading',

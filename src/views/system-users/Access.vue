@@ -120,12 +120,8 @@ export default {
     | Component > props
     |--------------------------------------------------------------------------
     */
-    props: {
-        mode: {
-            type: String,
-            default: 'add',
-        },
-    }, // End of Component > props
+
+    props: {}, // End of Component > props
 
     /*
     |--------------------------------------------------------------------------

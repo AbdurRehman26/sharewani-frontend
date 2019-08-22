@@ -120,11 +120,6 @@ export default {
                     icon: 'icon-system-log',
                     menuLabel: 'System Logs',
                 },
-                // {
-                //     anchorLink: '/data-export',
-                //     icon: 'icon-export',
-                //     menuLabel: 'Data Export',
-                // },
             ],
         }
     }, // End of Component > data
