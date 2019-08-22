@@ -1,4 +1,3 @@
 export default {
-    //dashbaord activity
-    profile: (state) => state.profile,
+	profile: (state) => state.profile,
 }

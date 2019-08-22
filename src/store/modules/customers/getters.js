@@ -1,4 +1,3 @@
 export default {
-    //dashbaord activity
-    customersData: (state) => state.customersData,
+	customersData: (state) => state.customersData,
 }

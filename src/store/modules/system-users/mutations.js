@@ -1,6 +1,5 @@
 export default {
-    setSystemUsersData(state, payload) {
-        //dashbaord activity
-        state.systemUsersData = payload
-    },
+	setSystemUsersData(state, payload) {
+		state.systemUsersData = payload
+	},
 }
