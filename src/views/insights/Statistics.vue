@@ -237,16 +237,7 @@ export default {
     | Component > props
     |--------------------------------------------------------------------------
     */
-    props: {
-        /**
-         * Value to determine the current compose mode which
-         * varies between 'add' and 'edit'
-         */
-        mode: {
-            type: String,
-            default: 'add',
-        },
-    }, // End of Component > props
+    props: {}, // End of Component > props
 
     /*
     |--------------------------------------------------------------------------
@@ -256,7 +247,6 @@ export default {
     data() {
         return {
             selected: null,
-
             countryResidence: {
                 fields: [],
                 items: [],

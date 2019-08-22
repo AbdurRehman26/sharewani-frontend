@@ -1948,22 +1948,16 @@ export default {
                 name: 'DOW JONES',
                 description: 'Manage Dow Jones Data',
                 active: true,
-                // lastUpdate: 'Last updated: June 10, 2019',
-                // totalRecord: 'Total Records: 45,650',
             },
             {
                 logo: 'logo2.png',
                 name: 'WORLD-CHECK',
                 description: 'Manage World Check Data',
-                // lastUpdate: 'Last updated: June 9, 2019',
-                // totalRecord: 'Total Records: 23,956',
             },
             {
                 logo: 'logo3.png',
                 name: 'BLACK LIST',
                 description: "Manage Client's Blacklist Data",
-                // lastUpdate: 'Last updated: June 12, 2019',
-                // totalRecord: 'Total Records: 2,450',
             },
         ],
         screeningData: {
