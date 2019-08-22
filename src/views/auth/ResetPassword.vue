@@ -18,7 +18,7 @@
                             <b-form-input
                                 id="input-2"
                                 type="password"
-                                autocomplete="no"
+                                autocomplete="off"
                                 placeholder="Enter your new password"
                             ></b-form-input>
                         </b-form-group>
@@ -30,7 +30,7 @@
                             <b-form-input
                                 id="input-2"
                                 type="password"
-                                autocomplete="no"
+                                autocomplete="off"
                                 placeholder="Re-enter your new password"
                             ></b-form-input>
                         </b-form-group>

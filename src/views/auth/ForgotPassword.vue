@@ -20,7 +20,7 @@
                                 id="input-1"
                                 type="email"
                                 required
-                                autocomplete="no"
+                                autocomplete="off"
                                 placeholder="Enter your account username"
                             ></b-form-input>
                         </b-form-group>
