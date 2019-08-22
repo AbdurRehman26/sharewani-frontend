@@ -31,7 +31,9 @@
                                                 ></div>
 
                                                 <div class="timeline-details">
-                                                    <div class="float-left">
+                                                    <div
+                                                        class="float-left timeline-details-username"
+                                                    >
                                                         <h5>
                                                             {{ describe.name }}
                                                         </h5>
@@ -41,7 +43,9 @@
                                                             }}</span
                                                         >
                                                     </div>
-                                                    <div class="float-right">
+                                                    <div
+                                                        class="float-right timeline-details-date"
+                                                    >
                                                         <p class="date-content">
                                                             {{ describe.date }}
                                                         </p>
