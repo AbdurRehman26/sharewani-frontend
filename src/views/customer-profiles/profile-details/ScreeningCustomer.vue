@@ -12,6 +12,33 @@
         </div>
         <div class="table-section table-min-width">
             <b-table :items="items" :fields="fields">
+                <template slot="full_name" slot-scope="data">
+                    <a
+                        href="javascript:void(0);"
+                        class="cursor-pointer"
+                        v-b-modal.screening-detail-popup
+                        >{{ data.value }}</a
+                    >
+                </template>
+
+                <template slot="country" slot-scope="data">
+                    <a
+                        href="javascript:void(0);"
+                        class="cursor-pointer"
+                        v-b-modal.screening-detail-popup
+                        >{{ data.value }}</a
+                    >
+                </template>
+
+                <template slot="associates" slot-scope="data">
+                    <a
+                        href="javascript:void(0);"
+                        class="cursor-pointer"
+                        v-b-modal.screening-detail-popup
+                        >{{ data.value }}</a
+                    >
+                </template>
+
                 <template slot="sanction" slot-scope="data">
                     <status-type-icon
                         :statusType="data.value"

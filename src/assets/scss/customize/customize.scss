@@ -20,6 +20,17 @@
 .auth-card-body {
     padding: 37px 42px 40px;
 }
+.btn-group-toggle {
+    label {
+        cursor: pointer;
+    }
+}
+
+select {
+    &.form-control {
+        cursor: pointer;
+    }
+}
 
 .right-panel {
     padding: 29px 40px;
@@ -1195,6 +1206,17 @@ a {
                 width: 50%;
             }
         }
+    }
+}
+
+.custom-file-input {
+    cursor: pointer;
+}
+
+.permissions-section {
+    .col-form-label {
+        width: 100%;
+        min-height: 40px;
     }
 }
 

@@ -149,7 +149,7 @@
                             v-if="data.value == 'activate'"
                             icon="icon-done"
                             label="Activate"
-                            v-b-modal.archive-popup
+                            v-b-modal.activate-popup
                         ></base-action>
                     </div>
                 </template>
@@ -167,6 +167,7 @@
             title="Archive User"
             description="Are you sure you want to archive this user? You can re-activate account later."
         ></archive-popup>
+        <activate-popup></activate-popup>
     </div>
 </template>
 
@@ -175,11 +176,13 @@ import { mapGetters } from 'vuex'
 import pagination from '@/components/Pagination.vue'
 import addSystemUserPopup from '@/components/popups/AddSystemUserPopup.vue'
 import archivePopup from '@/components/popups/ArchivePopup.vue'
+import activatePopup from '@/components/popups/ActivatePopup.vue'
 export default {
     components: {
         pagination,
         addSystemUserPopup,
         archivePopup,
+        activatePopup,
     },
 
     /*

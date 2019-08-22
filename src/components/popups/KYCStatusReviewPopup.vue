@@ -7,6 +7,7 @@
             okTitle="Submit"
             cancelTitle="Cancel"
             cancelVariant="link"
+            no-close-on-backdrop
         >
             <b-form>
                 <b-form-group

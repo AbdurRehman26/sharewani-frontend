@@ -7,6 +7,7 @@
             okTitle="Submit"
             cancelTitle="Cancel"
             cancelVariant="link"
+            no-close-on-backdrop
         >
             <p>
                 Are you sure you want to manually overwrite liveness detection

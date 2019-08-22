@@ -77,7 +77,7 @@
                             v-if="data.value == 'archive'"
                             icon="icon-done"
                             label="Activate"
-                            v-b-modal.archive-popup
+                            v-b-modal.activate-popup
                         ></base-action>
                     </div>
                 </template>
@@ -97,6 +97,7 @@
             title="Archive Data Segment"
             description="Are you sure you want to archive this data segment? You can re-activate it later."
         ></archive-popup>
+        <activate-popup></activate-popup>
     </div>
 </template>
 
@@ -105,11 +106,13 @@ import { mapGetters } from 'vuex'
 import pagination from '@/components/Pagination.vue'
 import addDataSegmentPopup from '@/components/popups/AddDataSegmentPopup.vue'
 import archivePopup from '@/components/popups/ArchivePopup.vue'
+import activatePopup from '@/components/popups/ActivatePopup.vue'
 export default {
     components: {
         addDataSegmentPopup,
         archivePopup,
         pagination,
+        activatePopup,
     },
 
     /*

@@ -7,6 +7,7 @@
             okTitle="Update"
             cancelTitle="Cancel"
             cancelVariant="link"
+            no-close-on-backdrop
         >
             <h5>Dow Jones Data</h5>
             <upload-file></upload-file>

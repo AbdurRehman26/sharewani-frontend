@@ -7,6 +7,7 @@
             okTitle="Submit"
             cancelTitle="Cancel"
             cancelVariant="link"
+            no-close-on-backdrop
         >
             <b-form>
                 <div class="row">
@@ -49,7 +50,7 @@
                         >
                             <b-form-textarea
                                 id="reason"
-                                placeholder="Start Typing the reason"
+                                placeholder="Start typing the reason"
                                 rows="3"
                             ></b-form-textarea>
                         </b-form-group>

@@ -7,6 +7,7 @@
             :okTitle="buttonText"
             cancelTitle="Cancel"
             cancelVariant="link"
+            no-close-on-backdrop
         >
             <b-form class="review-config-form">
                 <b-form-group
