@@ -7,6 +7,7 @@
             ok-only
             okTitle="Close"
             okVariant="primary"
+            no-close-on-backdrop
         >
             <h5>Recorded Video</h5>
 

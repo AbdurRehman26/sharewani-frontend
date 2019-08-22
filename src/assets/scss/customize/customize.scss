@@ -20,6 +20,17 @@
 .auth-card-body {
     padding: 37px 42px 40px;
 }
+.btn-group-toggle {
+    label {
+        cursor: pointer;
+    }
+}
+
+select {
+    &.form-control {
+        cursor: pointer;
+    }
+}
 
 .right-panel {
     padding: 29px 40px;

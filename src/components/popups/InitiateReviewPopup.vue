@@ -7,6 +7,7 @@
             okTitle="Yes, Initate Review"
             cancelTitle="Cancel"
             cancelVariant="link"
+            no-close-on-backdrop
         >
             <p>
                 Are you sure you want to initiate review process of this

@@ -7,6 +7,7 @@
             okTitle="Archive"
             cancelTitle="Cancel"
             cancelVariant="link"
+            no-close-on-backdrop
         >
             <div slot="modal-header" class="w-100 archive-popup">
                 <h5 class="modal-title">{{ title }}</h5>

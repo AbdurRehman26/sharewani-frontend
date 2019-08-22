@@ -7,6 +7,7 @@
             :okTitle="buttonText"
             cancelTitle="Cancel"
             cancelVariant="link"
+            no-close-on-backdrop
         >
             <b-form class="role-form-section">
                 <div class="scrollable" id="style-2">
