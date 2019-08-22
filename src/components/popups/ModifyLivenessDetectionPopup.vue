@@ -42,12 +42,6 @@ export default {
             },
         }
     },
-    methods: {
-        /**
-         * Handle when the modal is canceled
-         *
-         * @return {void}
-         */
-    },
+    methods: {},
 }
 </script>

@@ -57,12 +57,6 @@ export default {
             play: false,
         }
     },
-    methods: {
-        /**
-         * Handle when the modal is canceled
-         *
-         * @return {void}
-         */
-    },
+    methods: {},
 }
 </script>

@@ -28,12 +28,6 @@ export default {
     data() {
         return {}
     },
-    methods: {
-        /**
-         * Handle when the modal is canceled
-         *
-         * @return {void}
-         */
-    },
+    methods: {},
 }
 </script>
