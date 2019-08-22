@@ -69,14 +69,14 @@
                             v-if="data.value == 'active'"
                             icon="icon-trash"
                             label="Archive"
-                            v-b-modal.archive-popup
+                            v-b-modal.v-b-modal.archive-popup
                         ></base-action>
                         <!-- if action activate -->
                         <base-action
                             v-if="data.value == 'archive'"
                             icon="icon-done"
                             label="Activate"
-                            v-b-modal.v-b-modal.archive-popup
+                            v-b-modal.activate-popup
                         ></base-action>
                     </div>
                 </template>
@@ -96,6 +96,7 @@
             title="Archive Role"
             description="Are you sure you want to archive this role? You can re-activate it later."
         ></archive-popup>
+        <activate-popup></activate-popup>
     </div>
 </template>
 
@@ -103,12 +104,14 @@
 import addRolePopup from '@/components/popups/AddRolePopup.vue'
 import archivePopup from '@/components/popups/ArchivePopup.vue'
 import pagination from '@/components/Pagination.vue'
+import activatePopup from '@/components/popups/ActivatePopup.vue'
 import { mapGetters } from 'vuex'
 export default {
     components: {
         addRolePopup,
         archivePopup,
         pagination,
+        activatePopup,
     },
 
     /*

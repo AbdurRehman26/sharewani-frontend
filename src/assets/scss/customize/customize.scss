@@ -1198,6 +1198,17 @@ a {
     }
 }
 
+.custom-file-input {
+    cursor: pointer;
+}
+
+.permissions-section {
+    .col-form-label {
+        width: 100%;
+        min-height: 40px;
+    }
+}
+
 .videoRecored {
     .show-record-video {
         button.vjs-record-button {

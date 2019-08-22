@@ -1,15 +1,15 @@
 <template>
     <div>
         <b-modal
-            id="archive-popup"
+            id="activate-popup"
             ref="my-modal"
             size="sm"
-            okTitle="Archive"
+            okTitle="Activate"
             cancelTitle="Cancel"
             cancelVariant="link"
         >
             <div slot="modal-header" class="w-100 archive-popup">
-                <h5 class="modal-title">{{ title }}</h5>
+                <h5 class="modal-title">Activate User</h5>
                 <button
                     type="button"
                     class="close"
@@ -21,7 +21,8 @@
                 </button>
             </div>
             <p>
-                {{ description }}
+                Are you sure you want to activate this user? You can re-activate
+                account later.
             </p>
         </b-modal>
     </div>
