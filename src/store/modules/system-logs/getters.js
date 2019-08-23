@@ -1,4 +1,3 @@
 export default {
-    //dashbaord activity
-    systemLogsData: (state) => state.systemLogsData,
+	systemLogsData: (state) => state.systemLogsData,
 }
