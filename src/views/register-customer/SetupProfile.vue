@@ -80,7 +80,7 @@
                                 <div class="form-group">
                                     <date-time-picker
                                         dateFormat="DD/MM/YYYY"
-                                        placeholder="DD/MM/YYYY"
+                                        placeholder="DD / MM / YYYY"
                                         formatVal="DD/MM/YYYY"
                                         date
                                         close
@@ -355,7 +355,7 @@
                                 <div class="form-group ">
                                     <date-time-picker
                                         dateFormat="DD/MM/YYYY"
-                                        placeholder="DD/MM/YYYY"
+                                        placeholder="DD / MM / YYYY"
                                         formatVal="DD/MM/YYYY"
                                         date
                                         close
