@@ -12,9 +12,7 @@
                                 <date-time-picker
                                     dateFormat="ll"
                                     placeholder="Start date"
-                                    date
-                                    close
-                                    noFooter
+                                    formatVal="DD-MM-YYYY"
                                 ></date-time-picker>
                             </div>
                         </div>
@@ -23,9 +21,7 @@
                                 <date-time-picker
                                     dateFormat="ll"
                                     placeholder="End date"
-                                    date
-                                    close
-                                    noFooter
+                                    formatVal="DD-MM-YYYY"
                                 ></date-time-picker>
                             </div>
                         </div>

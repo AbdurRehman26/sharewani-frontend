@@ -26,64 +26,6 @@
     }
 }
 
-.datetime-picker {
-    z-index: 1;
-    &.field-input {
-        input {
-            position: absolute;
-            left: 0;
-            top: 0;
-            z-index: 9;
-            height: 100%;
-            border: none !important;
-            @extend .form-control;
-            background-color: $white !important;
-            cursor: pointer;
-            min-width: 0px !important;
-        }
-    }
-    .calender-div {
-        top: 47px !important;
-        .headers {
-            .days {
-                color: #6c757d !important;
-            }
-        }
-        .year-month-wrapper {
-            background-color: $primary !important;
-            .nav-l,
-            .nav-r {
-                background-color: $primary !important;
-            }
-        }
-        .activePort {
-            background-color: $primary !important;
-            &.port {
-                color: #fff !important;
-            }
-        }
-        .port {
-            &:hover {
-                color: $primary;
-            }
-        }
-        .okButton {
-            color: #6c757d !important;
-        }
-        li {
-            &.active {
-                background-color: $primary !important;
-            }
-        }
-        .month-setter {
-            .year,
-            .month {
-                width: 45%;
-            }
-        }
-    }
-}
-
 .multiselect {
     .multiselect__tag {
         float: left;
