@@ -4,11 +4,14 @@
 
     .placeholder {
         position: absolute;
-        top: 13px;
+        top: 0px;
+        align-items: center;
         width: 70%;
         z-index: 1;
         pointer-events: none;
-        left: 0;
+        left: 4px;
+        display: flex;
+        height: 100%;
         padding-left: 13px;
         background-color: $white;
         color: $grey-medium;
