@@ -16,9 +16,9 @@
                     label-for="input-1"
                 >
                     <date-time-picker
-                        dateFormat="lll"
+                        dateFormat="DD/MM/YYYY/ hh:mm A"
+                        formatVal="DD/MM/YYYY/ hh:mm A"
                         placeholder="Select date time"
-                        formatVal="DD-MM-YYYY h:i:s"
                     ></date-time-picker>
                 </b-form-group>
 

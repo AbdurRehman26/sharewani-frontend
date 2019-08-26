@@ -1,24 +1,31 @@
 <template>
     <div class="custom-datepicker">
         <i class="icon-calendar"></i>
-
-        <Datepicker
-            class="date-time-picker field-input"
-            :format="formatVal"
+        <VueCtkDateTimePicker
             v-model="yourValue"
-            width="100%"
-        />
-        <p v-show="yourValue == null" class="placeholder">{{ placeholder }}</p>
+            :noHeader="true"
+            :noLabel="true"
+            color="indigo"
+            :no-button-now="noButton"
+            :formatted="dateFormat"
+            :format="formatVal"
+            :only-date="date"
+            :only-time="time"
+            :auto-close="close"
+            :no-button="noFooter"
+        ></VueCtkDateTimePicker>
+        <p v-if="yourValue == null" class="placeholder">
+            {{ placeholder }}
+        </p>
     </div>
 </template>
 <script>
-import Datepicker from 'vuejs-datetimepicker'
+import VueCtkDateTimePicker from 'vue-ctk-date-time-picker'
 import 'vue-ctk-date-time-picker/dist/vue-ctk-date-time-picker.css'
 export default {
     components: {
-        Datepicker,
+        VueCtkDateTimePicker,
     },
-
     props: {
         /**
          * Value to determine the current compose mode which
@@ -40,12 +47,10 @@ export default {
             type: String,
             default: null,
         },
-
         date: {
             type: Boolean,
             default: false,
         },
-
         time: {
             type: Boolean,
             default: false,
@@ -54,18 +59,15 @@ export default {
             type: Boolean,
             default: false,
         },
-
         noButton: {
             type: Boolean,
             default: true,
         },
-
         noFooter: {
             type: Boolean,
             default: false,
         },
     }, // End of Component > props
-
     data() {
         return {
             yourValue: null,

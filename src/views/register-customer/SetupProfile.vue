@@ -79,9 +79,9 @@
                             >
                                 <div class="form-group">
                                     <date-time-picker
-                                        dateFormat="ll"
-                                        formatVal="DD-MM-YYYY"
-                                        placeholder="MM / DD / YYYY"
+                                        dateFormat="DD/MM/YYYY"
+                                        placeholder="DD/MM/YYYY"
+                                        formatVal="DD/MM/YYYY"
                                         date
                                         close
                                         noFooter
@@ -354,9 +354,9 @@
                             >
                                 <div class="form-group ">
                                     <date-time-picker
-                                        dateFormat="ll"
-                                        formatVal="DD-MM-YYYY"
-                                        placeholder="MM / DD / YYYY"
+                                        dateFormat="DD/MM/YYYY"
+                                        placeholder="DD/MM/YYYY"
+                                        formatVal="DD/MM/YYYY"
                                         date
                                         close
                                         noFooter

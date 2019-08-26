@@ -25,9 +25,12 @@
                                                             class="form-group "
                                                         >
                                                             <date-time-picker
-                                                                dateFormat="ll"
                                                                 placeholder="Start date"
-                                                                formatVal="DD-MM-YYYY"
+                                                                dateFormat="DD/MM/YYYY"
+                                                                formatVal="DD/MM/YYYY"
+                                                                date
+                                                                close
+                                                                noFooter
                                                             ></date-time-picker>
                                                         </div>
                                                     </div>
@@ -38,9 +41,12 @@
                                                             class="form-group "
                                                         >
                                                             <date-time-picker
-                                                                dateFormat="ll"
                                                                 placeholder="End date"
-                                                                formatVal="DD-MM-YYYY"
+                                                                dateFormat="DD/MM/YYYY"
+                                                                formatVal="DD/MM/YYYY"
+                                                                date
+                                                                close
+                                                                noFooter
                                                             ></date-time-picker>
                                                         </div>
                                                     </div>

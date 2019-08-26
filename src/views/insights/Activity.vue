@@ -10,18 +10,24 @@
                         <div class="col-md-4 col-xs-12">
                             <div class="form-group">
                                 <date-time-picker
-                                    dateFormat="ll"
                                     placeholder="Start date"
-                                    formatVal="DD-MM-YYYY"
+                                    dateFormat="DD/MM/YYYY"
+                                    formatVal="DD/MM/YYYY"
+                                    date
+                                    close
+                                    noFooter
                                 ></date-time-picker>
                             </div>
                         </div>
                         <div class="col-md-4 col-xs-12">
                             <div class="form-group">
                                 <date-time-picker
-                                    dateFormat="ll"
                                     placeholder="End date"
-                                    formatVal="DD-MM-YYYY"
+                                    dateFormat="DD/MM/YYYY"
+                                    formatVal="DD/MM/YYYY"
+                                    date
+                                    close
+                                    noFooter
                                 ></date-time-picker>
                             </div>
                         </div>
