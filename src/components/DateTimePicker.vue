@@ -1,30 +1,22 @@
 <template>
     <div class="custom-datepicker">
         <i class="icon-calendar"></i>
-        <VueCtkDateTimePicker
-            v-model="yourValue"
-            :noHeader="true"
-            :noLabel="true"
-            color="indigo"
-            :no-button-now="noButton"
-            :formatted="dateFormat"
+
+        <Datepicker
+            class="date-time-picker field-input"
             :format="formatVal"
-            :only-date="date"
-            :only-time="time"
-            :auto-close="close"
-            :no-button="noFooter"
-        ></VueCtkDateTimePicker>
-        <p v-if="yourValue == null" class="placeholder">
-            {{ placeholder }}
-        </p>
+            v-model="yourValue"
+            width="100%"
+        />
+        <p v-show="yourValue == null" class="placeholder">{{ placeholder }}</p>
     </div>
 </template>
 <script>
-import VueCtkDateTimePicker from 'vue-ctk-date-time-picker'
+import Datepicker from 'vuejs-datetimepicker'
 import 'vue-ctk-date-time-picker/dist/vue-ctk-date-time-picker.css'
 export default {
     components: {
-        VueCtkDateTimePicker,
+        Datepicker,
     },
 
     props: {

@@ -80,7 +80,7 @@
                                 <div class="form-group">
                                     <date-time-picker
                                         dateFormat="ll"
-                                        :formatVal="'DD-MM-YYYY'"
+                                        formatVal="DD-MM-YYYY"
                                         placeholder="MM / DD / YYYY"
                                         date
                                         close
@@ -355,7 +355,7 @@
                                 <div class="form-group ">
                                     <date-time-picker
                                         dateFormat="ll"
-                                        :formatVal="'DD-MM-YYYY'"
+                                        formatVal="DD-MM-YYYY"
                                         placeholder="MM / DD / YYYY"
                                         date
                                         close
