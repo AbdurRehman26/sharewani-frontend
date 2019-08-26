@@ -144,10 +144,31 @@
     }
     .calender-div {
         top: 47px !important;
-        min-width: 240px !important;
+        font-size: $font-size-sm !important;
+        min-width: 225px !important;
+        border-radius: 5px !important;
+        overflow: hidden;
+        width: 100%;
         .headers {
+            display: table;
+            width: 100%;
+            padding-left: 5px;
+            padding-right: 5px;
             .days {
                 color: #6c757d !important;
+                width: 28px;
+                height: 28px;
+                padding: 3px 3px;
+                display: table-cell;
+            }
+        }
+        .week {
+            display: table;
+            width: 100%;
+            padding-left: 5px;
+            padding-right: 5px;
+            .port {
+                display: table-cell;
             }
         }
         .year-month-wrapper {
@@ -155,6 +176,16 @@
             .nav-l,
             .nav-r {
                 background-color: $primary !important;
+                font-size: $font-size-sm !important;
+            }
+            .year,
+            .month {
+                font-weight: 300 !important;
+            }
+        }
+        .time-picker {
+            li {
+                font-size: $font-size-sm;
             }
         }
         .activePort {
@@ -164,12 +195,18 @@
             }
         }
         .port {
+            width: 28px;
+            height: 28px;
+            padding: 3px 3px;
+            border-radius: 4px;
             &:hover {
                 color: $primary;
             }
         }
         .okButton {
             color: #6c757d !important;
+            font-size: $font-size-sm !important;
+            outline: 0;
         }
         li {
             &.active {
