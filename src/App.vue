@@ -26,7 +26,6 @@ export default {
         | Component > props
         |--------------------------------------------------------------------------
         */
-
     props: {}, // End of Component > props
 
     /*

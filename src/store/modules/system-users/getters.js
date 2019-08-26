@@ -1,4 +1,3 @@
 export default {
-    //dashbaord activity
-    systemUsersData: (state) => state.systemUsersData,
+	systemUsersData: (state) => state.systemUsersData,
 }

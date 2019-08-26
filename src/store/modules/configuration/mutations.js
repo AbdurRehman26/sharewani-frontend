@@ -1,6 +1,5 @@
 export default {
-    setConfigurationData(state, payload) {
-        //dashbaord activity
-        state.configurationData = payload
-    },
+	setConfigurationData(state, payload) {
+		state.configurationData = payload
+	},
 }

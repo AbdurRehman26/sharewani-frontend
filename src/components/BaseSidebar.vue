@@ -101,12 +101,12 @@ export default {
                     menuLabel: 'Customer Profiles',
                 },
                 {
-                    anchorLink: '/register-customer/',
+                    anchorLink: '/register-customer',
                     icon: 'icon-add-customer',
                     menuLabel: 'Register Customer',
                 },
                 {
-                    anchorLink: '/configuration/',
+                    anchorLink: '/configuration',
                     icon: 'icon-configurations',
                     menuLabel: 'Configurations',
                 },
