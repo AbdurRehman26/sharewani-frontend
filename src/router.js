@@ -689,12 +689,12 @@ export default new Router({
                     ],
                 },
                 {
-                    path: '/configuration/manual-review/',
-                    name: 'manual-review',
+                    path: '/configuration/simulate/',
+                    name: 'simulate',
                     component: () =>
-                        import(/* webpackChunkName: "manual-review" */ './views/configuration/ManualReviewSwitch.vue'),
+                        import(/* webpackChunkName: "simulate" */ './views/configuration/Simulate.vue'),
                     meta: {
-                        title: 'Configuration | Manual Review Switch',
+                        title: 'Configuration | Simulation Switch',
                     },
                 },
 

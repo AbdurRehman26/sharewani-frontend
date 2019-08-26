@@ -47,8 +47,8 @@ export default {
                     name: 'customer-information',
                 },
                 {
-                    anchorLink: '/configuration/manual-review/',
-                    menuLabel: 'Manual Review',
+                    anchorLink: '/configuration/simulate/',
+                    menuLabel: 'Simulate',
                     name: 'customer-information',
                 },
                 {
