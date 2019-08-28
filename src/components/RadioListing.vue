@@ -8,13 +8,18 @@
                         @click="uncheckAll"
                         class="custom-control-input"
                         id="reviewRole"
+                        checked
                     />
                     <label class="custom-control-label" for="reviewRole"
                         ><span>{{ parentName }}</span></label
                     >
                 </div>
 
-                <div class="ml-4" v-for="(val, key) in radioListing">
+                <div
+                    class="ml-4"
+                    v-for="(val, index) in radioListing"
+                    :key="index"
+                >
                     <div
                         class="custom-control custom-control-inline custom-radio"
                     >
