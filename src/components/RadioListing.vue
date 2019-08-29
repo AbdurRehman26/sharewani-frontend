@@ -1,25 +1,43 @@
 <template>
     <div class="kyc-checkbox-section">
-        <b-form-group class="mb-0">
-            <template slot="label">
-                <b-form-checkbox
-                    v-model="allSelected"
-                    :indeterminate="indeterminate"
-                    aria-describedby="flavours"
-                    aria-controls="flavours"
-                >
-                    <span>{{ parentName }}</span>
-                </b-form-checkbox>
-            </template>
+        <div class="col-form-label">
+            <div class="form-group">
+                <div class="custom-control custom-checkbox w-100">
+                    <input
+                        type="checkbox"
+                        @click="uncheckAll"
+                        class="custom-control-input"
+                        id="reviewRole"
+                        checked
+                    />
+                    <label class="custom-control-label" for="reviewRole"
+                        ><span>{{ parentName }}</span></label
+                    >
+                </div>
 
-            <b-form-radio-group
-                :id="radioName"
-                class="ml-4"
-                :v-model="selected"
-                :options="radioListing"
-                name="review"
-            ></b-form-radio-group>
-        </b-form-group>
+                <div
+                    class="ml-4"
+                    v-for="(val, index) in radioListing"
+                    :key="index"
+                >
+                    <div
+                        class="custom-control custom-control-inline custom-radio"
+                    >
+                        <input
+                            type="radio"
+                            class="custom-control-input"
+                            name="radio"
+                            :value="val"
+                            v-model="selected"
+                            :id="val"
+                            @click="uncheck(val)"
+                        /><label class="custom-control-label" :for="val"
+                            ><span>{{ val }}</span></label
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -38,8 +56,22 @@ export default {
     }, // End of Component > props
 
     data() {
-        return {}
+        return {
+            selected: 'Maker',
+            previous: null,
+        }
     },
-    methods: {},
+    methods: {
+        uncheck: function(val) {
+            console.log(val, this.selected)
+            if (val == this.previous) {
+                this.selected = false
+            }
+            this.previous = this.selected
+        },
+        uncheckAll: function() {
+            this.selected = false
+        },
+    },
 }
 </script>

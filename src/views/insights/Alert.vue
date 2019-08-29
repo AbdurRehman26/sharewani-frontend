@@ -117,7 +117,7 @@
                                 v-if="data.value[0].riskType == 'rating'"
                                 class="icon-star"
                                 v-b-tooltip.hover
-                                :title="' Onbaording alert '"
+                                :title="' Onboarding alert '"
                             ></i>
                             <i
                                 v-if="data.value[0].riskType == 'manual'"

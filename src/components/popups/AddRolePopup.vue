@@ -137,20 +137,8 @@ export default {
 
                 systemLogs: [' View System Logs'],
 
-                statusReview: [
-                    { text: 'Maker', value: 'maker' },
-                    {
-                        text: 'Checker',
-                        value: 'checker',
-                    },
-                    {
-                        text: 'Approver',
-                        value: 'approver',
-                    },
-                ],
+                statusReview: ['Maker', 'Checker', 'Approver'],
             },
-
-            selected: 'maker',
         }
     },
     methods: {},
