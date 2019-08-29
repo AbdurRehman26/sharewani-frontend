@@ -36,7 +36,7 @@ export default {
                         debug: true,
                         maxLength: 10,
                         videoRecorderType: 'WhammyRecorder',
-                        videoMimeType: 'video/webm;codecs=H264',
+                        videoMimeType: 'video/mp4',
                     },
                 },
             },
@@ -79,6 +79,7 @@ export default {
             // the blob object contains the recorded data that
             // can be downloaded by the user, stored on server etc.
             console.log('finished recording: ', this.player.recordedData)
+            this.player.record().saveAs({ video: 'recorded-video.mp4' })
             this.$emit('recordingEnded')
         })
 
