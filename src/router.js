@@ -23,16 +23,16 @@ export default new Router({
         },
         {
             path: '/',
-            name: 'login-page',
+            name: 'home',
             component: () =>
-                import(/* webpackChunkName: "login" */ '@/views/auth/Main.vue'),
+                import(/* webpackChunkName: "login" */ '@/views/home/Main.vue'),
 
             children: [
                 {
                     path: '/',
-                    name: 'login-page',
+                    name: 'home',
                     component: () =>
-                        import(/* webpackChunkName: "login" */ '@/views/auth/Login.vue'),
+                        import(/* webpackChunkName: "login" */ '@/views/home/Main.vue'),
                     meta: {
                         title: 'Login',
                         noSidebar: true,

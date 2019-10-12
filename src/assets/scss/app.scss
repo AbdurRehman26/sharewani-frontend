@@ -6,7 +6,6 @@
 @import 'base/card';
 @import 'base/error';
 @import 'base/modal';
-@import 'base/header';
 @import 'base/navigation';
 @import 'base/tabs';
 @import 'base/table';
@@ -30,6 +29,9 @@ $material-icons-font-path: '~material-icons/iconfont/';
 @import '~vue-multiselect/dist/vue-multiselect.min.css';
 
 @import 'customize/customize';
+@import 'customize/style';
+@import 'customize/animate';
+@import 'customize/owl.carousel';
 
 .amcharts-chart-div > a {
 	display: none !important;

@@ -7,6 +7,8 @@ import BootstrapVue from 'bootstrap-vue'
 import vbclass from 'vue-body-class'
 import Toasted from 'vue-toasted'
 
+
+
 require('@/auto-import.js')
 
 Vue.use(BootstrapVue)
