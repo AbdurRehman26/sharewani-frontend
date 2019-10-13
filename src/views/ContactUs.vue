@@ -51,7 +51,6 @@
                 <router-link to="/"> Sign In</router-link>
             </div>
         </div>
-        <base-footer></base-footer>
     </div>
 </template>
 

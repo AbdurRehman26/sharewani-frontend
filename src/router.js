@@ -90,7 +90,7 @@ export default new Router({
 
         {
             path: '/contact-us',
-            name: 'contact-us-page',
+            name: 'contact-us',
             component: () =>
                 import(/* webpackChunkName: "contact-us" */ '@/views/ContactUs.vue'),
             meta: {
@@ -100,16 +100,16 @@ export default new Router({
             },
         },
         {
-            path: '/insights',
-            name: 'dashboard',
+            path: '/products',
+            name: 'products',
             component: () =>
-                import(/* webpackChunkName: "dashboard-alerts" */ '@/views/insights/Main.vue'),
+                import(/* webpackChunkName: "dashboard-alerts" */ '@/views/products/Main.vue'),
             children: [
                 {
                     path: '/',
-                    name: 'dashboard-alerts',
+                    name: 'products',
                     component: () =>
-                        import(/* webpackChunkName: "dashboard-alerts" */ '@/views/insights/Alert.vue'),
+                        import(/* webpackChunkName: "dashboard-alerts" */ '@/views/products/Main.vue'),
                     meta: {
                         title: 'Insights | Alerts',
                     },

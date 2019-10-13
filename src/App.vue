@@ -1,16 +1,11 @@
 <template>
     <div id="app">
-        <div
-            class="main-content"
-            :class="$route.meta.noSidebar == true ? 'content-full-width' : ''"
-        >
-            <base-sidebar
-                :class="sidebarResponsive == true ? 'show-sidebar' : ''"
-                v-if="!$route.meta.noSidebar"
-                @onClick="sidebarResponsive = false"
-                @closeSidemenu="closeSidebar"
-            ></base-sidebar>
-            <router-view @responsiveSideBar="sidebarResponsive ^= true" />
+        <div class="main-content">
+            <base-header></base-header>
+
+            <router-view />
+
+            <base-footer></base-footer>
         </div>
     </div>
 </template>
@@ -62,6 +57,8 @@ export default {
         | Component > mounted
         |--------------------------------------------------------------------------
         */
-    mounted() {}, // End of Component > mounted
+    mounted() {
+        console.log('App Vue')
+    }, // End of Component > mounted
 } // End of export default
 </script>

@@ -1,78 +1,78 @@
 <template>
     <div>
-        <div class="header-fix">
-            <base-logo></base-logo>
-        </div>
-        <div
-            v-if="!$route.meta.noSidebar"
-            @click="$emit('sidemenu')"
-            class="responsive-sidebar-menu"
-        >
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <div
-            @click="mainMain ^= true"
-            v-if="menuListing.length > 0"
-            class="responsive-header-menu"
-        >
-            <img src="@/assets/images/sub-menu.svg" />
-        </div>
-        <header
-            :class="
-                (stepStyle == true ? 'step-menu-header' : '',
-                mainMain == true ? 'show-menu' : '')
-            "
-        >
-            <div
-                class="header-menu navigation"
-                :class="stepStyle == true ? 'step-menu' : ''"
-            >
-                <span class="close-side-bar" @click="mainMain = false"
-                    ><i class="icon-delete"></i
-                ></span>
-                <div
-                    v-if="$route.meta.noSidebar == true"
-                    class="logo-container"
-                >
-                    <base-logo anchorClass="colorLogo"></base-logo>
+        <header class="header-section">
+            <div class="header-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-2 text-center text-lg-left">
+                            <!-- logo -->
+
+                            <base-logo></base-logo>
+                        
+
+                        </div>
+                        <div class="col-xl-6 col-lg-5">
+                            <form class="header-search-form">
+                                <input
+                                    type="text"
+                                    placeholder="Search on divisima ...."
+                                />
+                                <button><i class="flaticon-search"></i></button>
+                            </form>
+                        </div>
+                        <div class="col-xl-4 col-lg-5">
+                            <div class="user-panel">
+                                <div class="up-item">
+                                    <i class="flaticon-profile"></i>
+                                    <a href="#">Sign</a> In or
+                                    <a href="#">Create Account</a>
+                                </div>
+                                <div class="up-item">
+                                    <div class="shopping-card">
+                                        <i class="flaticon-bag"></i>
+                                        <span>0</span>
+                                    </div>
+                                    <a href="#">Shopping Cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <ul class="menu-list">
-                    <li
-                        @click="mainMain = false"
-                        v-for="(list, index) in menuListing"
-                        :key="index"
-                        :class="[
-                            $route.meta.sessionStep == list.sessionStep
-                                ? 'router-link-exact-active'
-                                : '',
-                            $route.meta.sessionStep >= list.sessionStep
-                                ? 'router-link-active'
-                                : '',
-                        ]"
-                    >
-                        <router-link
-                            :to="list.anchorLink"
-                            :class="[
-                                $route.name.toString() === list.name.toString()
-                                    ? 'router-link-active router-link-exact-active'
-                                    : '',
-                            ]"
-                        >
-                            <span v-if="stepStyle" class="point">
-                                <i class="icon-check-circle"></i>
-                            </span>
-                            <span>{{ list.menuLabel }}</span>
-                        </router-link>
-                    </li>
-                </ul>
             </div>
-            <div class="profile-block" v-if="$route.meta.noSidebar != true">
-                <login-detail> </login-detail>
-                <update-profile-popup></update-profile-popup>
-                <change-password-popup></change-password-popup>
-            </div>
+            <nav class="main-navbar">
+                <div class="container">
+                    <!-- menu -->
+                    <ul class="main-menu">
+
+                            <router-link tag="li" :to="{ name : 'home' }"><a href="#"> Home </a></router-link>
+
+                            <router-link tag="li" :to="{ name : 'products' }"><a href="#"> Products </a></router-link>
+
+                            <router-link tag="li" :to="{ name : 'contact-us' }"><a href="#"> Contact Us </a></router-link>
+
+
+
+                        <li>
+                            <a href="#">Pages</a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="./product.html">Product Page</a>
+                                </li>
+                                <li>
+                                    <a href="./category.html">Category Page</a>
+                                </li>
+                                <li><a href="./cart.html">Cart Page</a></li>
+                                <li>
+                                    <a href="./checkout.html">Checkout Page</a>
+                                </li>
+                                <li>
+                                    <a href="./contact.html">Contact Page</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
         </header>
     </div>
 </template>
@@ -138,6 +138,8 @@ export default {
     | Component > mounted
     |--------------------------------------------------------------------------
     */
-    mounted() {}, // End of Component > mounted
+    mounted() {
+        console.log('header')
+    }, // End of Component > mounted
 } // End of export default
 </script>
