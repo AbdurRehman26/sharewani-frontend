@@ -1,7 +1,7 @@
 self.__precacheManifest = [
   {
-    "revision": "e4b2618eaffa2a058a8a48766617029c",
-    "url": "/fonts/ProximanovaLight.e4b2618e.eot"
+    "revision": "604155e56cb1b6a36132c33ab51b6683",
+    "url": "/fonts/ProximanovaLight.604155e5.ttf"
   },
   {
     "revision": "5ee4c5ec0c4c5ee2079f",
@@ -44,8 +44,8 @@ self.__precacheManifest = [
     "url": "/logo-light.png"
   },
   {
-    "revision": "9e45f990179a95f7969f",
-    "url": "/js/app.fe3d710a.js"
+    "revision": "063dd0ff8dcd4c04e7e4",
+    "url": "/js/app.b697310f.js"
   },
   {
     "revision": "ebfcabf911bea1222a79",
@@ -72,8 +72,8 @@ self.__precacheManifest = [
     "url": "/js/configuration.cf643615.js"
   },
   {
-    "revision": "b9fa833bcbeda1254ab0",
-    "url": "/js/contact-us.b03257d5.js"
+    "revision": "e6a46e86b32d4875192c",
+    "url": "/js/contact-us.e316b8d4.js"
   },
   {
     "revision": "c1ca801e261eeb92ae8b",
@@ -108,8 +108,8 @@ self.__precacheManifest = [
     "url": "/js/dashboard-activity~dashboard-reporting~system-logs.dc9c9d7f.js"
   },
   {
-    "revision": "305bd3460fa9f40337cd",
-    "url": "/js/dashboard-alerts.84757130.js"
+    "revision": "8133c2cd0a637a65eb28",
+    "url": "/js/dashboard-alerts.2f61460e.js"
   },
   {
     "revision": "e460081a1813a9ecf473",
@@ -180,8 +180,8 @@ self.__precacheManifest = [
     "url": "/js/kyc-risk-rating.956e998f.js"
   },
   {
-    "revision": "f635c73e04f915f28547",
-    "url": "/js/login.f92d04b0.js"
+    "revision": "dfea6886c5ec548787e0",
+    "url": "/js/login.ef375220.js"
   },
   {
     "revision": "952fdc997fac7bde9281",
@@ -348,12 +348,12 @@ self.__precacheManifest = [
     "url": "/img/thumb-4.6eab7824.jpg"
   },
   {
-    "revision": "ce072bf6e8a00a0b71cba2edf19bf0cc",
-    "url": "/img/single-product/3.jpg"
-  },
-  {
     "revision": "15f0599830a064869ceae38f7d6be31b",
     "url": "/img/single-product/1.jpg"
+  },
+  {
+    "revision": "ce072bf6e8a00a0b71cba2edf19bf0cc",
+    "url": "/img/single-product/3.jpg"
   },
   {
     "revision": "ddc9d2c4e88822c5cb560950adc909df",
@@ -368,20 +368,20 @@ self.__precacheManifest = [
     "url": "/img/product/8.jpg"
   },
   {
-    "revision": "d3cce93c9fb2b5a1c2f726f34d005981",
-    "url": "/img/product/5.jpg"
-  },
-  {
     "revision": "64e7d16d2314310073c98dd1b5be9db0",
     "url": "/img/product/4.jpg"
   },
   {
-    "revision": "b5570717a2db7efd300bf1e21c36ecc4",
-    "url": "/img/product/2.jpg"
+    "revision": "d3cce93c9fb2b5a1c2f726f34d005981",
+    "url": "/img/product/5.jpg"
   },
   {
     "revision": "9ff6295d6f90740cc62ebdab46c0ed1f",
     "url": "/img/product/12.jpg"
+  },
+  {
+    "revision": "b5570717a2db7efd300bf1e21c36ecc4",
+    "url": "/img/product/2.jpg"
   },
   {
     "revision": "6380cde65a01ad05995da1cc3cfe6053",
@@ -416,12 +416,12 @@ self.__precacheManifest = [
     "url": "/img/members/member-9.png"
   },
   {
-    "revision": "89febc46e5836cbe00bf932fe3a42ff3",
-    "url": "/img/members/member-8.png"
-  },
-  {
     "revision": "956c3d5c0d1b49ee740e5346ebca0e3c",
     "url": "/img/members/member-7.png"
+  },
+  {
+    "revision": "89febc46e5836cbe00bf932fe3a42ff3",
+    "url": "/img/members/member-8.png"
   },
   {
     "revision": "004b6ec4da1cc0cc437969a8537ff52c",
@@ -508,7 +508,7 @@ self.__precacheManifest = [
     "url": "/img/member-5.4d08a468.png"
   },
   {
-    "revision": "535c911e0b42ba25b7ea78afb6e5a207",
+    "revision": "e043e1c1e3a5e1955c378673cae503d9",
     "url": "/index.html"
   },
   {
@@ -544,8 +544,8 @@ self.__precacheManifest = [
     "url": "/img/member-6.004b6ec4.png"
   },
   {
-    "revision": "604155e56cb1b6a36132c33ab51b6683",
-    "url": "/fonts/ProximanovaLight.604155e5.ttf"
+    "revision": "e4b2618eaffa2a058a8a48766617029c",
+    "url": "/fonts/ProximanovaLight.e4b2618e.eot"
   },
   {
     "revision": "c74b278961470026e84873f19bb9a762",
@@ -640,8 +640,8 @@ self.__precacheManifest = [
     "url": "/img/envelope-alt.png"
   },
   {
-    "revision": "c96c3be52e67a18e44df1a66aae295fa",
-    "url": "/fonts/ProximanovaBold.c96c3be5.ttf"
+    "revision": "c673d09b115a5320ef3292365a9e7234",
+    "url": "/fonts/ProximanovaBold.c673d09b.eot"
   },
   {
     "revision": "9375dd4dd721f06a46defcef36c8c824",
@@ -684,12 +684,12 @@ self.__precacheManifest = [
     "url": "/img/data-image/logo1.png"
   },
   {
-    "revision": "734bb879afa56c46c56aac0d64a8c666",
-    "url": "/img/data-image/logo3.png"
-  },
-  {
     "revision": "a2a6af0ca20825bc03b5ebf29ab0b298",
     "url": "/img/data-image/logo2.png"
+  },
+  {
+    "revision": "734bb879afa56c46c56aac0d64a8c666",
+    "url": "/img/data-image/logo3.png"
   },
   {
     "revision": "abcd6d53925ca30546f8182b3ee5b8e2",
@@ -700,8 +700,8 @@ self.__precacheManifest = [
     "url": "/img/arrow-up.png"
   },
   {
-    "revision": "c4c35fb45f965e64ae4a49c58a5c0ad0",
-    "url": "/img/check-icon.svg"
+    "revision": "cc7cda8cac2364b6abeda923ee78a120",
+    "url": "/img/cart/3.jpg"
   },
   {
     "revision": "0f96a25c7b2aab0c6e1a8b3979fe47ba",
@@ -716,8 +716,8 @@ self.__precacheManifest = [
     "url": "/img/bg-2.jpg"
   },
   {
-    "revision": "cc7cda8cac2364b6abeda923ee78a120",
-    "url": "/img/cart/3.jpg"
+    "revision": "c4c35fb45f965e64ae4a49c58a5c0ad0",
+    "url": "/img/check-icon.svg"
   },
   {
     "revision": "5c3454a7eddf73df6e55b51c8ec5dd0f",
@@ -880,8 +880,8 @@ self.__precacheManifest = [
     "url": "/fonts/ProximanovaSemibold.870031f7.eot"
   },
   {
-    "revision": "c673d09b115a5320ef3292365a9e7234",
-    "url": "/fonts/ProximanovaBold.c673d09b.eot"
+    "revision": "c96c3be52e67a18e44df1a66aae295fa",
+    "url": "/fonts/ProximanovaBold.c96c3be5.ttf"
   },
   {
     "revision": "839359de04486f41cec716a123b1fe2a",
@@ -904,7 +904,7 @@ self.__precacheManifest = [
     "url": "/fonts/MaterialIcons-Regular.0509ab09.woff2"
   },
   {
-    "revision": "9e45f990179a95f7969f",
-    "url": "/css/app.fc4d9735.css"
+    "revision": "063dd0ff8dcd4c04e7e4",
+    "url": "/css/app.f69b2174.css"
   }
 ];
