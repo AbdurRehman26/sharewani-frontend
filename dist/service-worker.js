@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.464356d44f4e1e640a80345968a658e3.js"
+  "/precache-manifest.14d6a66feb3c510117d6389924182c19.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "idenfo"});
