@@ -24,8 +24,7 @@
                             <div class="user-panel">
                                 <div class="up-item">
                                     <i class="flaticon-profile"></i>
-                                    <a href="#">Sign</a> In or
-                                    <a href="#">Create Account</a>
+                                    <a href="#">Sign</a>
                                 </div>
                                 <div class="up-item">
                                     <div class="shopping-card">
@@ -46,7 +45,7 @@
 
                             <router-link tag="li" :to="{ name : 'home' }"><a href="#"> Home </a></router-link>
 
-                            <router-link tag="li" :to="{ name : 'products' }"><a href="#"> Products </a></router-link>
+                            <router-link tag="li" :to="{ name : 'product.list' }"><a href="#"> Products </a></router-link>
 
                             <router-link tag="li" :to="{ name : 'contact-us' }"><a href="#"> Contact Us </a></router-link>
 

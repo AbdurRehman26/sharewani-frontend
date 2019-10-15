@@ -20,8 +20,8 @@ Vue.use(Toasted, {
     iconPack: 'material',
 })
 
-Vue.use(vbclass, router)
-Vue.config.productionTip = false
+Vue.use(vbclass, router);
+Vue.config.productionTip = false;
 
 new Vue({
     router: router,

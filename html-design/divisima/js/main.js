@@ -166,9 +166,9 @@ $(window).on('load', function() {
 		e.preventDefault()
 	})
 
-	// /*-------------------
-	// 	Range Slider
-	// --------------------- */
+	/*-------------------
+		Range Slider
+	--------------------- */
 	// var rangeSlider = $(".price-range"),
 	// 	minamount = $("#minamount"),
 	// 	maxamount = $("#maxamount"),
