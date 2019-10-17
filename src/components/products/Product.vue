@@ -10,7 +10,7 @@
 
 				<div class="pi-links">
 					<a href="#" class="add-card"
-						><i class="flaticon-bag"></i><span>ADD TO CART</span></a
+						><font-awesome-icon icon="cart-plus" /><span>ADD TO CART</span></a
 					>
 				</div>
 			</div>

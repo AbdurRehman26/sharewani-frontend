@@ -1,5 +1,5 @@
 {
-    "name": "idenfo",
+    "name": "sharewaani-front-end",
     "version": "0.1.0",
     "private": true,
     "scripts": {
@@ -10,6 +10,9 @@
         "test:unit": "vue-cli-service test:unit"
     },
     "dependencies": {
+        "@fortawesome/fontawesome-svg-core": "^1.2.25",
+        "@fortawesome/free-solid-svg-icons": "^5.11.2",
+        "@fortawesome/vue-fontawesome": "^0.1.7",
         "aes-decrypter": "^3.0.0",
         "amcharts": "^3.14.5",
         "amcharts3": "github:amcharts/amcharts3",
@@ -53,14 +56,5 @@
         "node-sass": "^4.9.0",
         "sass-loader": "^7.1.0",
         "vue-template-compiler": "^2.6.10"
-    },
-    "gitHooks": {
-        "pre-commit": "lint-staged"
-    },
-    "lint-staged": {
-        "*.{js,vue}": [
-            "vue-cli-service lint",
-            "git add"
-        ]
     }
 }

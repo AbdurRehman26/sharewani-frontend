@@ -57,7 +57,7 @@
 							</div>
 							<div id="collapse1" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
 								<div class="panel-body">
-									{{item.description}}
+									<div v-html="item.description"></div>
 								</div>
 							</div>
 						</div>
