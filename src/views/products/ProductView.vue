@@ -119,7 +119,9 @@ export default {
         */
     data() {
         return {
-        	item: {}
+        	item: {
+        		image_paths: []
+        	}
 		}
     }, // End of Component > data
 
