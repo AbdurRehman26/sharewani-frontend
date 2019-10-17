@@ -5,7 +5,7 @@
 				<div class="tag-new">new</div>
 
 				<router-link :to="{ name : 'product.view', params: { id : item.id}}">	
-				<img :src="item.images[0]" alt="" />
+				<img @error="changeImageSource" :src="item.images[0]" alt="" />
 				</router-link>
 
 				<div class="pi-links">
@@ -17,7 +17,7 @@
 			<div class="pi-text">
 				
 				<router-link :to="{ name : 'product.view', params: { id : item.id }}">	
-					<h6>$35,00</h6>
+					<h6>{{item.original_price}} PKR</h6>
 					<p>{{item.title}}</p>
 				</router-link>
 			</div>
@@ -45,7 +45,11 @@ export default {
         | Component > data
         |--------------------------------------------------------------------------
         */
-    data() {}, // End of Component > data
+    data() {
+        return{
+            
+        }
+    }, // End of Component > data
 
     /*
         |--------------------------------------------------------------------------
@@ -59,7 +63,11 @@ export default {
         | Component > methods
         |--------------------------------------------------------------------------
         */
-    methods: {}, // End of Component > methods
+    methods: {
+        changeImageSource(){
+            return 'img/product-image-not-found.png';
+        }
+    }, // End of Component > methods
 
     /*
         |--------------------------------------------------------------------------

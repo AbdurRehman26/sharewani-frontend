@@ -26,12 +26,11 @@
 				<div class="col-lg-9  order-1 order-lg-2 mb-5 mb-lg-0">
 					<div class="row">
 
-						<product :item="item" v-for="item in items"></product>
+						<product :item="item" v-for="item in response.data"></product>
 
 						<div class="text-center w-100 pt-3">
 
-							<base-pagination></base-pagination>
-
+							<base-pagination :pagination="response.pagination"></base-pagination>
 
 						</div>
 
@@ -81,7 +80,7 @@ export default {
         */
     data() {
         return {
-        	items: [],
+        	response: {},
 			query: {
 				page: 1,
 				limit: 15,
@@ -109,10 +108,8 @@ export default {
 			const { limit, page, pagination } = this.query;
 			this.loading = true;
 
-			const response = await productResource.list(this.query);
-			console.log(response);
-			this.items = response.data;
-			this.total = 10;
+			this.response = await productResource.list(this.query);
+
 			this.loading = false;
 		},
 	}, // End of Component > methods
