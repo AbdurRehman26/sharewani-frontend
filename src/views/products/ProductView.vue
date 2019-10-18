@@ -49,7 +49,7 @@
 						</div>
 					</div>
 
-					<a href="#" class="site-btn">SHOP NOW</a>
+					<a href="#" class="site-btn">ORDER NOW</a>
 					<div id="accordion" class="accordion-area">
 						<div class="panel">
 							<div class="panel-header" id="headingOne">
@@ -120,7 +120,8 @@ export default {
     data() {
         return {
         	item: {
-        		image_paths: []
+        		image_paths: [],
+        		size: []
         	}
 		}
     }, // End of Component > data

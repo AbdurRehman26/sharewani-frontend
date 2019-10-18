@@ -73,18 +73,18 @@
                 </div>
             </nav>
         </header>
+
+        <update-profile-popup></update-profile-popup>
+
+
     </div>
 </template>
 
 <script>
-import loginDetail from '@/components/LoginDetail.vue'
 import updateProfilePopup from '@/components/popups/UpdateProfilePopup.vue'
-import changePasswordPopup from '@/components/popups/ChangePasswordPopup.vue'
 import { directive as onClickOutside } from 'vue-on-click-outside'
 export default {
     components: {
-        loginDetail,
-        changePasswordPopup,
         updateProfilePopup,
     },
     directives: {

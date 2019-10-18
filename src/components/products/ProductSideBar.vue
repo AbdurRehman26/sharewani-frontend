@@ -1,21 +1,21 @@
 <template>
 	<div class="col-lg-3 order-2 order-lg-1">
 		<div class="filter-widget">
-			<h2 class="fw-title">Categories</h2>
+			<h2 class="fw-title">Events</h2>
 			<div class="category-menu">
-				<multiselect v-model="value" track-by="id" label="name" :options="categories"></multiselect>
+				<multiselect v-model="query.event_id" track-by="id" label="name" :options="events"></multiselect>
 			</div>
 		</div>
 		<div class="filter-widget">
 			<h2 class="fw-title">Brands</h2>
 			<div class="category-menu">
-				<multiselect v-model="value" track-by="id" label="name" :options="brands"></multiselect>
+				<multiselect v-model="query.brand_id" track-by="id" label="name" :options="brands"></multiselect>
 			</div>
 		</div>
 		<div class="filter-widget">
 			<h2 class="fw-title">Fabric Ages</h2>
 			<div class="category-menu">
-				<multiselect v-model="value" track-by="id" label="name" :options="fabricAges"></multiselect>
+				<multiselect v-model="query.fabric_age_id" track-by="id" label="name" :options="fabricAges"></multiselect>
 			</div>
 		</div>
 		<div class="filter-widget mb-0">
@@ -30,7 +30,7 @@
 					v-model="sliderValue"
 				>
 				</range-slider>
-				<div><center>{{ sliderValue }}</center></div>
+				<div><center>{{ query.original_price }}</center></div>
 			</div>
 		</div>
 		<div class="filter-widget mb-0">
@@ -62,7 +62,7 @@ import RangeSlider from 'vue-range-slider'
 import 'vue-range-slider/dist/vue-range-slider.css'
 import Resource from '@/api/resource'
 
-const categoryResource = new Resource('category');
+const eventResource = new Resource('event');
 const brandResource = new Resource('brand');
 const fabricAgeResource = new Resource('fabric-age');
 const sizeResource = new Resource('size');
@@ -95,7 +95,7 @@ export default {
         */
 	data() {
 		return {
-			categories: [],
+			events: [],
 			brands: [],
 			fabricAges: [],
 			sizes: [],
@@ -106,8 +106,10 @@ export default {
 			query: {
 				page: 1,
 				limit: 15,
-				keyword: '',
-				role: ''
+				original_price: '',
+				fabric_age_id: '',
+				event_id: '',
+				brand_id: '',
 			},
 		}
 	}, // End of Component > data
@@ -126,7 +128,7 @@ export default {
         */
 	methods: {
 		getOptionsList(){
-			this.getCategoryList();
+			this.getEventList();
 			this.getBrandList();
 			this.getFabricAgeList();
 			this.getSizeList();
@@ -165,13 +167,13 @@ export default {
 			this.loading = false;
 
 		},
-		async getCategoryList(){
+		async getEventList(){
 
 			this.loading = true;
 
-			const response = await categoryResource.list(this.query);
+			const response = await eventResource.list(this.query);
 
-			this.categories = response.data;
+			this.events = response.data;
 
 			this.loading = false;
 
