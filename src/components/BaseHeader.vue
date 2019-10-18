@@ -140,7 +140,6 @@ export default {
     |--------------------------------------------------------------------------
     */
     mounted() {
-        console.log('header')
     }, // End of Component > mounted
 } // End of export default
 </script>

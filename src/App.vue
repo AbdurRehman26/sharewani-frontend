@@ -58,7 +58,6 @@ export default {
         |--------------------------------------------------------------------------
         */
     mounted() {
-        console.log('App Vue')
     }, // End of Component > mounted
 } // End of export default
 </script>

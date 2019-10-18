@@ -23,7 +23,6 @@ export default new Router({
         },
         {
             path: '/',
-            name: 'home',
             component: () =>
                 import(/* webpackChunkName: "login" */ '@/views/home/Main.vue'),
 
