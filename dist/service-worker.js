@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.7ea5947bf45f66d87074b588b6e77153.js"
+  "/precache-manifest.de0ede981e2c38a9af11c28149b34a8b.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "sharewaani-front-end"});

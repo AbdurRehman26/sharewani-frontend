@@ -1,23 +1,23 @@
 self.__precacheManifest = [
   {
-    "revision": "d97683f4e99794e1705430ed1147dff1",
-    "url": "/img/sub-menu.d97683f4.svg"
+    "revision": "dba7584f7f6cb6aae3b0b2502f20e90b",
+    "url": "/img/video.dba7584f.png"
   },
   {
     "revision": "bd3974ee1167e65269e2",
     "url": "/js/404.cf49c285.js"
   },
   {
-    "revision": "f5edec6dd99f0eb6252c",
-    "url": "/js/app.db2f7c72.js"
+    "revision": "a903a076b5ef2a0d7dea",
+    "url": "/js/app.f386cc88.js"
   },
   {
     "revision": "b6216d61c03e6ce0c9aea6ca7808f7ca",
     "url": "/robots.txt"
   },
   {
-    "revision": "7ad2b1bfc049b639afef",
-    "url": "/js/chunk-vendors.80c05757.js"
+    "revision": "56113994448ebdf895e2",
+    "url": "/js/chunk-vendors.28168369.js"
   },
   {
     "revision": "92c3c387ff9f6c204371",
@@ -28,24 +28,12 @@ self.__precacheManifest = [
     "url": "/logo-light.png"
   },
   {
-    "revision": "922a1a1927ced00f9309",
-    "url": "/js/dashboard-alerts.76d295cc.js"
+    "revision": "4b03c32ca798ff2ffe36",
+    "url": "/js/dashboard-alerts.de54fb4c.js"
   },
   {
-    "revision": "69e944f9043f67080eb0",
-    "url": "/js/email-sent.dcea94a2.js"
-  },
-  {
-    "revision": "2423617267f7a08b7042",
-    "url": "/js/forgot-password.cf3963c2.js"
-  },
-  {
-    "revision": "0254bc6b669221bea450",
-    "url": "/js/login.1b450d0e.js"
-  },
-  {
-    "revision": "c29239b5892be60f00c9",
-    "url": "/js/reset-password.dc9e4fd8.js"
+    "revision": "cd9a37547e49836ea8d5",
+    "url": "/js/login.2181f8ae.js"
   },
   {
     "revision": "6bb7525b64ffb1d74f185a1e488e7199",
@@ -116,12 +104,12 @@ self.__precacheManifest = [
     "url": "/img/product/5.jpg"
   },
   {
-    "revision": "64e7d16d2314310073c98dd1b5be9db0",
-    "url": "/img/product/4.jpg"
-  },
-  {
     "revision": "b5570717a2db7efd300bf1e21c36ecc4",
     "url": "/img/product/2.jpg"
+  },
+  {
+    "revision": "64e7d16d2314310073c98dd1b5be9db0",
+    "url": "/img/product/4.jpg"
   },
   {
     "revision": "9ff6295d6f90740cc62ebdab46c0ed1f",
@@ -160,12 +148,12 @@ self.__precacheManifest = [
     "url": "/img/members/member-9.png"
   },
   {
-    "revision": "89febc46e5836cbe00bf932fe3a42ff3",
-    "url": "/img/members/member-8.png"
-  },
-  {
     "revision": "956c3d5c0d1b49ee740e5346ebca0e3c",
     "url": "/img/members/member-7.png"
+  },
+  {
+    "revision": "89febc46e5836cbe00bf932fe3a42ff3",
+    "url": "/img/members/member-8.png"
   },
   {
     "revision": "004b6ec4da1cc0cc437969a8537ff52c",
@@ -204,12 +192,12 @@ self.__precacheManifest = [
     "url": "/img/single-product/thumb-1.jpg"
   },
   {
-    "revision": "0ecf2213825246caa220b3dc3d485de6",
-    "url": "/img/paypal.png"
-  },
-  {
     "revision": "673c477b237021e2dd4018850084d31b",
     "url": "/img/no-record.svg"
+  },
+  {
+    "revision": "0ecf2213825246caa220b3dc3d485de6",
+    "url": "/img/paypal.png"
   },
   {
     "revision": "e96fde75f72515dc971aa2f2ae5c159e",
@@ -248,12 +236,12 @@ self.__precacheManifest = [
     "url": "/img/member-8.89febc46.png"
   },
   {
-    "revision": "d3e0c114eaa3b9518ff48f992a8ad170",
+    "revision": "b80008a01f5381de3566d3f9ff3ecf19",
     "url": "/index.html"
   },
   {
-    "revision": "dba7584f7f6cb6aae3b0b2502f20e90b",
-    "url": "/img/video.dba7584f.png"
+    "revision": "d97683f4e99794e1705430ed1147dff1",
+    "url": "/img/sub-menu.d97683f4.svg"
   },
   {
     "revision": "673c477b237021e2dd4018850084d31b",
@@ -284,8 +272,8 @@ self.__precacheManifest = [
     "url": "/img/member-6.004b6ec4.png"
   },
   {
-    "revision": "604155e56cb1b6a36132c33ab51b6683",
-    "url": "/fonts/ProximanovaLight.604155e5.ttf"
+    "revision": "e4b2618eaffa2a058a8a48766617029c",
+    "url": "/fonts/ProximanovaLight.e4b2618e.eot"
   },
   {
     "revision": "c74b278961470026e84873f19bb9a762",
@@ -308,8 +296,8 @@ self.__precacheManifest = [
     "url": "/img/member-10.40d00415.png"
   },
   {
-    "revision": "922a1a1927ced00f9309",
-    "url": "/css/dashboard-alerts.2999582e.css"
+    "revision": "4b03c32ca798ff2ffe36",
+    "url": "/css/dashboard-alerts.6145b6bb.css"
   },
   {
     "revision": "49065b4010cbea8f5c56a463c52c8731",
@@ -384,8 +372,8 @@ self.__precacheManifest = [
     "url": "/img/envelope-alt.png"
   },
   {
-    "revision": "fd8fb6db1e15517f1ceda34b7f421967",
-    "url": "/fonts/ProximanovaRegular.fd8fb6db.eot"
+    "revision": "c673d09b115a5320ef3292365a9e7234",
+    "url": "/fonts/ProximanovaBold.c673d09b.eot"
   },
   {
     "revision": "a2a6af0ca20825bc03b5ebf29ab0b298",
@@ -500,12 +488,12 @@ self.__precacheManifest = [
     "url": "/img/bg-2.977967ef.jpg"
   },
   {
-    "revision": "3714eff8ee71fe31b5206e31c3a117b7",
-    "url": "/img/arrow-up.png"
-  },
-  {
     "revision": "5491994b18f49f0556f22b624b8eb048",
     "url": "/img/blog-thumbs/2.jpg"
+  },
+  {
+    "revision": "3714eff8ee71fe31b5206e31c3a117b7",
+    "url": "/img/arrow-up.png"
   },
   {
     "revision": "7c6383c6549590236f362ec47d3a70bb",
@@ -564,32 +552,16 @@ self.__precacheManifest = [
     "url": "/fonts/MaterialIcons-Regular.0509ab09.woff2"
   },
   {
-    "revision": "c96c3be52e67a18e44df1a66aae295fa",
-    "url": "/fonts/ProximanovaBold.c96c3be5.ttf"
-  },
-  {
-    "revision": "160385d6cf0f4be92a42bae9177ba38e",
-    "url": "/fonts/ProximanovaLight.160385d6.woff"
-  },
-  {
-    "revision": "6380cde65a01ad05995da1cc3cfe6053",
-    "url": "/img/10.6380cde6.jpg"
-  },
-  {
-    "revision": "abcd6d53925ca30546f8182b3ee5b8e2",
-    "url": "/fonts/icomoon.abcd6d53.woff"
-  },
-  {
-    "revision": "566cce1e4084d60d2af5363a08949718",
-    "url": "/img/11.566cce1e.jpg"
+    "revision": "1deed40ef862daa0573dce728a0caa30",
+    "url": "/fonts/ProximanovaRegular.1deed40e.ttf"
   },
   {
     "revision": "15f0599830a064869ceae38f7d6be31b",
     "url": "/img/1.15f05998.jpg"
   },
   {
-    "revision": "d64b6e86fa1ead64c4d15911c194341b",
-    "url": "/img/1.d64b6e86.jpg"
+    "revision": "6380cde65a01ad05995da1cc3cfe6053",
+    "url": "/img/10.6380cde6.jpg"
   },
   {
     "revision": "480ff64744b2ce0435d82cf7887612d5",
@@ -600,32 +572,48 @@ self.__precacheManifest = [
     "url": "/img/2.b5570717.jpg"
   },
   {
-    "revision": "9ff6295d6f90740cc62ebdab46c0ed1f",
-    "url": "/img/12.9ff6295d.jpg"
+    "revision": "3625e925425cb102cadb2f5db79c9aa0",
+    "url": "/fonts/ProximanovaSemibold.3625e925.ttf"
   },
   {
-    "revision": "1deed40ef862daa0573dce728a0caa30",
-    "url": "/fonts/ProximanovaRegular.1deed40e.ttf"
-  },
-  {
-    "revision": "870031f79dcf1cbe31527fe00f018e62",
-    "url": "/fonts/ProximanovaSemibold.870031f7.eot"
+    "revision": "d64b6e86fa1ead64c4d15911c194341b",
+    "url": "/img/1.d64b6e86.jpg"
   },
   {
     "revision": "c95925193fab111ba9d61eb545ef168e",
     "url": "/fonts/icomoon.c9592519.ttf"
   },
   {
-    "revision": "3625e925425cb102cadb2f5db79c9aa0",
-    "url": "/fonts/ProximanovaSemibold.3625e925.ttf"
+    "revision": "566cce1e4084d60d2af5363a08949718",
+    "url": "/img/11.566cce1e.jpg"
   },
   {
-    "revision": "e4b2618eaffa2a058a8a48766617029c",
-    "url": "/fonts/ProximanovaLight.e4b2618e.eot"
+    "revision": "9ff6295d6f90740cc62ebdab46c0ed1f",
+    "url": "/img/12.9ff6295d.jpg"
   },
   {
-    "revision": "c673d09b115a5320ef3292365a9e7234",
-    "url": "/fonts/ProximanovaBold.c673d09b.eot"
+    "revision": "fd8fb6db1e15517f1ceda34b7f421967",
+    "url": "/fonts/ProximanovaRegular.fd8fb6db.eot"
+  },
+  {
+    "revision": "870031f79dcf1cbe31527fe00f018e62",
+    "url": "/fonts/ProximanovaSemibold.870031f7.eot"
+  },
+  {
+    "revision": "abcd6d53925ca30546f8182b3ee5b8e2",
+    "url": "/fonts/icomoon.abcd6d53.woff"
+  },
+  {
+    "revision": "604155e56cb1b6a36132c33ab51b6683",
+    "url": "/fonts/ProximanovaLight.604155e5.ttf"
+  },
+  {
+    "revision": "160385d6cf0f4be92a42bae9177ba38e",
+    "url": "/fonts/ProximanovaLight.160385d6.woff"
+  },
+  {
+    "revision": "c96c3be52e67a18e44df1a66aae295fa",
+    "url": "/fonts/ProximanovaBold.c96c3be5.ttf"
   },
   {
     "revision": "839359de04486f41cec716a123b1fe2a",
@@ -644,11 +632,11 @@ self.__precacheManifest = [
     "url": "/fonts/MaterialIcons-Regular.29b882f0.woff"
   },
   {
-    "revision": "7ad2b1bfc049b639afef",
+    "revision": "56113994448ebdf895e2",
     "url": "/css/chunk-vendors.ec54bd74.css"
   },
   {
-    "revision": "f5edec6dd99f0eb6252c",
-    "url": "/css/app.5be3deae.css"
+    "revision": "a903a076b5ef2a0d7dea",
+    "url": "/css/app.05929845.css"
   }
 ];

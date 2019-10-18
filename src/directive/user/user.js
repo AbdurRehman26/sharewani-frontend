@@ -4,7 +4,7 @@ export default {
   inserted(el, binding, vnode) {
     const user = store.getters && store.getters.user;
     
-    if (user && user.length) {
+    if (user && user.id) {
       
       el.parentNode && el.parentNode.removeChild(el)
     
@@ -13,7 +13,7 @@ export default {
   update(el, binding, vnode) {
     const user = store.getters && store.getters.user;
     
-    if (user && user.length) {
+    if (user && user.id) {
 
         el.parentNode && el.parentNode.removeChild(el)
       

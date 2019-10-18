@@ -53,13 +53,15 @@
 								<input type="text" placeholder="Phone no.">
 							</div>
 						</div>
-						<button class="site-btn submit-order-btn">
+
+						<button @click.prevent="submitOrder" class="site-btn submit-order-btn">
 						
 						<b-spinner small v-if="isLoading"></b-spinner>
     					
     					<span v-if="!isLoading">Place Order</span>
 
 						</button>
+
 					</form>
 				</div>
 				<div class="col-lg-4 order-1 order-lg-2">
@@ -97,6 +99,7 @@ import Resource from '@/api/resource';
 
 const productResource = new ProductResource();
 const userAddressResource = new Resource('user-address');
+const orderResource = new Resource('order');
 
 export default {
 	/*
@@ -127,7 +130,7 @@ export default {
         return {
         	isLoading: false,
         	order: {
-        		product_id: 0,
+        		product_id: this.$route.query.product_id,
         		from_date: '',
         		start_date: '',
         		address: '',
@@ -154,6 +157,13 @@ export default {
         |--------------------------------------------------------------------------
         */
     methods: {
+    	async submitOrder(){
+
+    		var postData = this.order;
+    		console.log(postData , 2222222123);
+    		const response = await orderResource.store(postData);
+
+    	},
     	getData(){
     		this.getSingle();
     		this.getUserAddress();
@@ -179,7 +189,6 @@ export default {
 
 			this.loading = true;
 
-			console.log(this.$route.query.product_id);
 			const response = await productResource.get(this.$route.query.product_id);
 			this.item = response.data;
 

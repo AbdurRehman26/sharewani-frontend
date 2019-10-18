@@ -22,7 +22,7 @@
                         </div>
                         <div class="col-xl-4 col-lg-5">
                             <div class="user-panel">
-                                <div v-user="$store.getters.user ? $store.getters.user.length : false" class="up-item">
+                                <div v-user="$store.getters.user ? $store.getters.user.id : false" class="up-item">
                                     <i class="flaticon-profile"></i>
                                     <a href="#" v-b-modal.login-popup>
                                     Sign
