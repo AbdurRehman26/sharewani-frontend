@@ -1,13 +1,7 @@
-// import Cookies from 'js-cookie';
-
-const TokenKey = 'Admin-Token';
+import store from '@/store/index';
 
 export function getToken() {
-     return ''//Cookies.get(TokenKey);
-}
-
-export function setToken(token) {
-     return ''//Cookies.set(TokenKey, token);
+     return !!store.getters.token ? store.getters.token : null;
 }
 
 export function removeToken() {

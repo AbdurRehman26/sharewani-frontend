@@ -10,8 +10,9 @@ export default {
          *  organization, team and session id from payLoad ( params )
          */
          const response = await login(payLoad)
-         commit('setUser', response.user);
-         commit('setToken', response.token);
+
+         commit('setUser', response.data.user);
+         commit('setToken', response.data.token);
 
          } catch (error) {
         

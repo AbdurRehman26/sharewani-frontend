@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { getToken, setToken } from '@/utils/auth';
+import { getToken } from '@/utils/auth';
 
 // Create axios instance
 const service = axios.create({
@@ -11,16 +11,18 @@ const service = axios.create({
 service.interceptors.request.use(
   config => {
     const token = getToken();
-    if (token) {
-      config.headers['Authorization'] = 'Bearer ' + getToken(); // Set JWT token
-    }
-
+    
     config.headers = {
     'Access-Control-Allow-Credentials' : true,
     'Access-Control-Allow-Origin':'*',
     'Access-Control-Allow-Methods':'GET',
     'Access-Control-Allow-Headers':'application/json',
     };
+
+    if (token) {
+      config.headers['Authorization'] = 'Bearer ' + getToken(); // Set JWT token
+    }
+
     return config;
   },
   error => {

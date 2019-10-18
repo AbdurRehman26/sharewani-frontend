@@ -54,7 +54,8 @@
 						</div>
 					</div>
 
-					<a href="#" class="site-btn">ORDER NOW</a>
+					<router-link :to="{ 'name' : 'checkout', query : { product_id : $route.params.id }}" tag="a" class="site-btn"> PROCEED TO CHECKOUT </router-link>
+
 					<div id="accordion" class="accordion-area">
 						<div class="panel">
 							<div class="panel-header" id="headingOne">

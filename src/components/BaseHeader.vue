@@ -22,18 +22,11 @@
                         </div>
                         <div class="col-xl-4 col-lg-5">
                             <div class="user-panel">
-                                <div class="up-item">
+                                <div v-user="$store.getters.user ? $store.getters.user.length : false" class="up-item">
                                     <i class="flaticon-profile"></i>
                                     <a href="#" v-b-modal.login-popup>
                                     Sign
                                     </a>
-                                </div>
-                                <div class="up-item">
-                                    <div class="shopping-card">
-                                        <i class="flaticon-bag"></i>
-                                        <span>0</span>
-                                    </div>
-                                    <a href="#">Shopping Cart</a>
                                 </div>
                             </div>
                         </div>
@@ -85,12 +78,14 @@
 <script>
 import loginPopup from '@/components/popups/loginPopup.vue'
 import { directive as onClickOutside } from 'vue-on-click-outside'
+import user from '@/directive/user'; // Waves directive
+
 export default {
     components: {
         loginPopup,
     },
     directives: {
-        onClickOutside: onClickOutside,
+        onClickOutside: onClickOutside, user
     },
     /*
     |--------------------------------------------------------------------------

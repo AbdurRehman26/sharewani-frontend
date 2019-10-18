@@ -33,7 +33,7 @@ export default new Router({
                     component: () =>
                         import(/* webpackChunkName: "login" */ '@/views/home/Main.vue'),
                     meta: {
-                        title: 'Login',
+                        title: 'Home',
                         noSidebar: true,
                         bodyClass: 'auth-body',
                     },
@@ -65,7 +65,16 @@ export default new Router({
             component: () =>
                 import(/* webpackChunkName: "dashboard-alerts" */ '@/views/products/ProductView.vue'),
             meta: {
-                title: 'Insights | Alerts',
+                title: 'Products | List',
+            },
+        },
+        {
+            path: '/checkout',
+            name: 'checkout',
+            component: () =>
+                import(/* webpackChunkName: "dashboard-alerts" */ '@/views/checkout/Main.vue'),
+            meta: {
+                title: 'Products | View',
             },
         },
     ],

@@ -1,4 +1,4 @@
 export default {
-    user: (state) => state.user,
-    token: (state) => state.token,
+    user: (state) => JSON.parse(localStorage.getItem('user')),
+    token: (state) => JSON.parse(localStorage.getItem('token')),
 }

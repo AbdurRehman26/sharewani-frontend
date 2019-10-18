@@ -9,9 +9,10 @@
 				</router-link>
 
 				<div class="pi-links">
-					<a href="#" class="add-card"
-						><font-awesome-icon icon="cart-plus" /><span>ADD TO CART</span></a
-					>
+
+                <router-link class="add-card" :to="{ name : 'product.view', params: { id : item.id}}">   
+                    <font-awesome-icon icon="cart-plus" /><span>ORDER</span>
+                </router-link>
 				</div>
 			</div>
 			<div class="pi-text">
