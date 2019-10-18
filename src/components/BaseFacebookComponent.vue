@@ -34,17 +34,21 @@ export default {
         },
         checkLoginState: function (response) {
           let self = this;
-          console.log(response , 22222);
+
           if (response.status === 'connected') {
             FB.api('/me', { fields: 'first_name,last_name,email,picture' }, function(profile) {
               
+              console.log(profile);
+
               const postData = {
-                provider_access_token : response.authResponse.accessToken,
-                email : profile.email,
-                first_name : profile.name,
-                provider_id : profile.id,
-                image : profile.picture.data.url        
+                provider_access_token: response.authResponse.accessToken,
+                email: profile.email,
+                name: profile.first_name,
+                provider_id: profile.id,
+                image: profile.picture.data.url        
               }
+
+              self.$emit('post-data', postData);
 
             });
           }else {

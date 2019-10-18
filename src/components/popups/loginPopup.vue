@@ -14,7 +14,7 @@
 
                     <div class="col-md-12">
                 
-                        <facebook-component></facebook-component>
+                        <facebook-component @post-data="login"></facebook-component>
 
                     </div>
 
@@ -28,6 +28,8 @@
 <script>
 
 import FacebookComponent from '@/components/BaseFacebookComponent';
+import authResource from '@/api/auth';
+import { login } from '@/api/auth';
 
 export default {
     components: {
@@ -36,6 +38,12 @@ export default {
     data() {
         return {}
     },
-    methods: {},
+    methods: {
+        async login(postData){
+            console.log(authResource, 22222222);
+            const response = await login(postData);
+            console.log(response,  2222);
+        }
+    },
 }
 </script>
