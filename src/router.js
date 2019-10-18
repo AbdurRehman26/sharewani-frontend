@@ -39,52 +39,6 @@ export default new Router({
                         bodyClass: 'auth-body',
                     },
                 },
-                {
-                    path: 'auth/forgot-password',
-                    name: 'forgot-page',
-                    component: () =>
-                        import(/* webpackChunkName: "forgot-password" */ '@/views/auth/ForgotPassword.vue'),
-                    meta: {
-                        title: 'Forgot Password',
-                        noSidebar: true,
-                        bodyClass: 'auth-body',
-                    },
-                },
-                {
-                    path: 'auth/reset-password',
-                    name: 'reset-password-page',
-                    component: () =>
-                        import(/* webpackChunkName: "reset-password" */ '@/views/auth/ResetPassword.vue'),
-                    meta: {
-                        title: 'Reset Password',
-                        noSidebar: true,
-                        noFooterBar: true,
-                        bodyClass: 'auth-body',
-                    },
-                },
-                {
-                    path: 'auth/create-password',
-                    name: 'create-password-page',
-                    component: () =>
-                        import(/* webpackChunkName: "reset-password" */ '@/views/auth/CreatePassword.vue'),
-                    meta: {
-                        title: 'Create Password',
-                        noSidebar: true,
-                        noFooterBar: true,
-                        bodyClass: 'auth-body',
-                    },
-                },
-                {
-                    path: 'auth/email-sent',
-                    name: 'email-sent-page',
-                    component: () =>
-                        import(/* webpackChunkName: "email-sent" */ '@/views/auth/EmailSent.vue'),
-                    meta: {
-                        title: 'Check Your Inbox',
-                        noSidebar: true,
-                        bodyClass: 'auth-body',
-                    },
-                },
             ],
         },
 

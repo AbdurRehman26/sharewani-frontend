@@ -24,7 +24,9 @@
                             <div class="user-panel">
                                 <div class="up-item">
                                     <i class="flaticon-profile"></i>
-                                    <a href="#">Sign</a>
+                                    <a href="#" v-b-modal.login-popup>
+                                    Sign
+                                    </a>
                                 </div>
                                 <div class="up-item">
                                     <div class="shopping-card">
@@ -74,18 +76,18 @@
             </nav>
         </header>
 
-        <update-profile-popup></update-profile-popup>
+        <login-popup></login-popup>
 
 
     </div>
 </template>
 
 <script>
-import updateProfilePopup from '@/components/popups/UpdateProfilePopup.vue'
+import loginPopup from '@/components/popups/loginPopup.vue'
 import { directive as onClickOutside } from 'vue-on-click-outside'
 export default {
     components: {
-        updateProfilePopup,
+        loginPopup,
     },
     directives: {
         onClickOutside: onClickOutside,
