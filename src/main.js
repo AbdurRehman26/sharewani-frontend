@@ -9,6 +9,18 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { faCartPlus } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 library.add(faCartPlus)
+import VueLazyload from 'vue-lazyload'
+
+
+// or with options
+Vue.use(VueLazyload, {
+  preLoad: 1.3,
+  error: 'https://reactnativecode.com/wp-content/uploads/2018/02/Default_Image_Thumbnail.png',
+  loading: 'img/loading.gif',
+  attempt: 1
+})
+
+
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 

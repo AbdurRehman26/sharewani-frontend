@@ -57,7 +57,9 @@ export default new Router({
             name: 'product.list',
             component: () =>
                 import(/* webpackChunkName: "dashboard-alerts" */ '@/views/products/ProductMain.vue'),
-            meta: {},
+            meta: {
+                title: 'Products | List',
+            },
         },
         {
             path: '/products/:id',
@@ -65,7 +67,7 @@ export default new Router({
             component: () =>
                 import(/* webpackChunkName: "dashboard-alerts" */ '@/views/products/ProductView.vue'),
             meta: {
-                title: 'Products | List',
+                title: 'Products | View',
             },
         },
         {
@@ -74,7 +76,7 @@ export default new Router({
             component: () =>
                 import(/* webpackChunkName: "dashboard-alerts" */ '@/views/checkout/Main.vue'),
             meta: {
-                title: 'Products | View',
+                title: 'Checkout',
             },
         },
     ],

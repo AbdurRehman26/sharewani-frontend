@@ -17,13 +17,13 @@
 			<div class="row">
 				<div class="col-lg-6">
 					<div class="product-pic-zoom">
-						<img class="product-big-img" :src="item.image_paths[0]" alt="">
+						<img class="product-big-img" v-lazy="item.image_paths[activeImageIndex]" alt="">
 					</div>
 					<div class="product-thumbs" tabindex="1" style="overflow: hidden; outline: none;">
 						<div class="product-thumbs-track">
 
-							<div v-for="(image, index) in item.image_paths" class="pt active" data-imgbigurl="img/single-product/1.jpg">
-								<img :src="image" alt="">
+							<div v-for="(image, index) in item.image_paths" :class="['pt', index == activeImageIndex  ? 'active' : '']" :data-imgbigurl="image">
+								<img @click.prevent="activeImageIndex = index" :src="image" alt="">
 							</div>
 
 						</div>
@@ -31,6 +31,9 @@
 				</div>
 				<div class="col-lg-6 product-details">
 
+				<div class="row">
+				<div class="col-lg-6 product-details">
+					
 					<h2 class="p-title">{{item.title}}</h2>
 					<h3 class="p-price">{{item.original_price}} PKR</h3>
 					<h4 class="p-stock">Available: <span>In Stock</span></h4>
@@ -54,7 +57,20 @@
 						</div>
 					</div>
 
-					<router-link :to="{ 'name' : 'checkout', query : { product_id : $route.params.id }}" tag="a" class="site-btn"> PROCEED TO CHECKOUT </router-link>
+
+
+					<router-link :to="{ 'name' : 'checkout', query : { product_id : $route.params.id, start_date : selectedPeriod.start, end_date : selectedPeriod.end }}" tag="a" :class="['site-btn', isDisabled ? 'disabled' : '']"> PROCEED TO CHECKOUT </router-link>
+				
+				</div>
+
+
+				<div class="col-lg-6 product-details">
+					
+					<VueCtkDateTimePicker :format="'YYYY-MM-DD'" :formatted="'DD-MM-YYYY'" :range="true" v-model="selectedPeriod" />
+
+				</div>
+				</div>
+
 
 					<div id="accordion" class="accordion-area">
 						<div class="panel">
@@ -95,8 +111,14 @@
 import Product from '@/components/products/Product.vue'
 import ProductSideBar from '@/components/products/ProductSideBar.vue'
 import ProductResource from '@/api/product';
+import OrderResource from '@/api/order';
+
+import VueCtkDateTimePicker from 'vue-ctk-date-time-picker';
+import 'vue-ctk-date-time-picker/dist/vue-ctk-date-time-picker.css';
+
 
 const productResource = new ProductResource();
+const orderResource = new OrderResource();
 
 export default {
 	/*
@@ -109,7 +131,8 @@ export default {
 	}, // End of Component > mounted
     components: {
     	Product,
-    	ProductSideBar
+    	ProductSideBar,
+    	VueCtkDateTimePicker
     },
     /*
         |--------------------------------------------------------------------------
@@ -125,9 +148,15 @@ export default {
         */
     data() {
         return {
+        	activeImageIndex: 0,
+        	isDisabled: true,
         	item: {
         		image_paths: [],
         		size: []
+        	},
+        	selectedPeriod: {
+        		start: '',
+        		end: ''
         	}
 		}
     }, // End of Component > data
@@ -144,7 +173,34 @@ export default {
         | Component > methods
         |--------------------------------------------------------------------------
         */
+    watch :{
+    	selectedPeriod(changedDate){
+    		if(changedDate.start && changedDate.end){
+    			this.validateProductOrderDate();
+    		}
+    	}
+    },
+    /*
+        |--------------------------------------------------------------------------
+        | Component > methods
+        |--------------------------------------------------------------------------
+        */
     methods: {
+    	async validateProductOrderDate(){
+
+    		this.isDisabled = true;
+
+    		var query = this.selectedPeriod;
+    		query.product_id = this.item.id;
+
+    		const response = await orderResource.validateOrderDate(query);
+    		
+    		if(response && !response.data){
+    			this.isDisabled = false;
+    		}
+
+
+    	},
 		async getSingle() {
 
 			this.loading = true;

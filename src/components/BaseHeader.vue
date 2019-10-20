@@ -8,8 +8,6 @@
                             <!-- logo -->
 
                             <base-logo></base-logo>
-                        
-
                         </div>
                         <div class="col-xl-6 col-lg-5">
                             <form class="header-search-form">
@@ -22,11 +20,15 @@
                         </div>
                         <div class="col-xl-4 col-lg-5">
                             <div class="user-panel">
-                                <div v-user="$store.getters.user ? $store.getters.user.id : false" class="up-item">
-                                    <i class="flaticon-profile"></i>
-                                    <a href="#" v-b-modal.login-popup>
-                                    Sign
-                                    </a>
+                                <div
+                                    v-user="
+                                        $store.getters.user
+                                            ? $store.getters.user.id
+                                            : false
+                                    "
+                                    class="up-item"
+                                >
+                                <facebook-component @post-data="login"></facebook-component>
                                 </div>
                             </div>
                         </div>
@@ -37,14 +39,17 @@
                 <div class="container">
                     <!-- menu -->
                     <ul class="main-menu">
+                        <router-link tag="li" :to="{ name: 'home' }"
+                            ><a href="#"> Home </a></router-link
+                        >
 
-                            <router-link tag="li" :to="{ name : 'home' }"><a href="#"> Home </a></router-link>
+                        <router-link tag="li" :to="{ name: 'product.list' }"
+                            ><a href="#"> Products </a></router-link
+                        >
 
-                            <router-link tag="li" :to="{ name : 'product.list' }"><a href="#"> Products </a></router-link>
-
-                            <router-link tag="li" :to="{ name : 'contact-us' }"><a href="#"> Contact Us </a></router-link>
-
-
+                        <router-link tag="li" :to="{ name: 'contact-us' }"
+                            ><a href="#"> Contact Us </a></router-link
+                        >
 
                         <li>
                             <a href="#">Pages</a>
@@ -70,22 +75,24 @@
         </header>
 
         <login-popup></login-popup>
-
-
     </div>
 </template>
 
 <script>
 import loginPopup from '@/components/popups/loginPopup.vue'
 import { directive as onClickOutside } from 'vue-on-click-outside'
-import user from '@/directive/user'; // Waves directive
+import user from '@/directive/user' // Waves directive
+import FacebookComponent from '@/components/BaseFacebookComponent';
+import authResource from '@/api/auth';
 
 export default {
     components: {
         loginPopup,
+        FacebookComponent
     },
     directives: {
-        onClickOutside: onClickOutside, user
+        onClickOutside: onClickOutside,
+        user,
     },
     /*
     |--------------------------------------------------------------------------
@@ -127,14 +134,17 @@ export default {
     | Component > methods
     |--------------------------------------------------------------------------
     */
-    methods: {}, // End of Component > methods
+    methods: {
+        async login(postData){
+            this.$store.dispatch('login', postData);
+        }
+    }, // End of Component > methods
 
     /*
     |--------------------------------------------------------------------------
     | Component > mounted
     |--------------------------------------------------------------------------
     */
-    mounted() {
-    }, // End of Component > mounted
+    mounted() {}, // End of Component > mounted
 } // End of export default
 </script>

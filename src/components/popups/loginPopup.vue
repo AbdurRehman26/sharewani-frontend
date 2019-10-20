@@ -3,9 +3,8 @@
         <b-modal
             id="login-popup"
             title="Login/Signup"
+            hide-footer
             size="sm"
-            okTitle="Update"
-            cancelTitle="Cancel"
             cancelVariant="link"
             no-close-on-backdrop>
 
@@ -14,8 +13,7 @@
 
                     <div class="col-md-12">
                 
-                        <facebook-component @post-data="login"></facebook-component>
-
+                
                     </div>
 
                 </div>

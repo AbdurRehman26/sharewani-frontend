@@ -1,40 +1,57 @@
-import axios from 'axios';
-import { getToken } from '@/utils/auth';
+import axios from 'axios'
+import { getToken } from '@/utils/auth'
+import store from '@/store/index'
+import Vue from 'vue'
 
 // Create axios instance
 const service = axios.create({
-  baseURL: process.env.VUE_APP_ROOT_API,
-  timeout: 10000, // Request timeout
-});
+    baseURL: process.env.VUE_APP_ROOT_API,
+    timeout: 10000, // Request timeout
+})
 
 // Request intercepter
 service.interceptors.request.use(
-  config => {
-    const token = getToken();
-    
-    if (token) {
-      config.headers['Authorization'] = 'Bearer ' + getToken(); // Set JWT token
-    }
+    (config) => {
+        const token = getToken()
 
-    return config;
-  },
-  error => {
-    // Do something with request error
-    console.log(error); // for debug
-    Promise.reject(error);
-  }
-);
+        if (token) {
+            config.headers['Authorization'] = 'Bearer ' + getToken() // Set JWT token
+        }
+
+        return config
+    },
+    (error) => {
+        // Do something with request error
+        console.log(error) // for debug
+        Promise.reject(error)
+    }
+)
 
 // response pre-processing
 service.interceptors.response.use(
-  response => {
-    if (response.headers.authorization) {
-      setToken(response.headers.authorization);
-      response.data.token = response.headers.authorization;
+    (response) => {
+        if (response.headers.authorization) {
+            response.data.token = response.headers.authorization
+        }
+
+        if (response.data.error && response.data.error == 'Unauthorized') {
+            store.commit('setToken', null)
+            store.commit('setUser', null)
+        }
+
+        if(response.data.message){
+            Vue.toasted.success(response.data.message);
+        }
+
+        return response.data
+    },
+    (error) => {
+
+        Vue.toasted.error(error.response.data.message, {
+            type : 'error'
+        });
+
     }
+)
 
-    return response.data;
-  },
-  error => {});
-
-export default service;
+export default service
