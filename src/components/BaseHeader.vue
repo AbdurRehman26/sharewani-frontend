@@ -17,7 +17,7 @@
                                     ></facebook-component>
                                 </div>
 
-                                <div v-if="user.id" class="up-item">
+                                <div v-if="user && user.id" class="up-item">
                                     <font-awesome-icon icon="user" />
 
                                     <a href="#">{{ user.name }}</a>
