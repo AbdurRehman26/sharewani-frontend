@@ -19,7 +19,7 @@ Vue.use(VueLazyload, {
   preLoad: 1.3,
   error: 'https://reactnativecode.com/wp-content/uploads/2018/02/Default_Image_Thumbnail.png',
   loading: 'img/loading.gif',
-  attempt: 1
+  attempt: 2
 })
 
 
