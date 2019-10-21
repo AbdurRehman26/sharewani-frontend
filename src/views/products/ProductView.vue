@@ -195,7 +195,7 @@ export default {
 
     		const response = await orderResource.validateOrderDate(query);
     		
-    		if(response && !response.data){
+    		if(response && !response.data && !response.error){
     			this.isDisabled = false;
     		}
 

@@ -7,8 +7,10 @@ import vbclass from 'vue-body-class'
 import Toasted from 'vue-toasted'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faCartPlus } from '@fortawesome/free-solid-svg-icons'
+import { faUser } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 library.add(faCartPlus)
+library.add(faUser)
 import VueLazyload from 'vue-lazyload'
 
 

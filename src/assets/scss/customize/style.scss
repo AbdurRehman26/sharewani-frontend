@@ -372,15 +372,16 @@ ol {
 
 .user-panel .up-item {
 	display: inline-block;
-	font-size: 14px;
+	font-size: 35px;
 }
 
 .user-panel .up-item i {
-	font-size: 22px;
+	font-size: 35px;
 }
 
 .user-panel .up-item a {
-	font-size: 14px;
+	font-size: 25px;
+	margin-left: 10px;
 	color: #000;
 }
 
@@ -2156,6 +2157,7 @@ ol {
 	border-radius: 40px;
 	margin-bottom: 17px;
 	font-size: 14px;
+	border: 1px solid lightgray !important;
 }
 
 .contact-form textarea {

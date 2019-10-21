@@ -4,31 +4,23 @@
             <div class="header-top">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-2 text-center text-lg-left">
-                            <!-- logo -->
 
+                        <div class="col-lg-2 text-center text-lg-left">
                             <base-logo></base-logo>
                         </div>
-                        <div class="col-xl-6 col-lg-5">
-                            <form class="header-search-form">
-                                <input
-                                    type="text"
-                                    placeholder="Search on divisima ...."
-                                />
-                                <button><i class="flaticon-search"></i></button>
-                            </form>
-                        </div>
+
                         <div class="col-xl-4 col-lg-5">
                             <div class="user-panel">
-                                <div
-                                    v-user="
-                                        $store.getters.user
-                                            ? $store.getters.user.id
-                                            : false
-                                    "
-                                    class="up-item"
-                                >
-                                <facebook-component @post-data="login"></facebook-component>
+                                <div v-userDirective="user" class="up-item">
+                                    <facebook-component
+                                        @post-data="login"
+                                    ></facebook-component>
+                                </div>
+
+                                <div v-if="user.id" class="up-item">
+                                    <font-awesome-icon icon="user" />
+
+                                    <a href="#">{{ user.name }}</a>
                                 </div>
                             </div>
                         </div>
@@ -50,64 +42,35 @@
                         <router-link tag="li" :to="{ name: 'contact-us' }"
                             ><a href="#"> Contact Us </a></router-link
                         >
-
-                        <li>
-                            <a href="#">Pages</a>
-                            <ul class="sub-menu">
-                                <li>
-                                    <a href="./product.html">Product Page</a>
-                                </li>
-                                <li>
-                                    <a href="./category.html">Category Page</a>
-                                </li>
-                                <li><a href="./cart.html">Cart Page</a></li>
-                                <li>
-                                    <a href="./checkout.html">Checkout Page</a>
-                                </li>
-                                <li>
-                                    <a href="./contact.html">Contact Page</a>
-                                </li>
-                            </ul>
-                        </li>
                     </ul>
                 </div>
             </nav>
         </header>
-
-        <login-popup></login-popup>
     </div>
 </template>
 
 <script>
-import loginPopup from '@/components/popups/loginPopup.vue'
+import { mapGetters } from 'vuex'
 import { directive as onClickOutside } from 'vue-on-click-outside'
-import user from '@/directive/user' // Waves directive
-import FacebookComponent from '@/components/BaseFacebookComponent';
-import authResource from '@/api/auth';
+import userDirective from '@/directive/user' // Waves directive
+import FacebookComponent from '@/components/BaseFacebookComponent'
+import authResource from '@/api/auth'
 
 export default {
     components: {
-        loginPopup,
-        FacebookComponent
+        FacebookComponent,
     },
     directives: {
         onClickOutside: onClickOutside,
-        user,
+        userDirective,
     },
     /*
     |--------------------------------------------------------------------------
     | Component > props
     |--------------------------------------------------------------------------
     */
-    props: {
-        menuListing: {
-            type: Array,
-            default: null,
-        },
-        stepStyle: {
-            type: Boolean,
-            default: false,
-        },
+    computed: {
+        ...mapGetters(['user']),
     }, // End of Component > props
 
     /*
@@ -116,10 +79,7 @@ export default {
     |--------------------------------------------------------------------------
     */
     data() {
-        return {
-            mainMain: false,
-            image: 'profile-pic.png',
-        }
+        return {}
     }, // End of Component > data
 
     /*
@@ -127,7 +87,9 @@ export default {
     | Component > computed
     |--------------------------------------------------------------------------
     */
-    computed: {}, // End of Component > computed
+    watch: {
+        user(value) {},
+    }, // End of Component > computed
 
     /*
     |--------------------------------------------------------------------------
@@ -135,9 +97,9 @@ export default {
     |--------------------------------------------------------------------------
     */
     methods: {
-        async login(postData){
-            this.$store.dispatch('login', postData);
-        }
+        async login(postData) {
+            this.$store.dispatch('login', postData)
+        },
     }, // End of Component > methods
 
     /*

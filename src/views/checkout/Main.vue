@@ -36,7 +36,7 @@
 												id="main"
 											/>
 											<label for="main"
-												>Use my regular address</label
+												>Use from my regular addresses</label
 											>
 										</div>
 										<div class="cfr-item">

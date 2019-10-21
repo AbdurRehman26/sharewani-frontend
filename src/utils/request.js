@@ -37,6 +37,8 @@ service.interceptors.response.use(
         if (response.data.error && response.data.error == 'Unauthorized') {
             store.commit('setToken', null)
             store.commit('setUser', null)
+
+            Vue.toasted.error('Please login in order to continue');
         }
 
         if(response.data.message){

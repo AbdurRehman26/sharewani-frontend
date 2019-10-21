@@ -4,7 +4,6 @@ export default {
         state.user = payload
     },
     setToken(state, payload) {
-    	console.log(JSON.stringify(payload));
     	localStorage.setItem('token', JSON.stringify(payload));
         state.token = payload
     },
