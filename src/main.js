@@ -11,8 +11,7 @@ import { faUser } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 library.add(faCartPlus)
 library.add(faUser)
-import VueLazyload from 'vue-lazyload'
-
+import VueLazyload from 'vue-lazyload';
 
 // or with options
 Vue.use(VueLazyload, {
