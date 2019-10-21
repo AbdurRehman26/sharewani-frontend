@@ -19,16 +19,21 @@
 
 					<div class="col-lg-9  order-1 order-lg-2 mb-5 mb-lg-0">
 						<div v-if="!isLoading" class="row">
-							<product
-								:item="item"
-								v-for="item in response.data"
-							></product>
 
-							<div class="text-center w-100 pt-3">
-								<base-pagination
-									:pagination="response.pagination"
-								></base-pagination>
-							</div>
+							<record-not-found v-if="!isLoading && response.data && !response.data.length"></record-not-found>
+
+								<product
+									v-if="!isLoading && response.data"
+									:item="item"
+									v-for="item in response.data"
+								></product>
+
+								<div class="text-center w-100 pt-3">
+									<base-pagination
+										:pagination="response.pagination"
+									></base-pagination>
+								</div>
+
 						</div>
 
 						<div v-if="isLoading" class="text-center">
@@ -46,6 +51,7 @@
 import Product from '@/components/products/Product.vue'
 import ProductSideBar from '@/components/products/ProductSideBar.vue'
 import ProductResource from '@/api/product'
+import RecordNotFound from '@/components/BaseNoRecordFound.vue'
 
 const productResource = new ProductResource()
 
@@ -61,6 +67,7 @@ export default {
 	components: {
 		Product,
 		ProductSideBar,
+		RecordNotFound,
 	},
 	/*
         |--------------------------------------------------------------------------

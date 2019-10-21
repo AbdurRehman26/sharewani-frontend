@@ -3,10 +3,7 @@ import Router from 'vue-router'
 
 Vue.use(Router)
 
-export default new Router({
-    mode: 'history',
-    base: process.env.BASE_URL,
-    routes: [
+const routes = [
         /*404 Page*/
         {
             name: '/404',
@@ -77,7 +74,36 @@ export default new Router({
                 import(/* webpackChunkName: "dashboard-alerts" */ '@/views/checkout/Main.vue'),
             meta: {
                 title: 'Checkout',
+                forAuth: true
             },
         },
-    ],
-})
+    ]
+
+// Create the router instance
+const router = new Router({
+    mode: 'history',
+    routes, // short for `routes: routes`
+    app,
+});
+
+
+router.beforeEach((to, from, next) => {
+  if (to.matched.some(record => record.meta.forVisitors)) {}
+else if (to.matched.some(record => record.meta.forAuth)) {
+  if (!localStorage.getItem('token') || localStorage.getItem('token') == 'null') {
+    next({
+      path: '/products'
+  })
+}
+else {
+    next()
+
+}
+}
+else{
+  next()
+}
+});
+
+export default router;
+

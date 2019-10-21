@@ -39,10 +39,10 @@ import FeatureHeader from '@/components/FeatureHeader'
 import ProductHomeCarousel from '@/components/products/ProductHomeCarousel'
 import ProductHomeGrid from '@/components/products/ProductHomeGrid'
 
-require('../../../html-design/divisima/js/jquery-3.2.1.min.js')
-require('../../../html-design/divisima/js/jquery.slicknav.min.js')
-require('../../../html-design/divisima/js/owl.carousel.min.js')
-require('../../../html-design/divisima/js/jquery.nicescroll.min.js')
+require('@/assets/js/jquery-3.2.1.min.js')
+require('@/assets/js/jquery.slicknav.min.js')
+require('@/assets/js/owl.carousel.min.js')
+require('@/assets/js/jquery.nicescroll.min.js')
 
 export default {
 	components: {

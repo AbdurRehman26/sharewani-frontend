@@ -1,10 +1,6 @@
 <template>
     <div class="not-found-main">
         <div class="content-area">
-            <base-header
-                @sidemenu="$emit('responsiveSideBar')"
-                :menuListing="menuListing"
-            ></base-header>
             <div class="right-panel">
                 <not-found></not-found>
                 <router-view />

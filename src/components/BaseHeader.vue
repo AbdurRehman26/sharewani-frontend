@@ -88,7 +88,9 @@ export default {
     |--------------------------------------------------------------------------
     */
     watch: {
-        user(value) {},
+        user(value) {
+            window.location.reload('/');
+        },
     }, // End of Component > computed
 
     /*

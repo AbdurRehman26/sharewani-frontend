@@ -9,7 +9,7 @@
 			<div class="back-link">
 				
 
-				<router-link :to="{name : 'product.list'}">Back to Category</router-link>
+				<router-link :to="{name : 'product.list'}">Back to Products</router-link>
 
 
 			
@@ -46,13 +46,13 @@
 					</div>
 
 					<div class="p-review">
-						<a href="">3 reviews</a>|<a href="">Add your review</a>
+						<!-- <a href="">3 reviews</a>|<a href="">Add your review</a> -->
 					</div>
 
 					<div class="fw-size-choose">
 						<p>Size</p>
 						<div class="sc-item">
-							<input type="radio" name="sc" :id="item.size.code+'-size'">
+							<input type="radio" checked disabled="true" name="sc" :id="item.size.code+'-size'">
 							<label :for="item.size.code+'-size'">{{item.size.code}}</label>
 						</div>
 					</div>

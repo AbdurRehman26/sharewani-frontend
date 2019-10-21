@@ -2,7 +2,9 @@
     <div class="no-record-found">
         <div class="middle-align">
             <div class="no-record-image">
+                
                 <no-record-icon></no-record-icon>
+            
             </div>
             <p>No Record Found</p>
         </div>
