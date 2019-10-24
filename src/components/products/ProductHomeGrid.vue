@@ -15,168 +15,80 @@
 				<li><a href="#">LEGGINGS</a></li>
 			</ul>
 			<div class="row">
-				<div class="col-lg-3 col-sm-6">
-					<div class="product-item">
-						<div class="pi-pic">
-							<img src="img/product/5.jpg" alt="" />
-							<div class="pi-links">
-								<a href="#" class="add-card"
-									><i class="flaticon-bag"></i
-									><span>ADD TO CART</span></a
-								>
-								<a href="#" class="wishlist-btn"
-									><i class="flaticon-heart"></i
-								></a>
-							</div>
-						</div>
-						<div class="pi-text">
-							<h6>$35,00</h6>
-							<p>Flamboyant Pink Top</p>
-						</div>
-					</div>
+				
+				<div class="col-lg-3 col-sm-6" v-for="item in items">
+					
+						<product :item="item" :fullSize="true"></product>
+
 				</div>
-				<div class="col-lg-3 col-sm-6">
-					<div class="product-item">
-						<div class="pi-pic">
-							<div class="tag-sale">ON SALE</div>
-							<img src="img/product/6.jpg" alt="" />
-							<div class="pi-links">
-								<a href="#" class="add-card"
-									><i class="flaticon-bag"></i
-									><span>ADD TO CART</span></a
-								>
-								<a href="#" class="wishlist-btn"
-									><i class="flaticon-heart"></i
-								></a>
-							</div>
-						</div>
-						<div class="pi-text">
-							<h6>$35,00</h6>
-							<p>Black and White Stripes Dress</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6">
-					<div class="product-item">
-						<div class="pi-pic">
-							<img src="img/product/7.jpg" alt="" />
-							<div class="pi-links">
-								<a href="#" class="add-card"
-									><i class="flaticon-bag"></i
-									><span>ADD TO CART</span></a
-								>
-								<a href="#" class="wishlist-btn"
-									><i class="flaticon-heart"></i
-								></a>
-							</div>
-						</div>
-						<div class="pi-text">
-							<h6>$35,00</h6>
-							<p>Flamboyant Pink Top</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6">
-					<div class="product-item">
-						<div class="pi-pic">
-							<img src="img/product/8.jpg" alt="" />
-							<div class="pi-links">
-								<a href="#" class="add-card"
-									><i class="flaticon-bag"></i
-									><span>ADD TO CART</span></a
-								>
-								<a href="#" class="wishlist-btn"
-									><i class="flaticon-heart"></i
-								></a>
-							</div>
-						</div>
-						<div class="pi-text">
-							<h6>$35,00</h6>
-							<p>Flamboyant Pink Top</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6">
-					<div class="product-item">
-						<div class="pi-pic">
-							<img src="img/product/9.jpg" alt="" />
-							<div class="pi-links">
-								<a href="#" class="add-card"
-									><i class="flaticon-bag"></i
-									><span>ADD TO CART</span></a
-								>
-								<a href="#" class="wishlist-btn"
-									><i class="flaticon-heart"></i
-								></a>
-							</div>
-						</div>
-						<div class="pi-text">
-							<h6>$35,00</h6>
-							<p>Flamboyant Pink Top</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6">
-					<div class="product-item">
-						<div class="pi-pic">
-							<img src="img/product/10.jpg" alt="" />
-							<div class="pi-links">
-								<a href="#" class="add-card"
-									><i class="flaticon-bag"></i
-									><span>ADD TO CART</span></a
-								>
-								<a href="#" class="wishlist-btn"
-									><i class="flaticon-heart"></i
-								></a>
-							</div>
-						</div>
-						<div class="pi-text">
-							<h6>$35,00</h6>
-							<p>Black and White Stripes Dress</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6">
-					<div class="product-item">
-						<div class="pi-pic">
-							<img src="img/product/11.jpg" alt="" />
-							<div class="pi-links">
-								<a href="#" class="add-card"
-									><i class="flaticon-bag"></i
-									><span>ADD TO CART</span></a
-								>
-								<a href="#" class="wishlist-btn"
-									><i class="flaticon-heart"></i
-								></a>
-							</div>
-						</div>
-						<div class="pi-text">
-							<h6>$35,00</h6>
-							<p>Flamboyant Pink Top</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6">
-					<div class="product-item">
-						<div class="pi-pic">
-							<img src="img/product/12.jpg" alt="" />
-							<div class="pi-links">
-								<a href="#" class="add-card"
-									><i class="flaticon-bag"></i
-									><span>ADD TO CART</span></a
-								>
-								<a href="#" class="wishlist-btn"
-									><i class="flaticon-heart"></i
-								></a>
-							</div>
-						</div>
-						<div class="pi-text">
-							<h6>$35,00</h6>
-							<p>Flamboyant Pink Top</p>
-						</div>
-					</div>
-				</div>
+
 			</div>
 		</div>
 	</section>
 </template>
+
+<script type="text/javascript">
+import Resource from '@/api/resource'
+const productResource = new Resource('product/top-selling')
+
+import Product from '@/components/products/Product.vue'
+
+export default {
+	components: {
+		Product,
+	},
+	/*
+|--------------------------------------------------------------------------
+| Component > props
+|--------------------------------------------------------------------------
+*/
+	props: {}, // End of Component > props
+
+	/*
+|--------------------------------------------------------------------------
+| Component > data
+|--------------------------------------------------------------------------
+*/
+	data() {
+		return {
+			items: [],
+		}
+	}, // End of Component > data
+
+	/*
+|--------------------------------------------------------------------------
+| Component > computed
+|--------------------------------------------------------------------------
+*/
+	computed: {}, // End of Component > computed
+
+	/*
+|--------------------------------------------------------------------------
+| Component > methods
+|--------------------------------------------------------------------------
+*/
+	methods: {
+		async getList() {
+			const response = await productResource.list({ top_selling: true })
+			this.items = response.data
+
+			let self = this
+
+			setTimeout(function() {
+				self.initializeOWlCarousel()
+			}, 500)
+		},
+
+		initializeOWlCarousel() {},
+	}, // End of Component > methods
+
+	/*
+|--------------------------------------------------------------------------
+| Component > mounted
+|--------------------------------------------------------------------------
+*/
+	mounted() {
+		this.getList()
+	}, // End of Component > mounted
+} // End of export default
+</script>

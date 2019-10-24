@@ -5,98 +5,100 @@
 				<h2>LATEST PRODUCTS</h2>
 			</div>
 			<div class="product-slider owl-carousel">
-				<div class="product-item">
-					<div class="pi-pic">
-						<img src="img/product/1.jpg" alt="" />
-						<div class="pi-links">
-							<a href="#" class="add-card"
-								><i class="flaticon-bag"></i
-								><span>ADD TO CART</span></a
-							>
-							<a href="#" class="wishlist-btn"
-								><i class="flaticon-heart"></i
-							></a>
-						</div>
-					</div>
-					<div class="pi-text">
-						<h6>$35,00</h6>
-						<p>Flamboyant Pink Top</p>
-					</div>
-				</div>
-				<div class="product-item">
-					<div class="pi-pic">
-						<div class="tag-new">New</div>
-						<img src="img/product/2.jpg" alt="" />
-						<div class="pi-links">
-							<a href="#" class="add-card"
-								><i class="flaticon-bag"></i
-								><span>ADD TO CART</span></a
-							>
-							<a href="#" class="wishlist-btn"
-								><i class="flaticon-heart"></i
-							></a>
-						</div>
-					</div>
-					<div class="pi-text">
-						<h6>$35,00</h6>
-						<p>Black and White Stripes Dress</p>
-					</div>
-				</div>
-				<div class="product-item">
-					<div class="pi-pic">
-						<img src="img/product/3.jpg" alt="" />
-						<div class="pi-links">
-							<a href="#" class="add-card"
-								><i class="flaticon-bag"></i
-								><span>ADD TO CART</span></a
-							>
-							<a href="#" class="wishlist-btn"
-								><i class="flaticon-heart"></i
-							></a>
-						</div>
-					</div>
-					<div class="pi-text">
-						<h6>$35,00</h6>
-						<p>Flamboyant Pink Top</p>
-					</div>
-				</div>
-				<div class="product-item">
-					<div class="pi-pic">
-						<img src="img/product/4.jpg" alt="" />
-						<div class="pi-links">
-							<a href="#" class="add-card"
-								><i class="flaticon-bag"></i
-								><span>ADD TO CART</span></a
-							>
-							<a href="#" class="wishlist-btn"
-								><i class="flaticon-heart"></i
-							></a>
-						</div>
-					</div>
-					<div class="pi-text">
-						<h6>$35,00</h6>
-						<p>Flamboyant Pink Top</p>
-					</div>
-				</div>
-				<div class="product-item">
-					<div class="pi-pic">
-						<img src="img/product/6.jpg" alt="" />
-						<div class="pi-links">
-							<a href="#" class="add-card"
-								><i class="flaticon-bag"></i
-								><span>ADD TO CART</span></a
-							>
-							<a href="#" class="wishlist-btn"
-								><i class="flaticon-heart"></i
-							></a>
-						</div>
-					</div>
-					<div class="pi-text">
-						<h6>$35,00</h6>
-						<p>Flamboyant Pink Top</p>
-					</div>
-				</div>
+				<product :item="item" :fullSize="true" v-for="item in items"></product>
 			</div>
 		</div>
 	</section>
 </template>
+
+<script type="text/javascript">
+import Resource from '@/api/resource'
+const productResource = new Resource('product')
+
+import Product from '@/components/products/Product.vue'
+
+export default {
+	components: {
+		Product,
+	},
+	/*
+|--------------------------------------------------------------------------
+| Component > props
+|--------------------------------------------------------------------------
+*/
+	props: {}, // End of Component > props
+
+	/*
+|--------------------------------------------------------------------------
+| Component > data
+|--------------------------------------------------------------------------
+*/
+	data() {
+		return {
+			items: [],
+		}
+	}, // End of Component > data
+
+	/*
+|--------------------------------------------------------------------------
+| Component > computed
+|--------------------------------------------------------------------------
+*/
+	computed: {}, // End of Component > computed
+
+	/*
+|--------------------------------------------------------------------------
+| Component > methods
+|--------------------------------------------------------------------------
+*/
+	methods: {
+		async getList() {
+			const response = await productResource.list({ latest: true })
+			this.items = response.data
+
+			let self = this
+
+			setTimeout(function() {
+				self.initializeOWlCarousel()
+			}, 500)
+		},
+
+		initializeOWlCarousel() {
+			$('.product-slider').owlCarousel({
+				loop: true,
+				nav: true,
+				dots: false,
+				margin: 30,
+				autoplay: true,
+				navText: [
+					'<i class="flaticon-left-arrow-1"></i>',
+					'<i class="flaticon-right-arrow-1"></i>',
+				],
+				responsive: {
+					0: {
+						items: 1,
+					},
+					480: {
+						items: 2,
+					},
+					768: {
+						items: 3,
+					},
+					1200: {
+						items: 4,
+					},
+				},
+			})
+		},
+	}, // End of Component > methods
+
+	/*
+|--------------------------------------------------------------------------
+| Component > mounted
+|--------------------------------------------------------------------------
+*/
+	mounted() {
+		this.getList()
+	}, // End of Component > mounted
+} // End of export default
+</script>

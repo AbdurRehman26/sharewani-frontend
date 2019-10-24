@@ -100,7 +100,10 @@ export default {
     */
     methods: {
         async login(postData) {
-            this.$store.dispatch('login', postData)
+            const response = await this.$store.dispatch('login', postData)
+            if(response){
+                window.location.reload('/');
+            }
         },
     }, // End of Component > methods
 

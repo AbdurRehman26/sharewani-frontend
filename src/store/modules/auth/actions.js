@@ -13,6 +13,8 @@ export default {
 
          commit('setUser', response.data.user);
          commit('setToken', response.data.token);
+         
+         return true;
 
          } catch (error) {
         

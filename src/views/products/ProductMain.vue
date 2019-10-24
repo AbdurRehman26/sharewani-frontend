@@ -29,9 +29,12 @@
 								></product>
 
 								<div class="text-center w-100 pt-3">
+									<center>
 									<base-pagination
+										@page-changed="getList"
 										:pagination="response.pagination"
 									></base-pagination>
+									</center>
 								</div>
 
 						</div>

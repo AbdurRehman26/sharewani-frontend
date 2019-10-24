@@ -1,8 +1,8 @@
 <template>
-	<div class="col-lg-4 col-sm-6">
+	<div :class="[ fullSize ? '' : 'col-lg-4 col-sm-6']">
 		<div class="product-item">
 			<div class="pi-pic">
-				<div class="tag-new">new</div>
+				<div class="tag-new"><center>{{item.size.code.toUpperCase()}}</center></div>
 
 				<router-link :to="{ name : 'product.view', params: { id : item.id}}">	
 				<img @error="changeImageSource" v-lazy="item.images[0]"  alt="" />
@@ -37,8 +37,15 @@ export default {
         */
     props: {
     	item : {
-
-    	}
+    	   type: Object,
+           default : function(){
+            return {}
+           }
+        },
+        fullSize: {
+            type: Boolean,
+            default: ''
+        }
     }, // End of Component > props
 
     /*

@@ -10,3 +10,23 @@
  .multiselect__single{
  	padding-top: 10px;
  }
+
+
+ .product-item .pi-pic, .product-item .pi-pic img{
+ 	height : 400px ;
+ }
+
+.product-item .tag-new, .product-item .tag-sale {
+ 	position: absolute;
+    right: 16px !important;
+    top: 7px !important;
+    font-size: 17px !important;
+    font-weight: 700;
+    color: #fff;
+    background: #50e550;
+    line-height: 1;
+    text-transform: uppercase;
+    padding: 2px 9px 1px !important;
+    border-radius: 15px;
+    width: 42px;
+ }

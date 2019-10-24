@@ -52,7 +52,7 @@ export default {
     */
     watch: {
         'pagination.current'(value){
-            this.$emit('page-changed', value);
+            this.$emit('page-changed', {page : value});
         }
     }, // End of Component > computed
 
