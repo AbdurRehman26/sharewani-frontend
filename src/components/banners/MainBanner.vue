@@ -1,7 +1,7 @@
 <template>
 	<section class="hero-section">
 		<div class="hero-slider owl-carousel">
-			<div class="hs-item set-bg" data-setbg="img/bg.jpg">
+			<div class="hs-item set-bg" data-setbg="https://i.ytimg.com/vi/Qy2Dqz1G3Cc/maxresdefault.jpg">
 				<div class="container">
 					<div class="row">
 						<div class="col-xl-6 col-lg-7 text-white">
@@ -28,7 +28,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="hs-item set-bg" data-setbg="../assets/images/bg-2.jpg">
+			<div class="hs-item set-bg" data-setbg="https://www.blog.indiabazaaronline.com/wp-content/uploads/2016/02/work-wedding-sherwani.jpg">
 				<div class="container">
 					<div class="row">
 						<div class="col-xl-6 col-lg-7 text-white">
