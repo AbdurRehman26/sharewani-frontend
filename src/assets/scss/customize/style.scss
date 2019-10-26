@@ -1739,7 +1739,7 @@ ol {
 
 .cart-table {
 	padding: 40px 34px 0;
-	background: #f0f0f0;
+	background: #F0EBEC;
 	border-radius: 27px;
 	overflow: hidden;
 }
@@ -1777,6 +1777,14 @@ ol {
 
 .cart-table .product-col {
 	display: table;
+}
+
+.cart-table .order-row td {
+	margin-bottom: 19px;
+}
+
+.cart-table .address-col {
+	text-align: center;
 	margin-bottom: 19px;
 }
 

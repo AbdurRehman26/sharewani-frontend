@@ -63,16 +63,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="filter-widget mb-10">
-			<h6>Period Selection</h6>
-
-			<VueCtkDateTimePicker
-				:range="true"
-				:formatted="'DD-MM-YYYY'"
-				:format="'YYYY-MM-DD'"
-				v-model="query"
-			/>
-		</div>
+		
 		<div class="filter-widget mb-0">
 			<h2 class="fw-title">color by</h2>
 			<div class="fw-color-choose">

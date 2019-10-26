@@ -39,13 +39,26 @@
                             ><a href="#"> Products </a></router-link
                         >
 
+                        <router-link v-if="!user" v-b-modal.login-popup tag="li" :to="{ name: 'order.list' }"
+                            ><a href="#"> My Orders </a></router-link
+                        >
+
+                        <router-link v-if="user" tag="li" :to="{ name: 'order.list' }"
+                            ><a href="#"> My Orders </a></router-link
+                        >
+
+
                         <router-link tag="li" :to="{ name: 'contact-us' }"
                             ><a href="#"> Contact Us </a></router-link
                         >
+
                     </ul>
                 </div>
             </nav>
         </header>
+
+        <login-info-popup></login-info-popup>
+
     </div>
 </template>
 
@@ -55,10 +68,12 @@ import { directive as onClickOutside } from 'vue-on-click-outside'
 import userDirective from '@/directive/user' // Waves directive
 import FacebookComponent from '@/components/BaseFacebookComponent'
 import authResource from '@/api/auth'
+import loginInfoPopup from '@/components/popups/loginInfoPopup'
 
 export default {
     components: {
         FacebookComponent,
+        loginInfoPopup
     },
     directives: {
         onClickOutside: onClickOutside,

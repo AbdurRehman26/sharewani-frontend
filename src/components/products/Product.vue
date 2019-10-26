@@ -44,7 +44,7 @@ export default {
         },
         fullSize: {
             type: Boolean,
-            default: ''
+            default: false
         }
     }, // End of Component > props
 

@@ -68,6 +68,16 @@ const routes = [
             },
         },
         {
+            path: '/orders',
+            name: 'order.list',
+            component: () =>
+                import(/* webpackChunkName: "dashboard-alerts" */ '@/views/orders/OrderMain.vue'),
+            meta: {
+                forAuth : true,
+                title: 'Orders | View',
+            },
+        },
+        {
             path: '/checkout',
             name: 'checkout',
             component: () =>
