@@ -5,7 +5,7 @@
 				<div class="tag-new"><center>{{item.size.code.toUpperCase()}}</center></div>
 
 				<router-link :to="{ name : 'product.view', params: { id : item.id}}">	
-				<img @error="changeImageSource" v-lazy="item.images[0]"  alt="" />
+				<img @error="changeImageSource" v-lazy="item.image_paths[0]"  alt="" />
 				</router-link>
 
 				<div class="pi-links">
