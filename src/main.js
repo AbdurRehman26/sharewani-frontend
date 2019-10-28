@@ -21,8 +21,6 @@ Vue.use(VueLazyload, {
   attempt: 2
 })
 
-
-
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 require('@/auto-import.js')

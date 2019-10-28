@@ -66,7 +66,7 @@
 
 				<div class="col-lg-6 product-details">
 					
-					<VueCtkDateTimePicker :format="'YYYY-MM-DD'" :formatted="'DD-MM-YYYY'" :range="true" v-model="selectedPeriod" />
+					<VueCtkDateTimePicker noShortcuts noClearButton :maxDate="maxDate" :format="'YYYY-MM-DD'" :formatted="'DD-MM-YYYY'" :range="true" v-model="selectedPeriod" />
 
 				</div>
 				</div>
@@ -116,6 +116,7 @@ import OrderResource from '@/api/order';
 import VueCtkDateTimePicker from 'vue-ctk-date-time-picker';
 import 'vue-ctk-date-time-picker/dist/vue-ctk-date-time-picker.css';
 
+const moment = require('moment')
 
 const productResource = new ProductResource();
 const orderResource = new OrderResource();
@@ -166,7 +167,11 @@ export default {
         | Component > computed
         |--------------------------------------------------------------------------
         */
-    computed: {}, // End of Component > computed
+    computed: {
+    	maxDate(){
+    		return moment(this.selectedPeriod.start, 'YYYY-MM-DD').add(8, 'd').format('YYYY-MM-DD');
+    	}
+    }, // End of Component > computed
 
     /*
         |--------------------------------------------------------------------------

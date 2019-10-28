@@ -48,6 +48,10 @@
                         >
 
 
+                        <router-link tag="li" :to="{ name: 'product.my' }"
+                            ><a href="#"> My Products </a></router-link
+                        >
+
                         <router-link tag="li" :to="{ name: 'contact-us' }"
                             ><a href="#"> Contact Us </a></router-link
                         >
