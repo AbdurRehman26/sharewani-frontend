@@ -36,7 +36,7 @@
 					
 					<h2 class="p-title">{{item.title}}</h2>
 					<h3 class="p-price">{{item.original_price}} PKR</h3>
-					<h4 class="p-stock">Available: <span>In Stock</span></h4>
+					<h4 class="p-price p-stock">Rent: <span>{{rentAmount ? rentAmount + ' PKR' : 'Please select date range for rent'}}</span></h4>
 					<div class="p-rating">
 						<i class="fa fa-star-o"></i>
 						<i class="fa fa-star-o"></i>
@@ -158,7 +158,8 @@ export default {
         	selectedPeriod: {
         		start: '',
         		end: ''
-        	}
+        	},
+        	rentAmount: null
 		}
     }, // End of Component > data
 
@@ -194,13 +195,15 @@ export default {
     	async validateProductOrderDate(){
 
     		this.isDisabled = true;
+    		this.rentAmount = null;
 
     		var query = this.selectedPeriod;
     		query.product_id = this.item.id;
 
     		const response = await orderResource.validateOrderDate(query);
     		
-    		if(response && !response.data && !response.error){
+    		if(response && response.data && !response.error){
+    			this.rentAmount = response.data;
     			this.isDisabled = false;
     		}
 
