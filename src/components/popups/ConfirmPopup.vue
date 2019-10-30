@@ -1,16 +1,16 @@
 <template>
     <div>
         <b-modal
-            id="activate-popup"
+            id="confirm-popup"
             ref="my-modal"
             size="sm"
-            okTitle="Activate"
+            okTitle="Confirm"
             cancelTitle="Cancel"
             cancelVariant="link"
-            no-close-on-backdrop
+            @ok="$emit('confirm')"
         >
             <div slot="modal-header" class="w-100 archive-popup">
-                <h5 class="modal-title">Activate User</h5>
+                <h5 class="modal-title">{{title}}</h5>
                 <button
                     type="button"
                     class="close"
@@ -22,8 +22,7 @@
                 </button>
             </div>
             <p>
-                Are you sure you want to activate this user? You can re-activate
-                account later.
+                {{description}}
             </p>
         </b-modal>
     </div>
@@ -34,12 +33,12 @@ export default {
     props: {
         title: {
             type: String,
-            default: null,
+            default: 'Cancel Order',
         },
 
         description: {
             type: String,
-            default: null,
+            default: 'Are you sure you want to cancel order?',
         },
     }, //
     data() {

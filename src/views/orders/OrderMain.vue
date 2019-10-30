@@ -27,6 +27,7 @@
 											<th class="size-th">from</th>
 											<th class="total-th">to</th>
 											<th class="total-th">Shipped To</th>
+											<th class="total-th">Rent Amount</th>
 										</tr>
 									</thead>
 									<tbody>
@@ -37,13 +38,19 @@
 											<td class="product-col">
 												<img
 													:src="
-														item.product.images[0]
+														item.product
+															.image_paths[0]
 													"
 													alt=""
 												/>
 												<div class="pc-title">
 													<h4>
-														{{ item.product.title }}
+														<router-link
+															:to="{name:'product.view', params: {id:item.product.id}}" tag="a">
+															{{
+																item.product.title
+															}}
+														</router-link>
 													</h4>
 												</div>
 											</td>
@@ -56,6 +63,9 @@
 
 											<td class="address-col">
 												{{ item.address.address }}
+											</td>
+											<td class="address-col">
+												{{ item.rent_amount }}
 											</td>
 										</tr>
 									</tbody>

@@ -34,3 +34,7 @@
  #login-popup .modal-body{
     padding: 80px;           
  }
+
+ .list-group-item.flex-column.align-items-start.active.list-group-item-action{
+    color : black;
+ }

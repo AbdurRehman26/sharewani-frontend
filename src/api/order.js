@@ -12,6 +12,12 @@ class OrderResource extends Resource {
       method: 'get',
     });
   }
+  	calculateRent(query) {
+    return request({
+      url: '/' + this.uri + '/calculate-rent?from_date='+query.start+'&to_date='+query.end+'&product_id='+query.product_id,
+      method: 'get',
+    });
+  }
 
 
 }

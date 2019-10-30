@@ -36,7 +36,8 @@
 												id="main"
 											/>
 											<label for="main"
-												>Use from my regular addresses</label
+												>Use from my regular
+												addresses</label
 											>
 										</div>
 										<div class="cfr-item">
@@ -91,14 +92,22 @@
 								</div>
 							</div>
 
-							<b-list-group class="row mb-5" v-if="order.address_type != 'secondary'">
+							<b-list-group
+								class="row mb-5"
+								v-if="order.address_type != 'secondary'"
+							>
+								<h5 class="mb-3">Please select from any of the below addresses:</h5>
+
 								<b-list-group-item
 									v-for="(userAddress,
 									index) in userAddresses"
 									href="#"
-									:active="!!userAddresses[selectedAddress]"
+									:active="!!(index == selectedAddress)"
 									class="flex-column align-items-start"
-									@click.prevent="selectedAddress = index; order.address_id = userAddress.id"
+									@click.prevent="
+										selectedAddress = index;
+										order.address_id = userAddress.id
+									"
 								>
 									<div
 										class="d-flex w-100 justify-content-between"
@@ -109,12 +118,12 @@
 									</div>
 
 									<p class="mb-1">
-										
 										{{ userAddress.secondary_address }}
-
 									</p>
 
-									<small>{{ userAddress.nearest_check_point }}</small>
+									<small>{{
+										userAddress.nearest_check_point
+									}}</small>
 								</b-list-group-item>
 							</b-list-group>
 
@@ -147,13 +156,13 @@
 							<ul class="price-list">
 								<li>
 									Total<span
-										>{{ item.original_price }} PKR</span
+										>{{ rentAmount }} PKR</span
 									>
 								</li>
 								<li>Shipping<span>free</span></li>
 								<li class="total">
 									Total<span
-										>{{ item.original_price }} PKR</span
+										>{{ rentAmount }} PKR</span
 									>
 								</li>
 							</ul>
@@ -171,10 +180,11 @@ import Product from '@/components/products/Product.vue'
 import ProductSideBar from '@/components/products/ProductSideBar.vue'
 import ProductResource from '@/api/product'
 import Resource from '@/api/resource'
+import OrderResource from '@/api/order'
 
 const productResource = new ProductResource()
 const userAddressResource = new Resource('user-address')
-const orderResource = new Resource('order')
+const orderResource = new OrderResource()
 
 export default {
 	/*
@@ -213,13 +223,14 @@ export default {
 				address_secondary: '',
 				address_type: 'main',
 				nearest_check_point: '',
-				address_id: null
+				address_id: null,
 			},
 			item: {
 				image_paths: [],
 				size: [],
 			},
 			userAddresses: [],
+			rentAmount: ''
 		}
 	}, // End of Component > data
 
@@ -229,10 +240,10 @@ export default {
         |--------------------------------------------------------------------------
         */
 	watch: {
-		'order.address_type'(){
+		'order.address_type'() {
 			this.order.address_id = null
 			this.selectedAddress = null
-		}
+		},
 	}, // End of Component > computed
 
 	/*
@@ -244,18 +255,38 @@ export default {
 		async submitOrder() {
 			var postData = this.order
 
-			postData.from_date = this.$route.query.start_date
-			postData.to_date = this.$route.query.end_date
+			postData.from_date = this.$route.query.start
+			postData.to_date = this.$route.query.end
 
 			this.isLoading = true
 
 			const response = await orderResource.store(postData)
 
 			this.isLoading = false
+
+			if (response) {
+				this.$router.push({
+					name: 'product.view',
+					params: { id: this.$route.query.product_id },
+				})
+			}
 		},
 		getData() {
 			this.getSingle()
 			this.getUserAddress()
+		},
+		async calculateRent() {
+			this.isDisabled = true
+			this.rentAmount = null
+
+			var query = this.$route.query
+
+			const response = await orderResource.calculateRent(query)
+			console.log(response)
+			if (response && response.data && !response.error) {
+				this.rentAmount = response.data
+				this.isDisabled = false
+			}
 		},
 		async getUserAddress() {
 			this.loading = true
@@ -279,6 +310,7 @@ export default {
 			const response = await productResource.get(
 				this.$route.query.product_id
 			)
+			this.calculateRent();
 
 			this.item = response.data
 
@@ -289,19 +321,18 @@ export default {
 </script>
 
 <style scoped>
-	
-.btn-group-toggle .list-group-item.btn-outline-primary:active{
+.btn-group-toggle .list-group-item.btn-outline-primary:active {
 	background-color: #f51167 !important;
-	color:white !important;
+	color: white !important;
 }
 
-.btn-group-toggle .list-group-item.btn-outline-primary:hover{
+.btn-group-toggle .list-group-item.btn-outline-primary:hover {
 	background-color: #f61167 !important;
-	color:white !important;
+	color: white !important;
 }
 
-.list-group-item.active, .btn-group-toggle .list-group-item.btn-outline-primary{
+.list-group-item.active,
+.btn-group-toggle .list-group-item.btn-outline-primary {
 	background: transparent;
 }
-
-</style>	
+</style>

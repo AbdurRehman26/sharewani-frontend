@@ -1780,7 +1780,11 @@ ol {
 }
 
 .cart-table .order-row td {
-	margin-bottom: 19px;
+}
+
+.cart-table .order-row {
+    background: white;
+    border: 1px solid lightgray;
 }
 
 .cart-table .address-col {

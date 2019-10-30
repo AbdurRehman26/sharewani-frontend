@@ -38,21 +38,33 @@ service.interceptors.response.use(
             store.commit('setToken', null)
             store.commit('setUser', null)
 
-            Vue.toasted.error('Please login in order to continue');
+            Vue.toasted.error('Please login in order to continue')
         }
 
-        if(response.data.message){
-            Vue.toasted.success(response.data.message);
+        if (response.data.message) {
+            Vue.toasted.success(response.data.message)
         }
 
         return response.data
     },
     (error) => {
+        if (error.response.status == 422) {
+            const errors = error.response.data.errors
+            for (var i in errors) {
+                Vue.toasted.error(errors[i][0], {
+                    type: 'error',
+                })
+                return false
+            }
+
+            Vue.toasted.error(error.response.data.message, {
+                type: 'error',
+            })
+        }
 
         Vue.toasted.error(error.response.data.message, {
-            type : 'error'
-        });
-
+            type: 'error',
+        })
     }
 )
 
