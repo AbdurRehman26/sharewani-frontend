@@ -122,6 +122,14 @@
 							</div>
 
 							<div class="col-lg-6 product-details">
+								
+								<div>
+									
+								<span>To:</span>
+								<span>{{item.my_order}}</span>
+								
+
+								</div>								
 
 								<VueCtkDateTimePicker
 									:disabled="!user"
