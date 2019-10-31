@@ -58,7 +58,7 @@ export default {
         async getItem(){
 
             const response = await settingResource.getByKey('main_logo');
-            this.logoPath = response.data.image_path;
+            this.logoPath = response.data.value ? response.data.value.thumbnail_url : this.logoPath;
         }
     }, // End of Component > methods
 
