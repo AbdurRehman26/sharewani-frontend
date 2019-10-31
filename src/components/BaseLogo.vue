@@ -2,12 +2,17 @@
     <div class="logo">
         <router-link :class="anchorClass" :to="anchorLink">
             <a href="./index.html" class="site-logo">
-                <img src="img/logo.png" alt="" />
+                <img :src="logoPath" alt="" />
             </a>
         </router-link>
     </div>
 </template>
 <script>
+
+import GlobalSettingResource from '@/api/global-setting'
+
+const settingResource = new GlobalSettingResource()
+
 export default {
     /*
         |--------------------------------------------------------------------------
@@ -31,7 +36,10 @@ export default {
         |--------------------------------------------------------------------------
         */
     data() {
-        return {}
+        return {
+            logoPath: 'img/logo.png'
+
+        }
     }, // End of Component > data
 
     /*
@@ -46,13 +54,21 @@ export default {
         | Component > methods
         |--------------------------------------------------------------------------
         */
-    methods: {}, // End of Component > methods
+    methods: {
+        async getItem(){
+
+            const response = await settingResource.getByKey('main_logo');
+            this.logoPath = response.data.image_path;
+        }
+    }, // End of Component > methods
 
     /*
         |--------------------------------------------------------------------------
         | Component > mounted
         |--------------------------------------------------------------------------
         */
-    mounted() {}, // End of Component > mounted
+    mounted() {
+        this.getItem();
+    }, // End of Component > mounted
 } // End of export default
 </script>
