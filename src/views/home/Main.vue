@@ -26,7 +26,7 @@
 
 		<!-- Banner section -->
 
-		<footer-banner></footer-banner>
+		<!-- <footer-banner></footer-banner> -->
 
 		<!-- Banner section end  -->
 	</div>
