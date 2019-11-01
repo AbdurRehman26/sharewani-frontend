@@ -322,7 +322,7 @@ export default {
 
 <style scoped>
 .btn-group-toggle .list-group-item.btn-outline-primary:active {
-	background-color: #f51167 !important;
+	background-color: #b30f19 !important;
 	color: white !important;
 }
 

@@ -23,7 +23,7 @@
                 fill-rule="evenodd"
                 clip-rule="evenodd"
                 d="M0 22.0688H22.0688V32H0V22.0688Z"
-                fill="#662D91"
+                fill="#b30f19"
             />
             <path
                 fill-rule="evenodd"

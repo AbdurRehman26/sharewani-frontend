@@ -101,6 +101,7 @@ window.fbAsyncInit = function() {
     border-width: 1px;
     border-style: solid;
     border-color: #263961;
+    border-radius: 33px;
 }
 .btn-facebook:link,
 .btn-facebook:visited {
