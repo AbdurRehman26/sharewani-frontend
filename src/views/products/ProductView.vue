@@ -106,9 +106,8 @@
 							</div>
 
 							<div class="col-lg-6 product-details">
-								<div>
+								<div style="margin-bottom:20px;">
 									<span>To:</span>
-									<span>{{ item.my_order }}</span>
 								</div>
 
 								<VueCtkDateTimePicker
