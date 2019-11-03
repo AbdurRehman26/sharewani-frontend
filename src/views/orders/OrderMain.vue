@@ -3,23 +3,27 @@
 		<!-- Page info -->
 		<div class="page-top-info">
 			<div class="container">
-				<h4>Your cart</h4>
+				<h4>Orders Main</h4>
 				<div class="site-pagination">
-					<a href="">Home</a> /
-					<a href="">Orders</a>
+					<!-- <a href="">Home</a> / <a href="">Product</a> / -->
 				</div>
 			</div>
 		</div>
 		<!-- Page info end -->
 
 		<!-- cart section end -->
-		<section class="cart-section spad">
+		<section class="main-body-section cart-section spad">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-11">
 						<div class="cart-table">
 							<h3>Your Cart</h3>
-							<div class="cart-table-warp">
+							
+							<center  v-if="!items.length && !isLoading" style="padding:20px;">
+							<span> You do not have any orders currently</span>
+							</center>
+
+							<div v-if="items.length" class="cart-table-warp">
 								<table>
 									<thead>
 										<tr>

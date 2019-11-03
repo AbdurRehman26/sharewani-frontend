@@ -3,17 +3,16 @@
 		<!-- Page info -->
 		<div class="page-top-info">
 			<div class="container">
-				<h4>Contact</h4>
+				<h4>Contact Us</h4>
 				<div class="site-pagination">
-					<a href="">Home</a> /
-					<a href="">Contact</a>
+					<!-- <a href="">Home</a> / <a href="">Product</a> / -->
 				</div>
 			</div>
 		</div>
 		<!-- Page info end -->
 
 		<!-- Contact section -->
-		<section class="contact-section">
+		<section class="main-body-section contact-section">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-6 contact-info">

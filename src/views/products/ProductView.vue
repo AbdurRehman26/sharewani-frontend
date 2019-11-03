@@ -1,20 +1,13 @@
 <template>
 	<div>
 		<!-- product section -->
-		<section class="product-section">
+		<section class="main-body-section product-section">
 			<div class="container">
-				<div class="back-link">
-					<router-link :to="{ name: 'product.list' }"
-						>Back to Products</router-link
-					>
-				</div>
 				<div class="row">
-					
-
 					<div class="col-lg-12" style="margin-bottom: 20px;">
-								<center>
-								<h5 v-if="!user">{{ loginMessage }}</h5>
-								</center>
+						<center>
+							<h5 v-if="!user">{{ loginMessage }}</h5>
+						</center>
 					</div>
 
 					<div class="col-lg-6">
@@ -63,7 +56,9 @@
 									Rent:
 									<span>{{
 										rentAmount
-											? 'Your rent amount is '+rentAmount + ' PKR'
+											? 'Your rent amount is ' +
+											  rentAmount +
+											  ' PKR'
 											: 'Please select date range for rent'
 									}}</span>
 								</h4>
@@ -96,25 +91,6 @@
 									</div>
 								</div>
 
-								<router-link
-									v-if="!item.my_order"
-									:to="{
-										name: 'checkout',
-										query: {
-											product_id: $route.params.id,
-											start: selectedPeriod.start,
-											end: selectedPeriod.end,
-										},
-									}"
-									tag="a"
-									:class="[
-										'site-btn',
-										isDisabled ? 'disabled' : '',
-									]"
-								>
-									PROCEED TO CHECKOUT
-								</router-link>
-
 								<b-button
 									v-b-modal.confirm-popup
 									v-if="item.my_order"
@@ -130,14 +106,10 @@
 							</div>
 
 							<div class="col-lg-6 product-details">
-								
 								<div>
-									
-								<span>To:</span>
-								<span>{{item.my_order}}</span>
-								
-
-								</div>								
+									<span>To:</span>
+									<span>{{ item.my_order }}</span>
+								</div>
 
 								<VueCtkDateTimePicker
 									color="#b30f19"
@@ -153,9 +125,27 @@
 									:range="true"
 									v-model="selectedPeriod"
 								/>
-
 							</div>
 						</div>
+
+						<center>
+						<router-link
+							style="margin-top: 20px;"
+							v-if="!item.my_order"
+							:to="{
+								name: 'checkout',
+								query: {
+									product_id: $route.params.id,
+									start: selectedPeriod.start,
+									end: selectedPeriod.end,
+								},
+							}"
+							tag="a"
+							:class="['site-btn', isDisabled ? 'disabled' : '']"
+						>
+							PROCEED TO CHECKOUT
+						</router-link>
+						</center>
 
 						<div id="accordion" class="accordion-area">
 							<div class="panel">
@@ -246,8 +236,7 @@ const moment = require('moment')
 const productResource = new ProductResource()
 const orderResource = new OrderResource()
 
-import { mapGetters } from 'vuex';
-
+import { mapGetters } from 'vuex'
 
 require('@/assets/js/jquery.nicescroll.min.js')
 
@@ -289,8 +278,8 @@ export default {
 			},
 			selectedPeriod: {
 				start: moment(moment(Date()).format('YYYY-MM-DD'), 'YYYY-MM-DD')
-				.add(15, 'd')
-				.format('YYYY-MM-DD'),
+					.add(15, 'd')
+					.format('YYYY-MM-DD'),
 				end: '',
 			},
 			rentAmount: null,
@@ -304,23 +293,31 @@ export default {
         |--------------------------------------------------------------------------
         */
 	computed: {
-		...mapGetters([
-			'user'
-		]),
-		disabledDates(){
-			var disabledDates = [];
-			
+		...mapGetters(['user']),
+		disabledDates() {
+			var disabledDates = []
+
 			var momentDate = moment(this.selectedPeriod.start, 'YYYY-MM-DD')
-				
-			if(this.selectedPeriod.start){
+
+			if (this.selectedPeriod.start) {
 				// disabledDates.push(momentDate.clone().format('YYYY-MM-DD'))
-				disabledDates.push(momentDate.clone().add(1, 'd').format('YYYY-MM-DD'))
-				disabledDates.push(momentDate.clone().add(2, 'd').format('YYYY-MM-DD'))
+				disabledDates.push(
+					momentDate
+						.clone()
+						.add(1, 'd')
+						.format('YYYY-MM-DD')
+				)
+				disabledDates.push(
+					momentDate
+						.clone()
+						.add(2, 'd')
+						.format('YYYY-MM-DD')
+				)
 			}
-			return disabledDates;
+			return disabledDates
 		},
 		maxDate() {
-			if(!this.selectedPeriod.start){
+			if (!this.selectedPeriod.start) {
 				return null
 			}
 			return moment(this.selectedPeriod.start, 'YYYY-MM-DD')
@@ -341,7 +338,7 @@ export default {
         */
 	watch: {
 		selectedPeriod(changedDate) {
-			this.isDisabled = true;
+			this.isDisabled = true
 
 			if (changedDate.start && changedDate.end) {
 				this.validateProductOrderDate()
@@ -355,11 +352,10 @@ export default {
         */
 	methods: {
 		async confirm() {
-
-			this.isLoading = true;
-			await orderResource.destroy(this.item.my_order.id)			
-			this.getSingle();
-			this.isLoading = false;
+			this.isLoading = true
+			await orderResource.destroy(this.item.my_order.id)
+			this.getSingle()
+			this.isLoading = false
 		},
 		async validateProductOrderDate() {
 			this.isDisabled = true
@@ -372,7 +368,7 @@ export default {
 
 			if (response && !response.error) {
 				const tokenResponse = await orderResource.calculateRent(query)
-				this.rentAmount = tokenResponse.data;
+				this.rentAmount = tokenResponse.data
 				this.isDisabled = false
 			}
 		},
@@ -390,18 +386,13 @@ export default {
 				this.rentAmount = this.item.my_order.rent_amount
 			}
 
-			setTimeout(function(){
-
+			setTimeout(function() {
 				$('.cart-table-warp, .product-thumbs').niceScroll({
 					cursorborder: '',
 					cursorcolor: '#afafaf',
 					boxzoom: false,
 				})
-
-
-			} , 3000);
-
-
+			}, 3000)
 		},
 	}, // End of Component > methods
 } // End of export default

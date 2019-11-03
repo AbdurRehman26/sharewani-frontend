@@ -3,16 +3,16 @@
 		<!-- Page info -->
 		<div class="page-top-info">
 			<div class="container">
-				<h4>CAtegory PAge</h4>
+				<h4>Products Main</h4>
 				<div class="site-pagination">
-					<a href="">Home</a> / <a href="">Shop</a> /
+					<!-- <a href="">Home</a> / <a href="">Product</a> / -->
 				</div>
 			</div>
 		</div>
 		<!-- Page info end -->
 
 		<!-- Category section -->
-		<section class="category-section spad">
+		<section class="main-body-section category-section spad">
 			<div class="container">
 				<div class="row">
 					<product-side-bar @filters="getList"></product-side-bar>

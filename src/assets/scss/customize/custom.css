@@ -60,3 +60,13 @@
 .date-time-picker .header-picker{
     background-color: #b30f19 !important;
 }
+
+.main-body-section{
+    background: white;
+}
+
+.category-section .container{
+    background: #f8f7f7;
+    border-radius: 20px;
+    padding: 20px;
+}
