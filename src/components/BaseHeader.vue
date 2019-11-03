@@ -39,10 +39,6 @@
                             ><a href="#"> Products </a></router-link
                         >
 
-                        <router-link v-if="!user" v-b-modal.login-popup tag="li" :to="{ name: 'order.list' }"
-                            ><a href="#"> My Orders </a></router-link
-                        >
-
                         <router-link v-if="user" tag="li" :to="{ name: 'order.list' }"
                             ><a href="#"> My Orders </a></router-link
                         >

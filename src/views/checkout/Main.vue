@@ -155,13 +155,13 @@
 							</ul>
 							<ul class="price-list">
 								<li>
-									Total<span
+									Rent: <span
 										>{{ rentAmount }} PKR</span
 									>
 								</li>
-								<li>Shipping<span>free</span></li>
+								<li>Shipping: <span>free</span></li>
 								<li class="total">
-									Total<span
+									Total: <span
 										>{{ rentAmount }} PKR</span
 									>
 								</li>

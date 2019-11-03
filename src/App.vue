@@ -14,6 +14,9 @@
 @import 'assets/scss/app.scss';
 </style>
 <script>
+require('@/assets/js/jquery-3.2.1.min.js')
+require('@/assets/js/jquery.slicknav.min.js')
+
 export default {
     components: {},
     /*
@@ -58,6 +61,13 @@ export default {
         |--------------------------------------------------------------------------
         */
     mounted() {
+        ;(function($) {
+            $('.main-menu').slicknav({
+                prependTo: '.main-navbar .container',
+                closedSymbol: '<i class="flaticon-right-arrow"></i>',
+                openedSymbol: '<i class="flaticon-down-arrow"></i>',
+            })
+        })(jQuery)
     }, // End of Component > mounted
 } // End of export default
 </script>

@@ -1,23 +1,24 @@
 .social-links {
-	text-align: center;
+    text-align: center;
 }
 
 .disabled {
-    pointer-events:none; 
-    opacity:0.6;        
- }
+    pointer-events: none;
+    opacity: 0.6;
+}
 
- .multiselect__single{
- 	padding-top: 10px;
- }
+.multiselect__single {
+    padding-top: 10px;
+}
 
+.product-item .pi-pic,
+.product-item .pi-pic img {
+    height: 400px;
+}
 
- .product-item .pi-pic, .product-item .pi-pic img{
- 	height : 400px ;
- }
-
-.product-item .tag-new, .product-item .tag-sale {
- 	position: absolute;
+.product-item .tag-new,
+.product-item .tag-sale {
+    position: absolute;
     right: 16px !important;
     top: 7px !important;
     font-size: 17px !important;
@@ -29,12 +30,33 @@
     padding: 2px 9px 1px !important;
     border-radius: 15px;
     width: 42px;
- }
+}
 
- #login-popup .modal-body{
-    padding: 80px;           
- }
+#login-popup .modal-body {
+    padding: 80px;
+}
 
- .list-group-item.flex-column.align-items-start.active.list-group-item-action{
-    color : black;
- }
+.list-group-item.flex-column.align-items-start.active.list-group-item-action {
+    color: black;
+}
+
+.pagination.b-pagination.pagination-md {
+    display: flex;
+    justify-content: center;
+}
+.product-big-img{
+    width: -webkit-fill-available !important;
+}
+
+.product-section{
+    background: white;
+}
+
+
+.datepicker-day.between, .datepicker-day .datepicker-day-effect{
+    background-color: #b30f19 !important;
+}
+
+.date-time-picker .header-picker{
+    background-color: #b30f19 !important;
+}

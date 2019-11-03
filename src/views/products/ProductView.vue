@@ -9,6 +9,14 @@
 					>
 				</div>
 				<div class="row">
+					
+
+					<div class="col-lg-12" style="margin-bottom: 20px;">
+								<center>
+								<h5 v-if="!user">{{ loginMessage }}</h5>
+								</center>
+					</div>
+
 					<div class="col-lg-6">
 						<div class="product-pic-zoom">
 							<img
@@ -132,6 +140,7 @@
 								</div>								
 
 								<VueCtkDateTimePicker
+									color="#b30f19"
 									:disabled="!user"
 									v-if="!item.my_order"
 									noShortcuts
@@ -145,7 +154,6 @@
 									v-model="selectedPeriod"
 								/>
 
-								<h5 v-if="!user">{{ loginMessage }}</h5>
 							</div>
 						</div>
 
@@ -240,6 +248,9 @@ const orderResource = new OrderResource()
 
 import { mapGetters } from 'vuex';
 
+
+require('@/assets/js/jquery.nicescroll.min.js')
+
 export default {
 	/*
         |--------------------------------------------------------------------------
@@ -302,7 +313,7 @@ export default {
 			var momentDate = moment(this.selectedPeriod.start, 'YYYY-MM-DD')
 				
 			if(this.selectedPeriod.start){
-				disabledDates.push(momentDate.clone().format('YYYY-MM-DD'))
+				// disabledDates.push(momentDate.clone().format('YYYY-MM-DD'))
 				disabledDates.push(momentDate.clone().add(1, 'd').format('YYYY-MM-DD'))
 				disabledDates.push(momentDate.clone().add(2, 'd').format('YYYY-MM-DD'))
 			}
@@ -330,6 +341,8 @@ export default {
         */
 	watch: {
 		selectedPeriod(changedDate) {
+			this.isDisabled = true;
+
 			if (changedDate.start && changedDate.end) {
 				this.validateProductOrderDate()
 			}
@@ -376,6 +389,19 @@ export default {
 			if (this.item.my_order) {
 				this.rentAmount = this.item.my_order.rent_amount
 			}
+
+			setTimeout(function(){
+
+				$('.cart-table-warp, .product-thumbs').niceScroll({
+					cursorborder: '',
+					cursorcolor: '#afafaf',
+					boxzoom: false,
+				})
+
+
+			} , 3000);
+
+
 		},
 	}, // End of Component > methods
 } // End of export default

@@ -63,9 +63,14 @@
 				</div>
 			</div>
 		</div>
-		
+
 		<div class="filter-widget mb-0">
-			<h2 class="fw-title">color by</h2>
+			<h2 class="fw-title">
+				color by
+				<a href="#" @click.prevent="query.color_id = null"
+					>Clear Selection</a
+				>
+			</h2>
 			<div class="fw-color-choose">
 				<div v-for="color in colors" class="cs-item">
 					<input
@@ -76,18 +81,24 @@
 						:id="color.name + '-color'"
 					/>
 					<label
+						:title="color.name"
 						:style="{ background: color.code }"
 						ty
 						class="cs-gray"
 						:for="color.name + '-color'"
 					>
-						<span>{{ color.name }}</span>
 					</label>
 				</div>
 			</div>
 		</div>
 		<div class="filter-widget mb-0">
-			<h2 class="fw-title">Size</h2>
+			<h2 class="fw-title">
+				Size
+				<a href="#" @click.prevent="query.size_id = null"
+					>Clear Selection</a
+				>
+			</h2>
+
 			<div class="fw-size-choose">
 				<div v-for="size in sizes" class="sc-item">
 					<input
@@ -117,6 +128,8 @@ const brandResource = new Resource('brand')
 const fabricAgeResource = new Resource('fabric-age')
 const sizeResource = new Resource('size')
 const colorResource = new Resource('color')
+
+import _, { debounce } from 'lodash'
 
 export default {
 	components: {
@@ -181,6 +194,7 @@ export default {
 				this.query.end,
 				this.query.size_id,
 				this.query.color_id,
+				this.query.original_price,
 				new Date()
 			)
 		},
@@ -192,7 +206,7 @@ export default {
         |--------------------------------------------------------------------------
         */
 	watch: {
-		filterValues(filters) {
+		filterValues: _.debounce(function(filters) {
 			const fields = [
 				'brand_id',
 				'event_id',
@@ -203,15 +217,15 @@ export default {
 			var queryValues = {}
 
 			for (var i in this.query) {
-				queryValues[i] = this.query[i];
+				queryValues[i] = this.query[i]
 
 				if (fields.includes(i) && this.query[i]) {
-					queryValues[i] = this.query[i].id;
+					queryValues[i] = this.query[i].id
 				}
 			}
 
 			this.$emit('filters', queryValues)
-		},
+		}, 500),
 	}, // End of Component > computed
 	/*
         |--------------------------------------------------------------------------

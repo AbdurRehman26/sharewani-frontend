@@ -3,12 +3,13 @@
         <div class="row">
             <div class="col-md-12">
                 <a
+                style="padding: 10px"
                     href="#"
                     title="Facebook"
                     class="btn btn-facebook btn-lg"
                     @click="openFbLoginDialog"
                 >
-                    <span class="icon-facebook-official"></span>{{ text ? text : 'Login' }}</a
+                    <span style="font-family: sans-serif !important;" class="icon-facebook-official">{{ text ? text : 'Login' }}</span></a
                 >
             </div>
         </div>

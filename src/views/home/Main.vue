@@ -39,10 +39,7 @@ import FeatureHeader from '@/components/FeatureHeader'
 import ProductHomeCarousel from '@/components/products/ProductHomeCarousel'
 import ProductHomeGrid from '@/components/products/ProductHomeGrid'
 
-require('@/assets/js/jquery-3.2.1.min.js')
-require('@/assets/js/jquery.slicknav.min.js')
 require('@/assets/js/owl.carousel.min.js')
-require('@/assets/js/jquery.nicescroll.min.js')
 
 export default {
 	components: {
@@ -85,17 +82,6 @@ export default {
 	methods: {
 		initializeOWlCarousel() {
 			;(function($) {
-				$('.main-menu').slicknav({
-					prependTo: '.main-navbar .container',
-					closedSymbol: '<i class="flaticon-right-arrow"></i>',
-					openedSymbol: '<i class="flaticon-down-arrow"></i>',
-				})
-
-				$('.cart-table-warp, .product-thumbs').niceScroll({
-					cursorborder: '',
-					cursorcolor: '#afafaf',
-					boxzoom: false,
-				})
 
 				$('.category-menu > li').hover(function(e) {
 					$(this).addClass('active')
