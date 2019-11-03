@@ -21,15 +21,12 @@
         <div class="social-links-warp">
             <div class="container">
                 <div class="social-links">
-                    <a href="" class="instagram"
+                    <a target="_blank" href="https://www.instagram.com/sharewaani/" class="instagram"
                         ><i class="fa fa-instagram"></i
                         ><span>instagram</span></a
                     >
-                    <a href="" class="facebook"
+                    <a target="_blank" href="https://www.facebook.com/Sharewaani-110850233581024/" class="facebook"
                         ><i class="fa fa-facebook"></i><span>facebook</span></a
-                    >
-                    <a href="" class="twitter"
-                        ><i class="fa fa-twitter"></i><span>twitter</span></a
                     >
                 </div>
             </div>
