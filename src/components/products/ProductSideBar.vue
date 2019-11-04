@@ -35,7 +35,7 @@
 			</div>
 		</div>
 
-		<div class="filter-widget">
+		<!-- 		<div class="filter-widget">
 			<h2 class="fw-title">Fabric Ages</h2>
 			<div class="category-menu">
 				<multiselect
@@ -46,6 +46,8 @@
 				></multiselect>
 			</div>
 		</div>
+ -->
+
 		<div class="filter-widget mb-0">
 			<h2 class="fw-title">refine by</h2>
 			<div class="price-range-wrap">
