@@ -18,9 +18,14 @@
 					<div class="col-lg-11">
 						<div class="cart-table">
 							<h3>Your Cart</h3>
-							
-							<center  v-if="!items.length && !isLoading" style="padding:20px;">
-							<span> You do not have any orders currently</span>
+
+							<center
+								v-if="!items.length && !isLoading"
+								style="padding:20px;"
+							>
+								<span>
+									You do not have any orders currently</span
+								>
 							</center>
 
 							<div v-if="items.length" class="cart-table-warp">
@@ -31,7 +36,9 @@
 											<th class="size-th">from</th>
 											<th class="total-th">to</th>
 											<th class="total-th">Shipped To</th>
-											<th class="total-th">Rent Amount</th>
+											<th class="total-th">
+												Rent Amount
+											</th>
 											<th class="total-th">Status</th>
 										</tr>
 									</thead>
@@ -41,40 +48,120 @@
 											v-for="item in items"
 										>
 											<td class="product-col">
-												<img
-													:src="
-														item.product
-															.image_paths[0]
-													"
-													alt=""
-												/>
+												<router-link
+													:to="{
+														name: 'product.view',
+														params: {
+															id: item.product.id,
+														},
+													}"
+													tag="a"
+												>
+													<img
+														:src="
+															item.product
+																.image_paths[0]
+														"
+														alt=""
+													/>
+												</router-link>
 												<div class="pc-title">
 													<h4>
 														<router-link
-															:to="{name:'product.view', params: {id:item.product.id}}" tag="a">
+															:to="{
+																name:
+																	'product.view',
+																params: {
+																	id:
+																		item
+																			.product
+																			.id,
+																},
+															}"
+															tag="a"
+														>
 															{{
-																item.product.title
+																item.product
+																	.title
 															}}
 														</router-link>
 													</h4>
 												</div>
 											</td>
 											<td class="size-col">
-												<h4>{{ item.from_date }}</h4>
+												<router-link
+													:to="{
+														name: 'product.view',
+														params: {
+															id: item.product.id,
+														},
+													}"
+													tag="a"
+												>
+													<h4>
+														{{ item.from_date }}
+													</h4>
+												</router-link>
 											</td>
 											<td class="total-col">
-												<h4>{{ item.to_date }}</h4>
+												<router-link
+													:to="{
+														name: 'product.view',
+														params: {
+															id: item.product.id,
+														},
+													}"
+													tag="a"
+												>
+													<h4>{{ item.to_date }}</h4>
+												</router-link>
 											</td>
 
 											<td class="address-col">
-												{{ item.address.address }}
+												<router-link
+													:to="{
+														name: 'product.view',
+														params: {
+															id: item.product.id,
+														},
+													}"
+													tag="a"
+												>
+													{{ item.address.address }}
+												</router-link>
 											</td>
 											<td class="address-col">
-												{{ item.rent_amount }}
+												<router-link
+													:to="{
+														name: 'product.view',
+														params: {
+															id: item.product.id,
+														},
+													}"
+													tag="a"
+												>
+													{{ item.rent_amount }}
+												</router-link>
 											</td>
 											<td class="address-col">
 												<h5>
-												{{ item.status | orderStatus }}
+													<router-link
+														:to="{
+															name:
+																'product.view',
+															params: {
+																id:
+																	item.product
+																		.id,
+															},
+														}"
+														tag="a"
+													>
+														{{
+															item.status
+																| orderStatus
+														}}
+													</router-link>
 												</h5>
 											</td>
 										</tr>
