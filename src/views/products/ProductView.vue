@@ -91,6 +91,27 @@
 									</div>
 								</div>
 
+								<div
+									v-if="item.my_order"
+									class="fw-size-choose"
+								>
+									<p>Status</p>
+									<div>
+										<label
+											:class="[
+												'order-status',
+												orderStatus(
+													item.my_order.status
+												),
+											]"
+											>{{
+												item.my_order.status
+													| orderStatus
+											}}</label
+										>
+									</div>
+								</div>
+
 								<b-button
 									v-b-modal.confirm-popup
 									v-if="item.my_order"
@@ -105,45 +126,69 @@
 								</b-button>
 							</div>
 
-							<div class="col-lg-6 product-details">
-								<div style="margin-bottom:20px;">
-									<span>To:</span>
+							<div
+								class="col-lg-6 product-details product-details-right"
+							>
+								<div v-if="item.my_order">
+									<span v-if="item.my_order.status == 1">
+										<h5>
+											Your order has been approved and
+											will be delivered to you on
+											{{
+												new Date(
+													new Date().setDate(
+														new Date(
+															item.my_order.from_date
+														).getDate() - 1
+													)
+												).toDateString()
+											}}
+										</h5>
+									</span>
 								</div>
 
-								<VueCtkDateTimePicker
-									color="#b30f19"
-									:disabled="!user"
-									v-if="!item.my_order"
-									noShortcuts
-									noClearButton
-									:disabledDates="disabledDates"
-									:maxDate="maxDate"
-									:minDate="minDate"
-									:format="'YYYY-MM-DD'"
-									:formatted="'DD-MM-YYYY'"
-									:range="true"
-									v-model="selectedPeriod"
-								/>
+								<div v-if="!item.my_order">
+									<div style="margin-bottom:20px;">
+										<span>To:</span>
+									</div>
+
+									<VueCtkDateTimePicker
+										color="#b30f19"
+										:disabled="!user"
+										noShortcuts
+										noClearButton
+										:disabledDates="disabledDates"
+										:maxDate="maxDate"
+										:minDate="minDate"
+										:format="'YYYY-MM-DD'"
+										:formatted="'DD-MM-YYYY'"
+										:range="true"
+										v-model="selectedPeriod"
+									/>
+								</div>
 							</div>
 						</div>
 
 						<center>
-						<router-link
-							style="margin-top: 20px;"
-							v-if="!item.my_order"
-							:to="{
-								name: 'checkout',
-								query: {
-									product_id: $route.params.id,
-									start: selectedPeriod.start,
-									end: selectedPeriod.end,
-								},
-							}"
-							tag="a"
-							:class="['site-btn', isDisabled ? 'disabled' : '']"
-						>
-							PROCEED TO CHECKOUT
-						</router-link>
+							<router-link
+								style="margin-top: 20px;"
+								v-if="!item.my_order"
+								:to="{
+									name: 'checkout',
+									query: {
+										product_id: $route.params.id,
+										start: selectedPeriod.start,
+										end: selectedPeriod.end,
+									},
+								}"
+								tag="a"
+								:class="[
+									'site-btn',
+									isDisabled ? 'disabled' : '',
+								]"
+							>
+								PROCEED TO CHECKOUT
+							</router-link>
 						</center>
 
 						<div id="accordion" class="accordion-area">
@@ -350,6 +395,11 @@ export default {
         |--------------------------------------------------------------------------
         */
 	methods: {
+		orderStatus(status) {
+			const OrderStatuses = ['pending', 'accepted']
+			return OrderStatuses[status] ? OrderStatuses[status] : 'rejected'
+		},
+
 		async confirm() {
 			this.isLoading = true
 			await orderResource.destroy(this.item.my_order.id)

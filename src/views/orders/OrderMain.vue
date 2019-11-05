@@ -32,6 +32,7 @@
 											<th class="total-th">to</th>
 											<th class="total-th">Shipped To</th>
 											<th class="total-th">Rent Amount</th>
+											<th class="total-th">Status</th>
 										</tr>
 									</thead>
 									<tbody>
@@ -70,6 +71,11 @@
 											</td>
 											<td class="address-col">
 												{{ item.rent_amount }}
+											</td>
+											<td class="address-col">
+												<h5>
+												{{ item.status | orderStatus }}
+												</h5>
 											</td>
 										</tr>
 									</tbody>

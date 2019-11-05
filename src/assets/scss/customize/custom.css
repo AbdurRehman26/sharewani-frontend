@@ -70,3 +70,35 @@
     border-radius: 20px;
     padding: 20px;
 }
+
+.product-details .fw-size-choose{
+    pointer-events: none;
+}
+
+.product-details .fw-size-choose .order-status{
+    color: white;
+    width: 50% !important;
+    height: 33px;
+    font-size: 12px;
+    border: 2px solid #414141;
+}
+
+.product-section .product-details.product-details-right{
+    margin-top: 20px;
+}
+
+.cart-table .cart-table-warp tr th{
+
+}
+
+.order-status.rejected{
+    background: #ff4949;
+}
+
+.order-status.accepted{
+    background: #13ce66;
+}
+
+.order-status.pending{
+    background: #FFBA00;
+}
