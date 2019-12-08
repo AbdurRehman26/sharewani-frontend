@@ -37,7 +37,6 @@ Vue.use(Toasted, {
 Vue.use(vbclass, router);
 Vue.config.productionTip = false;
 
-
 require('@/utils/filter');
 
 

@@ -7,7 +7,7 @@
 						<div class="feature-icon">
 							<img src="img/icons/1.png" alt="#" />
 						</div>
-						<h2>Fast Secure Payments</h2>
+						<h2>Cash On Delivery</h2>
 					</div>
 				</div>
 				<div class="col-md-4 p-0 feature">
@@ -15,7 +15,7 @@
 						<div class="feature-icon">
 							<img src="img/icons/2.png" alt="#" />
 						</div>
-						<h2>Premium Products</h2>
+						<h2>Quality & Convenience</h2>
 					</div>
 				</div>
 				<div class="col-md-4 p-0 feature">
@@ -23,7 +23,7 @@
 						<div class="feature-icon">
 							<img src="img/icons/3.png" alt="#" />
 						</div>
-						<h2>Free & fast Delivery</h2>
+						<h2>Assured Hygiene</h2>
 					</div>
 				</div>
 			</div>

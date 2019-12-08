@@ -50,7 +50,12 @@
 							<div class="col-lg-6 product-details">
 								<h2 class="p-title">{{ item.title }}</h2>
 								<h3 class="p-price">
-									{{ item.original_price }} PKR
+									Retail Price: PKR
+									<vue-numeric
+										:read-only="true"
+										separator=","
+										v-model="item.original_price"
+									></vue-numeric>
 								</h3>
 								<h4 class="p-price p-stock">
 									Rent:
@@ -268,6 +273,7 @@ import Product from '@/components/products/Product.vue'
 import ProductSideBar from '@/components/products/ProductSideBar.vue'
 import ProductResource from '@/api/product'
 import OrderResource from '@/api/order'
+import VueNumeric from 'vue-numeric'
 
 /* Modals */
 import ConfirmPopup from '@/components/popups/ConfirmPopup'
@@ -298,6 +304,7 @@ export default {
 		ConfirmPopup,
 		ProductSideBar,
 		VueCtkDateTimePicker,
+		VueNumeric,
 	},
 	/*
         |--------------------------------------------------------------------------

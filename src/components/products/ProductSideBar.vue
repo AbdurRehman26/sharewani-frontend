@@ -60,8 +60,8 @@
 					v-model="query.original_price"
 				>
 				</range-slider>
-				<div>
-					<center>{{ query.original_price }}</center>
+				<div v-if="query.original_price">
+				Less Than {{ query.original_price }}
 				</div>
 			</div>
 		</div>

@@ -4,7 +4,7 @@
 			<div class="section-title">
 				<h2>BROWSE TOP SELLING PRODUCTS</h2>
 			</div>
-			<ul class="product-filter-menu">
+			<!-- <ul class="product-filter-menu">
 				<li><a href="#">TOPS</a></li>
 				<li><a href="#">JUMPSUITS</a></li>
 				<li><a href="#">LINGERIE</a></li>
@@ -13,15 +13,11 @@
 				<li><a href="#">COATS</a></li>
 				<li><a href="#">JUMPERS</a></li>
 				<li><a href="#">LEGGINGS</a></li>
-			</ul>
+			</ul> -->
 			<div class="row">
-				
 				<div class="col-lg-3 col-sm-6" v-for="item in items">
-					
-						<product :item="item" :fullSize="true"></product>
-
+					<product :item="item" :fullSize="true"></product>
 				</div>
-
 			</div>
 		</div>
 	</section>
