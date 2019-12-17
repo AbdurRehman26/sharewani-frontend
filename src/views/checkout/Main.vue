@@ -217,8 +217,7 @@ export default {
 			isLoading: false,
 			order: {
 				product_id: this.$route.query.product_id,
-				from_date: '',
-				end_date: '',
+				selected_date: '',
 				address: '',
 				address_secondary: '',
 				address_type: 'main',
@@ -255,8 +254,8 @@ export default {
 		async submitOrder() {
 			var postData = this.order
 
-			postData.from_date = this.$route.query.start
-			postData.to_date = this.$route.query.end
+			postData.selected_date = this.$route.query.selected_date
+			postData.period = this.$route.query.period
 
 			this.isLoading = true
 

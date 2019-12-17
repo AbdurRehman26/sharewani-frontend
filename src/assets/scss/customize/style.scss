@@ -904,8 +904,7 @@ ol {
 }
 
 .product-item .pi-text {
-	padding-top: 22px;
-	height: 87px;
+	height: 47px;
 }
 
 .product-item .pi-text h6 {
@@ -1385,8 +1384,8 @@ ol {
 .fw-color-choose,
 .fw-size-choose {
 	border-bottom: 2px solid #ebebeb;
-	padding-bottom: 40px;
-	margin-bottom: 50px;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
 }
 
 .fw-color-choose .cs-item {
@@ -1410,6 +1409,7 @@ ol {
 }
 
 .fw-color-choose label.cs-gray {
+	border: 1px solid !important;
 	background: #d7d7d7;
 }
 
@@ -2433,4 +2433,15 @@ ol {
 
 a{
 	text-decoration: none;
+}
+
+
+.product-item .pi-text{
+	margin-top: 15px !important;
+}
+
+.pi-text.fw-color-choose{
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
+	padding-bottom: 0 !important;
 }

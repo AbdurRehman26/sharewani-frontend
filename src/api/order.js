@@ -8,13 +8,13 @@ class OrderResource extends Resource {
 
   	validateOrderDate(query) {
     return request({
-      url: '/' + this.uri + '/validate-order-date?from_date='+query.start+'&to_date='+query.end+'&product_id='+query.product_id,
+      url: '/' + this.uri + '/validate-order-date?selected_date='+query.selected_date+'&period='+query.period.key+'&product_id='+query.product_id,
       method: 'get',
     });
   }
   	calculateRent(query) {
     return request({
-      url: '/' + this.uri + '/calculate-rent?from_date='+query.start+'&to_date='+query.end+'&product_id='+query.product_id,
+      url: '/' + this.uri + '/calculate-rent?selected_date='+query.selected_date+'&period='+query.period.key+'&product_id='+query.product_id,
       method: 'get',
     });
   }

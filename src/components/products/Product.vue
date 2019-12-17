@@ -46,8 +46,33 @@
                             v-model="item.rent"
                         ></vue-numeric>
                     </h6>
-                    <p>{{ item.title }}</p>
                 </router-link>
+            </div>
+
+            <div class="pi-text fw-color-choose">
+                <h6 class="rent-price">
+                    <label
+                        :title="item.color.name"
+                        :style="{ background: item.color.code }"
+                        ty
+                        class="cs-gray"
+                        :for="item.color.name + '-color'"
+                    >
+                    </label>
+                </h6>
+                <h6 class="retail-price">
+                    {{ item.brand ? item.brand.name : '' }}
+                </h6>
+            </div>
+
+            <div class="pi-text">
+                <h6 class="rent-price">
+                    {{ 'L: ' + item.size_length }}
+                    {{ 'C: ' + item.size_chest }}
+                    {{ 'T: ' + item.size_tummy }}
+                    {{ 'S: ' + item.size_sleeves }}
+                    {{ 'C: ' + item.size_collar }}
+                </h6>
             </div>
         </div>
     </div>
@@ -127,5 +152,11 @@ export default {
     padding-left: 0px !important;
     overflow: hidden;
     font-weight: 700;
+}
+
+.product-item {
+    border: 1px solid lightgray;
+    padding: 20px;
+    margin-bottom: 30px;
 }
 </style>

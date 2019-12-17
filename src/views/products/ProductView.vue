@@ -158,18 +158,30 @@
 									</div>
 
 									<VueCtkDateTimePicker
+										class="date-picker-product"
+										label="Select Date"
 										color="#b30f19"
 										:disabled="!user"
 										noShortcuts
 										noClearButton
-										:disabledDates="disabledDates"
+										onlyDate
 										:maxDate="maxDate"
 										:minDate="minDate"
 										:format="'YYYY-MM-DD'"
 										:formatted="'DD-MM-YYYY'"
-										:range="true"
 										v-model="selectedPeriod"
 									/>
+
+									<multiselect
+										style="margin-top: 20px; border: 1px solid lightgray;"
+										v-model="period"
+										track-by="key"
+										label="label"
+										:options="[
+											{ key: 4, label: '4 Days' },
+											{ key: 8, label: '8 Days' },
+										]"
+									></multiselect>
 								</div>
 							</div>
 						</div>
@@ -182,8 +194,8 @@
 									name: 'checkout',
 									query: {
 										product_id: $route.params.id,
-										start: selectedPeriod.start,
-										end: selectedPeriod.end,
+										selected_date: selectedPeriod,
+										period: period ? period.key : '',
 									},
 								}"
 								tag="a"
@@ -280,6 +292,7 @@ import ConfirmPopup from '@/components/popups/ConfirmPopup'
 
 import VueCtkDateTimePicker from 'vue-ctk-date-time-picker'
 import 'vue-ctk-date-time-picker/dist/vue-ctk-date-time-picker.css'
+import Multiselect from 'vue-multiselect'
 
 const moment = require('moment')
 
@@ -301,6 +314,7 @@ export default {
 	}, // End of Component > mounted
 	components: {
 		Product,
+		Multiselect,
 		ConfirmPopup,
 		ProductSideBar,
 		VueCtkDateTimePicker,
@@ -327,12 +341,11 @@ export default {
 				image_paths: [],
 				size: [],
 			},
-			selectedPeriod: {
-				start: moment(moment(Date()).format('YYYY-MM-DD'), 'YYYY-MM-DD')
-					.add(15, 'd')
-					.format('YYYY-MM-DD'),
-				end: '',
+			period: {
+				key: 4,
+				label: '4 Days',
 			},
+			selectedPeriod: '',
 			rentAmount: null,
 			isLoading: false,
 		}
@@ -345,39 +358,17 @@ export default {
         */
 	computed: {
 		...mapGetters(['user']),
-		disabledDates() {
-			var disabledDates = []
-
-			var momentDate = moment(this.selectedPeriod.start, 'YYYY-MM-DD')
-
-			if (this.selectedPeriod.start) {
-				// disabledDates.push(momentDate.clone().format('YYYY-MM-DD'))
-				disabledDates.push(
-					momentDate
-						.clone()
-						.add(1, 'd')
-						.format('YYYY-MM-DD')
-				)
-				disabledDates.push(
-					momentDate
-						.clone()
-						.add(2, 'd')
-						.format('YYYY-MM-DD')
-				)
-			}
-			return disabledDates
-		},
 		maxDate() {
-			if (!this.selectedPeriod.start) {
+			if (!this.selectedPeriod) {
 				return null
 			}
-			return moment(this.selectedPeriod.start, 'YYYY-MM-DD')
+			return moment(this.selectedPeriod, 'YYYY-MM-DD')
 				.add(8, 'd')
 				.format('YYYY-MM-DD')
 		},
 		minDate() {
 			return moment(moment(Date()).format('YYYY-MM-DD'), 'YYYY-MM-DD')
-				.add(15, 'd')
+				.add(10, 'd')
 				.format('YYYY-MM-DD')
 		},
 	}, // End of Component > computed
@@ -388,10 +379,15 @@ export default {
         |--------------------------------------------------------------------------
         */
 	watch: {
+		period() {
+			this.isDisabled = true
+
+			this.validateProductOrderDate()
+		},
 		selectedPeriod(changedDate) {
 			this.isDisabled = true
 
-			if (changedDate.start && changedDate.end) {
+			if (changedDate) {
 				this.validateProductOrderDate()
 			}
 		},
@@ -417,7 +413,9 @@ export default {
 			this.isDisabled = true
 			this.rentAmount = null
 
-			var query = this.selectedPeriod
+			var query = {}
+			query.selected_date = this.selectedPeriod
+			query.period = this.period
 			query.product_id = this.item.id
 
 			const response = await orderResource.validateOrderDate(query)
