@@ -12,9 +12,10 @@
 
 					<div class="col-lg-6">
 						<div class="product-pic-zoom">
+							
 							<img
 								class="product-big-img"
-								v-lazy="item.image_paths[activeImageIndex]"
+								:src="item.image_paths[activeImageIndex]"
 								alt=""
 							/>
 						</div>
