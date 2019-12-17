@@ -155,8 +155,10 @@ export default {
 }
 
 .product-item {
+    border-radius: 10px !important;
     border: 1px solid lightgray;
     padding: 20px;
     margin-bottom: 30px;
+    background: white !important;
 }
 </style>
