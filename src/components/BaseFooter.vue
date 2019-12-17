@@ -21,15 +21,25 @@
         <div class="social-links-warp">
             <div class="container">
                 <div class="social-links">
-                    <a target="_blank" href="https://www.instagram.com/sharewaani/" class="instagram"
+                    <a
+                        target="_blank"
+                        href="https://www.instagram.com/sharewaani/"
+                        class="instagram"
                         ><i class="fa fa-instagram"></i
                         ><span>instagram</span></a
                     >
-                    <a target="_blank" href="https://www.facebook.com/Sharewaani-110850233581024/" class="facebook"
+                    <a
+                        target="_blank"
+                        href="https://www.facebook.com/sharewaani/"
+                        class="facebook"
                         ><i class="fa fa-facebook"></i><span>facebook</span></a
                     >
                 </div>
             </div>
+
+            <center style="margin-top:20px; color:white;">
+                Copyright © 2020 flyrobe.com. All Rights Reserved
+            </center>
         </div>
     </section>
     <!-- Footer section end -->
