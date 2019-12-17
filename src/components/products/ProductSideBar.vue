@@ -1,16 +1,6 @@
 <template>
 	<div class="col-lg-3 order-2 order-lg-1">
-		<div class="filter-widget">
-			<h2 class="fw-title">Events</h2>
-			<div class="category-menu">
-				<multiselect
-					v-model="query.event_id"
-					track-by="id"
-					label="name"
-					:options="events"
-				></multiselect>
-			</div>
-		</div>
+		
 		<div class="filter-widget">
 			<h2 class="fw-title">Brands</h2>
 			<div class="category-menu">
@@ -22,7 +12,7 @@
 				></multiselect>
 			</div>
 		</div>
-
+<!-- 
 		<div class="filter-widget">
 			<h2 class="fw-title">Fabric ( Brands )</h2>
 			<div class="category-menu">
@@ -34,7 +24,7 @@
 				></multiselect>
 			</div>
 		</div>
-
+ -->
 		<!-- 		<div class="filter-widget">
 			<h2 class="fw-title">Fabric Ages</h2>
 			<div class="category-menu">

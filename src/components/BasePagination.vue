@@ -7,7 +7,7 @@
                     <b-pagination
                       v-model="pagination.current"
                       :total-rows="pagination.total"
-                      :per-page="20"
+                      :per-page="12"
                       aria-controls="my-table"
                     ></b-pagination>
 
