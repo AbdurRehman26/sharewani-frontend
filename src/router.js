@@ -50,6 +50,28 @@ const routes = [
         },
     },
     {
+        path: '/terms-of-service',
+        name: 'terms',
+        component: () =>
+            import(/* webpackChunkName: "contact-us" */ '@/views/terms/Main.vue'),
+        meta: {
+            title: 'Terms Of Service',
+            noSidebar: true,
+            bodyClass: 'auth-body',
+        },
+    },
+    {
+        path: '/privacy-policy',
+        name: 'privacy-policy',
+        component: () =>
+            import(/* webpackChunkName: "contact-us" */ '@/views/privacy_policy/Main.vue'),
+        meta: {
+            title: 'Privacy Policy',
+            noSidebar: true,
+            bodyClass: 'auth-body',
+        },
+    },
+    {
         path: '/products',
         name: 'product.list',
         component: () =>
