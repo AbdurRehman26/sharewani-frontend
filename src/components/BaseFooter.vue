@@ -38,7 +38,7 @@
             </div>
 
             <center style="margin-top:20px; color:white;">
-                Copyright © 2020 flyrobe.com. All Rights Reserved
+                Copyright © 2020 sharewaani.com. All Rights Reserved
             </center>
         </div>
     </section>

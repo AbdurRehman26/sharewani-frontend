@@ -103,7 +103,7 @@
     background: #FFBA00;
 }
 
-.footer-section h5, .footer-section h4, .footer-section h3, .footer-section h2, .footer-section h1, .footer-section a{
+.footer-section p, .footer-section h5, .footer-section h4, .footer-section h3, .footer-section h2, .footer-section h1, .footer-section a{
     margin-top: 10px !important; 
     color:white !important;
 }
