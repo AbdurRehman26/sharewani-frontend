@@ -80,6 +80,12 @@
 										type="text"
 										placeholder="City"
 									/>
+
+									<input
+										v-model="order.phone_number"
+										type="text"
+										placeholder="Phone Number"
+									/>
 								</div>
 								<div v-if="false" class="col-md-6">
 									<input type="text" placeholder="Zip code" />
@@ -96,7 +102,10 @@
 								class="row mb-5"
 								v-if="order.address_type != 'secondary'"
 							>
-								<h5 class="mb-3">Please select from any of the below addresses:</h5>
+								<h5 class="mb-3">
+									Please select from any of the below
+									addresses:
+								</h5>
 
 								<b-list-group-item
 									v-for="(userAddress,
@@ -105,7 +114,7 @@
 									:active="!!(index == selectedAddress)"
 									class="flex-column align-items-start"
 									@click.prevent="
-										selectedAddress = index;
+										selectedAddress = index
 										order.address_id = userAddress.id
 									"
 								>
@@ -115,15 +124,28 @@
 										<h5 class="mb-1">
 											{{ userAddress.address }}
 										</h5>
+
+									<small>
+										<strong>
+										{{ userAddress.phone_number}}
+										</strong>
+									</small>
+
 									</div>
 
 									<p class="mb-1">
+									
 										{{ userAddress.secondary_address }}
+									
 									</p>
 
-									<small>{{
-										userAddress.nearest_check_point
-									}}</small>
+									<small>
+									
+										{{userAddress.nearest_check_point}}
+									
+									</small>
+									
+
 								</b-list-group-item>
 							</b-list-group>
 
@@ -155,15 +177,11 @@
 							</ul>
 							<ul class="price-list">
 								<li>
-									Rent: <span
-										>{{ rentAmount }} PKR</span
-									>
+									Rent: <span>{{ rentAmount }} PKR</span>
 								</li>
 								<li>Shipping: <span>free</span></li>
 								<li class="total">
-									Total: <span
-										>{{ rentAmount }} PKR</span
-									>
+									Total: <span>{{ rentAmount }} PKR</span>
 								</li>
 							</ul>
 						</div>
@@ -223,13 +241,14 @@ export default {
 				address_type: 'main',
 				nearest_check_point: '',
 				address_id: null,
+				phone_number: '',
 			},
 			item: {
 				image_paths: [],
 				size: [],
 			},
 			userAddresses: [],
-			rentAmount: ''
+			rentAmount: '',
 		}
 	}, // End of Component > data
 
@@ -309,7 +328,7 @@ export default {
 			const response = await productResource.get(
 				this.$route.query.product_id
 			)
-			this.calculateRent();
+			this.calculateRent()
 
 			this.item = response.data
 
