@@ -10,24 +10,16 @@
 					<div class="row">
 						<div class="col-xl-6 col-lg-7 text-white">
 							<span>New Arrivals</span>
-							<h2>denim jackets</h2>
-							<p>
-								Lorem ipsum dolor sit amet, consectetur
-								adipiscing elit, sed do eiusmod tempor
-								incididunt ut labore et dolore magna aliqua.
-								Quis ipsum sus-pendisse ultrices gravida. Risus
-								commodo viverra maecenas accumsan lacus vel
-								facilisis.
-							</p>
+							<h2>Embroided Sherwaani</h2>
 							<a href="#" class="site-btn sb-line">DISCOVER</a>
 							<a href="#" class="site-btn sb-white"
-								>ADD TO CART</a
+								>Browse More Products</a
 							>
 						</div>
 					</div>
 					<div class="offer-card text-white">
 						<span>from</span>
-						<h2>$29</h2>
+						<h2>1,500</h2>
 						<p>SHOP NOW</p>
 					</div>
 				</div>
