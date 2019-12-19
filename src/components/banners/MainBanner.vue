@@ -26,10 +26,6 @@
 			</div>
 		</div>
 
-		<div class="container">
-			<div class="slide-num-holder" id="snh-1"></div>
-		</div>
-
 	</section>
 </template>
 
