@@ -94,6 +94,7 @@
 											:for="item.size.code + '-size'"
 											>{{ item.size.code }}</label
 										>
+
 									</div>
 								</div>
 
@@ -221,6 +222,11 @@
 									>
 										information
 									</button>
+
+
+																			{{ item.size.code }}
+
+
 								</div>
 								<div
 									id="collapse1"
@@ -422,13 +428,20 @@ export default {
 			const response = await orderResource.validateOrderDate(query)
 
 			if (response && !response.error) {
-				const tokenResponse = await orderResource.calculateRent(query)
-				this.rentAmount = tokenResponse.data
+
 				this.isDisabled = false
+
 			}
 		},
 		async getSingle() {
 			this.isLoading = true
+
+			var query = {}
+			query.selected_date = this.selectedPeriod
+			query.period = this.period
+			query.product_id = this.item.id
+
+			
 
 			const response = await productResource.get(this.$route.params.id)
 			this.rentAmount = null
@@ -440,6 +453,10 @@ export default {
 			if (this.item.my_order) {
 				this.rentAmount = this.item.my_order.rent_amount
 			}
+
+			const tokenResponse = await orderResource.calculateRent(query)
+			this.rentAmount = tokenResponse.data
+
 
 			setTimeout(function() {
 				$('.cart-table-warp, .product-thumbs').niceScroll({

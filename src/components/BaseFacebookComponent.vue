@@ -3,13 +3,19 @@
         <div class="row">
             <div class="col-md-12">
                 <a
-                style="padding: 10px"
+                    style="    padding: 10px;
+    width: 120px;
+    border-radius: 10px;"
                     href="#"
                     title="Facebook"
                     class="btn btn-facebook btn-lg"
                     @click="openFbLoginDialog"
                 >
-                    <span style="font-family: sans-serif !important;" class="icon-facebook-official">{{ text ? text : 'Login' }}</span></a
+                    <span
+                        style="font-family: sans-serif !important;"
+                        class="icon-facebook-official"
+                        >{{ text ? text : 'Login' }}</span
+                    ></a
                 >
             </div>
         </div>
@@ -80,7 +86,6 @@ window.fbAsyncInit = function() {
     })
     FB.AppEvents.logPageView()
 }
-
 ;(function(d, s, id) {
     var js,
         fjs = d.getElementsByTagName(s)[0]
