@@ -142,7 +142,9 @@ export default {
 
 @media (max-width:520px)  { 
     .up-item{
-        margin-left: 110%;        
+        font-family: "ProximanovaBold";
+        font-size: 20px !important;        
+        margin-left: 220%;        
     }
 }
 
@@ -156,6 +158,8 @@ export default {
     }
 
     .user-name {
+        font-family: "ProximanovaBold";
+        font-size: 26px;
         margin-top: 50px;
         height: 50px;
         border-radius: 10px;
