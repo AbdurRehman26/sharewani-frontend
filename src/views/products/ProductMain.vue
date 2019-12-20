@@ -3,7 +3,7 @@
 		<!-- Page info -->
 		<div class="page-top-info">
 			<div class="container">
-				<h4>Products Main</h4>
+				<h4>Outfits Main</h4>
 				<div class="site-pagination">
 					<!-- <a href="">Home</a> / <a href="">Product</a> / -->
 				</div>

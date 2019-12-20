@@ -2,7 +2,7 @@
 	<section class="top-letest-product-section">
 		<div class="container">
 			<div class="section-title">
-				<h2>LATEST PRODUCTS</h2>
+				<h2>FEATURED OUTFITS</h2>
 			</div>
 			<div class="product-slider owl-carousel">
 				<product :item="item" :fullSize="true" v-for="item in items"></product>

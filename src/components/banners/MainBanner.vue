@@ -9,18 +9,19 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-xl-6 col-lg-7 text-white">
-							<span>New Arrivals</span>
-							<h2>Embroided Sherwaani</h2>
+							<span>RENT NOW</span>
+							<h2>Embroidered Sherwaani</h2>
 							<a href="#" class="site-btn sb-line">DISCOVER</a>
 							<a href="#" class="site-btn sb-white"
-								>Browse More Products</a
+								>Browse More Outfits</a
 							>
 						</div>
 					</div>
 					<div class="offer-card text-white">
-						<span>from</span>
-						<h2>1,500</h2>
-						<p>SHOP NOW</p>
+						<span>From</span>
+						<h4>PKR</h4> 
+						<h3>1,500</h3>
+						<p style="margin-top:10px">ORDER NOW</p>
 					</div>
 				</div>
 			</div>

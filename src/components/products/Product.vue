@@ -68,11 +68,11 @@
                     </label>
                 </h6>
                 <h6 class="retail-price">
-                    {{ item.brand ? item.brand.name : '' }}
+                    {{ item.brand.name == 'Custom' ? item.fabric_brand.name : item.brand.name }}
                 </h6>
             </div>
 
-            <div class="pi-text">
+<!--             <div class="pi-text">
                 <h6 class="rent-price">
                     {{ 'L: ' + item.size_length }}
                     {{ 'C: ' + item.size_chest }}
@@ -80,7 +80,7 @@
                     {{ 'S: ' + item.size_sleeves }}
                     {{ 'C: ' + item.size_collar }}
                 </h6>
-            </div>
+            </div> -->
         </div>
     </div>
 </template>

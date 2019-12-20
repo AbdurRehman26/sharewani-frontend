@@ -2,7 +2,7 @@
 	<section class="product-filter-section">
 		<div class="container">
 			<div class="section-title">
-				<h2>BROWSE TOP SELLING PRODUCTS</h2>
+				<h2>BROWSE MORE OUTFITS</h2>
 			</div>
 			<!-- <ul class="product-filter-menu">
 				<li><a href="#">TOPS</a></li>
