@@ -2,30 +2,41 @@
     <div>
         <header class="header-section">
             <div class="header-top">
-                <div class="container">
-                    <div class="row">
+                <div class="row">
+                    <div class="user-panel">
+                        <div class="up-item">
+                            <facebook-component
+                                v-userDirective="user"
+                                @post-data="login"
+                            ></facebook-component>
 
-                        <div class="col-lg-2 text-center text-lg-left">
-                            <base-logo></base-logo>
+                            <font-awesome-icon
+                                class="user-icon"
+                                v-if="user && user.id"
+                                icon="user"
+                            />
+
+                            <span>
+                                <a
+                                    class="user-name"
+                                    v-if="user && user.id"
+                                    href="#"
+                                    >{{ user.name }}</a
+                                >
+                            </span>
                         </div>
 
-                        <div class="col-xl-4 col-lg-5">
-                            <div class="user-panel">
-                                <div v-userDirective="user" class="up-item">
-                                    <facebook-component
-                                        @post-data="login"
-                                    ></facebook-component>
-                                </div>
+                        <div class="up-item"></div>
+                    </div>
 
-                                <div v-if="user && user.id" class="up-item">
-                                    <font-awesome-icon icon="user" />
+                    <div class="col-xl-4 col-lg-5"></div>
 
-                                    <a href="#">{{ user.name }}</a>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="col-lg-3 text-center text-lg-left">
+                        <base-logo></base-logo>
                     </div>
                 </div>
+
+                <div class="container"></div>
             </div>
             <nav class="main-navbar">
                 <div class="container">
@@ -39,21 +50,22 @@
                             ><a href="#"> Products </a></router-link
                         >
 
-                        <router-link v-if="user" tag="li" :to="{ name: 'order.list' }"
+                        <router-link
+                            v-if="user"
+                            tag="li"
+                            :to="{ name: 'order.list' }"
                             ><a href="#"> My Orders </a></router-link
                         >
 
                         <router-link tag="li" :to="{ name: 'contact-us' }"
                             ><a href="#"> Contact Us </a></router-link
                         >
-
                     </ul>
                 </div>
             </nav>
         </header>
 
         <login-info-popup></login-info-popup>
-
     </div>
 </template>
 
@@ -68,7 +80,7 @@ import loginInfoPopup from '@/components/popups/loginInfoPopup'
 export default {
     components: {
         FacebookComponent,
-        loginInfoPopup
+        loginInfoPopup,
     },
     directives: {
         onClickOutside: onClickOutside,
@@ -99,7 +111,7 @@ export default {
     */
     watch: {
         user(value) {
-            window.location.reload('/');
+            window.location.reload('/')
         },
     }, // End of Component > computed
 
@@ -111,8 +123,8 @@ export default {
     methods: {
         async login(postData) {
             const response = await this.$store.dispatch('login', postData)
-            if(response){
-                window.location.reload('/');
+            if (response) {
+                window.location.reload('/')
             }
         },
     }, // End of Component > methods
@@ -125,3 +137,56 @@ export default {
     mounted() {}, // End of Component > mounted
 } // End of export default
 </script>
+
+<style>
+
+@media (max-width:520px)  { 
+    .up-item{
+        margin-left: 110%;        
+    }
+}
+
+
+/* ----------- Non-Retina Screens ----------- */
+@media screen and (min-device-width: 800px) {
+    .user-icon {
+        border-radius: 10px;
+        margin-left: 50px;
+        margin-top: 50px;
+    }
+
+    .user-name {
+        margin-top: 50px;
+        height: 50px;
+        border-radius: 10px;
+    }
+}
+
+
+/* ----------- Retina Screens ----------- */
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (min-device-width: 800px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
+    .user-icon {
+        border-radius: 10px;
+        margin-left: 50px;
+        margin-top: 50px;
+    }
+    .user-name {
+        margin-top: 50px;
+        height: 50px;
+        border-radius: 10px;
+        margin-left: 10px;
+    }
+    .user-item {
+        margin-left: 10px;
+    }
+
+}
+
+
+
+@media (min-width:480px)  { 
+
+
+ }
+
+</style>
