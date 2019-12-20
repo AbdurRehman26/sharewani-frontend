@@ -2,8 +2,15 @@
     <div :class="[fullSize ? '' : 'col-lg-4 col-sm-6']">
         <div class="product-item">
             <div class="pi-pic">
-                <div class="tag-new">
-                    <center>{{ item.size.code.toUpperCase() }}</center>
+                <div
+                    class="tag-new"
+                    style="right: 2px !important;
+    top: 0px;
+    margin-left:10px; background: #b30f19;"
+                >
+                    <center style="color: white;">
+                        {{ item.size.code.toUpperCase() }}
+                    </center>
                 </div>
 
                 <router-link

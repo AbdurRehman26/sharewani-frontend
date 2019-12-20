@@ -111,3 +111,12 @@
 .footer-section a:hover{
     color: #b30f19 !important;
 }
+
+.product-details .p-price{
+    font-size:20px !important;
+    margin-bottom:10px !important;
+}
+
+.product-details .p-price.p-stock{
+    font-size:30px !important;
+}

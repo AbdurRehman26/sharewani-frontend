@@ -4,15 +4,8 @@
 		<section class="main-body-section product-section">
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-12" style="margin-bottom: 20px;">
-						<center>
-							<h5 v-if="!user">{{ loginMessage }}</h5>
-						</center>
-					</div>
-
 					<div class="col-lg-6">
 						<div class="product-pic-zoom">
-							
 							<img
 								class="product-big-img"
 								:src="item.image_paths[activeImageIndex]"
@@ -50,6 +43,17 @@
 						<div class="row">
 							<div class="col-lg-6 product-details">
 								<h2 class="p-title">{{ item.title }}</h2>
+								<h3 class="p-price p-stock">
+									Rent: PKR
+									<span>
+										<vue-numeric
+											:read-only="true"
+											separator=","
+											v-model="rentAmount"
+										></vue-numeric>
+									</span>
+								</h3>
+
 								<h3 class="p-price">
 									Retail Price: PKR
 									<vue-numeric
@@ -58,16 +62,20 @@
 										v-model="item.original_price"
 									></vue-numeric>
 								</h3>
-								<h4 class="p-price p-stock">
-									Rent:
-									<span>{{
-										rentAmount
-											? 'Your rent amount is ' +
-											  rentAmount +
-											  ' PKR'
-											: 'Please select date range for rent'
-									}}</span>
-								</h4>
+
+								<p style="font-size: 19px;">
+									You save PKR
+									<span style="color:green;">
+										<vue-numeric
+											:read-only="true"
+											separator=","
+											v-model="
+												item.original_price - rentAmount
+											"
+										></vue-numeric>
+									</span>
+								</p>
+
 								<div class="p-rating">
 									<i class="fa fa-star-o"></i>
 									<i class="fa fa-star-o"></i>
@@ -94,7 +102,6 @@
 											:for="item.size.code + '-size'"
 											>{{ item.size.code }}</label
 										>
-
 									</div>
 								</div>
 
@@ -155,10 +162,6 @@
 								</div>
 
 								<div v-if="!item.my_order">
-									<div style="margin-bottom:20px;">
-										<span>To:</span>
-									</div>
-
 									<VueCtkDateTimePicker
 										class="date-picker-product"
 										label="Select Date"
@@ -208,25 +211,77 @@
 							>
 								PROCEED TO CHECKOUT
 							</router-link>
+
+
+						<center style="margin-top:10px">
+							<h5 v-if="!user">{{ 'Please login to continue' }}</h5>
+						</center>
+
+
+
 						</center>
 
 						<div id="accordion" class="accordion-area">
 							<div class="panel">
 								<div class="panel-header" id="headingOne">
-									<button
-										class="panel-link active"
-										data-toggle="collapse"
-										data-target="#collapse1"
-										aria-expanded="true"
-										aria-controls="collapse1"
-									>
-										information
-									</button>
+									<div>
+										<div class="item-title-heading">
+											<strong> Brand : </strong>
+											<span
+												style="color: #585858; font-size:17px;"
+											>
+												{{ item.brand.name }}
+											</span>
+										</div>
 
+										<div class="item-title-heading">
+											<strong>Fabric : </strong>
+											<span
+												style="color: #585858; font-size:17px;"
+												>{{
+													item.fabric_brand.name
+												}}</span
+											>
+										</div>
 
-																			{{ item.size.code }}
+										<div class="item-title-heading">
+											<strong>Size Detail </strong>
+										</div>
 
+										<div class="item-size-details">
+											<p style="margin-top:10px">
+												{{
+													'Length: ' +
+														item.size_length
+												}}
+											</p>
 
+											<p>
+												{{
+													'Chest: ' + item.size_chest
+												}}
+											</p>
+
+											<p>
+												{{
+													'Tummy: ' + item.size_tummy
+												}}
+											</p>
+
+											<p>
+												{{
+													'Sleeves: ' +
+														item.size_sleeves
+												}}
+											</p>
+
+											<p>
+												{{
+													'Neck: ' + item.size_collar
+												}}
+											</p>
+										</div>
+									</div>
 								</div>
 								<div
 									id="collapse1"
@@ -241,37 +296,21 @@
 							</div>
 							<div class="panel">
 								<div class="panel-header" id="headingThree">
-									<button
-										class="panel-link"
-										data-toggle="collapse"
-										data-target="#collapse3"
-										aria-expanded="false"
-										aria-controls="collapse3"
-									>
-										shipping & Returns
-									</button>
-								</div>
-								<div
-									id="collapse3"
-									class="collapse show"
-									aria-labelledby="headingThree"
-									data-parent="#accordion"
-								>
-									<div class="panel-body">
-										<h4>7 Days Returns</h4>
-										<p>
-											Cash on Delivery <br />Home Delivery
-											<span>3 - 4 days</span>
-										</p>
-										<p>
-											Lorem ipsum dolor sit amet,
-											consectetur adipiscing elit. Proin
-											pharetra tempor so dales. Phasellus
-											sagittis auctor gravida. Integer
-											bibendum sodales arcu id te mpus. Ut
-											consectetur lacus leo, non
-											scelerisque nulla euismod nec.
-										</p>
+									<div class="item-title-heading">
+										<strong> Payment : </strong>
+										<span
+											style="color: #585858; font-size:17px;"
+										>
+											Cash on Delivery
+										</span>
+									</div>
+									<div class="item-title-heading">
+										<strong> Delivery : </strong>
+										<span
+											style="color: #585858; font-size:17px;"
+										>
+											Home Delivery in 3-4 Days
+										</span>
 									</div>
 								</div>
 							</div>
@@ -428,9 +467,7 @@ export default {
 			const response = await orderResource.validateOrderDate(query)
 
 			if (response && !response.error) {
-
 				this.isDisabled = false
-
 			}
 		},
 		async getSingle() {
@@ -439,9 +476,7 @@ export default {
 			var query = {}
 			query.selected_date = this.selectedPeriod
 			query.period = this.period
-			query.product_id = this.item.id
-
-			
+			query.product_id = this.$route.params.id
 
 			const response = await productResource.get(this.$route.params.id)
 			this.rentAmount = null
@@ -457,7 +492,6 @@ export default {
 			const tokenResponse = await orderResource.calculateRent(query)
 			this.rentAmount = tokenResponse.data
 
-
 			setTimeout(function() {
 				$('.cart-table-warp, .product-thumbs').niceScroll({
 					cursorborder: '',
@@ -469,3 +503,27 @@ export default {
 	}, // End of Component > methods
 } // End of export default
 </script>
+
+<style scope>
+.item-title-heading {
+	margin-bottom: 15px;
+	margin-top: 10px;
+}
+
+.item-size-details {
+	margin-left: 10px;
+}
+
+.accordion-area .panel .panel-header {
+	font-size: 20px;
+}
+
+.item-size-details p {
+	font-size: 17px;
+	line-height: 0.6;
+}
+
+.accordion-area .panel-body {
+	padding-top: 7px;
+}
+</style>
