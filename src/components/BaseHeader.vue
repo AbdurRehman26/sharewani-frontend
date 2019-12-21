@@ -139,15 +139,29 @@ export default {
 </script>
 
 <style>
-
-@media (max-width:520px)  { 
-    .up-item{
-        font-family: "ProximanovaBold";
-        font-size: 20px !important;        
-        margin-left: 220%;        
+@media (max-width: 520px) {
+    .up-item {
+        font-family: 'ProximanovaBold';
+        font-size: 20px !important;
+        margin-left: 220%;
     }
 }
 
+@media (max-width: 430px) {
+    .up-item {
+        font-family: 'ProximanovaBold';
+        font-size: 20px !important;
+        margin-left: 60%;
+    }
+}
+
+@media (max-width: 400px) {
+    .up-item {
+        font-family: 'ProximanovaBold';
+        font-size: 20px !important;
+        margin-left: 54%;
+    }
+}
 
 /* ----------- Non-Retina Screens ----------- */
 @media screen and (min-device-width: 800px) {
@@ -158,14 +172,13 @@ export default {
     }
 
     .user-name {
-        font-family: "ProximanovaBold";
+        font-family: 'ProximanovaBold';
         font-size: 26px;
         margin-top: 50px;
         height: 50px;
         border-radius: 10px;
     }
 }
-
 
 /* ----------- Retina Screens ----------- */
 @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (min-device-width: 800px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
@@ -183,14 +196,27 @@ export default {
     .user-item {
         margin-left: 10px;
     }
-
 }
 
+@media (max-width: 480px) {
+    .user-icon {
+        border-radius: 10px;
+        margin-left: 14px;
+        margin-top: 50px;
+    }
+    .user-name {
+        margin-top: 50px;
+        height: 50px;
+        border-radius: 10px;
+        margin-left: 10px;
+    }
+    .user-item {
+        margin-left: 10px;
+    }
+}
 
-
-@media (min-width:480px)  { 
-
-
- }
-
+.header-section .row {
+    margin-right: 0px;
+    margin-left: 0px;
+}
 </style>
