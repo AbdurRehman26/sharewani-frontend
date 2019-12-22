@@ -93,7 +93,7 @@ export default {
 
 /* ----------- Retina Screens ----------- */
 @media screen 
-  and (max-device-width: 1600px) 
+  and (max-device-width: 1800px) 
   and (-webkit-min-device-pixel-ratio: 2)
   and (min-resolution: 192dpi) { 
 
