@@ -2,7 +2,7 @@
     <div class="logo">
         <router-link :class="anchorClass" :to="anchorLink">
             <a href="./index.html" class="site-logo">
-                <img class="main-logo" style="height: 150px;width: 393px;"
+                <img class="main-logo"
                     :src="logoPath"
                     alt=""
                 />
