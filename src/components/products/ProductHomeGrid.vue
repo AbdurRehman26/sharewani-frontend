@@ -2,7 +2,7 @@
 	<section style="margin-top:30px;" class="product-filter-section">
 		<div class="container" style=" margin-bottom: 50px;">
 			<div class="section-title">
-				<h2>BROWSE MORE OUTFITS</h2>
+				<h2>FEATURED OUTFITS</h2>
 			</div>
 			<!-- <ul class="product-filter-menu">
 				<li><a href="#">TOPS</a></li>

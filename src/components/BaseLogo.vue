@@ -93,6 +93,24 @@ export default {
 
 /* ----------- Retina Screens ----------- */
 @media screen 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+
+.site-logo img{
+
+    margin-left: -100px; 
+
+
+}
+
+
+}
+
+
+
+/* ----------- Retina Screens ----------- */
+@media screen 
   and (min-device-width: 1200px) 
   and (max-device-width: 1600px) 
   and (min-device-width: 800px) 
@@ -108,7 +126,6 @@ export default {
 
 
 }
-
 
     
 
