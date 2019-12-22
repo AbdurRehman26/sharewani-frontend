@@ -4,12 +4,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-sm-4">
-                    <div class="footer-widget about-widget">
+                    <div class="about-widget">
                         <span v-html="item.leftFooter"></span>
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-4">
-                    <div class="footer-widget about-widget">
+                    <div class="about-widget">
                         <span v-html="item.middleFooter"></span>
                     </div>
                 </div>
