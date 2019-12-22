@@ -11,22 +11,31 @@
 						<div class="col-xl-6 col-lg-7 text-white">
 							<span>RENT NOW</span>
 							<h2>Embroidered Sherwaani</h2>
-							<a href="#" class="site-btn sb-line">DISCOVER</a>
-							<a href="#" class="site-btn sb-white"
-								>Browse More Outfits</a
+
+							<router-link
+								:to="'/products'"
+								tag="a"
+								class="site-btn sb-line"
+								>Discover</router-link
+							>
+							<router-link
+								:to="'/products'"
+								tag="a"
+								class="site-btn sb-white"
+								>Browse More Outfits</router-link
 							>
 						</div>
 					</div>
 					<div class="offer-card text-white">
-						<span>From</span>
-						<h4>PKR</h4> 
-						<h3>1,500</h3>
-						<p style="margin-top:10px">ORDER NOW</p>
+						<h5>Starting</h5>
+						<h5>From</h5>
+						<h4>PKR</h4>
+						<h3>1,000</h3>
+						<p style="margin-top:0px">ORDER NOW</p>
 					</div>
 				</div>
 			</div>
 		</div>
-
 	</section>
 </template>
 
@@ -69,10 +78,9 @@ export default {
 	methods: {
 		initializeOWlCarousel() {
 			;(function($) {
-
 				$('.set-bg').each(function() {
 					var bg = $(this).data('setbg')
-					console.log(bg);
+					console.log(bg)
 					$(this).css('background-image', 'url(' + bg + ')')
 				})
 
@@ -160,14 +168,11 @@ export default {
 			})
 			this.items = response.data
 
-			let self = this;
+			let self = this
 
-			setTimeout(function(){
-
-			self.initializeOWlCarousel();
-
-			}, 3000);
-
+			setTimeout(function() {
+				self.initializeOWlCarousel()
+			}, 3000)
 		},
 	}, // End of Component > methods
 

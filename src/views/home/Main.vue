@@ -12,12 +12,6 @@
 
 		<!-- Features section end -->
 
-		<!-- letest product section -->
-
-		<product-home-carousel></product-home-carousel>
-
-		<!-- letest product section end -->
-
 		<!-- Product filter section -->
 
 		<product-home-grid></product-home-grid>
@@ -142,3 +136,16 @@ export default {
 	}, // End of Component > mounted
 } // End of export default
 </script>
+
+<style>
+	
+.main-button-view-all{
+	margin-bottom: 20px;
+	border-radius: 10px;
+	padding: 20px;
+	padding-right: 50px !important;
+	padding-left: 50px !important;
+
+}
+
+</style>

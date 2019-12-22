@@ -1,6 +1,6 @@
 <template>
-	<section class="product-filter-section">
-		<div class="container">
+	<section style="margin-top:30px;" class="product-filter-section">
+		<div class="container" style=" margin-bottom: 50px;">
 			<div class="section-title">
 				<h2>BROWSE MORE OUTFITS</h2>
 			</div>
@@ -20,6 +20,14 @@
 				</div>
 			</div>
 		</div>
+
+		<center>
+			
+			<router-link :to="'/products'" tag="a" class="btn-primary main-button-view-all">Browse More</router-link>
+
+		</center>
+
+
 	</section>
 </template>
 
