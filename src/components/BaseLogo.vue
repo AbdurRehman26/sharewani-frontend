@@ -115,7 +115,7 @@ export default {
 
 /* ----------- Retina Screens ----------- */
 @media screen 
-  and (min-device-width: 1500px) 
+  and (min-device-width: 1300px) 
   { 
 
 .site-logo img{
