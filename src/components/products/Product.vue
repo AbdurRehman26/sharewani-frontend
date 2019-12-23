@@ -32,7 +32,7 @@
                     </router-link>
                 </div>
             </div>
-            <div class="pi-text">
+            <div style="padding: 20px;" class="pi-text">
                 <router-link
                     :to="{ name: 'product.view', params: { id: item.id } }"
                 >
@@ -56,7 +56,7 @@
                 </router-link>
             </div>
 
-            <div class="pi-text fw-color-choose">
+            <div style="margin-bottom:20px !important; padding-bottom:20px; padding: 20px; border-bottom: none;" class="pi-text fw-color-choose">
                 <h6 class="rent-price">
                     <label
                         :title="item.color.name"
@@ -164,7 +164,6 @@ export default {
 .product-item {
     border-radius: 10px !important;
     border: 1px solid lightgray;
-    padding: 20px;
     margin-bottom: 30px;
     background: white !important;
 }
