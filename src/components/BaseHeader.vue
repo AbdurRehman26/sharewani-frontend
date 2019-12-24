@@ -11,17 +11,18 @@
                             ></facebook-component>
 
                             <span>
+
+                                <font-awesome-icon
+                                        class="user-icon"
+                                        v-if="user && user.id"
+                                        icon="user"
+                                    />
                                 <a
                                     v-b-modal.update-profile-popup
                                     class="user-name"
                                     v-if="user && user.id"
                                     href="#"
                                     >{{ user.name }}
-                                    <font-awesome-icon
-                                        class="user-icon"
-                                        v-if="user && user.id"
-                                        icon="user"
-                                    />
                                 </a>
                             </span>
                         </span>

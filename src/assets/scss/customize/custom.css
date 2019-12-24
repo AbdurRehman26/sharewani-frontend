@@ -173,8 +173,9 @@ p {
 
 @media (min-width: 765px) {
 
-.facebook-social-button .btn.btn-facebook.btn-lg{
-    display: none;
+.facebook-social-button{
+    display: none !important;
+    color: black;
 }
 
 
@@ -184,7 +185,19 @@ p {
 
 .last-li-item{
     display: none !important;
+    color: black;
 }
+.user-name{
+    color: black;
+    margin-left:10px;
+}
+
+.user-icon{
+    color: black;
+    font-size: 30px;
+    margin-top:20px !important;
+}
+
 
 
 }
