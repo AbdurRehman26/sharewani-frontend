@@ -2,10 +2,13 @@
     <div class="logo">
         <router-link :class="anchorClass" :to="anchorLink">
             <a href="./index.html" class="site-logo">
-                <img class="main-logo"
-                    :src="logoPath"
-                    alt=""
-                />
+                <img class="main-logo" :src="logoPath" alt="" />
+
+                <center>
+                    <h5 class="main-title">
+                        Pakistan's Premier Fashion Rental Platform
+                    </h5>
+                </center>
             </a>
         </router-link>
     </div>
@@ -73,62 +76,37 @@ export default {
 } // End of export default
 </script>
 
-
 <style>
-    
-
 /* ----------- Non-Retina Screens ----------- */
-@media screen 
-  and (min-device-width: 800px) { 
-
-.site-logo img{
-
-    margin-left: -20px; 
-
-
-}
-
+@media screen and (min-device-width: 800px) {
+    .site-logo img {
+        margin-left: -20px;
+    }
+    .main-title {
+        margin-left: -30px;
+    }
 
 }
-
-
 
 /* ----------- Retina Screens ----------- */
-@media screen 
-  and (min-device-width: 1200px) 
-  and (max-device-width: 1600px) 
-  and (min-device-width: 800px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) { 
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (min-device-width: 800px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
+    .site-logo img {
+        margin-left: -20px;
+    }
 
-.site-logo img{
-
-    margin-left: -20px; 
-
-
+    .main-title {
+        margin-left: -30px;
+    }
 }
-
-
-}
-
-    
 
 /* ----------- Retina Screens ----------- */
-@media screen 
-  and (min-device-width: 1300px) 
-  and (max-device-width: 1600px) 
-  { 
+@media screen and (min-device-width: 1300px) and (max-device-width: 1600px) {
+    .site-logo img {
+        margin-left: -100px;
+    }
 
-.site-logo img{
-
-    margin-left: -100px; 
-
-
+    .main-title {
+        margin-left: -110px;
+    }
 }
-
-
-}
-
-
-
 </style>
