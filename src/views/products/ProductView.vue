@@ -125,7 +125,7 @@
 										>
 									</div>
 								</div>
-									<p>Order No:  
+									<p v-if="item.my_order">Order No:  
 										{{item.my_order.order_number}}
 									</p>
 								<b-button
@@ -331,7 +331,7 @@
 										<span
 											style="color: #585858; font-size:17px;"
 										>
-											Home Delivery in 3-4 Days
+											Home Delivery in 4-5 Days
 										</span>
 									</div>
 								</div>
