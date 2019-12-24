@@ -439,11 +439,11 @@ export default {
 				moment(Date()).format('YYYY-MM-DD'),
 				'YYYY-MM-DD'
 			)
-				.add(10, 'd')
+				.add(4, 'd')
 				.format('YYYY-MM-DD')
 
 			return moment(moment(Date()).format('YYYY-MM-DD'), 'YYYY-MM-DD')
-				.add(10, 'd')
+				.add(4, 'd')
 				.format('YYYY-MM-DD')
 		},
 	}, // End of Component > computed
