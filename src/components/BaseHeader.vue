@@ -35,24 +35,6 @@
                 <div class="container">
                     <!-- menu -->
                     <ul class="main-menu">
-                        <router-link tag="li" :to="{ name: 'home' }"
-                            ><a href="#"> Home </a></router-link
-                        >
-
-                        <router-link tag="li" :to="{ name: 'product.list' }"
-                            ><a href="#"> Products </a></router-link
-                        >
-
-                        <router-link
-                            v-if="user"
-                            tag="li"
-                            :to="{ name: 'order.list' }"
-                            ><a href="#"> My Orders </a></router-link
-                        >
-
-                        <router-link tag="li" :to="{ name: 'contact-us' }"
-                            ><a href="#"> Contact Us </a></router-link
-                        >
 
                         <li class="last-li-item">
                             <facebook-component
@@ -75,6 +57,27 @@
                                 </a>
                             </span>
                         </li>
+
+
+                        <router-link tag="li" :to="{ name: 'home' }"
+                            ><a href="#"> Home </a></router-link
+                        >
+
+                        <router-link tag="li" :to="{ name: 'product.list' }"
+                            ><a href="#"> Products </a></router-link
+                        >
+
+                        <router-link
+                            v-if="user"
+                            tag="li"
+                            :to="{ name: 'order.list' }"
+                            ><a href="#"> My Orders </a></router-link
+                        >
+
+                        <router-link tag="li" :to="{ name: 'contact-us' }"
+                            ><a href="#"> Contact Us </a></router-link
+                        >
+
                     </ul>
                 </div>
             </nav>
