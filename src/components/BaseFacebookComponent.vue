@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-md-12">
                 <a
-                    style="padding: 10px;margin-top: 50px;margin-left: 22px;width: 120px;border-radius: 10px;"
+                    style="padding: 10px;margin-top: 50px;width: 120px;border-radius: 10px;"
                     href="#"
                     title="Facebook"
                     class="btn btn-facebook btn-lg"
@@ -116,4 +116,21 @@ window.fbAsyncInit = function() {
     background: #263961;
     color: #fff;
 }
+
+
+.btn.btn-facebook.btn-lg{
+
+    margin-left: 22px;
+
+}
+
+
+.btn.btn-facebook.btn-lg{
+
+    margin-left: 15px;
+
+}
+
+
+
 </style>

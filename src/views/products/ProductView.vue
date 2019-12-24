@@ -15,7 +15,7 @@
 						<div
 							class="product-thumbs"
 							tabindex="1"
-							style="overflow: hidden; outline: none;"
+							style="overflow: hidden; overflow-x: scroll; outline: none;"
 						>
 							<div class="product-thumbs-track">
 								<div
