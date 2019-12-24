@@ -5,16 +5,22 @@
             <div class="row">
                 <div class="col-lg-4 col-sm-4">
                     <div class="about-widget">
+                        <center>
                         <span v-html="item.leftFooter"></span>
+                        </center>
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-4">
                     <div class="about-widget">
+                        <center>
                         <span v-html="item.middleFooter"></span>
+                        </center>
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-4">
+                    <center>
                     <span v-html="item.rightFooter"></span>
+                    </center>
                 </div>
             </div>
         </div>

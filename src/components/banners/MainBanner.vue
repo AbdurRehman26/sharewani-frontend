@@ -15,12 +15,6 @@
 							<router-link
 								:to="'/products'"
 								tag="a"
-								class="site-btn sb-line"
-								>Discover</router-link
-							>
-							<router-link
-								:to="'/products'"
-								tag="a"
 								class="site-btn sb-white"
 								>Browse More Outfits</router-link
 							>

@@ -39,9 +39,9 @@
  -->
 
 		<div class="filter-widget mb-0">
-			<h2 class="fw-title">refine by</h2>
+			<h2 class="fw-title">Refine by</h2>
 			<div class="price-range-wrap">
-				<h4>Price</h4>
+				<h2 class="fw-title">Price</h2>
 				<range-slider
 					class="slider"
 					min="2000"
@@ -58,9 +58,9 @@
 
 		<div class="filter-widget mb-0">
 			<h2 class="fw-title">
-				color by
+				Color
 				<a href="#" @click.prevent="query.color_id = null"
-					>Clear Selection</a
+					>(Clear Selection)</a
 				>
 			</h2>
 			<div class="fw-color-choose">
@@ -87,7 +87,7 @@
 			<h2 class="fw-title">
 				Size
 				<a href="#" @click.prevent="query.size_id = null"
-					>Clear Selection</a
+					>(Clear Selection)</a
 				>
 			</h2>
 

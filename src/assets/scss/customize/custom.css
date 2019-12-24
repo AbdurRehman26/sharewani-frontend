@@ -127,3 +127,8 @@ p{
 font-family: "ProximanovaBold";
 
 }
+
+.main-body-section.category-section.spad{
+    padding-top:50px;
+    padding-bottom: 50px;
+}
