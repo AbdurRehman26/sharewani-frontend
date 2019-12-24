@@ -162,20 +162,21 @@
 								</div>
 
 								<div v-if="!item.my_order">
-									<VueCtkDateTimePicker
-										class="date-picker-product"
-										label="Select Date"
-										color="#b30f19"
-										:disabled="!user"
-										noShortcuts
-										noClearButton
-										onlyDate
-										:maxDate="maxDate"
-										:minDate="minDate"
+									<date-picker
+										 placeholder="Please select a date"
+										:disabled-date="notBeforeToday"
+										v-model="selectedPeriod"
 										:format="'YYYY-MM-DD'"
 										:formatted="'DD-MM-YYYY'"
-										v-model="selectedPeriod"
-									/>
+										valueType="format"
+									></date-picker>
+
+									<label>
+										You can not order before
+										{{
+											new Date(minDate).toDateString()
+										}}</label
+									>
 
 									<multiselect
 										style="margin-top: 20px; border: 1px solid lightgray;"
@@ -212,13 +213,11 @@
 								PROCEED TO CHECKOUT
 							</router-link>
 
-
-						<center style="margin-top:10px">
-							<h5 v-if="!user">{{ 'Please login to continue' }}</h5>
-						</center>
-
-
-
+							<center style="margin-top:10px">
+								<h5 v-if="!user">
+									{{ 'Please login to continue' }}
+								</h5>
+							</center>
 						</center>
 
 						<div id="accordion" class="accordion-area">
@@ -230,7 +229,11 @@
 											<span
 												style="color: #585858; font-size:17px;"
 											>
-												{{ item.brand.name }}
+												{{
+													item.brand
+														? item.brand.name
+														: ''
+												}}
 											</span>
 										</div>
 
@@ -238,8 +241,11 @@
 											<strong>Fabric : </strong>
 											<span
 												style="color: #585858; font-size:17px;"
-												>{{
-													item.fabric_brand.name
+											>
+												{{
+													item.fabric_brand
+														? item.fabric_brand.name
+														: ''
 												}}</span
 											>
 										</div>
@@ -336,9 +342,13 @@ import VueNumeric from 'vue-numeric'
 /* Modals */
 import ConfirmPopup from '@/components/popups/ConfirmPopup'
 
+/* Plugins */
 import VueCtkDateTimePicker from 'vue-ctk-date-time-picker'
 import 'vue-ctk-date-time-picker/dist/vue-ctk-date-time-picker.css'
+
 import Multiselect from 'vue-multiselect'
+import DatePicker from 'vue2-datepicker'
+import 'vue2-datepicker/index.css'
 
 const moment = require('moment')
 
@@ -348,6 +358,13 @@ const orderResource = new OrderResource()
 import { mapGetters } from 'vuex'
 
 require('@/assets/js/jquery.nicescroll.min.js')
+const today = new Date(
+	moment(moment(Date()).format('YYYY-MM-DD'), 'YYYY-MM-DD')
+		.add(10, 'd')
+		.format('YYYY-MM-DD')
+)
+
+today.setHours(0, 0, 0, 0)
 
 export default {
 	/*
@@ -359,6 +376,7 @@ export default {
 		this.getSingle()
 	}, // End of Component > mounted
 	components: {
+		DatePicker,
 		Product,
 		Multiselect,
 		ConfirmPopup,
@@ -409,7 +427,7 @@ export default {
 				return null
 			}
 			return moment(this.selectedPeriod, 'YYYY-MM-DD')
-				.add(8, 'd')
+				.add(365, 'd')
 				.format('YYYY-MM-DD')
 		},
 		minDate() {
@@ -444,6 +462,10 @@ export default {
         |--------------------------------------------------------------------------
         */
 	methods: {
+		notBeforeToday(date) {
+			return date < today
+		},
+
 		orderStatus(status) {
 			const OrderStatuses = ['pending', 'accepted']
 			return OrderStatuses[status] ? OrderStatuses[status] : 'rejected'
