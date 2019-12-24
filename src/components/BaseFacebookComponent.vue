@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-md-12">
                 <a
-                    style="padding: 10px;margin-top: 50px;width: 120px;border-radius: 10px;"
+                    style="padding: 10px;margin-top: 3px;width: 120px;border-radius: 10px;"
                     href="#"
                     title="Facebook"
                     class="btn btn-facebook btn-lg"

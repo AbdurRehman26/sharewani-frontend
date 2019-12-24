@@ -2,41 +2,33 @@
     <div>
         <header class="header-section">
             <div class="header-top">
-                <div class="row">
-                    <div class="user-panel">
-                        <div class="up-item">
+                <div class="text-center text-lg-left">
+                    <center>
+                        <span class="facebook-social-button">
                             <facebook-component
                                 v-userDirective="user"
                                 @post-data="login"
                             ></facebook-component>
 
-                            <font-awesome-icon
-                                class="user-icon"
-                                v-if="user && user.id"
-                                icon="user"
-                            />
-
                             <span>
                                 <a
+                                    v-b-modal.update-profile-popup
                                     class="user-name"
                                     v-if="user && user.id"
                                     href="#"
-                                    >{{ user.name }}</a
-                                >
+                                    >{{ user.name }}
+                                    <font-awesome-icon
+                                        class="user-icon"
+                                        v-if="user && user.id"
+                                        icon="user"
+                                    />
+                                </a>
                             </span>
-                        </div>
+                        </span>
 
-                        <div class="up-item"></div>
-                    </div>
-
-                    <div class="col-xl-4 col-lg-5"></div>
-
-                    <div class="col-lg-3 text-center text-lg-left">
                         <base-logo></base-logo>
-                    </div>
+                    </center>
                 </div>
-
-                <div class="container"></div>
             </div>
             <nav class="main-navbar">
                 <div class="container">
@@ -60,12 +52,35 @@
                         <router-link tag="li" :to="{ name: 'contact-us' }"
                             ><a href="#"> Contact Us </a></router-link
                         >
+
+                        <li class="last-li-item">
+                            <facebook-component
+                                v-userDirective="user"
+                                @post-data="login"
+                            ></facebook-component>
+
+                            <span>
+                                <a
+                                    v-b-modal.update-profile-popup
+                                    class="user-name"
+                                    v-if="user && user.id"
+                                    href="#"
+                                    >{{ user.name }}
+                                    <font-awesome-icon
+                                        class="user-icon"
+                                        v-if="user && user.id"
+                                        icon="user"
+                                    />
+                                </a>
+                            </span>
+                        </li>
                     </ul>
                 </div>
             </nav>
         </header>
 
         <login-info-popup></login-info-popup>
+        <update-profile-popup :user="user"></update-profile-popup>
     </div>
 </template>
 
@@ -76,9 +91,11 @@ import userDirective from '@/directive/user' // Waves directive
 import FacebookComponent from '@/components/BaseFacebookComponent'
 import authResource from '@/api/auth'
 import loginInfoPopup from '@/components/popups/loginInfoPopup'
+import updateProfilePopup from '@/components/popups/UpdateProfilePopup'
 
 export default {
     components: {
+        updateProfilePopup,
         FacebookComponent,
         loginInfoPopup,
     },
@@ -139,85 +156,16 @@ export default {
 </script>
 
 <style>
-@media (max-width: 520px) {
-    .up-item {
-        margin-left: 220%;
-    }
-}
-
-@media (max-width: 430px) {
-    .up-item {
-        margin-left: 60%;
-    }
-}
-
-@media (max-width: 400px) {
-    .up-item {
-        margin-left: 54%;
-    }
-}
-
-
-@media (max-width: 350px) {
-    .up-item {
-        margin-left: 50%;
-    }
-}
-
-/* ----------- Non-Retina Screens ----------- */
-@media screen and (min-device-width: 800px) {
-    .user-icon {
-        border-radius: 10px;
-        margin-left: 50px;
-        margin-top: 50px;
-    }
-
-    .user-name {
-        font-family: 'ProximanovaBold';
-        font-size: 26px;
-        margin-top: 50px;
-        height: 50px;
-        border-radius: 10px;
-    }
-}
-
-/* ----------- Retina Screens ----------- */
-@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (min-device-width: 800px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
-    .user-icon {
-        border-radius: 10px;
-        margin-left: 50px;
-        margin-top: 50px;
-    }
-    .user-name {
-        margin-top: 50px;
-        height: 50px;
-        border-radius: 10px;
-        margin-left: 10px;
-    }
-    .user-item {
-        margin-left: 10px;
-    }
-}
-
-@media (max-width: 480px) {
-    .user-icon {
-        border-radius: 10px;
-        margin-left: 14px;
-        margin-top: 50px;
-    }
-    .user-name {
-        margin-top: 50px;
-        height: 50px;
-        border-radius: 10px;
-        margin-left: 10px;
-    }
-    .user-item {
-        margin-left: 10px;
-    }
-}
-
 .header-section .row {
     margin-right: 0px;
     margin-left: 0px;
 }
+
+
+.facebook-social-button .btn.btn-facebook.btn-lg{
+    margin-top:20px !important;
+}
+
+
+
 </style>

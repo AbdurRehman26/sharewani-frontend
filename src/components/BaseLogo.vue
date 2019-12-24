@@ -75,38 +75,3 @@ export default {
     }, // End of Component > mounted
 } // End of export default
 </script>
-
-<style>
-/* ----------- Non-Retina Screens ----------- */
-@media screen and (min-device-width: 800px) {
-    .site-logo img {
-        margin-left: -20px;
-    }
-    .main-title {
-        margin-left: -30px;
-    }
-
-}
-
-/* ----------- Retina Screens ----------- */
-@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (min-device-width: 800px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
-    .site-logo img {
-        margin-left: -20px;
-    }
-
-    .main-title {
-        margin-left: -30px;
-    }
-}
-
-/* ----------- Retina Screens ----------- */
-@media screen and (min-device-width: 1300px) and (max-device-width: 1600px) {
-    .site-logo img {
-        margin-left: -100px;
-    }
-
-    .main-title {
-        margin-left: -110px;
-    }
-}
-</style>
