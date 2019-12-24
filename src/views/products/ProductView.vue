@@ -242,7 +242,7 @@
 									<div>
 										<div class="item-title-heading">
 											<strong> Brand : </strong>
-											<span
+											<strong
 												style="color: #585858; font-size:17px;"
 											>
 												{{
@@ -250,19 +250,19 @@
 														? item.brand.name
 														: ''
 												}}
-											</span>
+											</strong>
 										</div>
 
 										<div class="item-title-heading">
 											<strong>Fabric : </strong>
-											<span
+											<strong
 												style="color: #585858; font-size:17px;"
 											>
 												{{
 													item.fabric_brand
 														? item.fabric_brand.name
 														: ''
-												}}</span
+												}}</strong
 											>
 										</div>
 
@@ -320,19 +320,19 @@
 								<div class="panel-header" id="headingThree">
 									<div class="item-title-heading">
 										<strong> Payment : </strong>
-										<span
+										<strong
 											style="color: #585858; font-size:17px;"
 										>
 											Cash on Delivery
-										</span>
+										</strong>
 									</div>
 									<div class="item-title-heading">
 										<strong> Delivery : </strong>
-										<span
+										<strong
 											style="color: #585858; font-size:17px;"
 										>
 											Home Delivery in 4-5 Days
-										</span>
+										</strong>
 									</div>
 								</div>
 							</div>
