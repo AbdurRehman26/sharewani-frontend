@@ -182,11 +182,6 @@
 										v-model="selectedPeriod"
 									/>
 
-									<date-picker
-										v-model="selectedPeriod"
-										valueType="format"
-									></date-picker>
-
 									<label>
 										You can not order before
 										{{
@@ -362,7 +357,6 @@ import ConfirmPopup from '@/components/popups/ConfirmPopup'
 import VueCtkDateTimePicker from 'vue-ctk-date-time-picker'
 import 'vue-ctk-date-time-picker/dist/vue-ctk-date-time-picker.css'
 import Multiselect from 'vue-multiselect'
-import DatePicker from 'vue2-datepicker'
 
 const moment = require('moment')
 
