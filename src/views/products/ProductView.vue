@@ -162,15 +162,27 @@
 								</div>
 
 								<div v-if="!item.my_order">
-									<date-picker
-										:width="'100%'"
-										placeholder="Please select a date"
-										:disabled-date="notBeforeToday"
-										v-model="selectedPeriod"
+									<VueCtkDateTimePicker
+										class="date-picker-product"
+										label="Select Date"
+										color="#b30f19"
+										:noButtonNow="true"
+										autoclose="true"
+										:disabled="!user"
+										noShortcuts
+										noClearButton
+										onlyDate
+										inititalelValue=""
+										:maxDate="maxDate"
+										:minDate="minDate"
 										:format="'YYYY-MM-DD'"
 										:formatted="'DD-MM-YYYY'"
-										valueType="format"
-									></date-picker>
+										v-model="selectedPeriod"
+									/>
+
+
+									    <date-picker v-model="selectedPeriod" valueType="format"></date-picker>
+
 
 									<label>
 										You can not order before
@@ -343,13 +355,12 @@ import VueNumeric from 'vue-numeric'
 /* Modals */
 import ConfirmPopup from '@/components/popups/ConfirmPopup'
 
+
 /* Plugins */
 import VueCtkDateTimePicker from 'vue-ctk-date-time-picker'
 import 'vue-ctk-date-time-picker/dist/vue-ctk-date-time-picker.css'
-
 import Multiselect from 'vue-multiselect'
-import DatePicker from 'vue2-datepicker'
-import 'vue2-datepicker/index.css'
+import DatePicker from 'vue2-datepicker';
 
 const moment = require('moment')
 
@@ -359,13 +370,6 @@ const orderResource = new OrderResource()
 import { mapGetters } from 'vuex'
 
 require('@/assets/js/jquery.nicescroll.min.js')
-const today = new Date(
-	moment(moment(Date()).format('YYYY-MM-DD'), 'YYYY-MM-DD')
-		.add(5, 'd')
-		.format('YYYY-MM-DD')
-)
-
-today.setHours(0, 0, 0, 0)
 
 export default {
 	/*
@@ -377,7 +381,6 @@ export default {
 		this.getSingle()
 	}, // End of Component > mounted
 	components: {
-		DatePicker,
 		Product,
 		Multiselect,
 		ConfirmPopup,
@@ -432,8 +435,15 @@ export default {
 				.format('YYYY-MM-DD')
 		},
 		minDate() {
+			this.selectedPeriod = moment(
+				moment(Date()).format('YYYY-MM-DD'),
+				'YYYY-MM-DD'
+			)
+				.add(10, 'd')
+				.format('YYYY-MM-DD')
+
 			return moment(moment(Date()).format('YYYY-MM-DD'), 'YYYY-MM-DD')
-				.add(5, 'd')
+				.add(10, 'd')
 				.format('YYYY-MM-DD')
 		},
 	}, // End of Component > computed
@@ -463,10 +473,6 @@ export default {
         |--------------------------------------------------------------------------
         */
 	methods: {
-		notBeforeToday(date) {
-			return date < today
-		},
-
 		orderStatus(status) {
 			const OrderStatuses = ['pending', 'accepted']
 			return OrderStatuses[status] ? OrderStatuses[status] : 'rejected'
@@ -547,9 +553,5 @@ export default {
 
 .accordion-area .panel-body {
 	padding-top: 7px;
-}
-
-.mx-datepicker{
-	width: 100% !important;
 }
 </style>
