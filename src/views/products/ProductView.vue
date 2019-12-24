@@ -360,7 +360,7 @@ import { mapGetters } from 'vuex'
 require('@/assets/js/jquery.nicescroll.min.js')
 const today = new Date(
 	moment(moment(Date()).format('YYYY-MM-DD'), 'YYYY-MM-DD')
-		.add(10, 'd')
+		.add(5, 'd')
 		.format('YYYY-MM-DD')
 )
 
@@ -432,7 +432,7 @@ export default {
 		},
 		minDate() {
 			return moment(moment(Date()).format('YYYY-MM-DD'), 'YYYY-MM-DD')
-				.add(10, 'd')
+				.add(5, 'd')
 				.format('YYYY-MM-DD')
 		},
 	}, // End of Component > computed
