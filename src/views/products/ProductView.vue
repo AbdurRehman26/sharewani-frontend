@@ -125,7 +125,9 @@
 										>
 									</div>
 								</div>
-
+									<p>Order No:  
+										{{item.my_order.order_number}}
+									</p>
 								<b-button
 									v-b-modal.confirm-popup
 									v-if="item.my_order"
@@ -180,9 +182,10 @@
 										v-model="selectedPeriod"
 									/>
 
-
-									    <date-picker v-model="selectedPeriod" valueType="format"></date-picker>
-
+									<date-picker
+										v-model="selectedPeriod"
+										valueType="format"
+									></date-picker>
 
 									<label>
 										You can not order before
@@ -283,7 +286,7 @@
 
 											<p>
 												{{
-													'Tummy: ' + item.size_tummy
+													'Waist: ' + item.size_tummy
 												}}
 											</p>
 
@@ -355,12 +358,11 @@ import VueNumeric from 'vue-numeric'
 /* Modals */
 import ConfirmPopup from '@/components/popups/ConfirmPopup'
 
-
 /* Plugins */
 import VueCtkDateTimePicker from 'vue-ctk-date-time-picker'
 import 'vue-ctk-date-time-picker/dist/vue-ctk-date-time-picker.css'
 import Multiselect from 'vue-multiselect'
-import DatePicker from 'vue2-datepicker';
+import DatePicker from 'vue2-datepicker'
 
 const moment = require('moment')
 

@@ -136,7 +136,8 @@ p {
 }
 
 .main-title {
-    color: #7f8fa4;
+    letter-spacing: 2px;
+    color: black;
 }
 
 .last-li-item {

@@ -5,9 +5,9 @@
                 <img class="main-logo" :src="logoPath" alt="" />
 
                 <center>
-                    <h5 class="main-title">
+                    <p class="main-title">
                         Pakistan's Premier Fashion Rental Platform
-                    </h5>
+                    </p>
                 </center>
             </a>
         </router-link>

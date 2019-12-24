@@ -86,6 +86,14 @@
 										type="text"
 										placeholder="Phone Number"
 									/>
+
+									<input
+										v-model="order.email"
+										type="text"
+										placeholder="Email"
+									/>
+
+
 								</div>
 								<div v-if="false" class="col-md-6">
 									<input type="text" placeholder="Zip code" />
