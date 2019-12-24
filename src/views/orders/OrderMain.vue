@@ -33,8 +33,9 @@
 									<thead>
 										<tr>
 											<th class="product-th">Product</th>
-											<th class="size-th">from</th>
-											<th class="total-th">to</th>
+											<th class="size-th">Order #</th>
+											<th class="size-th">From</th>
+											<th class="total-th">To</th>
 											<th class="total-th">Shipped To</th>
 											<th class="total-th">
 												Rent Amount
@@ -65,29 +66,25 @@
 														alt=""
 													/>
 												</router-link>
-												<div class="pc-title">
-													<h4>
-														<router-link
-															:to="{
-																name:
-																	'product.view',
-																params: {
-																	id:
-																		item
-																			.product
-																			.id,
-																},
-															}"
-															tag="a"
-														>
-															{{
-																item.product
-																	.title
-															}}
-														</router-link>
-													</h4>
-												</div>
 											</td>
+
+											<td class="size-col">
+												<router-link
+													:to="{
+														name: 'product.view',
+														params: {
+															id: item.product.id,
+														},
+													}"
+													tag="a"
+												>
+													<h4>
+														{{ item.order_number }}
+													</h4>
+												</router-link>
+											</td>
+
+
 											<td class="size-col">
 												<router-link
 													:to="{
@@ -127,7 +124,9 @@
 													}"
 													tag="a"
 												>
+													<h5>
 													{{ item.address.address }}
+													</h5>
 												</router-link>
 											</td>
 											<td class="address-col">
@@ -139,8 +138,10 @@
 														},
 													}"
 													tag="a"
-												>
+												>	
+												<h5>
 													{{ item.rent_amount }}
+												</h5>
 												</router-link>
 											</td>
 											<td class="address-col">
