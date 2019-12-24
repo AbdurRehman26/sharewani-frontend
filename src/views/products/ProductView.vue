@@ -163,7 +163,8 @@
 
 								<div v-if="!item.my_order">
 									<date-picker
-										 placeholder="Please select a date"
+										:width="'100%'"
+										placeholder="Please select a date"
 										:disabled-date="notBeforeToday"
 										v-model="selectedPeriod"
 										:format="'YYYY-MM-DD'"
@@ -546,5 +547,9 @@ export default {
 
 .accordion-area .panel-body {
 	padding-top: 7px;
+}
+
+.mx-datepicker{
+	width: 100% !important;
 }
 </style>
