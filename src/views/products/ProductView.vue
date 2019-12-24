@@ -457,7 +457,6 @@ export default {
 		},
 		async validateProductOrderDate() {
 			this.isDisabled = true
-			this.rentAmount = null
 
 			var query = {}
 			query.selected_date = this.selectedPeriod
