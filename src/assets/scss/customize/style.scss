@@ -5,7 +5,6 @@
  ------------------------------------
  ====================================*/
 
-
 /*----------------------------------------*/
 /* Template default CSS
 /*----------------------------------------*/
@@ -259,7 +258,7 @@ ol {
 }
 
 .accordion-area .panel-link {
-	background-image: url("/src/assets/images/arrow-down.png");
+	background-image: url('/src/assets/images/arrow-down.png');
 	background-repeat: no-repeat;
 	background-position: right 10px top 30px;
 }
@@ -274,11 +273,11 @@ ol {
 }
 
 .accordion-area .panel-header .panel-link.collapsed {
-	background-image: url("/src/assets/images/arrow-down.png");
+	background-image: url('/src/assets/images/arrow-down.png');
 }
 
 .accordion-area .panel-link.active {
-	background-image: url("/src/assets/images/arrow-up.png");
+	background-image: url('/src/assets/images/arrow-up.png');
 }
 
 .accordion-area .panel-link.active {
@@ -370,6 +369,9 @@ ol {
 }
 
 .user-panel .up-item {
+	font-family: 'ProximanovaBold';
+	font-size: 20px !important;
+
 	display: inline-block;
 	font-size: 35px;
 }
@@ -431,7 +433,7 @@ ol {
 	line-height: 1;
 	padding: 17px 0;
 	position: relative;
-	text-decoration : none;
+	text-decoration: none;
 }
 
 .main-menu li a .new {
@@ -455,7 +457,7 @@ ol {
 	margin-top: 0;
 }
 
-.main-menu li:hover>a {
+.main-menu li:hover > a {
 	color: #b30f19;
 }
 
@@ -574,7 +576,7 @@ ol {
 
 .hero-slider .hs-item .offer-card:after {
 	position: absolute;
-	content: "";
+	content: '';
 	width: calc(100% - 10px);
 	height: calc(100% - 10px);
 	border: 1px solid #f96790;
@@ -718,7 +720,7 @@ ol {
 
 .slide-num-holder:after {
 	position: absolute;
-	content: "";
+	content: '';
 	height: 30px;
 	width: 1px;
 	background: #fff;
@@ -765,7 +767,6 @@ ol {
 	display: inline-block;
 	margin-right: 15px;
 	width: 60px;
-
 }
 
 .feature h2 {
@@ -1052,7 +1053,7 @@ ol {
 
 .footer-widget ul li a:after {
 	position: absolute;
-	content: "";
+	content: '';
 	width: 5px;
 	height: 5px;
 	left: 0;
@@ -1159,11 +1160,11 @@ ol {
 }
 
 .social-links a.instagram:hover i {
-	color: #2F5D84;
+	color: #2f5d84;
 }
 
 .social-links a.google-plus:hover i {
-	color: #E04B37;
+	color: #e04b37;
 }
 
 .social-links a.twitter:hover i {
@@ -1171,11 +1172,11 @@ ol {
 }
 
 .social-links a.pinterest:hover i {
-	color: #CD212D;
+	color: #cd212d;
 }
 
 .social-links a.facebook:hover i {
-	color: #39599F;
+	color: #39599f;
 }
 
 .social-links a.twitter:hover i {
@@ -1183,11 +1184,11 @@ ol {
 }
 
 .social-links a.youtube:hover i {
-	color: #D12227;
+	color: #d12227;
 }
 
 .social-links a.tumblr:hover i {
-	color: #37475E;
+	color: #37475e;
 }
 
 .social-links a:hover span {
@@ -1256,7 +1257,7 @@ ol {
 
 .category-menu li a:after {
 	position: absolute;
-	content: "";
+	content: '';
 	width: 9px;
 	height: 9px;
 	left: 0;
@@ -1295,11 +1296,11 @@ ol {
 	padding-left: 45px;
 }
 
-.category-menu li:hover>a {
+.category-menu li:hover > a {
 	color: #b30f19;
 }
 
-.category-menu li.active>.sub-menu {
+.category-menu li.active > .sub-menu {
 	display: block;
 	height: auto;
 	opacity: 1;
@@ -1323,7 +1324,9 @@ ol {
 	border-radius: 0;
 }
 
-.price-range-wrap .price-range .ui-slider-range.ui-corner-all.ui-widget-header:last-child {
+.price-range-wrap
+	.price-range
+	.ui-slider-range.ui-corner-all.ui-widget-header:last-child {
 	background: #414141;
 }
 
@@ -1340,7 +1343,10 @@ ol {
 	border-radius: 20px;
 }
 
-.price-range-wrap .price-range .ui-slider-handle.ui-corner-all.ui-state-default span {
+.price-range-wrap
+	.price-range
+	.ui-slider-handle.ui-corner-all.ui-state-default
+	span {
 	position: absolute;
 	font-size: 14px;
 	top: 35px;
@@ -1391,7 +1397,7 @@ ol {
 	display: inline-block;
 	position: relative;
 	margin-right: 14px;
-    margin-bottom: 30px;
+	margin-bottom: 30px;
 }
 
 .fw-color-choose .cs-item:last-child {
@@ -1441,17 +1447,17 @@ ol {
 	color: #414141;
 }
 
-.fw-color-choose input[type=radio] {
+.fw-color-choose input[type='radio'] {
 	visibility: hidden;
 	position: absolute;
 }
 
-.fw-color-choose input[type=radio]:checked+label {
+.fw-color-choose input[type='radio']:checked + label {
 	-webkit-box-shadow: 0 0 0 2px #b30f19;
 	box-shadow: 0 0 0 2px #b30f19;
 }
 
-.fw-color-choose input[type=radio]:checked+label span {
+.fw-color-choose input[type='radio']:checked + label span {
 	color: #b09d81;
 }
 
@@ -1474,12 +1480,12 @@ ol {
 	padding: 7px 6px 0;
 }
 
-.fw-size-choose input[type=radio] {
+.fw-size-choose input[type='radio'] {
 	visibility: hidden;
 	position: absolute;
 }
 
-.fw-size-choose input[type=radio]:checked+label {
+.fw-size-choose input[type='radio']:checked + label {
 	background: #b30f19;
 	color: #fff;
 }
@@ -1526,7 +1532,7 @@ ol {
 
 .product-thumbs .pt.active:after {
 	position: absolute;
-	content: "";
+	content: '';
 	width: 100%;
 	height: 100%;
 	left: 0;
@@ -1612,7 +1618,7 @@ ol {
 	border: 2px solid #414141;
 }
 
-.product-details .fw-size-choose input[type=radio]:checked+label {
+.product-details .fw-size-choose input[type='radio']:checked + label {
 	border: 2px solid #b30f19;
 }
 
@@ -1734,7 +1740,7 @@ ol {
 
 .cart-table {
 	padding: 40px 34px 0;
-	background: #F0EBEC;
+	background: #f0ebec;
 	border-radius: 27px;
 	overflow: hidden;
 }
@@ -1778,8 +1784,8 @@ ol {
 }
 
 .cart-table .order-row {
-    background: white;
-    border: 1px solid lightgray;
+	background: white;
+	border: 1px solid lightgray;
 }
 
 .cart-table .address-col {
@@ -1930,7 +1936,7 @@ ol {
 	color: #414141;
 }
 
-.checkout-form input[type=text] {
+.checkout-form input[type='text'] {
 	width: 100%;
 	height: 44px;
 	border: none;
@@ -1971,7 +1977,7 @@ ol {
 
 .cf-radio-btns label:after {
 	position: absolute;
-	content: "";
+	content: '';
 	width: 5px;
 	height: 5px;
 	left: 4px;
@@ -1986,7 +1992,7 @@ ol {
 
 .cf-radio-btns label:before {
 	position: absolute;
-	content: "";
+	content: '';
 	width: 13px;
 	height: 13px;
 	left: 0;
@@ -1995,12 +2001,12 @@ ol {
 	border-radius: 40px;
 }
 
-.cf-radio-btns input[type=radio] {
+.cf-radio-btns input[type='radio'] {
 	visibility: hidden;
 	position: absolute;
 }
 
-.cf-radio-btns input[type=radio]:checked+label:after {
+.cf-radio-btns input[type='radio']:checked + label:after {
 	opacity: 1;
 }
 
@@ -2430,16 +2436,15 @@ ol {
 	}
 }
 
-a{
+a {
 	text-decoration: none;
 }
 
-
-.product-item .pi-text{
+.product-item .pi-text {
 	margin-top: 15px !important;
 }
 
-.pi-text.fw-color-choose{
+.pi-text.fw-color-choose {
 	margin-top: 0 !important;
 	margin-bottom: 0 !important;
 	padding-bottom: 0 !important;

@@ -141,25 +141,26 @@ export default {
 <style>
 @media (max-width: 520px) {
     .up-item {
-        font-family: 'ProximanovaBold';
-        font-size: 20px !important;
         margin-left: 220%;
     }
 }
 
 @media (max-width: 430px) {
     .up-item {
-        font-family: 'ProximanovaBold';
-        font-size: 20px !important;
         margin-left: 60%;
     }
 }
 
 @media (max-width: 400px) {
     .up-item {
-        font-family: 'ProximanovaBold';
-        font-size: 20px !important;
         margin-left: 54%;
+    }
+}
+
+
+@media (max-width: 350px) {
+    .up-item {
+        margin-left: 50%;
     }
 }
 
