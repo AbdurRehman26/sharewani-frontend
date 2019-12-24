@@ -16,7 +16,7 @@
 								:to="'/products'"
 								tag="a"
 								class="site-btn sb-white"
-								>Browse More Outfits</router-link
+								>Discover</router-link
 							>
 						</div>
 					</div>
