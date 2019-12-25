@@ -92,8 +92,6 @@
 										type="text"
 										placeholder="Email"
 									/>
-
-
 								</div>
 								<div v-if="false" class="col-md-6">
 									<input type="text" placeholder="Zip code" />
@@ -133,27 +131,20 @@
 											{{ userAddress.address }}
 										</h5>
 
-									<small>
-										<strong>
-										{{ userAddress.phone_number}}
-										</strong>
-									</small>
-
+										<small>
+											<strong>
+												{{ userAddress.phone_number }}
+											</strong>
+										</small>
 									</div>
 
 									<p class="mb-1">
-									
 										{{ userAddress.secondary_address }}
-									
 									</p>
 
 									<small>
-									
-										{{userAddress.nearest_check_point}}
-									
+										{{ userAddress.nearest_check_point }}
 									</small>
-									
-
 								</b-list-group-item>
 							</b-list-group>
 
@@ -180,16 +171,40 @@
 										/>
 									</div>
 									<h6>{{ item.title }}</h6>
-									<p>{{ item.original_price }} PKR</p>
+
+									<p>
+										<vue-numeric
+											:read-only="true"
+											separator=","
+											v-model="item.original_price"
+										></vue-numeric>
+										PKR
+									</p>
 								</li>
 							</ul>
 							<ul class="price-list">
-								<li>
-									Rent: <span>{{ rentAmount }} PKR</span>
-								</li>
-								<li>Shipping: <span>free</span></li>
 								<li class="total">
-									Total: <span>{{ rentAmount }} PKR</span>
+									Rent:
+									<span>
+										PKR &nbsp
+										<vue-numeric
+											:read-only="true"
+											separator=","
+											v-model="rentAmount"
+										></vue-numeric>
+									</span>
+								</li>
+								<li class="total">Shipping: <span>free</span></li>
+								<li class="total">
+									Total:
+									<span>
+										PKR &nbsp
+										<vue-numeric
+											:read-only="true"
+											separator=","
+											v-model="rentAmount"
+										></vue-numeric>
+									</span>
 								</li>
 							</ul>
 						</div>
@@ -207,6 +222,7 @@ import ProductSideBar from '@/components/products/ProductSideBar.vue'
 import ProductResource from '@/api/product'
 import Resource from '@/api/resource'
 import OrderResource from '@/api/order'
+import VueNumeric from 'vue-numeric'
 
 const productResource = new ProductResource()
 const userAddressResource = new Resource('user-address')
@@ -222,6 +238,7 @@ export default {
 		this.getData()
 	}, // End of Component > mounted
 	components: {
+		VueNumeric,
 		Product,
 		ProductSideBar,
 	},
