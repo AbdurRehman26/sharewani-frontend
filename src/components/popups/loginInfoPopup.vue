@@ -15,8 +15,6 @@
 </template>
 
 <script>
-import checkBoxListing from '@/components/CheckBoxListing.vue'
-import radioListing from '@/components/RadioListing.vue'
 export default {
     components: {},
     /*
