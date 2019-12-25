@@ -457,7 +457,6 @@ export default {
 		},
 		selectedPeriod(changedDate) {
 			this.isDisabled = true
-
 			if (changedDate) {
 				this.validateProductOrderDate()
 			}
@@ -486,7 +485,7 @@ export default {
 			var query = {}
 			query.selected_date = this.selectedPeriod
 			query.period = this.period
-			query.product_id = this.item.id
+			query.product_id = this.$route.params.id
 
 			const response = await orderResource.validateOrderDate(query)
 
@@ -513,8 +512,11 @@ export default {
 				this.rentAmount = this.item.my_order.rent_amount
 			}
 
+			if(!this.item.my_order){
 			const tokenResponse = await orderResource.calculateRent(query)
 			this.rentAmount = tokenResponse.data
+
+			}	
 
 			setTimeout(function() {
 				$('.cart-table-warp, .product-thumbs').niceScroll({
