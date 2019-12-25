@@ -48,6 +48,12 @@ service.interceptors.response.use(
         return response.data
     },
     (error) => {
+
+        if(!error.response){
+            window.location.reload('/');
+        }
+
+
         if (error.response.status == 422) {
             const errors = error.response.data.errors
             for (var i in errors) {
