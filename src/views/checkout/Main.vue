@@ -18,7 +18,7 @@
 				<div class="row">
 					<div class="col-lg-8 order-2 order-lg-1">
 						<form class="checkout-form">
-							<div class="cf-title">Billing Address</div>
+							<div class="cf-title">Shipping Address</div>
 							<div class="row">
 								<div class="col-md-7">
 									<p>*Billing Information</p>
