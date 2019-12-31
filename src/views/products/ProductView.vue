@@ -182,13 +182,6 @@
 										v-model="selectedPeriod"
 									/>
 
-									<label>
-										You can not order before
-										{{
-											new Date(minDate).toDateString()
-										}}</label
-									>
-
 									<multiselect
 										style="margin-top: 20px; border: 1px solid lightgray;"
 										v-model="period"
@@ -451,7 +444,7 @@ export default {
         */
 	watch: {
 		period() {
-			this.isDisabled = true
+			this.isDisabledY = true
 
 			this.validateProductOrderDate()
 		},
